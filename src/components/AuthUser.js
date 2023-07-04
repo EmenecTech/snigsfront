@@ -31,7 +31,7 @@ export default function AuthUser() {
         navigate("/");
     };
     const http = axios.create({
-        baseURL: "http://snigsbackend.com/api/",
+        baseURL: "https://snigsbackend.com/api/",
         headers: {
             "Content-type": "application/json",
             "Authorization": `Bearer ${token}`
