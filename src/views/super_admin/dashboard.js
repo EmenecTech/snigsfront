@@ -1200,7 +1200,7 @@ const Dashboard_superadmin = memo((props) => {
                           <div className="progress-detail">
                             <p className="mb-2">Administration</p>
                             <h4 className="counter">
-                              <CountUp start={0} end={3} duration={3} />
+                              <CountUp start={0} end={0} duration={3} />
                             </h4>
                           </div>
                         </div>
@@ -1264,7 +1264,7 @@ const Dashboard_superadmin = memo((props) => {
                           <div className="progress-detail">
                             <p className="mb-2">Enseignants</p>
                             <h4 className="counter">
-                              <CountUp start={0} end={5} duration={5} />
+                              <CountUp start={0} end={0} duration={5} />
                             </h4>
                           </div>
                         </div>
@@ -1294,7 +1294,7 @@ const Dashboard_superadmin = memo((props) => {
                           <div className="progress-detail">
                             <p className="mb-2">Elèves</p>
                             <h4 className="counter">
-                              <CountUp start={0} end={10} duration={3} />
+                              <CountUp start={0} end={0} duration={3} />
                             </h4>
                           </div>
                         </div>
@@ -1329,7 +1329,7 @@ const Dashboard_superadmin = memo((props) => {
                           <div className="progress-detail">
                             <p className="mb-2">Elèves Inscris</p>
                             <h4 className="counter">
-                              <CountUp start={0} end={10} duration={3} />
+                              <CountUp start={0} end={0} duration={3} />
                             </h4>
                           </div>
                         </div>
@@ -1364,7 +1364,7 @@ const Dashboard_superadmin = memo((props) => {
                           <div className="progress-detail">
                             <p className="mb-2">Parents</p>
                             <h4 className="counter">
-                              <CountUp start={100} end={8} duration={3} />
+                              <CountUp start={100} end={0} duration={3} />
                             </h4>
                           </div>
                         </div>
@@ -1399,7 +1399,7 @@ const Dashboard_superadmin = memo((props) => {
                           <div className="progress-detail">
                             <p className="mb-2">Today</p>
                             <h4 className="counter">
-                              $<CountUp start={652} end={4600} duration={3} />
+                              $<CountUp start={652} end={0} duration={3} />
                             </h4>
                           </div>
                         </div>
@@ -1435,8 +1435,8 @@ const Dashboard_superadmin = memo((props) => {
                             <p className="mb-2">Members</p>
                             <h4 className="counter">
                               <CountUp
-                                start={2}
-                                end={11.2}
+                                start={0}
+                                end={0}
                                 duration={3}
                                 decimals={1}
                               />
@@ -1580,7 +1580,7 @@ const Dashboard_superadmin = memo((props) => {
                             </svg>
                             <div className="ms-3">
                               <span className="text-gray">Enseignants</span>
-                              <h6>1</h6>
+                              <h6>0</h6>
                             </div>
                           </div>
                           <div className="d-flex align-items-start">
@@ -1602,7 +1602,7 @@ const Dashboard_superadmin = memo((props) => {
                             </svg>
                             <div className="ms-3">
                               <span className="text-gray">Elèves</span>
-                              <h6>20</h6>
+                              <h6>0</h6>
                             </div>
                           </div>
                         </div>
@@ -1709,7 +1709,7 @@ const Dashboard_superadmin = memo((props) => {
                         <div className="d-flex align-itmes-center me-0 me-md-4">
 
                           <div className="ms-3">
-                            <h5>115000 XAF</h5>
+                            <h5>/</h5>
                             <small className="mb-0">Montant</small>
                           </div>
                         </div>
@@ -1732,7 +1732,7 @@ const Dashboard_superadmin = memo((props) => {
                             </div>
                           </div>
                           <div className="ms-3">
-                            <h5>5</h5>
+                            <h5>0</h5>
                             <small className="mb-0">Elèves</small>
                           </div>
                         </div>
