@@ -125,7 +125,7 @@ const UtilisateursListe = () => {
     }, []);
 
     const fetchAllUser = () => {
-        http.get('/user').then(res => {
+        http.get('/user_for_super_admin').then(res => {
             setUser(res.data);
         })
     }
