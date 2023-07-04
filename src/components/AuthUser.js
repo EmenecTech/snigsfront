@@ -1,4 +1,5 @@
-import axios from 'axios'
+import axios from 'axios';
+import axiosCors from 'axios-cors';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -31,12 +32,14 @@ export default function AuthUser() {
         navigate("/");
     };
     const http = axios.create({
-        baseURL: "https://snigsbackend.com/api/",
+        baseURL: "http://snigsbackend.com/api/",
         headers: {
             "Content-type": "application/json",
             "Authorization": `Bearer ${token}`
         }
     });
+
+    axiosCors(http);
 
     return {
         setToken: saveToken,
