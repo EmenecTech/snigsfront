@@ -24,6 +24,20 @@ const AddUtilisateurs = () => {
 
         console.log(inputs);
     }
+
+    const [etablissements, setEtablissements] = useState([]);
+    useEffect(() => {
+        fetchAllEtablissements();
+    }, []);
+
+    const fetchAllEtablissements = () => {
+        http.get('/etablissements').then(res => {
+            setEtablissements(res.data);
+        })
+    }
+
+
+
     return (
         <>
             <div>
@@ -145,6 +159,23 @@ const AddUtilisateurs = () => {
 
 
 
+
+                                    </Row>
+                                    <Row>
+                                        <Col>
+                                            <Form.Group as={Row} className="form-group">
+                                                <Form.Group className="form-group">
+                                                    <Form.Label htmlFor="exampleInputText1">établissement </Form.Label>
+                                                    <select className="form-select mb-3 shadow-none" name="etab_fondateur" onChange={handleChange}>
+                                                        <option></option>
+                                                        {etablissements.map((item) => (
+                                                            <option value={item.id}>{item.nom_etablissement}</option>
+                                                        ))}
+
+                                                    </select>
+                                                </Form.Group>
+                                            </Form.Group>
+                                        </Col>
                                     </Row>
 
 
