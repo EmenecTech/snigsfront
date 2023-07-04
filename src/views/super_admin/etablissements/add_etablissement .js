@@ -8,11 +8,12 @@ import http from '../../../http';
 const AddEtablissement = () => {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
+    const fondateur = 0;
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
 
-        setInputs(values => ({ ...values, [name]: value }))
+        setInputs(values => ({ ...values, [name]: value, fondateur }))
     }
 
     const submitForm = () => {
@@ -138,6 +139,10 @@ const AddEtablissement = () => {
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
+
+
+                                    </Row>
+                                    <Row>
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
@@ -148,9 +153,6 @@ const AddEtablissement = () => {
                                         </Col>
 
 
-                                    </Row>
-                                    <Row>
-
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
@@ -159,32 +161,11 @@ const AddEtablissement = () => {
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
-                                        <Col>
-                                            <Form.Group as={Row} className="form-group">
-                                                <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Logo </Form.Label>
-                                                    <Form.Control type="text" defaultValue="" name="logo" onChange={handleChange} required />
-                                                </Form.Group>
-                                            </Form.Group>
-                                        </Col>
-                                        <Col>
-                                            <Form.Group as={Row} className="form-group">
-                                                <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Fondateur </Form.Label>
-                                                    <select className="form-select mb-3 shadow-none" name="fondateur" onChange={handleChange}>
-                                                        <option></option>
-                                                        {fondateurs.map((item) =>
-                                                            <option key={item.id} value={item.id}> {item.nom} {item.prenom}</option>
-                                                        )}
 
-
-                                                    </select>
-                                                </Form.Group>
-                                            </Form.Group>
-                                        </Col>
 
                                     </Row>
                                     <Row>
+
 
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
