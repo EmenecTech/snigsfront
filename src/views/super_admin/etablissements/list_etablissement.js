@@ -352,7 +352,7 @@ const ListEtablissements = memo((props) => {
                                                 <td>{item.adresse_etablissement}</td>
 
 
-
+                                                <td></td>
                                                 <td>{item.facturation_etablissement}</td>
 
                                                 <td>{item.payement_prinsciption}</td>
