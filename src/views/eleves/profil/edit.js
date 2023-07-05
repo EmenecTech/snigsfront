@@ -28,7 +28,7 @@ const EleveEditProfil = (props) => {
 
         fData.append("image", imagedata);
 
-        Axios.post("http://snigsbackend.com/api/postimage/" + id, fData)
+        Axios.post("https://snigsbackend.com/api/postimage/" + id, fData)
             .then((res) => {
                 console.log("response", res);
                 alert("Photo de profil ajoutée avec succès !")
