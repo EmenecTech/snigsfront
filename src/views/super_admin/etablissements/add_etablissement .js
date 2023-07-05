@@ -220,6 +220,6 @@ const AddEtablissement = () => {
             </div>
         </>
     )
-}
+ }
 
 export default AddEtablissement
