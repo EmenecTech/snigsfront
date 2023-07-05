@@ -1,5 +1,4 @@
 import axios from 'axios';
-import cors from 'cors';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
