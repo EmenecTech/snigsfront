@@ -74,7 +74,7 @@ const InscriptionEleve = memo((props) => {
     const submitForm = () => {
         http.put('/eleve_in_classe', inputs).then((res) => {
             alert("Inscription effectuée !")
-            navigate('/List/classes/')
+            navigate('/List/princriptions/')
             window.location.reload(false);
 
         })
