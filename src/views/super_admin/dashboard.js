@@ -93,6 +93,75 @@ const Dashboard_superadmin = memo((props) => {
   const niveau = user.fonction_user;
   const classe = user.other_in_user;
 
+
+
+
+  const [nbreleve, setnbreleve] = useState([]);
+  useEffect(() => {
+    fetchAllnbreleve();
+  }, []);
+
+  const fetchAllnbreleve = () => {
+    http.get('/nbreleve_c/' + etab).then(res => {
+      setnbreleve(res.data);
+    })
+  }
+
+  const [nbrens, setnbrens] = useState([]);
+  useEffect(() => {
+    fetchAllnbrens();
+  }, []);
+
+  const fetchAllnbrens = () => {
+    http.get('/nbrens_c/' + etab).then(res => {
+      setnbrens(res.data);
+    })
+  }
+
+
+  const [nbrad, setnbrad] = useState([]);
+  useEffect(() => {
+    fetchAllnbrad();
+  }, []);
+
+  const fetchAllnbrad = () => {
+    http.get('/nbrad_c/' + etab).then(res => {
+      setnbrad(res.data);
+    })
+  }
+
+  const [nbrpreins, setnbrpreins] = useState([]);
+  useEffect(() => {
+    fetchAllnbrpreins();
+  }, []);
+
+  const fetchAllnbrpreins = () => {
+    http.get('/nbreleve_preins/' + etab).then(res => {
+      setnbrpreins(res.data);
+    })
+  }
+
+  const [nbrarchv, setnbrarchv] = useState([]);
+  useEffect(() => {
+    fetchAllnbrarchv();
+  }, []);
+
+  const fetchAllnbrarchv = () => {
+    http.get('/nbreleve_arch/' + etab).then(res => {
+      setnbrarchv(res.data);
+    })
+  }
+
+
+
+
+
+
+
+
+
+  ////07-07-2023
+
   const [matieres_classe, setmatieres_classe] = useState([]);
   useEffect(() => {
     fetchAllmatieres_classe();
@@ -1200,7 +1269,7 @@ const Dashboard_superadmin = memo((props) => {
                           <div className="progress-detail">
                             <p className="mb-2">Administration</p>
                             <h4 className="counter">
-                              <CountUp start={0} end={0} duration={3} />
+                              <CountUp start={0} end={nbrad} duration={3} />
                             </h4>
                           </div>
                         </div>
@@ -1264,7 +1333,7 @@ const Dashboard_superadmin = memo((props) => {
                           <div className="progress-detail">
                             <p className="mb-2">Enseignants</p>
                             <h4 className="counter">
-                              <CountUp start={0} end={0} duration={5} />
+                              <CountUp start={0} end={nbrens} duration={5} />
                             </h4>
                           </div>
                         </div>
@@ -1294,7 +1363,7 @@ const Dashboard_superadmin = memo((props) => {
                           <div className="progress-detail">
                             <p className="mb-2">Elèves</p>
                             <h4 className="counter">
-                              <CountUp start={0} end={0} duration={3} />
+                              <CountUp start={0} end={nbreleve} duration={3} />
                             </h4>
                           </div>
                         </div>
@@ -1327,9 +1396,9 @@ const Dashboard_superadmin = memo((props) => {
                             </svg>
                           </Circularprogressbar>
                           <div className="progress-detail">
-                            <p className="mb-2">Elèves Inscris</p>
+                            <p className="mb-2">Elèves Préinscrits</p>
                             <h4 className="counter">
-                              <CountUp start={0} end={0} duration={3} />
+                              <CountUp start={0} end={nbrpreins} duration={3} />
                             </h4>
                           </div>
                         </div>
@@ -1362,90 +1431,16 @@ const Dashboard_superadmin = memo((props) => {
                             </svg>
                           </Circularprogressbar>
                           <div className="progress-detail">
-                            <p className="mb-2">Parents</p>
+                            <p className="mb-2">Elèves archivés</p>
                             <h4 className="counter">
-                              <CountUp start={100} end={0} duration={3} />
+                              <CountUp start={0} end={nbrarchv} duration={3} />
                             </h4>
                           </div>
                         </div>
                       </div>
                     </SwiperSlide>
-                    <SwiperSlide className=" card card-slide">
-                      <div className="card-body">
-                        <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            Linecap="rounded"
-                            strokewidth="4px"
-                            value={40}
-                            style={{ width: 60, height: 60 }}
-                            id="circle-progress-06"
-                          >
-                            <svg
-                              className=""
-                              width="24px"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
-                          <div className="progress-detail">
-                            <p className="mb-2">Today</p>
-                            <h4 className="counter">
-                              $<CountUp start={652} end={0} duration={3} />
-                            </h4>
-                          </div>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide className=" card card-slide">
-                      <div className="card-body">
-                        <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={colors}
-                            Linecap="rounded"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            width="60px"
-                            height="60px"
-                            value={30}
-                            style={{ width: 60, height: 60 }}
-                            id="circle-progress-07"
-                          >
-                            <svg
-                              className=""
-                              width="24px"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
-                          <div className="progress-detail">
-                            <p className="mb-2">Members</p>
-                            <h4 className="counter">
-                              <CountUp
-                                start={0}
-                                end={0}
-                                duration={3}
-                                decimals={1}
-                              />
-                              M
-                            </h4>
-                          </div>
-                        </div>
-                      </div>
-                    </SwiperSlide>
+
+
                     <div className="swiper-button swiper-button-next"></div>
                     <div className="swiper-button swiper-button-prev"></div>
                   </Swiper>
