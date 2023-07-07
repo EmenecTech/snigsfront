@@ -168,7 +168,7 @@ const AddEnseignant = () => {
                                                         <option></option>
                                                         <option value="Permanent">Permanent</option>
                                                         <option value="Vacataire">Vacataire</option>
-                                                        <option value="emporaire">Temporaire</option>
+                                                        <option value="Temporaire">Temporaire</option>
                                                         <option value="Saisonnier">Saisonnier</option>
                                                         <option value="Stagiaire">Stagiaire</option>
                                                     </select>
