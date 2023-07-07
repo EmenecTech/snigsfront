@@ -1693,7 +1693,7 @@ const Dashboard_superadmin = memo((props) => {
                         </div>
                         <div className="d-flex align-items-center justify-content-between">
                           <h6>Nom établissement</h6>
-                          <h6 className="ms-5">06/11</h6>
+                          <h6 className="ms-5"></h6>
                         </div>
                       </div>
                     </div>
