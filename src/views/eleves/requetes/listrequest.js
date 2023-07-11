@@ -36,7 +36,7 @@ const EleveListRequest = () => {
 
                 <Card.Header className="d-flex justify-content-between">
                     <div className="header-title">
-                        <h4 className="card-title">Requêtes</h4>
+                        <h4 className="card-title">Filières</h4>
                     </div>
                     <Link to="/Eleve/Request/Add/">
                         <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3">
