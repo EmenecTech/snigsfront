@@ -382,6 +382,18 @@ const InscriptionEleve = memo((props) => {
                                 <Form.Label htmlFor="exampleInputReadonly">Niveau</Form.Label>
                                 <Form.Control type="text" id="exampleInputReadonly" disabled defaultValue={niveau} />
                             </Form.Group>
+                               <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                  Contact du parent
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue=""
+                                  name="numero_parent"
+                                  onChange={handleChange}
+                                  required
+                                />
+                              </Form.Group>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">Choisissez la classe</Form.Label>
                                 <select className="form-select mb-3 shadow-none" name="classe" onChange={handleChange}>
