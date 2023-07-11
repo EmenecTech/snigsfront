@@ -79,16 +79,16 @@ const InscriptionEleve = memo((props) => {
     });
   };
 
-  const [classes, setclasses] = useState([]);
-  useEffect(() => {
-    fetchAllclasses();
-  }, []);
+ const [classes, setclasses] = useState([]);
+    useEffect(() => {
+        fetchAllclasses();
+    }, []);
 
-  const fetchAllclasses = () => {
-    http.get("/get_niveau_classes/" + etab + "/" + niveau).then((res) => {
-      setclasses(res.data);
-    });
-  };
+    const fetchAllclasses = () => {
+        http.get('/get_niveau_classes/' + etab + '/' + niveau).then(res => {
+            setclasses(res.data);
+        })
+    }
 
   return (
     <Fragment>
@@ -127,23 +127,17 @@ const InscriptionEleve = memo((props) => {
                   required
                 />
               </Form.Group>
-              <Form.Group className="form-group">
-                <Form.Label htmlFor="exampleInputReadonly">
-                  Choisissez la classe
-                </Form.Label>
-                <select
-                  className="form-select mb-3 shadow-none"
-                  name="classe"
-                  onChange={handleChange}
-                >
-                  <option></option>
-                  {classes.map((item) => (
-                    <option key={item.id} value={item.intitule_classe}>
-                      {item.intitule_classe}
-                    </option>
-                  ))}
-                </select>
-              </Form.Group>
+             <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">Choisissez la classe</Form.Label>
+                                <select className="form-select mb-3 shadow-none" name="classe" onChange={handleChange}>
+                                    <option></option>
+                                    {classes.map((item) => (
+                                        <option key={item.id} value={item.intitule_classe}>{item.intitule_classe}</option>
+                                    ))}
+
+
+                                </select>
+                            </Form.Group>
 
               <div className="text-center mt-2">
                 <Button type="button" variant="primary" onClick={submitForm}>
