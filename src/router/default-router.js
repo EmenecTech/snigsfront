@@ -115,7 +115,7 @@ import ElevelistdocumentsEleves from '../views/eleves/documents/listdocumentsele
 import Mestests from '../views/mestest';
 import EditEtablissement from '../views/fondateur/etablissement/edit_etablissement';
 import EditMatieres from '../views/fondateur/matieres/edit_matieres';
-
+import EditFilieres from "../views/fondateur/filieres/edit_filieres";
 import Badge from '../views/eleves/documents/badge';
 import Print from '../views/eleves/documents/print';
 import ElevelistdocumentsElevesLoad from '../views/eleves/documents/documentload';
@@ -127,6 +127,7 @@ import PayementsListNiveauClasses from '../views/fondateur/comptabilite/payement
 import PayementsListNiveauClasseEleves from '../views/fondateur/comptabilite/payementclasseeleves';
 import PayementsListEleve from '../views/fondateur/comptabilite/payementseleve';
 import AllNotes from '../views/enseignant/notes/allnotes';
+import EditUsers from "../views/super_admin/utilisateurs/edit";
 
 
 
@@ -508,6 +509,17 @@ export const DefaultRouter = [
                 path: 'Enseignant/Bordereau/:classe/:matiere',
                 element: <AllNotes />
             },
+              /////////////////////////////////07/07/2023
+              {
+                path: "/Edit/filières/:id",
+                element: <EditFilieres />,
+              },
+        
+              /////////////////////////////////07/07/2023
+              {
+                path: "/Edit/users/:id",
+                element: <EditUsers />,
+              },
 
             ////////////////
             {
