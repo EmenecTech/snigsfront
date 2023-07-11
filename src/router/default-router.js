@@ -132,6 +132,21 @@ import EleveForumsMatieres from '../views/eleves/forum/forumatieres';
 import EleveForumDiscussion from '../views/eleves/forum/forumdiscussion';
 
 
+import ParentsBulletinNotes from "../views/parents/bulletin_notes/marknotes";
+import Parents_list_Chapitre from "../views/parents/cours/chapitres";
+import ParentsLeconChapitre from "../views/parents/cours/lecons";
+import ParentsMatieresClasse from "../views/parents/cours/matieres";
+import Badge_p from "../views/parents/documents/badge";
+import ParentslistdocumentsElevesLoad from "../views/parents/documents/documentload";
+import ParentslistdocumentsEleves from "../views/parents/documents/listdocumentseleves";
+import Print_parent from "../views/parents/documents/print";
+import ParentsListPlanning from "../views/parents/pedagogie/listplanning";
+import ParentsListEvaluationsNotes from "../views/parents/pedagogie/notes/lisevaluations";
+import ParentsListNotesEval from "../views/parents/pedagogie/notes/noteseleve";
+import ParentsPlanningDetail from "../views/parents/pedagogie/planning";
+import ParentsEditProfil from "../views/parents/profil/edit";
+import ParentsAddRequest from "../views/parents/requetes/addrequest";
+import ParentsListRequest from "../views/parents/requetes/listrequest";
 
 
 
