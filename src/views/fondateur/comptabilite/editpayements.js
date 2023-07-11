@@ -90,7 +90,7 @@ const EditPensions = memo((props) => {
 
     const submitForm1 = () => {
 
-        http.post('add_classe/payement/', inputs).then((res) => {
+        http.post('add_classe/payement', inputs).then((res) => {
             navigate('/Admin/Comptabilite/Edit/' + idpension)
             window.location.reload(false);
 
