@@ -465,6 +465,80 @@ export const DefaultRouter = [
 
             ///////////
 
+    ///////////////////////////////////////////////////////parents
+
+      {
+        path: "Parents/Edit/Profil/:id",
+        element: <ParentsEditProfil />,
+      },
+
+      {
+        path: "Parents/Request/List/",
+        element: <ParentsListRequest />,
+      },
+      {
+        path: "print",
+        element: <Print_parent />,
+      },
+
+      {
+        path: "badge",
+        element: <Badge_p />,
+      },
+
+      {
+        path: "Parents/Request/List/",
+        element: <ParentsAddRequest />,
+      },
+      /////////
+      {
+        path: "Parents/List/Planning/",
+        element: <ParentsListPlanning />,
+      },
+      {
+        path: "Parents/Planning/Detail/:idprogramme/:intituleprogramme",
+        element: <ParentsPlanningDetail />,
+      },
+      /////
+      {
+        path: "Parents/List/Evaluations/Notes",
+        element: <ParentsListEvaluationsNotes />,
+      },
+      {
+        path: "Parents/List/Notes/Evaluation/:evaluation",
+        element: <ParentsListNotesEval />,
+      },
+      ////
+
+      {
+        path: "Parents/Bulletin/Notes/:evaluation",
+        element: <ParentsBulletinNotes />,
+      },
+      ////
+      {
+        path: "Parents/List/Matieres/Cours",
+        element: <ParentsMatieresClasse />,
+      },
+      {
+        path: "Parents/List/Chapitres/Cours/:matiere",
+        element: <Parents_list_Chapitre />,
+      },
+      {
+        path: "Parents/List/Lecons/Chapitres/Cours/:chapitre/:matiere",
+        element: <ParentsLeconChapitre />,
+      },
+      ////
+      {
+        path: "Parents/List/Documents/",
+        element: <ParentslistdocumentsEleves />,
+      },
+
+      {
+        path: "Parents/Load/Documents/:etab/:userid/:idoc",
+        element: <ParentslistdocumentsElevesLoad />,
+      },
+    //////
+
 
             /////////////////////////////////////////////////////////Enseignant
 
