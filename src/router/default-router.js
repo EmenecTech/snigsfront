@@ -128,6 +128,11 @@ import PayementsListNiveauClasseEleves from '../views/fondateur/comptabilite/pay
 import PayementsListEleve from '../views/fondateur/comptabilite/payementseleve';
 import AllNotes from '../views/enseignant/notes/allnotes';
 import EditUsers from "../views/super_admin/utilisateurs/edit";
+import EleveForumsMatieres from '../views/eleves/forum/forumatieres';
+import EleveForumDiscussion from '../views/eleves/forum/forumdiscussion';
+
+
+
 
 
 
@@ -520,6 +525,14 @@ export const DefaultRouter = [
                 path: "/Edit/users/:id",
                 element: <EditUsers />,
               },
+                {
+                    path: 'Eleve/Forum/Matieres',
+                    element: <EleveForumsMatieres />
+                },
+                {
+                    path: 'Eleve/Forum/Discussion/:matiere',
+                    element: <EleveForumDiscussion />
+                },
 
             ////////////////
             {
