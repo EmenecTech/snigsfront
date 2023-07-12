@@ -140,7 +140,7 @@ const Sidebar = memo((props) => {
 
             <Image
               className="theme-color-default-img  profile-pic rounded avatar-100"
-              src={image}
+              src={"https://snigsbackend.com/avatar/" + idetab + ".png"}
               alt="profile-pic"
               roundedCircle="yes"
               style={{ width: "10px" }}
