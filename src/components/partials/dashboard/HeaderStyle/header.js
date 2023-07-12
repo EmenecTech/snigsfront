@@ -375,7 +375,7 @@ const Header = memo((props) => {
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu className="dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <Dropdown.Item href={"/Eleve/Edit/Profil/" + user.id}>Profil</Dropdown.Item>
-                                    <Dropdown.Item href="https://templates.iqonic.design/hope-ui/react/build/dashboard/app/user-privacy-setting">Privacy Setting</Dropdown.Item>
+                                   
                                     <Dropdown.Divider />
                                     <Dropdown.Item onClick={logoutUser}>Déconnexion</Dropdown.Item>
                                 </Dropdown.Menu>
