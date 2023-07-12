@@ -194,9 +194,7 @@ const UniClasse = () => {
                                 </div>
                             </Card.Header>
                             <Card.Body>
-                                <div className="user-bio">
-                                    <p></p>
-                                </div>
+                                
                                 <div className="mt-2">
                                     <h6 className="mb-1">Professeur principal:</h6>
                                     <p></p>
