@@ -104,7 +104,7 @@ const EditEtablissement = () => {
 
         fData.append("image", imagedata);
 
-        Axios.post("http://localhost:8000/api/postlogo/" + idetab, fData)
+        Axios.post("https://snigsbackend.com/api/postlogo/" + idetab, fData)
             .then((res) => {
                 console.log("response", res);
                 alert("Logo ajouté avec succès !")
