@@ -180,7 +180,7 @@ const EditEtablissement = () => {
                                     <h4 className="card-title"></h4>
                                     <Image
                                         className="theme-color-default-img  profile-pic rounded avatar-100"
-                                        src={image}
+                                        src={"https://snigsbackend.com/logo_etab/" + idetab+ ".png"}
                                         alt="profile-pic"
                                     />
                                 </div>
