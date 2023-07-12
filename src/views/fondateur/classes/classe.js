@@ -199,24 +199,9 @@ const UniClasse = () => {
                                 </div>
                                 <div className="mt-2">
                                     <h6 className="mb-1">Professeur principal:</h6>
-                                    <p>Feb 15, 2021</p>
+                                    <p></p>
                                 </div>
-                                <div className="mt-2">
-                                    <h6 className="mb-1">Lives:</h6>
-                                    <p>United States of America</p>
-                                </div>
-                                <div className="mt-2">
-                                    <h6 className="mb-1">Email:</h6>
-                                    <p><Link to="#" className="text-body"> austin@gmail.com</Link></p>
-                                </div>
-                                <div className="mt-2">
-                                    <h6 className="mb-1">Url:</h6>
-                                    <p><Link to="#" className="text-body" target="_blank"> www.bootstrap.com </Link></p>
-                                </div>
-                                <div className="mt-2">
-                                    <h6 className="mb-1">Contact:</h6>
-                                    <p><Link to="#" className="text-body">(001) 4544 565 456</Link></p>
-                                </div>
+                               
                             </Card.Body>
                         </Card>
 
