@@ -1430,7 +1430,7 @@ const VerticalNav = memo((props) => {
                             </Accordion.Item>
 
                                         
-                            <
+                            
                             <Accordion.Item as="li" eventKey="Ad-requetes" bsPrefix={`nav-item ${active === 'form' ? 'active' : ''} `} onClick={() => setActive('form')}>
                                 <CustomToggle eventKey="Ad-requetes" active={activeMenu === 'Ad-requetes' ? true : false} onClick={(activeKey) => setActiveMenu(activeKey)}>
                                     <i className="icon">
