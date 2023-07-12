@@ -148,6 +148,10 @@ import ParentsEditProfil from "../views/parents/profil/edit";
 import ParentsAddRequest from "../views/parents/requetes/addrequest";
 import ParentsListRequest from "../views/parents/requetes/listrequest";
 
+import DisciplineListClasses from '../views/fondateur/discipline/classesdisicplines';
+import DisciplineListClassesEleves from '../views/fondateur/discipline/classesdisicplineselevesclasse';
+import DisciplineEleveInfo from '../views/fondateur/discipline/classesdisicplineselevesinfo';
+import DisciplineInfoForEleve from '../views/eleves/discipline/infodiscipline';
 
 
 
@@ -381,12 +385,29 @@ export const DefaultRouter = [
                 path: 'Payements/List/Eleve/Classes/:niveau/:classe/:ideleve/:idpension',
                 element: <PayementsListEleve />
             },
+            ////Discipline
+            {
+                path: 'Discipline/List/classes',
+                element: <DisciplineListClasses />
+            },
+            {
+                path: 'Discipline/List/classes/Eleves/:classe',
+                element: <DisciplineListClassesEleves />
+            },
+            {
+                path: 'Discipline/List/classes/Eleves/Info/:id/:classe',
+                element: <DisciplineEleveInfo />
+            },
 
             ///////////////////////////////////////////////////////////////////////////Eleves
             ////////////
             {
                 path: 'Eleve/Edit/Profil/:id',
                 element: <EleveEditProfil />
+            },
+            {
+                path: 'Discipline/Info',
+                element: <DisciplineInfoForEleve />
             },
 
 
