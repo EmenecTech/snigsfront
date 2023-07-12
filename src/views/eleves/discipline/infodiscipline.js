@@ -217,7 +217,7 @@ const DisciplineInfoForEleve = (props) => {
                                         <div className="profile-img-edit position-relative">
                                             <Image
                                                 className="theme-color-default-img  profile-pic rounded avatar-100"
-                                                src={image}
+                                                src={"https://snigsbackend.com/avatar/" + userinfo.profile_photo_path} 
                                                 alt="profile-pic"
                                             />
 
