@@ -1393,7 +1393,7 @@ const VerticalNav = memo((props) => {
                                     </ul>
                                 </Accordion.Collapse>
                             </Accordion.Item>
-                            <Accordion.Item as="li" eventKey="sidebar-form" bsPrefix={`nav-item ${active === 'form' ? 'active' : ''} `} onClick={() => setActive('form')}>
+                                 <Accordion.Item as="li" eventKey="sidebar-form" bsPrefix={`nav-item ${active === 'form' ? 'active' : ''} `} onClick={() => setActive('form')}>
                                 <CustomToggle eventKey="sidebar-form" active={activeMenu === 'sidebar-form' ? true : false} onClick={(activeKey) => setActiveMenu(activeKey)}>
                                     <i className="icon">
                                         <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1411,7 +1411,7 @@ const VerticalNav = memo((props) => {
                                 <Accordion.Collapse eventKey="sidebar-form" >
                                     <ul className="sub-nav">
                                         <li className="nav-item">
-                                            <Link className={`${location.pathname === '/dashboard/form/form-element' ? 'active' : ''} nav-link`} to="/dashboard/form/form-element">
+                                            <Link className={`${location.pathname === '/Discipline/List/classes' ? 'active' : ''} nav-link`} to="/Discipline/List/classes">
                                                 <i className="icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                         <g>
@@ -1420,38 +1420,16 @@ const VerticalNav = memo((props) => {
                                                     </svg>
                                                 </i>
                                                 <i className="sidenav-mini-icon"> E </i>
-                                                <span className="item-name">Elements</span>
+                                                <span className="item-name">Elèves</span>
                                             </Link>
                                         </li>
-                                        <li className="nav-item">
-                                            <Link className={`${location.pathname === '/dashboard/form/form-wizard' ? 'active' : ''} nav-link`} to="/dashboard/form/form-wizard">
-                                                <i className="icon">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                                                        <g>
-                                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                                        </g>
-                                                    </svg>
-                                                </i>
-                                                <i className="sidenav-mini-icon"> W </i>
-                                                <span className="item-name">Wizard</span>
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link className={`${location.pathname === '/dashboard/form/form-validation' ? 'active' : ''} nav-link`} to="/dashboard/form/form-validation">
-                                                <i className="icon">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                                                        <g>
-                                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                                        </g>
-                                                    </svg>
-                                                </i>
-                                                <i className="sidenav-mini-icon"> V </i>
-                                                <span className="item-name">Validation</span>
-                                            </Link>
-                                        </li>
+
+
                                     </ul>
                                 </Accordion.Collapse>
                             </Accordion.Item>
+
+                                        
                             <Accordion.Item as="li" eventKey="sidebar-form-documents" bsPrefix={`nav-item ${active === 'form' ? 'active' : ''} `} onClick={() => setActive('form')}>
                                 <CustomToggle eventKey="sidebar-form-documents" active={activeMenu === 'sidebar-form' ? true : false} onClick={(activeKey) => setActiveMenu(activeKey)}>
                                     <i className="icon">
