@@ -131,6 +131,12 @@ const MembresAdministration = () => {
         })
     }
 
+    
+    const deleteMembres = (id) => {
+        http.delete('/delete_membres/' + id).then(res => {
+            fetchAllMembres();
+        })
+    }
 
 
 
