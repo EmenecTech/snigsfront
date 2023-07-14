@@ -153,6 +153,8 @@ import DisciplineListClassesEleves from '../views/fondateur/discipline/classesdi
 import DisciplineEleveInfo from '../views/fondateur/discipline/classesdisicplineselevesinfo';
 import DisciplineInfoForEleve from '../views/eleves/discipline/infodiscipline';
 
+import EditMembresAdministration from '../views/fondateur/administration/edit_membre';
+
 
 
 
@@ -241,6 +243,10 @@ export const DefaultRouter = [
             {
                 path: 'Admin/add/',
                 element: <AddMembreAdministration />
+            },
+            {
+                path: '/Admin/edit/membres_administration',
+                element: <EditMembresAdministration />,
             },
             ///////
             {
