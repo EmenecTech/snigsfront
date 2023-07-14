@@ -70,6 +70,14 @@ const RolesAdmin = memo((props) => {
     }
 
 
+     const deleteRoles = (id) => {
+        http.delete("/roles/" + id).then((res) => {
+            fetchAllPrivileges();
+        });
+    };
+
+
+
 
 
 
