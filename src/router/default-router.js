@@ -387,6 +387,7 @@ export const DefaultRouter = [
             },
             {
                 path: 'Document/Of/classes/eleves/:ideleve/:idoc',
+                element: <DisciplineEleveInfo />
             } 
             ////Pensions
             {
