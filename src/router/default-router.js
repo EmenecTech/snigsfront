@@ -505,8 +505,9 @@ export const DefaultRouter = [
                 element: <ElevelistdocumentsEleves />
             },
 
+        
             {
-                path: 'Eleve/Load/Documents/:etab/:userid/:idoc',
+                path: 'Eleve/Load/Documents/:idoc',
                 element: <ElevelistdocumentsElevesLoad />
             },
             {
