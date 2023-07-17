@@ -387,8 +387,8 @@ export const DefaultRouter = [
             },
             {
                 path: 'Document/Of/classes/eleves/:ideleve/:idoc',
-                element: <DisciplineEleveInfo />
-            }, 
+                element: <AdminlistdocumentsOfEleves />
+            },
             ////Pensions
             {
                 path: 'Admin/Comptabilite/List/',
