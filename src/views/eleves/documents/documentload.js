@@ -90,7 +90,7 @@ const ElevelistdocumentsElevesLoad = memo((props) => {
 
         fData.append("image", imagedata);
 
-        Axios.post("https://snigsbackend.com/api/eleve/load/document/" + etab + "/" + userid + "/" + idoc, fData)
+         Axios.post("https://snigsbackend.com/api/eleve/load/document/" + etab + "/" + userid + "/" + idoc, fData)
             .then((res) => {
                 console.log("response", res);
                 alert("Document ajouté !")
@@ -99,13 +99,6 @@ const ElevelistdocumentsElevesLoad = memo((props) => {
                 console.error("Faillure", e);
             });
     };
-
-
-
-
-
-
-
 
 
 
