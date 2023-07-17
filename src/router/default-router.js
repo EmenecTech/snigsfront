@@ -156,6 +156,12 @@ import DisciplineInfoForEleve from '../views/eleves/discipline/infodiscipline';
 import EditMembresAdministration from '../views/fondateur/administration/edit_membre';
 
 
+import AdminlistdocumentsElevesClasses from '../views/fondateur/documents/elevesclassesdocuments';
+import AdminlistdocumentsElevesLoad from '../views/fondateur/documents/eleveslistdocumentsload';
+import DocumentsListNiveauClasseEleves from '../views/fondateur/documents/doumentsclasseeleves';
+import AdminlistdocumentsOfEleves from '../views/fondateur/documents/documentsofelevesload';
+
+
 
 
 export const DefaultRouter = [
@@ -365,6 +371,23 @@ export const DefaultRouter = [
                 path: 'Admin/List/Documents/Eleves/',
                 element: <AdminlistdocumentsEleves />
             },
+     /////////14/07/2023
+
+            {
+                path: 'Admin/list/classes/documents/:niveau/:idoc',
+                element: <AdminlistdocumentsElevesClasses />
+            },
+            {
+                path: 'Admin/list/classes/load/documents/:niveau/:idoc',
+                element: <AdminlistdocumentsElevesLoad />
+            },
+            {
+                path: 'Document/list/classes/eleves/documents/:niveau/:classe/:idoc',
+                element: <DocumentsListNiveauClasseEleves />
+            },
+            {
+                path: 'Document/Of/classes/eleves/:ideleve/:idoc',
+               
             ////Pensions
             {
                 path: 'Admin/Comptabilite/List/',
