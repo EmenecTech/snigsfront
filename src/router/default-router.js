@@ -371,8 +371,8 @@ export const DefaultRouter = [
                 path: 'Admin/List/Documents/Eleves/',
                 element: <AdminlistdocumentsEleves />
             },
-     /////////14/07/2023
-
+    
+            /////////14/07/2023
             {
                 path: 'Admin/list/classes/documents/:niveau/:idoc',
                 element: <AdminlistdocumentsElevesClasses />
@@ -387,7 +387,7 @@ export const DefaultRouter = [
             },
             {
                 path: 'Document/Of/classes/eleves/:ideleve/:idoc',
-               
+            } 
             ////Pensions
             {
                 path: 'Admin/Comptabilite/List/',
