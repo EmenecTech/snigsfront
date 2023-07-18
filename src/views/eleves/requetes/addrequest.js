@@ -28,14 +28,27 @@ const EleveAddRequest = (props) => {
     return (
         <Card>
             <Card.Header className="d-flex justify-content-between">
-                <div className="header-title">
-                    <h4 className="card-title">Messagerie</h4>
-                </div>
+              
+                {user.langue === "en" ? (<div>
+
+                     <div className="header-title">
+                        <h4 className="card-title">New request</h4>
+                    </div>
+                    
+                    </div>):(<div>
+
+                     <div className="header-title">
+                        <h4 className="card-title">Nouvelle requête</h4>
+                    </div>
+                    
+                    </div>)}
+               
             </Card.Header>
             <Card.Body>
                 <Form>
                     <Form.Group className="form-group">
-                        <Form.Label htmlFor="objet">Objet:</Form.Label>
+                          {user.langue === "en" ? (<div><Form.Label htmlFor="objet">Title:</Form.Label></div>):(<div><Form.Label htmlFor="objet">Objet:</Form.Label></div>)}
+                        
                         <Form.Control
                             type="text"
                             name="objet"
@@ -45,7 +58,9 @@ const EleveAddRequest = (props) => {
                         />
                     </Form.Group>
                     <Form.Group className="form-group">
-                        <Form.Label htmlFor="fichier">Fichier:</Form.Label>
+                        {user.langue === "en" ? (<div><Form.Label htmlFor="fichier">File:</Form.Label></div>):(<div><Form.Label htmlFor="fichier">Fichier:</Form.Label></div>)}
+                        
+                        
                         <Form.Control
                             type="text"
                             name="fichier"
@@ -55,7 +70,9 @@ const EleveAddRequest = (props) => {
                         />
                     </Form.Group>
                     <Form.Group className="mb-3 form-group">
-                        <Form.Label htmlFor="contenu">Contenu:</Form.Label>
+                      
+                        {user.langue === "en" ? (<div>  <Form.Label htmlFor="contenu">Message:</Form.Label></div>):(<div>  <Form.Label htmlFor="contenu">Contenu:</Form.Label></div>)}
+                        
                         <Form.Control
                             as="textarea"
                             id="exampleFormControlTextarea1"
