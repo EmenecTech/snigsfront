@@ -205,7 +205,30 @@ const Header = memo((props) => {
                     <Navbar.Collapse id="navbarSupportedContent">
                         <Nav as="ul" className="mb-2 ms-auto navbar-list mb-lg-0 align-items-center">
 
+                            {user.role === "en" ? (<div>
+    
+
                             <Dropdown as="li" className="nav-item">
+                                <Dropdown.Toggle as={CustomToggle} variant="search-toggle nav-link">
+                                    <img src={flag1} className="img-fluid rounded-circle" alt="user" style={{ height: "30px", minWidth: "30px", width: "30px", }} />
+                                    <span className="bg-primary"></span>
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu className="p-0 sub-drop dropdown-menu-end">
+                                    <div className="m-0 border-0 shadow-none card">
+                                        <div className="p-0 ">
+                                            <ul className="list-group list-group-flush">
+                                                <li className="iq-sub-card list-group-item"><Link className="p-0" onClick={() => { update_lang(user.id, "fr") }}><img src={flag4} alt="img-flaf" className="img-fluid me-2" style={{ width: "15px", height: "15px", minWidth: "15px", }} />English</Link></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </Dropdown.Menu>
+                            </Dropdown>
+    
+                            </div>):(<div>
+    
+    
+                                <Dropdown as="li" className="nav-item">
                                 <Dropdown.Toggle as={CustomToggle} variant="search-toggle nav-link">
                                     <img src={flag4} className="img-fluid rounded-circle" alt="user" style={{ height: "30px", minWidth: "30px", width: "30px", }} />
                                     <span className="bg-primary"></span>
@@ -221,6 +244,8 @@ const Header = memo((props) => {
                                     </div>
                                 </Dropdown.Menu>
                             </Dropdown>
+                            </div>)}
+                            
                             <Dropdown as="li" className="nav-item">
                                 <Dropdown.Toggle as={CustomToggle} href="#" variant=" nav-link" id="notification-drop" data-bs-toggle="dropdown" >
                                     <svg width="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
