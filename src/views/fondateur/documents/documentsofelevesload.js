@@ -354,7 +354,7 @@ const AdminlistdocumentsOfEleves = memo((props) => {
                                                 <td>
                                                     <div className="flex align-items-center list-user-action">
 
-                                                        <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"https://snigsbackend.com/documents/"+ item.link_documentset} >
+                                                        <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"https://snigsbackend.com/documents/" + item.link_documentset} >
                                                             Télécharger
                                                         </Link>{' '}
 
