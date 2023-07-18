@@ -901,7 +901,28 @@ const Dashboard_superadmin = memo((props) => {
                       id="profile-pills-tab"
                       role="tablist"
                     >
+
+                        {user.langue === "en" ? (<div>
+
+
+                        <Nav.Item as="li">
+                        <Nav.Link eventKey="first">Profile</Nav.Link>
+                      </Nav.Item>
                       <Nav.Item as="li">
+                        <Nav.Link eventKey="second">Teachers</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item as="li">
+                        <Nav.Link eventKey="third">Courses</Nav.Link>
+                      </Nav.Item>
+                     
+                    </Nav>
+                        
+                        
+                        </div>):(<div>
+
+
+
+                        <Nav.Item as="li">
                         <Nav.Link eventKey="first">Profil</Nav.Link>
                       </Nav.Item>
                       <Nav.Item as="li">
@@ -910,10 +931,11 @@ const Dashboard_superadmin = memo((props) => {
                       <Nav.Item as="li">
                         <Nav.Link eventKey="third">Matières</Nav.Link>
                       </Nav.Item>
-                      <Nav.Item as="li">
-                        <Nav.Link eventKey="fourth">Communiqués</Nav.Link>
-                      </Nav.Item>
+                     
                     </Nav>
+                        
+                        </div>)}
+                      
                   </div>
                 </Card.Body>
               </Card>
@@ -1184,8 +1206,32 @@ const Dashboard_superadmin = memo((props) => {
             </Col>
             <Col lg="4">
               {/* A Propos */}
+              {user.langue === "en" ? (<div>
 
-              <Card>
+                  <Card>
+
+                <Card.Body>
+                  <p></p>
+                  <div className="mb-1">
+                    Enseignant principal:{" "}
+                    <Link to="#" className="ms-3">
+                     Main teacher
+                    </Link>
+                  </div>
+                  <div className="mb-1">
+                    Effectif:{" "}
+                    <Link to="#" className="ms-3">
+                     Number
+                    </Link>
+                  </div>
+
+                </Card.Body>
+              </Card>
+                
+                </div>):
+                (<div>
+
+                  <Card>
 
                 <Card.Body>
                   <p></p>
@@ -1204,6 +1250,9 @@ const Dashboard_superadmin = memo((props) => {
 
                 </Card.Body>
               </Card>
+                
+                </div>)}
+            
 
               {/* fin a Propos */}
 
