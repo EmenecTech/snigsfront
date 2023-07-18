@@ -64,7 +64,7 @@ const EleveListRequest = () => {
                                 <span>New Request</span>
                             </Button>
         
-        
+                            </Link>
                         </div>):(<div>
 
 
@@ -92,10 +92,10 @@ const EleveListRequest = () => {
                                 </i>
                                 <span>Nouvelle Requete</span>
                             </Button>
-        
+                            </Link>
                     </div>)}
                     
-                    </Link>
+                
                 </Card.Header>
                 <Card.Body>
                     <table className="table">
