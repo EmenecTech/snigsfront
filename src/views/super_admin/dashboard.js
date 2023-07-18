@@ -902,28 +902,6 @@ const Dashboard_superadmin = memo((props) => {
                       role="tablist"
                     >
 
-                        {user.langue === "en" ? (<div>
-
-
-                        <Nav.Item as="li">
-                        <Nav.Link eventKey="first">Profile</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item as="li">
-                        <Nav.Link eventKey="second">Teachers</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item as="li">
-                        <Nav.Link eventKey="third">Courses</Nav.Link>
-                      </Nav.Item>
-                        <Nav.Item as="li">
-                        <Nav.Link eventKey="fourth">Communiqués</Nav.Link>
-                      </Nav.Item>
-                        </Nav>
-                        
-                        
-                        </div>):(<div>
-
-
-
                         <Nav.Item as="li">
                         <Nav.Link eventKey="first">Profil</Nav.Link>
                       </Nav.Item>
@@ -937,8 +915,6 @@ const Dashboard_superadmin = memo((props) => {
                         <Nav.Link eventKey="fourth">Communiqués</Nav.Link>
                       </Nav.Item>
                     </Nav>
-                        
-                        </div>)}
                       
                   </div>
                 </Card.Body>
