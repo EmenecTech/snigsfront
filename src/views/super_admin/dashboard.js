@@ -914,8 +914,10 @@ const Dashboard_superadmin = memo((props) => {
                       <Nav.Item as="li">
                         <Nav.Link eventKey="third">Courses</Nav.Link>
                       </Nav.Item>
-                     
-                    </Nav>
+                        <Nav.Item as="li">
+                        <Nav.Link eventKey="fourth">Communiqués</Nav.Link>
+                      </Nav.Item>
+                        </Nav>
                         
                         
                         </div>):(<div>
@@ -931,7 +933,9 @@ const Dashboard_superadmin = memo((props) => {
                       <Nav.Item as="li">
                         <Nav.Link eventKey="third">Matières</Nav.Link>
                       </Nav.Item>
-                     
+                      <Nav.Item as="li">
+                        <Nav.Link eventKey="fourth">Communiqués</Nav.Link>
+                      </Nav.Item>
                     </Nav>
                         
                         </div>)}
