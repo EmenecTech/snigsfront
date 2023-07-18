@@ -904,7 +904,7 @@ const VerticalNav = memo((props) => {
                                                 </svg>
                                             </i>
                                             <i className="sidenav-mini-icon"> U </i>
-                                            <span className="item-name">Emploi du temps</span>
+                                            <span className="item-name">Timetable</span>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
@@ -917,7 +917,7 @@ const VerticalNav = memo((props) => {
                                                 </svg>
                                             </i>
                                             <i className="sidenav-mini-icon"> U </i>
-                                            <span className="item-name">Cours</span>
+                                            <span className="item-name">Courses</span>
                                         </Link>
                                     </li>
                                     {/* <li className="nav-item">
@@ -944,7 +944,7 @@ const VerticalNav = memo((props) => {
                                                 </svg>
                                             </i>
                                             <i className="sidenav-mini-icon"> U </i>
-                                            <span className="item-name">Notes</span>
+                                            <span className="item-name">Ratings</span>
                                         </Link>
                                     </li>
                                     {/*<li className="nav-item">
@@ -1022,7 +1022,7 @@ const VerticalNav = memo((props) => {
                                         <circle cx="18" cy="11.8999" r="1" fill="currentColor"></circle>
                                     </svg>
                                 </i>
-                                <span className="item-name">Requêtes</span>
+                                <span className="item-name">Requests</span>
                             </Link>
                         </li>
                         <Accordion.Item as="li" eventKey="sidebar-documentscolaires" bsPrefix={`nav-item ${active === 'user' ? 'active' : ''} `} onClick={() => setActive('user')}>
@@ -1034,7 +1034,7 @@ const VerticalNav = memo((props) => {
                                         <path fillRule="evenodd" clipRule="evenodd" d="M10.211 14.5565C10.111 14.9195 9.762 15.1515 9.384 15.1015C6.833 14.7455 4.395 13.8405 2.337 12.4815C2.126 12.3435 2 12.1075 2 11.8555V8.38949C2 6.28949 3.712 4.58149 5.817 4.58149H7.784C7.972 3.12949 9.202 2.00049 10.704 2.00049H13.286C14.787 2.00049 16.018 3.12949 16.206 4.58149H18.183C20.282 4.58149 21.99 6.28949 21.99 8.38949V11.8555C21.99 12.1075 21.863 12.3425 21.654 12.4815C19.592 13.8465 17.144 14.7555 14.576 15.1105C14.541 15.1155 14.507 15.1175 14.473 15.1175C14.134 15.1175 13.831 14.8885 13.746 14.5525C13.544 13.7565 12.821 13.1995 11.99 13.1995C11.148 13.1995 10.433 13.7445 10.211 14.5565ZM13.286 3.50049H10.704C10.031 3.50049 9.469 3.96049 9.301 4.58149H14.688C14.52 3.96049 13.958 3.50049 13.286 3.50049Z" fill="currentColor"></path>
                                     </svg>
                                 </i>
-                                <span className="item-name">Documents </span>
+                                <span className="item-name">Documents</span>
                                 <i className="right-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -1098,7 +1098,7 @@ const VerticalNav = memo((props) => {
                                                 </svg>
                                             </i>
                                             <i className="sidenav-mini-icon"> U </i>
-                                            <span className="item-name">Bulletin de notes</span>
+                                            <span className="item-name">Gradebook/span>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
@@ -1111,7 +1111,7 @@ const VerticalNav = memo((props) => {
                                                 </svg>
                                             </i>
                                             <i className="sidenav-mini-icon"> U </i>
-                                            <span className="item-name">Dossiers</span>
+                                            <span className="item-name">School certificate</span>
                                         </Link>
                                     </li>
 
@@ -1145,7 +1145,7 @@ const VerticalNav = memo((props) => {
                                         <circle cx="18" cy="11.8999" r="1" fill="currentColor"></circle>
                                     </svg>
                                 </i>
-                                <span className="item-name">Régularité</span>
+                                <span className="item-name">Regularities</span>
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -1427,7 +1427,7 @@ const VerticalNav = memo((props) => {
                                                 </svg>
                                             </i>
                                             <i className="sidenav-mini-icon"> U </i>
-                                            <span className="item-name">Dossiers</span>
+                                            <span className="item-name">Certificat Scolaire</span>
                                         </Link>
                                     </li>
 
@@ -1461,7 +1461,7 @@ const VerticalNav = memo((props) => {
                                         <circle cx="18" cy="11.8999" r="1" fill="currentColor"></circle>
                                     </svg>
                                 </i>
-                                <span className="item-name">Régularité</span>
+                                <span className="item-name">Régularités</span>
                             </Link>
                         </li>
                         <li className="nav-item">
