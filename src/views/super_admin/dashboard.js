@@ -1201,15 +1201,15 @@ const Dashboard_superadmin = memo((props) => {
                 <Card.Body>
                   <p></p>
                   <div className="mb-1">
-                    Enseignant principal:{" "}
+                  Main teacher:{" "}
                     <Link to="#" className="ms-3">
-                     Main teacher
+              
                     </Link>
                   </div>
                   <div className="mb-1">
-                    Effectif:{" "}
+                       Number:{" "}
                     <Link to="#" className="ms-3">
-                     Number
+                    
                     </Link>
                   </div>
 
