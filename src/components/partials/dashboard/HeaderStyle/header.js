@@ -205,7 +205,7 @@ const Header = memo((props) => {
                     <Navbar.Collapse id="navbarSupportedContent">
                         <Nav as="ul" className="mb-2 ms-auto navbar-list mb-lg-0 align-items-center">
 
-                            {user.role === "en" ? (<div>
+                            {user.langue === "en" ? (<div>
     
 
                             <Dropdown as="li" className="nav-item">
