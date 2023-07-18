@@ -83,7 +83,10 @@ const EleveAddRequest = (props) => {
                         />
                     </Form.Group>
                     <Button type="button" onClick={submitForm} variant="btn btn-primary">
-                        Envoyer
+                                
+                        {user.langue === "en" ? (<div> Send</div>):(<div>     Envoyer</div>)}
+                        
+                     
                     </Button>
                 </Form>
             </Card.Body>
