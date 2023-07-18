@@ -35,30 +35,66 @@ const EleveListRequest = () => {
 
 
                 <Card.Header className="d-flex justify-content-between">
-                    <div className="header-title">
-                        <h4 className="card-title">Filières</h4>
-                    </div>
-                    <Link to="/Eleve/Request/Add/">
-                        <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3">
-                            <i className="btn-inner">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-6 w-6"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                                        values="Requete"
-                                    />
-                                </svg>
-                            </i>
-                            <span>Nouvelle Requete</span>
-                        </Button>
+
+                    {user.langue === "en" ? (<div>
+        
+
+                        <div className="header-title">
+                            <h4 className="card-title">Requests</h4>
+                        </div>
+                        <Link to="/Eleve/Request/Add/">
+                            <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3">
+                                <i className="btn-inner">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                            values="Requete"
+                                        />
+                                    </svg>
+                                </i>
+                                <span>New Request</span>
+                            </Button>
+        
+        
+                        </div>):(<div>
+
+
+                        <div className="header-title">
+                            <h4 className="card-title">Requêtes</h4>
+                        </div>
+                        <Link to="/Eleve/Request/Add/">
+                            <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3">
+                                <i className="btn-inner">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                            values="Requete"
+                                        />
+                                    </svg>
+                                </i>
+                                <span>Nouvelle Requete</span>
+                            </Button>
+        
+                    </div>)}
+                    
                     </Link>
                 </Card.Header>
                 <Card.Body>
