@@ -217,7 +217,7 @@ const Header = memo((props) => {
                                     <div className="m-0 border-0 shadow-none card">
                                         <div className="p-0 ">
                                             <ul className="list-group list-group-flush">
-                                                <li className="iq-sub-card list-group-item"><Link className="p-0" onClick={() => { update_lang(user.id, "fr") }}><img src={flag4} alt="img-flaf" className="img-fluid me-2" style={{ width: "15px", height: "15px", minWidth: "15px", }} />English</Link></li>
+                                                <li className="iq-sub-card list-group-item"><Link className="p-0" onClick={() => { update_lang(user.id, "en") }}><img src={flag4} alt="img-flaf" className="img-fluid me-2" style={{ width: "15px", height: "15px", minWidth: "15px", }} />English</Link></li>
 
                                             </ul>
                                         </div>
