@@ -999,7 +999,7 @@ const Dashboard_superadmin = memo((props) => {
                   <Card>
                     <Card.Header className="d-flex justify-content-between">
                       <div className="header-title">
-                        <h4 className="card-title">Enseignants</h4>
+                        <h4 className="card-title"></h4>
                       </div>
                     </Card.Header>
                     <Card.Body>
@@ -1050,7 +1050,7 @@ const Dashboard_superadmin = memo((props) => {
                   <Card>
                     <Card.Header>
                       <div className="header-title">
-                        <h4 className="card-title">Matières</h4>
+                        <h4 className="card-title"></h4>
                       </div>
                     </Card.Header>
                     <Card.Body>
