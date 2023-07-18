@@ -100,7 +100,7 @@ const VerticalNav = memo((props) => {
                             </Link>
                         </li>
                     
-                    </div>)
+                    </div>)}
                
 
                 {user.role === "Super adminstrateur" ? (<div>
