@@ -96,6 +96,95 @@ const Dashboard_superadmin = memo((props) => {
 
 
 
+
+
+
+
+  
+  const [alluser, setalluser] = useState([]);
+  useEffect(() => {
+    fetchAllalluser();
+  }, []);
+
+  const fetchAllalluser = () => {
+    http.get('/all_user').then(res => {
+      setalluser(res.data);
+    })
+  }
+
+
+  const [nbrfond, setnbrefond] = useState([]);
+  useEffect(() => {
+    fetchAllnbrefond();
+  }, []);
+
+  const fetchAllnbrefond = () => {
+    http.get('/nbrfond').then(res => {
+      setnbrefond(res.data);
+    })
+  }
+
+
+  const [nbreleve_sup, setnbreleve_sup] = useState([]);
+  useEffect(() => {
+    fetchAllnbreleve_sup();
+  }, []);
+
+  const fetchAllnbreleve_sup = () => {
+    http.get('/nbreleve_sup/' + etab).then(res => {
+      setnbreleve_sup(res.data);
+    })
+  }
+
+  const [nbrens_sup, setnbrens_sup] = useState([]);
+  useEffect(() => {
+    fetchAllnbrens_sup();
+  }, []);
+
+  const fetchAllnbrens_sup = () => {
+    http.get('/nbrens_sup/' + etab).then(res => {
+      setnbrens_sup(res.data);
+    })
+  }
+
+
+  const [nbrad_sup, setnbrad_sup] = useState([]);
+  useEffect(() => {
+    fetchAllnbrad_sup();
+  }, []);
+
+  const fetchAllnbrad_sup = () => {
+    http.get('/nbrad_sup/' + etab).then(res => {
+      setnbrad_sup(res.data);
+    })
+  }
+
+  const [nbrpreins_sup, setnbrpreins_sup] = useState([]);
+  useEffect(() => {
+    fetchAllnbrpreins_sup();
+  }, []);
+
+  const fetchAllnbrpreins_sup = () => {
+    http.get('/nbreleve_preins_sup/' + etab).then(res => {
+      setnbrpreins_sup(res.data);
+    })
+  }
+
+  const [nbrarchv_sup, setnbrarchv_sup] = useState([]);
+  useEffect(() => {
+    fetchAllnbrarchv_sup();
+  }, []);
+
+  const fetchAllnbrarchv_sup = () => {
+    http.get('/nbreleve_arch_sup/' + etab).then(res => {
+      setnbrarchv_sup(res.data);
+    })
+  }
+
+
+
+  ////////
+
   const [nbreleve, setnbreleve] = useState([]);
   useEffect(() => {
     fetchAllnbreleve();
@@ -1749,6 +1838,296 @@ const Dashboard_superadmin = memo((props) => {
           </Row >
 
         </div>) : (<div></div>)}
+
+
+        {user.role === "Super adminstrateur" ? (<div>
+
+          <Row>
+            <Col md="12" lg="12">
+              <Row className="row-cols-1">
+                <div className="overflow-hidden d-slider1 " data-aos="fade-up" data-aos-delay="800">
+                  <Swiper
+                    className="p-0 m-0 mb-2 list-inline "
+                    slidesPerView={5}
+                    spaceBetween={32}
+                    navigation={{
+                      nextEl: ".swiper-button-next",
+                      prevEl: ".swiper-button-prev",
+                    }}
+                    breakpoints={{
+                      320: { slidesPerView: 1 },
+                      550: { slidesPerView: 2 },
+                      991: { slidesPerView: 3 },
+                      1400: { slidesPerView: 3 },
+                      1500: { slidesPerView: 4 },
+                      1920: { slidesPerView: 4 },
+                      2040: { slidesPerView: 7 },
+                      2440: { slidesPerView: 8 }
+                    }}
+
+                  >
+                    <SwiperSlide className="card card-slide" >
+                      <div className="card-body">
+                        <div className="progress-widget">
+                          <Circularprogressbar
+                            stroke={variableColors.primary}
+                            width="60px"
+                            height="60px"
+                            Linecap="rounded"
+                            trailstroke="#ddd"
+                            strokewidth="4px"
+                            style={{ width: 60, height: 60 }}
+                            value={90}
+                            id="circle-progress-01"
+                          >
+                            <svg
+                              className=""
+                              width="24"
+                              height="24px"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                fill="currentColor"
+                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
+                              />
+                            </svg>
+                          </Circularprogressbar>
+                          <div className="progress-detail">
+                            <p className="mb-2">Utilisateurs</p>
+                            <h4 className="counter">
+                              <CountUp start={0} end={alluser} duration={3} />
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>{' '}
+
+
+                    <SwiperSlide className=" card card-slide">
+                      <div className="card-body">
+                        <div className="progress-widget">
+                          <Circularprogressbar
+                            stroke={variableColors.primary}
+                            width="60px"
+                            height="60px"
+                            trailstroke="#ddd"
+                            strokewidth="4px"
+                            Linecap="rounded"
+                            style={{ width: 60, height: 60 }}
+                            value={70}
+                            id="circle-progress-03"
+                          >
+                            <svg className="" width="24" viewBox="0 0 24 24">
+                              <path
+                                fill="currentColor"
+                                d="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z"
+                              />
+                            </svg>
+                          </Circularprogressbar>
+                          <div className="progress-detail">
+                            <p className="mb-2">Fondateurs</p>
+                            <h4 className="counter">
+                              <CountUp start={0} end={nbrfond} duration={3} />
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide className=" card card-slide">
+                      <div className="card-body">
+                        <div className="progress-widget">
+                          <Circularprogressbar
+                            stroke={variableColors.info}
+                            width="60px"
+                            height="60px"
+                            trailstroke="#ddd"
+                            strokewidth="4px"
+                            Linecap="rounded"
+                            style={{ width: 60, height: 60 }}
+                            value={60}
+                            id="circle-progress-04"
+                          >
+                            <svg
+                              className=""
+                              width="24px"
+                              height="24px"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                fill="currentColor"
+                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
+                              />
+                            </svg>
+                          </Circularprogressbar>
+                          <div className="progress-detail">
+                            <p className="mb-2">Membres de l'administration</p>
+                            <h4 className="counter">
+                              <CountUp start={0} end={nbrad_sup} duration={3} />
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide className=" card card-slide">
+                      <div className="card-body">
+                        <div className="progress-widget">
+                          <Circularprogressbar
+                            stroke={variableColors.primary}
+                            width="60px"
+                            height="60px"
+                            trailstroke="#ddd"
+                            strokewidth="4px"
+                            Linecap="rounded"
+                            style={{ width: 60, height: 60 }}
+                            value={50}
+                            id="circle-progress-05"
+                          >
+                            <svg
+                              className=""
+                              width="24px"
+                              height="24px"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                fill="currentColor"
+                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
+                              />
+                            </svg>
+                          </Circularprogressbar>
+                          <div className="progress-detail">
+                            <p className="mb-2">Enseignants</p>
+                            <h4 className="counter">
+                              <CountUp start={0} end={nbrens_sup} duration={3} />
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+
+
+                    <div className="swiper-button swiper-button-next"></div>
+                    <div className="swiper-button swiper-button-prev"></div>
+                  </Swiper>
+                </div>
+                <div className="overflow-hidden d-slider1 " data-aos="fade-up" data-aos-delay="800">
+                  <Swiper
+                    className="p-0 m-0 mb-2 list-inline "
+                    slidesPerView={5}
+                    spaceBetween={32}
+                    navigation={{
+                      nextEl: ".swiper-button-next",
+                      prevEl: ".swiper-button-prev",
+                    }}
+                    breakpoints={{
+                      320: { slidesPerView: 1 },
+                      550: { slidesPerView: 2 },
+                      991: { slidesPerView: 3 },
+                      1400: { slidesPerView: 3 },
+                      1500: { slidesPerView: 4 },
+                      1920: { slidesPerView: 4 },
+                      2040: { slidesPerView: 7 },
+                      2440: { slidesPerView: 8 }
+                    }}
+
+                  >
+
+
+
+                    <SwiperSlide className=" card card-slide">
+                      <div className="card-body">
+                        <div className="progress-widget">
+                          <Circularprogressbar
+                            stroke={variableColors.info}
+                            width="60px"
+                            height="60px"
+                            trailstroke="#ddd"
+                            strokewidth="4px"
+                            Linecap="rounded"
+                            style={{ width: 60, height: 60 }}
+                            value={60}
+                            id="circle-progress-02"
+                          >
+                            <svg
+                              className=""
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                fill="currentColor"
+                                d="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z"
+                              />
+                            </svg>
+                          </Circularprogressbar>
+                          <div className="progress-detail">
+                            <p className="mb-2">Elèves</p>
+                            <h4 className="counter">
+                              <CountUp start={0} end={nbreleve_sup} duration={5} />
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide className=" card card-slide">
+                      <div className="card-body">
+                        <div className="progress-widget">
+                          <Circularprogressbar
+                            stroke={variableColors.info}
+                            width="60px"
+                            height="60px"
+                            trailstroke="#ddd"
+                            strokewidth="4px"
+                            Linecap="rounded"
+                            style={{ width: 60, height: 60 }}
+                            value={60}
+                            id="circle-progress-04"
+                          >
+                            <svg
+                              className=""
+                              width="24px"
+                              height="24px"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                fill="currentColor"
+                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
+                              />
+                            </svg>
+                          </Circularprogressbar>
+                          <div className="progress-detail">
+                            <p className="mb-2">Elèves Préinscrits</p>
+                            <h4 className="counter">
+                              <CountUp start={0} end={nbrpreins_sup} duration={3} />
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+
+
+
+                    <div className="swiper-button swiper-button-next"></div>
+                    <div className="swiper-button swiper-button-prev"></div>
+                  </Swiper>
+                </div>
+
+              </Row>
+
+
+
+            </Col >
+
+
+
+          </Row >
+
+        </div>) : (<div></div>)}
+                          
+
+
+
+                                  
 
       </div >)}
     </Fragment >
