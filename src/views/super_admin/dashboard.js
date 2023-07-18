@@ -902,44 +902,26 @@ const Dashboard_superadmin = memo((props) => {
                       role="tablist"
                     >
 
-                        {user.langue === "en" ? (<div>
+
+                        <Nav.Item as="li">
+                          <Nav.Link eventKey="first"> {user.langue === "en" ? (<div>Profile</div>):(<div>Profil</div>)} </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                          <Nav.Link eventKey="second">{user.langue === "en" ? (<div>Teachers</div>):(<div>Enseignants</div>)}</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                          <Nav.Link eventKey="third">{user.langue === "en" ? (<div>Courses</div>):(<div>Matières</div>)}</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                          <Nav.Link eventKey="fourth"></Nav.Link>
+                        </Nav.Item>
+                      </Nav>
+
+                        
                         
 
       
-                            <Nav.Item as="li">
-                              <Nav.Link eventKey="first">Profile</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item as="li">
-                              <Nav.Link eventKey="second">Teachers</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item as="li">
-                              <Nav.Link eventKey="third">Courses</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item as="li">
-                              <Nav.Link eventKey="fourth"></Nav.Link>
-                            </Nav.Item>
-                          </Nav>
-                              
-                        
-                        </div>):(<div>
-
-
-                        <Nav.Item as="li">
-                            <Nav.Link eventKey="first">Profil</Nav.Link>
-                          </Nav.Item>
-                          <Nav.Item as="li">
-                            <Nav.Link eventKey="second">Enseignants</Nav.Link>
-                          </Nav.Item>
-                          <Nav.Item as="li">
-                            <Nav.Link eventKey="third">Matières</Nav.Link>
-                          </Nav.Item>
-                          <Nav.Item as="li">
-                            <Nav.Link eventKey="fourth"></Nav.Link>
-                          </Nav.Item>
-                        </Nav>
-                        
-                        </div>)}
-
+                       
                       
                       
                   </div>
