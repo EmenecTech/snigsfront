@@ -187,7 +187,7 @@ const UniClasse = () => {
                                             <Nav.Link eventKey="third">Matières</Nav.Link>
                                         </Nav.Item>
                                         <Nav.Item as="li">
-                                            <Nav.Link eventKey="fourth">Profile</Nav.Link>
+                                            <Nav.Link eventKey="fourth"></Nav.Link>
                                         </Nav.Item>
                                     </Nav>
                                 </div>
