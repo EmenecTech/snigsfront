@@ -193,14 +193,15 @@ const PayementsListEleve = (props) => {
                                                         onClick={handleShow}
                                                         className="btn btn-info mt-2"
                                                     >
-                                                        Ajouter un payement
+                                                            {user.langue === "en" ? (<div>Add payment</div>):(<div>  Ajouter un payement</div>)}
+                                                       
                                                     </button>
 
 
 
                                                     <Modal show={show} onHide={handleClose}>
                                                         <Modal.Header closeButton>
-                                                            <Modal.Title as="h5">Ajouter une nouvelle filière</Modal.Title>
+                                                            <Modal.Title as="h5"> {user.langue === "en" ? (<div>Add payment</div>):(<div>  Ajouter un payement</div>)}</Modal.Title>
                                                         </Modal.Header>
                                                         <Modal.Body>
                                                             <Form>
@@ -208,7 +209,7 @@ const PayementsListEleve = (props) => {
                                                                     <Col>
                                                                         <Form.Group as={Row} className="form-group">
                                                                             <Form.Group className="form-group">
-                                                                                <Form.Label htmlFor="exampleInputText1">Intitulé </Form.Label>
+                                                                                <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé</div>)}</Form.Label>
                                                                                 <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
                                                                             </Form.Group>
                                                                         </Form.Group>
@@ -218,7 +219,7 @@ const PayementsListEleve = (props) => {
                                                                     <Col>
                                                                         <Form.Group as={Row} className="form-group">
                                                                             <Form.Group className="form-group">
-                                                                                <Form.Label htmlFor="exampleInputText1">Montant </Form.Label>
+                                                                                <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Amount</div>):(<div> Montant</div>)} </Form.Label>
                                                                                 <Form.Control type="number" defaultValue="" name="montant" onChange={handleChange} required />
                                                                             </Form.Group>
                                                                         </Form.Group>
@@ -229,7 +230,7 @@ const PayementsListEleve = (props) => {
                                                                     <Col>
                                                                         <Form.Group as={Row} className="form-group">
                                                                             <Form.Group className="form-group">
-                                                                                <Form.Label htmlFor="exampleInputText1">Date de payement </Form.Label>
+                                                                                <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Date de payement</div>):(<div> Date de payement</div>)} </Form.Label>
                                                                                 <Form.Control type="date" defaultValue="" name="date" onChange={handleChange} required />
                                                                             </Form.Group>
                                                                         </Form.Group>
@@ -244,7 +245,7 @@ const PayementsListEleve = (props) => {
 
 
                                                                 <div className="text-center">
-                                                                    <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                                                    <Button type="button" variant="primary" onClick={submitForm} >{user.langue === "en" ? (<div>Confirm</div>):(<div>Confirmer</div>)} </Button>
                                                                 </div>
                                                             </Form>
                                                         </Modal.Body>
@@ -255,10 +256,10 @@ const PayementsListEleve = (props) => {
 
                                             </Col>
                                             <Col sm="4" lg="4">
-                                                <h3>Frais de scolarités</h3>
+                                                <h3>{user.langue === "en" ? (<div>Tuition fees</div>):(<div>Frais de scolarités</div>)} </h3>
                                                 <h5 className="mb-4">{infopayement.montant_pension} XAF</h5>
 
-                                                <h4 className="mb-3">Détails</h4>
+                                                <h4 className="mb-3">Détails </h4>
                                                 {detailpayement.map((item) => (
                                                     <div className="mt-2" key={item.id}>
                                                         <h6 className="mb-0">{item.montant_detailpayement} XAF</h6>
@@ -272,7 +273,7 @@ const PayementsListEleve = (props) => {
 
                                             </Col>
                                             <Col sm="4" lg="4">
-                                                <h3>Payements</h3>
+                                                <h3>{user.langue === "en" ? (<div>Payements </div>):(<div>Payements </div>)}</h3>
                                                 <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
 
 
