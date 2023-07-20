@@ -54,7 +54,7 @@ SwiperCore.use([Navigation]);
 const PayementsListNiveaux = memo((props) => {
 
 
-
+    const { http, setToken, user } = AuthUser();
 
     const [niveaux, setniveaux] = useState([]);
     useEffect(() => {
