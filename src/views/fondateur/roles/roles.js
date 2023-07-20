@@ -325,7 +325,7 @@ const RolesAdmin = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Rôles</h4>
+                                <h4 className="card-title"> {user.langue === "en" ? (<div>Roles</div>):(<div>Rôles</div>)}</h4>
                             </div>
                             <Link to="/Admin/add/role">
                                 <Button type="button" variant="primary">
@@ -334,7 +334,7 @@ const RolesAdmin = memo((props) => {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                         </svg>
                                     </span>
-                                    Ajouter
+                                     {user.langue === "en" ? (<div>Add</div>):(<div>Ajouter</div>)}
                                 </Button>
                             </Link>
 
@@ -352,7 +352,7 @@ const RolesAdmin = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Intitulé</th>
+                                            <th>  {user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)}</th>
                                             <th>Description </th>
                                             <th>Actions </th>
                                         </tr>
