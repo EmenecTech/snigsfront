@@ -346,7 +346,7 @@ const AdminlistdocumentsElevesClasses = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Intitulé</th>
+                                            <th>{user.langue === "en" ? (<div>Entitled </div>):(<div> Intitulé </div>)}</th>
                                             <th>Cycle </th>
                                             <th>Section</th>
                                             <th>Actions</th>
