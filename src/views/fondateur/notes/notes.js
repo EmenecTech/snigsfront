@@ -143,7 +143,7 @@ const AdminEditNotes = () => {
                                                 />
                                             </Form.Group>
                                             <Form.Group className='form-group'>
-                                                <Form.Label>Appreciation</Form.Label>
+                                                <Form.Label>Appréciation</Form.Label>
                                                 <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                                     <option> </option>
                                                     <option value="Non acquis">Non acquis</option>
@@ -180,7 +180,7 @@ const AdminEditNotes = () => {
                                         <th>Note</th>
                                         <th>NxC</th>
                                         <th>Coefficient</th>
-                                        <th>Appreciation</th>
+                                        <th>Appréciation</th>
                                         <th>Compétence visée</th>
                                         <th> </th>
                                     </tr>
@@ -205,9 +205,9 @@ const AdminEditNotes = () => {
                                                 {item.coefficient_cm}
                                             </td>
                                             <td>
-                                                {item.appreciation_note}
+                                                {item.appréciation_note}
                                             </td>
-                                            <td>{item.competence_visee_note} </td>
+                                            <td>{item.compétence_visée_note} </td>
                                             <td>
 
 
