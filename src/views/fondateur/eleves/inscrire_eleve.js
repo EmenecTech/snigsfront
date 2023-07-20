@@ -371,15 +371,15 @@ const InscriptionEleve = memo((props) => {
 
 
                             <Form.Group className="form-group">
-                                <Form.Label htmlFor="exampleInputReadonly">Nom</Form.Label>
+                                <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Name </div>):(<div> Nom </div>)}</Form.Label>
                                 <Form.Control type="text" id="exampleInputReadonly" disabled defaultValue={eleve.nom} />
                             </Form.Group>
                             <Form.Group className="form-group">
-                                <Form.Label htmlFor="exampleInputReadonly">Prénom</Form.Label>
+                                <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Surname</div>):(<div>Prénom </div>)}</Form.Label>
                                 <Form.Control type="text" id="exampleInputReadonly" disabled defaultValue={eleve.prenom} />
                             </Form.Group>
                             <Form.Group className="form-group">
-                                <Form.Label htmlFor="exampleInputReadonly">Niveau</Form.Label>
+                                <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)}</Form.Label>
                                 <Form.Control type="text" id="exampleInputReadonly" disabled defaultValue={niveau} />
                             </Form.Group>
                                <Form.Group className="form-group">
@@ -395,7 +395,7 @@ const InscriptionEleve = memo((props) => {
                                 />
                               </Form.Group>
                             <Form.Group className="form-group">
-                                <Form.Label htmlFor="exampleInputReadonly">Choisissez la classe</Form.Label>
+                                <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Choose the class</div>):(<div>Choisissez la classe</div>)}</Form.Label>
                                 <select className="form-select mb-3 shadow-none" name="classe" onChange={handleChange}>
                                     <option></option>
                                     {classes.map((item) => (
@@ -407,7 +407,7 @@ const InscriptionEleve = memo((props) => {
                             </Form.Group>
 
                             <div className="text-center mt-2">
-                                <Button type="button" variant="primary" onClick={submitForm} >Inscrire</Button>
+                                <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Inscrire</div>):(<div>To inscribe</div>)}</Button>
                             </div>
 
                         </Card.Header>
@@ -424,9 +424,9 @@ const InscriptionEleve = memo((props) => {
                                     <thead>
                                         <tr>
 
-                                            <th>Classe</th>
-                                            <th>Niveau</th>
-                                            <th>Filière </th>
+                                            <th>{user.langue === "en" ? (<div>Class </div>):(<div>Classe </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Level</div>):(<div>Niveau </div>)}</th>
+                                            <th> {user.langue === "en" ? (<div>Sector</div>):(<div>Filière</div>)} </th>
                                             <th>Cycle </th>
                                             <th>Actions</th>
                                         </tr>
