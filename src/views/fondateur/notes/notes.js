@@ -104,7 +104,7 @@ const AdminEditNotes = () => {
                                         </svg>
                                     </i>
 
-                                    <span>Modifier la Note</span>
+                                    <span>{user.langue === "en" ? (<div>Edit Rating</div>):(<div> Modifier la Note </div>)}</span>
                                 </Button>
                                 <Modal show={show} onHide={handleClose}>
                                     <Modal.Header closeButton>
@@ -113,7 +113,7 @@ const AdminEditNotes = () => {
                                     <Modal.Body>
                                         <Form>
                                             <Form.Group className="form-group">
-                                                <Form.Label htmlFor="exampleFormControlSelect1">Selectioner l'élève</Form.Label>
+                                                <Form.Label htmlFor="exampleFormControlSelect1">{user.langue === "en" ? (<div>Select the student</div>):(<div>Selectioner l'élève  </div>)}</Form.Label>
                                                 <select className="form-select" id="id_user" name="id_user" onChange={handleChange}>
                                                     <option> </option>
                                                     {eleves_classe.map((user) => (
@@ -144,7 +144,7 @@ const AdminEditNotes = () => {
                                                 />
                                             </Form.Group>
                                             <Form.Group className='form-group'>
-                                                <Form.Label>Appréciation</Form.Label>
+                                                <Form.Label>{user.langue === "en" ? (<div>Appreciation</div>):(<div>Appréciation   </div>)}</Form.Label>
                                                 <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                                     <option> </option>
                                                     <option value="Non acquis">Non acquis</option>
@@ -153,7 +153,7 @@ const AdminEditNotes = () => {
                                                 </select>
                                             </Form.Group>
                                             <Form.Group className='form-group'>
-                                                <Form.Label>Compétence visée</Form.Label>
+                                                <Form.Label>{user.langue === "en" ? (<div>Target skill</div>):(<div>Compétence visée   </div>)}</Form.Label>
                                                 <Form.Control type="text" id="competence_visee" name="competence_visee"
                                                     value={inputs.competence_visee || ''}
                                                     onChange={handleChange}
@@ -163,7 +163,7 @@ const AdminEditNotes = () => {
                                         </Form>
 
                                         <Button variant="primary" onClick={submitForm}>
-                                            Modifier
+                                            {user.langue === "en" ? (<div>Edit</div>):(<div>Modifier  </div>)}
                                         </Button>
                                     </Modal.Body>
                                 </Modal>
