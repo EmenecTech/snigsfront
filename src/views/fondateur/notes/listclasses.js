@@ -384,7 +384,7 @@ const AdminListClassesNotes = memo((props) => {
 
                                             <th> {user.langue === "en" ? (<div>Entitled </div>):(<div> Intitulé</div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Level</div>):(<div> Niveau</div>)}</th>
-                                            <th>{user.langue === "en" ? (<div>Sector</div>):(<div>Filière /div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Sector</div>):(<div>Filière </div>)}</th>
                                             <th>Cycle </th>
                                             <th>Action</th>
                                         </tr>
