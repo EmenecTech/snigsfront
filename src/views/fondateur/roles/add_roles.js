@@ -53,7 +53,7 @@ const AddRole = () => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Ajouter un rôle ou une fonction</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>Add a role or function </div>):(<div> Ajouter un rôle ou une fonction </div>)}</h4>
                                 </div>
 
                             </Card.Header>
@@ -65,7 +65,7 @@ const AddRole = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Intitulé *</Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Entitled </div>):(<div> Intitulé</div>)}*</Form.Label>
                                                     <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
                                                 </Form.Group>
                                             </Form.Group>
@@ -90,7 +90,7 @@ const AddRole = () => {
 
 
                                     <div className="text-center">
-                                        <Button type="button" variant="primary" onClick={submitForm}>Confirmer</Button>
+                                        <Button type="button" variant="primary" onClick={submitForm}>{user.langue === "en" ? (<div>Confirm</div>):(<div> Confirmer</div>)}</Button>
                                     </div>
                                 </Form>
                             </Card.Body>
