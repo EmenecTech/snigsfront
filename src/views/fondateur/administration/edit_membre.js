@@ -84,7 +84,7 @@ const EditMembresAdministration = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Name<div>):(<div> Nom  </div>)}</Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Name</div>):(<div> Nom </div>)} </Form.Label>
                                                     <Form.Control type="text" defaultValue="" name="nom" value={inputs.nom || ""} onChange={handleChange} required />
                                                 </Form.Group>
                                             </Form.Group>
