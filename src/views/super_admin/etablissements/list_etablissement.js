@@ -304,7 +304,7 @@ const ListEtablissements = memo((props) => {
           <Card>
             <Card.Header className="d-flex justify-content-between">
               <div className="header-title">
-                <h4 className="card-title">Liste d'établissements</h4>
+                <h4 className="card-title">Liste des établissements</h4>
               </div>
 
               <Link to="/etablissement/add/super/admin">
