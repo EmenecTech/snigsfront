@@ -78,7 +78,7 @@ const EnseignantAddNote = () => {
     }
 
     const submitForm = () => {
-        http.post('notes', inputs).then((res) => { })
+        http.post('/notes', inputs).then((res) => { })
         window.location.reload(false);
         console.log(inputs)
     }
