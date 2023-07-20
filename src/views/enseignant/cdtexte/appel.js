@@ -121,10 +121,10 @@ const EnseignantAppel_cd_texte = () => {
                                             >
                                                 <thead>
                                                     <tr>
-                                                        <th>{user.langue === "en" ? (<div> last name </div>):(<div> nom </div>)}</th>                                                        <th>Nom</th>
-                                                        <th>{user.langue === "en" ? (<div> first name </div>):(<div> prénom</div>)}</th>
-                                                        <th>{user.langue === "en" ? (<div> gender </div>):(<div> genre </div>)}</th>
-                                                        <th>{user.langue === "en" ? (<div> date of birth </div>):(<div> date de naissance </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div> last name </div>):(<div> Nom </div>)}</th>                                                        <th>Nom</th>
+                                                        <th>{user.langue === "en" ? (<div> first name </div>):(<div> Prénom</div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div> gender </div>):(<div> Genre </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div> date of birth </div>):(<div> Date de naissance </div>)}</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
