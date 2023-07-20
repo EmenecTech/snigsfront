@@ -278,7 +278,7 @@ const DisciplineEleveInfo = (props) => {
 
 
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="furl">Nom et prénom:</Form.Label>
+                                        <Form.Label htmlFor="furl">{user.langue === "en" ? (<div>Name et Surname  </div>):(<div> Nom et prénom </div>)}:</Form.Label>
                                         <Form.Control
                                             type="text"
                                             id="furl"
