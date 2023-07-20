@@ -329,7 +329,7 @@ const ListPreinscriptions = memo((props) => {
           <Card>
             <Card.Header className="d-flex justify-content-between">
               <div className="header-title">
-                <h4 className="card-title">Préinscriptions</h4>
+                <h4 className="card-title">{user.langue === "en" ? (<div>Pre-registrations</div>):(<div>Préinscriptions </div>)}</h4>
               </div>
 
               <Button variant="primary mt-2" onClick={handleShow}>
@@ -354,7 +354,7 @@ const ListPreinscriptions = memo((props) => {
               {/* <!-- Modal --> */}
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                  <Modal.Title as="h5">Nouvelle Préinscription</Modal.Title>
+                  <Modal.Title as="h5">{user.langue === "en" ? (<div>New Pre-registration </div>):(<div>Nouvelle Préinscription </div>)}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                   <Form>
@@ -363,7 +363,7 @@ const ListPreinscriptions = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Nom{" "}
+                            {user.langue === "en" ? (<div>Name </div>):(<div>Nom</div>)}{" "}
                             </Form.Label>
                             <Form.Control
                               type="text"
@@ -381,7 +381,7 @@ const ListPreinscriptions = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Prénom{" "}
+                             {user.langue === "en" ? (<div>Surname </div>):(<div> Prénom  </div>)}{" "}
                             </Form.Label>
                             <Form.Control
                               type="text"
@@ -399,7 +399,7 @@ const ListPreinscriptions = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Sexe{" "}
+                               {user.langue === "en" ? (<div>Sex </div>):(<div> Sexe </div>)}{" "}
                             </Form.Label>
                             <select
                               name="genre"
@@ -407,8 +407,8 @@ const ListPreinscriptions = memo((props) => {
                               onChange={handleChange}
                             >
                               <option></option>
-                              <option value="Masculin">Masculin</option>
-                              <option value="Feminin">Feminin</option>
+                              <option value="M"> {user.langue === "en" ? (<div>Male </div>):(<div> Masculin </div>)}</option>
+                              <option value="F"> {user.langue === "en" ? (<div>Female </div>):(<div> Feminin </div>)}</option>
                             </select>
                           </Form.Group>
                         </Form.Group>
@@ -437,7 +437,7 @@ const ListPreinscriptions = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Niveau{" "}
+                              {user.langue === "en" ? (<div>Level </div>):(<div>Niveau  </div>)}{" "}
                             </Form.Label>
                             <select
                               className="form-select mb-3 shadow-none"
@@ -465,7 +465,8 @@ const ListPreinscriptions = memo((props) => {
                         variant="primary"
                         onClick={submitForm}
                       >
-                        Confirmer
+                          {user.langue === "en" ? (<div> Confirm</div>):(<div>Confirmer </div>)}
+                   
                       </Button>
                     </div>
                   </Form>
@@ -483,9 +484,9 @@ const ListPreinscriptions = memo((props) => {
                 >
                   <thead>
                     <tr className="ligth">
-                      <th>Nom</th>
-                      <th>Prénom</th>
-                      <th>Niveau</th>
+                      <th>{user.langue === "en" ? (<div>Name</div>):(<div>Nom  </div>)}</th>
+                      <th>{user.langue === "en" ? (<div>Surname</div>):(<div>Prénom  </div>)}</th>
+                      <th>{user.langue === "en" ? (<div>Level</div>):(<div>Niveau  </div>)}</th>
                       <th>Email</th>
 
                       <th min-width="100px">Actions</th>
