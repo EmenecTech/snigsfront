@@ -427,7 +427,7 @@ const AdminlistdocumentsElevesLoad = memo((props) => {
 
 
                                         <div className="text-center">
-                                            <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                            <Button type="button" variant="primary" onClick={submitForm} >{user.langue === "en" ? (<div>Confirm</div>):(<div>Confirmer</div>)}</Button>
                                         </div>
                                     </Form>
                                 </Modal.Body>
