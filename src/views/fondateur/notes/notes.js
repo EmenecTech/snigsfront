@@ -203,7 +203,7 @@ const AdminEditNotes = () => {
                                                 {item.note_finale}
                                             </td>
                                             <td>
-                                                {item.coefficient_cm}
+                                                {matiere_classe_info.coefficient_cm}                                      
                                             </td>
                                             <td>
                                                 {item.appreciation_note}
