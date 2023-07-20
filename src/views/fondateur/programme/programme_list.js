@@ -339,7 +339,7 @@ const ListProgramme = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Programmes</h4>
+                                <h4 className="card-title"> {user.langue === "en" ? (<div>Programs</div>):(<div> Programmes</div>)}</h4>
                             </div>
 
 
@@ -349,12 +349,12 @@ const ListProgramme = memo((props) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                     </svg>
                                 </span>
-                                Ajouter
+                                {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter</div>)}
                             </Button>
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title as="h5">Ajouter un nouveau programme</Modal.Title>
+                                    <Modal.Title as="h5">{user.langue === "en" ? (<div>Add a new program</div>):(<div> Ajouter un nouveau programme </div>)}</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
                                     <Form>
@@ -362,7 +362,7 @@ const ListProgramme = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Intitulé *</Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Entitled</div>):(<div> Entitled </div>)}*</Form.Label>
                                                         <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -372,12 +372,13 @@ const ListProgramme = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Type de programme </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Program type</div>):(<div> Type de programme </div>)}</Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="type" onChange={handleChange}>
                                                             <option></option>
-                                                            <option value="Normal">Normal</option>
-                                                            <option value="Evaluations">Evaluations</option>
-                                                            <option value="Autre">Autre</option>
+                                                            {user.langue === "en" ? (<div><option value="Normal">Normal</option></div>):(<div> <option value="Normal">Normal</option> </div>)}
+                                                            {user.langue === "en" ? (<div><option value="School assessments">School assessments</option></div>):(<div> <option value="Evaluations">Evaluations</option> </div>)}
+                                                            {user.langue === "en" ? (<div><option value="Other">Other</option></div>):(<div> <option value="Autre">Autre</option> </div>)}
+                                                   
 
                                                         </select>
                                                     </Form.Group>
