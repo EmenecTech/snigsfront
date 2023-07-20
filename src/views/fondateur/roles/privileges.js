@@ -314,7 +314,7 @@ const ListPrivilegesFondateur = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Privilèges</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Privileges </div>):(<div> Privilèges</div>)}</h4>
                             </div>
 
 
@@ -331,8 +331,8 @@ const ListPrivilegesFondateur = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Code</th>
-                                            <th>Intitulé</th>
+                                            <th>Code </th>
+                                            <th>{user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé </div>)}</th>
                                             <th>Type </th>
                                         </tr>
                                     </thead>
