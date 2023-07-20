@@ -364,7 +364,7 @@ const AdminlistdocumentsElevesLoad = memo((props) => {
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title as="h5">Ajouter un nouveau document</Modal.Title>
+                                    <Modal.Title as="h5">{user.langue === "en" ? (<div>Add a new document </div>):(<div> Ajouter un nouveau document </div>)}</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
                                     <Form>
@@ -372,7 +372,7 @@ const AdminlistdocumentsElevesLoad = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Intitulé </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Entitled </div>):(<div> Intitulé  </div>)} </Form.Label>
                                                         <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -382,14 +382,14 @@ const AdminlistdocumentsElevesLoad = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Type de fichiers </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>File type </div>):(<div>Type de fichiers </div>)} </Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="fichier" onChange={handleChange}>
                                                             <option value=""></option>
                                                             <option value="Image">Image</option>
                                                             <option value="Pdf">Pdf</option>
                                                             <option value="Word">Word</option>
                                                             <option value="Excel">Excel</option>
-                                                            <option value="Tous">Tous</option>
+                                                            <option value="Tous">{user.langue === "en" ? (<div>All</div>):(<div>Tous</div>)}</option>
 
 
                                                         </select>
@@ -404,7 +404,7 @@ const AdminlistdocumentsElevesLoad = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Niveau *</Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)}*</Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange} required>
                                                             <option></option>
                                                             {niveaux.map((item) => (
@@ -447,9 +447,9 @@ const AdminlistdocumentsElevesLoad = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Intitulé</th>
-                                            <th>Type de fichier</th>
-                                            <th>Destinataire </th>
+                                            <th> {user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>File type</div>):(<div>Type de fichier</div>)}</th>
+                                            <th> {user.langue === "en" ? (<div>RECIPIENT</div>):(<div>Destinataire</div>)} </th>
                                             <th>Actions </th>
                                         </tr>
                                     </thead>
