@@ -107,7 +107,7 @@ const AdminEditNotes = () => {
                                 </Button>
                                 <Modal show={show} onHide={handleClose}>
                                     <Modal.Header closeButton>
-                                        <Modal.Title>{matière}</Modal.Title>
+                                        <Modal.Title>{matiere}</Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
                                         <Form>
