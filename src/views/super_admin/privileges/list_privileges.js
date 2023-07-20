@@ -420,7 +420,7 @@ const ListPrivileges = memo((props) => {
                                             <th>Code</th>
                                             <th>Intitulé</th>
                                             <th>Type </th>
-                                            <th>Action</th>
+                                         
                                         </tr>
                                     </thead>
                                     <tbody>
