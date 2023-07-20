@@ -333,7 +333,7 @@ const ListMatieres = memo((props) => {
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                   <Modal.Title as="h5">
-                    Ajouter une nouvelle matière
+                     {user.langue === "en" ? (<div>Add a new material</div>):(<div> Ajouter une nouvelle matière </div>)}
                   </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -343,7 +343,7 @@ const ListMatieres = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Intitulé{" "}
+                              {user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé  </div>)}{" "}
                             </Form.Label>
                             <Form.Control
                               type="text"
@@ -363,7 +363,7 @@ const ListMatieres = memo((props) => {
                         variant="primary"
                         onClick={submitForm}
                       >
-                        Confirmer
+                        {user.langue === "en" ? (<div>Confirm</div>):(<div>Confirmer  </div>)}
                       </Button>
                     </div>
                   </Form>
@@ -381,7 +381,7 @@ const ListMatieres = memo((props) => {
                 >
                   <thead>
                     <tr>
-                      <th>Intitulé</th>
+                      <th> {user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)}</th>
                       <th>Action</th>
                     </tr>
                   </thead>
