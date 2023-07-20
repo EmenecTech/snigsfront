@@ -149,7 +149,7 @@ const EnseignantsListe = () => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Enseignants</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>Teachers</div>):(<div> Enseignants </div>)}</h4>
                                 </div>
                                 <Link to="/Add/enseignants/">
                                     <Button type="button" variant="primary">
@@ -158,7 +158,7 @@ const EnseignantsListe = () => {
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                             </svg>
                                         </span>
-                                        Ajouter
+                                        {user.langue === "en" ? (<div>Add</div>):(<div>  Ajouter</div>)}
                                     </Button>
                                 </Link>
                             </Card.Header>
@@ -167,13 +167,13 @@ const EnseignantsListe = () => {
                                     <table id="user-list-table" className="table table-striped" role="grid" data-toggle="data-table">
                                         <thead>
                                             <tr className="ligth">
-                                                <th>Profil</th>
-                                                <th>Nom</th>
-                                                <th>Prénom</th>
-                                                <th>Matière principale</th>
+                                                <th>  {user.langue === "en" ? (<div>Photo</div>):(<div>  Profil  </div>)}</th>
+                                                <th> {user.langue === "en" ? (<div>Name</div>):(<div> Nom   </div>)}</th>
+                                                <th>{user.langue === "en" ? (<div>Surname</div>):(<div> Prénom   </div>)}</th>
+                                                <th>{user.langue === "en" ? (<div>Main course</div>):(<div>Matière principale   </div>)}</th>
                                                 <th>Type</th>
                                                 <th>Email</th>
-                                                <th>Téléphone</th>
+                                                <th> {user.langue === "en" ? (<div>Phone</div>):(<div>Téléphone</div>)}</th>
                                                 <th min-width="100px">Actions</th>
                                             </tr>
                                         </thead>
