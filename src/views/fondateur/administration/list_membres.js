@@ -148,7 +148,7 @@ const MembresAdministration = () => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Membres de l'administration</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>Members of the administration</div>):(<div> Membres de l'administration</div>)}</h4>
                                 </div>
                                 <Link to="/Admin/add">
                                     <Button type="button" variant="primary">
@@ -166,12 +166,12 @@ const MembresAdministration = () => {
                                     <table id="user-list-table" className="table table-striped" role="grid" data-toggle="data-table">
                                         <thead>
                                             <tr className="ligth">
-                                                <th>Profil</th>
-                                                <th>Nom</th>
-                                                <th>Prénom</th>
-                                                <th>Fonction</th>
+                                                <th>{user.langue === "en" ? (<div>Photo</div>):(<div> Profil </div>)}</th>
+                                                <th>{user.langue === "en" ? (<div>Name</div>):(<div> Nom  </div>)}</th>
+                                                <th>{user.langue === "en" ? (<div>Surname</div>):(<div> Prénom  </div>)}</th>
+                                                <th>{user.langue === "en" ? (<div>Role</div>):(<div> Rôle  </div>)}</th>
                                                 <th>Email</th>
-                                                <th>Téléphone</th>
+                                                <th> {user.langue === "en" ? (<div>Phone</div>):(<div> Téléphone  </div>)}</th>
                                                 <th min-width="100px">Actions</th>
                                             </tr>
                                         </thead>
