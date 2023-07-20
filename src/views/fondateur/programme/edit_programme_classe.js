@@ -454,7 +454,7 @@ const EditClasseProgramme = memo((props) => {
                             </div>
                             <Button variant="primary mt-2" onClick={confirmPlanning}>
 
-                                Confirmer le programme
+                              {user.langue === "en" ? (<div>Confirm program</div>):(<div>   Confirmer le programme </div>)}
                             </Button>
 
 
@@ -464,7 +464,7 @@ const EditClasseProgramme = memo((props) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                     </svg>
                                 </span>
-                                Ajouter
+                              {user.langue === "en" ? (<div>Add</div>):(<div>     Ajouter </div>)}
                             </Button>
 
                             {/* <!-- Modal --> */}
@@ -481,16 +481,16 @@ const EditClasseProgramme = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Jour *</Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Day</div>):(<div>Jour </div>)}*</Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="jour" onChange={handleChange} required>
                                                             <option></option>
-                                                            <option value="Lundi">Lundi</option>
-                                                            <option value="Mardi">Mardi</option>
-                                                            <option value="Mercredi">Mecredi</option>
-                                                            <option value="Jeudi">Jeudi</option>
-                                                            <option value="Vendredi">Vendredi</option>
-                                                            <option value="Samedi">Samedi</option>
-                                                            <option value="Dimanche">Dimanche</option>
+                                                            <option value="Lundi">{user.langue === "en" ? (<div>Monday</div>):(<div>Lundi  </div>)}</option>
+                                                            <option value="Mardi">{user.langue === "en" ? (<div>Tuesday</div>):(<div>Mardi </div>)}</option>
+                                                            <option value="Mercredi">{user.langue === "en" ? (<div>Wednesday</div>):(<div>Mecredi  </div>)}</option>
+                                                            <option value="Jeudi">{user.langue === "en" ? (<div>Thursday</div>):(<div>Jeudi </div>)}</option>
+                                                            <option value="Vendredi">{user.langue === "en" ? (<div>Friday</div>):(<div>Vendredi </div>)}</option>
+                                                            <option value="Samedi">{user.langue === "en" ? (<div>Saturday</div>):(<div>Samedi </div>)}</option>
+                                                            <option value="Dimanche">{user.langue === "en" ? (<div>Sunday</div>):(<div>Dimanche  </div>)}</option>
                                                         </select>
                                                     </Form.Group>
                                                 </Form.Group>
@@ -503,7 +503,7 @@ const EditClasseProgramme = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Matières *</Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Course</div>):(<div>Matières  </div>)} *</Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="matiere" onChange={handleChange} required>
                                                             <option></option>
                                                             {matiereslevel.map((item) => (
@@ -526,7 +526,7 @@ const EditClasseProgramme = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Heure de début *</Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Start time</div>):(<div>Heure de début </div>)}*</Form.Label>
 
                                                         <Form.Control type="time" defaultValue="" name="heured" onChange={handleChange} required />
 
@@ -536,7 +536,7 @@ const EditClasseProgramme = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Heure de fin *</Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>End time</div>):(<div>Heure de fin </div>)}*</Form.Label>
 
                                                         <Form.Control type="time" defaultValue="" name="heuref" onChange={handleChange} required />
 
@@ -552,7 +552,7 @@ const EditClasseProgramme = memo((props) => {
 
 
                                         <div className="text-center">
-                                            <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                            <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Confirm</div>):(<div>Confirmer </div>)}</Button>
                                         </div>
                                     </Form>
                                 </Modal.Body>
@@ -567,7 +567,7 @@ const EditClasseProgramme = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">Lundi</h4>
+                                                    <h4 className="card-title"> {user.langue === "en" ? (<div>Monday</div>):(<div>Lundi </div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -582,8 +582,8 @@ const EditClasseProgramme = memo((props) => {
                                                         <thead>
                                                             <tr>
 
-                                                                <th>Tranche Horraire</th>
-                                                                <th>Matière ou activité</th>
+                                                                <th> {user.langue === "en" ? (<div>Time slot</div>):(<div>Tranche Horraire </div>)}</th>
+                                                                <th> {user.langue === "en" ? (<div>Subject or activity</div>):(<div>Matière ou activité</div>)}</th>
                                                                 <th>Actions</th>
                                                             </tr>
                                                         </thead>
@@ -625,7 +625,7 @@ const EditClasseProgramme = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">Mardi</h4>
+                                                    <h4 className="card-title">{user.langue === "en" ? (<div>Tuesday</div>):(<div>Mardi  </div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -640,8 +640,8 @@ const EditClasseProgramme = memo((props) => {
                                                         <thead>
                                                             <tr>
 
-                                                                <th>Tranche Horraire</th>
-                                                                <th>Matière ou activité</th>
+                                                                <th> {user.langue === "en" ? (<div>Time slot</div>):(<div>Tranche Horraire </div>)}</th>
+                                                                <th> {user.langue === "en" ? (<div>Subject or activity</div>):(<div>Matière ou activité</div>)}</th>
                                                                 <th>Actions</th>
                                                             </tr>
                                                         </thead>
@@ -685,7 +685,7 @@ const EditClasseProgramme = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">Mercredi</h4>
+                                                    <h4 className="card-title">{user.langue === "en" ? (<div>Tuesday</div>):(<div>Mercredi  </div>)}<</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -700,8 +700,8 @@ const EditClasseProgramme = memo((props) => {
                                                         <thead>
                                                             <tr>
 
-                                                                <th>Tranche Horraire</th>
-                                                                <th>Matière ou activité</th>
+                                                                <th> {user.langue === "en" ? (<div>Time slot</div>):(<div>Tranche Horraire </div>)}</th>
+                                                                <th> {user.langue === "en" ? (<div>Subject or activity</div>):(<div>Matière ou activité</div>)}</th>
                                                                 <th>Actions</th>
                                                             </tr>
                                                         </thead>
@@ -748,7 +748,7 @@ const EditClasseProgramme = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">Jeudi</h4>
+                                                    <h4 className="card-title">{user.langue === "en" ? (<div>Thursday</div>):(<div>Jeudi  </div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -763,8 +763,8 @@ const EditClasseProgramme = memo((props) => {
                                                         <thead>
                                                             <tr>
 
-                                                                <th>Tranche Horraire</th>
-                                                                <th>Matière ou activité</th>
+                                                                <th> {user.langue === "en" ? (<div>Time slot</div>):(<div>Tranche Horraire </div>)}</th>
+                                                                <th> {user.langue === "en" ? (<div>Subject or activity</div>):(<div>Matière ou activité</div>)}</th>
                                                                 <th>Actions</th>
                                                             </tr>
                                                         </thead>
@@ -806,7 +806,7 @@ const EditClasseProgramme = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">Vendredi</h4>
+                                                    <h4 className="card-title"> {user.langue === "en" ? (<div>Friday</div>):(<div>Vendredi </div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -821,8 +821,8 @@ const EditClasseProgramme = memo((props) => {
                                                         <thead>
                                                             <tr>
 
-                                                                <th>Tranche Horraire</th>
-                                                                <th>Matière ou activité</th>
+                                                                <th> {user.langue === "en" ? (<div>Time slot</div>):(<div>Tranche Horraire </div>)}</th>
+                                                                <th> {user.langue === "en" ? (<div>Subject or activity</div>):(<div>Matière ou activité</div>)}</th>
                                                                 <th>Actions</th>
                                                             </tr>
                                                         </thead>
@@ -866,7 +866,7 @@ const EditClasseProgramme = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">Samedi</h4>
+                                                    <h4 className="card-title"> {user.langue === "en" ? (<div>Saturday</div>):(<div>Samedi</div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -881,8 +881,8 @@ const EditClasseProgramme = memo((props) => {
                                                         <thead>
                                                             <tr>
 
-                                                                <th>Tranche Horraire</th>
-                                                                <th>Matière ou activité</th>
+                                                                <th> {user.langue === "en" ? (<div>Time slot</div>):(<div>Tranche Horraire </div>)}</th>
+                                                                <th> {user.langue === "en" ? (<div>Subject or activity</div>):(<div>Matière ou activité</div>)}</th>
                                                                 <th>Actions</th>
                                                             </tr>
                                                         </thead>
@@ -929,7 +929,7 @@ const EditClasseProgramme = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">Dimanche</h4>
+                                                    <h4 className="card-title"> {user.langue === "en" ? (<div>Sunday</div>):(<div>Dimanche</div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -944,8 +944,8 @@ const EditClasseProgramme = memo((props) => {
                                                         <thead>
                                                             <tr>
 
-                                                                <th>Tranche Horraire</th>
-                                                                <th>Matière ou activité</th>
+                                                                <th> {user.langue === "en" ? (<div>Time slot</div>):(<div>Tranche Horraire </div>)}</th>
+                                                                <th> {user.langue === "en" ? (<div>Subject or activity</div>):(<div>Matière ou activité</div>)}</th>
                                                                 <th>Actions</th>
                                                             </tr>
                                                         </thead>
