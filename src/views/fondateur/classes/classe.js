@@ -181,7 +181,7 @@ const UniClasse = () => {
                                             <Nav.Link eventKey="first">{user.langue === "en" ? (<div>Students</div>):(<div> Elèves </div>)}</Nav.Link>
                                         </Nav.Item>
                                         <Nav.Item as="li">
-                                            <Nav.Link eventKey="second">{user.langue === "en" ? (<div>Teachers</div>):(<div> Elèves </div>)}</Nav.Link>
+                                            <Nav.Link eventKey="second">{user.langue === "en" ? (<div>Teachers</div>):(<div> Enseignant </div>)}</Nav.Link>
                                         </Nav.Item>
                                         <Nav.Item as="li">
                                             <Nav.Link eventKey="third">{user.langue === "en" ? (<div>Courses</div>):(<div> Matières </div>)}</Nav.Link>
