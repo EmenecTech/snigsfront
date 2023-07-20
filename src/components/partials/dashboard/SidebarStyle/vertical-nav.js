@@ -1569,7 +1569,7 @@ const VerticalNav = memo((props) => {
                                                 </svg>
                                             </i>
                                             <i className="sidenav-mini-icon"> G </i>
-                                            <span className="item-name">Suivi Pédagogique </span>
+                                            <span className="item-name">{user.langue === "en" ? (<div>Pedagogical follow-up</div>):(<div> Suivi Pédagogique </div>)}</span>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
@@ -1582,7 +1582,7 @@ const VerticalNav = memo((props) => {
                                                 </svg>
                                             </i>
                                             <i className="sidenav-mini-icon"> D </i>
-                                            <span className="item-name">Gestion des notes</span>
+                                            <span className="item-name"> {user.langue === "en" ? (<div>Note management</div>):(<div> Gestion des notes </div>)}</span>
                                         </Link>
                                     </li>
 
@@ -1599,7 +1599,7 @@ const VerticalNav = memo((props) => {
                                         <path fillRule="evenodd" clipRule="evenodd" d="M4.53852 2H7.92449C9.32676 2 10.463 3.14585 10.463 4.55996V7.97452C10.463 9.38864 9.32676 10.5345 7.92449 10.5345H4.53852C3.13626 10.5345 2 9.38864 2 7.97452V4.55996C2 3.14585 3.13626 2 4.53852 2ZM4.53852 13.4655H7.92449C9.32676 13.4655 10.463 14.6114 10.463 16.0255V19.44C10.463 20.8532 9.32676 22 7.92449 22H4.53852C3.13626 22 2 20.8532 2 19.44V16.0255C2 14.6114 3.13626 13.4655 4.53852 13.4655ZM19.4615 13.4655H16.0755C14.6732 13.4655 13.537 14.6114 13.537 16.0255V19.44C13.537 20.8532 14.6732 22 16.0755 22H19.4615C20.8637 22 22 20.8532 22 19.44V16.0255C22 14.6114 20.8637 13.4655 19.4615 13.4655Z" fill="currentColor"></path>
                                     </svg>
                                 </i>
-                                <span className="item-name">Cahier de texte</span>
+                                <span className="item-name">{user.langue === "en" ? (<div>Textbook</div>):(<div> Cahier de textes  </div>)}</span>
                             </Link>
                         </li>
                         <Accordion.Item as="li" eventKey="sidebar-enseignant-requetes" bsPrefix={`nav-item ${active === 'Classes' ? 'active' : ''} `} onClick={() => setActive('Classes')}  >
@@ -1610,7 +1610,7 @@ const VerticalNav = memo((props) => {
                                         <path fillRule="evenodd" clipRule="evenodd" d="M4.53852 2H7.92449C9.32676 2 10.463 3.14585 10.463 4.55996V7.97452C10.463 9.38864 9.32676 10.5345 7.92449 10.5345H4.53852C3.13626 10.5345 2 9.38864 2 7.97452V4.55996C2 3.14585 3.13626 2 4.53852 2ZM4.53852 13.4655H7.92449C9.32676 13.4655 10.463 14.6114 10.463 16.0255V19.44C10.463 20.8532 9.32676 22 7.92449 22H4.53852C3.13626 22 2 20.8532 2 19.44V16.0255C2 14.6114 3.13626 13.4655 4.53852 13.4655ZM19.4615 13.4655H16.0755C14.6732 13.4655 13.537 14.6114 13.537 16.0255V19.44C13.537 20.8532 14.6732 22 16.0755 22H19.4615C20.8637 22 22 20.8532 22 19.44V16.0255C22 14.6114 20.8637 13.4655 19.4615 13.4655Z" fill="currentColor"></path>
                                     </svg>
                                 </i>
-                                <span className="item-name">Messagerie</span>
+                                <span className="item-name">{user.langue === "en" ? (<div>Messaging</div>):(<div> Messagerie  </div>)}</span>
                                 <i className="right-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -1629,7 +1629,7 @@ const VerticalNav = memo((props) => {
                                                 </svg>
                                             </i>
                                             <i className="sidenav-mini-icon"> G </i>
-                                            <span className="item-name"> Reçus </span>
+                                            <span className="item-name"> {user.langue === "en" ? (<div>Receipts</div>):(<div> Reçus  </div>)} </span>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
@@ -1642,7 +1642,7 @@ const VerticalNav = memo((props) => {
                                                 </svg>
                                             </i>
                                             <i className="sidenav-mini-icon"> D </i>
-                                            <span className="item-name">Envoyés</span>
+                                            <span className="item-name">{user.langue === "en" ? (<div>Sent</div>):(<div> Envoyés  </div>)} </span>
                                         </Link>
                                     </li>
 
