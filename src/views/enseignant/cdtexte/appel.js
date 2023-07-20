@@ -98,17 +98,17 @@ const EnseignantAppel_cd_texte = () => {
                 <Col sm="12" lg="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
-                            <h4 className="card-title">LISTE DES ABSENTS</h4>
+                            <h4 className="card-title">{user.langue === "en" ? (<div> list of absentees </div>):(<div> liste des absents </div>)}</h4>
 
                             <div>
                                 <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3" onClick={handleShow1}>
 
 
-                                    <span>Liste d'élèves</span>
+                                    <span>{user.langue === "en" ? (<div> list of students </div>):(<div> liste des élèves </div>)}</span>
                                 </Button>
                                 <Modal show={show1} onHide={handleClose1}>
                                     <Modal.Header closeButton>
-                                        <Modal.Title>Liste</Modal.Title>
+                                        <Modal.Title>{user.langue === "en" ? (<div> list </div>):(<div> liste </div>)}</Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
                                         <div className="table-responsive border-bottom my-3">
@@ -121,10 +121,10 @@ const EnseignantAppel_cd_texte = () => {
                                             >
                                                 <thead>
                                                     <tr>
-                                                        <th>#</th>                                                        <th>Nom</th>
-                                                        <th>Prénom</th>
-                                                        <th>Genre</th>
-                                                        <th>Date de naissance</th>
+                                                        <th>{user.langue === "en" ? (<div> last name </div>):(<div> nom </div>)}</th>                                                        <th>Nom</th>
+                                                        <th>{user.langue === "en" ? (<div> first name </div>):(<div> prénom</div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div> gender </div>):(<div> genre </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div> date of birth </div>):(<div> date de naissance </div>)}</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -155,16 +155,16 @@ const EnseignantAppel_cd_texte = () => {
                                         </svg>
                                     </i>
 
-                                    <span>Marquer l'absence</span>
+                                    <span>{user.langue === "en" ? (<div> mark absences </div>):(<div> marquer l'absence </div>)}</span>
                                 </Button>
                                 <Modal show={show} onHide={handleClose}>
                                     <Modal.Header closeButton>
-                                        <Modal.Title>Marquer les absences</Modal.Title>
+                                        <Modal.Title>{user.langue === "en" ? (<div> mark absences </div>):(<div> marquer les absences </div>)}</Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
                                         <Form>
                                             <Form.Group className="form-group">
-                                                <Form.Label htmlFor="exampleFormControlSelect1">Selectioner l'élève</Form.Label>
+                                                <Form.Label htmlFor="exampleFormControlSelect1">{user.langue === "en" ? (<div> select student </div>):(<div> sélectionner l'élève </div>)}</Form.Label>
                                                 <select className="form-select" id="user_absence" name="user_absence" onChange={handleChange}>
                                                     <option></option>
                                                     {eleves_classe.map((item, index) => (
@@ -179,7 +179,7 @@ const EnseignantAppel_cd_texte = () => {
                                         </Form>
 
                                         <Button variant="primary" onClick={submitForm}>
-                                            Absent(e)
+                                            {user.langue === "en" ? (<div> Absent </div>):(<div> Absent(e) </div>)}
                                         </Button>
                                     </Modal.Body>
                                 </Modal>
@@ -192,8 +192,8 @@ const EnseignantAppel_cd_texte = () => {
                                 <thead>
                                     <tr>
                                         <th>Sno.</th>
-                                        <th>Nom de l'élève</th>
-                                        <th>Date</th>
+                                        <th>{user.langue === "en" ? (<div> student's name </div>):(<div> nom de l'élève </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> date </div>):(<div> Date </div>)}</th>
                                         <th> </th>
 
                                         <th> </th>
@@ -208,7 +208,7 @@ const EnseignantAppel_cd_texte = () => {
                                             </td>
                                             <td>{item.date_cahier_texte}</td>
                                             <td>
-                                                <span className="badge rounded-pill bg-info ms-3">absent</span>
+                                                <span className="badge rounded-pill bg-info ms-3">{user.langue === "en" ? (<div> absent </div>):(<div> absent </div>)}</span>
                                             </td>
                                         </tr>
                                     ))}
