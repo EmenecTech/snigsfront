@@ -123,7 +123,7 @@ const EditMatieres = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Modifier la Matière</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Edit Course</div>):(<div> Modifier la Matière </div>)}</h4>
                             </div>
 
 
@@ -135,7 +135,7 @@ const EditMatieres = memo((props) => {
                                     <Col>
                                         <Form.Group as={Row} className="form-group">
                                             <Form.Group className="form-group">
-                                                <Form.Label htmlFor="exampleInputText1">Intitulé </Form.Label>
+                                                <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Edit Course</div>):(<div> Intitulé </div>)}</Form.Label>
                                                 <Form.Control type="text" defaultValue="" name="int" value={inputs.int || ""} onChange={handleChange} required />
                                             </Form.Group>
                                         </Form.Group>
@@ -143,7 +143,7 @@ const EditMatieres = memo((props) => {
                                 </Row>
 
                                 <div className="text-center">
-                                    <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                    <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Confirm</div>):(<div> Confirmer</div>)}</Button>
                                 </div>
                             </Form>
 
