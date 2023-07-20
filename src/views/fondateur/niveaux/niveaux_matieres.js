@@ -356,7 +356,7 @@ const NiveauxMatieres = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">{niveau} - Matières</h4>
+                                <h4 className="card-title">{niveau} - {user.langue === "en" ? (<div>Courses </div>):(<div>  Matières </div>)}</h4>
                             </div>
                             <Button variant="primary mt-2" onClick={handleShow}>
                                 <span className="btn-inner">
@@ -364,12 +364,12 @@ const NiveauxMatieres = memo((props) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                     </svg>
                                 </span>
-                                Ajouter
+                                 {user.langue === "en" ? (<div>Add </div>):(<div>  Ajouter </div>)}
                             </Button>
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title as="h5">Ajouter une matière au niveau</Modal.Title>
+                                    <Modal.Title as="h5">{user.langue === "en" ? (<div>Add material to level </div>):(<div>  Ajouter une matière au niveau  </div>)}</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
                                     <Form>
@@ -377,7 +377,7 @@ const NiveauxMatieres = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Matière </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Course</div>):(<div> Matière  </div>)} </Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="int" onChange={handleChange} required>
                                                             <option></option>
                                                             {matieres.map((item) => (
@@ -404,13 +404,13 @@ const NiveauxMatieres = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Groupe </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Group</div>):(<div> Groupe </div>)}</Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="groupe" onChange={handleChange} required>
                                                             <option></option>
 
-                                                            <option value="Groupe 1">Groupe 1</option>
-                                                            <option value="Groupe 2">Groupe 2</option>
-                                                            <option value="Groupe 3">Groupe 3</option>
+                                                            <option value="Groupe 1">{user.langue === "en" ? (<div>Group 1</div>):(<div> Groupe 1 </div>)}</option>
+                                                            <option value="Groupe 2">{user.langue === "en" ? (<div>Group 2</div>):(<div> Groupe 2 </div>)}</option>
+                                                            <option value="Groupe 3">{user.langue === "en" ? (<div>Group 3</div>):(<div> Groupe 3 </div>)}</option>
 
 
                                                         </select>
