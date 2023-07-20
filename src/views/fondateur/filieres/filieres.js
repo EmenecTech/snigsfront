@@ -419,7 +419,7 @@ const deleteFiliere = (id) => {
                   <thead>
                     <tr>
                       <th>Intitulé</th>
-                      <th>Action</th>
+                      <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
