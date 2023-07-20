@@ -18,7 +18,7 @@ const AddEtablissement = () => {
 
     const submitForm = () => {
         http.post('/etablissements', inputs).then((res) => {
-            alert("tablissement ajouté avec succès !")
+            alert("établissement ajouté avec succès !")
             navigate('/etablissement/list/super/admin')
         })
 
