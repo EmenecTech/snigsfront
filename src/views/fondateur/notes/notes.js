@@ -37,6 +37,12 @@ const AdminEditNotes = () => {
         fetchAllmatiere_classe_info();
     }, []);
 
+    const fetchAllmatiere_classe_info = () => {
+        http.get('/get_info_matiere_classe/' + etab + '/' + classe + '/' + matiere).then(res => {
+            setmatiere_classe_info(res.data);
+        })
+    }
+
     const coefficient = matiere_classe_info.coefficient_cm;
 
     // useEffect(()=>{
