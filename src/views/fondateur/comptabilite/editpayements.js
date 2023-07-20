@@ -394,7 +394,7 @@ const EditPensions = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Détails</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Details</div>):(<div> Détails </div>)}</h4>
                             </div>
 
 
@@ -409,7 +409,7 @@ const EditPensions = memo((props) => {
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title as="h5">Description du payement</Modal.Title>
+                                    <Modal.Title as="h5"> {user.langue === "en" ? (<div>Description of payment</div>):(<div>Description du payement </div>)}</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
                                     <Form>
@@ -417,7 +417,7 @@ const EditPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Intitulé </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé</div>)} </Form.Label>
                                                         <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -427,7 +427,7 @@ const EditPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Montant </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">  {user.langue === "en" ? (<div>Amount</div>):(<div>Montant</div>)}</Form.Label>
                                                         <Form.Control type="number" defaultValue="" name="montant" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -438,7 +438,7 @@ const EditPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Debut des payements </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Start of payments</div>):(<div>Debut des payements </div>)}</Form.Label>
                                                         <Form.Control type="date" defaultValue="" name="pdebut" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -446,7 +446,7 @@ const EditPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Clôture des payements </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Closing of payments</div>):(<div>Clôture des payements </div>)} </Form.Label>
                                                         <Form.Control type="date" defaultValue="" name="pfin" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -470,11 +470,11 @@ const EditPensions = memo((props) => {
                         <Card.Body>
                             <h4>Informations</h4>
                             <ul>
-                                <li>Intitulé : {payement.intitule_pension}</li>
-                                <li>Montant : {payement.montant_pension}</li>
-                                <li>Tranche(s) : {payement.tranches_pension}</li>
-                                <li>Début des payements : {payement.debut_payement_pension}</li>
-                                <li>Clôture des payements : {payement.fin_payement_pension}</li>
+                                <li>{user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé  </div>)} : {payement.intitule_pension}</li>
+                                <li>{user.langue === "en" ? (<div>Amount</div>):(<div>Montant </div>)} : {payement.montant_pension}</li>
+                                <li>{user.langue === "en" ? (<div>Slice(s)</div>):(<div>Tranche(s)  </div>)} : {payement.tranches_pension}</li>
+                                <li>{user.langue === "en" ? (<div>Start of payments</div>):(<div>Début des payements  </div>)}  : {payement.debut_payement_pension}</li>
+                                <li> {user.langue === "en" ? (<div>Closing of payments</div>):(<div>Clôture des payements   </div>)}  : {payement.fin_payement_pension}</li>
                             </ul>
                             <div className="table-responsive border-bottom my-3">
                                 <Table
@@ -486,10 +486,10 @@ const EditPensions = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Intitulé</th>
-                                            <th>Montant</th>
-                                            <th>Début des payements</th>
-                                            <th>Clôture des payements</th>
+                                            <th>{user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé  </div>)} </th>
+                                            <th>{user.langue === "en" ? (<div>Amount</div>):(<div>Montant </div>)} </th>
+                                            <th>{user.langue === "en" ? (<div>Start of payments</div>):(<div>Début des payements </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Closing of payments</div>):(<div>Clôture des payements</div>)}</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
@@ -542,7 +542,7 @@ const EditPensions = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Classes concernées</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Classes concernées </div>):(<div>Classes concernées  </div>)} </h4>
                             </div>
 
 
@@ -557,7 +557,7 @@ const EditPensions = memo((props) => {
                             {/* <!-- Modal --> */}
                             <Modal show={show1} onHide={handleClose1}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title as="h5">Ajouter une nouvelle classe</Modal.Title>
+                                    <Modal.Title as="h5">{user.langue === "en" ? (<div>Add a new class</div>):(<div>Ajouter une nouvelle classe </div>)}</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
                                     <Form>
@@ -565,7 +565,7 @@ const EditPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Classes</Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">Classes </Form.Label>
                                                         <select className="form-select" name="int" onChange={handleChange}>
                                                             <option></option>
                                                             {classes.map((item) => (
@@ -601,7 +601,7 @@ const EditPensions = memo((props) => {
                                     <thead>
                                         <tr>
                                             <th>Classe </th>
-                                            <th>Niveau</th>
+                                            <th>{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)}</th>
                                             <th>Actions</th>
 
                                         </tr>
