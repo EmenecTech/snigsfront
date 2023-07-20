@@ -339,7 +339,7 @@ const ListEvaluations = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Evaluations</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Type of assessment </div>):(<div>Evaluations </div>)}</h4>
                             </div>
 
 
@@ -354,7 +354,7 @@ const ListEvaluations = memo((props) => {
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title as="h5">Ajouter une nouvelle évaluation</Modal.Title>
+                                    <Modal.Title as="h5">{user.langue === "en" ? (<div>Add a new Type of assessment</div>):(<div>Ajouter une nouvelle évaluation </div>)}</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
                                     <Form>
@@ -362,7 +362,7 @@ const ListEvaluations = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Intitulé </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Entitled </div>):(<div>Intitulé </div>)} </Form.Label>
                                                         <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -372,15 +372,15 @@ const ListEvaluations = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Type d'évaluation </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Type of assessment</div>):(<div>Type d'évaluation </div>)}</Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange}>
-                                                            <option value="Annuel">Annuel</option>
-                                                            <option value="Semestriel">Semestriel</option>
-                                                            <option value="Trimestriel">Trimestriel</option>
-                                                            <option value="Sequentiel">Sequentiel</option>
-                                                            <option value="Mensuel">Mensuel</option>
-                                                            <option value="Hebdomadaire">Hebdomadaire</option>
-                                                            <option value="Libre">Libre</option>
+                                                            <option value="Annuel"> {user.langue === "en" ? (<div>Annual</div>):(<div>Annuel</div>)}</option>
+                                                            <option value="Semestriel">{user.langue === "en" ? (<div>Semester</div>):(<div>Semestriel </div>)}</option>
+                                                            <option value="Trimestriel">{user.langue === "en" ? (<div>Quarterly</div>):(<div>Trimestriel  </div>)}</option>
+                                                            <option value="Sequentiel"> {user.langue === "en" ? (<div>Quarterly</div>):(<div>Sequential </div>)}</option>
+                                                            <option value="Mensuel"> {user.langue === "en" ? (<div>Monthly</div>):(<div>Mensuel </div>)}</option>
+                                                            <option value="Hebdomadaire">{user.langue === "en" ? (<div>Weekly</div>):(<div>Hebdomadaire </div>)}</option>
+                                                            <option value="Libre"> {user.langue === "en" ? (<div>Free</div>):(<div>Libre </div>)}</option>
 
 
 
@@ -394,7 +394,7 @@ const ListEvaluations = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Référence </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Référence</div>):(<div>Référence</div>)} </Form.Label>
                                                         <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -406,7 +406,7 @@ const ListEvaluations = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Date de début </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Start date</div>):(<div>Date de début</div>)} </Form.Label>
                                                         <Form.Control type="date" defaultValue="" name="int" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -417,7 +417,7 @@ const ListEvaluations = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Date de fin </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>End date</div>):(<div>Date de fin </div>)}  </Form.Label>
                                                         <Form.Control type="date" defaultValue="" name="int" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -432,7 +432,7 @@ const ListEvaluations = memo((props) => {
 
 
                                         <div className="text-center">
-                                            <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                            <Button type="button" variant="primary" onClick={submitForm} >{user.langue === "en" ? (<div>Confirm </div>):(<div>Confirmer </div>)}</Button>
                                         </div>
                                     </Form>
                                 </Modal.Body>
@@ -451,11 +451,11 @@ const ListEvaluations = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Intitulé</th>
-                                            <th>Type d'évaluation</th>
-                                            <th>Type de période</th>
-                                            <th>Date de début</th>
-                                            <th>Date de fin</th>
+                                            <th>{user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)} </th>
+                                            <th> {user.langue === "en" ? (<div>Type of assessment</div>):(<div>Type d'évaluation </div>)} </th>
+                                            <th> {user.langue === "en" ? (<div>Type of period</div>):(<div>Type de période </div>)}</th>
+                                            <th> {user.langue === "en" ? (<div>Start date</div>):(<div>Date de début </div>)}</th>
+                                            <th> {user.langue === "en" ? (<div>End date</div>):(<div>Date de fin </div>)}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
