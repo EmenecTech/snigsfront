@@ -59,18 +59,18 @@ const Enseignant_cdtextes_Chapitres = (props) => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Chapitres</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div> chapters </div>):(<div> chapitres </div>)}</h4>
                                 </div>
                             </Card.Header>
                             <div className="table-responsive">
                                 <table id="user-list-table" className="table table-striped" role="grid" data-toggle="data-table">
                                     <thead>
                                         <tr className="ligth">
-                                            <th>Intitulé</th>
-                                            <th>Nombre d'heures</th>
-                                            <th>Date de début</th>
-                                            <th>Date de fin</th>
-                                            <th>Description</th>
+                                            <th>{user.langue === "en" ? (<div> title </div>):(<div> intitulé </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> number of hours </div>):(<div> Nombres d'heures </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> start date </div>):(<div> date de début </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> end date </div>):(<div> date de fin </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> description  </div>):(<div> description </div>)}</th>
                                             <th min-width="100px">Action</th>
                                         </tr>
                                     </thead>
