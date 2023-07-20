@@ -197,7 +197,7 @@ const EditEtablissement = () => {
                                         onChange={e => handleChange2(e.target.files)} />
 
                                     <button className="btn btn-info mt-2" type="submit" onClick={submitData} >
-                                        Ajouter
+                                        {user.langue === "en" ? (<div>Edit </div>):(<div> Modifier</div>)}
                                     </button>
 
 
@@ -211,7 +211,7 @@ const EditEtablissement = () => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Modifier l'établissement</h4>
+                                    <h4 className="card-title"> {user.langue === "en" ? (<div>Edit institution</div>):(<div>Modifier l'établissement</div>)}</h4>
                                 </div>
                             </Card.Header>
                             <Card.Body>
@@ -221,7 +221,7 @@ const EditEtablissement = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Nom </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Name</div>):(<div>Nom</div>)}</Form.Label>
                                                     <Form.Control type="text" defaultValue="" name="nom" value={inputs.nom || ""} onChange={handleChange} required />
                                                 </Form.Group>
                                             </Form.Group>
@@ -229,7 +229,7 @@ const EditEtablissement = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Cygle </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Abbreviation</div>):(<div> Cygle </div>)}</Form.Label>
                                                     <Form.Control type="text" defaultValue="" name="cygle" value={inputs.cygle || ""} onChange={handleChange} required />
                                                 </Form.Group>
                                             </Form.Group>
@@ -249,7 +249,7 @@ const EditEtablissement = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Téléphone </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Phone contact</div>):(<div> Téléphone </div>)}</Form.Label>
                                                     <Form.Control type="tel" defaultValue="" placeholder="+237" name="tel" value={inputs.tel || ""} onChange={handleChange} required />
                                                 </Form.Group>
                                             </Form.Group>
@@ -257,7 +257,7 @@ const EditEtablissement = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Boite postal </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>PO Box</div>):(<div> Boite postal  </div>)}</Form.Label>
                                                     <Form.Control type="text" defaultValue="" name="bp" value={inputs.bp || ""} onChange={handleChange} />
                                                 </Form.Group>
                                             </Form.Group>
@@ -265,7 +265,7 @@ const EditEtablissement = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Site web </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Website</div>):(<div> Site web</div>)}</Form.Label>
                                                     <Form.Control type="text" defaultValue="" name="site" placeholder="https://www." value={inputs.site || ""} onChange={handleChange} required />
                                                 </Form.Group>
                                             </Form.Group>
@@ -277,7 +277,7 @@ const EditEtablissement = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Pays </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Country</div>):(<div> Pays</div>)}</Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="pays" value={inputs.pays || ""} onChange={handleChange}>
                                                         <option></option>
                                                         <option value="Cameroun">Cameroun</option>
@@ -289,7 +289,7 @@ const EditEtablissement = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Ville </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>City</div>):(<div> Ville</div>)}</Form.Label>
                                                     <Form.Control type="text" defaultValue="" name="ville" value={inputs.ville || ""} onChange={handleChange} required />
                                                 </Form.Group>
                                             </Form.Group>
@@ -297,7 +297,7 @@ const EditEtablissement = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Département </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Department</div>):(<div> Département </div>)} </Form.Label>
                                                     <Form.Control type="text" defaultValue="" name="dep" value={inputs.dep || ""} onChange={handleChange} required />
                                                 </Form.Group>
                                             </Form.Group>
@@ -305,79 +305,10 @@ const EditEtablissement = () => {
 
 
                                     </Row>
-                                    <Row>
-
-                                        <Col>
-                                            <Form.Group as={Row} className="form-group">
-                                                <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Adresse </Form.Label>
-                                                    <Form.Control type="text" defaultValue="" name="adresse" value={inputs.adresse || ""} onChange={handleChange} required />
-                                                </Form.Group>
-                                            </Form.Group>
-                                        </Col>
-
-                                        <Col>
-                                            <Form.Group as={Row} className="form-group">
-                                                <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Fondateur </Form.Label>
-                                                    <select className="form-select mb-3 shadow-none" name="fondateur" value={inputs.fondateur || ""} onChange={handleChange}>
-                                                        <option></option>
-                                                        {fondateurs.map((item) =>
-                                                            <option key={item.id} value={item.id}> {item.nom} {item.prenom}</option>
-                                                        )}
-
-
-                                                    </select>
-                                                </Form.Group>
-                                            </Form.Group>
-                                        </Col>
-
-                                    </Row>
-                                    <Row>
-
-                                        <Col>
-                                            <Form.Group as={Row} className="form-group">
-                                                <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Facturation </Form.Label>
-                                                    <select className="form-select mb-3 shadow-none" name="fact" value={inputs.fact || ""} onChange={handleChange}>
-                                                        <option></option>
-                                                        <option value="Par élève">Par élève</option>
-                                                        <option value="Par taux">Par taux</option>
-                                                    </select>
-                                                </Form.Group>
-                                            </Form.Group>
-                                        </Col>
-                                        <Col>
-                                            <Form.Group as={Row} className="form-group">
-                                                <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Configuration </Form.Label>
-                                                    <select className="form-select mb-3 shadow-none" name="conf" value={inputs.conf || ""} onChange={handleChange}>
-                                                        <option></option>
-                                                        <option></option>
-                                                        {configurations.map((item2) =>
-                                                            <option key={item2.intitule_configuration} value={item2.intitule_configuration}> {item2.intitule_configuration} </option>
-                                                        )}
-                                                    </select>
-                                                </Form.Group>
-                                            </Form.Group>
-                                        </Col>
-                                        <Col>
-                                            <Form.Group as={Row} className="form-group">
-                                                <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Payer la préinscription </Form.Label>
-                                                    <select className="form-select mb-3 shadow-none" name="preins" value={inputs.preins || ""} onChange={handleChange}>
-                                                        <option></option>
-                                                        <option value="Oui">Oui</option>
-                                                        <option value="Non">Non</option>
-                                                    </select>
-                                                </Form.Group>
-                                            </Form.Group>
-                                        </Col>
-
-                                    </Row>
+                                  
 
                                     <div className="text-center">
-                                        <Button type="button" variant="primary" onClick={submitForm}>Confirmer</Button>
+                                        <Button type="button" variant="primary" onClick={submitForm}>{user.langue === "en" ? (<div>Confirm</div>):(<div>Confirmer  </div>)}</Button>
                                     </div>
                                 </Form>
                             </Card.Body>
