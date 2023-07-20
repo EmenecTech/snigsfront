@@ -1393,7 +1393,7 @@ const Dashboard_superadmin = memo((props) => {
                             </svg>
                           </Circularprogressbar>
                           <div className="progress-detail">
-                            <p className="mb-2">Administration</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div> Administration </div>):(<div> Administration</div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbrad} duration={3} />
                             </h4>
@@ -1417,7 +1417,7 @@ const Dashboard_superadmin = memo((props) => {
                             </Button>
                             <Modal show={show} onHide={handleClose}>
                               <Modal.Header closeButton>
-                                <Modal.Title>Mon QR Code</Modal.Title>
+                                <Modal.Title>{user.langue === "en" ? (<div> My QR Code </div>):(<div> Mon QR Code</div>)}</Modal.Title>
                               </Modal.Header>
                               <Modal.Body>
 
@@ -1457,7 +1457,7 @@ const Dashboard_superadmin = memo((props) => {
                             </svg>
                           </Circularprogressbar>
                           <div className="progress-detail">
-                            <p className="mb-2">Enseignants</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div> Teachers </div>):(<div> Enseignants </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbrens} duration={5} />
                             </h4>
@@ -1487,7 +1487,7 @@ const Dashboard_superadmin = memo((props) => {
                             </svg>
                           </Circularprogressbar>
                           <div className="progress-detail">
-                            <p className="mb-2">Elèves</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div> Students </div>):(<div> Elèves </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbreleve} duration={3} />
                             </h4>
@@ -1522,7 +1522,7 @@ const Dashboard_superadmin = memo((props) => {
                             </svg>
                           </Circularprogressbar>
                           <div className="progress-detail">
-                            <p className="mb-2">Elèves Préinscrits</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div> Pre-registered students </div>):(<div> Elèves préinscrit </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbrpreins} duration={3} />
                             </h4>
@@ -1557,7 +1557,7 @@ const Dashboard_superadmin = memo((props) => {
                             </svg>
                           </Circularprogressbar>
                           <div className="progress-detail">
-                            <p className="mb-2">Elèves archivés</p>
+                            <p className="mb-2"> {user.langue === "en" ? (<div>Archived students </div>):(<div> Elèves archivés</div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbrarchv} duration={3} />
                             </h4>
@@ -1580,7 +1580,7 @@ const Dashboard_superadmin = memo((props) => {
                     <div className="flex-wrap card-header d-flex justify-content-between">
                       <div className="header-title">
                         <h4 className="card-title"></h4>
-                        <p className="mb-0">Statistiques sur les utilisateurs</p>
+                        <p className="mb-0">{user.langue === "en" ? (<div> User statistics </div>):(<div> Statistiques sur les utilisateurs </div>)}</p>
                       </div>
                       <div className="d-flex align-items-center align-self-center">
                         <div className="d-flex align-items-center text-primary">
@@ -1600,7 +1600,7 @@ const Dashboard_superadmin = memo((props) => {
                             </g>
                           </svg>
                           <div className="ms-2">
-                            <span className="text-gray">Inscrits</span>
+                            <span className="text-gray">{user.langue === "en" ? (<div> Registered </div>):(<div> Inscrits </div>)}</span>
                           </div>
                         </div>
                         <div className="d-flex align-items-center ms-3 text-info">
@@ -1620,7 +1620,7 @@ const Dashboard_superadmin = memo((props) => {
                             </g>
                           </svg>
                           <div className="ms-2">
-                            <span className="text-gray">Non Inscrits</span>
+                            <span className="text-gray">{user.langue === "en" ? (<div> Not Registered </div>):(<div> Non Inscrits </div>)}</span>
                           </div>
                         </div>
                       </div>
@@ -1634,9 +1634,9 @@ const Dashboard_superadmin = memo((props) => {
                           Cette semaine
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                          <Dropdown.Item href="#">Cette semaine</Dropdown.Item>
-                          <Dropdown.Item href="#">This Month</Dropdown.Item>
-                          <Dropdown.Item href="#">This Year</Dropdown.Item>
+                          <Dropdown.Item href="#">{user.langue === "en" ? (<div> This week </div>):(<div> Cette semaine </div>)}</Dropdown.Item>
+                          <Dropdown.Item href="#">{user.langue === "en" ? (<div> This Mounth </div>):(<div> Ce mois ci </div>)}</Dropdown.Item>
+                          <Dropdown.Item href="#">{user.langue === "en" ? (<div> This Year </div>):(<div> Cette année </div>)}</Dropdown.Item>
                         </Dropdown.Menu>
                       </Dropdown>
                     </div>
@@ -1654,7 +1654,7 @@ const Dashboard_superadmin = memo((props) => {
                   <div className="card" data-aos="fade-up" data-aos-delay="900">
                     <div className="flex-wrap card-header d-flex justify-content-between">
                       <div className="header-title">
-                        <h4 className="card-title">Absences</h4>
+                        <h4 className="card-title">{user.langue === "en" ? (<div> Absences </div>):(<div> Absences </div>)}</h4>
                       </div>
                       <Dropdown>
                         <Dropdown.Toggle
@@ -1666,9 +1666,9 @@ const Dashboard_superadmin = memo((props) => {
                           Cette semaine
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                          <Dropdown.Item href="#">Cette semaine</Dropdown.Item>
-                          <Dropdown.Item href="#">This Month</Dropdown.Item>
-                          <Dropdown.Item href="#">This Year</Dropdown.Item>
+                          <Dropdown.Item href="#">{user.langue === "en" ? (<div> This week </div>):(<div> Cette semaine </div>)}</Dropdown.Item>
+                          <Dropdown.Item href="#">{user.langue === "en" ? (<div> This Mounth </div>):(<div> Ce mois ci </div>)}</Dropdown.Item>
+                          <Dropdown.Item href="#">{user.langue === "en" ? (<div> This Year </div>):(<div> Cette année </div>)}</Dropdown.Item>
                         </Dropdown.Menu>
                       </Dropdown>
                     </div>
@@ -1700,7 +1700,7 @@ const Dashboard_superadmin = memo((props) => {
                               </g>
                             </svg>
                             <div className="ms-3">
-                              <span className="text-gray">Enseignants</span>
+                              <span className="text-gray">{user.langue === "en" ? (<div> Teachers </div>):(<div> Enseignants </div>)}</span>
                               <h6>0</h6>
                             </div>
                           </div>
@@ -1722,7 +1722,7 @@ const Dashboard_superadmin = memo((props) => {
                               </g>
                             </svg>
                             <div className="ms-3">
-                              <span className="text-gray">Elèves</span>
+                              <span className="text-gray">{user.langue === "en" ? (<div> Students </div>):(<div> Elèves </div>)}</span>
                               <h6>0</h6>
                             </div>
                           </div>
@@ -1735,7 +1735,7 @@ const Dashboard_superadmin = memo((props) => {
                   <div className="card" data-aos="fade-up" data-aos-delay="1000">
                     <div className="flex-wrap card-header d-flex justify-content-between">
                       <div className="header-title">
-                        <h4 className="card-title">Cours</h4>
+                        <h4 className="card-title">{user.langue === "en" ? (<div> course </div>):(<div> Cours </div>)}</h4>
                       </div>
                       <Dropdown>
                         <Dropdown.Toggle
@@ -1747,9 +1747,9 @@ const Dashboard_superadmin = memo((props) => {
                           Cette semaine
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                          <Dropdown.Item href="#">Cette semaine</Dropdown.Item>
-                          <Dropdown.Item href="#">This Month</Dropdown.Item>
-                          <Dropdown.Item href="#">This Year</Dropdown.Item>
+                           <Dropdown.Item href="#">{user.langue === "en" ? (<div> This week </div>):(<div> Cette semaine </div>)}</Dropdown.Item>
+                          <Dropdown.Item href="#">{user.langue === "en" ? (<div> This Mounth </div>):(<div> Ce mois ci </div>)}</Dropdown.Item>
+                          <Dropdown.Item href="#">{user.langue === "en" ? (<div> This Year </div>):(<div> Cette année </div>)}</Dropdown.Item>
                         </Dropdown.Menu>
                       </Dropdown>
                     </div>
@@ -1779,8 +1779,8 @@ const Dashboard_superadmin = memo((props) => {
                       <div className="p-4 border border-white rounded primary-gradient-card">
                         <div className="d-flex justify-content-between align-items-center">
                           <div>
-                            <h5 className="font-weight-bold">REVENUS</h5>
-                            <p className="mb-0">SOLDE</p>
+                            <h5 className="font-weight-bold">{user.langue === "en" ? (<div> REVENUES </div>):(<div> REVENUS </div>)}</h5>
+                            <p className="mb-0">{user.langue === "en" ? (<div> PAY </div>):(<div> SOLDE </div>)}</p>
                           </div>
                           <div className="master-card-content">
                             <svg
@@ -1811,14 +1811,14 @@ const Dashboard_superadmin = memo((props) => {
                           <div className="card-number">
                             <span className="fs-5 me-2">{allg}</span>
 
-                            <span className="fs-5 me-2">XAF</span>
+                            <span className="fs-5 me-2">{user.langue === "en" ? (<div> XAF </div>):(<div> XAF </div>)}</span>
                           </div>
                         </div>
                         <div className="mb-2 d-flex align-items-center justify-content-between">
 
                         </div>
                         <div className="d-flex align-items-center justify-content-between">
-                          <h6>Nom établissement</h6>
+                          <h6>{user.langue === "en" ? (<div> Institution name </div>):(<div> Nom établissement </div>)}</h6>
                           <h6 className="ms-5"></h6>
                         </div>
                       </div>
