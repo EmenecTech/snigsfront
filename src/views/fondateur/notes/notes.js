@@ -206,9 +206,9 @@ const AdminEditNotes = () => {
                                                 {item.coefficient_cm}
                                             </td>
                                             <td>
-                                                {item.appréciation_note}
+                                                {item.appreciation_note}
                                             </td>
-                                            <td>{item.compétence_visée_note} </td>
+                                            <td>{item.competence_visee_note} </td>
                                             <td>
 
 
