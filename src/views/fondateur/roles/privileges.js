@@ -52,7 +52,7 @@ SwiperCore.use([Navigation]);
 
 
 const ListPrivilegesFondateur = memo((props) => {
-
+    const { http, setToken, user } = AuthUser();
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
 
