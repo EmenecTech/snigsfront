@@ -308,32 +308,14 @@ const ListNiveaux = memo((props) => {
           <Card>
             <Card.Header className="d-flex justify-content-between">
               <div className="header-title">
-                <h4 className="card-title">Niveaux</h4>
+                <h4 className="card-title"> {user.langue === "en" ? (<div>Levels </div>):(<div>Niveaux</div>)}</h4>
               </div>
 
-              <Button variant="primary mt-2" onClick={handleShow}>
-                <span className="btn-inner">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    />
-                  </svg>
-                </span>
-                Ajouter
-              </Button>
+         
 
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                  <Modal.Title as="h5">Ajouter un niveau</Modal.Title>
+                  <Modal.Title as="h5"> {user.langue === "en" ? (<div>Add a level </div>):(<div>Ajouter un niveau  </div>)}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                   <Form>
@@ -342,7 +324,7 @@ const ListNiveaux = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Intitulé *
+                              {user.langue === "en" ? (<div>Entitled </div>):(<div>Intitulé  </div>)} *
                             </Form.Label>
                             <Form.Control
                               type="text"
@@ -376,7 +358,8 @@ const ListNiveaux = memo((props) => {
                                 value={"Technique"}
                                 onChange={handleChange}
                               >
-                                Technique
+                                      {user.langue === "en" ? (<div>Technical </div>):(<div> Technique </div>)} 
+                           
                               </option>
                             </select>
                           </Form.Group>
@@ -470,7 +453,7 @@ const ListNiveaux = memo((props) => {
                 >
                   <thead>
                     <tr>
-                      <th>Intitulé</th>
+                      <th>{user.langue === "en" ? (<div>Entitled </div>):(<div> Intitulé </div>)}</th>
                       <th>Cycle </th>
                       <th>Section</th>
                
