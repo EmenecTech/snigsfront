@@ -344,7 +344,7 @@ const deleteFiliere = (id) => {
           <Card>
             <Card.Header className="d-flex justify-content-between">
               <div className="header-title">
-                <h4 className="card-title">Filières</h4>
+                <h4 className="card-title"> {user.langue === "en" ? (<div>Sectors</div>):(<div> Filières</div>)}</h4>
               </div>
 
               <Button variant="primary mt-2" onClick={handleShow}>
@@ -380,7 +380,7 @@ const deleteFiliere = (id) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Intitulé{" "}
+                              {user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)}{" "}
                             </Form.Label>
                             <Form.Control
                               type="text"
@@ -400,7 +400,8 @@ const deleteFiliere = (id) => {
                         variant="primary"
                         onClick={submitForm}
                       >
-                        Confirmer
+                            {user.langue === "en" ? (<div> Confirm</div>):(<div> Confirmer</div>)}
+                       
                       </Button>
                     </div>
                   </Form>
@@ -418,7 +419,7 @@ const deleteFiliere = (id) => {
                 >
                   <thead>
                     <tr>
-                      <th>Intitulé</th>
+                      <th> {user.langue === "en" ? (<div> Entitled</div>):(<div> Intitulé </div>)}</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
