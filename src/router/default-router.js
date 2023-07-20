@@ -250,9 +250,15 @@ export const DefaultRouter = [
                 path: 'Admin/add/',
                 element: <AddMembreAdministration />
             },
+            ///////20/07/2023
             {
-                path: '/Admin/edit/membres_administration',
+                path: '/Admin/edit/membres_administration/:id',
                 element: <EditMembresAdministration />,
+            },
+            ///20/07/2023
+            {
+                path: '/Admin/edit/enseignants/:id',
+                element: <EditEnseignants />,
             },
             ///////
             {
@@ -427,6 +433,13 @@ export const DefaultRouter = [
             {
                 path: 'Discipline/List/classes/Eleves/Info/:id/:classe',
                 element: <DisciplineEleveInfo />
+            },
+
+     ////edit_eleve 20/07/2023
+            {
+                path: 'Edit/:niveau/:id',
+                element: <EditEleve />
+
             },
 
             ///////////////////////////////////////////////////////////////////////////Eleves
