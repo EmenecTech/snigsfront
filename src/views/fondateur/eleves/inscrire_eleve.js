@@ -384,7 +384,7 @@ const InscriptionEleve = memo((props) => {
                             </Form.Group>
                                <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
-                                  Contact du parent
+                                {user.langue === "en" ? (<div>Parent contact</div>):(<div>  Contact du parent </div>)}
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
