@@ -78,8 +78,7 @@ const AdminEditNotes = () => {
     }
 
     const submitForm = () => {
-        http.put('/admin_edit_notes', inputs).then((res) => { })
-
+        http.post('/admin_edit_notes', inputs).then((res) => { })
         window.location.reload(false);
         console.log(inputs)
     }
