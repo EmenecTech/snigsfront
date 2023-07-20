@@ -4,7 +4,7 @@ import { Card, Row, Col, Dropdown, Button, Image, Nav, Tab, Table, Form, Modal, 
 import { Link } from "react-router-dom";
 import AuthUser from "../../components/AuthUser.js";
 
-//circular
+//circulars
 import Circularprogressbar from "../../components/circularprogressbar.js";
 
 // AOS
