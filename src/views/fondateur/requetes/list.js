@@ -36,7 +36,7 @@ const AdminListRequest = () => {
 
                 <Card.Header className="d-flex justify-content-between">
                     <div className="header-title">
-                        <h4 className="card-title">Requêtes</h4>
+                        <h4 className="card-title"> {user.langue === "en" ? (<div>Requests </div>):(<div>Requêtes</div>)}</h4>
                     </div>
 
                 </Card.Header>
@@ -45,9 +45,9 @@ const AdminListRequest = () => {
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Objet</th>
-                                <th>Etat</th>
-                                <th>Date d'envoi</th>
+                                <th>{user.langue === "en" ? (<div>Object </div>):(<div>Objet </div>)}</th>
+                                <th> {user.langue === "en" ? (<div>State</div>):(<div>Etat</div>)}</th>
+                                <th>{user.langue === "en" ? (<div>Sending date</div>):(<div>Date d'envoi</div>)}</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
