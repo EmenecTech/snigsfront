@@ -340,8 +340,8 @@ const AdminlistdocumentsOfEleves = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Intitulé</th>
-                                            <th>Type de fichier</th>
+                                            <th>{user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>File type</div>):(<div> Type de fichier </div>)}</th>
                                             <th>Actions </th>
                                         </tr>
                                     </thead>
