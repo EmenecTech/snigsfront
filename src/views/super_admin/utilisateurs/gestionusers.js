@@ -143,7 +143,7 @@ const UtilisateursListe = () => {
             <Card>
               <Card.Header className="d-flex justify-content-between">
                 <div className="header-title">
-                  <h4 className="card-title">List d'utilisateurs</h4>
+                  <h4 className="card-title">Liste des utilisateurs</h4>
                 </div>
                 <Link to="/utilisateurs/add/super/admin">
                   <Button type="button" variant="primary">
