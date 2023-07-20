@@ -178,13 +178,13 @@ const UniClasse = () => {
                                     </div>
                                     <Nav as="ul" className="d-flex nav-pills mb-0 text-center profile-tab" data-toggle="slider-tab" id="profile-pills-tab" role="tablist">
                                         <Nav.Item as="li">
-                                            <Nav.Link eventKey="first">Elèves</Nav.Link>
+                                            <Nav.Link eventKey="first">{user.langue === "en" ? (<div>Students</div>):(<div> Elèves </div>)}</Nav.Link>
                                         </Nav.Item>
                                         <Nav.Item as="li">
-                                            <Nav.Link eventKey="second">Enseignants</Nav.Link>
+                                            <Nav.Link eventKey="second">{user.langue === "en" ? (<div>Teachers</div>):(<div> Elèves </div>)}</Nav.Link>
                                         </Nav.Item>
                                         <Nav.Item as="li">
-                                            <Nav.Link eventKey="third">Matières</Nav.Link>
+                                            <Nav.Link eventKey="third">{user.langue === "en" ? (<div>Courses</div>):(<div> Matières </div>)}</Nav.Link>
                                         </Nav.Item>
                                         <Nav.Item as="li">
                                             <Nav.Link eventKey="fourth"></Nav.Link>
@@ -198,13 +198,13 @@ const UniClasse = () => {
                         <Card>
                             <Card.Header>
                                 <div className="header-title">
-                                    <h4 className="card-title">A propos</h4>
+                                    <h4 className="card-title"> {user.langue === "en" ? (<div>About</div>):(<div> A propos </div>)}</h4>
                                 </div>
                             </Card.Header>
                             <Card.Body>
                                 
                                 <div className="mt-2">
-                                    <h6 className="mb-1">Professeur principal:</h6>
+                                    <h6 className="mb-1">{user.langue === "en" ? (<div>Head teacher</div>):(<div> Professeur principal </div>)}:</h6>
                                     <p></p>
                                 </div>
                                
@@ -231,13 +231,13 @@ const UniClasse = () => {
                                             >
                                                 <thead>
                                                     <tr>
-                                                        <th>Nom</th>
-                                                        <th>Prénom</th>
-                                                        <th>Genre</th>
-                                                        <th>Date de naissance</th>
-                                                        <th>Lieu de naissance</th>
+                                                        <th>{user.langue === "en" ? (<div>Name</div>):(<div> Nom  </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div>Prename</div>):(<div> Prénom  </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div>Gender </div>):(<div> Genre  </div>)}</th>
+                                                        <th> {user.langue === "en" ? (<div>Date of birth </div>):(<div> Date de naissance  </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div>Place of birth </div>):(<div> Lieu de naissance   </div>)}</th>
                                                         <th>Email</th>
-                                                        <th>Téléphone</th>
+                                                        <th> {user.langue === "en" ? (<div>Phone </div>):(<div> Téléphone   </div>)}</th>
                                                         <th>Action</th>
 
                                                     </tr>
@@ -307,7 +307,7 @@ const UniClasse = () => {
                                         <Modal show={show1} onHide={handleClose1} backdrop="static"
                                             keyboard={false}>
                                             <Modal.Header closeButton>
-                                                <Modal.Title as="h5">Ajouter une enseignant à la classe</Modal.Title>
+                                                <Modal.Title as="h5">{user.langue === "en" ? (<div>Add a teacher to the class</div>):(<div> Ajouter une enseignant à la classe  </div>)}</Modal.Title>
                                             </Modal.Header>
                                             <Modal.Body>
                                                 <Form>
@@ -315,7 +315,7 @@ const UniClasse = () => {
                                                         <Col>
                                                             <Form.Group as={Row} className="form-group">
                                                                 <Form.Group className="form-group">
-                                                                    <Form.Label htmlFor="exampleInputText1">Matière </Form.Label>
+                                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Course</div>):(<div> Matière  </div>)}</Form.Label>
                                                                     <select className="form-select mb-3 shadow-none" name="int" onChange={handleChange} required>
                                                                         <option></option>
                                                                         {matieres.map((item) => (
@@ -332,7 +332,7 @@ const UniClasse = () => {
                                                         <Col>
                                                             <Form.Group as={Row} className="form-group">
                                                                 <Form.Group className="form-group">
-                                                                    <Form.Label htmlFor="exampleInputText1">Enseignant </Form.Label>
+                                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div> Teacher </div>):(<div> Enseignant  </div>)}</Form.Label>
                                                                     <select className="form-select mb-3 shadow-none" name="ens" onChange={handleChange} required>
                                                                         <option></option>
                                                                         {enseignants_classe.map((item) => (
@@ -351,10 +351,10 @@ const UniClasse = () => {
                                                         <Col>
                                                             <Form.Group as={Row} className="form-group">
                                                                 <Form.Group className="form-group">
-                                                                    <Form.Label htmlFor="exampleInputText1">Principal </Form.Label>
+                                                                    <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div> Head Teacher </div>):(<div> Principal </div>)}</Form.Label>
                                                                     <select className="form-select mb-3 shadow-none" name="groupe" onChange={handleChange} required>
-                                                                        <option>Non</option>
-                                                                        <option value="Oui">Oui</option>
+                                                                        <option> {user.langue === "en" ? (<div> No </div>):(<div> Non </div>)}</option>
+                                                                        <option value="Oui">{user.langue === "en" ? (<div> Yes </div>):(<div> Oui </div>)}</option>
                                                                     </select>
                                                                 </Form.Group>
                                                             </Form.Group>
@@ -386,12 +386,12 @@ const UniClasse = () => {
                                             >
                                                 <thead>
                                                     <tr>
-                                                        <th>Nom</th>
-                                                        <th>Prénom</th>
-                                                        <th>Matière principale</th>
-                                                        <th>Matière Enseigné</th>
+                                                        <th>{user.langue === "en" ? (<div> Name </div>):(<div> Nom  </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div> Surame </div>):(<div> Prénom  </div>)}</th>
+                                                        <th> {user.langue === "en" ? (<div> Main course </div>):(<div> Matière principale </div>)}</th>
+                                                        <th> {user.langue === "en" ? (<div> Subject Taught</div>):(<div> Matière Enseigné </div>)}</th>
                                                         <th>Email</th>
-                                                        <th>Téléphone</th>
+                                                        <th>{user.langue === "en" ? (<div> Phone</div>):(<div> Téléphone  </div>)}</th>
                                                         <th>Action</th>
 
                                                     </tr>
@@ -462,7 +462,7 @@ const UniClasse = () => {
                                         {/* <!-- Modal --> */}
                                         <Modal show={show} onHide={handleClose}>
                                             <Modal.Header closeButton>
-                                                <Modal.Title as="h5">Ajouter une matière à la classe</Modal.Title>
+                                                <Modal.Title as="h5"> {user.langue === "en" ? (<div> Add course to class </div>):(<div> Ajouter une matière à la classe </div>)}</Modal.Title>
                                             </Modal.Header>
                                             <Modal.Body>
                                                 <Form>
@@ -470,7 +470,7 @@ const UniClasse = () => {
                                                         <Col>
                                                             <Form.Group as={Row} className="form-group">
                                                                 <Form.Group className="form-group">
-                                                                    <Form.Label htmlFor="exampleInputText1">Matière </Form.Label>
+                                                                    <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div> Course </div>):(<div>Matière</div>)}</Form.Label>
                                                                     <select className="form-select mb-3 shadow-none" name="int" onChange={handleChange} required>
                                                                         <option></option>
                                                                         {matieres.map((item) => (
@@ -497,13 +497,13 @@ const UniClasse = () => {
                                                         <Col>
                                                             <Form.Group as={Row} className="form-group">
                                                                 <Form.Group className="form-group">
-                                                                    <Form.Label htmlFor="exampleInputText1">Groupe </Form.Label>
+                                                                    <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div> Group </div>):(<div>Groupe</div>)} </Form.Label>
                                                                     <select className="form-select mb-3 shadow-none" name="groupe" onChange={handleChange} required>
                                                                         <option></option>
 
-                                                                        <option value="Groupe 1">Groupe 1</option>
-                                                                        <option value="Groupe 2">Groupe 2</option>
-                                                                        <option value="Groupe 3">Groupe 3</option>
+                                                                        <option value="Groupe 1"> {user.langue === "en" ? (<div> Group 1</div>):(<div>Groupe 1</div>)} </option>
+                                                                        <option value="Groupe 2">{user.langue === "en" ? (<div> Group 2</div>):(<div>Groupe 2</div>)} </option>
+                                                                        <option value="Groupe 3">{user.langue === "en" ? (<div> Group 3</div>):(<div>Groupe 3</div>)} </option>
 
 
                                                                     </select>
@@ -537,9 +537,9 @@ const UniClasse = () => {
                                             >
                                                 <thead>
                                                     <tr>
-                                                        <th>Matiere</th>
+                                                        <th>{user.langue === "en" ? (<div>Course</div>):(<div>Matiere </div>)} </th>
                                                         <th>Coefficient </th>
-                                                        <th>Groupe</th>
+                                                        <th>{user.langue === "en" ? (<div>Group </div>):(<div>Groupe </div>)} </th>
                                                         <th>Action</th>
 
                                                     </tr>
