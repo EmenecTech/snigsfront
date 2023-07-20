@@ -352,7 +352,7 @@ const RolesPrivilegesAdmin = memo((props) => {
               {/* <!-- Modal --> */}
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                  <Modal.Title as="h5">Ajouter un nouveau privilège</Modal.Title>
+                  <Modal.Title as="h5">{user.langue === "en" ? (<div>Add a new privilege</div>):(<div>Ajouter un nouveau privilège </div>)}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                   <Form>
@@ -361,7 +361,7 @@ const RolesPrivilegesAdmin = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Choisissez le privilège{" "}
+                            {user.langue === "en" ? (<div>Choose privilege</div>):(<div>   Choisissez le privilège</div>)}{" "}
                             </Form.Label>
                             <select
                               className="form-select mb-3 shadow-none"
@@ -389,7 +389,7 @@ const RolesPrivilegesAdmin = memo((props) => {
                         variant="primary"
                         onClick={submitForm}
                       >
-                        Confirmer
+                       {user.langue === "en" ? (<div> Confirm</div>):(<div> Confirmer </div>)}
                       </Button>
                     </div>
                   </Form>
