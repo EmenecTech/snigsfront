@@ -388,12 +388,12 @@ const ClassesProgrammes = memo((props) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                     </svg>
                                 </span>
-                                Ajouter
+                                {user.langue === "en" ? (<div>Add</div>):(<div>  Ajouter</div>)}
                             </Button>
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title as="h5">Ajouter une nouvelle classe</Modal.Title>
+                                    <Modal.Title as="h5">  {user.langue === "en" ? (<div>Add a new class</div>):(<div>  Ajouter une nouvelle classe </div>)}</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
                                     <Form>
@@ -403,7 +403,7 @@ const ClassesProgrammes = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Classe *</Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">  {user.langue === "en" ? (<div>Class</div>):(<div>  Classe </div>)}*</Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="classe" onChange={handleChange} required>
                                                             <option></option>
                                                             {classeselect.map((item) => (
@@ -424,7 +424,7 @@ const ClassesProgrammes = memo((props) => {
 
 
                                         <div className="text-center">
-                                            <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                            <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Confirm</div>):(<div> Confirmer</div>)}</Button>
                                         </div>
                                     </Form>
                                 </Modal.Body>
@@ -444,9 +444,9 @@ const ClassesProgrammes = memo((props) => {
                                     <thead>
                                         <tr>
 
-                                            <th>Intitulé</th>
-                                            <th>Niveau</th>
-                                            <th>Filière </th>
+                                            <th>{user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Level</div>):(<div> Niveau </div>)}</th>
+                                            <th> {user.langue === "en" ? (<div>Sector</div>):(<div>Filière </div>)}</th>
                                             <th>Cycle </th>
                                             <th>Action</th>
                                         </tr>
