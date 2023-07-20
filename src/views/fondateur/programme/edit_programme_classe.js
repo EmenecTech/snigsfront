@@ -685,7 +685,7 @@ const EditClasseProgramme = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">{user.langue === "en" ? (<div>Tuesday</div>):(<div>Mercredi  </div>)}<</h4>
+                                                    <h4 className="card-title">{user.langue === "en" ? (<div>Tuesday</div>):(<div>Mercredi</div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
