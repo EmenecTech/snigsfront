@@ -60,7 +60,7 @@ const EnseignantAddNote = () => {
     }, []);
 
     const fetchAllNotes = () => {
-        http.get('/notes_eleves/' + etab + '/' + classe + "/" + matiere + "/" + evaluation).then(res => {
+        http.get('/notes_eleves/' + etab + '/' + classe + '/' + matiere + '/' + evaluation).then(res => {
             setNotes(res.data);
 
         })
@@ -78,8 +78,7 @@ const EnseignantAddNote = () => {
     }
 
     const submitForm = () => {
-        http.post('/notes', inputs).then((res) => { })
-
+        http.post('notes', inputs).then((res) => { })
         window.location.reload(false);
         console.log(inputs)
     }
