@@ -66,10 +66,10 @@ const Admin_list_Chapitre = (props) => {
                                 <table id="user-list-table" className="table table-striped" role="grid" data-toggle="data-table">
                                     <thead>
                                         <tr className="ligth">
-                                            <th>Intitulé</th>
-                                            <th>Nombre d'heures</th>
-                                            <th>Date de début</th>
-                                            <th>Date de fin</th>
+                                            <th>{user.langue === "en" ? (<div>Entitled </div>):(<div> Intitulé </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Number of hours </div>):(<div> Nombre d'heures  </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Start date </div>):(<div> Date de début  </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>End date</div>):(<div> Date de fin  </div>)}</th>
                                             <th>Description</th>
                                             <th min-width="100px">Action</th>
                                         </tr>
