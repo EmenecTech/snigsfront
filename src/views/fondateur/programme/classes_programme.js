@@ -72,7 +72,7 @@ const ClassesProgrammes = memo((props) => {
 
 
     const submitForm = () => {
-        http.post('/add_programme_classe/', inputs).then((res) => {
+        http.post('/add_programme_classe', inputs).then((res) => {
             alert("Classe ajoutée avec succès !")
 
             window.location.reload(false);
