@@ -165,7 +165,7 @@ const AddUtilisateurs = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">établissement </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">Etablissement </Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="etab_fondateur" onChange={handleChange}>
                                                         <option></option>
                                                         {etablissements.map((item) => (
