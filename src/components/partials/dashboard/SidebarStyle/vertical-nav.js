@@ -840,7 +840,7 @@ const VerticalNav = memo((props) => {
                                             <rect opacity="0.4" x="8" y="1" width="5" height="5" rx="2.5" fill="currentColor" />
                                         </svg>
                                     </i>
-                                    <span className="item-name"> {user.langue === "en" ? (<div>Edit Schoolt</div>):(<div> Etablissement </div>)}</span>
+                                    <span className="item-name"> {user.langue === "en" ? (<div>Edit School</div>):(<div> Etablissement </div>)}</span>
                                     <i className="right-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
