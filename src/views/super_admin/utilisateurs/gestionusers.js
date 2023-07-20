@@ -177,7 +177,7 @@ const UtilisateursListe = () => {
                   >
                     <thead>
                       <tr className="ligth">
-                        <th>Profile</th>
+                        <th>Profil</th>
                         <th>Nom</th>
                         <th>Prénom</th>
                         <th>Rôle</th>
