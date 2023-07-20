@@ -426,7 +426,7 @@ const NiveauxMatieres = memo((props) => {
 
 
                                         <div className="text-center">
-                                            <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                            <Button type="button" variant="primary" onClick={submitForm} >{user.langue === "en" ? (<div>Confirm </div>):(<div>Confirmer</div>)}</Button>
                                         </div>
                                     </Form>
                                 </Modal.Body>
@@ -446,9 +446,9 @@ const NiveauxMatieres = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Matiere</th>
+                                            <th>{user.langue === "en" ? (<div>Course </div>):(<div>Matiere </div>)}</th>
                                             <th>Coefficient </th>
-                                            <th>Groupe</th>
+                                            <th>{user.langue === "en" ? (<div>Group </div>):(<div>Groupe </div>)}</th>
                                             <th>Action</th>
 
                                         </tr>
