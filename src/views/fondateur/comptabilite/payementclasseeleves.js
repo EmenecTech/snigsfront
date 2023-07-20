@@ -376,12 +376,12 @@ const PayementsListNiveauClasseEleves = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Nom</th>
-                                            <th>Prénom</th>
-                                            <th>Genre</th>
+                                            <th>{user.langue === "en" ? (<div>Name </div>):(<div> Nom </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Surname</div>):(<div>Prénom </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Gender</div>):(<div>Genre</div>)}</th>
                                             <th>Email</th>
-                                            <th>Téléphone</th>
-                                            <th>Etat</th>
+                                            <th>{user.langue === "en" ? (<div>Phone</div>):(<div>Téléphone</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>State</div>):(<div>Etat</div>)}</th>
                                             <th>Actions</th>
 
                                         </tr>
