@@ -358,7 +358,7 @@ const ListPensions = memo((props) => {
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title as="h5">Ajouter une nouvelle filière</Modal.Title>
+                                    <Modal.Title as="h5">{user.langue === "en" ? (<div>Add a new payment</div>):(<div> Ajouter une nouveau payement</div>)}</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
                                     <Form>
@@ -366,7 +366,7 @@ const ListPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Intitulé </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé </div>)} </Form.Label>
                                                         <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -376,7 +376,7 @@ const ListPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Montant </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Amount</div>):(<div> Montant  </div>)}</Form.Label>
                                                         <Form.Control type="number" defaultValue="" name="montant" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -386,7 +386,7 @@ const ListPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Nombre de tranches </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Number of slices</div>):(<div>Nombre de tranches  </div>)}</Form.Label>
                                                         <Form.Control type="number" defaultValue="" name="tranches" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -396,7 +396,7 @@ const ListPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Debut des payements </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Start of payments</div>):(<div>Debut des payements </div>)} </Form.Label>
                                                         <Form.Control type="date" defaultValue="" name="pdebut" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -404,7 +404,7 @@ const ListPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Clôture des payements </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Closing of payments</div>):(<div>Clôture des payements </div>)} </Form.Label>
                                                         <Form.Control type="date" defaultValue="" name="pfin" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -437,11 +437,11 @@ const ListPensions = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Intitulé</th>
-                                            <th>Montant</th>
-                                            <th>Tranche(s)</th>
-                                            <th>Début des payements</th>
-                                            <th>Clôture des payements</th>
+                                            <th>{user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé  </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Amount</div>):(<div>Montant </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Slice(s)</div>):(<div>Tranche(s) </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Start of payments</div>):(<div>Début des payements</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Closing of payments</div>):(<div>Clôture des payements</div>)}</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
