@@ -365,7 +365,7 @@ const ListClasses = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Classes</h4>
+                                <h4 className="card-title">Classes </h4>
                             </div>
 
 
@@ -380,7 +380,7 @@ const ListClasses = memo((props) => {
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title as="h5">Ajouter une nouvelle classe</Modal.Title>
+                                    <Modal.Title as="h5"> {user.langue === "en" ? (<div>Add a new class Classes</div>):(<div>Ajouter une nouvelle classe Classes</div>)}</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
                                     <Form>
@@ -390,7 +390,7 @@ const ListClasses = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Intitulé *</Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé</div>)} *</Form.Label>
                                                         <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -402,7 +402,7 @@ const ListClasses = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Niveau *</Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)} *</Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange} required>
                                                             <option></option>
                                                             {niveaux.map((item) => (
@@ -421,7 +421,7 @@ const ListClasses = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Filière</Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Sector</div>):(<div>Filière</div>)} </Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="filiere" onChange={handleChange} required>
                                                             <option></option>
                                                             {filieres.map((item) => (
@@ -461,10 +461,10 @@ const ListClasses = memo((props) => {
                                     <thead>
                                         <tr>
 
-                                            <th>Intitulé</th>
-                                            <th>Niveau</th>
-                                            <th>Filière </th>
-                                            <th>Cycle </th>
+                                            <th>{user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)}<</th>
+                                            <th>{user.langue === "en" ? (<div>Sector</div>):(<div>Filière</div>)} </th>
+                                            <th>{user.langue === "en" ? (<div>Cycle</div>):(<div>Cycle </div>)} </th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
