@@ -81,7 +81,7 @@ export default function Enseignant_Edit_CahierTexte() {
                 <Col sm="12" lg="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between flex-wrap">
-                            <div className="header-title"><h4 className="card-title mb-0">CAHIER DE TEXTE</h4></div>
+                            <div className="header-title"><h4 className="card-title mb-0">{user.langue === "en" ? (<div> TEXTBOOK </div>):(<div> CAHIER DE TEXTE </div>)}</h4></div>
 
 
 
@@ -97,18 +97,18 @@ export default function Enseignant_Edit_CahierTexte() {
                                         </svg>
                                     </i>
 
-                                    <span>Remplir</span>
+                                    <span>{user.langue === "en" ? (<div> complete </div>):(<div> Remplir </div>)}</span>
                                 </Button>
 
                                 <Modal show={show} onHide={handleClose}>
                                     <Modal.Header closeButton>
-                                        <Modal.Title>ajouter des notes</Modal.Title>
+                                        <Modal.Title>{user.langue === "en" ? (<div> add notes </div>):(<div> ajouter des notes </div>)}</Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
                                         <Form>
 
                                             <Form.Group className="form-group">
-                                                <Form.Label htmlFor="exampleFormControlSelect1">Leçon</Form.Label>
+                                                <Form.Label htmlFor="exampleFormControlSelect1">{user.langue === "en" ? (<div> lesson </div>):(<div> leçon </div>)}</Form.Label>
                                                 <select className="form-select" id="lecon_cahier_texte" name="lecon_cahier_texte" onChange={handleChange}>
                                                     {Lecons.map((item) => (
                                                         <><option> </option>
@@ -119,7 +119,7 @@ export default function Enseignant_Edit_CahierTexte() {
                                                 </select>
                                             </Form.Group>
                                             <Form.Group className='form-group'>
-                                                <Form.Label>Date de remplissage</Form.Label>
+                                                <Form.Label>{user.langue === "en" ? (<div> filling date </div>):(<div> date de remplissage </div>)}</Form.Label>
                                                 <Form.Control type="date" id="date_cahier_texte" name="date_cahier_texte"
                                                     value={inputs.date_cahier_texte || ''}
                                                     onChange={handleChange}
@@ -135,12 +135,12 @@ export default function Enseignant_Edit_CahierTexte() {
                                             </Form.Group>
 
                                             <Form.Group className="form-group">
-                                                <Form.Label htmlFor="exampleFormControlSelect1">Niveau d'avancement</Form.Label>
+                                                <Form.Label htmlFor="exampleFormControlSelect1">{user.langue === "en" ? (<div> level of progress </div>):(<div> Niveau d'avancement </div>)}</Form.Label>
                                                 <select className="form-select" id="niveau_avancement" name="niveau_avancement" onChange={handleChange}>
                                                     <option> </option>
-                                                    <option value='Début'>Début</option>
-                                                    <option value='En cours'>En cours</option>
-                                                    <option value='Terminé'>Terminé</option>
+                                                    <option value='Début'>{user.langue === "en" ? (<div> start </div>):(<div> Début </div>)}</option>
+                                                    <option value='En cours'>{user.langue === "en" ? (<div> in progress </div>):(<div> En cours </div>)}</option>
+                                                    <option value='Terminé'>{user.langue === "en" ? (<div> completed </div>):(<div> Terminé </div>)}</option>
 
                                                 </select>
                                             </Form.Group>
@@ -148,7 +148,7 @@ export default function Enseignant_Edit_CahierTexte() {
                                         </Form>
 
                                         <Button variant="primary" onClick={submitForm}>
-                                            Ajouter
+                                            {user.langue === "en" ? (<div> add </div>):(<div> ajouter </div>)}
                                         </Button>
                                     </Modal.Body>
                                 </Modal>
@@ -159,12 +159,12 @@ export default function Enseignant_Edit_CahierTexte() {
                             <table className="table">
                                 <thead>
                                     <tr>
-                                        <th>Date</th>
+                                        <th>{user.langue === "en" ? (<div> date </div>):(<div> Date </div>)}</th>
 
-                                        <th>Chapitre</th>
-                                        <th>Lecon</th>
-                                        <th>Details</th>
-                                        <th>Niveau d'avancement</th>
+                                        <th>{user.langue === "en" ? (<div> chapter </div>):(<div> Chapitre </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> lesson </div>):(<div> leçon </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> details </div>):(<div> Détails </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> progress level </div>):(<div> Niveau d'avancement </div>)}</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
