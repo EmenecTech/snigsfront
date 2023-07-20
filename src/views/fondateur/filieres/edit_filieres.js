@@ -124,7 +124,7 @@ const EditFilieres = memo((props) => {
 
                 <div className="text-center">
                   <Button type="button" variant="primary" onClick={submitForm}>
-                    Confirmer
+                    Modifier
                   </Button>
                 </div>
               </Form>
