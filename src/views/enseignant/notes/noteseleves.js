@@ -78,12 +78,16 @@ const EnseignantAddNote = () => {
     }
 
     const submitForm = () => {
-        http.post('/notes', inputs).then((res) => { })
-        window.location.reload(false);
+        http.post('/notes', inputs).then((res) => {
+             window.location.reload(false); 
+        })
+      
         console.log(inputs)
     }
 
 
+
+   
 
     return (
 
