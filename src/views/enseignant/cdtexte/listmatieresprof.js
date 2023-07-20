@@ -360,8 +360,8 @@ const Enseignant_cdtexte_matieres = memo((props) => {
                                     <thead>
                                         <tr>
 
-                                            <th> {user.langue === "en" ? (<div> classes </div>):(<div> classes </div>)} </th>
-                                            <th>{user.langue === "en" ? (<div> subjects </div>):(<div> matières </div>)}</th>
+                                            <th> {user.langue === "en" ? (<div> class </div>):(<div> classe </div>)} </th>
+                                            <th>{user.langue === "en" ? (<div> subject </div>):(<div> matière </div>)}</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
