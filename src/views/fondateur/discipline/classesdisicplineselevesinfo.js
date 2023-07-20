@@ -287,7 +287,7 @@ const DisciplineEleveInfo = (props) => {
                                         />
                                     </Form.Group>
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="furl">Classe:</Form.Label>
+                                        <Form.Label htmlFor="furl">{user.langue === "en" ? (<div>Class </div>):(<div> Classe </div>)}:</Form.Label>
                                         <Form.Control
                                             type="text"
                                             id="furl"
@@ -296,7 +296,7 @@ const DisciplineEleveInfo = (props) => {
                                         />
                                     </Form.Group>
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="furl">Retards:</Form.Label>
+                                        <Form.Label htmlFor="furl"> {user.langue === "en" ? (<div>Delays</div>):(<div> Retards  </div>)}:</Form.Label>
                                         <Form.Control
                                             type="text"
                                             id="furl"
@@ -305,7 +305,7 @@ const DisciplineEleveInfo = (props) => {
                                         />
                                     </Form.Group>
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="furl">Heures:</Form.Label>
+                                        <Form.Label htmlFor="furl">{user.langue === "en" ? (<div>Hours</div>):(<div> Heures </div>)}:</Form.Label>
                                         <Form.Control
                                             type="text"
                                             id="furl"
@@ -313,15 +313,7 @@ const DisciplineEleveInfo = (props) => {
                                             placeholder=""
                                         />
                                     </Form.Group>
-                                    <Form.Group className="form-group">
-                                        <Form.Label htmlFor="furl">Blames:</Form.Label>
-                                        <Form.Control
-                                            type="text"
-                                            id="furl"
-                                            disabled
-                                            placeholder=""
-                                        />
-                                    </Form.Group>
+                               
 
 
 
@@ -347,7 +339,7 @@ const DisciplineEleveInfo = (props) => {
                                     >
                                         <thead>
                                             <tr>
-                                                <th>Intitulé</th>
+                                                <th>{user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé  </div>)}</th>
                                                 <th>Details</th>
                                                 <th>Action</th>
 
