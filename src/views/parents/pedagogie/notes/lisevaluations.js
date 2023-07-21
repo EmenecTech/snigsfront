@@ -302,7 +302,7 @@ const ParentsListEvaluationsNotes = memo((props) => {
           <Card>
             <Card.Header className="d-flex justify-content-between">
               <div className="header-title">
-                <h4 className="card-title">Evaluations</h4>
+                <h4 className="card-title">{user.langue === "en" ? (<div> evaluations </div>):(<div> évaluations </div>)}</h4>
               </div>
             </Card.Header>
             <Card.Body>
@@ -317,11 +317,11 @@ const ParentsListEvaluationsNotes = memo((props) => {
                   <thead>
                     <tr>
                       <th>Intitulé</th>
-                      <th>Type d'évaluation</th>
-                      <th>Type de période</th>
-                      <th>Date de début</th>
-                      <th>Date de fin</th>
-                      <th>Actions</th>
+                      <th>{user.langue === "en" ? (<div> evaluation type </div>):(<div> type d'évaluation </div>)}</th>
+                      <th>{user.langue === "en" ? (<div> type of period </div>):(<div> type de période </div>)}</th>
+                      <th>{user.langue === "en" ? (<div> start date </div>):(<div> date de début </div>)}</th>
+                      <th>{user.langue === "en" ? (<div> end date </div>):(<div> date de fin </div>)}</th>
+                      <th>{user.langue === "en" ? (<div> actions </div>):(<div> actions </div>)}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -347,7 +347,7 @@ const ParentsListEvaluationsNotes = memo((props) => {
                                 item.intitule_evaluation
                               }
                             >
-                              Consulter
+                              {user.langue === "en" ? (<div> consult </div>):(<div> consulter </div>)}
                             </Link>
                           </div>
                         </td>
