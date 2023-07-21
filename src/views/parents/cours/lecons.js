@@ -73,7 +73,7 @@ const ParentsLeconChapitre = (props) => {
             <Card>
               <Card.Header className="d-flex justify-content-between">
                 <div className="header-title">
-                  <h4 className="card-title">Leçons</h4>
+                  <h4 className="card-title">{user.langue === "en" ? (<div> lessons </div>):(<div> leçons </div>)}</h4>
                 </div>
               </Card.Header>
               <div className="table-responsive">
@@ -87,11 +87,11 @@ const ParentsLeconChapitre = (props) => {
                     <tr className="ligth">
                       <th>Intitulé</th>
                       <th>Chapitre</th>
-                      <th>Nombre d'heures</th>
-                      <th>Date de début</th>
-                      <th>Date de fin</th>
+                      <th>{user.langue === "en" ? (<div> number of hours </div>):(<div> nombre d'heures </div>)}</th>
+                      <th>{user.langue === "en" ? (<div> start date  </div>):(<div> date de début </div>)}</th>
+                      <th>{user.langue === "en" ? (<div> end date </div>):(<div> date de fin </div>)}</th>
 
-                      <th>Description</th>
+                      <th>{user.langue === "en" ? (<div> description </div>):(<div> description </div>)}</th>
                     </tr>
                   </thead>
                   <tbody>
