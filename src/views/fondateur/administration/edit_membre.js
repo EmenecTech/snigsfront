@@ -10,7 +10,7 @@ const EditMembresAdministration = () => {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
     const { user } = AuthUser();
-    const userid = user.user;
+    const { id } = useParams();
     const etab = user.etablissement;
 
     useEffect(() => {
