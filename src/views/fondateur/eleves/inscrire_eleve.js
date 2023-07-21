@@ -407,7 +407,7 @@ const InscriptionEleve = memo((props) => {
                             </Form.Group>
 
                             <div className="text-center mt-2">
-                                <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Inscrire</div>):(<div>To inscribe</div>)}</Button>
+                                <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Inscrire</div>):(<div> Register </div>)}</Button>
                             </div>
 
                         </Card.Header>
