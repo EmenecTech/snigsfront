@@ -18,18 +18,16 @@ const EditMembresAdministration = () => {
     }, []);
 
     const fetchmembres = () => {
-        http.get("/membres/" + userid + "/edit").then((res) => {
+        http.get("/editadmin/" + id + "/edit").then((res) => {
             setInputs({
                 tel: res.data.telephone,
                 nom: res.data.nom,
                 prenom: res.data.prenom,
                 email: res.data.email,
-                genre: res.data.genre,
                 nationalite: res.data.nationalite,
-                fonction: res.data.fonction,
-                cni: res.data.cni,
-                date_n: res.data.date_n,
-                lieu_n: res.data.lieu_n,
+                cni: res.data.num_cni,
+                date_n: res.data.date_naissance,
+                lieu_n: res.data.lieu_naissance,
 
             });
         });
@@ -44,9 +42,9 @@ const EditMembresAdministration = () => {
     }
 
     const submitForm = () => {
-        http.put('/membres/' + userid, inputs).then((res) => {
-            alert("membre_administration modifié avec succès !");
-            navigate('/Admin/edit/membres_administration');
+        http.put('/edit_membre_administration/' + id, inputs).then((res) => {
+            alert("membre administration modifié avec succès !");
+            navigate('/Admin/list');
         })
 
 
