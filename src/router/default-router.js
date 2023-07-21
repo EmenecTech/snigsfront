@@ -163,6 +163,7 @@ import AdminlistdocumentsOfEleves from '../views/fondateur/documents/documentsof
 
 //21/07/2023
 import EditEleve from '../views/fondateur/classes/editeleves';
+import EditEnseignants from '../views/fondateur/enseignants/editenseignants';
 
 
 
@@ -259,10 +260,10 @@ export const DefaultRouter = [
                 element: <EditMembresAdministration />,
             },
             ///20/07/2023
-            // {
-            //     path: '/Admin/edit/enseignants/:id',
-            //     element: <EditEnseignants />,
-            // },
+            {
+                path: '/Admin/edit/enseignants/:id',
+                element: <EditEnseignants />,
+            },
             ///////
             {
                 path: 'List/niveaux/',
