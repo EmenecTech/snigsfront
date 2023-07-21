@@ -53,7 +53,7 @@ SwiperCore.use([Navigation]);
 
 const ListNiveaux = memo((props) => {
 
-
+    const { user, http } = AuthUser();
 
 
     const [niveaux, setniveaux] = useState([]);
