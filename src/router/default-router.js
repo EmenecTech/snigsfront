@@ -161,6 +161,9 @@ import AdminlistdocumentsElevesLoad from '../views/fondateur/documents/eleveslis
 import DocumentsListNiveauClasseEleves from '../views/fondateur/documents/doumentsclasseeleves';
 import AdminlistdocumentsOfEleves from '../views/fondateur/documents/documentsofelevesload';
 
+//21/07/2023
+import EditEleve from '../views/fondateur/classes/editeleves';
+
 
 
 
@@ -436,11 +439,11 @@ export const DefaultRouter = [
             },
 
      ////edit_eleve 20/07/2023
-            // {
-            //     path: 'Edit/:niveau/:id',
-            //     element: <EditEleve />
+            {
+                path: 'Edit/:niveau/:id',
+                element: <EditEleve />
 
-            // },
+            },
 
             ///////////////////////////////////////////////////////////////////////////Eleves
             ////////////
