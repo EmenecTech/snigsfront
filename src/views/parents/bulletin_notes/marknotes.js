@@ -579,9 +579,9 @@ const ParentsBulletinNotes = memo((props) => {
                           <Row>
                             <Col sm="4" lg="4">
                               <p className="text-center">
-                                REPUBLIQUE DU CAMEROUN <br />
-                                Paix - Travail - Patrie <br />
-                                MINISTERE DES ENSEIGNEMENTS SECONDAIRES <br />
+                                {user.langue === "en" ? (<div> REPUBLIC OF CAMEROON </div>):(<div> REPUBLIQUE DU CAMEROUN </div>)}<br />
+                                {user.langue === "en" ? (<div> PEACE-WORK-FATHERLAND </div>):(<div> PAIX-TRAVAIL-PATRIE </div>)} <br />
+                                {user.langue === "en" ? (<div> MINISTRY OF SECONDARY EDUCATION </div>):(<div> MINISTERE DES ENSEIGNEMANTS SECONDAIRE </div>)} <br />
                                 <smal>BP: Tel:</smal>
                               </p>
                             </Col>
@@ -636,7 +636,7 @@ const ParentsBulletinNotes = memo((props) => {
                             <Col sm="4" lg="4"></Col>
                             <Col sm="4" lg="4">
                               <p className="text-center">
-                                Intitulé du bulletin
+                                 {user.langue === "en" ? (<div> bulletin title </div>):(<div> intitulé du bulletion </div>)}
                                 <hr />
                                 2022 - 2023
                               </p>
@@ -691,26 +691,26 @@ const ParentsBulletinNotes = memo((props) => {
                               </div>
                               <div className="mt-1">
                                 <h6 className="mb-1">
-                                  Adresse du parent ou tuteur:
+                                   {user.langue === "en" ? (<div> address of parent or guardian: </div>):(<div> adresse du parent ou du tuteur: </div>)}
                                 </h6>
                                 <p>Parent's/guardian's Address</p>
                               </div>
                             </Col>
                             <Col sm="5" lg="5">
                               <div className="mt-2">
-                                <h6 className="mb-0">N° Matricule:</h6>
-                                <p>Registration N°</p>
+                                <h6 className="mb-0">   {user.langue === "en" ? (<div> number: </div>):(<div> N° Matricule: </div>)}</h6>
+                                <p>  {user.langue === "en" ? (<div> registration number: </div>):(<div> registration N°: </div>)} </p>
                               </div>
                               <div className="mt-2">
-                                <h6 className="mb-0">Redoublant:</h6>
+                                <h6 className="mb-0">{user.langue === "en" ? (<div> repeater: </div>):(<div> redoublant: </div>)}</h6>
                                 <p>Repeater</p>
                               </div>
                               <div className="mt-2">
-                                <h6 className="mb-0">Sexe: {user.sexe}</h6>
+                                <h6 className="mb-0">{user.langue === "en" ? (<div> sex: </div>):(<div> sexe: </div>)}: {user.sexe}</h6>
                                 <p>Sex</p>
                               </div>
                               <div className="mt-2">
-                                <h6 className="mb-0">Professeur principal:</h6>
+                                <h6 className="mb-0">{user.langue === "en" ? (<div> Class Master/Mistress: </div>):(<div> professeur principal: </div>)}:</h6>
                                 <p>Class Master/Mistress</p>
                               </div>
                             </Col>
@@ -740,16 +740,16 @@ const ParentsBulletinNotes = memo((props) => {
                                   <tr>
                                     <th>
                                       <p>
-                                        Discipline
+                                        {user.langue === "en" ? (<div> discipline </div>):(<div> discipline </div>)}
                                         <br />
-                                        Nom de l'enseignant
+                                        {user.langue === "en" ? (<div> name of teacher </div>):(<div> Nom de l'enseignant </div>)}
                                       </p>
                                     </th>
-                                    <th>Note</th>
-                                    <th>Coef</th>
-                                    <th>NxC</th>
-                                    <th>Compétence visée</th>
-                                    <th>Appreciation</th>
+                                    <th>{user.langue === "en" ? (<div> note </div>):(<div> note </div>)}</th>
+                                    <th>{user.langue === "en" ? (<div> coefficient </div>):(<div> coefficient </div>)}</th>
+                                    <th>{user.langue === "en" ? (<div> N*C </div>):(<div> N*C </div>)}</th>
+                                    <th>{user.langue === "en" ? (<div> target competence </div>):(<div> compétence visée </div>)}</th>
+                                    <th>{user.langue === "en" ? (<div> assessment </div>):(<div> appréciation </div>)}</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -769,7 +769,7 @@ const ParentsBulletinNotes = memo((props) => {
                                 </tbody>
                                 <thead>
                                   <tr>
-                                    <th>Matières du premier groupe</th>
+                                    <th>{user.langue === "en" ? (<div> first group materials </div>):(<div> matières du premier groupe </div>)}</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -789,7 +789,7 @@ const ParentsBulletinNotes = memo((props) => {
                                 </tbody>
                                 <thead>
                                   <tr>
-                                    <th>Matières du deuxième groupe</th>
+                                    <th>{user.langue === "en" ? (<div> second group materials </div>):(<div> matières du deuxième groupe </div>)}</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -809,12 +809,12 @@ const ParentsBulletinNotes = memo((props) => {
                                 </tbody>
                                 <thead>
                                   <tr>
-                                    <th>Matières du troisième groupe</th>
+                                    <th> <th>{user.langue === "en" ? (<div> third group materials </div>):(<div> matières du troisième groupe </div>)}</th></th>
                                   </tr>
                                 </thead>
                                 <tbody>
                                   <tr>
-                                    <td>RECAPITULATIFS</td>
+                                    <td> <th> <th>{user.langue === "en" ? (<div> SUMMARIES </div>):(<div> RECAPITULATIFS </div>)}</th></th></td>
                                     <td>{sumnotes}</td>
                                     <td>{sumcoef}</td>
                                     <td>{sumnotesfinale}</td>
@@ -834,19 +834,19 @@ const ParentsBulletinNotes = memo((props) => {
                                 <thead>
                                   <tr>
                                     <th></th>
-                                    <th>DISCIPLINE</th>
-                                    <th>APPRECIATION DU TRAVAIL</th>
+                                    <th>      <th> <th>{user.langue === "en" ? (<div> discipline </div>):(<div> discipline </div>)}</th></th></th>
+                                    <th> <th> <th>{user.langue === "en" ? (<div> work assessment </div>):(<div> appréciation du travail </div>)}</th></th></th>
                                     <th>
                                       <div className="mt-2">
                                         <h6 className="mb-0">
-                                          MOYENNE: {moyenneleve}
+                                                <th> <th>{user.langue === "en" ? (<div> AVERAGE: </div>):(<div> MOYENNE: </div>)}</th></th>: {moyenneleve}
                                         </h6>
                                       </div>
                                       <div className="mt-2">
-                                        <h6 className="mb-0">RANG:</h6>
+                                        <h6 className="mb-0">{user.langue === "en" ? (<div> RANK: </div>):(<div> RANG: </div>)}</h6>
                                       </div>
                                       <div className="mt-2">
-                                        <h6 className="mb-0">MENTION:</h6>
+                                        <h6 className="mb-0">{user.langue === "en" ? (<div> MENTION: </div>):(<div> MENTION: </div>)}</h6>
                                       </div>
                                     </th>
                                   </tr>
@@ -863,39 +863,39 @@ const ParentsBulletinNotes = memo((props) => {
                                     <td>
                                       <div className="mt-2">
                                         <p>
-                                          Abscences non justifiées :
+                                          {user.langue === "en" ? (<div> unjustified absences: </div>):(<div> absences non justifiées : </div>)}
                                           <br />
-                                          Abscences non justifiées :
+                                              {user.langue === "en" ? (<div> unjustified absences: </div>):(<div> absences non justifiées : </div>)}
                                           <br />
-                                          Abscences justifiées:
+                                              {user.langue === "en" ? (<div> unjustified absences: </div>):(<div> absences non justifiées : </div>)}
                                           <br />
-                                          Avertissement conduite:
+                                              {user.langue === "en" ? (<div> conduct warning: </div>):(<div> avertissement conduite : </div>)}
                                           <br />
-                                          Blame conduite:
+                                              {user.langue === "en" ? (<div> blame conduct: </div>):(<div> Blame conduite : </div>)}
                                         </p>
                                       </div>
                                     </td>
                                     <td>
                                       <div className="mt-2">
                                         <p>
-                                          Tableau d'honneur:
+                                             {user.langue === "en" ? (<div> roll of honour: </div>):(<div> Tableau d'honneur : </div>)}
                                           <br />
-                                          Encouragement:
+                                             {user.langue === "en" ? (<div> incentive: </div>):(<div> Encouragement : </div>)}
                                           <br />
-                                          Félicitations:
+                                             {user.langue === "en" ? (<div> congratulations: </div>):(<div> Félicitations : </div>)}
                                           <br />
-                                          Prime:
+                                             {user.langue === "en" ? (<div> bonus: </div>):(<div> Prime : </div>)}
                                         </p>
                                       </div>
                                     </td>
                                     <td>
                                       <div className="mt-2">
                                         <p>
-                                          Moyenne de la classe:
+                                             {user.langue === "en" ? (<div> Class average: </div>):(<div> Moyenne de la classe : </div>)}
                                           <br />
-                                          Moyenne du premier:
+                                             {user.langue === "en" ? (<div> grade average: </div>):(<div> Moyenne du premier : </div>)}
                                           <br />
-                                          Moyenne du dernier:
+                                             {user.langue === "en" ? (<div> average of last: </div>):(<div> Moyenne du dernier : </div>)}
                                         </p>
                                       </div>
                                     </td>
