@@ -83,7 +83,7 @@ const EditMembresAdministration = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div> Name </div>):(<div> Nom </div>)} </Form.Label>
-                                                    <Form.Control type="text" defaultValue="" name="nom" value={inputs.nom || ""} onChange={handleChange} required />
+                                                    <Form.Control type="text" defaultValue="" disabled name="nom" value={inputs.nom || ""} onChange={handleChange} required />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -91,7 +91,7 @@ const EditMembresAdministration = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Surname</div>):(<div> Prénom </div>)}</Form.Label>
-                                                    <Form.Control type="text" defaultValue="" name="prenom" value={inputs.prenom || ""} onChange={handleChange} required />
+                                                    <Form.Control type="text" defaultValue="" disabled name="prenom" value={inputs.prenom || ""} onChange={handleChange} required />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -99,7 +99,7 @@ const EditMembresAdministration = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Gender</div>):(<div> Genre  </div>)}</Form.Label>
-                                                    <select className="form-select mb-3 shadow-none" name="genre" value={inputs.genre || ""} onChange={handleChange}>
+                                                    <select className="form-select mb-3 shadow-none" disabled name="genre" value={inputs.genre || ""} onChange={handleChange}>
                                                         <option></option>
                                                         <option value="M">{user.langue === "en" ? (<div>Male</div>):(<div> Masculin  </div>)} </option>
                                                         <option value="F">{user.langue === "en" ? (<div>Female</div>):(<div> Féminin </div>)}</option>
@@ -115,7 +115,7 @@ const EditMembresAdministration = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Date of birth</div>):(<div> Date de naissance </div>)}</Form.Label>
-                                                    <Form.Control type="date" defaultValue="" name="date_n" value={inputs.date_n || ""} onChange={handleChange} />
+                                                    <Form.Control type="date" defaultValue="" disabled name="date_n" value={inputs.date_n || ""} onChange={handleChange} />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -123,7 +123,7 @@ const EditMembresAdministration = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Place of birth</div>):(<div> Lieu de naissance</div>)}</Form.Label>
-                                                    <Form.Control type="text" defaultValue="" name="lieu_n" value={inputs.lieu_n || ""} onChange={handleChange} required />
+                                                    <Form.Control type="text" defaultValue="" disabled name="lieu_n" value={inputs.lieu_n || ""} onChange={handleChange} required />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -167,7 +167,7 @@ const EditMembresAdministration = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Numéro CNI / Passeport </Form.Label>
-                                                    <Form.Control type="text" defaultValue="" name="cni" value={inputs.cni || ""} onChange={handleChange} required />
+                                                    <Form.Control type="text" defaultValue="" disabled name="cni" value={inputs.cni || ""} onChange={handleChange} required />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
