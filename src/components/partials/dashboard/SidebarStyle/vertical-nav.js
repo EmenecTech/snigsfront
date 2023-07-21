@@ -1551,7 +1551,7 @@ const VerticalNav = memo((props) => {
 
 
                                     <li className="nav-item">
-                                        <Link className={`${location.pathname === '/Eleve/List/Planning/' ? 'active' : ''} nav-link`} to="/Eleve/List/Planning/">
+                                        <Link className={`${location.pathname === 'Parents/List/Planning/' ? 'active' : ''} nav-link`} to="Parents/List/Planning/">
                                             <i className="icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                     <g>
@@ -1564,7 +1564,7 @@ const VerticalNav = memo((props) => {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className={`${location.pathname === '/Eleve/List/Matieres/Cours' ? 'active' : ''} nav-link`} to="/Eleve/List/Matieres/Cours">
+                                        <Link className={`${location.pathname === 'Parents/List/Matieres/Cours' ? 'active' : ''} nav-link`} to="Parents/List/Matieres/Cours">
                                             <i className="icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                     <g>
@@ -1591,7 +1591,7 @@ const VerticalNav = memo((props) => {
                                     </li> */}
 
                                     <li className="nav-item">
-                                        <Link className={`${location.pathname === '/Eleve/List/Evaluations/Notes' ? 'active' : ''} nav-link`} to="/Eleve/List/Evaluations/Notes">
+                                        <Link className={`${location.pathname === 'Parents/List/Evaluations/Notes' ? 'active' : ''} nav-link`} to="Parents/List/Evaluations/Notes">
                                             <i className="icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                     <g>
@@ -1620,42 +1620,12 @@ const VerticalNav = memo((props) => {
                             </Accordion.Collapse>
                         </Accordion.Item>
 
-                           <li className="nav-item">
-                            <Link
-                                className={`${location.pathname === '/Discipline/Info' ? "active" : ""} nav-link `}
-                                aria-current="page"
-                                to={"/Discipline/Info"}
-                            >
-                                <i className="icon">
-                                    <svg
-                                        width="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M21.9964 8.37513H17.7618C15.7911 8.37859 14.1947 9.93514 14.1911 11.8566C14.1884 13.7823 15.7867 15.3458 17.7618 15.3484H22V15.6543C22 19.0136 19.9636 21 16.5173 21H7.48356C4.03644 21 2 19.0136 2 15.6543V8.33786C2 4.97862 4.03644 3 7.48356 3H16.5138C19.96 3 21.9964 4.97862 21.9964 8.33786V8.37513ZM6.73956 8.36733H12.3796H12.3831H12.3902C12.8124 8.36559 13.1538 8.03019 13.152 7.61765C13.1502 7.20598 12.8053 6.87318 12.3831 6.87491H6.73956C6.32 6.87664 5.97956 7.20858 5.97778 7.61852C5.976 8.03019 6.31733 8.36559 6.73956 8.36733Z"
-                                            fill="currentColor"
-                                        ></path>
-                                        <path
-                                            opacity="0.4"
-                                            d="M16.0374 12.2966C16.2465 13.2478 17.0805 13.917 18.0326 13.8996H21.2825C21.6787 13.8996 22 13.5715 22 13.166V10.6344C21.9991 10.2297 21.6787 9.90077 21.2825 9.8999H17.9561C16.8731 9.90338 15.9983 10.8024 16 11.9102C16 12.0398 16.0128 12.1695 16.0374 12.2966Z"
-                                            fill="currentColor"
-                                        ></path>
-                                        <circle cx="18" cy="11.8999" r="1" fill="currentColor"></circle>
-                                    </svg>
-                                </i>
-                                <span className="item-name">Discipline</span>
-                            </Link>
-                        </li>
-
+                          
                         <li className="nav-item">
                             <Link
-                                className={`${location.pathname === "Eleve/Request/List/" ? "active" : ""} nav-link `}
+                                className={`${location.pathname === "Parents/Request/List" ? "active" : ""} nav-link `}
                                 aria-current="page"
-                                to={"Eleve/Request/List/"}
+                                to={"Parents/Request/List/"}
                             >
                                 <i className="icon">
                                     <svg
@@ -1730,7 +1700,7 @@ const VerticalNav = memo((props) => {
                             </li>*/}
 
                                     <li className="nav-item">
-                                        <Link className={`${location.pathname === '/dashboard/app/user-list' ? 'active' : ''} nav-link`} to="Eleve/List/Documents/">
+                                        <Link className={`${location.pathname === '/dashboard/app/user-list' ? 'active' : ''} nav-link`} to="Parents/List/Documents/">
                                             <i className="icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                     <g>
@@ -1745,7 +1715,7 @@ const VerticalNav = memo((props) => {
 
 
                                     <li className="nav-item">
-                                        <Link className={`${location.pathname === '/dashboard/app/user-list' ? 'active' : ''} nav-link`} to="/Eleve/List/Evaluations/">
+                                        <Link className={`${location.pathname === '/dashboard/app/user-list' ? 'active' : ''} nav-link`} to="Parents/List/Notes/Evaluation/:evaluation">
                                             <i className="icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                     <g>
@@ -1758,7 +1728,7 @@ const VerticalNav = memo((props) => {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className={`${location.pathname === '/dashboard/app/user-list' ? 'active' : ''} nav-link`} to="/Eleve/List/Documents/">
+                                        <Link className={`${location.pathname === '/dashboard/app/user-list' ? 'active' : ''} nav-link`} to="/Parents/List/Documents/">
                                             <i className="icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                     <g>
@@ -1774,36 +1744,7 @@ const VerticalNav = memo((props) => {
                                 </ul>
                             </Accordion.Collapse>
                         </Accordion.Item>
-                        <li className="nav-item">
-                            <Link
-                                className={`${location.pathname === 'Eleve/Regularite/' ? "active" : ""} nav-link `}
-                                aria-current="page"
-                                to={"Eleve/Regularite/"}
-                            >
-                                <i className="icon">
-                                    <svg
-                                        width="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M21.9964 8.37513H17.7618C15.7911 8.37859 14.1947 9.93514 14.1911 11.8566C14.1884 13.7823 15.7867 15.3458 17.7618 15.3484H22V15.6543C22 19.0136 19.9636 21 16.5173 21H7.48356C4.03644 21 2 19.0136 2 15.6543V8.33786C2 4.97862 4.03644 3 7.48356 3H16.5138C19.96 3 21.9964 4.97862 21.9964 8.33786V8.37513ZM6.73956 8.36733H12.3796H12.3831H12.3902C12.8124 8.36559 13.1538 8.03019 13.152 7.61765C13.1502 7.20598 12.8053 6.87318 12.3831 6.87491H6.73956C6.32 6.87664 5.97956 7.20858 5.97778 7.61852C5.976 8.03019 6.31733 8.36559 6.73956 8.36733Z"
-                                            fill="currentColor"
-                                        ></path>
-                                        <path
-                                            opacity="0.4"
-                                            d="M16.0374 12.2966C16.2465 13.2478 17.0805 13.917 18.0326 13.8996H21.2825C21.6787 13.8996 22 13.5715 22 13.166V10.6344C21.9991 10.2297 21.6787 9.90077 21.2825 9.8999H17.9561C16.8731 9.90338 15.9983 10.8024 16 11.9102C16 12.0398 16.0128 12.1695 16.0374 12.2966Z"
-                                            fill="currentColor"
-                                        ></path>
-                                        <circle cx="18" cy="11.8999" r="1" fill="currentColor"></circle>
-                                    </svg>
-                                </i>
-                                <span className="item-name">Regularities</span>
-                            </Link>
-                        </li>
+                       
                       
 
 
@@ -1838,7 +1779,7 @@ const VerticalNav = memo((props) => {
 
 
                                     <li className="nav-item">
-                                        <Link className={`${location.pathname === '/Eleve/List/Planning/' ? 'active' : ''} nav-link`} to="/Eleve/List/Planning/">
+                                        <Link className={`${location.pathname === 'Parents/List/Planning/' ? 'active' : ''} nav-link`} to="Parents/List/Planning/">
                                             <i className="icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                     <g>
@@ -1851,7 +1792,7 @@ const VerticalNav = memo((props) => {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className={`${location.pathname === '/Eleve/List/Matieres/Cours' ? 'active' : ''} nav-link`} to="/Eleve/List/Matieres/Cours">
+                                        <Link className={`${location.pathname === 'Parents/List/Matieres/Cours' ? 'active' : ''} nav-link`} to="Parents/List/Matieres/Cours">
                                             <i className="icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                     <g>
@@ -1878,7 +1819,7 @@ const VerticalNav = memo((props) => {
                                     </li> */}
 
                                     <li className="nav-item">
-                                        <Link className={`${location.pathname === '/Eleve/List/Evaluations/Notes' ? 'active' : ''} nav-link`} to="/Eleve/List/Evaluations/Notes">
+                                        <Link className={`${location.pathname === 'Parents/List/Evaluations/Notes' ? 'active' : ''} nav-link`} to="Parents/List/Evaluations/Notes">
                                             <i className="icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                     <g>
@@ -1907,42 +1848,13 @@ const VerticalNav = memo((props) => {
                             </Accordion.Collapse>
                         </Accordion.Item>
 
-                           <li className="nav-item">
-                            <Link
-                                className={`${location.pathname === '/Discipline/Info' ? "active" : ""} nav-link `}
-                                aria-current="page"
-                                to={"/Discipline/Info"}
-                            >
-                                <i className="icon">
-                                    <svg
-                                        width="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M21.9964 8.37513H17.7618C15.7911 8.37859 14.1947 9.93514 14.1911 11.8566C14.1884 13.7823 15.7867 15.3458 17.7618 15.3484H22V15.6543C22 19.0136 19.9636 21 16.5173 21H7.48356C4.03644 21 2 19.0136 2 15.6543V8.33786C2 4.97862 4.03644 3 7.48356 3H16.5138C19.96 3 21.9964 4.97862 21.9964 8.33786V8.37513ZM6.73956 8.36733H12.3796H12.3831H12.3902C12.8124 8.36559 13.1538 8.03019 13.152 7.61765C13.1502 7.20598 12.8053 6.87318 12.3831 6.87491H6.73956C6.32 6.87664 5.97956 7.20858 5.97778 7.61852C5.976 8.03019 6.31733 8.36559 6.73956 8.36733Z"
-                                            fill="currentColor"
-                                        ></path>
-                                        <path
-                                            opacity="0.4"
-                                            d="M16.0374 12.2966C16.2465 13.2478 17.0805 13.917 18.0326 13.8996H21.2825C21.6787 13.8996 22 13.5715 22 13.166V10.6344C21.9991 10.2297 21.6787 9.90077 21.2825 9.8999H17.9561C16.8731 9.90338 15.9983 10.8024 16 11.9102C16 12.0398 16.0128 12.1695 16.0374 12.2966Z"
-                                            fill="currentColor"
-                                        ></path>
-                                        <circle cx="18" cy="11.8999" r="1" fill="currentColor"></circle>
-                                    </svg>
-                                </i>
-                                <span className="item-name">Discipline</span>
-                            </Link>
-                        </li>
+                          
 
                         <li className="nav-item">
                             <Link
-                                className={`${location.pathname === "Eleve/Request/List/" ? "active" : ""} nav-link `}
+                                className={`${location.pathname === "Parents/Request/List/" ? "active" : ""} nav-link `}
                                 aria-current="page"
-                                to={"Eleve/Request/List/"}
+                                to={"Parents/Request/List/"}
                             >
                                 <i className="icon">
                                     <svg
@@ -2017,7 +1929,7 @@ const VerticalNav = memo((props) => {
                             </li>*/}
 
                                     <li className="nav-item">
-                                        <Link className={`${location.pathname === '/dashboard/app/user-list' ? 'active' : ''} nav-link`} to="Eleve/List/Documents/">
+                                        <Link className={`${location.pathname === '/dashboard/app/user-list' ? 'active' : ''} nav-link`} to="Parents/List/Documents/">
                                             <i className="icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                     <g>
@@ -2032,7 +1944,7 @@ const VerticalNav = memo((props) => {
 
 
                                     <li className="nav-item">
-                                        <Link className={`${location.pathname === '/dashboard/app/user-list' ? 'active' : ''} nav-link`} to="/Eleve/List/Evaluations/">
+                                        <Link className={`${location.pathname === '/dashboard/app/user-list' ? 'active' : ''} nav-link`} to="Parents/List/Notes/Evaluation/:evaluation">
                                             <i className="icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                     <g>
@@ -2045,7 +1957,7 @@ const VerticalNav = memo((props) => {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className={`${location.pathname === '/dashboard/app/user-list' ? 'active' : ''} nav-link`} to="/Eleve/List/Documents/">
+                                        <Link className={`${location.pathname === '/dashboard/app/user-list' ? 'active' : ''} nav-link`} to="Parents/List/Documents/">
                                             <i className="icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                     <g>
@@ -2061,37 +1973,7 @@ const VerticalNav = memo((props) => {
                                 </ul>
                             </Accordion.Collapse>
                         </Accordion.Item>
-                        <li className="nav-item">
-                            <Link
-                                className={`${location.pathname === 'Eleve/Regularite/' ? "active" : ""} nav-link `}
-                                aria-current="page"
-                                to={"Eleve/Regularite/"}
-                            >
-                                <i className="icon">
-                                    <svg
-                                        width="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M21.9964 8.37513H17.7618C15.7911 8.37859 14.1947 9.93514 14.1911 11.8566C14.1884 13.7823 15.7867 15.3458 17.7618 15.3484H22V15.6543C22 19.0136 19.9636 21 16.5173 21H7.48356C4.03644 21 2 19.0136 2 15.6543V8.33786C2 4.97862 4.03644 3 7.48356 3H16.5138C19.96 3 21.9964 4.97862 21.9964 8.33786V8.37513ZM6.73956 8.36733H12.3796H12.3831H12.3902C12.8124 8.36559 13.1538 8.03019 13.152 7.61765C13.1502 7.20598 12.8053 6.87318 12.3831 6.87491H6.73956C6.32 6.87664 5.97956 7.20858 5.97778 7.61852C5.976 8.03019 6.31733 8.36559 6.73956 8.36733Z"
-                                            fill="currentColor"
-                                        ></path>
-                                        <path
-                                            opacity="0.4"
-                                            d="M16.0374 12.2966C16.2465 13.2478 17.0805 13.917 18.0326 13.8996H21.2825C21.6787 13.8996 22 13.5715 22 13.166V10.6344C21.9991 10.2297 21.6787 9.90077 21.2825 9.8999H17.9561C16.8731 9.90338 15.9983 10.8024 16 11.9102C16 12.0398 16.0128 12.1695 16.0374 12.2966Z"
-                                            fill="currentColor"
-                                        ></path>
-                                        <circle cx="18" cy="11.8999" r="1" fill="currentColor"></circle>
-                                    </svg>
-                                </i>
-                                <span className="item-name">Régularités</span>
-                            </Link>
-                        </li>
-                     
+                       
 
 
 
