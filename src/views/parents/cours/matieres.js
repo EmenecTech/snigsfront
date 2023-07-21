@@ -300,7 +300,7 @@ const ParentsMatieresClasse = memo((props) => {
                     <Card>
                       <Card.Header className="d-flex justify-content-between">
                         <div className="header-title">
-                          <h4 className="card-title">Matières</h4>
+                          <h4 className="card-title">{user.langue === "en" ? (<div> subjects </div>):(<div> matières </div>)}</h4>
                         </div>
                       </Card.Header>
                       <Card.Body>
@@ -314,10 +314,10 @@ const ParentsMatieresClasse = memo((props) => {
                           >
                             <thead>
                               <tr>
-                                <th>Matiere</th>
-                                <th>Coefficient </th>
-                                <th>Groupe</th>
-                                <th>Action</th>
+                                <th>{user.langue === "en" ? (<div> subject </div>):(<div> matière </div>)}</th>
+                                <th>{user.langue === "en" ? (<div> coefficient </div>):(<div> coefficient </div>)} </th>
+                                <th>{user.langue === "en" ? (<div> group </div>):(<div> groupe </div>)}</th>
+                                <th>{user.langue === "en" ? (<div> action </div>):(<div> action </div>)}</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -339,7 +339,7 @@ const ParentsMatieresClasse = memo((props) => {
                                           item.matiere_cm
                                         }
                                       >
-                                        Consulter
+                                        {user.langue === "en" ? (<div> consult </div>):(<div> consulter </div>)}
                                       </Link>{" "}
                                     </div>
                                   </td>
