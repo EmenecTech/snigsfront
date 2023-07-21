@@ -256,10 +256,10 @@ export const DefaultRouter = [
                 element: <EditMembresAdministration />,
             },
             ///20/07/2023
-            {
-                path: '/Admin/edit/enseignants/:id',
-                element: <EditEnseignants />,
-            },
+            // {
+            //     path: '/Admin/edit/enseignants/:id',
+            //     element: <EditEnseignants />,
+            // },
             ///////
             {
                 path: 'List/niveaux/',
@@ -436,11 +436,11 @@ export const DefaultRouter = [
             },
 
      ////edit_eleve 20/07/2023
-            {
-                path: 'Edit/:niveau/:id',
-                element: <EditEleve />
+            // {
+            //     path: 'Edit/:niveau/:id',
+            //     element: <EditEleve />
 
-            },
+            // },
 
             ///////////////////////////////////////////////////////////////////////////Eleves
             ////////////
