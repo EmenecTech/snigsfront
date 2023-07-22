@@ -573,17 +573,17 @@ const Dashboard_superadmin = memo((props) => {
                     <Nav as="ul" className="d-flex nav-pills mb-0 text-center profile-tab" data-toggle="slider-tab" id="profile-pills-tab" role="tablist">
 
                       <Nav.Item as="li">
-                        <Nav.Link eventKey="first"></Nav.Link>
+                        <Nav.Link eventKey="first">  {user.langue === "en" ? (<div>Profile</div>):(<div>Profil</div>)}</Nav.Link>
                       </Nav.Item>
 
                       <Nav.Item as="li">
-                        <Nav.Link eventKey="second">Classes</Nav.Link>
+                        <Nav.Link eventKey="second">Classes </Nav.Link>
                       </Nav.Item>
                       <Nav.Item as="li">
-                        <Nav.Link eventKey="third">Matieres</Nav.Link>
+                        <Nav.Link eventKey="third">{user.langue === "en" ? (<div>Courses</div>):(<div>Matieres </div>)}</Nav.Link>
                       </Nav.Item>
                       <Nav.Item as="li">
-                        <Nav.Link eventKey="fourth">Notifications</Nav.Link>
+                        <Nav.Link eventKey="fourth"></Nav.Link>
                       </Nav.Item>
 
                     </Nav>
