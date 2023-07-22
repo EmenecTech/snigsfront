@@ -167,10 +167,10 @@ const AddEnseignant = () => {
                                                     <select className="form-select mb-3 shadow-none" name="type_user" onChange={handleChange}>
                                                         <option></option>
                                                         <option value="Permanent">Permanent </option>
-                                                        {user.langue === "en" ? (<div><option value="individual">individual </option></div>):(<div><option value="Vacataire">Vacataire </option></div>)}
-                                                        {user.langue === "en" ? (<div><option value="Temporary">Temporary</option></div>):(<div><option value="Temporaire">Temporaire </option></div>)}
-                                                        {user.langue === "en" ? (<div><option value="Seasonal">Seasonal</option></div>):(<div><option value="Saisonnier">Saisonnier </option></div>)}
-                                                        {user.langue === "en" ? (<div><option value="Intern">Intern</option></div>):(<div><option value="Stagiaire">Stagiaire </option></div>)}
+                                                        <option value="Vacataire">Vacataire </option>
+                                                        <option value="Saisonnier">Saisonnier </option>
+                                                        <option value="Stagiaire">Stagiaire </option>
+                                                       
                                                      
                                                     </select>
                                                 </Form.Group>
