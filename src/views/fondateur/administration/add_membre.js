@@ -82,8 +82,8 @@ const AddMembreAdministration = () => {
                                                     <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Gender</div>):(<div> Genre  </div>)} </Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="genre" onChange={handleChange}>
                                                         <option></option>
-                                                        <option value="M">{user.langue === "en" ? (<div>Male</div>):(<div> Masculin  </div>)} </option>
-                                                        <option value="F">{user.langue === "en" ? (<div>Female</div>):(<div> Féminin </div>)}</option>
+                                                        <option value="M">M </option>
+                                                        <option value="F">F</option>
                                                     </select>
                                                 </Form.Group>
                                             </Form.Group>
