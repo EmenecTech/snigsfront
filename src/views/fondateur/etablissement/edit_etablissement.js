@@ -29,7 +29,7 @@ const EditEtablissement = () => {
     }, []);
 
     const fetchetablissement = () => {
-        http.get("/etablissements/" + idetab + "/edit").then((res) => {
+        http.get("/etablissements/" + idetab).then((res) => {
             setInputs({
                 tel: res.data.telephone,
                 nom: res.data.nom_etablissement,
