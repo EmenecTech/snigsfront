@@ -24,6 +24,7 @@ const EditMembresAdministration = () => {
                 nom: res.data.nom,
                 prenom: res.data.prenom,
                 email: res.data.email,
+                genre: res.data.sexe,
                 nationalite: res.data.nationalite,
                 cni: res.data.num_cni,
                 date_n: res.data.date_naissance,
@@ -100,7 +101,7 @@ const EditMembresAdministration = () => {
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Gender</div>):(<div> Genre  </div>)}</Form.Label>
                                                     <select className="form-select mb-3 shadow-none" disabled name="genre" value={inputs.genre || ""} onChange={handleChange}>
-                                                        <option></option>
+                                                        <option value={inputs.genre || ""}>{inputs.genre}</option>
                                                         <option value="M">M </option>
                                                         <option value="F">F</option>
                                                     </select>
