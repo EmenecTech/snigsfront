@@ -9,6 +9,7 @@ const AddUtilisateurs = () => {
   const [inputs, setInputs] = useState({});
   const { user } = AuthUser();
   const { id }= useParams();
+  const navigate = useNavigate();
 
   console.log(inputs);
 
@@ -42,8 +43,9 @@ const AddUtilisateurs = () => {
   };
 
   const submitForm = () => {
-    http.put("/user/" + id, inputs).then((res) => {
+    http.put("/edituser/" + id, inputs).then((res) => {
       alert("utilisateur modifié avec succès !");
+      navigate('/utilisateurs/list/super/admin');
     });
   };
 
