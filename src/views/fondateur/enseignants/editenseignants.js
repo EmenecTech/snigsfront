@@ -42,6 +42,8 @@ const EditEnseignants = () => {
                 cni: res.data.num_cni,
                 date_n: res.data.date_naissance,
                 lieu_n: res.data.lieu_naissance,
+                matiere: res.data.foction_user,
+                type_user: res.data.other_in_user,
 
             });
         });
@@ -103,7 +105,7 @@ const EditEnseignants = () => {
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Genre </Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="genre" onChange={handleChange} disabled>
-                                                        <option name="genre" value={inputs.genre || ""}></option>
+                                                        <option value={inputs.genre || ""}>{inputs.genre}</option>
                                                         <option value="Masculin">Masculin</option>
                                                         <option value="Feminin">Feminin</option>
                                                     </select>
@@ -175,7 +177,7 @@ const EditEnseignants = () => {
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Matière principale * </Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="matiere" onChange={handleChange}>
-                                                        <option></option>
+                                                        <option value={inputs.matiere || ""}>{inputs.matiere}</option>
                                                         {matieres.map((item) => (
                                                             <option value={item.intitule_matiere}>{item.intitule_matiere}</option>
 
@@ -191,7 +193,7 @@ const EditEnseignants = () => {
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Type * </Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="type_user" onChange={handleChange}>
-                                                        <option></option>
+                                                        <option valeur={inputs.type_user || ""}>{inputs.type_user}</option>
                                                         <option value="Permanent">Permanent</option>
                                                         <option value="Vacataire">Vacataire</option>
                                                         <option value="emporaire">Temporaire</option>
