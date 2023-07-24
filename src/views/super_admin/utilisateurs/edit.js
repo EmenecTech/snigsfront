@@ -7,7 +7,7 @@ import http from "../../../http";
 const AddUtilisateurs = () => {
   const [inputs, setInputs] = useState({});
   const { user } = AuthUser();
-  const userid = user.user;
+  const { id }= useParams();
 
   console.log(inputs);
 
@@ -16,18 +16,19 @@ const AddUtilisateurs = () => {
   }, []);
 
   const fetchuser = () => {
-    http.get("/users/" + userid + "/edit").then((res) => {
+    http.get("/users/" + id + "/edit").then((res) => {
       setInputs({
-        telephone: res.data.telephone,
+        tel: res.data.telephone,
         nom: res.data.nom,
         prenom: res.data.prenom,
         email: res.data.email,
-        genre: res.data.genre,
-        date_naissance: res.data.date_naissance,
-        lieu_naissance: res.data.lieu_naissance,
-        nationalite: res.data.nation,
-        num_cni: res.data.num_cni,
+        genre: res.data.sexe,
+        date_n: res.data.date_naissance,
+        lieu_n: res.data.lieu_naissance,
+        nation: res.data.nationalite,
+        cni: res.data.num_cni,
         role: res.data.role,
+        etab_fondateur: res.data.etablissement
       });
     });
   };
@@ -40,7 +41,7 @@ const AddUtilisateurs = () => {
   };
 
   const submitForm = () => {
-    http.put("/user/" + userid, inputs).then((res) => {
+    http.put("/user/" + id, inputs).then((res) => {
       alert("utilisateur modifié avec succès !");
     });
   };
@@ -107,7 +108,7 @@ const AddUtilisateurs = () => {
                             value={inputs.genre || ""}
                             onChange={handleChange}
                           >
-                            <option></option>
+                            <option value={inputs.genre || ""}>{inputs.genre}</option>
                             <option value="Masculin">Masculin</option>
                             <option value="Feminin">Feminin</option>
                           </select>
@@ -123,10 +124,10 @@ const AddUtilisateurs = () => {
                             Date de naissance
                           </Form.Label>
                           <Form.Control
-                            type="date"
+                            type="date_n"
                             defaultValue=""
                             name="date_naissance"
-                            value={inputs.date_naissance || ""}
+                            value={inputs.date_n || ""}
                             onChange={handleChange}
                           />
                         </Form.Group>
@@ -141,8 +142,8 @@ const AddUtilisateurs = () => {
                           <Form.Control
                             type="text"
                             defaultValue=""
-                            name="lieu_naissance"
-                            value={inputs.lieu_naissance || ""}
+                            name="lieu_n"
+                            value={inputs.lieu_n || ""}
                             onChange={handleChange}
                             required
                           />
@@ -159,8 +160,8 @@ const AddUtilisateurs = () => {
                           <Form.Control
                             type="text"
                             defaultValue=""
-                            name="nationalite"
-                            value={inputs.nationalite || ""}
+                            name="nation"
+                            value={inputs.nation || ""}
                             onChange={handleChange}
                             required
                           />
@@ -196,8 +197,8 @@ const AddUtilisateurs = () => {
                           <Form.Control
                             type="text"
                             defaultValue=""
-                            name="telephone"
-                            value={inputs.telephone || ""}
+                            name="tel"
+                            value={inputs.tel || ""}
                             onChange={handleChange}
                             required
                           />
@@ -215,8 +216,8 @@ const AddUtilisateurs = () => {
                           <Form.Control
                             type="text"
                             defaultValue=""
-                            name="num_cni"
-                            value={inputs.num_cni || ""}
+                            name="cni"
+                            value={inputs.cni || ""}
                             onChange={handleChange}
                             required
                           />
@@ -236,7 +237,7 @@ const AddUtilisateurs = () => {
                             value={inputs.role || ""}
                             onChange={handleChange}
                           >
-                            <option></option>
+                            <option value={inputs.role || ""}>{inputs.role}</option>
                             <option value="Super adminstrateur">
                               Super administrateur
                             </option>
