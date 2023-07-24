@@ -85,8 +85,8 @@ const ParentsLeconChapitre = (props) => {
                 >
                   <thead>
                     <tr className="ligth">
-                      <th>Intitulé</th>
-                      <th>Chapitre</th>
+                      <th>{user.langue === "en" ? (<div> Title </div>):(<div> Intitulé </div>)}</th>
+                      <th>{user.langue === "en" ? (<div> Chapter </div>):(<div> Chapitre </div>)}</th>
                       <th>{user.langue === "en" ? (<div> number of hours </div>):(<div> nombre d'heures </div>)}</th>
                       <th>{user.langue === "en" ? (<div> start date  </div>):(<div> date de début </div>)}</th>
                       <th>{user.langue === "en" ? (<div> end date </div>):(<div> date de fin </div>)}</th>
