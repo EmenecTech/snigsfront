@@ -543,6 +543,21 @@ const VerticalNav = memo((props) => {
                                                 <span className="item-name"> {user.langue === "en" ? (<div>Pre-registrations</div>):(<div> Préinscriptions </div>)}</span>
                                             </Link>
                                         </li>
+
+                                        <li>
+                                            {/* 21/07/2023 */}
+                                            <Link className={`${location.pathname === '/List/SansClasse' ? 'active' : ''} nav-link`} to="/List/SansClasse/">
+                                                <i className="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                                        <g>
+                                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                                        </g>
+                                                    </svg>
+                                                </i>
+                                                <i className="sidenav-mini-icon"> U </i>
+                                                <span className="item-name">Eleves sans classe</span>
+                                            </Link>
+                                        </li>
                                    
 
                                     </ul>
