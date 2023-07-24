@@ -17,7 +17,7 @@ const AddUtilisateurs = () => {
   }, []);
 
   const fetchuser = () => {
-    http.get("/users/" + id + "/edit").then((res) => {
+    http.get("/user/" + id + "/edit").then((res) => {
       setInputs({
         tel: res.data.telephone,
         nom: res.data.nom,
