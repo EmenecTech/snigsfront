@@ -375,9 +375,9 @@ const ListProgramme = memo((props) => {
                                                         <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Program type</div>):(<div> Type de programme </div>)}</Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="type" onChange={handleChange}>
                                                             <option></option>
-                                                            {user.langue === "en" ? (<div><option value="Normal">Normal</option></div>):(<div> <option value="Normal">Normal</option> </div>)}
-                                                            {user.langue === "en" ? (<div><option value="School assessments">School assessments</option></div>):(<div> <option value="Evaluations">Evaluations</option> </div>)}
-                                                            {user.langue === "en" ? (<div><option value="Other">Other</option></div>):(<div> <option value="Autre">Autre</option> </div>)}
+                                                              <option value="Normal">Normal</option> 
+                                                              <option value="Evaluations">Evaluations</option> 
+                                                             <option value="Autre">Autre</option>
                                                    
 
                                                         </select>
