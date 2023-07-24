@@ -164,6 +164,7 @@ import AdminlistdocumentsOfEleves from '../views/fondateur/documents/documentsof
 //21/07/2023
 import EditEleve from '../views/fondateur/classes/editeleves';
 import EditEnseignants from '../views/fondateur/enseignants/editenseignants';
+import ListSansclasse from '../views/fondateur/eleves/sans_classe';
 
 
 
@@ -530,6 +531,12 @@ export const DefaultRouter = [
             {
                 path: 'Eleve/Regularite',
                 element: <EleveRegularite />
+            },
+
+    ////21/07/2023
+            {
+                path: 'List/SansClasse',
+                element: <ListSansclasse />
             },
 
             ///////////
