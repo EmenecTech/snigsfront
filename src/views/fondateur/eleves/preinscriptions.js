@@ -349,7 +349,7 @@ const ListPreinscriptions = memo((props) => {
                     />
                   </svg>
                 </span>
-                Préinscire un élève
+                {user.langue === "en" ? (<div> Pre-register a student </div>):(<div> Préinscrire un élève </div>)}
               </Button>
               {/* <!-- Modal --> */}
               <Modal show={show} onHide={handleClose}>
