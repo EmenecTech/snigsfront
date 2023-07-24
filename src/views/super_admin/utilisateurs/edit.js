@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
+import { useNavigate, useParams } from 'react-router-dom';
 import AuthUser from "../../../components/AuthUser";
 import Card from "../../../components/Card";
 import http from "../../../http";
