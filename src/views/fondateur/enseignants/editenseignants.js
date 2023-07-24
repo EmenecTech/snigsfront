@@ -42,7 +42,7 @@ const EditEnseignants = () => {
                 cni: res.data.num_cni,
                 date_n: res.data.date_naissance,
                 lieu_n: res.data.lieu_naissance,
-                matiere: res.data.foction_user,
+                matiere: res.data.fonction_user,
                 type_user: res.data.other_in_user,
 
             });
