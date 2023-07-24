@@ -307,7 +307,7 @@ const ListMatieres = memo((props) => {
           <Card>
             <Card.Header className="d-flex justify-content-between">
               <div className="header-title">
-                <h4 className="card-title">Matières</h4>
+                <h4 className="card-title">{user.langue === "en" ? (<div> subjects </div>):(<div> Matières </div>)}</h4>
               </div>
 
               <Button variant="primary mt-2" onClick={handleShow}>
@@ -327,7 +327,7 @@ const ListMatieres = memo((props) => {
                     />
                   </svg>
                 </span>
-                Ajouter
+                {user.langue === "en" ? (<div> Add </div>):(<div> Ajouter </div>)}
               </Button>
               {/* <!-- Modal --> */}
               <Modal show={show} onHide={handleClose}>
