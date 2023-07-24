@@ -29,6 +29,7 @@ const EditMembresAdministration = () => {
                 cni: res.data.num_cni,
                 date_n: res.data.date_naissance,
                 lieu_n: res.data.lieu_naissance,
+                role: res.data.fonction_user,
 
             });
         });
@@ -178,7 +179,7 @@ const EditMembresAdministration = () => {
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Fonction </Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="role" value={inputs.role || ""} onChange={handleChange}>
-                                                        <option></option>
+                                                        <option value={inputs.role || ""}>{inputs.role}</option>
                                                         {roles.map((item) => (
                                                             <option key={item.id} value={item.intitule_role}>{item.intitule_role}</option>
 
