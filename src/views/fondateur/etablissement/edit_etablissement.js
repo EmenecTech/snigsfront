@@ -10,7 +10,7 @@ const EditEtablissement = () => {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
     const { user } = AuthUser();
-    const idetab = user.etablissement;
+    const id = user.etablissement;
     const [logoEtab, setLogoEtab] = useState([]);
     useEffect(() => {
         fetchAllofLogo();
