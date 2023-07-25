@@ -29,7 +29,7 @@ const EditEtablissement = () => {
     }, []);
 
     const fetchetablissement = () => {
-        http.get("/etablissements/" + id + "/edit").then((res) => {
+        http.get("/etablissements/" + user.etablissement+ "/edit").then((res) => {
             setInputs({
                 tel: res.data.telephone,
                 nom: res.data.nom_etablissement,
@@ -61,7 +61,7 @@ const EditEtablissement = () => {
     }
 
     const submitForm = () => {
-        http.put('/editetablissement/' + id, inputs).then((res) => {
+        http.put('/editetablissement/' + user.etablissement, inputs).then((res) => {
             alert("etablissement modifié avec succès !");
             navigate('etablissement/edit/super/admin/');
         })
