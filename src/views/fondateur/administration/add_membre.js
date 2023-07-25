@@ -174,7 +174,7 @@ const AddMembreAdministration = () => {
 
 
                                     <div className="text-center">
-                                        <Button type="button" variant="primary" onClick={submitFormadduser}>Confirmer</Button>
+                                        <Button type="button" variant="primary" onClick={submitFormadduser}>{user.langue === "en" ? (<div>confirm</div>):(<div> Confirmer </div>)}</Button>
                                     </div>
                                 </Form>
                             </Card.Body>
