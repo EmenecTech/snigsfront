@@ -53,6 +53,7 @@ SwiperCore.use([Navigation]);
 
 const ListNiveaux = memo((props) => {
 
+    
     const { user, http } = AuthUser();
 
 
@@ -62,7 +63,7 @@ const ListNiveaux = memo((props) => {
     }, []);
 
     const fetchAllniveaux = () => {
-        http.get('/niveaux_info/' +).then(res => {
+        http.get('/niveaux_info/' + user.etablissement).then(res => {
             setniveaux(res.data);
         })
     }
