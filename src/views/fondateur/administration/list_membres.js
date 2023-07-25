@@ -148,7 +148,7 @@ const MembresAdministration = () => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">{user.langue === "en" ? (<div>Members of the administration</div>):(<div> Membres de l'administration</div>)}</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>Members of administration</div>):(<div> Membres de l'administration</div>)}</h4>
                                 </div>
                                 <Link to="/Admin/add">
                                     <Button type="button" variant="primary">
