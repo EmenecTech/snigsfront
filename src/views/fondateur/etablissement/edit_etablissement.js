@@ -29,7 +29,7 @@ const EditEtablissement = () => {
     }, []);
 
     const fetchetablissement = () => {
-        http.get("/etablissements/" + idetab + "/edit").then((res) => {
+        http.get("/etablissements/" + id + "/edit").then((res) => {
             setInputs({
                 tel: res.data.telephone,
                 nom: res.data.nom_etablissement,
@@ -61,7 +61,7 @@ const EditEtablissement = () => {
     }
 
     const submitForm = () => {
-        http.put('/editetablissement/' + idetab, inputs).then((res) => {
+        http.put('/editetablissement/' + id, inputs).then((res) => {
             alert("etablissement modifié avec succès !");
             navigate('etablissement/edit/super/admin/');
         })
@@ -107,7 +107,7 @@ const EditEtablissement = () => {
 
         fData.append("image", imagedata);
 
-        Axios.post("https://snigsbackend.com/api/postlogo/" + idetab, fData)
+        Axios.post("https://snigsbackend.com/api/postlogo/" + id, fData)
             .then((res) => {
                 console.log("response", res);
                 alert("Logo ajouté avec succès !")
@@ -183,7 +183,7 @@ const EditEtablissement = () => {
                                     <h4 className="card-title"></h4>
                                     <Image
                                         className="theme-color-default-img  profile-pic rounded avatar-100"
-                                        src={"https://snigsbackend.com/logo_etab/" + idetab + ".png"}
+                                        src={"https://snigsbackend.com/logo_etab/" + id + ".png"}
                                         alt="profile-pic"
                                     />
                                 </div>
