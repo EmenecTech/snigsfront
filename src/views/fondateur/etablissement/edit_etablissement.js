@@ -17,12 +17,12 @@ const EditEtablissement = () => {
     }, []);
 
     const fetchAllofLogo = () => {
-        http.get('/get_name_logo/' + idetab).then(res => {
+        http.get('/get_name_logo/' + id).then(res => {
             setLogoEtab(res.data);
         })
     }
 
-    console.log(idetab)
+    console.log(id)
 
     useEffect(() => {
         fetchetablissement();
@@ -135,7 +135,7 @@ const EditEtablissement = () => {
         imageRef.current = Axios.CancelToken.source();
         // envoyer une requête GET avec le token et le responseType
         http.get(
-            "/avatar/images/" + idetab + ".png",
+            "/avatar/images/" + id + ".png",
             {
                 cancelToken: imageRef.current.token,
                 responseType: "arraybuffer",
