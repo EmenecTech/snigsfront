@@ -193,7 +193,7 @@ const EditMembresAdministration = () => {
                                     </Row>
 
                                     <div className="text-center">
-                                        <Button type="button" variant="primary" onClick={submitForm}>Modifier</Button>
+                                        <Button type="button" variant="primary" onClick={submitForm}>{user.langue === "en" ? (<div>Edit</div>):(<div> Modifier </div>)}</Button>
                                     </div>
                                 </Form>
                             </Card.Body>
