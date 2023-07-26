@@ -66,7 +66,6 @@ const RolesPrivilegesAdmin = memo((props) => {
   const submitForm = () => {
     http.post("/privileges/roles/add", inputs).then((res) => {
       alert("Privilège ajouté avec succès !");
-      navigate("/Admin/list/privileges/roles/" + role + "/" + etab);
       window.location.reload(false);
     });
 
