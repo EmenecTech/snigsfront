@@ -544,9 +544,8 @@ const VerticalNav = memo((props) => {
                                             </Link>
                                         </li>
 
-                                        <li>
-                                            {/* 21/07/2023 */}
-                                            <Link className={`${location.pathname === '/List/SansClasse' ? 'active' : ''} nav-link`} to="/List/SansClasse/">
+                                          <li className="nav-item">
+                                            <Link className={`${location.pathname === '/dashboard/app/user-profile' ? 'active' : ''} nav-link`} to="/List/SansClasse/">
                                                 <i className="icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                         <g>
@@ -555,9 +554,24 @@ const VerticalNav = memo((props) => {
                                                     </svg>
                                                 </i>
                                                 <i className="sidenav-mini-icon"> U </i>
-                                                <span className="item-name">Eleves sans classe</span>
+                                                <span className="item-name"> {user.langue === "en" ? (<div>Students without class</div>):(<div> Eleves sans classe </div>)}</span>
                                             </Link>
                                         </li>
+
+                                          <li className="nav-item">
+                                            <Link className={`${location.pathname === '/dashboard/app/user-profile' ? 'active' : ''} nav-link`} to="/List/SansClasse/">
+                                                <i className="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                                        <g>
+                                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                                        </g>
+                                                    </svg>
+                                                </i>
+                                                <i className="sidenav-mini-icon"> U </i>
+                                                <span className="item-name"> {user.langue === "en" ? (<div>Parents</div>):(<div> Parents</div>)}</span>
+                                            </Link>
+                                        </li>
+
                                    
 
                                     </ul>
