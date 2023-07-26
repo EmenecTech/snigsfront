@@ -254,6 +254,7 @@ const EleveEditProfil = (props) => {
                                             </div>*/}
                                         </div>
                                     </Form.Group>
+                                    <Form.Label htmlFor="furl">Photo de profil:</Form.Label>
                                     <input
                                         className="form-control"
                                         name="profile_photo_path"
