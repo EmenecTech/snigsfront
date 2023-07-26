@@ -63,7 +63,7 @@ const EditEtablissement = () => {
     const submitForm = () => {
         http.put('/editetablissement/' + user.etablissement, inputs).then((res) => {
             alert("etablissement modifié avec succès !");
-            navigate('etablissement/edit/super/admin/');
+             window.location.reload(false);
         })
 
 
