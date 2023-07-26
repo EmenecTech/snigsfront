@@ -407,8 +407,8 @@ const ListPreinscriptions = memo((props) => {
                               onChange={handleChange}
                             >
                               <option></option>
-                              <option value="M"> {user.langue === "en" ? (<div>Male </div>):(<div> Masculin </div>)}</option>
-                              <option value="F"> {user.langue === "en" ? (<div>Female </div>):(<div> Feminin </div>)}</option>
+                              <option value="M">M</option>
+                              <option value="F">F</option>
                             </select>
                           </Form.Group>
                         </Form.Group>
