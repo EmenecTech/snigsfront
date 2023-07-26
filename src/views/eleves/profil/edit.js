@@ -157,13 +157,11 @@ const EleveEditProfil = (props) => {
         }
         else if (regExp.test(inputs.password)) {
 
-               http.post('/editpassword/' + id, inputs).then((res) => {
-                      navigate('/');
-                  })
+               
 
             
             setMessage("")
-            console.log(inputs)
+        
             alert("Mot de passe modifié avec succès !")
 
         }
