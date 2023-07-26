@@ -405,9 +405,9 @@ const InscriptionEleve = memo((props) => {
                                   onChange={handleChange}
                                   required
                                 />
+                       
                             </Form.Group>
-                            </Form.Group>
-                               <Form.Group className="form-group">
+                            <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
                                 {user.langue === "en" ? (<div>Parent contact</div>):(<div>  Contact du parent </div>)}
                                 </Form.Label>
