@@ -162,7 +162,7 @@ const EleveEditProfil = (props) => {
             
             setMessage("")
 
-            http.post("/editpassword/" + id, inputs).then((res) => {
+            http.put("editpassword/" + id, inputs).then((res) => {
           
             alert("Modifié avec succès !")
             navigate("/Eleve/Edit/Profil/" + id);
