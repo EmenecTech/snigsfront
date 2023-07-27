@@ -165,6 +165,8 @@ import AdminlistdocumentsOfEleves from '../views/fondateur/documents/documentsof
 import EditEleve from '../views/fondateur/classes/editeleves';
 import EditEnseignants from '../views/fondateur/enseignants/editenseignants';
 import ListSansclasse from '../views/fondateur/eleves/sans_classe';
+//27/07/2023
+import EditPrivilege from '../views/super_admin/privileges/edit_privileges';
 
 
 
@@ -226,6 +228,13 @@ export const DefaultRouter = [
             {
                 path: 'utilisateurs/add/super/admin',
                 element: <AddUtilisateurs />
+            },
+
+    //27/07/2023
+            {
+                path: 'superAdmin/edit/privileges/:id',
+                element: <EditPrivilege />
+
             },
 
             //////////////////////////////////////////////Fondateur
