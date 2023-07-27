@@ -368,7 +368,7 @@ const InscriptionEleve = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
 
-
+                            <Row>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Name </div>):(<div> Nom </div>)}</Form.Label>
                                 <Form.Control type="text" id="exampleInputReadonly" disabled defaultValue={eleve.nom} />
@@ -381,6 +381,8 @@ const InscriptionEleve = memo((props) => {
                                 <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)}</Form.Label>
                                 <Form.Control type="text" id="exampleInputReadonly" disabled defaultValue={niveau} />
                             </Form.Group>
+                            </Row>
+                            <Row>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
                                 {user.langue === "en" ? (<div>Parent name</div>):(<div>  Nom du parent </div>)}
@@ -433,6 +435,8 @@ const InscriptionEleve = memo((props) => {
                             <div className="text-center mt-2">
                                 <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Inscrire</div>):(<div> Register </div>)}</Button>
                             </div>
+
+                           </Row>
 
                         </Card.Header>
                         <Card.Body>
