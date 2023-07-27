@@ -53,7 +53,7 @@ const EditPrivilege = (props) => {
 
         http.put("/editprivilege/" + id, inputs).then((res) => {
             alert("Privilège modifié avec succès !");
-            navigate("/list/Edit/Profil/" + id);
+            navigate("superAdmin/list/privileges");
         });
 
         console.log(inputs);
