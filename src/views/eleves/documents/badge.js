@@ -1,12 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Card, Col, Form, Image, Row, } from "react-bootstrap";
 import AuthUser from "../../../components/AuthUser";
 import QRCode from "react-qr-code";
+import Axios from "axios";
 
 
 const Badge = () => {
-    const { user } = AuthUser();
+    const { http, user } = AuthUser();
+    const etab = user.etablissement;
 
 
     //27/07/2023
