@@ -15,7 +15,7 @@ import http from "../../../http";
 import AuthUser from "../../../components/AuthUser";
 import Axios from 'axios';
 
-const DisciplineInfoForEleve = (props) => {
+const DisciplineInfoForParent = (props) => {
     const [imagedata, setImagedata] = useState("");
 
     const handleChange2 = (file) => {
