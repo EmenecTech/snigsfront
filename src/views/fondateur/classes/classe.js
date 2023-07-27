@@ -251,6 +251,8 @@ const UniClasse = () => {
                                                         <th>{user.langue === "en" ? (<div>Gender </div>):(<div> Genre  </div>)}</th>
                                                         <th> {user.langue === "en" ? (<div>Date of birth </div>):(<div> Date de naissance  </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Place of birth </div>):(<div> Lieu de naissance   </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div>Parent name</div>):(<div> Nom du parent  </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div>Parent contact</div>):(<div> Contact du parent  </div>)}</th>
                                                         <th>Email</th>
                                                         <th> {user.langue === "en" ? (<div>Phone </div>):(<div> Téléphone   </div>)}</th>
                                                         <th>Action</th>
@@ -265,6 +267,8 @@ const UniClasse = () => {
                                                             <td>{item.sexe}</td>
                                                             <td>{item.date_naissance}</td>
                                                             <td>{item.lieu_naissance}</td>
+                                                            <td>{item.nom_parent}</td>
+                                                            <td>{item.numero_parent}</td>
                                                             <td>{item.email}</td>
                                                             <td>{item.telephone}</td>
                                                             <td>
