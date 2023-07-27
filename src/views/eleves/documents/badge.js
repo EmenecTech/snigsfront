@@ -194,12 +194,12 @@ const Badge = () => {
                                                             className="control-label align-self-center mb-0"
                                                             htmlFor="name"
                                                         >
-                                                            Nom:
+                                                            Nom: {user.nom}
                                                         </Form>
                                                         <Col sm="9">
                                                             <Form type="name" placeholder="" />
                                                         </Col>
-                                                    </Form> {user.nom}
+                                                    </Form> 
                                                 </div>
                                                 <div className="col-sm-10 justify-content-center">
                                                     <Form as={Row} className="form-group">
