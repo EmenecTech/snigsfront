@@ -157,6 +157,40 @@ const EditPensions = memo((props) => {
         })
     }
 
+    //27/07/2023
+    const [show2, setShow2] = useState(false);
+    const handleClose2 = () => setShow2(false);
+    const handleShow2 = () => setShow2(true);
+
+    const submitForm2 = () => {
+
+        http.put('/edit/payement/' + idpension, inputs).then((res) => {
+            navigate('/Admin/Comptabilite/Edit/' + idpension)
+            window.location.reload(false);
+
+        })
+
+        console.log(inputs);
+
+    }
+
+    useEffect(() => {
+        fetchAllpayements();
+    }, []);
+
+    const fetchAllpayements = () => {
+        http.get('/payements/' + idpension + '/edit').then(res => {
+            setInputs({
+                int: res.data.intitule_pension,
+                tranches: res.data.tranches_pension,
+                montant: res.data.montant_pension,
+                pdebut: res.data.debut_payement_pension,
+                pfin: res.data.fin_payement_pension,
+                
+        })
+    })
+
+}
 
 
 
@@ -480,6 +514,79 @@ const EditPensions = memo((props) => {
                             </Modal>
                         </Card.Header>
                         <Card.Body>
+                                //27/07/2023
+                            <Button variant="Warning mt-2" onClick={handleShow2}>
+                                <span className="btn-inner">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </span>
+                                Modifier
+                            </Button>
+                            {/* <!-- Modal --> */}
+                            <Modal show={show2} onHide={handleClose2}>
+                                <Modal.Header closeButton>
+                                    <Modal.Title as="h5">Modification de la Pension</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <Form>
+                                        <Row>
+                                            <Col>
+                                                <Form.Group as={Row} className="form-group">
+                                                    <Form.Group className="form-group">
+                                                        <Form.Label htmlFor="exampleInputText1">Intitulé </Form.Label>
+                                                        <Form.Control type="text" defaultValue="" name="int" value={inputs.int || ""} onChange={handleChange} required />
+                                                    </Form.Group>
+                                                </Form.Group>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col>
+                                                <Form.Group as={Row} className="form-group">
+                                                    <Form.Group className="form-group">
+                                                        <Form.Label htmlFor="exampleInputText1">Montant </Form.Label>
+                                                        <Form.Control type="number" defaultValue="" name="montant" value={inputs.montant || ""} onChange={handleChange} required />
+                                                    </Form.Group>
+                                                </Form.Group>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col>
+                                                <Form.Group as={Row} className="form-group">
+                                                    <Form.Group className="form-group">
+                                                        <Form.Label htmlFor="exampleInputText1">Nombre de tranches </Form.Label>
+                                                        <Form.Control type="number" defaultValue="" name="tranches" value={inputs.tranches || ""} onChange={handleChange} required />
+                                                    </Form.Group>
+                                                </Form.Group>
+                                            </Col>
+                                        </Row>
+
+                                        <Row>
+                                            <Col>
+                                                <Form.Group as={Row} className="form-group">
+                                                    <Form.Group className="form-group">
+                                                        <Form.Label htmlFor="exampleInputText1">Debut des payements </Form.Label>
+                                                        <Form.Control type="date" defaultValue="" name="pdebut" value={inputs.pdebut || ""} onChange={handleChange} required />
+                                                    </Form.Group>
+                                                </Form.Group>
+                                            </Col>
+                                            <Col>
+                                                <Form.Group as={Row} className="form-group">
+                                                    <Form.Group className="form-group">
+                                                        <Form.Label htmlFor="exampleInputText1">Clôture des payements </Form.Label>
+                                                        <Form.Control type="date" defaultValue="" name="pfin" value={inputs.pfin || ""} onChange={handleChange} required />
+                                                    </Form.Group>
+                                                </Form.Group>
+                                            </Col>
+                                        </Row>
+
+                                        <div className="text-center">
+                                            <Button type="button" variant="primary" onClick={submitForm2} >Confirmer</Button>
+                                        </div>
+                                    </Form>
+                                </Modal.Body>
+
+                            </Modal>    
                             <h4>Informations</h4>
                             <ul>
                                 <li>{user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé  </div>)} : {payement.intitule_pension}</li>
