@@ -61,7 +61,7 @@ const ParentsBulletinNotes = memo((props) => {
   const [inputs, setInputs] = useState({});
   const { evaluation } = useParams();
   const etab = user.etablissement;
-  const userid = user.id;
+  const userid = user.second_id;
   const niveau = user.fonction_user;
   const classe = user.other_in_user;
 
