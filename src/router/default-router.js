@@ -167,7 +167,7 @@ import EditEnseignants from '../views/fondateur/enseignants/editenseignants';
 import ListSansclasse from '../views/fondateur/eleves/sans_classe';
 //27/07/2023
 import EditPrivilege from '../views/super_admin/privileges/edit_privileges';
-
+import DisciplineInfoForParent from '../views/parent/discipline/discipline';
 
 
 
@@ -546,6 +546,11 @@ export const DefaultRouter = [
             {
                 path: 'List/SansClasse',
                 element: <ListSansclasse />
+            },
+    //27/07/2023
+            {
+                path: 'Parent/Discipline/Info',
+                element: <DisciplineInfoForParent />
             },
 
             ///////////
