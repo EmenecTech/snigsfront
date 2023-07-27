@@ -8,6 +8,59 @@ import QRCode from "react-qr-code";
 const Badge = () => {
     const { user } = AuthUser();
 
+
+    //27/07/2023
+    const [image2, setImage2] = useState("");
+    const imageRef2 = useRef(null);
+
+    const fetchProductImage2 = useCallback(() => {
+        // annuler la requête précédente si elle existe
+        if (imageRef2.current) {
+            imageRef2.current.cancel();
+        }
+        // créer un token d'annulation
+        imageRef2.current = Axios.CancelToken.source();
+        // envoyer une requête GET avec le token et le responseType
+        http.get(
+            "/avatar/images/" + etab + ".png",
+
+            {
+                cancelToken: imageRef2.current.token,
+                responseType: "arraybuffer",
+            }
+        )
+            .then((response) => {
+                // convertir l'image en base64
+                const base64 = btoa(
+                    new Uint8Array(response.data).reduce(
+                        (data, byte) => data + String.fromCharCode(byte),
+                        ""
+                    )
+                );
+                // mettre à jour l'état de l'image
+                setImage2(`data:image/png;base64,${base64}`);
+            })
+            .catch((error) => {
+                // ignorer l'erreur si la requête a été annulée
+                if (!Axios.isCancel(error)) {
+                    console.error(error);
+                }
+            });
+    }, []);
+
+    useEffect(() => {
+        fetchProductImage2();
+        // nettoyer la référence à l'image quand le composant est démonté
+        return () => {
+            imageRef2.current = null;
+        };
+    }, [fetchProductImage2]);
+
+
+
+
+    
+
     return (
         <div className="Badge">
             <Row>
