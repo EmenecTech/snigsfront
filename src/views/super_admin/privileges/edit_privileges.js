@@ -53,7 +53,7 @@ const EditPrivilege = (props) => {
 
         http.put("/editprivilege/" + id, inputs).then((res) => {
             alert("Privilège modifié avec succès !");
-            navigate("superAdmin/list/privileges");
+            navigate("/superAdmin/list/privileges");
         });
 
         console.log(inputs);
@@ -88,7 +88,7 @@ const EditPrivilege = (props) => {
                                                                 name="code"
                                                                 className="form-control mb-2"
                                                                 value={inputs.code || ""}
-                                                                disabled
+                                                                
                                                                 onChange={handleChange}
                                                             />
                                                         </Col>
@@ -98,7 +98,7 @@ const EditPrivilege = (props) => {
                                                             <input
                                                                 type="text"
                                                                 name="int"
-                                                                disabled
+                                                                
                                                                 className="form-control mb-2"
                                                                 value={inputs.int || ""}
                                                                 onChange={handleChange}
