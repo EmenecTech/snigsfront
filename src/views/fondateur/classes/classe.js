@@ -613,7 +613,7 @@ const UniClasse = () => {
                                                         <th>{user.langue === "en" ? (<div>Prename</div>):(<div> Prénom  </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Student</div>):(<div> Elève </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Parent contact</div>):(<div> Contact du parent  </div>)}</th>
-                                                        <th>Email</th>
+                                                     
                                                         <th> {user.langue === "en" ? (<div>Phone </div>):(<div> Téléphone   </div>)}</th>
                                                         <th>Action</th>
 
@@ -625,7 +625,7 @@ const UniClasse = () => {
                                                             <td>{item.nom_parent}</td>
                                                             <td>{item.prenom_parent}</td>
                                                             <td>{item.nom} {item.prenom}</td>
-                                                            <td>{item.email}</td>
+                                           
                                                             <td>{item.numero_parent}</td>
                                                             <td>
                                                                 <div className="flex align-items-center list-user-action">
