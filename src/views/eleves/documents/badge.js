@@ -199,7 +199,7 @@ const Badge = () => {
                                                         <Col sm="9">
                                                             <Form type="name" placeholder="" />
                                                         </Col>
-                                                    </Form>
+                                                    </Form> {user.nom}
                                                 </div>
                                                 <div className="col-sm-10 justify-content-center">
                                                     <Form as={Row} className="form-group">
