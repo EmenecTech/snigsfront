@@ -202,7 +202,7 @@ const UniClasse = () => {
                                             <Nav.Link eventKey="third">{user.langue === "en" ? (<div>Courses</div>):(<div> Matières </div>)}</Nav.Link>
                                         </Nav.Item>
                                         <Nav.Item as="li">
-                                            <Nav.Link eventKey="fourth"></Nav.Link>
+                                            <Nav.Link eventKey="fourth">Parents</Nav.Link>
                                         </Nav.Item>
                                     </Nav>
                                 </div>
