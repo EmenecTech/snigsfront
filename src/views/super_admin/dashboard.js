@@ -1069,7 +1069,7 @@ const Dashboard_superadmin = memo((props) => {
                             <p>Classe / Class</p>
                           </div>
                           <div className="mt-2">
-                            <h6 className="mb-1">F10923</h6>
+                            <h6 className="mb-1">{user.matricule}</h6>
                             <p>Matricule / Register</p>
                           </div>
 
