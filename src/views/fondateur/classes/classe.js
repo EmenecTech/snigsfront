@@ -328,7 +328,7 @@ const UniClasse = () => {
                                         <Modal show={show1} onHide={handleClose1} backdrop="static"
                                             keyboard={false}>
                                             <Modal.Header closeButton>
-                                                <Modal.Title as="h5">{user.langue === "en" ? (<div>Add a teacher to the class</div>):(<div> Ajouter une enseignant à la classe  </div>)}</Modal.Title>
+                                                <Modal.Title as="h5">{user.langue === "en" ? (<div>Add a teacher to the class</div>):(<div> Ajouter un enseignant à la classe  </div>)}</Modal.Title>
                                             </Modal.Header>
                                             <Modal.Body>
                                                 <Form>
