@@ -380,7 +380,7 @@ const ListClasses = memo((props) => {
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title as="h5"> {user.langue === "en" ? (<div>Add a new class Classes</div>):(<div>Ajouter une nouvelle classe Classes</div>)}</Modal.Title>
+                                    <Modal.Title as="h5"> {user.langue === "en" ? (<div>Add a new class </div>):(<div>Ajouter une nouvelle classe </div>)}</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
                                     <Form>
