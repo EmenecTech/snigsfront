@@ -442,7 +442,14 @@ const EditPensions = memo((props) => {
                             <div className="header-title">
                                 <h4 className="card-title">{user.langue === "en" ? (<div>Details</div>):(<div> Détails </div>)}</h4>
                             </div>
-
+                                <Button variant="warning mt-2" onClick={handleShow2}>
+                                <span className="btn-inner">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </span>
+                                Modifier
+                            </Button>
 
                             <Button variant="primary mt-2" onClick={handleShow}>
                                 <span className="btn-inner">
@@ -515,14 +522,7 @@ const EditPensions = memo((props) => {
                         </Card.Header>
                         <Card.Body>
                                 
-                            <Button variant="warning mt-2" onClick={handleShow2}>
-                                <span className="btn-inner">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                                    </svg>
-                                </span>
-                                Modifier
-                            </Button>
+                            
                             {/* <!-- Modal --> */}
                             <Modal show={show2} onHide={handleClose2}>
                                 <Modal.Header closeButton>
