@@ -53,7 +53,6 @@ const ListPreinscriptions = memo((props) => {
     http.post("/admin_eleves", inputs).then((res) => {
       alert("Préinscription éffectuée !");
       window.location.reload(false);
-      navigate("/List/princriptions/");
     });
     console.log(inputs);
   };
@@ -75,7 +74,7 @@ const ListPreinscriptions = memo((props) => {
   }, []);
 
   const fetchAllniveaux = () => {
-    http.get("/get_niveau_for_eleves").then((res) => {
+    http.get("/niveaux_info/' + user.etablissement").then((res) => {
       setniveaux(res.data);
     });
   };
