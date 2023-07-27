@@ -246,6 +246,7 @@ const UniClasse = () => {
                                             >
                                                 <thead>
                                                     <tr>
+                                                        <th>{user.langue === "en" ? (<div>Registration number</div>):(<div> Matricule </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Name</div>):(<div> Nom  </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Prename</div>):(<div> Prénom  </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Gender </div>):(<div> Genre  </div>)}</th>
@@ -262,6 +263,7 @@ const UniClasse = () => {
                                                 <tbody>
                                                     {eleves_classe.map((item) => (
                                                         <tr key={item.id}>
+                                                            <td>{item.matricule}</td>
                                                             <td>{item.nom}</td>
                                                             <td>{item.prenom}</td>
                                                             <td>{item.sexe}</td>
@@ -597,55 +599,61 @@ const UniClasse = () => {
                                         </div>
                                     </Card.Header>
                                     <Card.Body>
-                                        <div className="text-center">
-                                            <div className="user-profile">
-                                                <Image className="theme-color-default-img  rounded-pill avatar-130 img-fluid" src={avatars11} alt="profile-pic" />
-                                                <Image className="theme-color-purple-img rounded-pill avatar-130 img-fluid" src={avatars22} alt="profile-pic" />
-                                                <Image className="theme-color-blue-img rounded-pill avatar-130 img-fluid" src={avatars33} alt="profile-pic" />
-                                                <Image className="theme-color-green-img rounded-pill avatar-130 img-fluid" src={avatars55} alt="profile-pic" />
-                                                <Image className="theme-color-yellow-img rounded-pill avatar-130 img-fluid" src={avatars66} alt="profile-pic" />
-                                                <Image className="theme-color-pink-img rounded-pill avatar-130 img-fluid" src={avatars44} alt="profile-pic" />
-                                            </div>
-                                            <div className="mt-3">
-                                                <h3 className="d-inline-block"></h3>
-                                                <p className="d-inline-block pl-3"></p>
-                                                <p className="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                            </div>
+                                        <div className="table-responsive border-bottom my-3">
+                                            <Table
+                                                responsive
+                                                striped
+                                                id="datatable"
+                                                className=""
+                                                data-toggle="data-table"
+                                            >
+                                                <thead>
+                                                    <tr>
+                                                        <th>{user.langue === "en" ? (<div>Name</div>):(<div> Nom  </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div>Prename</div>):(<div> Prénom  </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div>Student</div>):(<div> Elève </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div>Parent contact</div>):(<div> Contact du parent  </div>)}</th>
+                                                        <th>Email</th>
+                                                        <th> {user.langue === "en" ? (<div>Phone </div>):(<div> Téléphone   </div>)}</th>
+                                                        <th>Action</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {eleves_classe.map((item) => (
+                                                        <tr key={item.id}>
+                                                            <td>{item.nom_parent}</td>
+                                                            <td>{item.prenom_parent}</td>
+                                                            <td>{item.nom} {item.prenom}</td>
+                                                            <td>{item.email}</td>
+                                                            <td>{item.numero_parent}</td>
+                                                            <td>
+                                                                <div className="flex align-items-center list-user-action">
+
+                                                                    <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Edit/" + niveau + "/" + item.id}>
+                                                                        <span className="btn-inner">
+                                                                            <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                                <path fillRule="evenodd" clipRule="evenodd" d="M8.82812 10.921L16.3011 3.44799C17.2321 2.51799 18.7411 2.51799 19.6721 3.44799L20.8891 4.66499C21.8201 5.59599 21.8201 7.10599 20.8891 8.03599L13.3801 15.545C12.9731 15.952 12.4211 16.181 11.8451 16.181H8.09912L8.19312 12.401C8.20712 11.845 8.43412 11.315 8.82812 10.921Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                                <path d="M15.1655 4.60254L19.7315 9.16854" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                            </svg>
+                                                                        </span>
+                                                                    </Link>{' '}
+                                                                </div>
+                                                            </td>
+
+                                                        </tr>
+                                                    ))}
+                                                </tbody>
+                                                <tfoot>
+
+                                                </tfoot>
+                                            </Table>
+
                                         </div>
                                     </Card.Body>
                                 </Card>
-                                <Card>
-                                    <Card.Header>
-                                        <div className="header-title">
-                                            <h4 className="card-title">About User</h4>
-                                        </div>
-                                    </Card.Header>
-                                    <Card.Body>
-                                        <div className="user-bio">
-                                            <p>Tart I love sugar plum I love oat cake. Sweet roll caramels I love jujubes. Topping cake wafer.</p>
-                                        </div>
-                                        <div className="mt-2">
-                                            <h6 className="mb-1">Joined:</h6>
-                                            <p>Feb 15, 2021</p>
-                                        </div>
-                                        <div className="mt-2">
-                                            <h6 className="mb-1">Lives:</h6>
-                                            <p>United States of America</p>
-                                        </div>
-                                        <div className="mt-2">
-                                            <h6 className="mb-1">Email:</h6>
-                                            <p><Link to="#" className="text-body"> austin@gmail.com</Link></p>
-                                        </div>
-                                        <div className="mt-2">
-                                            <h6 className="mb-1">Url:</h6>
-                                            <p><Link to="#" className="text-body" target="_blank"> www.bootstrap.com </Link></p>
-                                        </div>
-                                        <div className="mt-2">
-                                            <h6 className="mb-1">Contact:</h6>
-                                            <p><Link to="#" className="text-body">(001) 4544 565 456</Link></p>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
+                             
                             </Tab.Pane >
                         </Tab.Content>
                     </Col>
