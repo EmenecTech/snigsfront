@@ -81,6 +81,48 @@ const Badge = () => {
                                                 border: "2px solid black",
                                             }}
                                         />
+                                                                        <Image style={{
+                                                width: "100px",
+                                                height: "100px",
+                                                borderRadius: "50%",
+                                                objectFit: "cover",
+                                                border: "2px solid black",
+                                            }} className="theme-color-default-img  rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                        <Image style={{
+                                                width: "100px",
+                                                height: "100px",
+                                                borderRadius: "50%",
+                                                objectFit: "cover",
+                                                border: "2px solid black",
+                                            }} className="theme-color-purple-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                        <Image style={{
+                                                width: "100px",
+                                                height: "100px",
+                                                borderRadius: "50%",
+                                                objectFit: "cover",
+                                                border: "2px solid black",
+                                            }} className="theme-color-blue-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                        <Image style={{
+                                                width: "100px",
+                                                height: "100px",
+                                                borderRadius: "50%",
+                                                objectFit: "cover",
+                                                border: "2px solid black",
+                                            }} className="theme-color-green-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                        <Image style={{
+                                                width: "100px",
+                                                height: "100px",
+                                                borderRadius: "50%",
+                                                objectFit: "cover",
+                                                border: "2px solid black",
+                                            }} className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                        <Image style={{
+                                                width: "100px",
+                                                height: "100px",
+                                                borderRadius: "50%",
+                                                objectFit: "cover",
+                                                border: "2px solid black",
+                                            }} className="theme-color-pink-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
                                     </div>
                                 </Col>
                                 <Col sm="6" className="mt-4
