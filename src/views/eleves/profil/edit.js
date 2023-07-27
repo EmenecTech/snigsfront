@@ -265,15 +265,7 @@ const EleveEditProfil = (props) => {
                                         type="file"
                                         onChange={e => handleChange2(e.target.files)} />
 
-                                    <Form.Group className="form-group">
-                                        <Form.Label htmlFor="furl">Matricule:</Form.Label>
-                                        <Form.Control
-                                            type="text"
-                                            id="furl"
-                                            disabled
-                                            placeholder="F1401"
-                                        />
-                                    </Form.Group>
+                                   
                                     <button className="btn btn-info mt-2" type="submit" onClick={submitData} >
                                         Upload Image
                                     </button>
