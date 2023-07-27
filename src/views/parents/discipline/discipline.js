@@ -393,4 +393,4 @@ const DisciplineInfoForParent = (props) => {
     );
 };
 
-export default DisciplineInfoForEleve;
+export default DisciplineInfoForParent;
