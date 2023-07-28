@@ -83,12 +83,12 @@ const Badge = () => {
                                                 border: "2px solid black",
                                             }}
                                         />
-                                    <img src={"https://snigsbackend.com/avatar/" + user.profile_photo_path} alt="User-Profile" className="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded" />
-                                    <img src={"https://snigsbackend.com/avatar/" + user.profile_photo_path}  alt="User-Profile" className="theme-color-purple-img img-fluid avatar avatar-50 avatar-rounded" />
-                                    <img src={"https://snigsbackend.com/avatar/" + user.profile_photo_path}  alt="User-Profile" className="theme-color-blue-img img-fluid avatar avatar-50 avatar-rounded" />
-                                    <img src={"https://snigsbackend.com/avatar/" + user.profile_photo_path}  alt="User-Profile" className="theme-color-green-img img-fluid avatar avatar-50 avatar-rounded" />
-                                    <img src={"https://snigsbackend.com/avatar/" + user.profile_photo_path} alt="User-Profile" className="theme-color-yellow-img img-fluid avatar avatar-50 avatar-rounded" />
-                                    <img src={"https://snigsbackend.com/avatar/" + user.profile_photo_path}  alt="User-Profile" className="theme-color-pink-img img-fluid avatar avatar-50 avatar-rounded" />
+                                    <img src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="User-Profile" className="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded" />
+                                    <img src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}  alt="User-Profile" className="theme-color-purple-img img-fluid avatar avatar-50 avatar-rounded" />
+                                    <img src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}  alt="User-Profile" className="theme-color-blue-img img-fluid avatar avatar-50 avatar-rounded" />
+                                    <img src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}  alt="User-Profile" className="theme-color-green-img img-fluid avatar avatar-50 avatar-rounded" />
+                                    <img src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="User-Profile" className="theme-color-yellow-img img-fluid avatar avatar-50 avatar-rounded" />
+                                    <img src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}  alt="User-Profile" className="theme-color-pink-img img-fluid avatar avatar-50 avatar-rounded" />
                                     </div>
                                 </Col>
                                 <Col sm="6" className="mt-4
