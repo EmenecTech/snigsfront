@@ -83,48 +83,12 @@ const Badge = () => {
                                                 border: "2px solid black",
                                             }}
                                         />
-                                                                        <Image style={{
-                                                width: "100px",
-                                                height: "100px",
-                                                borderRadius: "50%",
-                                                objectFit: "cover",
-                                                border: "2px solid black",
-                                            }} className="theme-color-default-img  rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                        <Image style={{
-                                                width: "100px",
-                                                height: "100px",
-                                                borderRadius: "50%",
-                                                objectFit: "cover",
-                                                border: "2px solid black",
-                                            }} className="theme-color-purple-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                        <Image style={{
-                                                width: "100px",
-                                                height: "100px",
-                                                borderRadius: "50%",
-                                                objectFit: "cover",
-                                                border: "2px solid black",
-                                            }} className="theme-color-blue-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                        <Image style={{
-                                                width: "100px",
-                                                height: "100px",
-                                                borderRadius: "50%",
-                                                objectFit: "cover",
-                                                border: "2px solid black",
-                                            }} className="theme-color-green-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                        <Image style={{
-                                                width: "100px",
-                                                height: "100px",
-                                                borderRadius: "50%",
-                                                objectFit: "cover",
-                                                border: "2px solid black",
-                                            }} className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                        <Image style={{
-                                                width: "100px",
-                                                height: "100px",
-                                                borderRadius: "50%",
-                                                objectFit: "cover",
-                                                border: "2px solid black",
-                                            }} className="theme-color-pink-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                    <img src={"https://snigsbackend.com/avatar/" + user.profile_photo_path} alt="User-Profile" className="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded" />
+                                    <img src={"https://snigsbackend.com/avatar/" + user.profile_photo_path}  alt="User-Profile" className="theme-color-purple-img img-fluid avatar avatar-50 avatar-rounded" />
+                                    <img src={"https://snigsbackend.com/avatar/" + user.profile_photo_path}  alt="User-Profile" className="theme-color-blue-img img-fluid avatar avatar-50 avatar-rounded" />
+                                    <img src={"https://snigsbackend.com/avatar/" + user.profile_photo_path}  alt="User-Profile" className="theme-color-green-img img-fluid avatar avatar-50 avatar-rounded" />
+                                    <img src={"https://snigsbackend.com/avatar/" + user.profile_photo_path} alt="User-Profile" className="theme-color-yellow-img img-fluid avatar avatar-50 avatar-rounded" />
+                                    <img src={"https://snigsbackend.com/avatar/" + user.profile_photo_path}  alt="User-Profile" className="theme-color-pink-img img-fluid avatar avatar-50 avatar-rounded" />
                                     </div>
                                 </Col>
                                 <Col sm="6" className="mt-4
