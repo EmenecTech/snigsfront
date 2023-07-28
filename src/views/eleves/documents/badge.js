@@ -74,15 +74,7 @@ const Badge = () => {
 
                                     <div className="d-flex justify-content-between align-items-between">
                                         {" "}
-                                        <Image
-                                            style={{
-                                                width: "100px",
-                                                height: "100px",
-                                                borderRadius: "50%",
-                                                objectFit: "cover",
-                                                border: "2px solid black",
-                                            }}
-                                        />
+                                        
                                     <img src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="User-Profile" className="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded" />
                                     <img src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}  alt="User-Profile" className="theme-color-purple-img img-fluid avatar avatar-50 avatar-rounded" />
                                     <img src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}  alt="User-Profile" className="theme-color-blue-img img-fluid avatar avatar-50 avatar-rounded" />
