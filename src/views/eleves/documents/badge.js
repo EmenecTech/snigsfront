@@ -165,7 +165,7 @@ const Badge = () => {
                                                             className="control-label align-self-center mb-0"
                                                             htmlFor="name"
                                                         >
-                                                            Prenom:
+                                                            Prenom: {user.prenom}
                                                         </Form>
                                                         <Col sm="9">
                                                             <Form type="name" placeholder="" />
@@ -180,7 +180,7 @@ const Badge = () => {
                                                             className="control-label align-self-center mb-0"
                                                             htmlFor="date"
                                                         >
-                                                            Date de naissance:
+                                                            Date de naissance: {user.date_de_naissance}
                                                         </Form>
                                                         <Col sm="9">
                                                             <Form type="date" placeholder="" />
@@ -195,7 +195,7 @@ const Badge = () => {
                                                             className="control-label align-self-center mb-0"
                                                             htmlFor="string"
                                                         >
-                                                            Lieu de naissance:
+                                                            Lieu de naissance: {user.lieu_de_naissance}
                                                         </Form>
                                                         <Col sm="9">
                                                             <Form type="string" placeholder="" />
@@ -210,7 +210,7 @@ const Badge = () => {
                                                             className="control-label align-self-center mb-0"
                                                             htmlFor="string"
                                                         >
-                                                            Matricule:
+                                                            Matricule: {user.matricule}
                                                         </Form>
                                                         <Col sm="9">
                                                             <Form type="string" placeholder="" />
