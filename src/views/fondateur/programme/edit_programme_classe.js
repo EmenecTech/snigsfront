@@ -486,7 +486,7 @@ const EditClasseProgramme = memo((props) => {
                                                             <option></option>
                                                             <option value="Lundi">{user.langue === "en" ? (<div>Monday</div>):(<div>Lundi  </div>)}</option>
                                                             <option value="Mardi">{user.langue === "en" ? (<div>Tuesday</div>):(<div>Mardi </div>)}</option>
-                                                            <option value="Mercredi">{user.langue === "en" ? (<div>Wednesday</div>):(<div>Mecredi  </div>)}</option>
+                                                            <option value="Mercredi">{user.langue === "en" ? (<div>Wednesday</div>):(<div>Mercredi  </div>)}</option>
                                                             <option value="Jeudi">{user.langue === "en" ? (<div>Thursday</div>):(<div>Jeudi </div>)}</option>
                                                             <option value="Vendredi">{user.langue === "en" ? (<div>Friday</div>):(<div>Vendredi </div>)}</option>
                                                             <option value="Samedi">{user.langue === "en" ? (<div>Saturday</div>):(<div>Samedi </div>)}</option>
