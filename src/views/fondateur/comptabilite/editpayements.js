@@ -94,6 +94,8 @@ const EditPensions = memo((props) => {
             navigate('/Admin/Comptabilite/Edit/' + idpension)
             window.location.reload(false);
 
+            alert("Ajouté avec succès!");
+
         })
 
         console.log(inputs);
