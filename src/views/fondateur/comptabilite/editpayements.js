@@ -146,9 +146,9 @@ const EditPensions = memo((props) => {
     }
 //25/07/2023
   const deteleclassepension = (classepens, idpens) => {
-       http.delete('delete_pension_classe/' + classepens + '/' + idpens).then(res => {
-           fetchAllclassespay();
-       })
+       // http.delete('delete_pension_classe/' + classepens + '/' + idpens).then(res => {
+       //     fetchAllclassespay();
+       // })
     }
 
     const deletepensiondetail = (id) => {
