@@ -56,7 +56,7 @@ const PayementsListEleve = (props) => {
     const [eleveinfo, seteleveinfo] = useState([]);
 
     useEffect(() => {
-        fetchAllinfopayement()
+        fetchAlleleveinfo()
     }, []);
 
     const fetchAlleleveinfo = () => {
@@ -286,7 +286,9 @@ const PayementsListEleve = (props) => {
                                             <Col sm="4" lg="4">
                                                 <h3>{user.langue === "en" ? (<div>Tuition fees</div>):(<div>Frais de scolarités</div>)} </h3>
                                                 <h5 className="mb-4">{infopayement.montant_pension} XAF</h5>
-
+                                                <p>Nom : {eleveinfo.nom}</p>                                                 
+                                                <p>Prenom : {eleveinfo.prenom}</p>                                                 
+                                                <p>Classe: {eleveinfo.other_in_user}</p> 
                                                 <h4 className="mb-3">Détails </h4>
                                                 {detailpayement.map((item) => (
                                                     <div className="mt-2" key={item.id}>
