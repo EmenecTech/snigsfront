@@ -53,7 +53,21 @@ const PayementsListEleve = (props) => {
         });
     }
 
+    const [eleveinfo, seteleveinfo] = useState([]);
 
+    useEffect(() => {
+        fetchAllinfopayement()
+    }, []);
+
+    const fetchAlleleveinfo = () => {
+        http.get('/get_eleve_info/' + ideleve).then((res) => {
+            seteleveinfo(res.data);
+        });
+    }
+
+
+
+    
 
     const handleChange = (event) => {
         const name = event.target.name;
@@ -283,18 +297,17 @@ const PayementsListEleve = (props) => {
                                             </Col>
                                             <Col sm="4" lg="4">
                                                     <Button variant="primary mt-2" onClick={printData}>
-                                                        <span className="btn-inner">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                                                            </svg>
-                                                        </span>
+                                                        
                                                         Imprimer
                                                     </Button>
+                                                    <br/>
                                                 <div ref={componentRef}
                                                 style={{ width: "90%", paddingTop:10px, MarginTop: 10px ,textAlign: center,height: window.innerHeight }}>
                                                 <h3>{user.langue === "en" ? (<div>Payements </div>):(<div>Payements </div>)}</h3>
                                                 <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
-
+                                                <p>Nom :</p>
+                                                <p>Prenom :</p>
+                                                <p>Classe: {eleveinfo.other_in_user}</p>
 
                                                 {listpayements.map((item2) => (
                                                     <div className="mt-2" key={item2.id}>
