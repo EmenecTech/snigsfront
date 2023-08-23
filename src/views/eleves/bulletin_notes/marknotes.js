@@ -553,7 +553,7 @@ const EleveBulletinNotes = memo((props) => {
                         <Card.Body>
 
                             <div ref={componentRef}
-                                style={{ width: "100%", height: window.innerHeight }}>
+                                style={{ width: "100%", fontSize: "10px", height: window.innerHeight }}>
                                 <Row>
                                     <Col sm="12" lg="12">
                                         <Card>
@@ -578,16 +578,16 @@ const EleveBulletinNotes = memo((props) => {
                                                             <Row>
                                                                 <Col sm="12" lg="12" className="d-flex justify-content-center">
                                                                     <div className="user-profile">
-                                                                        <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                        <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                        <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                        <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                        <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                        <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                        <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
+                                                                        <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
+                                                                        <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
+                                                                        <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
+                                                                        <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
+                                                                        <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
                                                                     </div>
                                                                 </Col>
                                                             </Row>
-                                                            <br></br>
+                                                            <br />
                                                             <Row>
                                                                 <Col sm="12">
                                                                     <div className="container text-center">
@@ -614,7 +614,7 @@ const EleveBulletinNotes = memo((props) => {
                                                         </Col>
 
                                                     </Row>
-                                                    <Row className="mt-4">
+                                                    <Row className="mt-2">
                                                         <Col sm="4" lg="4">
 
 
@@ -636,17 +636,17 @@ const EleveBulletinNotes = memo((props) => {
                                                     </Row>
                                                     <Row>
                                                         <Col sm="5" lg="5">
-                                                            <Row>
+                                                            <Row style={{ fontSize: "10px" }}>
                                                                 <Col sm="6" lg="6">
                                                                     <div className="mt-2">
-                                                                        <h6 className="mb-0">Classe: {user.other_in_user}</h6>
+                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0" >Classe: {user.other_in_user}</p>
                                                                         <p>Class</p>
                                                                     </div>
 
                                                                 </Col>
                                                                 <Col sm="6" lg="6">
                                                                     <div className="mt-2">
-                                                                        <h6 className="mb-0">Effectif:</h6>
+                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">Effectif:</p>
                                                                         <p>Number</p>
                                                                     </div>
                                                                 </Col>
@@ -654,7 +654,7 @@ const EleveBulletinNotes = memo((props) => {
                                                             </Row>
 
                                                             <div className="mt-2">
-                                                                <h6 className="mb-0">Nom et Prénom: {user.nom} {user.prenom}</h6>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom et Prénom: {user.nom} {user.prenom}</p>
                                                                 <p>Name and Surname</p>
                                                             </div>
 
@@ -662,14 +662,14 @@ const EleveBulletinNotes = memo((props) => {
                                                                 <Row>
                                                                     <Col sm="6" lg="6">
                                                                         <div className="mt-1">
-                                                                            <h6 className="mb-1">Né(e) le: {user.date_naissance}</h6>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-1">Né(e) le: {user.date_naissance}</p>
                                                                             <p>Born on</p>
                                                                         </div>
 
                                                                     </Col>
                                                                     <Col sm="6" lg="6">
                                                                         <div className="mt-2">
-                                                                            <h6 className="mb-0">A: {user.lieu_naissance}</h6>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">A: {user.lieu_naissance}</p>
                                                                             <p>AT</p>
                                                                         </div>
                                                                     </Col>
@@ -677,7 +677,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                 </Row>
                                                             </div>
                                                             <div className="mt-1">
-                                                                <h6 className="mb-1">Téléphone du parent ou tuteur:</h6>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-1">Téléphone du parent ou tuteur:</p>
                                                                 <p>Parent's/guardian's Address</p>
                                                             </div>
 
@@ -685,19 +685,19 @@ const EleveBulletinNotes = memo((props) => {
                                                         <Col sm="5" lg="5">
 
                                                             <div className="mt-2">
-                                                                <h6 className="mb-0">N° Matricule:</h6>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">N° Matricule:</p>
                                                                 <p>Registration N°</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <h6 className="mb-0">Redoublant:</h6>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant:</p>
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <h6 className="mb-0">Sexe: {user.sexe}</h6>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Sexe: {user.sexe}</p>
                                                                 <p>Sex</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <h6 className="mb-0">Professeur principal:</h6>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Professeur principal:</p>
                                                                 <p>Class Master/Mistress</p>
                                                             </div>
 
@@ -708,7 +708,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                 <figure className="figure">
                                                                     <Image
                                                                         className="theme-color-default-img  profile-pic rounded avatar-100"
-                                                                        src={"https://snigsbackend.com/avatar/" + user.profile_photo_path}
+                                                                        src={image}
                                                                         alt="profile-pic"
                                                                         style={{ width: "100px" }}
                                                                     />
@@ -731,8 +731,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                     <tr>
 
                                                                         <th><p>
-                                                                            Discipline
-                                                                            <br />Nom de l'enseignant
+                                                                            Discipline /Nom de l'enseignant
                                                                         </p></th>
                                                                         <th>Note</th>
                                                                         <th>Coef</th>
@@ -835,13 +834,13 @@ const EleveBulletinNotes = memo((props) => {
                                                                         <th>DISCIPLINE</th>
                                                                         <th>APPRECIATION DU TRAVAIL</th>
                                                                         <th><div className="mt-2">
-                                                                            <h6 className="mb-0">MOYENNE: {moyenneleve}</h6>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {moyenneleve}</p>
                                                                         </div>
                                                                             <div className="mt-2">
-                                                                                <h6 className="mb-0">RANG:</h6>
+                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:</p>
                                                                             </div>
                                                                             <div className="mt-2">
-                                                                                <h6 className="mb-0">MENTION:</h6>
+                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">MENTION:</p>
                                                                             </div>
                                                                         </th>
                                                                     </tr>
@@ -852,13 +851,13 @@ const EleveBulletinNotes = memo((props) => {
                                                                         <td>
                                                                             <Col sm="2">
                                                                                 <div>
-                                                                                    <QRCode value={user.nom} size={110} />
+                                                                                    <QRCode value={user.nom} size={50} />
                                                                                 </div>
                                                                             </Col>
 
                                                                         </td>
                                                                         <td>
-                                                                            <div className="mt-2">
+                                                                            <div className="mt-1">
                                                                                 <p>
 
                                                                                     Abscences non justifiées :
@@ -873,7 +872,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                             </div>
                                                                         </td>
                                                                         <td>
-                                                                            <div className="mt-2">
+                                                                            <div className="mt-1">
                                                                                 <p>Tableau d'honneur:
                                                                                     <br />
                                                                                     Encouragement:
@@ -886,7 +885,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                             </div>
                                                                         </td>
                                                                         <td>
-                                                                            <div className="mt-2">
+                                                                            <div className="mt-1">
                                                                                 <p>Moyenne de la classe:
                                                                                     <br />
                                                                                     Moyenne du premier:
@@ -926,3 +925,4 @@ const EleveBulletinNotes = memo((props) => {
 })
 
 export default EleveBulletinNotes
+
