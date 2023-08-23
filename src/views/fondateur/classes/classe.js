@@ -614,7 +614,6 @@ const UniClasse = () => {
                                                         <th>{user.langue === "en" ? (<div>Student</div>):(<div> Elève </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Parent contact</div>):(<div> Contact du parent  </div>)}</th>
                                                      
-                                                        <th> {user.langue === "en" ? (<div>Phone </div>):(<div> Téléphone   </div>)}</th>
                                                         <th>Action</th>
 
                                                     </tr>
