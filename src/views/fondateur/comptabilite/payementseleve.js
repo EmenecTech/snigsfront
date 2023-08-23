@@ -286,9 +286,7 @@ const PayementsListEleve = (props) => {
                                             <Col sm="4" lg="4">
                                                 <h3>{user.langue === "en" ? (<div>Tuition fees</div>):(<div>Frais de scolarités</div>)} </h3>
                                                 <h5 className="mb-4">{infopayement.montant_pension} XAF</h5>
-                                                <p>Nom : {eleveinfo.nom}</p>                                                 
-                                                <p>Prenom : {eleveinfo.prenom}</p>                                                 
-                                                <p>Classe: {eleveinfo.other_in_user}</p> 
+                                              
                                                 <h4 className="mb-3">Détails </h4>
                                                 {detailpayement.map((item) => (
                                                     <div className="mt-2" key={item.id}>
@@ -309,7 +307,9 @@ const PayementsListEleve = (props) => {
                                                 style={{ width: "90%", paddingTop:"10px", MarginTop: "10px" ,textAlign: "center",height: window.innerHeight }}>
                                                 <h3>{user.langue === "en" ? (<div>Payements </div>):(<div>Payements </div>)}</h3>
                                                 <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
-                                                
+                                                  <p>Nom : {eleveinfo.nom}</p>                                                 
+                                                  <p>Prenom : {eleveinfo.prenom}</p>                                                 
+                                                  <p>Classe: {eleveinfo.other_in_user}</p> 
                                                 {listpayements.map((item2) => (
                                                     <div className="mt-2" key={item2.id}>
                                                         <h6 className="mb-0">{item2.montant_payementsave} XAF</h6>
