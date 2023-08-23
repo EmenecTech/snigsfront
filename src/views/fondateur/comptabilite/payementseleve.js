@@ -16,6 +16,12 @@ import AuthUser from "../../../components/AuthUser";
 import Axios from 'axios';
 
 const PayementsListEleve = (props) => {
+    const componentRef = useRef();
+    const printData = useReactToPrint({
+        content: () => componentRef.current,
+        documentTitle: "employee data",
+        onafterprint: () => alert("print success"),
+    });
     const [imagedata, setImagedata] = useState("");
     const { niveau, classe, ideleve, idpension } = useParams();
     const [show, setShow] = useState(false);
@@ -273,6 +279,16 @@ const PayementsListEleve = (props) => {
 
                                             </Col>
                                             <Col sm="4" lg="4">
+                                                    <Button variant="primary mt-2" onClick={printData}>
+                                                        <span className="btn-inner">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                                            </svg>
+                                                        </span>
+                                                        Imprimer
+                                                    </Button>
+                                                <div ref={componentRef}
+                                                style={{ width: "100%", height: window.innerHeight }}>
                                                 <h3>{user.langue === "en" ? (<div>Payements </div>):(<div>Payements </div>)}</h3>
                                                 <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
 
@@ -290,6 +306,7 @@ const PayementsListEleve = (props) => {
 
 
                                             </Col>
+                                            </div>
 
                                         </Row>
 
