@@ -219,6 +219,10 @@ const PayementsListEleve = (props) => {
                                                             {user.langue === "en" ? (<div>Add payment</div>):(<div>  Ajouter un payement</div>)}
                                                        
                                                     </button>
+                                                    <Button variant="primary mt-2" onClick={printData}>
+                                                        
+                                                        Imprimer
+                                                    </Button>
 
 
 
@@ -296,17 +300,14 @@ const PayementsListEleve = (props) => {
 
                                             </Col>
                                             <Col sm="4" lg="4">
-                                                    <Button variant="primary mt-2" onClick={printData}>
-                                                        
-                                                        Imprimer
-                                                    </Button>
+                                                    
                                                     <br/>
                                                 <div ref={componentRef}
                                                 style={{ width: "90%", paddingTop:"10px", MarginTop: "10px" ,textAlign: "center",height: window.innerHeight }}>
                                                 <h3>{user.langue === "en" ? (<div>Payements </div>):(<div>Payements </div>)}</h3>
                                                 <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
-                                                <p>Nom :</p>
-                                                <p>Prenom :</p>
+                                                <p>Nom : {eleveinfo.nom}</p>
+                                                <p>Prenom : {eleveinfo.prenom}</p>
                                                 <p>Classe: {eleveinfo.other_in_user}</p>
 
                                                 {listpayements.map((item2) => (
