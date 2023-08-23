@@ -15,6 +15,9 @@ import http from "../../../http";
 import AuthUser from "../../../components/AuthUser";
 import Axios from 'axios';
 
+import { useReactToPrint } from "react-to-print";
+
+
 const PayementsListEleve = (props) => {
     const componentRef = useRef();
     const printData = useReactToPrint({
