@@ -174,10 +174,10 @@ const UniClasse = () => {
 
     return (
         <Fragment>
-            // <FsLightbox
-            //     toggler={toggler}
-            //     sources={[icon4, shap2, icon8, shap4, icon2, shap6, icon5, shap4, icon1]}
-            // />
+            <FsLightbox
+                toggler={toggler}
+                sources={[icon4, shap2, icon8, shap4, icon2, shap6, icon5, shap4, icon1]}
+            />
             <Tab.Container defaultActiveKey="first">
                 <Row>
                     <Col lg="12">
