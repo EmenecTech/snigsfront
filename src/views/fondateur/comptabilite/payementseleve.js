@@ -66,7 +66,7 @@ const PayementsListEleve = (props) => {
     }
 
 
-
+        console.log(eleveinfo)
     
 
     const handleChange = (event) => {
