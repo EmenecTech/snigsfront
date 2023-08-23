@@ -119,7 +119,7 @@ const ListClasses = memo((props) => {
 
     const deleteClasses = (id) => {
         http.delete('/delete_classes/' + id).then(res => {
-            fetchAllclasses();
+            fetchAllclasses(); 
         })
     }
 
