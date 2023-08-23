@@ -307,9 +307,9 @@ const PayementsListEleve = (props) => {
                                                 }
 
 
-
-                                            </Col>
                                             </div>
+                                            </Col>
+                                         
 
                                         </Row>
 
