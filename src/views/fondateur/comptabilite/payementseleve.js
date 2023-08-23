@@ -291,7 +291,7 @@ const PayementsListEleve = (props) => {
                                                         Imprimer
                                                     </Button>
                                                 <div ref={componentRef}
-                                                style={{ width: "100%", height: window.innerHeight }}>
+                                                style={{ width: "90%", height: window.innerHeight }}>
                                                 <h3>{user.langue === "en" ? (<div>Payements </div>):(<div>Payements </div>)}</h3>
                                                 <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
 
