@@ -459,7 +459,7 @@ const InscriptionEleve = memo((props) => {
                             <div className="text-center mt-2">
                                 <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Inscrire</div>):(<div> Register </div>)}</Button>
                             </div>
-                            
+                        </Form>    
                         </Card.Body>
                     </Card>
                 </Col>
