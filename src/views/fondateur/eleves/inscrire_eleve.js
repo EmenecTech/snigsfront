@@ -440,7 +440,7 @@ const InscriptionEleve = memo((props) => {
                             </Form.Group>
                         </Col>
                                       </Row>
-                                      <div className="divider">Information du parent</div>
+                                      
                                       <Row>
     <Col>
                             <Form.Group className="form-group">
@@ -549,9 +549,6 @@ const InscriptionEleve = memo((props) => {
                                 />
                             </Form.Group>
                         </Col>
-                                      
-                                      </Row>
-                                      <Row>
                                       <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
@@ -566,6 +563,13 @@ const InscriptionEleve = memo((props) => {
                                 />
                             </Form.Group>
                         </Col>
+                                      
+                                      </Row>
+                                     
+
+
+                                      
+                                      <Row>
                                       <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
@@ -580,11 +584,6 @@ const InscriptionEleve = memo((props) => {
                                 />
                             </Form.Group>
                         </Col>
-                                      </Row>
-
-
-                                      
-                                      <Row>
                         <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Choose the class</div>):(<div>Choisissez la classe</div>)}</Form.Label>
@@ -601,7 +600,7 @@ const InscriptionEleve = memo((props) => {
                                         </Row>
 
                             <div className="text-center mt-2">
-                                <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Inscrire</div>):(<div> Register </div>)}</Button>
+                                <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Register</div>):(<div>Inscrire</div>)}</Button>
                             </div>
                         </Form>    
                         </Card.Body>
