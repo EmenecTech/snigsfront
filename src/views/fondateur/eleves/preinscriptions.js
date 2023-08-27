@@ -431,6 +431,26 @@ const ListPreinscriptions = memo((props) => {
                         </Form.Group>
                       </Col>
                     </Row>
+                                <Row>
+                                <Col>
+                                            <Form.Group as={Row} className="form-group">
+                                                <Form.Group className="form-group">
+                                                    <Form.Label htmlFor="exampleInputText1">Date de naissance </Form.Label>
+                                                    <Form.Control type="date" defaultValue="" name="date_n" onChange={handleChange} />
+                                                </Form.Group>
+                                            </Form.Group>
+                                        </Col>
+                                </Row>
+                                <Row>
+                                        <Col>
+                                            <Form.Group as={Row} className="form-group">
+                                                <Form.Group className="form-group">
+                                                    <Form.Label htmlFor="exampleInputText1">Lieu de naissance </Form.Label>
+                                                    <Form.Control type="text" defaultValue="" name="lieu_n" onChange={handleChange} required />
+                                                </Form.Group>
+                                            </Form.Group>
+                                        </Col>
+                                </Row>
                     <Row>
                       <Col>
                         <Form.Group as={Row} className="form-group">
