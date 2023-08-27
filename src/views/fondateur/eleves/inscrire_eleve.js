@@ -531,9 +531,8 @@ const InscriptionEleve = memo((props) => {
                                 />
                             </Form.Group>
                         </Col>
-                                      </Row>
-                                      <Row>
-                        <Col>
+
+                                      <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
                                 {user.langue === "en" ? (<div>Parent surname 2</div>):(<div>  Prénom du parent 2</div>)}
@@ -548,6 +547,9 @@ const InscriptionEleve = memo((props) => {
                        
                             </Form.Group>
                         </Col>
+                                      </Row>
+                                      <Row>
+                        
                         <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
@@ -576,13 +578,6 @@ const InscriptionEleve = memo((props) => {
                                 />
                             </Form.Group>
                         </Col>
-                                      
-                                      </Row>
-                                     
-
-
-                                      
-                                      <Row>
                                       <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
@@ -597,8 +592,10 @@ const InscriptionEleve = memo((props) => {
                                 />
                             </Form.Group>
                         </Col>
-                        
-                                        </Row>
+                                      
+                                      </Row>
+                                     
+
 
                             <div className="text-center mt-2">
                                 <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Register</div>):(<div>Inscrire</div>)}</Button>
