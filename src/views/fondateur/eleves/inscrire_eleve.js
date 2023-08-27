@@ -371,19 +371,30 @@ const InscriptionEleve = memo((props) => {
                         </Card.Header>
                         <Card.Body>
 
+                        <Form>
+                        <Row>
+                        <Col>
+
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Name </div>):(<div> Nom </div>)}</Form.Label>
                                 <Form.Control type="text" id="exampleInputReadonly" disabled defaultValue={eleve.nom} />
                             </Form.Group>
+                        </Col>
+                        <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Surname</div>):(<div>Prénom </div>)}</Form.Label>
                                 <Form.Control type="text" id="exampleInputReadonly" disabled defaultValue={eleve.prenom} />
                             </Form.Group>
+                        </Col>
+                        </Row>
+    <Row>
+                        <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)}</Form.Label>
                                 <Form.Control type="text" id="exampleInputReadonly" disabled defaultValue={niveau} />
                             </Form.Group>
-
+                        </Col>
+                        <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
                                 {user.langue === "en" ? (<div>Parent name</div>):(<div>  Nom du parent </div>)}
@@ -396,6 +407,10 @@ const InscriptionEleve = memo((props) => {
                                   required
                                 />
                             </Form.Group>
+                        </Col>
+                                      </Row>
+                                      <Row>
+                        <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
                                 {user.langue === "en" ? (<div>Parent surname</div>):(<div>  Prénom du parent </div>)}
@@ -409,6 +424,8 @@ const InscriptionEleve = memo((props) => {
                                 />
                        
                             </Form.Group>
+                        </Col>
+                        <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
                                 {user.langue === "en" ? (<div>Parent contact</div>):(<div>  Contact du parent </div>)}
@@ -420,7 +437,11 @@ const InscriptionEleve = memo((props) => {
                                   onChange={handleChange}
                                   required
                                 />
-                            </Form.Group> 
+                            </Form.Group>
+                        </Col>
+                                      </Row>
+                                      <Row>
+                        <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Choose the class</div>):(<div>Choisissez la classe</div>)}</Form.Label>
                                 <select className="form-select mb-3 shadow-none" name="classe" onChange={handleChange}>
@@ -432,6 +453,8 @@ const InscriptionEleve = memo((props) => {
 
                                 </select>
                             </Form.Group>
+                        </Col>
+                                        </Row>
 
                             <div className="text-center mt-2">
                                 <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Inscrire</div>):(<div> Register </div>)}</Button>
