@@ -440,7 +440,7 @@ const InscriptionEleve = memo((props) => {
                             </Form.Group>
                         </Col>
                                       </Row>
-                                      <div className='divider'></div>
+                                      <div className="divider">Information du parent</div>
                                       <Row>
     <Col>
                             <Form.Group className="form-group">
