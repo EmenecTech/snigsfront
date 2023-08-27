@@ -397,7 +397,7 @@ const InscriptionEleve = memo((props) => {
                         <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
-                                {user.langue === "en" ? (<div>Parent name</div>):(<div>  Nom du parent </div>)}
+                                {user.langue === "en" ? (<div>Parent name 1</div>):(<div>  Nom du parent 1</div>)}
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
@@ -413,7 +413,7 @@ const InscriptionEleve = memo((props) => {
                         <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
-                                {user.langue === "en" ? (<div>Parent surname</div>):(<div>  Prénom du parent </div>)}
+                                {user.langue === "en" ? (<div>Parent surname 1</div>):(<div>  Prénom du parent 1</div>)}
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
@@ -428,7 +428,102 @@ const InscriptionEleve = memo((props) => {
                         <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
-                                {user.langue === "en" ? (<div>Parent contact</div>):(<div>  Contact du parent </div>)}
+                                {user.langue === "en" ? (<div>Parent contact 1</div>):(<div>  Contact du parent 1</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue=""
+                                  name="numero_parent"
+                                  onChange={handleChange}
+                                  required
+                                />
+                            </Form.Group>
+                        </Col>
+                                      
+                                      </Row>
+
+                                      <Row>
+                                      <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Profession of parent 1</div>):(<div>  Profession du parent 1</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue=""
+                                  name="numero_parent"
+                                  onChange={handleChange}
+                                  required
+                                />
+                            </Form.Group>
+                        </Col>
+                        
+                        <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Parent name 2</div>):(<div>  Nom du parent 2</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue=""
+                                  name="nom_parent"
+                                  onChange={handleChange}
+                                  required
+                                />
+                            </Form.Group>
+                        </Col>
+                                      </Row>
+                                      <Row>
+                        <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Parent surname 2</div>):(<div>  Prénom du parent 2</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue=""
+                                  name="prenom_parent"
+                                  onChange={handleChange}
+                                  required
+                                />
+                       
+                            </Form.Group>
+                        </Col>
+                        <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Parent contact 2</div>):(<div>  Contact du parent 2</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue=""
+                                  name="numero_parent"
+                                  onChange={handleChange}
+                                  required
+                                />
+                            </Form.Group>
+                        </Col>
+                                      
+                                      </Row>
+                                      <Row>
+                                      <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Profession of parent 2</div>):(<div>  Profession du parent 2</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue=""
+                                  name="numero_parent"
+                                  onChange={handleChange}
+                                  required
+                                />
+                            </Form.Group>
+                        </Col>
+                                      <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Address of parent</div>):(<div>  Adresse du parent</div>)}
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
@@ -440,6 +535,9 @@ const InscriptionEleve = memo((props) => {
                             </Form.Group>
                         </Col>
                                       </Row>
+
+
+                                      
                                       <Row>
                         <Col>
                             <Form.Group className="form-group">
