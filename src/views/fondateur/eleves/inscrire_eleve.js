@@ -386,14 +386,15 @@ const InscriptionEleve = memo((props) => {
                                 <Form.Control type="text" id="exampleInputReadonly" disabled defaultValue={eleve.prenom} />
                             </Form.Group>
                         </Col>
-                        </Row>
-    <Row>
-                        <Col>
+    <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)}</Form.Label>
                                 <Form.Control type="text" id="exampleInputReadonly" disabled defaultValue={niveau} />
                             </Form.Group>
                         </Col>
+                        </Row>
+    <Row>
+                        
     <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Is the student a repeat student?</div>):(<div>L'élève est-il  redoublant?</div>)}</Form.Label>
@@ -401,7 +402,7 @@ const InscriptionEleve = memo((props) => {
                                     <option></option>
                                     
                                         <option value='oui'>Oui</option>
-    <option value='non'>Non</option>
+                                        <option value='non'>Non</option>
     
                                     
 
@@ -409,9 +410,6 @@ const InscriptionEleve = memo((props) => {
                                 </select>
                             </Form.Group>
                         </Col>
-                        
-                                      </Row>
-    <Row>
     <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
@@ -426,6 +424,7 @@ const InscriptionEleve = memo((props) => {
                                 />
                             </Form.Group>
                         </Col>
+    
                                       </Row>
                                       <Row>
     <Col>
