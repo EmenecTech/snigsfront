@@ -394,7 +394,56 @@ const InscriptionEleve = memo((props) => {
                                 <Form.Control type="text" id="exampleInputReadonly" disabled defaultValue={niveau} />
                             </Form.Group>
                         </Col>
-                        <Col>
+    <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Is the student a repeat student?</div>):(<div>L'élève est-il  redoublant?</div>)}</Form.Label>
+                                <select className="form-select mb-3 shadow-none" name="redouble" onChange={handleChange}>
+                                    <option></option>
+                                    
+                                        <option value='oui'>Oui</option>
+    <option value='non'>Non</option>
+    
+                                    
+
+
+                                </select>
+                            </Form.Group>
+                        </Col>
+                        
+                                      </Row>
+    <Row>
+    <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Health situation</div>):(<div>Situation santé</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue=""
+                                  name="situation"
+                                  onChange={handleChange}
+                                  required
+                                />
+                            </Form.Group>
+                        </Col>
+                                      </Row>
+                                      <Row>
+    <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Nature of the problem and action to be taken</div>):(<div>Nature du problème et disposition à prendre</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  as="textarea" id="desc_sante" name="desc_sante" rows="5"
+                                  onChange={handleChange}
+                                  required
+                                />
+                            </Form.Group>
+                        </Col>
+                                      </Row>
+                                      <div className='divider'></div>
+                                      <Row>
+    <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
                                 {user.langue === "en" ? (<div>Parent name 1</div>):(<div>  Nom du parent 1</div>)}
@@ -408,8 +457,6 @@ const InscriptionEleve = memo((props) => {
                                 />
                             </Form.Group>
                         </Col>
-                                      </Row>
-                                      <Row>
                         <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
@@ -451,7 +498,7 @@ const InscriptionEleve = memo((props) => {
                                 <Form.Control
                                   type="text"
                                   defaultValue=""
-                                  name="numero_parent"
+                                  name="profession_1"
                                   onChange={handleChange}
                                   required
                                 />
@@ -466,7 +513,7 @@ const InscriptionEleve = memo((props) => {
                                 <Form.Control
                                   type="text"
                                   defaultValue=""
-                                  name="nom_parent"
+                                  name="nom_parent_2"
                                   onChange={handleChange}
                                   required
                                 />
@@ -482,7 +529,7 @@ const InscriptionEleve = memo((props) => {
                                 <Form.Control
                                   type="text"
                                   defaultValue=""
-                                  name="prenom_parent"
+                                  name="prenom_parent_2"
                                   onChange={handleChange}
                                   required
                                 />
@@ -497,7 +544,7 @@ const InscriptionEleve = memo((props) => {
                                 <Form.Control
                                   type="text"
                                   defaultValue=""
-                                  name="numero_parent"
+                                  name="numero_parent_2"
                                   onChange={handleChange}
                                   required
                                 />
@@ -514,7 +561,7 @@ const InscriptionEleve = memo((props) => {
                                 <Form.Control
                                   type="text"
                                   defaultValue=""
-                                  name="numero_parent"
+                                  name="profession_2"
                                   onChange={handleChange}
                                   required
                                 />
