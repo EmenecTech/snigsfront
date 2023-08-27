@@ -394,6 +394,19 @@ const InscriptionEleve = memo((props) => {
                         </Col>
                         </Row>
     <Row>
+    <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Choose the class</div>):(<div>Choisissez la classe</div>)}</Form.Label>
+                                <select className="form-select mb-3 shadow-none" name="classe" onChange={handleChange}>
+                                    <option></option>
+                                    {classes.map((item) => (
+                                        <option key={item.id} value={item.intitule_classe}>{item.intitule_classe}</option>
+                                    ))}
+
+
+                                </select>
+                            </Form.Group>
+                        </Col>
                         
     <Col>
                             <Form.Group className="form-group">
@@ -584,19 +597,7 @@ const InscriptionEleve = memo((props) => {
                                 />
                             </Form.Group>
                         </Col>
-                        <Col>
-                            <Form.Group className="form-group">
-                                <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Choose the class</div>):(<div>Choisissez la classe</div>)}</Form.Label>
-                                <select className="form-select mb-3 shadow-none" name="classe" onChange={handleChange}>
-                                    <option></option>
-                                    {classes.map((item) => (
-                                        <option key={item.id} value={item.intitule_classe}>{item.intitule_classe}</option>
-                                    ))}
-
-
-                                </select>
-                            </Form.Group>
-                        </Col>
+                        
                                         </Row>
 
                             <div className="text-center mt-2">
