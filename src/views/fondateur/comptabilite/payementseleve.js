@@ -326,8 +326,26 @@ const PayementsListEleve = (props) => {
 
                                                     
                                                         </div>
-                                                        <div></div>
+                                                        <div>
 
+
+                                                                        <Image
+                                                                          className="theme-color-default-img  profile-pic rounded avatar-100"
+                                                                          src={"https://snigsbackend.com/logo_etab/" + idetab + ".png"}
+                                                                          alt="profile-pic"
+                                                                          roundedCircle="yes"
+                                                                          style={{ width: "10px" }}
+                                                                        />
+
+                                                                            <p>Signature</p>
+                                                                        
+                                                                        
+                                                                        
+                                                       </div>
+
+
+
+                                                                        
                                                     </div>
                                                 
 
