@@ -304,10 +304,10 @@ const PayementsListEleve = (props) => {
                                                     
                                                     <br/>
                                                 <div ref={componentRef}
-                                                style={{ width: "90%", paddingTop:"10px", MarginTop: "10px" ,height: window.innerHeight }}>
+                                                style={{ width: "90%", paddingTop:"15px", MarginTop: "10px" ,height: window.innerHeight }}>
                                                    <div className="d-flex justify-content-between">
 
-                                                        <div style={{ paddingLeft:"15px" }}>
+                                                        <div style={{ paddingLeft:"25px" }}>
 
                                                                 <h3>{user.langue === "en" ? (<div>Payements </div>):(<div>Payements </div>)}</h3>
                                                                     <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
@@ -326,7 +326,7 @@ const PayementsListEleve = (props) => {
 
                                                     
                                                         </div>
-                                                        <div>
+                                                        <div style={{ paddingRight:"25px" }}>
 
 
                                                                         <Image
@@ -336,8 +336,8 @@ const PayementsListEleve = (props) => {
                                                                           roundedCircle="yes"
                                                                           style={{ width: "10px" }}
                                                                         />
-
-                                                                            <p>Signature</p>
+                                                                        <br/> <br/>
+                                                                        <h3>Signature</h3>
                                                                         
                                                                         
                                                                         
