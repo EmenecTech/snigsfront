@@ -326,7 +326,7 @@ const PayementsListEleve = (props) => {
 
                                                     
                                                         </div>
-                                                        <div style={{ paddingRight:"25px" }}>
+                                                        <div style={{ paddingRight:"35px" }}>
 
 
                                                                         <Image
