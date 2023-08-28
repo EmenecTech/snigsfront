@@ -458,7 +458,7 @@ const InscriptionEleve = memo((props) => {
     <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
-                                {user.langue === "en" ? (<div>Parent name 1</div>):(<div>  Nom du parent 1</div>)}
+                                {user.langue === "en" ? (<div>father's name</div>):(<div>  Nom du père</div>)}
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
@@ -472,7 +472,7 @@ const InscriptionEleve = memo((props) => {
                         <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
-                                {user.langue === "en" ? (<div>Parent surname 1</div>):(<div>  Prénom du parent 1</div>)}
+                                {user.langue === "en" ? (<div>Father's first name</div>):(<div>  Prénom du père</div>)}
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
@@ -487,7 +487,7 @@ const InscriptionEleve = memo((props) => {
                         <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
-                                {user.langue === "en" ? (<div>Parent contact 1</div>):(<div>  Contact du parent 1</div>)}
+                                {user.langue === "en" ? (<div>Father's contact 1</div>):(<div>Contact du père</div>)}
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
@@ -500,12 +500,11 @@ const InscriptionEleve = memo((props) => {
                         </Col>
                                       
                                       </Row>
-
                                       <Row>
                                       <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
-                                {user.langue === "en" ? (<div>Profession of parent 1</div>):(<div>  Profession du parent 1</div>)}
+                                {user.langue === "en" ? (<div>Father's profession</div>):(<div>Profession du père</div>)}
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
@@ -516,11 +515,30 @@ const InscriptionEleve = memo((props) => {
                                 />
                             </Form.Group>
                         </Col>
+
+                                      <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Father's address</div>):(<div>Adresse du père</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue=""
+                                  name="adresse_parent"
+                                  onChange={handleChange}
+                                  required
+                                />
+                            </Form.Group>
+                        </Col>
+                                      </Row>
+
+                                      <Row>
+                                      
                         
                         <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
-                                {user.langue === "en" ? (<div>Parent name 2</div>):(<div>  Nom du parent 2</div>)}
+                                {user.langue === "en" ? (<div>Mother's name</div>):(<div>Nom de la mère</div>)}
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
@@ -535,7 +553,7 @@ const InscriptionEleve = memo((props) => {
                                       <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
-                                {user.langue === "en" ? (<div>Parent surname 2</div>):(<div>  Prénom du parent 2</div>)}
+                                {user.langue === "en" ? (<div>Mother's surname 2</div>):(<div>Prénom de la mère</div>)}
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
@@ -547,13 +565,10 @@ const InscriptionEleve = memo((props) => {
                        
                             </Form.Group>
                         </Col>
-                                      </Row>
-                                      <Row>
-                        
-                        <Col>
+                                      <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
-                                {user.langue === "en" ? (<div>Parent contact 2</div>):(<div>  Contact du parent 2</div>)}
+                                {user.langue === "en" ? (<div>Mother's contact 2</div>):(<div>Contact de la mère</div>)}
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
@@ -564,10 +579,14 @@ const InscriptionEleve = memo((props) => {
                                 />
                             </Form.Group>
                         </Col>
+                                      </Row>
+                                      <Row>
+                        
+                        
                                       <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
-                                {user.langue === "en" ? (<div>Profession of parent 2</div>):(<div>  Profession du parent 2</div>)}
+                                {user.langue === "en" ? (<div>Mother's profession</div>):(<div>  Profession de la mère</div>)}
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
@@ -581,12 +600,12 @@ const InscriptionEleve = memo((props) => {
                                       <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">
-                                {user.langue === "en" ? (<div>Address of parent</div>):(<div>  Adresse du parent</div>)}
+                                {user.langue === "en" ? (<div>Mother's address</div>):(<div>Adresse de la mère</div>)}
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
                                   defaultValue=""
-                                  name="adresse_parent"
+                                  name="adresse_parent_2"
                                   onChange={handleChange}
                                   required
                                 />
