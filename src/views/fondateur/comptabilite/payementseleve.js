@@ -304,21 +304,32 @@ const PayementsListEleve = (props) => {
                                                     
                                                     <br/>
                                                 <div ref={componentRef}
-                                                style={{ width: "90%", paddingTop:"10px", MarginTop: "10px" ,textAlign: "center",height: window.innerHeight }}>
-                                                <h3>{user.langue === "en" ? (<div>Payements </div>):(<div>Payements </div>)}</h3>
-                                                <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
-                                                  <p>Nom : {eleveinfo.nom}</p>                                                 
-                                                  <p>Prenom : {eleveinfo.prenom}</p>                                                 
-                                                  <p>Classe: {eleveinfo.other_in_user}</p> 
-                                                {listpayements.map((item2) => (
-                                                    <div className="mt-2" key={item2.id}>
-                                                        <h6 className="mb-0">{item2.montant_payementsave} XAF</h6>
-                                                        <p>{item2.intitule_payementsave} <br />
-                                                            ({item2.date_payementsave})
-                                                        </p>
+                                                style={{ width: "90%", paddingTop:"10px", MarginTop: "10px" ,height: window.innerHeight }}>
+                                                   <div className="d-flex justify-content-between">
+
+                                                        <div>
+
+                                                                <h3>{user.langue === "en" ? (<div>Payements </div>):(<div>Payements </div>)}</h3>
+                                                                    <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
+                                                                      <p>Nom : {eleveinfo.nom}</p>                                                 
+                                                                      <p>Prenom : {eleveinfo.prenom}</p>                                                 
+                                                                      <p>Classe: {eleveinfo.other_in_user}</p> 
+                                                                    {listpayements.map((item2) => (
+                                                                        <div className="mt-2" key={item2.id}>
+                                                                            <h6 className="mb-0">{item2.montant_payementsave} XAF</h6>
+                                                                            <p>{item2.intitule_payementsave} <br />
+                                                                                ({item2.date_payementsave})
+                                                                            </p>
+                                                                        </div>
+                                                                    ))
+                                                                    }
+
+                                                    
+                                                        </div>
+                                                        <div></div>
+
                                                     </div>
-                                                ))
-                                                }
+                                                
 
 
                                             </div>
