@@ -220,6 +220,7 @@ const PayementsListEleve = (props) => {
                                                             {user.langue === "en" ? (<div>Add payment</div>):(<div>  Ajouter un payement</div>)}
                                                        
                                                     </button>
+                                                     {" "}
                                                     <Button variant="primary mt-2" onClick={printData}>
                                                         
                                                         Imprimer
