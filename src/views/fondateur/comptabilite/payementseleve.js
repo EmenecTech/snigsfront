@@ -307,7 +307,7 @@ const PayementsListEleve = (props) => {
                                                 style={{ width: "90%", paddingTop:"10px", MarginTop: "10px" ,height: window.innerHeight }}>
                                                    <div className="d-flex justify-content-between">
 
-                                                        <div>
+                                                        <div style={{ paddingLeft:"15px" }}>
 
                                                                 <h3>{user.langue === "en" ? (<div>Payements </div>):(<div>Payements </div>)}</h3>
                                                                     <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
