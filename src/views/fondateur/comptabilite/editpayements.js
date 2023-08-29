@@ -107,7 +107,7 @@ const EditPensions = memo((props) => {
     }, []);
 
     const fetchAllpayement = () => {
-        http.get('/info/payement/' + etab).then(res => {
+        http.get('/info/payement/' + idpension).then(res => {
             setpayement(res.data);
         })
     }
