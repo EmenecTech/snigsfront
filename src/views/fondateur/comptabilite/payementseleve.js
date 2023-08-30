@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Button, Col, Modal, Form, Image, Row } from "react-bootstrap";
+import { Button, Col, Modal, Form, Image, Row, Table } from "react-bootstrap";
 import Card from "../../../components/Card";
 
 import { Link, useNavigate, useParams } from "react-router-dom";
