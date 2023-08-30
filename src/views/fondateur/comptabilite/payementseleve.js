@@ -195,6 +195,7 @@ const PayementsListEleve = (props) => {
     const detelepayementeleve = (id) => {
         http.delete('delete_payement_eleve/' + id).then(res => {
             fetchAlllistpayements();
+            fetchAllpayementsum();
         })
     }
 
