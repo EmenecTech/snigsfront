@@ -62,7 +62,7 @@ export default function LoginSnigs() {
       }
         
                 
-            });
+            }); 
    }
    let history = useNavigate()
    return (
