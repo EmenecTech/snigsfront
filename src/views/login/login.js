@@ -35,7 +35,7 @@ export default function LoginSnigs() {
             }
             alert(`HTTP status: ${response.status}`);
             setToken(response.data.user, response.data.access_token);
-            navigate('/Main');
+         
         }).catch(error => {
             console.error(error);
             
