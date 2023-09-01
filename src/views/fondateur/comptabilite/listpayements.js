@@ -93,10 +93,13 @@ const ListPensions = memo((props) => {
         })
     }
       const deletePayements = (id) => {
+         if (window.confirm("Voulez vous supprimer cet élément?") == true){
         http.delete('/delete_payements/' + id).then(res => {
             fetchAllpayements();
         })
+             alert('Supprimé!');
     }
+      }
 
 
 
