@@ -37,7 +37,7 @@ export default function LoginSnigs() {
             navigate('/Main');
         }).catch(error => {
             console.error(error);
-            });;
+            });
    }
    let history = useNavigate()
    return (
