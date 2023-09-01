@@ -18,6 +18,7 @@ import { HttpStatusCode } from 'axios'
 export default function LoginSnigs() {
    const { http, setToken } = AuthUser();
    const [email, setEmail] = useState();
+   var a;
 
    const [password, setPassword] = useState();
    const [status, setStatus] = useState(null)
@@ -39,8 +40,6 @@ export default function LoginSnigs() {
             console.error(error);
             
       if (error.response.status === 401) {
-
-        
         alert('Vous n\'êtes pas autorisé à accéder à cette page.');
 
       } else if (error.response.status === 404) {
