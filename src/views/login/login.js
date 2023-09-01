@@ -18,15 +18,42 @@ import { HttpStatusCode } from 'axios'
 export default function LoginSnigs() {
    const { http, setToken } = AuthUser();
    const [email, setEmail] = useState();
-     const navigate = useNavigate();
-
    const [password, setPassword] = useState();
-   const [status, setStatus] = useState(null)
+   const [status, setStatus] = useState(null);
    const submitForm = () => {
       http.post('login', { email: email, password: password }).then((res) => {
          /* console.log(res.data); */
          setToken(res.data.user, res.data.access_token);
       })
+       http.post('login', { email: email, password: password }).then(response => {
+         console.log(response.status);
+         setStatus(response.status); 
+         setToken(response.data.user, response.data.access_token);
+     }).catch(error => {
+         console.error(error);
+         
+   if (error.response.status === 401) {
+ 
+     alert('Vous n\'êtes pas autorisé à accéder à cette page.');
+
+   } else if (error.response.status === 404) {
+
+     alert('La page que vous recherchez est introuvable.');
+
+   } else if (error.response.status === 500) {
+
+     alert ( 'Vous avez des problèmes de connexion ');
+
+   } else if (error.response.status === 504) {
+
+     alert ('Vous avez des problèmes de connexion ');
+
+   } else {
+
+     alert ('Problème de connexion');
+     
+   }     
+         });
    }
    let history = useNavigate()
    return (
