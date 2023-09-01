@@ -26,7 +26,7 @@ export default function LoginSnigs() {
          /* console.log(res.data); */
          setToken(res.data.user, res.data.access_token);
       })
-      http.post('login', { email: email, password: password }).then(response => {
+    http.post('login', { email: email, password: password }).then(response => {
             console.log(response.status);
             setStatus(response.status);
             if (!response.status){
@@ -37,6 +37,31 @@ export default function LoginSnigs() {
             navigate('/Main');
         }).catch(error => {
             console.error(error);
+            
+      if (error.response.status === 401) {
+
+        
+        alert('Vous n\'êtes pas autorisé à accéder à cette page.');
+
+      } else if (error.response.status === 404) {
+
+        alert('La page que vous recherchez est introuvable.');
+ 
+      } else if (error.response.status === 500) {
+
+        alert ( 'Vous avez des problèmes de connexion ');
+
+      } else if (error.response.status === 504) {
+
+        alert ('Vous avez des problèmes de connexion ');
+
+      } else {
+
+        alert ('Problème de connexion');
+        
+      }
+        
+                
             });
    }
    let history = useNavigate()
