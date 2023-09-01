@@ -18,7 +18,7 @@ import { HttpStatusCode } from 'axios'
 export default function LoginSnigs() {
    const { http, setToken } = AuthUser();
    const [email, setEmail] = useState();
-   var a;
+     const navigate = useNavigate();
 
    const [password, setPassword] = useState();
    const [status, setStatus] = useState(null)
@@ -58,9 +58,7 @@ export default function LoginSnigs() {
 
         alert ('Problème de connexion');
         
-      }
-        
-                
+      }             
             }); 
    }
    let history = useNavigate()
