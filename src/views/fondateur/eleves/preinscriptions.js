@@ -462,7 +462,7 @@ const ListPreinscriptions = memo((props) => {
                               className="form-select mb-3 shadow-none"
                               name="niveau"
                               onChange={handleChange}
-                            >
+                            required>
                               <option></option>
                               {niveaux.map((item) => (
                                 <option
