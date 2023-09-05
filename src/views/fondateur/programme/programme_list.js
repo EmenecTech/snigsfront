@@ -94,7 +94,7 @@ const ListProgramme = memo((props) => {
         http.delete('/delete_programme/' + id).then(res => {
             fetchAllevaluations();
         })
-             alert(''Supprimé!);
+             alert('Supprimé!');
     }
     }
 
