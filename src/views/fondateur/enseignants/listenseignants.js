@@ -136,9 +136,12 @@ const EnseignantsListe = () => {
 
 
     const deleteEnseignants = (id) => {
+         if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http.delete('/enseignant/' + id).then(res => {
             fetchAllUser();
         })
+             alert('Supprimé!');
+    }
     }
 
     return (
