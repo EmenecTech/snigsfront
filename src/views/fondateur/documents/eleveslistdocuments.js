@@ -114,7 +114,7 @@ const AdminlistdocumentsEleves = memo((props) => {
              http.delete('/delete_documents/' + id).then(res => {
             fetchAllfichiers();
         }
-       alert('supprimé);
+       alert('supprimé');
         })
     }
 
