@@ -90,9 +90,12 @@ const ListProgramme = memo((props) => {
     }
 
     const deleteProgramme = (id) => {
+         if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http.delete('/delete_programme/' + id).then(res => {
             fetchAllevaluations();
         })
+             alert(''Supprimé!);
+    }
     }
 
 
