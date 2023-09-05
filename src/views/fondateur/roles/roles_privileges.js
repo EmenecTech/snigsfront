@@ -84,6 +84,7 @@ const RolesPrivilegesAdmin = memo((props) => {
   };
 
      const deletePrivileges_roles = (codepriv) => {
+        if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http
             .delete(
                 "/delete_privileges_roles/" + etab + "/" + id_role + "/" + codepriv
@@ -91,7 +92,9 @@ const RolesPrivilegesAdmin = memo((props) => {
             .then((res) => {
                 fetchAllprivilegeRole();
             });
+          alert('Supprimé!');
     };
+     }
 
 
 
