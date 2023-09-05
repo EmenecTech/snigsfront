@@ -133,9 +133,12 @@ const MembresAdministration = () => {
 
     
     const deleteMembres = (id) => {
+         if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http.delete('/delete_membres/' + id).then(res => {
             fetchAllMembres();
         })
+             alert('Supprimé!');
+    }
     }
 
 
