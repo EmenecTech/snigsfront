@@ -15,7 +15,7 @@ import shap6 from '../../../assets/images/shapes/06.png'
 const userlist = [
     {
         img: `${shap1}`,
-        name: 'Anna Sthesia',
+        name: 'Anna Sthesia', 
         phone: '(760) 756 7568',
         email: 'annasthesia@gmail.com',
         country: 'USA',
