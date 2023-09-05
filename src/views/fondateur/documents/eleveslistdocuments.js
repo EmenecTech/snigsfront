@@ -15,7 +15,7 @@ import AOS from "aos";
 import "../../../../node_modules/aos/dist/aos";
 import "../../../../node_modules/aos/dist/aos.css";
 //apexcharts
-import Chart from "react-apexcharts";
+import Chart from "react-apexcharts"; 
 
 //swiper
 import { Swiper, SwiperSlide } from "swiper/react";
