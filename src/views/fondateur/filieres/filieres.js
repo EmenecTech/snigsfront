@@ -94,10 +94,14 @@ const ListFilieres = memo((props) => {
     }
 
 const deleteFiliere = (id) => {
-    http.delete("/filieres/" + id).then((res) => {
+    if(window.confirm("Voulez-vous supprimer cet élément?") == true){
+         http.delete("/filieres/" + id).then((res) => {
       fetchAllfilieres();
-    });
-  };
+    })
+        alert('Supprimé!')
+    }
+   
+  }
 
 
 
