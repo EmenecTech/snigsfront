@@ -70,10 +70,13 @@ const ListMatieres = memo((props) => {
   };
 
   const deleteMatieres = (id) => {
+    if(window.confirm("Voulez-vous supprimer cet élément?") == true){
     http.delete("/matieres/" + id).then((res) => {
       fetchAllfilieres();
     });
+      alert('Supprimé!');
   };
+  }
 
   useSelector(SettingSelector.theme_color);
 
