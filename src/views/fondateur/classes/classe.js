@@ -157,18 +157,22 @@ const UniClasse = () => {
 
 
      const deleteMatieres_classe = (id) => {
+          if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http.delete('/delete_all_matieres_for_classe/' + id).then(res => {
             fetchAllmatieres_classe();
         })
+              alert('Supprimé!');
     }
-
+     }
     //20/07/2023
     const deleteEleves_classe = (id) => {
+          if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http.put('/delete_eleves_in_classe/' + id).then(res => {
             window.location.reload(false);
         })
+             alert('Supprimé!'); 
     }
-
+    }
 
 
 
