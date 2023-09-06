@@ -47,9 +47,12 @@ const Eleve_list_Chapitre = (props) => {
     }
 
     const deleteChapitres = (id) => {
+          if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http.delete('/chapitres/' + id).then(res => {
             fetchAllChapitres();
         })
+              alert('Supprimé!');
+    }
     }
     return (
         <>
