@@ -24,9 +24,12 @@ const AdminListRequest = () => {
 
 
     const deleteUser = (id) => {
+         if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http.delete("/eleve_requetes/" + id).then((res) => {
             fetchAllUsers();
         });
+             alert('Supprimé!');
+    };
     };
 
     return (
