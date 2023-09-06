@@ -1081,9 +1081,9 @@ const EleveBulletinNotes = memo((props) => {
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                            <td>{item.coefficient_note}</td>
-                                                                            <td>{item.note_finale}</td>
-                                                                            <td>{item.competence_visee_note}</td>
+                                                                            // <td>{item.coefficient_note}</td>
+                                                                            // <td>{item.note_finale}</td>
+                                                                            // <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
 
                                                                         </tr>
@@ -1127,7 +1127,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                             <td>{item.valeur_note}</td>
                                                                             // <td>{item.coefficient_note}</td>
                                                                             // <td>{item.note_finale}</td>
-                                                                            <td>{item.competence_visee_note}</td>
+                                                                            // <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
 
                                                                         </tr>
@@ -1149,7 +1149,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                             <td>{item.valeur_note}</td>
                                                                             // <td>{item.coefficient_note}</td>
                                                                             // <td>{item.note_finale}</td>
-                                                                            <td>{item.competence_visee_note}</td>
+                                                                            // <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
 
                                                                         </tr>
