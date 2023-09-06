@@ -119,9 +119,12 @@ const DisciplineListClassesEleves = memo((props) => {
     }
 
     const deleteClasses = (id) => {
+         if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http.delete('/classes/' + id).then(res => {
             fetchAllclasses();
         })
+             alert('Supprimé');
+    }
     }
 
 
