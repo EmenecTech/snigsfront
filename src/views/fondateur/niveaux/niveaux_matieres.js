@@ -111,9 +111,12 @@ const NiveauxMatieres = memo((props) => {
     }
 
     const delete_niveau_matiere = (id) => {
+         if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http.delete('delete_niveau_matiere/' + id).then(res => {
            fetchAllmatieres_niveau();
         })
+             alert('Supprimé!');
+    }
     }
 
 
