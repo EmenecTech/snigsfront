@@ -55,8 +55,6 @@ const EnseignantAppel_cd_texte = () => {
             setAbsences(res.data);
 
         })
-
-
     }
 
     const [eleves_classe, seteleves_classe] = useState([]);
@@ -69,10 +67,6 @@ const EnseignantAppel_cd_texte = () => {
             seteleves_classe(res.data);
         })
     }
-
-
-
-
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
@@ -88,9 +82,6 @@ const EnseignantAppel_cd_texte = () => {
         console.log(inputs);
 
     }
-
-
-
     return (
 
         <div>
