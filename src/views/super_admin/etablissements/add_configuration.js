@@ -17,7 +17,7 @@ const AddConfiguration = () => {
 
     const submitForm = () => {
         http.post('/configurations', inputs).then((res) => {
-            alert("Configuration ajouté avec succès !")
+            alert("Configuration ajoutée avec succès !")
             navigate('/etablissement/configurations/list/super/admin')
         })
 
