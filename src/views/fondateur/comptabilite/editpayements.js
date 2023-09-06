@@ -72,10 +72,6 @@ const EditPensions = memo((props) => {
 
         setInputs(values => ({ ...values, [name]: value, etab, idpension }))
     }
-
-
-
-
     const submitForm = () => {
 
         http.post('/add/payement/details', inputs).then((res) => {
@@ -149,15 +145,21 @@ const EditPensions = memo((props) => {
     }
 //25/07/2023
   const deteleclassepension = (classepens) => {
+       if(window.confirm("Voulez-vous supprimer cet élément?") == true){
        http.delete('delete_pension_classe/' + classepens + '/' + idpension).then(res => {
            fetchAllclassespay();
        })
+           alert('Supprimé!');
     }
+  }
 
     const deletepensiondetail = (id) => {
+         if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http.delete('delete_pension_detail/' + id).then(res => {
             fetchAllpayementdetails();
         })
+             alert('Supprimé!');
+    }
     }
 
     //27/07/2023
