@@ -61,9 +61,12 @@ const ParentsLeconChapitre = (props) => {
   };
 
   const deleteLecons = (id) => {
+      if(window.confirm("Voulez-vous supprimer cet élément?") == true){
     http.delete("/lecons/" + id).then((res) => {
       fetchAllLecons();
     });
+        alert('Supprimé!');
+  };
   };
   return (
     <>
