@@ -1015,7 +1015,7 @@ const EleveBulletinNotes = memo((props) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6pm-6 0p" />
                                     </svg>
                                 </span>
-                                Imprimer
+                             Imprimer
                             </Button>
 
                             {/* <!-- Modal --> */}
