@@ -59,10 +59,13 @@ const ListEtablissements = memo((props) => {
     }
 
     const deleteEtablissements = (id) => {
+          if(window.confirm("Voulez-vous supprimer cet élément?") == true){
     http.delete("/etablissements/" + id).then((res) => {
       fetchAllEtablissements();
     });
+              alert('Supprimé!');
   };
+    }
     useSelector(SettingSelector.theme_color);
 
     const getVariableColor = () => {
