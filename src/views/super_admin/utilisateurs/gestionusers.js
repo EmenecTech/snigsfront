@@ -130,10 +130,13 @@ const UtilisateursListe = () => {
   };
 
   const deleteUser = (id) => {
+      if(window.confirm("Voulez-vous supprimer cet élément?") == true){
     http.delete("/user/" + id).then((res) => {
       fetchAllUser();
     });
+        alert('Supprimé!');
   };
+  }
 
   return (
     <>
