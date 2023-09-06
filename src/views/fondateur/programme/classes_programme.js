@@ -119,9 +119,12 @@ const ClassesProgrammes = memo((props) => {
     }
 
     const deleteClasses = (classe, prog) => {
+      if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http.delete('/delete_programme_classe/' + classe + '/' + prog + '/' + etab ).then(res => {
             fetchAllclasses();
         })
+       alert('Supprimé!');
+      }
     }
 
     const [classeselect, setclasseselect] = useState([]);
