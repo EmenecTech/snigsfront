@@ -48,9 +48,6 @@ import Card from "../../../../components/Card.js";
 // install Swiper modules
 SwiperCore.use([Navigation]);
 
-
-
-
 const ElevesListEvaluationsNotes = memo((props) => {
     const [show, setShow] = useState(false);
     const { user, http } = AuthUser();
@@ -67,9 +64,6 @@ const ElevesListEvaluationsNotes = memo((props) => {
         setInputs(values => ({ ...values, [name]: value, etab }))
     }
 
-
-
-
     const submitForm = () => {
         http.post('/filieres', inputs).then((res) => {
             alert("Filière ajouté avec succès !")
@@ -77,9 +71,6 @@ const ElevesListEvaluationsNotes = memo((props) => {
             window.location.reload(false);
 
         })
-
-
-
         console.log(inputs);
 
     }
@@ -93,11 +84,6 @@ const ElevesListEvaluationsNotes = memo((props) => {
             setevaluations(res.data);
         })
     }
-
-
-
-
-
 
     useSelector(SettingSelector.theme_color);
 
@@ -370,9 +356,6 @@ const ElevesListEvaluationsNotes = memo((props) => {
                                                 <td>{item.intitule_evaluation}</td>
                                                 <td>{item.type_evaluation_evaluation}</td>
                                                 <td>{item.reference_evaluation}</td>
-                                                <td>/</td>
-                                                <td>/</td>
-
                                                 <td>
                                                     <div className="flex align-items-center list-user-action">
 
