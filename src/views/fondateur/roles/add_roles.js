@@ -37,7 +37,7 @@ const AddRole = () => {
 
     const submitForm = () => {
         http.post('/roles', inputs).then((res) => {
-            alert("Role ou fonction ajouté avec succès !")
+            alert("rôle ou fonction ajouté(e) avec succès !")
             navigate('/Admin/list/roles')
         })
 
