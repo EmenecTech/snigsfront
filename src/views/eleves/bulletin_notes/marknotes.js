@@ -1122,7 +1122,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                 </thead>
                                                                 <tbody>
 
-                                                                    {notestg.map((item, idt) => (
+                                                                    {notesang.map((item, idt) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
@@ -1144,7 +1144,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                 </thead>
                                                                 <tbody>
 
-                                                                    {notestg.map((item, idt) => (
+                                                                    {notesmath.map((item, idt) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
@@ -1164,16 +1164,10 @@ const EleveBulletinNotes = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                                <thead>
-                                                                    <tr>
 
-                                                                        <th>Mathématiques</th>
-
-                                                                    </tr>
-                                                                </thead>
                                                                 <tbody>
 
-                                                                    {notestg.map((item, idt) => (
+                                                                    {notessee.map((item, idt) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
@@ -1195,7 +1189,29 @@ const EleveBulletinNotes = memo((props) => {
                                                                 </thead>
                                                                 <tbody>
 
-                                                                    {notestg.map((item, idt) => (
+                                                                    {notesshs.map((item, idt) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Connaissances Générales</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notescg.map((item, idt) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
