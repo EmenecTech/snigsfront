@@ -94,9 +94,12 @@ const ListPrivileges = memo((props) => {
     }
 
     const deletePrivilege = (id) => {
+          if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http.delete('/destroy_Privilege/' + id).then(res => {
             fetchAllPrivileges();
         })
+              alert('Supprimé!');
+    }
     }
 
 
