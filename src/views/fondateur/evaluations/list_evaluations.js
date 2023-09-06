@@ -446,8 +446,7 @@ const ListEvaluations = memo((props) => {
                                             <th>{user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)} </th>
                                             <th> {user.langue === "en" ? (<div>Type of assessment</div>):(<div>Type d'évaluation </div>)} </th>
                                             <th> {user.langue === "en" ? (<div>Type of period</div>):(<div>Type de période </div>)}</th>
-                                            <th> {user.langue === "en" ? (<div>Start date</div>):(<div>Date de début </div>)}</th>
-                                            <th> {user.langue === "en" ? (<div>End date</div>):(<div>Date de fin </div>)}</th>
+                                     
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -457,9 +456,7 @@ const ListEvaluations = memo((props) => {
 
                                                 <td>{item.type_evaluation_evaluation}</td>
                                                 <td>{item.reference_evaluation}</td>
-                                                <td>/</td>
-                                                <td>/</td>
-
+                                         
                                             </tr>
                                         ))}
                                     </tbody>
