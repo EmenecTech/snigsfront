@@ -114,6 +114,7 @@ const EditClasseProgramme = memo((props) => {
     }
 
     const deleteProgramme = (id) => {
+         if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http.delete('/programme/' + id).then(res => {
             fetchAlllundi();
             fetchAllmardi();
@@ -124,6 +125,8 @@ const EditClasseProgramme = memo((props) => {
             fetchAlldimanche();
 
         })
+             alert('Supprimé!');
+    }
     }
 
     const [lundi, setlundi] = useState([]);
