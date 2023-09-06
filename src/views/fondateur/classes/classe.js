@@ -139,9 +139,12 @@ const UniClasse = () => {
     //24/07/2023
 
     const deleteEnseignants_in_classe = (id, mat) => {
+         if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http.delete('/delete_enseignants_for_classe/' + id + '/' + classe + '/' + mat).then(res => {
             fetchAllenseignant_in_classe();
         })
+             alert('Supprimé!');
+    }
     }
 
     const [eleves_classe, seteleves_classe] = useState([]);
