@@ -91,9 +91,12 @@ const ListPreinscriptions = memo((props) => {
   };
 
   const deletePreinscriptions = (id) => {
+     if(window.confirm("Voulez-vous supprimer cet élément?") == true){
     http.delete("/delete_preinscriptions/" + etab + "/" + id).then((res) => {
       fetchAllpreinscriptions();
     });
+       alert('Supprimé!');
+  };
   };
 
   useSelector(SettingSelector.theme_color);
