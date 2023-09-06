@@ -54,9 +54,12 @@ export default function Enseignant_Edit_CahierTexte() {
     }
 
     const deleteCahiertexte = (id) => {
+         if(window.confirm("Voulez-vous supprimer cet élément?")==true){
         http.delete('/cahiertexte/' + id).then(res => {
             fetchAllCahiertextes();
         })
+             alert('Supprimé!');
+    }
     }
 
     const handleChange = (event) => {
