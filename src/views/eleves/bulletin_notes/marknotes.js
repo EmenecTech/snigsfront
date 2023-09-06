@@ -820,7 +820,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    {notesfg.map((item, idf) => (
+                                                                    {notesfr.map((item, idf) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
