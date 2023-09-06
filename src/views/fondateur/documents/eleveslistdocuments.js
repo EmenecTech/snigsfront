@@ -75,7 +75,7 @@ const AdminlistdocumentsEleves = memo((props) => {
 
     const submitForm = () => {
         http.post('/documents', inputs).then((res) => {
-            alert("Ajoutée avec succès !")
+            alert("Ajouté avec succès !")
             navigate('/Admin/List/Documents/Eleves/')
             window.location.reload(false);
 
@@ -110,7 +110,7 @@ const AdminlistdocumentsEleves = memo((props) => {
 
     
     const deleteFichiers = (id) => {
-     if(window.confirm("Voulez-vous supprimé cet élément") == true){
+     if(window.confirm("Voulez-vous supprimer cet élément") == true){
             http.delete('/delete_documents/' + id).then(res => {     
             fetchAllfichiers();
         }) 
