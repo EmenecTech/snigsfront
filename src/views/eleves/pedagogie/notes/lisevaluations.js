@@ -361,8 +361,6 @@ const ElevesListEvaluationsNotes = memo((props) => {
                                             <th>Intitulé</th>
                                             <th>Type d'évaluation</th>
                                             <th>Type de période</th>
-                                            <th>Date de début</th>
-                                            <th>Date de fin</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
@@ -370,7 +368,6 @@ const ElevesListEvaluationsNotes = memo((props) => {
                                         {evaluations_list.map((item) => (
                                             <tr key={item.id}>
                                                 <td>{item.intitule_evaluation}</td>
-
                                                 <td>{item.type_evaluation_evaluation}</td>
                                                 <td>{item.reference_evaluation}</td>
                                                 <td>/</td>
