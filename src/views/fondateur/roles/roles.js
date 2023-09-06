@@ -68,22 +68,14 @@ const RolesAdmin = memo((props) => {
             setPrivileges(res.data);
         })
     }
-
-
      const deleteRoles = (id) => {
+           if(window.confirm("Voulez-vous supprimer cet élément?") == true){
         http.delete("/roles/" + id).then((res) => {
             fetchAllPrivileges();
         });
+               alert('Supprimé!');
     };
-
-
-
-
-
-
-
-
-
+     }
     useSelector(SettingSelector.theme_color);
 
     const getVariableColor = () => {
