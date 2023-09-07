@@ -170,6 +170,7 @@ import EditPrivilege from '../views/super_admin/privileges/edit_privileges';
 import DisciplineInfoForParent from '../views/parents/discipline/discipline';
 
 import AdminBulletinListEvaluations from '../views/fondateur/bulletins/evaluations';
+import AdminEvaluationListClasses from '../views/fondateur/bulletins/classes';
 
 
 
@@ -243,6 +244,10 @@ export const DefaultRouter = [
             {
                 path: 'Admin/Evaluation/Marks/Notes/',
                 element: <AdminBulletinListEvaluations />
+            },
+            {
+                path: '/Admin/Classes/Bulletin/Notes/:evaluation',
+                element: <AdminEvaluationListClasses />
             },
             //////
             {
