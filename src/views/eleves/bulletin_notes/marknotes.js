@@ -1493,6 +1493,9 @@ const EleveBulletinNotes = memo((props) => {
                                                                     <tr>
 
                                                                         <th>LITERACY AND COMMUNICATION</th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th>/th>
 
                                                                     </tr>
                                                                 </thead>
