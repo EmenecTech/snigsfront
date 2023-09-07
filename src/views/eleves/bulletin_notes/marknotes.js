@@ -321,69 +321,6 @@ const EleveBulletinNotes = memo((props) => {
         })
     }
 
-    /////
-
-    const [noteslac, setNoteslac] = useState([]);
-    useEffect(() => {
-        fetchAllNoteslac();
-    }, []);
-
-    const fetchAllNoteslac = () => {
-        http.get('/notes_lac/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNoteslac(res.data);
-
-        })
-    }
-
-    const [notesstsd, setNotesstsd] = useState([]);
-    useEffect(() => {
-        fetchAllNotesstsd();
-    }, []);
-
-    const fetchAllNotesstsd = () => {
-        http.get('/notes_stsd/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesstsd(res.data);
-
-        })
-    }
-
-    const [notespls, setNotespls] = useState([]);
-    useEffect(() => {
-        fetchAllNotespls();
-    }, []);
-
-    const fetchAllNotespls = () => {
-        http.get('/notes_pls/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotespls(res.data);
-
-        })
-    }
-
-    const [notesart_craft, setNotesart_craft] = useState([]);
-    useEffect(() => {
-        fetchAllNotesart_craft();
-    }, []);
-
-    const fetchAllNotesart_craft = () => {
-        http.get('/notes_art_craft/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesart_craft(res.data);
-
-        })
-    }
-
-    const [notesmotor_skill, setNotesmotor_skill] = useState([]);
-    useEffect(() => {
-        fetchAllNotesmotor_skill();
-    }, []);
-
-    const fetchAllNotesmotor_skill = () => {
-        http.get('/notes_motor_skill/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesmotor_skill(res.data);
-
-        })
-    }
-
-    ////
 
     ////primary
     const [sumcoef, setsumcoef] = useState([]);
@@ -883,7 +820,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    {notesfr.map((item, idf) => (
+                                                                    {notesfg.map((item, idf) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
@@ -1078,7 +1015,7 @@ const EleveBulletinNotes = memo((props) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6pm-6 0p" />
                                     </svg>
                                 </span>
-                             Imprimer
+                                Imprimer
                             </Button>
 
                             {/* <!-- Modal --> */}
@@ -1133,20 +1070,23 @@ const EleveBulletinNotes = memo((props) => {
                                                                         <th><p>
                                                                             Disciplines
                                                                         </p></th>
-                                                                        <th>Notes</th>
-                                                                        <th>Observation</th>
-                                                                    <th>Compétences visées</th>
+                                                                        <th>Matieres</th>
+                                                                        <th>Note sur</th>
+                                                                        <th>Moyenne</th>
+                                                                        <th>Observation et Emargement</th>
 
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    {notesfg.map((item, idf) => (
+                                                                    {notesfr.map((item, idf) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
-                                                                           <td>{item.competence_visee_note}</td>
 
                                                                         </tr>
                                                                     ))}
@@ -1160,14 +1100,15 @@ const EleveBulletinNotes = memo((props) => {
                                                                 </thead>
                                                                 <tbody>
 
-                                                                    {notesfr.map((item, idfr) => (
+                                                                    {notesfr.map((item, ids) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                            
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
-                                                                           <td>{item.competence_visee_note}</td>
 
                                                                         </tr>
                                                                     ))}
@@ -1186,9 +1127,10 @@ const EleveBulletinNotes = memo((props) => {
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                           
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
-                                                                           <td>{item.competence_visee_note}</td>
 
                                                                         </tr>
                                                                     ))}
@@ -1207,9 +1149,10 @@ const EleveBulletinNotes = memo((props) => {
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                           
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
-                                                                           <td>{item.competence_visee_note}</td>
 
                                                                         </tr>
                                                                     ))}
@@ -1229,9 +1172,10 @@ const EleveBulletinNotes = memo((props) => {
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                           
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
-                                                                           <td>{item.competence_visee_note}</td>
 
                                                                         </tr>
                                                                     ))}
@@ -1250,9 +1194,10 @@ const EleveBulletinNotes = memo((props) => {
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                           
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
-                                                                           <td>{item.competence_visee_note}</td>
 
                                                                         </tr>
                                                                     ))}
@@ -1271,9 +1216,10 @@ const EleveBulletinNotes = memo((props) => {
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                           
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
-                                                                           <td>{item.competence_visee_note}</td>
 
                                                                         </tr>
                                                                     ))}
@@ -1290,7 +1236,8 @@ const EleveBulletinNotes = memo((props) => {
                                                                     <tr>
                                                                         <td>RECAPITULATIFS</td>
                                                                         <td>{sumnotes}</td>
-                                                                        
+                                                                        <td>{sumcoef}</td>
+                                                                        <td>{sumnotesfinale}</td>
                                                                         <td>A</td>
                                                                     </tr>
                                                                 </tbody>
@@ -1413,7 +1360,7 @@ const EleveBulletinNotes = memo((props) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6pm-6 0p" />
                                     </svg>
                                 </span>
-                                Print
+                                Imprimer
                             </Button>
 
                             {/* <!-- Modal --> */}
@@ -1466,37 +1413,47 @@ const EleveBulletinNotes = memo((props) => {
                                                                     <tr>
 
                                                                         <th><p>
-                                                                            Domaines
+                                                                            Disciplines
                                                                         </p></th>
-                                                                        <th>Marks/20</th>
-                                                             
-                                                                        <th>Observation</th>
-                                                                    <th>Targeted skills</th>
+                                                                        <th>Matieres</th>
+                                                                        <th>Note sur</th>
+                                                                        <th>Moyenne</th>
+                                                                        <th>Observation et Emargement</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                               
-                                                                    
+                                                                <tbody>
+                                                                    {notesfg.map((item, idf) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
                                                                 <thead>
                                                                     <tr>
 
-                                                                        <th olspan="1">LITERACY AND COMMUNICATION</th>
-                                                                    <th></th>
-                                                                    <th></th>
-                                                                    <th></th>
+                                                                        <th>LITERACY AND COMMUNICATION</th>
 
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
 
-                                                                    {noteslac.map((item, ids) => (
+                                                                    {notessg.map((item, ids) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                            
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
-                                                                           <td>{item.competence_visee_note}</td>
 
                                                                         </tr>
                                                                     ))}
@@ -1510,14 +1467,15 @@ const EleveBulletinNotes = memo((props) => {
                                                                 </thead>
                                                                 <tbody>
 
-                                                                    {notesstsd.map((item, idt) => (
+                                                                    {notestg.map((item, idt) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                           
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
-                                                                           <td>{item.competence_visee_note}</td>
 
                                                                         </tr>
                                                                     ))}
@@ -1531,14 +1489,15 @@ const EleveBulletinNotes = memo((props) => {
                                                                 </thead>
                                                                 <tbody>
 
-                                                                    {notespls.map((item, idt) => (
+                                                                    {notestg.map((item, idt) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                            
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
-                                                                           <td>{item.competence_visee_note}</td>
 
                                                                         </tr>
                                                                     ))}
@@ -1550,16 +1509,24 @@ const EleveBulletinNotes = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Mathématiques</th>
+
+                                                                    </tr>
+                                                                </thead>
                                                                 <tbody>
 
-                                                                    {notesart_craft.map((item, idt) => (
+                                                                    {notestg.map((item, idt) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                           
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
-                                                                           <td>{item.competence_visee_note}</td>
 
                                                                         </tr>
                                                                     ))}
@@ -1567,26 +1534,47 @@ const EleveBulletinNotes = memo((props) => {
                                                                 <thead>
                                                                     <tr>
 
-                                                                        <th>MOTOR SKILLS</th>
+                                                                        <th>Sciences Humaines et Sociales</th>
 
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
 
-                                                                    {notesmotor_skill.map((item, idt) => (
+                                                                    {notestg.map((item, idt) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                           
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
-                                                                           <td>{item.competence_visee_note}</td>
 
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                              
+                                                                <thead>
+                                                                    <tr>
 
+                                                                        <th>Connaissances Générales</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    <tr>
+                                                                        <td>RECAPITULATIFS</td>
+                                                                        <td>{sumnotes}</td>
+                                                                        <td>{sumcoef}</td>
+                                                                        <td>{sumnotesfinale}</td>
+                                                                        <td>A</td>
+                                                                    </tr>
+                                                                </tbody>
+
+
+                                                                <tfoot>
+
+                                                                </tfoot>
                                                             </Table>
                                                             <Table
                                                                 responsive
@@ -1599,12 +1587,12 @@ const EleveBulletinNotes = memo((props) => {
                                                                     <tr>
                                                                         <th></th>
                                                                         <th>DISCIPLINE</th>
-                                                                        <th>WORK APPRECIATION</th>
+                                                                        <th>APPRECIATION DU TRAVAIL</th>
                                                                         <th><div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">AVERAGE: {moyenneleve}</p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {moyenneleve}</p>
                                                                         </div>
                                                                             <div className="mt-2">
-                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">RANK:</p>
+                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:</p>
                                                                             </div>
                                                                             <div className="mt-2">
                                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">MENTION:</p>
@@ -1627,13 +1615,13 @@ const EleveBulletinNotes = memo((props) => {
                                                                             <div className="mt-1">
                                                                                 <p>
 
-                                                                                    Unjustified absences:
+                                                                                    Abscences non justifiées :
                                                                                     <br />
-                                                                                    justified absences:
+                                                                                    Abscences justifiées:
                                                                                     <br />
-                                                                                    Worn:
+                                                                                    Avertissement conduite:
                                                                                     <br />
-                                                                                    Blame:
+                                                                                    Blame conduite:
                                                                                 </p>
 
                                                                             </div>
@@ -1642,9 +1630,9 @@ const EleveBulletinNotes = memo((props) => {
                                                                             <div className="mt-1">
                                                                                 <p>Tableau d'honneur:
                                                                                     <br />
-                                                                                    Encouragment:
+                                                                                    Encouragement:
                                                                                     <br />
-                                                                                    Congratulations:
+                                                                                    Félicitations:
                                                                                     <br />
                                                                                     Prime:
                                                                                 </p>
@@ -1653,7 +1641,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                         </td>
                                                                         <td>
                                                                             <div className="mt-1">
-                                                                                <p>Class average:
+                                                                                <p>Moyenne de la classe:
 
                                                                                 </p>
 
