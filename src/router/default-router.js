@@ -169,6 +169,8 @@ import ListSansclasse from '../views/fondateur/eleves/sans_classe';
 import EditPrivilege from '../views/super_admin/privileges/edit_privileges';
 import DisciplineInfoForParent from '../views/parents/discipline/discipline';
 
+import AdminBulletinListEvaluations from '../views/fondateur/bulletins/evaluations';
+
 
 
 export const DefaultRouter = [
@@ -238,6 +240,11 @@ export const DefaultRouter = [
             },
 
             //////////////////////////////////////////////Fondateur
+            {
+                path: 'Admin/Evaluation/Marks/Notes/',
+                element: <AdminBulletinListEvaluations />
+            },
+            //////
             {
                 path: 'Admin/list/privileges',
                 element: <ListPrivilegesFondateur />
