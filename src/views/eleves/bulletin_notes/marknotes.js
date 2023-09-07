@@ -1466,7 +1466,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                     <tr>
 
                                                                         <th><p>
-                                                                            Disciplines
+                                                                            Domaines
                                                                         </p></th>
                                                                         <th>Marks/20</th>
                                                              
