@@ -1475,24 +1475,12 @@ const EleveBulletinNotes = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                                <tbody>
-                                                                    {notesfg.map((item, idf) => (
-
-                                                                        <tr>
-                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                          
-                                                                            <td>{item.appreciation_note}</td>
-                                                                         <td>{item.competence_visee_note}</td>
-                                                                        
-
-                                                                        </tr>
-                                                                    ))}
-                                                                </tbody>
+                                                               
+                                                                    
                                                                 <thead>
                                                                     <tr>
 
-                                                                        <th>LITERACY AND COMMUNICATION</th>
+                                                                        <th olspan="1">LITERACY AND COMMUNICATION</th>
                                                                     <th></th>
                                                                     <th></th>
                                                                     <th></th>
