@@ -366,6 +366,7 @@ const VerticalNav = memo((props) => {
                                                         <span className="item-name">Programmes</span>
                                                     </Link>
                                                 </li>
+                                                
                                             </ul>
                                         </Accordion.Collapse>
                                     </Accordion.Item>
@@ -685,6 +686,19 @@ const VerticalNav = memo((props) => {
                                                 </i>
                                                 <i className="sidenav-mini-icon"> U </i>
                                                 <span className="item-name">{user.langue === "en" ? (<div>Programs</div>):(<div> Programmes  </div>)}</span>
+                                            </Link>
+                                        </li>
+                                         <li className="nav-item">
+                                            <Link className={`${location.pathname === '/dashboard/app/user-list' ? 'active' : ''} nav-link`} to="/Admin/Evaluation/Marks/Notes/">
+                                                <i className="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                                        <g>
+                                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                                        </g>
+                                                    </svg>
+                                                </i>
+                                                <i className="sidenav-mini-icon"> U </i>
+                                                <span className="item-name">Bulletins de notes</span>
                                             </Link>
                                         </li>
                                     </ul>
