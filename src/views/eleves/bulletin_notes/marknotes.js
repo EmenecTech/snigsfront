@@ -321,6 +321,69 @@ const EleveBulletinNotes = memo((props) => {
         })
     }
 
+    /////
+
+    const [noteslac, setNoteslac] = useState([]);
+    useEffect(() => {
+        fetchAllNoteslac();
+    }, []);
+
+    const fetchAllNoteslac = () => {
+        http.get('/notes_lac/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNoteslac(res.data);
+
+        })
+    }
+
+    const [notesstsd, setNotesstsd] = useState([]);
+    useEffect(() => {
+        fetchAllNotesstsd();
+    }, []);
+
+    const fetchAllNotesstsd = () => {
+        http.get('/notes_stsd/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotesstsd(res.data);
+
+        })
+    }
+
+    const [notespls, setNotespls] = useState([]);
+    useEffect(() => {
+        fetchAllNotespls();
+    }, []);
+
+    const fetchAllNotespls = () => {
+        http.get('/notes_pls/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotespls(res.data);
+
+        })
+    }
+
+    const [notesart_craft, setNotesart_craft] = useState([]);
+    useEffect(() => {
+        fetchAllNotesart_craft();
+    }, []);
+
+    const fetchAllNotesart_craft = () => {
+        http.get('/notes_art_craft/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotesart_craft(res.data);
+
+        })
+    }
+
+    const [notesmotor_skill, setNotesmotor_skill] = useState([]);
+    useEffect(() => {
+        fetchAllNotesmotor_skill();
+    }, []);
+
+    const fetchAllNotesmotor_skill = () => {
+        http.get('/notes_motor_skill/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotesmotor_skill(res.data);
+
+        })
+    }
+
+    ////
 
     ////primary
     const [sumcoef, setsumcoef] = useState([]);
@@ -1427,7 +1490,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                 </thead>
                                                                 <tbody>
 
-                                                                    {notessg.map((item, ids) => (
+                                                                    {noteslac.map((item, ids) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
@@ -1449,7 +1512,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                 </thead>
                                                                 <tbody>
 
-                                                                    {notestg.map((item, idt) => (
+                                                                    {notesstsd.map((item, idt) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
@@ -1471,7 +1534,7 @@ const EleveBulletinNotes = memo((props) => {
                                                                 </thead>
                                                                 <tbody>
 
-                                                                    {notestg.map((item, idt) => (
+                                                                    {notespls.map((item, idt) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
@@ -1491,16 +1554,9 @@ const EleveBulletinNotes = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                                <thead>
-                                                                    <tr>
-
-                                                                        <th>Mathématiques</th>
-
-                                                                    </tr>
-                                                                </thead>
                                                                 <tbody>
 
-                                                                    {notestg.map((item, idt) => (
+                                                                    {notesart_craft.map((item, idt) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
@@ -1516,13 +1572,13 @@ const EleveBulletinNotes = memo((props) => {
                                                                 <thead>
                                                                     <tr>
 
-                                                                        <th>Sciences Humaines et Sociales</th>
+                                                                        <th>MOTOR SKILLS</th>
 
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
 
-                                                                    {notestg.map((item, idt) => (
+                                                                    {notesmotor_skill.map((item, idt) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
@@ -1535,28 +1591,8 @@ const EleveBulletinNotes = memo((props) => {
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                <thead>
-                                                                    <tr>
+                                                              
 
-                                                                        <th>Connaissances Générales</th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-
-                                                                    <tr>
-                                                                        <td>RECAPITULATIFS</td>
-                                                                        <td>{sumnotes}</td>
-                                                                        <td>{sumcoef}</td>
-                                                                        <td>{sumnotesfinale}</td>
-                                                                        <td>A</td>
-                                                                    </tr>
-                                                                </tbody>
-
-
-                                                                <tfoot>
-
-                                                                </tfoot>
                                                             </Table>
                                                             <Table
                                                                 responsive
