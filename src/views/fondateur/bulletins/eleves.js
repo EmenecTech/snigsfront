@@ -342,8 +342,8 @@ const AdminEvaluationListClassesEleves = memo((props) => {
                                                 <thead>
                                                     <tr>
                                                     
-                                                        <th>{user.langue === "en" ? (<div>Name</div>):(<div> Nom  </div>)}</th>
-                                                        <th>{user.langue === "en" ? (<div>Prename</div>):(<div> Prénom  </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div>Name</div>):(<div> Nom(s)  </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div>Prename</div>):(<div> Prénom(s)  </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Class</div>):(<div> Classe  </div>)}</th>
                                                         <th>Action</th>
 
