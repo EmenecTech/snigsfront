@@ -650,6 +650,7 @@ const BulletinByEleve = memo((props) => {
                                                                 MINISTERE DES ENSEIGNEMENTS SECONDAIRES <br />
 
                                                             </p>
+{evaluation} {classe} {userid}
 
 
                                                         </Col>
