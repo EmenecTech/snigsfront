@@ -83,7 +83,7 @@ const BulletinByEleve = memo((props) => {
     const [inputs, setInputs] = useState({});
     const { evaluation, eleve } = useParams();
     const etab = user.etablissement;
-    const eleve = userid;
+    const userid = eleve;
 
     const niveau = user.fonction_user;
     const classe = user.other_in_user;
