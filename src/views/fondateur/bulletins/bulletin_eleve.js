@@ -66,7 +66,7 @@ SwiperCore.use([Navigation]);
 
 
 
-const EleveBulletinNotes = memo((props) => {
+const BulletinByEleve = memo((props) => {
 
     const componentRef = useRef();
     const printData = useReactToPrint({
@@ -1677,4 +1677,4 @@ const EleveBulletinNotes = memo((props) => {
     );
 })
 
-export default EleveBulletinNotes
+export default BulletinByEleve
