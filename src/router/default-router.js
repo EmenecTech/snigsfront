@@ -172,6 +172,7 @@ import DisciplineInfoForParent from '../views/parents/discipline/discipline';
 import AdminBulletinListEvaluations from '../views/fondateur/bulletins/evaluations';
 import AdminEvaluationListClasses from '../views/fondateur/bulletins/classes';
 import AdminEvaluationListClassesEleves from '../views/fondateur/bulletins/eleves';
+import BulletinByEleve from '../views/fondateur/bulletins/bulletin_eleve';
 
 
 
@@ -256,7 +257,7 @@ export const DefaultRouter = [
             },
             {
                 path: '/Admin/Bulletin/:evaluation/:classe/:eleve/Bulletin',
-                element: < />
+                element: < BulletinByEleve/>
             },
     
             //////
