@@ -81,9 +81,9 @@ const BulletinByEleve = memo((props) => {
     const handleShow = () => setShow(true);
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
-    const { evaluation, eleve, classe } = useParams();
+    const { evaluation, userid, classe } = useParams();
     const etab = user.etablissement;
-    const userid = eleve;
+
 
     const niveau = user.fonction_user;
 
@@ -650,7 +650,7 @@ const BulletinByEleve = memo((props) => {
                                                                 MINISTERE DES ENSEIGNEMENTS SECONDAIRES <br />
 
                                                             </p>
-{evaluation} {classe} {eleve}
+{evaluation} {classe} {userid}
 
 
                                                         </Col>
