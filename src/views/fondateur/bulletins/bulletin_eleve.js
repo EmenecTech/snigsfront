@@ -61,7 +61,7 @@ import { useReactToPrint } from "react-to-print";
 
 
 // install Swiper modules
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation]); 
 
 
 
