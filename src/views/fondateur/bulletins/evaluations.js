@@ -351,7 +351,7 @@ const AdminBulletinListEvaluations = memo((props) => {
                                                 <td>{item.reference_evaluation}</td>
                                                
                                                 <td>
-                                                    <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" to={"/Admin/Classes/Bulletin/Notes/" + item.intitule_evaluation}>
+                                                    <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Modifier" data-original-title="Modifier" to={"/Admin/Classes/Bulletin/Notes/" + item.intitule_evaluation}>
 
                                                         Consulter
 
