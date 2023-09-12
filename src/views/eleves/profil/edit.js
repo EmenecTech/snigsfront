@@ -61,7 +61,7 @@ const EleveEditProfil = (props) => {
                 email: res.data.email,
                 lieu_naissance: res.data.lieu_naissance,
                 date_naissance: res.data.date_naissance,
-                name: res.data.nom,
+                nom: res.data.nom,
                 prenom: res.data.prenom,
             });
         });
@@ -203,59 +203,7 @@ const EleveEditProfil = (props) => {
                                                 alt="profile-pic"
                                             />
 
-                                            {/* <Image
-                                                className="theme-color-purple-img profile-pic rounded avatar-100"
-                                                src={avatars2}
-                                                alt="profile-pic"
-                                            />
-                                            <Image
-                                                className="theme-color-blue-img profile-pic rounded avatar-100"
-                                                src={avatars3}
-                                                alt="profile-pic"
-                                            />
-                                            <Image
-                                                className="theme-color-green-img profile-pic rounded avatar-100"
-                                                src={avatars5}
-                                                alt="profile-pic"
-                                            />
-                                            <Image
-                                                className="theme-color-yellow-img profile-pic rounded avatar-100"
-                                                src={avatars6}
-                                                alt="profile-pic"
-                                            />
-                                            <Image
-                                                className="theme-color-pink-img profile-pic rounded avatar-100"
-                                                src={avatars4}
-                                                alt="profile-pic"
-                                            /> */}
-                                            {/* <div className="upload-icone bg-primary">
-                                                <svg
-                                                    className="upload-button"
-                                                    width="14"
-                                                    height="14"
-                                                    viewBox="0 0 24 24"
-                                                >
-                                                    <path
-                                                        fill="#ffffff"
-                                                        d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z"
-                                                    />
-                                                </svg>
-                                                <Form.Control
-                                                    className="form-control"
-                                                    name="profile_photo_path"
-                                                    type="file"
-                                                    accept="image/*"
-
-                                                />
-                                            </div>
-
-                                        </div>
-                                        <div className="img-extension mt-3">
-                                            <div className="d-inline-block align-items-center">
-                                                <span>Only</span> <Link to="#">.jpg</Link>{" "}
-                                                <Link to="#">.png</Link> <Link to="#">.jpeg</Link>{" "}
-                                                <span>allowed</span>
-                                            </div>*/}
+                                            
                                         </div>
                                     </Form.Group>
                                     <Form.Label htmlFor="furl">Photo de profil:</Form.Label>
@@ -294,9 +242,9 @@ const EleveEditProfil = (props) => {
                                                             <label>name:</label>
                                                             <input
                                                                 type="text"
-                                                                name="name"
+                                                                name="nom"
                                                                 className="form-control mb-2"
-                                                                value={inputs.name || ""}
+                                                                value={inputs.nom || ""}
                                                                 disabled
                                                                 onChange={handleChange}
                                                             />
@@ -324,7 +272,7 @@ const EleveEditProfil = (props) => {
                                                             <label>Date de naissance:</label>
                                                             <input
                                                                 type="date"
-                                                                name="date_naissance"
+                                                                name="date_n"
                                                                 className="form-control mb-2"
                                                                 value={inputs.date_naissance || ""}
                                                                 onChange={handleChange}
@@ -335,7 +283,7 @@ const EleveEditProfil = (props) => {
                                                             <label>Lieu de naissance:</label>
                                                             <input
                                                                 type="text"
-                                                                name="lieu_naissance"
+                                                                name="lieu_n"
                                                                 className="form-control mb-2"
                                                                 value={inputs.lieu_naissance || ""}
                                                                 onChange={handleChange}
@@ -363,7 +311,7 @@ const EleveEditProfil = (props) => {
                                                             <label>telephone:</label>
                                                             <input
                                                                 type="text"
-                                                                name="telephone"
+                                                                name="tel"
                                                                 className="form-control mb-2"
                                                                 value={inputs.telephone || ""}
                                                                 onChange={handleChange}
