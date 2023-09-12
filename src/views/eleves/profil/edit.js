@@ -56,14 +56,7 @@ const EleveEditProfil = (props) => {
 
     const fetchUser = () => {
         http.get("/edituser/" + id + "/edit").then((res) => {
-            setInputs({
-                tel: res.data.telephone,
-                email: res.data.email,
-                lieu_n: res.data.lieu_naissance,
-                date_n: res.data.date_naissance,
-                nom: res.data.nom,
-                prenom: res.data.prenom,
-            });
+            window.location.reload(false);
         });
     };
 
@@ -244,9 +237,9 @@ const EleveEditProfil = (props) => {
                                                                 type="text"
                                                                 name="nom"
                                                                 className="form-control mb-2"
-                                                                value={inputs.nom || ""}
+                                                                defaultvalue={user.nom}
                                                                 disabled
-                                                                onChange={handleChange}
+                                                                
                                                             />
                                                         </Col>
 
@@ -257,8 +250,8 @@ const EleveEditProfil = (props) => {
                                                                 name="prenom"
                                                                 disabled
                                                                 className="form-control mb-2"
-                                                                value={inputs.prenom || ""}
-                                                                onChange={handleChange}
+                                                                defaultvalue={user.prenom}
+                                                                
                                                             />
                                                         </Col>
                                                     </Row>
@@ -274,7 +267,7 @@ const EleveEditProfil = (props) => {
                                                                 type="date"
                                                                 name="date_n"
                                                                 className="form-control mb-2"
-                                                                value={inputs.date_n || ""}
+                                                                value={user.date_naissance}
                                                                 onChange={handleChange}
                                                             />
                                                         </Col>
@@ -285,7 +278,7 @@ const EleveEditProfil = (props) => {
                                                                 type="text"
                                                                 name="lieu_n"
                                                                 className="form-control mb-2"
-                                                                value={inputs.lieu_n || ""}
+                                                                value={user.lieu_naissance}
                                                                 onChange={handleChange}
                                                             />
                                                         </Col>
@@ -302,7 +295,7 @@ const EleveEditProfil = (props) => {
                                                                 type="email"
                                                                 name="email"
                                                                 className="form-control mb-2"
-                                                                value={inputs.email || ""}
+                                                                value={user.email}
                                                                 onChange={handleChange}
                                                             />
                                                         </Col>
@@ -313,7 +306,7 @@ const EleveEditProfil = (props) => {
                                                                 type="text"
                                                                 name="tel"
                                                                 className="form-control mb-2"
-                                                                value={inputs.tel || ""}
+                                                                value={user.telephone}
                                                                 onChange={handleChange}
                                                             />
                                                         </Col>
