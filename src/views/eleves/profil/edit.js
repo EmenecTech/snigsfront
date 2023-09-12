@@ -43,7 +43,7 @@ const EleveEditProfil = (props) => {
 
     const [message, setMessage] = useState("");
     const [inputs, setInputs] = useState({});
-    const { id } = useParams();
+    const id = user.id;
     const handlechange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
