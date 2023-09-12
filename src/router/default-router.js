@@ -687,7 +687,7 @@ export const DefaultRouter = [
                 element: <Enseignant_planning />
             },
             {
-                path: 'Enseignant/Planning/Periodes/Matieres/:classe/:matiere',
+                path: 'Enseignant/Planning/Periodes/Matieres/:niveau/:classe/:matiere',
                 element: <Enseignant_planning_periodesmatieres />
             },
             ////Cahier de texte
