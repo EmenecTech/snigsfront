@@ -245,6 +245,17 @@ const BulletinByEleve = memo((props) => {
         })
     }
 
+    const [classes, setclasses] = useState([]);
+    useEffect(() => {
+        fetchAllclasses();
+    }, []);
+
+    const fetchAllclasses = () => {
+        http.get('/classe_bull/' + classe + '/' etab).then(res => {
+            setclasses(res.data);
+        })
+    }
+
     ////primaire
 
     const [notesfr, setNotesfr] = useState([]);
@@ -608,6 +619,7 @@ const BulletinByEleve = memo((props) => {
 
     return (
         <Fragment>
+        { classe.cycle_niveau === 'Secondaire' ? <div>
             <Row>
                 <Col sm="12">
                     <Card>
@@ -779,7 +791,6 @@ const BulletinByEleve = memo((props) => {
                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">Professeur principal:</p>
                                                                 <p>Class Master/Mistress</p>
                                                             </div>
-
 
                                                         </Col>
                                                         <Col sm="2" lg="2">
@@ -999,7 +1010,7 @@ const BulletinByEleve = memo((props) => {
                     </Card>
                 </Col>
             </Row>
-
+        </div>:<div>
             <Row>
                 <Col sm="12">
                     <Card>
@@ -1673,6 +1684,10 @@ const BulletinByEleve = memo((props) => {
                     </Card>
                 </Col>
             </Row>
+        </div>}
+            
+
+            
         </Fragment>
     );
 })
