@@ -140,8 +140,8 @@ const EnseignantAddNote = () => {
                                             <Form.Group className='form-group'>
                                                 <Form.Label>coefficient</Form.Label>
                                                 <Form.Control type="number" id="coef" name="coef"
-                                                    value={matiere_classe_info.coefficient_cm}
-                                                    onChange={handleChange}
+                                                    value={coefficient}
+                                                    
                                                     disabled
                                                 />
                                             </Form.Group>
