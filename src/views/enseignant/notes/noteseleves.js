@@ -10,7 +10,7 @@ const EnseignantAddNote = () => {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
     const [notes, setNotes] = useState([]);
-    const { evaluation, classe, matiere } = useParams();
+    const { evaluation, niveau, classe, matiere } = useParams();
 
     const { user, http } = AuthUser();
     const etab = user.etablissement;
@@ -38,7 +38,7 @@ const EnseignantAddNote = () => {
     }, []);
 
     const fetchAllmatiere_classe_info = () => {
-        http.get('/get_info_matiere_classe/' + etab + '/' + classe + '/' + matiere).then(res => {
+        http.get('/get_info_matiere_classe/' + etab + '/' + classe + '/' + matiere + '/' + niveau).then(res => {
             setmatiere_classe_info(res.data);
         })
     }
