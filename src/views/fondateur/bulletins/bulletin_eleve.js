@@ -619,7 +619,7 @@ const BulletinByEleve = memo((props) => {
 
     return (
         <Fragment>
-        { classe.cycle_niveau === 'Secondaire' ? <div>
+        { classes.cycle_niveau === 'Secondaire' ? <div>
             <Row>
                 <Col sm="12">
                     <Card>
@@ -1011,7 +1011,8 @@ const BulletinByEleve = memo((props) => {
                 </Col>
             </Row>
         </div>:<div>
-            <Row>
+            { classes.section_niveau === 'Francophone' ? <div>
+                    <Row>
                 <Col sm="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
@@ -1356,7 +1357,8 @@ const BulletinByEleve = memo((props) => {
                 </Col>
             </Row>
 
-            <Row>
+                </div> : <div>
+                    <Row>
                 <Col sm="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
@@ -1684,6 +1686,9 @@ const BulletinByEleve = memo((props) => {
                     </Card>
                 </Col>
             </Row>
+                </div>}
+            
+            
         </div>}
             
 
