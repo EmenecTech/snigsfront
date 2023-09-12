@@ -268,6 +268,7 @@ const EleveEditProfil = (props) => {
                                                                 name="date_n"
                                                                 className="form-control mb-2"
                                                                 defaultValue={user.date_naissance}
+                                                                value={inputs.date_n}
                                                                 onChange={handleChange}
                                                             />
                                                         </Col>
@@ -296,7 +297,8 @@ const EleveEditProfil = (props) => {
                                                                 type="email"
                                                                 name="email"
                                                                 className="form-control mb-2"
-                                                                value={user.email}
+                                                                defaultValue={user.email}
+                                                                value={inputs.email}
                                                                 onChange={handleChange}
                                                             />
                                                         </Col>
@@ -307,7 +309,8 @@ const EleveEditProfil = (props) => {
                                                                 type="text"
                                                                 name="tel"
                                                                 className="form-control mb-2"
-                                                                value={user.telephone}
+                                                                defaultValue={user.telephone}
+                                                                value={inputs.tel}
                                                                 onChange={handleChange}
                                                             />
                                                         </Col>
