@@ -237,7 +237,7 @@ const EleveEditProfil = (props) => {
                                                                 type="text"
                                                                 name="nom"
                                                                 className="form-control mb-2"
-                                                                defaultvalue={user.nom}
+                                                                defaultValue={user.nom}
                                                                 disabled
                                                                 
                                                             />
@@ -250,7 +250,7 @@ const EleveEditProfil = (props) => {
                                                                 name="prenom"
                                                                 disabled
                                                                 className="form-control mb-2"
-                                                                defaultvalue={user.prenom}
+                                                                defaultValue={user.prenom}
                                                                 
                                                             />
                                                         </Col>
@@ -267,7 +267,7 @@ const EleveEditProfil = (props) => {
                                                                 type="date"
                                                                 name="date_n"
                                                                 className="form-control mb-2"
-                                                                value={user.date_naissance}
+                                                                defaultValue={user.date_naissance}
                                                                 onChange={handleChange}
                                                             />
                                                         </Col>
@@ -278,7 +278,7 @@ const EleveEditProfil = (props) => {
                                                                 type="text"
                                                                 name="lieu_n"
                                                                 className="form-control mb-2"
-                                                                value={user.lieu_naissance}
+                                                                defaultValue={user.lieu_naissance}
                                                                 onChange={handleChange}
                                                             />
                                                         </Col>
