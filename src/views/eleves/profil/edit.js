@@ -50,15 +50,6 @@ const EleveEditProfil = (props) => {
         setInputs(values => ({ ...values, [name]: value }))
     }
 
-    useEffect(() => {
-        fetchUser();
-    }, []);
-
-    const fetchUser = () => {
-        http.get("/edituser/" + id + "/edit").then((res) => {
-            window.location.reload(false);
-        });
-    };
 
     const handleChange = (event) => {
         const name = event.target.name;
@@ -70,7 +61,7 @@ const EleveEditProfil = (props) => {
 
         http.put("/edituser/" + id, inputs).then((res) => {
             alert("Compte modifié avec succès !");
-            navigate("/Eleve/Edit/Profil/" + id);
+            window.location.reload(false);
         });
 
         console.log(inputs);
