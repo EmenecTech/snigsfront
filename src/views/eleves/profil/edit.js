@@ -279,6 +279,7 @@ const EleveEditProfil = (props) => {
                                                                 name="lieu_n"
                                                                 className="form-control mb-2"
                                                                 defaultValue={user.lieu_naissance}
+                                                                value={inputs.lieu_n}
                                                                 onChange={handleChange}
                                                             />
                                                         </Col>
