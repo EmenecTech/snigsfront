@@ -78,7 +78,7 @@ const UniClasse = () => {
 
     const submitForm2 = () => {
         http.post('/add_enseignant_classe', inputs).then((res) => {
-            alert("Enseignant ajouté avec succès !")
+            alert("L'enseignant a été ajouté avec succès !")
             navigate('/Details/classe/' + niveau + '/' + classe)
             window.location.reload(false);
 
