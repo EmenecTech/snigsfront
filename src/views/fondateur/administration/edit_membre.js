@@ -45,7 +45,7 @@ const EditMembresAdministration = () => {
 
     const submitForm = () => {
         http.put('/edit_membre_administration/' + id, inputs).then((res) => {
-            alert("membre administration modifié avec succès !");
+            alert("Le membre d'administration a été modifié avec succès !");
             navigate('/Admin/list');
         })
 
