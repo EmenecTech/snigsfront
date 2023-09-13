@@ -72,7 +72,7 @@ const AdminListClassesCours = memo((props) => {
 
     const submitForm = () => {
         http.post('/classes', inputs).then((res) => {
-            alert("Classe ajoutée avec succès !")
+            alert("La classe a été ajoutée avec succès !")
             navigate('/List/classes/')
             window.location.reload(false);
 
