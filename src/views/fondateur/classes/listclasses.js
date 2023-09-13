@@ -117,9 +117,9 @@ const ListClasses = memo((props) => {
         })
     }
 
-    const deleteClasses = (idclasse) => {
+    const deleteClasses = (classe) => {
         if(window.confirm("Voulez-vous supprimer cet élément?") == true){
-        http.delete('/delete/classes/' + idclasse).then(res => {
+        http.delete('/delete/classes/' + classe + '/' + etab).then(res => {
             fetchAllclasses(); 
         })
             alert('Supprimé!');
