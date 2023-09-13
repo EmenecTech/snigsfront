@@ -22,7 +22,7 @@ const AddMembreAdministration = () => {
 
     const submitFormadduser = () => {
         http.post('/administration_membres', inputs).then((res) => {
-            alert("Utilisateur ajouté avec succès !")
+            alert(" L'utilisateur a été ajouté avec succès !")
             navigate('/Admin/list')
         })
 
