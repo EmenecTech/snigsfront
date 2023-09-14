@@ -174,7 +174,7 @@ const EditClasseProgramme = memo((props) => {
     }
     const [vendredi, setvendredi] = useState([]);
     useEffect(() => {
-        fetchAlljeudi();
+        fetchAllvendredi();
     }, []);
 
     const fetchAllvendredi = () => {
