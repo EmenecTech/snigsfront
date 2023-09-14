@@ -541,7 +541,13 @@ const UniClasse = () => {
                                                                         <option value="Sciences et Education à l'Environnement">Sciences et Education à l'Environnement</option>
                                                                         <option value="Sciences Humaines et Sociales">Sciences Humaines et Sociales</option>
                                                                         <option value="Connaissances Générales">Connaissances Générales</option>
+
+                                                                        <option value="LANGUE ET COMMUNICATION">LANGUE ET COMMUNICATION</option>
+                                                                        <option value="EVEIL SCIENTIFQUE & TECHNOLOGIQUE">EVEIL SCIENTIFQUE & TECHNOLOGIQUE</option>
+                                                                        <option value="VIE COURANTE">VIE COURANTE</option>
+                                                                        <option value="CREATION ARTISTIQUE & ACTIVITES MANUELLES">CREATION ARTISTIQUE & ACTIVITES MANUELLES</option>
             
+                        
                                                                         <option value="LITERACY AND COMMUNICATION">LITERACY AND COMMUNICATION</option>
                                                                         <option value="SCIENCE AND TECHNOLOGICAL SKILLS DEVELOPMENT">SCIENCE AND TECHNOLOGICAL SKILLS DEVELOPMENT</option>
                                                                         <option value="PRATICAL LIFE SKILLS">PRATICAL LIFE SKILLS</option>
