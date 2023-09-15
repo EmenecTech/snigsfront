@@ -288,6 +288,20 @@ const Dashboard_superadmin = memo((props) => {
 
   ////////////////
 
+
+  const [matieres, setmatieres] = useState([]);
+    useEffect(() => {
+        fetchAllmatieres();
+    }, []);
+
+    const fetchAllmatieres = () => {
+        http.get('/get_periodes_matieres_enseignant/' + etab + '/' + classe + '/' + matiere).then(res => {
+            setmatieres(res.data);
+        })
+    }
+
+  /////
+
   useSelector(SettingSelector.theme_color);
 
   const getVariableColor = () => {
@@ -580,7 +594,7 @@ const Dashboard_superadmin = memo((props) => {
                         <Nav.Link eventKey="second">Classes </Nav.Link>
                       </Nav.Item>
                       <Nav.Item as="li">
-                        <Nav.Link eventKey="third">{user.langue === "en" ? (<div>Courses</div>):(<div>Matieres </div>)}</Nav.Link>
+                        <Nav.Link eventKey="third">Planning</Nav.Link>
                       </Nav.Item>
                       <Nav.Item as="li">
                         <Nav.Link eventKey="fourth"></Nav.Link>
@@ -667,18 +681,67 @@ const Dashboard_superadmin = memo((props) => {
                 </Tab.Pane >
                 <Tab.Pane eventKey="third" id="profile-matieres">
                   <Card>
-                    <Card.Header>
-                      <div className="header-title">
-                        <h4 className="card-title">Matières</h4>
-                      </div>
-                    </Card.Header>
-                    <Card.Body>
-                      <ul className="list-inline m-0 p-0">
+                        <Card.Header className="d-flex justify-content-between">
+                            <div className="header-title">
+                                <h4 className="card-title">Planning</h4>
+                            </div>
 
 
-                      </ul>
-                    </Card.Body>
-                  </Card>
+
+                        </Card.Header>
+                        <Card.Body>
+
+                            <div className="table-responsive border-bottom my-3">
+                                <Table
+                                    responsive
+                                    striped
+                                    id="datatable"
+                                    className=""
+                                    data-toggle="data-table"
+                                >
+                                    <thead>
+                                        <tr>
+                                            <th> {user.langue === "en" ? (<div> day </div>):(<div> jour </div>)} </th>
+                                            <th>{user.langue === "en" ? (<div> class </div>):(<div> classe </div>)} </th>
+                                            <th>{user.langue === "en" ? (<div> subject </div>):(<div> matière </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> period </div>):(<div> période </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> action </div>):(<div> action </div>)}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {matieres.map((item) => (
+                                            <tr key={item.id}>
+                                                <td>{item.jour_programme}</td>
+                                                <td>{item.classe_programme}</td>
+                                                <td>{item.matiere_programme}</td>
+                                                <td>{item.heure_d_programme} - {item.heure_f_programme}</td>
+                                                <td>
+                                                    <div className="flex align-items-center list-user-action">
+
+                                                        <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Enseignant/Text/Book/Chapitres/Matiere/" + item.classe_programme + "/" + item.matiere_programme + "/" + item.id}>
+                                                            <span className="btn-inner">
+                                                                <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                    <path fillRule="evenodd" clipRule="evenodd" d="M8.82812 10.921L16.3011 3.44799C17.2321 2.51799 18.7411 2.51799 19.6721 3.44799L20.8891 4.66499C21.8201 5.59599 21.8201 7.10599 20.8891 8.03599L13.3801 15.545C12.9731 15.952 12.4211 16.181 11.8451 16.181H8.09912L8.19312 12.401C8.20712 11.845 8.43412 11.315 8.82812 10.921Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                    <path d="M15.1655 4.60254L19.7315 9.16854" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </Link>
+
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                    <tfoot>
+
+                                    </tfoot>
+                                </Table>
+
+                            </div>
+                        </Card.Body>
+                    </Card>
                 </Tab.Pane >
                 <Tab.Pane eventKey="fourth" id="profile-feed">
                   <Card>
