@@ -529,7 +529,7 @@ const UniClasse = () => {
                                                                 <Form.Group className="form-group">
                                                                     <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div> Group </div>):(<div>Groupe</div>)} </Form.Label>
                                                                     
-    {user.etablissememt === 25 ? <div>
+    {etab === 25 ? <div>
     <select className="form-select mb-3 shadow-none" name="groupe" onChange={handleChange} required>
                                                                         <option></option>
 
