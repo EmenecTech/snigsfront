@@ -92,6 +92,7 @@ const Dashboard_superadmin = memo((props) => {
   const etab = user.etablissement;
   const niveau = user.fonction_user;
   const classe = user.other_in_user;
+  const userid = user.id;
 
 
 
@@ -295,7 +296,7 @@ const Dashboard_superadmin = memo((props) => {
     }, []);
 
     const fetchAllmatieres = () => {
-        http.get('/get_periodes_planning_enseignant/' + etab + '/' + classe ).then(res => {
+        http.get('/get_periodes_planning_enseignant/' + etab + '/' + userid).then(res => {
             setmatieres(res.data);
         })
     }
