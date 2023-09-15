@@ -779,7 +779,7 @@ const Dashboard_superadmin = memo((props) => {
                           </div>
                         </div>
                         <hr />
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla dolor, ornare at commodo non, feugiat non nisi. Phasellus faucibus mollis pharetra. Proin blandit ac massa sed rhoncus</p>
+                        <p></p>
                         <hr />
                         <ul className="list-inline p-0 m-0">
                           <li className="mb-2">
@@ -787,7 +787,7 @@ const Dashboard_superadmin = memo((props) => {
                               <Image src={avatars3} alt="userimg" className="avatar-50 p-1 pt-2 bg-soft-primary rounded-pill img-fluid" />
                               <div className="ms-3">
                                 <h6 className="mb-1">Monty Carlo</h6>
-                                <p className="mb-1">Lorem ipsum dolor sit amet</p>
+                                <p className="mb-1"></p>
                                 <div className="d-flex flex-wrap align-items-center mb-1">
                                   <Link to="#" className="me-3">
                                     <svg width="20" height="20" className="text-body me-1" viewBox="0 0 24 24">
@@ -927,7 +927,7 @@ const Dashboard_superadmin = memo((props) => {
                   </div>
                 </Card.Header>
                 <Card.Body>
-                  <p>Lorem ipsum dolor sit amet, contur adipiscing elit.</p>
+                  <p></p>
                   <div className="mb-1">Email: <Link to="#" className="ms-3">{user.email}</Link></div>
                   <div className="mb-1">Phone: <Link to="#" className="ms-3">{user.telephone}</Link></div>
                   <div>Location: <span className="ms-3">{user.lieu_naissance}</span></div>
