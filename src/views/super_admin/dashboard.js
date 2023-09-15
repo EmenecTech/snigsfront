@@ -295,7 +295,7 @@ const Dashboard_superadmin = memo((props) => {
     }, []);
 
     const fetchAllmatieres = () => {
-        http.get('/get_periodes_matieres_enseignant/' + etab + '/' + classe + '/' + matiere).then(res => {
+        http.get('/get_periodes_matieres_enseignant/' + etab + '/' + classe ).then(res => {
             setmatieres(res.data);
         })
     }
