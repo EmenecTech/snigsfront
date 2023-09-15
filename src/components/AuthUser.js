@@ -33,7 +33,7 @@ export default function AuthUser() {
         navigate("/");
     };
     const http = axios.create({
-        baseURL: "https://digitschool.xyz/api/",
+        baseURL: "https://snigsbackend.com/api/",
         headers: {
             "Content-type": "application/json",
             "Authorization": `Bearer ${token}`
