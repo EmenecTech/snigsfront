@@ -454,7 +454,7 @@ const EditEleve = memo((props) => {
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Is the student a repeat student?</div>):(<div>L'élève est-il  redoublant?</div>)}</Form.Label>
                                 <select className="form-select mb-3 shadow-none" name="redouble" onChange={handleChange} >
-                                    <option></option>
+                                    <option value={eleve.redouble}>{eleve.redouble}</option>
                                     
                                         <option value='oui'>Oui</option>
                                         <option value='non'>Non</option>
@@ -473,7 +473,7 @@ const EditEleve = memo((props) => {
                                 <Form.Control
                                   type="text"
                                   name="situation"                                 
-                                 defaultValue={eleve.situation}
+                                 defaultValue={eleve.situation_sante}
                                   onChange={handleChange}
 
                                   
@@ -491,7 +491,7 @@ const EditEleve = memo((props) => {
                                 <Form.Control
                                   as="textarea" id="desc_sante" name="desc_sante" rows="5"
                                   onChange={handleChange}
-                                  defaultValue={eleve.desc_sante}
+                                  defaultValue={eleve.description_sante}
                                 />
                             </Form.Group>
                         </Col>
@@ -551,7 +551,7 @@ const EditEleve = memo((props) => {
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
-                                  defaultValue={eleve.profession_1}
+                                  defaultValue={eleve.profession_parent_1}
                                   name="profession_1"
                                   onChange={handleChange}
 
@@ -633,7 +633,7 @@ const EditEleve = memo((props) => {
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
-                                  defaultValue={eleve.profession_2}
+                                  defaultValue={eleve.profession_parent_2}
                                   name="profession_2"
                                   onChange={handleChange}
 
