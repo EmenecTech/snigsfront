@@ -2,10 +2,10 @@ import React, { useState, useEffect, memo, Fragment } from "react";
 import { Row, Col, Dropdown, Modal, Button, Table, Form } from "react-bootstrap";
 import { createPath, useNavigate, useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
-import AuthUser from "../../../components/AuthUser.js";
 
 
-import http from "../../../http.js";
+
+
 
 //circular
 import Circularprogressbar from "../../../components/circularprogressbar.js";
@@ -44,6 +44,7 @@ import { useSelector } from "react-redux";
 // Import selectors & action from setting store
 import * as SettingSelector from "../../../store/setting/selectors";
 import Card from "../../../components/Card.js";
+import AuthUser from "../../../components/AuthUser.js";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -55,6 +56,8 @@ const EditEleve = memo((props) => {
     
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
+
+    const { http, user } = AuthUser();
     
     const { niveau, id } = useParams();
     const etab = user.etablissement;
