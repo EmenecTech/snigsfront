@@ -436,13 +436,13 @@ const EditEleve = memo((props) => {
 
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Name </div>):(<div> Nom </div>)}</Form.Label>
-                                <Form.Control type="text" id="exampleInputReadonly"  defaultValue={eleve.nom} onChange={handleChange}/>
+                                <Form.Control type="text" id="exampleInputReadonly" name="nom"  defaultValue={eleve.nom} onChange={handleChange}/>
                             </Form.Group>
                         </Col>
                         <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Surname</div>):(<div>Prénom </div>)}</Form.Label>
-                                <Form.Control type="text" id="exampleInputReadonly"  defaultValue={eleve.prenom} onChange={handleChange}/>
+                                <Form.Control type="text" id="exampleInputReadonly" name="prenom"  defaultValue={eleve.prenom} onChange={handleChange}/>
                             </Form.Group>
                         </Col>
                         
