@@ -2,29 +2,48 @@ import React, { useState, useEffect, memo, Fragment } from "react";
 import { Row, Col, Dropdown, Modal, Button, Table, Form } from "react-bootstrap";
 import { createPath, useNavigate, useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
+import AuthUser from "../../../components/AuthUser.js";
 
 
+import http from "../../../http.js";
+
+//circular
+import Circularprogressbar from "../../../components/circularprogressbar.js";
 
 // AOS
 import AOS from "aos";
 import "../../../../node_modules/aos/dist/aos";
 import "../../../../node_modules/aos/dist/aos.css";
 //apexcharts
+import Chart from "react-apexcharts";
 
-
+//swiper
+import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
 
 // Import Swiper styles
 import "swiper/swiper-bundle.min.css";
 // import 'swiper/components/navigation/navigation.scss';
 
+//progressbar
+import Progress from "../../../components/progress.js";
+
+//img
+import shapes1 from "../../../assets/images/shapes/01.png";
+import shapes2 from "../../../assets/images/shapes/02.png";
+import shapes3 from "../../../assets/images/shapes/03.png";
+import shapes4 from "../../../assets/images/shapes/04.png";
+import shapes5 from "../../../assets/images/shapes/05.png";
+
+//Count-up
+import CountUp from "react-countup";
+
+// Redux Selector / Action
 import { useSelector } from "react-redux";
 
 // Import selectors & action from setting store
 import * as SettingSelector from "../../../store/setting/selectors";
-
-import AuthUser from "../../../components/AuthUser";
-import Card from "../../../components/Card";
+import Card from "../../../components/Card.js";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -33,12 +52,10 @@ SwiperCore.use([Navigation]);
 
 
 const EditEleve = memo((props) => {
-    const [show, setShow] = useState(false);
-    const { user, http } = AuthUser();
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
+    
     const { niveau, id } = useParams();
     const etab = user.etablissement;
 
@@ -60,16 +77,29 @@ const EditEleve = memo((props) => {
     const submitForm = () => {
         http.put('/modif_eleve_in_classe', inputs).then((res) => {
             alert("Modification effectuée !")
-            navigate('/List/classes/')
             window.location.reload(false);
 
         })
-
-
-
         console.log(inputs);
-
     }
+
+    const submitNiv = () => {
+        http.put('/modif_niveau_eleve', inputs).then((res) => {
+            alert("Niveau modifié !")
+            window.location.reload(false);
+        })
+        console.log(inputs);
+    }
+
+    const submitClass = () => {
+        http.put('eleve_in_classe/', inputs).then((res) => {
+            alert("Classe modifiée !")
+            window.location.reload(false);
+        })
+        console.log(inputs);
+    }
+
+
     const [niveaux, setniveaux] = useState([]);
     useEffect(() => {
         fetchAllniveaux();
@@ -346,27 +376,42 @@ const EditEleve = memo((props) => {
     return (
         <Fragment>
             <Row>
-                <Col sm="12">
+                <Col sm="12" lg="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
 
+                        </Card.Header>
+                        <Card.Body>
 
+                        <Form>
+                        <Row>
+                        <Col>
                             <Form.Group className="form-group">
-                                <Form.Label htmlFor="exampleInputReadonly">Nom</Form.Label>
-                                <Form.Control type="text" id="exampleInputReadonly" disabled defaultValue={eleve.nom} />
+                                <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)}</Form.Label>
+                                <select className="form-select mb-3 shadow-none" name="niveau" >
+                                    <option>{niveau}</option>
+                                    {niveaux.map((item) => (
+                                        <option key={item.id} value={item.intitule_niveau}>{item.intitule_niveau}</option>
+                                    ))}
+
+
+                                </select>
                             </Form.Group>
+                        </Col>
+
+                        <div className="text-center mt-2">
+                                <Button type="button" variant="primary" onClick={submitNiv} > {user.langue === "en" ? (<div>Edit</div>):(<div>Modifier</div>)}</Button>
+                        </div>
+                        </Row>
+
+                        <div className="divider"></div>
+
+                        <Row>
+                        <Col>
                             <Form.Group className="form-group">
-                                <Form.Label htmlFor="exampleInputReadonly">Prénom</Form.Label>
-                                <Form.Control type="text" id="exampleInputReadonly" disabled defaultValue={eleve.prenom} />
-                            </Form.Group>
-                            <Form.Group className="form-group">
-                                <Form.Label htmlFor="exampleInputReadonly">Niveau</Form.Label>
-                                <Form.Control type="text" id="exampleInputReadonly" disabled defaultValue={niveau} />
-                            </Form.Group>
-                            <Form.Group className="form-group">
-                                <Form.Label htmlFor="exampleInputReadonly">Choisissez la classe</Form.Label>
-                                <select className="form-select mb-3 shadow-none" name="classe" onChange={handleChange}>
-                                    <option></option>
+                                <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Choose the class</div>):(<div>Choisissez la classe</div>)}</Form.Label>
+                                <select className="form-select mb-3 shadow-none" name="classe" >
+                                    <option>{eleve.other_in_user}</option>
                                     {classes.map((item) => (
                                         <option key={item.id} value={item.intitule_classe}>{item.intitule_classe}</option>
                                     ))}
@@ -374,72 +419,247 @@ const EditEleve = memo((props) => {
 
                                 </select>
                             </Form.Group>
+                        </Col>
+
+                        <div className="text-center mt-2">
+                                <Button type="button" variant="primary" onClick={submitClass} > {user.langue === "en" ? (<div>Edit</div>):(<div>Modifier</div>)}</Button>
+                        </div>
+                        </Row>
+
+                        <div className="divider"></div>
+
+                        <Row>
+                        <Col>
+
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Name </div>):(<div> Nom </div>)}</Form.Label>
+                                <Form.Control type="text" id="exampleInputReadonly"  defaultValue={eleve.nom} onChange={handleChange}/>
+                            </Form.Group>
+                        </Col>
+                        <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Surname</div>):(<div>Prénom </div>)}</Form.Label>
+                                <Form.Control type="text" id="exampleInputReadonly"  defaultValue={eleve.prenom} onChange={handleChange}/>
+                            </Form.Group>
+                        </Col>
+                        
+                        </Row>
+    <Row>
+                        
+                        
+                        <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Is the student a repeat student?</div>):(<div>L'élève est-il  redoublant?</div>)}</Form.Label>
+                                <select className="form-select mb-3 shadow-none" name="redouble" onChange={handleChange} >
+                                    <option></option>
+                                    
+                                        <option value='oui'>Oui</option>
+                                        <option value='non'>Non</option>
+    
+                                    
+
+
+                                </select>
+                            </Form.Group>
+                        </Col>
+                        <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Health situation</div>):(<div>Situation santé</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  name="situation"                                 
+                                 defaultValue={eleve.situation}
+                                  onChange={handleChange}
+
+                                  
+                                />
+                            </Form.Group>
+                        </Col>
+    
+                                      </Row>
+                                      <Row>
+                        <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Nature of the problem and action to be taken</div>):(<div>Nature du problème et disposition à prendre</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  as="textarea" id="desc_sante" name="desc_sante" rows="5"
+                                  onChange={handleChange}
+                                  defaultValue={eleve.desc_sante}
+                                />
+                            </Form.Group>
+                        </Col>
+                                      </Row>
+                                      
+                                      <Row>
+                        <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>father's name</div>):(<div>  Nom du père</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue={eleve.nom_parent}
+                                  name="nom_parent"
+                                  onChange={handleChange}
+
+                                />
+                            </Form.Group>
+                        </Col>
+                        <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Father's first name</div>):(<div>  Prénom du père</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue={eleve.prenom_parent}
+                                  name="prenom_parent"
+                                  onChange={handleChange}
+
+                                />
+                       
+                            </Form.Group>
+                        </Col>
+                        <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Father's contact 1</div>):(<div>Contact du père</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue={eleve.numero_parent}
+                                  name="numero_parent"
+                                  onChange={handleChange}
+
+                                />
+                            </Form.Group>
+                        </Col>
+                                      
+                                      </Row>
+                                      <Row>
+                                      <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Father's profession</div>):(<div>Profession du père</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue={eleve.profession_1}
+                                  name="profession_1"
+                                  onChange={handleChange}
+
+                                />
+                            </Form.Group>
+                        </Col>
+
+                                      <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Father's address</div>):(<div>Adresse du père</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue={eleve.adresse_parent}
+                                  name="adresse_parent"
+                                  onChange={handleChange}
+
+                                />
+                            </Form.Group>
+                        </Col>
+                                      </Row>
+
+                                      <Row>
+                                      
+                        
+                        <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Mother's name</div>):(<div>Nom de la mère</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue={eleve.nom_parent_2}
+                                  name="nom_parent_2"
+                                  onChange={handleChange}
+
+                                />
+                            </Form.Group>
+                        </Col>
+
+                                      <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Mother's surname 2</div>):(<div>Prénom de la mère</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue={eleve.prenom_parent_2}
+                                  name="prenom_parent_2"
+                                  onChange={handleChange}
+
+                                />
+                       
+                            </Form.Group>
+                        </Col>
+                                      <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Mother's contact 2</div>):(<div>Contact de la mère</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue={eleve.numero_parent_2}
+                                  name="numero_parent_2"
+                                  onChange={handleChange}
+
+                                />
+                            </Form.Group>
+                        </Col>
+                                      </Row>
+                                      <Row>
+                        
+                        
+                                      <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Mother's profession</div>):(<div>  Profession de la mère</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue={eleve.profession_2}
+                                  name="profession_2"
+                                  onChange={handleChange}
+
+                                />
+                            </Form.Group>
+                        </Col>
+                                      <Col>
+                            <Form.Group className="form-group">
+                                <Form.Label htmlFor="exampleInputReadonly">
+                                {user.langue === "en" ? (<div>Mother's address</div>):(<div>Adresse de la mère</div>)}
+                                </Form.Label>
+                                <Form.Control
+                                  type="text"
+                                  defaultValue={eleve.adresse_parent_2}
+                                  name="adresse_parent_2"
+                                  onChange={handleChange}
+
+                                />
+                            </Form.Group>
+                        </Col>
+                                      
+                                      </Row>
+                                     
+
 
                             <div className="text-center mt-2">
-                                <Button type="button" variant="primary" onClick={submitForm} >Modifier</Button>
+                                <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Edit</div>):(<div>Modifier</div>)}</Button>
                             </div>
-
-                        </Card.Header>
-                        <Card.Body>
-
-                            <div className="table-responsive border-bottom my-3">
-                                <Table
-                                    responsive
-                                    striped
-                                    id="datatable"
-                                    className=""
-                                    data-toggle="data-table"
-                                >
-                                    <thead>
-                                        <tr>
-
-                                            <th>Classe</th>
-                                            <th>Niveau</th>
-                                            <th>Filière </th>
-                                            <th>Cycle </th>
-                                            <th>Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {classes.map((item) => (
-                                            <tr key={item.id}>
-                                                <td>{item.intitule_classe}</td>
-                                                <td>{item.niveau_classe}</td>
-                                                <td>{item.filiere}</td>
-                                                <td>{item.cycle_niveau}</td>
-                                                <td>
-                                                    <div className="flex align-items-center list-user-action">
-
-                                                        <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Details/classe/" + item.niveau_classe + "/" + item.intitule_classe}>
-                                                            <span className="btn-inner">
-                                                                <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                                    <path fillRule="evenodd" clipRule="evenodd" d="M8.82812 10.921L16.3011 3.44799C17.2321 2.51799 18.7411 2.51799 19.6721 3.44799L20.8891 4.66499C21.8201 5.59599 21.8201 7.10599 20.8891 8.03599L13.3801 15.545C12.9731 15.952 12.4211 16.181 11.8451 16.181H8.09912L8.19312 12.401C8.20712 11.845 8.43412 11.315 8.82812 10.921Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                                    <path d="M15.1655 4.60254L19.7315 9.16854" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                                </svg>
-                                                            </span>
-                                                        </Link>{' '}
-                                                        <Link className="btn btn-sm btn-icon btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" to="#">
-                                                            <span className="btn-inner">
-                                                                <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
-                                                                    <path d="M19.3248 9.46826C19.3248 9.46826 18.7818 16.2033 18.4668 19.0403C18.3168 20.3953 17.4798 21.1893 16.1088 21.2143C13.4998 21.2613 10.8878 21.2643 8.27979 21.2093C6.96079 21.1823 6.13779 20.3783 5.99079 19.0473C5.67379 16.1853 5.13379 9.46826 5.13379 9.46826" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                                    <path d="M20.708 6.23975H3.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                                    <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                                </svg>
-                                                            </span>
-                                                        </Link>{' '}
-                                                    </div>
-                                                </td>
-
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                    <tfoot>
-
-                                    </tfoot>
-                                </Table>
-
-                            </div>
+                        </Form>    
                         </Card.Body>
                     </Card>
                 </Col>
