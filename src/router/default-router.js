@@ -681,7 +681,7 @@ export const DefaultRouter = [
                 element: <Enseignant_matieres_notes />
             },
             {
-                path: 'Enseignant/List/Notes/:evaluation/:niveau/:classe/:matiere',
+                path: 'Enseignant/List/Notes/:evaluation/:classe/:matiere',
                 element: <EnseignantAddNote />
             },
             {
