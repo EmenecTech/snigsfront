@@ -388,7 +388,7 @@ const ListGroupes = memo((props) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {filieres.map((item) => (
+                    {groupes.map((item) => (
                       <tr key={item.id}>
                         <td>{item.intitule_matiere}</td>
                         <td>
