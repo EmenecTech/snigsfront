@@ -74,7 +74,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Nom </Form.Label>
-                                                    <Form.Control type="text" name="nom" defaultValue={ens.nom} value={inputs.nom} onChange={handleChange} disabled />
+                                                    <Form.Control type="text" name="nom" defaultValue={ens.nom}  onChange={handleChange} disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -82,7 +82,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Prenom </Form.Label>
-                                                    <Form.Control type="text" name="prenom" defaultValue={ens.prenom} value={inputs.prenom} onChange={handleChange} required disabled />
+                                                    <Form.Control type="text" name="prenom" defaultValue={ens.prenom}  onChange={handleChange} required disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -105,7 +105,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Date de naissance </Form.Label>
-                                                    <Form.Control type="date" name="date_n" defaultValue={ens.date_naissance} value={inputs.date_n} onChange={handleChange} disabled />
+                                                    <Form.Control type="date" name="date_n" defaultValue={ens.date_naissance}  onChange={handleChange} disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -113,7 +113,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Lieu de naissance </Form.Label>
-                                                    <Form.Control type="text" name="lieu_n" defaultValue={ens.lieu_naissance} value={inputs.lieu_n} onChange={handleChange} required disabled />
+                                                    <Form.Control type="text" name="lieu_n" defaultValue={ens.lieu_naissance}  onChange={handleChange} required disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -121,7 +121,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Nationalité </Form.Label>
-                                                    <Form.Control type="text" name="nation" defaultValue={ens.nationalite} value={inputs.nation} onChange={handleChange} required disabled />
+                                                    <Form.Control type="text" name="nation" defaultValue={ens.nationalite}  onChange={handleChange} required disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -132,7 +132,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Email </Form.Label>
-                                                    <Form.Control type="email" name="email" defaultValue={ens.email} value={inputs.email} onChange={handleChange} required disabled />
+                                                    <Form.Control type="email" name="email" defaultValue={ens.email}  onChange={handleChange} required disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -141,7 +141,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Téléphone </Form.Label>
-                                                    <Form.Control type="text" defaultValue={ens.telephone} name="tel" value={inputs.tel} onChange={handleChange} required disabled />
+                                                    <Form.Control type="text" defaultValue={ens.telephone} name="tel"  onChange={handleChange} required disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -149,7 +149,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Numéro CNI / Passeport </Form.Label>
-                                                    <Form.Control type="text" name="cni" defaultValue={ens.num_cni} value={inputs.cni} onChange={handleChange} required disabled />
+                                                    <Form.Control type="text" name="cni" defaultValue={ens.num_cni}  onChange={handleChange} required disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
