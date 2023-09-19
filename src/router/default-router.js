@@ -685,7 +685,7 @@ export const DefaultRouter = [
                 element: <EnseignantAddNote />
             },
             {
-                path: 'Enseignant/List/Evaluations/:classe/:matiere',
+                path: 'Enseignant/List/Evaluations/:niveau/:classe/:matiere',
                 element: <EnseignantListEvaluations />
             },
             ////Cahier de texte
