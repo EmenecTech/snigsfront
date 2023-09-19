@@ -86,7 +86,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Nom </Form.Label>
-                                                    <Form.Control type="text" name="nom" value={inputs.nom || ""}  onChange={handleChange}  />
+                                                    <Form.Control type="text" name="nom" value={inputs.nom || ""}  onChange={handleChange} />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -94,7 +94,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Prenom </Form.Label>
-                                                    <Form.Control type="text" name="prenom" value={inputs.prenom || ""}  onChange={handleChange}  />
+                                                    <Form.Control type="text" name="prenom" value={inputs.prenom || ""}  onChange={handleChange} />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
