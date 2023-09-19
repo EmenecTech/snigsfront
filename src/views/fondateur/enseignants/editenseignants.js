@@ -31,7 +31,7 @@ const EditEnseignants = () => {
     }, []);
 
     const fetchenseignants = () => {
-        http.get("/editens/" + id ).then((res) => {
+        http.get("/editens/" + id ).then(res => {
             setens(res.data);
         })
 
