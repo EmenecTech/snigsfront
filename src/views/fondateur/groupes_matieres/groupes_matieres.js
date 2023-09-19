@@ -390,7 +390,7 @@ const ListGroupes = memo((props) => {
                   <tbody>
                     {groupes.map((item) => (
                       <tr key={item.id}>
-                        <td>{item.intitule_matiere}</td>
+                        <td>{item.intitule_groupe}</td>
                         <td>
                           <div className="flex align-items-center list-user-action">
                             
