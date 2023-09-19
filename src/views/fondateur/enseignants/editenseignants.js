@@ -25,30 +25,17 @@ const EditEnseignants = () => {
         })
     }
 
-
+    const [ens, setens] = useState([]);
     useEffect(() => {
         fetchenseignants();
     }, []);
 
     const fetchenseignants = () => {
-        http.put("/edituser/" + id ).then((res) => {
-            setInputs({
-                tel: res.data.telephone,
-                nom: res.data.nom,
-                prenom: res.data.prenom,
-                email: res.data.email,
-                genre: res.data.sexe,
-                nationalite: res.data.nationalite,
-                cni: res.data.num_cni,
-                date_n: res.data.date_naissance,
-                lieu_n: res.data.lieu_naissance,
-                matiere: res.data.fonction_user,
-                type_user: res.data.other_in_user,
+        http.get("/editens/" + id ).then((res) => {
+            setens(res.data);
+        })
 
-            });
-        });
-
-    };
+    }
 
     const handleChange = (event) => {
         const name = event.target.name;
@@ -88,7 +75,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Nom </Form.Label>
-                                                    <Form.Control type="text" defaultValue="" name="nom" value={inputs.nom || ""} onChange={handleChange} disabled />
+                                                    <Form.Control type="text" name="nom" defaultValue={ens.nom} value={inputs.nom} onChange={handleChange} disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -96,7 +83,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Prenom </Form.Label>
-                                                    <Form.Control type="text" defaultValue="" name="prenom" value={inputs.prenom || ""} onChange={handleChange} required disabled />
+                                                    <Form.Control type="text" name="prenom" defaultValue={ens.prenom} value={inputs.prenom} onChange={handleChange} required disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -105,7 +92,7 @@ const EditEnseignants = () => {
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Genre </Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="genre" onChange={handleChange} disabled>
-                                                        <option value={inputs.genre || ""}>{inputs.genre}</option>
+                                                        <option value={ens.sexe}>{ens.sexe}</option>
                                                         <option value="Masculin">Masculin</option>
                                                         <option value="Feminin">Feminin</option>
                                                     </select>
@@ -119,7 +106,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Date de naissance </Form.Label>
-                                                    <Form.Control type="date" defaultValue="" name="date_n" value={inputs.date_n || ""} onChange={handleChange} disabled />
+                                                    <Form.Control type="date" name="date_n" defaultValue={ens.date_naissance} value={inputs.date_n} onChange={handleChange} disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -127,7 +114,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Lieu de naissance </Form.Label>
-                                                    <Form.Control type="text" defaultValue="" name="lieu_n" value={inputs.lieu_n || ""} onChange={handleChange} required disabled />
+                                                    <Form.Control type="text" name="lieu_n" defaultValue={ens.lieu_naissance} value={inputs.lieu_n} onChange={handleChange} required disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -135,7 +122,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Nationalité </Form.Label>
-                                                    <Form.Control type="text" defaultValue="" name="nationalite" value={inputs.nationalite || ""} onChange={handleChange} required disabled />
+                                                    <Form.Control type="text" name="nation" defaultValue={ens.nationalite} value={inputs.nation} onChange={handleChange} required disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -146,7 +133,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Email </Form.Label>
-                                                    <Form.Control type="email" defaultValue="" name="email" value={inputs.email || ""} onChange={handleChange} required disabled />
+                                                    <Form.Control type="email" name="email" defaultValue={ens.email} value={inputs.email} onChange={handleChange} required disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -155,7 +142,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Téléphone </Form.Label>
-                                                    <Form.Control type="text" defaultValue="" name="tel" value={inputs.tel || ""} onChange={handleChange} required disabled />
+                                                    <Form.Control type="text" defaultValue={ens.telephone} name="tel" value={inputs.tel} onChange={handleChange} required disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -163,7 +150,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Numéro CNI / Passeport </Form.Label>
-                                                    <Form.Control type="text" defaultValue="" name="cni" value={inputs.cni || ""} onChange={handleChange} required disabled />
+                                                    <Form.Control type="text" name="cni" defaultValue={ens.num_cni} value={inputs.cni} onChange={handleChange} required disabled />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -177,7 +164,7 @@ const EditEnseignants = () => {
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Matière principale * </Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="matiere" onChange={handleChange}>
-                                                        <option value={inputs.matiere || ""}>{inputs.matiere}</option>
+                                                        <option value={ens.fonction_user}>{ens.fonction_user}</option>
                                                         {matieres.map((item) => (
                                                             <option value={item.intitule_matiere}>{item.intitule_matiere}</option>
 
@@ -193,7 +180,7 @@ const EditEnseignants = () => {
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Type * </Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="type_user" onChange={handleChange}>
-                                                        <option valeur={inputs.type_user || ""}>{inputs.type_user}</option>
+                                                        <option valeur={ens.other_in_user || ""}>{ens.other_in_user}</option>
                                                         <option value="Permanent">Permanent</option>
                                                         <option value="Vacataire">Vacataire</option>
                                                         <option value="emporaire">Temporaire</option>
