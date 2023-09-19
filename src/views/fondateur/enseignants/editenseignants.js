@@ -34,7 +34,6 @@ const EditEnseignants = () => {
         http.get("/editens/" + id ).then(res => {
             setens(res.data);
         })
-
     }
 
     const handleChange = (event) => {
