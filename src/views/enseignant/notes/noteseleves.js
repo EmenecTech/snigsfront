@@ -43,7 +43,7 @@ const EnseignantAddNote = () => {
     }, []);
 
     const fetchAllmatiere_classe_info = () => {
-        http.get('/get_info_matiere_classe/' + etab + '/' + classe + '/' + matiere + '/' + niveau).then(res => {
+        http.get('/get_info_matiere_classe/' + etab + '/' + niveau + '/' +  classe + '/' + matiere ).then(res => {
             setmatiere_classe_info(res.data);
         })
     }
