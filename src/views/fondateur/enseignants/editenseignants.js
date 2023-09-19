@@ -164,7 +164,7 @@ const EditEnseignants = () => {
                                                     <Form.Label htmlFor="exampleInputText1">Matière principale * </Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="matiere" value={ ens.fonction_user} onChange={handleChange}>
                                                         <option></option>
-                                                        {ens.map(en=> (
+                                                        {item.map(en=> (
                                                             <option value={item.intitule_matiere}>{item.intitule_matiere}</option>
 
                                                         ))}
