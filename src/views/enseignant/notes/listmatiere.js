@@ -57,6 +57,7 @@ const Enseignant_matieres_notes = memo((props) => {
     const [inputs, setInputs] = useState({});
     const etab = user.etablissement;
     const userid = user.id;
+    const {niveau} = useParams();
 
     const handleChange = (event) => {
         const name = event.target.name;
@@ -370,7 +371,7 @@ const Enseignant_matieres_notes = memo((props) => {
                                                 <td>
                                                     <div className="flex align-items-center list-user-action">
 
-                                                        <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Enseignant/List/Evaluations/" + item.classe_cp + "/" + item.matiere_cp}>
+                                                        <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Enseignant/List/Evaluations/" + niveau + "/" + item.classe_cp + "/" + item.matiere_cp }>
                                                             <span className="btn-inner">
                                                                 <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
