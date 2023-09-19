@@ -174,6 +174,9 @@ import AdminEvaluationListClasses from '../views/fondateur/bulletins/classes';
 import AdminEvaluationListClassesEleves from '../views/fondateur/bulletins/eleves';
 import BulletinByEleve from '../views/fondateur/bulletins/bulletin_eleve';
 
+import ListGroupes from '../views/fondateur/groupes_matieres/groupes_matieres';
+
+
 
 
 export const DefaultRouter = [
@@ -328,6 +331,10 @@ export const DefaultRouter = [
             {
                 path: 'Edit/matieres/:id',
                 element: <EditMatieres />
+            },
+            //////
+            {   path: 'List/groupes/',
+                element: <ListGroupes />
             },
             //////
             {
