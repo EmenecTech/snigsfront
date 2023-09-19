@@ -31,7 +31,7 @@ const EditEnseignants = () => {
     }, []);
 
     const fetchenseignants = () => {
-        http.get("/editens/" + id ).then((res) => {
+        http.put("/edituser/" + id ).then((res) => {
             setInputs({
                 tel: res.data.telephone,
                 nom: res.data.nom,
