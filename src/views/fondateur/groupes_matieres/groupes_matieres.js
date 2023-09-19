@@ -309,7 +309,7 @@ const ListGroupes = memo((props) => {
           <Card>
             <Card.Header className="d-flex justify-content-between">
               <div className="header-title">
-                <h4 className="card-title">{user.langue === "en" ? (<div> subjects </div>):(<div> Matières </div>)}</h4>
+                <h4 className="card-title">{user.langue === "en" ? (<div> Groups </div>):(<div> Groupes </div>)}</h4>
               </div>
 
               <Button variant="primary mt-2" onClick={handleShow}>
