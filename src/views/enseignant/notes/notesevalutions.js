@@ -83,6 +83,7 @@ const EnseignantListEvaluations = memo((props) => {
         console.log(inputs);
 
     }
+    
     const [evaluations_list, setevaluations] = useState([]);
     useEffect(() => {
         fetchAllevaluations();
@@ -97,7 +98,18 @@ const EnseignantListEvaluations = memo((props) => {
 
 
 
+ const [niveau_classe, setniveau_classe] = useState([]);
+    useEffect(() => {
+        fetchAllniveau_classe();
+    }, []);
 
+    const fetchAllniveau_classe = () => {
+        http.get('/get_niveau_classe/' + etab + '/' + classe).then(res => {
+            setniveau_classe(res.data);
+        })
+    }
+
+    const niveau = niveau_classe.intitule_niveau;
 
     useSelector(SettingSelector.theme_color);
 
@@ -343,7 +355,7 @@ const EnseignantListEvaluations = memo((props) => {
                                 <h4 className="card-title">Evaluations</h4>
                             </div>
                             <div>
-                                <Link className="btn btn-primary" to={"/Enseignant/Bordereau/" + classe + "/" + matiere}>All Notes</Link>
+                                <Link className="btn btn-primary" to={"/Enseignant/Bordereau/" +  niveau + "/" + classe + "/" + matiere}>All Notes</Link>
                             </div>
 
 
