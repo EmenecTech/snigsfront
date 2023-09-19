@@ -426,30 +426,30 @@ const NiveauxMatieres = memo((props) => {
                                                         <select className="form-select mb-3 shadow-none" name="groupe" onChange={handleChange} required>
                                                             <option></option>
 
-                                                            // <option value="Groupe 1">{user.langue === "en" ? (<div>Group 1</div>):(<div> Groupe 1 </div>)}</option>
-                                                            // <option value="Groupe 2">{user.langue === "en" ? (<div>Group 2</div>):(<div> Groupe 2 </div>)}</option>
-                                                            // <option value="Groupe 3">{user.langue === "en" ? (<div>Group 3</div>):(<div> Groupe 3 </div>)}</option>
+                                                            <option value="Groupe 1">{user.langue === "en" ? (<div>Group 1</div>):(<div> Groupe 1 </div>)}</option>
+                                                            <option value="Groupe 2">{user.langue === "en" ? (<div>Group 2</div>):(<div> Groupe 2 </div>)}</option>
+                                                            <option value="Groupe 3">{user.langue === "en" ? (<div>Group 3</div>):(<div> Groupe 3 </div>)}</option>
 
-                                                            // <option value="Français">Français</option>
-                                                            // <option value="Anglais">Anglais</option>
-                                                            // <option value="Mathématiques">Mathématiques</option>
-                                                            // <option value="Sciences et Education à l'Environnement">Sciences et Education à l'Environnement</option>
-                                                            // <option value="Sciences Humaines et Sociales">Sciences Humaines et Sociales</option>
-                                                            // <option value="Connaissances Générales">Connaissances Générales</option>
+                                                            <option value="Français">Français</option>
+                                                            <option value="Anglais">Anglais</option>
+                                                            <option value="Mathématiques">Mathématiques</option>
+                                                            <option value="Sciences et Education à l'Environnement">Sciences et Education à l'Environnement</option>
+                                                            <option value="Sciences Humaines et Sociales">Sciences Humaines et Sociales</option>
+                                                            <option value="Connaissances Générales">Connaissances Générales</option>
 
-                                                            // <option value="LANGUE ET COMMUNICATION">LANGUE ET COMMUNICATION</option>
-                                                            // <option value="EVEIL SCIENTIFQUE & TECHNOLOGIQUE">EVEIL SCIENTIFQUE & TECHNOLOGIQUE</option>
-                                                            // <option value="VIE COURANTE">VIE COURANTE</option>
-                                                            // <option value="CREATION ARTISTIQUE & ACTIVITES MANUELLES">CREATION ARTISTIQUE & ACTIVITES MANUELLES</option>
+                                                            <option value="LANGUE ET COMMUNICATION">LANGUE ET COMMUNICATION</option>
+                                                            <option value="EVEIL SCIENTIFQUE & TECHNOLOGIQUE">EVEIL SCIENTIFQUE & TECHNOLOGIQUE</option>
+                                                            <option value="VIE COURANTE">VIE COURANTE</option>
+                                                            <option value="CREATION ARTISTIQUE & ACTIVITES MANUELLES">CREATION ARTISTIQUE & ACTIVITES MANUELLES</option>
 
 
-                                                            // <option value="LITERACY AND COMMUNICATION">LITERACY AND COMMUNICATION</option>
-                                                            // <option value="SCIENCE AND TECHNOLOGICAL SKILLS DEVELOPMENT">SCIENCE AND TECHNOLOGICAL SKILLS DEVELOPMENT</option>
-                                                            // <option value="PRATICAL LIFE SKILLS">PRATICAL LIFE SKILLS</option>
-                                                            // <option value="ARTS AND CRAFTS">ARTS AND CRAFTS</option>
-                                                            // <option value="MOTOR SKILLS">MOTOR SKILLS</option>
-                                                                {matieres.map((item) => (
-                                                                <option key={item.id} value={item.intitule_matiere}>{item.intitule_matiere}</option>
+                                                            <option value="LITERACY AND COMMUNICATION">LITERACY AND COMMUNICATION</option>
+                                                            <option value="SCIENCE AND TECHNOLOGICAL SKILLS DEVELOPMENT">SCIENCE AND TECHNOLOGICAL SKILLS DEVELOPMENT</option>
+                                                            <option value="PRATICAL LIFE SKILLS">PRATICAL LIFE SKILLS</option>
+                                                            <option value="ARTS AND CRAFTS">ARTS AND CRAFTS</option>
+                                                            <option value="MOTOR SKILLS">MOTOR SKILLS</option>
+                                                                {groupes.map((item) => (
+                                                                <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
 
                                                             ))}
 
