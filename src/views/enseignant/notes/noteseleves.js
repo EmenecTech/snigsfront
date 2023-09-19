@@ -10,7 +10,7 @@ const EnseignantAddNote = () => {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
     const [notes, setNotes] = useState([]);
-    const { evaluation, niveau, classe, matiere } = useParams();
+    const { evaluation, classe, matiere } = useParams();
 
     const { user, http } = AuthUser();
     const etab = user.etablissement;
@@ -19,6 +19,22 @@ const EnseignantAddNote = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+     const [niveau_classe, setniveau_classe] = useState([]);
+    useEffect(() => {
+        fetchAllniveau_classe();
+    }, []);
+
+    const fetchAllniveau_classe = () => {
+        http.get('/get_niveau_classe/' + etab + '/' + classe).then(res => {
+            setniveau_classe(res.data);
+        })
+    }
+
+    const niveau = niveau_classe.intitule_niveau;
+    console.log(niveau);
+
+    
 
 
     const [eleves_classe, seteleves_classe] = useState([]);
