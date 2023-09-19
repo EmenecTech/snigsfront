@@ -71,7 +71,7 @@ const ListGroupes = memo((props) => {
 
   const deleteGroupes = (id) => {
     if(window.confirm("Voulez-vous supprimer cet élément?") == true){
-    http.delete("/groupes" + id).then((res) => {
+    http.delete("/del_groupes/" + id).then((res) => {
       fetchAllGroupes();
     });
       alert('Supprimé!');
