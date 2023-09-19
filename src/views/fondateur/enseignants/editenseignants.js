@@ -117,7 +117,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Date de naissance </Form.Label>
-                                                    <Form.Control type="date" name="date_n" value={inputs.date_n || ""}  onChange={handleChange}  />
+                                                    <Form.Control type="date" name="date_n" value={inputs.date_n || ""}  onChange={handleChange} />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -125,7 +125,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Lieu de naissance </Form.Label>
-                                                    <Form.Control type="text" name="lieu_n" value={inputs.lieu_n || ""}  onChange={handleChange}  />
+                                                    <Form.Control type="text" name="lieu_n" value={inputs.lieu_n || ""}  onChange={handleChange} />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -144,7 +144,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Email </Form.Label>
-                                                    <Form.Control type="email" name="email" value={inputs.email || ""}  onChange={handleChange}  />
+                                                    <Form.Control type="email" name="email" value={inputs.email || ""}  onChange={handleChange} />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
@@ -161,7 +161,7 @@ const EditEnseignants = () => {
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1">Numéro CNI / Passeport </Form.Label>
-                                                    <Form.Control type="text" name="cni" value={inputs.cni || ""}  onChange={handleChange}  />
+                                                    <Form.Control type="text" name="cni" value={inputs.cni || ""}  onChange={handleChange} />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
