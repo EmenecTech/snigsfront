@@ -31,7 +31,6 @@ const EditEnseignants = () => {
     }, []);
     
     const fetchenseignants = () => {
-         http.get("/editensbyfond/" + id).then(res=> {
             http.get("/editadmin/" + id + "/edit").then((res) => {
             setInputs({
                 tel: res.data.telephone,
@@ -44,7 +43,6 @@ const EditEnseignants = () => {
                 lieu_n: res.data.lieu_naissance,
 
             });
-        });
     };
 
     const handleChange = (event) => {
