@@ -1552,6 +1552,7 @@ const [notescie, setNotescie] = useState([]);
                                                                         </p></th>
                                                                         <th>Matieres</th>
                                                                         <th>Evaluation</th>
+                                                                      <td>&#128522;&#128528;&#128577;</td>
                                                                    
                                                                     </tr>
                                                                 </thead>
@@ -1560,7 +1561,8 @@ const [notescie, setNotescie] = useState([]);
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
-                                                                            <td>&#128522;&#128528;&#128577;</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                           <td>&#128522;</td>
                                                                     
                                                                         </tr>
                                                                     ))}
