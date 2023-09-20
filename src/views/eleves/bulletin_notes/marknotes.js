@@ -1552,6 +1552,7 @@ const [notescie, setNotescie] = useState([]);
                                                                         </p></th>
                                                                         <th>Matieres</th>
                                                                         <th>Evaluation</th>
+                                                                    <th>&#128522;</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
