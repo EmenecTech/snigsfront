@@ -336,7 +336,7 @@ const EleveEditProfil = (props) => {
                                         <Form.Control
                                             type="password" className="form-control"
                                             value={inputs.password || ''}
-                                            onChange={handlechange}
+                                            onChange={handleChange}
                                             id="password" name="password"
                                         />
                                         <p className="text-danger">{message} </p>
