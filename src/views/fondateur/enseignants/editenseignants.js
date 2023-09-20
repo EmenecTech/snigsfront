@@ -25,7 +25,7 @@ const EditEnseignants = () => {
         })
     }
 
-    const [ens, setens] = useState([]);
+
     useEffect(() => {
         fetchenseignants();
     }, []);
