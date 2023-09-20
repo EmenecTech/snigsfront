@@ -44,11 +44,27 @@ const EleveEditProfil = (props) => {
     const [message, setMessage] = useState("");
     const [inputs, setInputs] = useState({});
     const id = user.id;
-    const handlechange = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        setInputs(values => ({ ...values, [name]: value }))
-    }
+    
+    useEffect(() => {
+        fetchenseignants();
+    }, []);
+    
+    const fetchenseignants = () => {
+             http.get("/editadmin/" + id + "/edit").then((res) => {
+            setInputs({
+                tel: res.data.telephone,
+                nom: res.data.nom,
+                prenom: res.data.prenom,
+                email: res.data.email,
+                nationalite: res.data.nationalite,
+                cni: res.data.num_cni,
+                date_n: res.data.date_naissance,
+                lieu_n: res.data.lieu_naissance,
+                
+
+            });
+        });
+    };
 
 
     const handleChange = (event) => {
@@ -66,9 +82,6 @@ const EleveEditProfil = (props) => {
 
         console.log(inputs);
     };
-
-
-
 
 
 
@@ -258,7 +271,6 @@ const EleveEditProfil = (props) => {
                                                                 type="date"
                                                                 name="date_n"
                                                                 className="form-control mb-2"
-                                                                defaultValue={user.date_naissance}
                                                                 value={inputs.date_n}
                                                                 onChange={handleChange}
                                                             />
@@ -270,7 +282,6 @@ const EleveEditProfil = (props) => {
                                                                 type="text"
                                                                 name="lieu_n"
                                                                 className="form-control mb-2"
-                                                                defaultValue={user.lieu_naissance}
                                                                 value={inputs.lieu_n}
                                                                 onChange={handleChange}
                                                             />
@@ -288,7 +299,6 @@ const EleveEditProfil = (props) => {
                                                                 type="email"
                                                                 name="email"
                                                                 className="form-control mb-2"
-                                                                defaultValue={user.email}
                                                                 value={inputs.email}
                                                                 onChange={handleChange}
                                                             />
@@ -300,7 +310,6 @@ const EleveEditProfil = (props) => {
                                                                 type="text"
                                                                 name="tel"
                                                                 className="form-control mb-2"
-                                                                defaultValue={user.telephone}
                                                                 value={inputs.tel}
                                                                 onChange={handleChange}
                                                             />
