@@ -347,7 +347,7 @@ const [notescie, setNotescie] = useState([]);
         })
     }
     //pln
-    const [notespln, setNotescpln] = useState([]);
+    const [notespln, setNotespln] = useState([]);
     useEffect(() => {
         fetchAllNotespln();
     }, []);
