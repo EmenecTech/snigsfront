@@ -1703,7 +1703,7 @@ const [notescie, setNotescie] = useState([]);
                                                                 </thead>
                                                                     <tbody>
 
-                                                                    {notesdtic.map((item) => (
+                                                                    {notestic.map((item) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
