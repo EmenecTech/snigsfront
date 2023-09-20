@@ -321,6 +321,140 @@ const EleveBulletinNotes = memo((props) => {
         })
     }
 
+    /////Maternelle
+    //cef
+    const [notescef, setNotescef] = useState([]);
+    useEffect(() => {
+        fetchAllNotescef();
+    }, []);
+
+    const fetchAllNotescef = () => {
+        http.get('/notes_cef/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotescef(res.data);
+
+        })
+    }
+    //cie
+const [notescie, setNotescie] = useState([]);
+    useEffect(() => {
+        fetchAllNotescie();
+    }, []);
+
+    const fetchAllNotescie = () => {
+        http.get('/notes_cie/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotescie(res.data);
+
+        })
+    }
+    //pln
+    const [notespln, setNotescpln] = useState([]);
+    useEffect(() => {
+        fetchAllNotescpln();
+    }, []);
+
+    const fetchAllNotespln = () => {
+        http.get('/notes_pln/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotespln(res.data);
+
+        })
+    }
+//ubm
+    const [notesubm, setNotesubm] = useState([]);
+    useEffect(() => {
+        fetchAllNotesubm();
+    }, []);
+
+    const fetchAllNotesubm = () => {
+        http.get('/notes_ubm/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotesubm(res.data);
+
+        })
+    }
+//ubst
+    const [notesubst, setNotesubst] = useState([]);
+    useEffect(() => {
+        fetchAllNotesubst();
+    }, []);
+
+    const fetchAllNotesubst = () => {
+        http.get('/notes_ubst/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotesubst(res.data);
+
+        })
+    }
+//pvs
+    const [notespvs, setNotespvs] = useState([]);
+    useEffect(() => {
+        fetchAllNotespvs();
+    }, []);
+
+    const fetchAllNotespvs = () => {
+        http.get('/notes_pvs/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotespvs(res.data);
+
+        })
+    }
+  //pvc
+    const [notespvc, setNotespvc] = useState([]);
+    useEffect(() => {
+        fetchAllNotespvc();
+    }, []);
+
+    const fetchAllNotespvc = () => {
+        http.get('/notes_pvc/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotespvc(res.data);
+
+        })
+    } 
+    //dce
+     const [notesdce, setNotesdce] = useState([]);
+    useEffect(() => {
+        fetchAllNotesdce();
+    }, []);
+
+    const fetchAllNotesdce = () => {
+        http.get('/notes_dce/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotesdce(res.data);
+
+        })
+    }
+     //tic
+     const [notestic, setNotestic] = useState([]);
+    useEffect(() => {
+        fetchAllNotestic();
+    }, []);
+
+    const fetchAllNotestic = () => {
+        http.get('/notes_tic/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotestic(res.data);
+
+        })
+    }
+ //sport
+     const [notessport, setNotessport] = useState([]);
+    useEffect(() => {
+        fetchAllNotessport();
+    }, []);
+
+    const fetchAllNotessport = () => {
+        http.get('/notes_tic/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotessport(res.data);
+
+        })
+    }
+    //paa
+     const [notespaa, setNotespaa] = useState([]);
+    useEffect(() => {
+        fetchAllNotespaa();
+    }, []);
+
+    const fetchAllNotespaa = () => {
+        http.get('/notes_tic/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotespaa(res.data);
+
+        })
+    }
+
 
     ////primary
     const [sumcoef, setsumcoef] = useState([]);
@@ -1344,6 +1478,325 @@ const EleveBulletinNotes = memo((props) => {
                     </Card>
                 </Col>
             </Row>
+                                                                                    
+     ///bulletin maternelle
+             <Row>
+                <Col sm="12">
+                    <Card>
+                        <Card.Header className="d-flex justify-content-between">
+                            <div className="header-title">
+                                <h4 className="card-title"></h4>
+                            </div>
+
+
+                            <Button variant="primary mt-2" onClick={printData}>
+                                <span className="btn-inner">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6pm-6 0p" />
+                                    </svg>
+                                </span>
+                                Imprimer
+                            </Button>
+
+                            {/* <!-- Modal --> */}
+
+                        </Card.Header>
+                        <Card.Body>
+
+                            <div ref={componentRef}
+                                style={{ width: "100%", fontSize: "10px", height: window.innerHeight }}>
+                                <Row>
+                                    <Col sm="12" lg="12">
+                                        <Card>
+                                            <Card.Header className="d-flex justify-content-between">
+                                                <div className="header-title">
+
+                                                </div>
+                                            </Card.Header>
+                                            <Card.Body>
+                                                <div>
+
+                                                    <Row>
+
+                                                        <Col sm="12" lg="12">
+
+                                                            <div className="mt-2">
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant:</p>
+                                                                <p>Repeater</p>
+                                                            </div>
+                                                            <div className="mt-2">
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom :</strong> </p>
+
+                                                            </div>
+
+
+
+                                                        </Col>
+
+
+                                                    </Row>
+                                                    <Row>
+                                                        <div className="table-responsive border-bottom my-3">
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th><p>
+                                                                           Compétences
+                                                                        </p></th>
+                                                                        <th>Matieres</th>
+                                                                        <th>Evaluation</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    {notescef.map((item) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                    
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Communiquer en Français</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notescie.map((item) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                    
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Communicate in English</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notespln.map((item) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                    
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Pratiquer au moins une Langue Nationale</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notesubm.map((item) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                    
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Utiliser les notions de base en Mathématiques</th>
+
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+
+                                                                    {notesubst.map((item) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                          
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Utiliser les notions de base en Sciences et Technologies</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notespvs.map((item) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                           
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Pratiquer les valeurs sociales</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notespvc.map((item) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Pratiquer les valeurs citoyennes</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    <tr>
+                                                                        <td>RECAPITULATIFS</td>
+                                                                        <td>{sumnotes}</td>
+                                                                        <td>{sumcoef}</td>
+                                                                        <td>{sumnotesfinale}</td>
+                                                                        <td>A</td>
+                                                                    </tr>
+                                                                </tbody>
+
+
+                                                                <tfoot>
+
+                                                                </tfoot>
+                                                            </Table>
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th></th>
+                                                                        <th>DISCIPLINE</th>
+                                                                        <th>APPRECIATION DU TRAVAIL</th>
+                                                                        <th><div className="mt-2">
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {moyenneleve}</p>
+                                                                        </div>
+                                                                            <div className="mt-2">
+                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:</p>
+                                                                            </div>
+                                                                            <div className="mt-2">
+                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">MENTION:</p>
+                                                                            </div>
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    <tr>
+                                                                        <td>
+                                                                            <Col sm="2">
+                                                                                <div>
+                                                                                    <QRCode value={user.nom} size={50} />
+                                                                                </div>
+                                                                            </Col>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            <div className="mt-1">
+                                                                                <p>
+
+                                                                                    Abscences non justifiées :
+                                                                                    <br />
+                                                                                    Abscences justifiées:
+                                                                                    <br />
+                                                                                    Avertissement conduite:
+                                                                                    <br />
+                                                                                    Blame conduite:
+                                                                                </p>
+
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div className="mt-1">
+                                                                                <p>Tableau d'honneur:
+                                                                                    <br />
+                                                                                    Encouragement:
+                                                                                    <br />
+                                                                                    Félicitations:
+                                                                                    <br />
+                                                                                    Prime:
+                                                                                </p>
+
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div className="mt-1">
+                                                                                <p>Moyenne de la classe:
+
+                                                                                </p>
+
+                                                                            </div>
+                                                                        </td>
+
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </Table>
+
+
+                                                        </div>
+
+
+                                                    </Row>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+
+
+                                </Row>
+
+
+
+                            </div>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
+
 
             <Row>
                 <Col sm="12">
