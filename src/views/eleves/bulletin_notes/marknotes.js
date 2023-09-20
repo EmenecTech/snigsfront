@@ -1683,6 +1683,78 @@ const [notescie, setNotescie] = useState([]);
 
                                                                     </tr>
                                                                 </thead>
+                                                                     <tbody>
+
+                                                                    {notesdce.map((item) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Démontrer l'autonomie, l'esprit d'initiative, de créativité et d'entrepreneuriat</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                    <tbody>
+
+                                                                    {notesdtic.map((item) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Utiliser les concepts de base et les outils des TIC</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                    <tbody>
+
+                                                                    {notessport.map((item) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Pratiquer les activités physiques, sportives</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                    <tbody>
+
+                                                                    {notespaa.map((item) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Pratiquer les activités artistiques</th>
+
+                                                                    </tr>
+                                                                </thead>
                                                                 <tbody>
 
                                                                     <tr>
