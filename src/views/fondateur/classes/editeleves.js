@@ -80,6 +80,19 @@ useEffect(() => {
                 cni: res.data.num_cni,
                 date_n: res.data.date_naissance,
                 lieu_n: res.data.lieu_naissance,
+                redouble: res.data.redouble,
+                situation: res.data.situation_sante,
+                desc_sante: res.data.description_sante,
+                nom_parent: res.data.nom_parent,
+                prenom_parent: res.data.prenom_parent,
+                numero_parent: res.data.numero_parent,
+                profession_1: res.data.profession_parent_1,
+                nom_parent_2: res.data.nom_parent_2,
+                prenom_parent_2: res.data.prenom_parent_2,
+                numero_parent_2: res.data.numero_parent_2,
+                profession_2: res.data.profession_parent_2,
+                adresse_parent: res.data.adresse_parent,
+                adresse_parent_2: res.data.adresse_parent_2,
 
             });
         });
@@ -451,13 +464,13 @@ useEffect(() => {
 
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Name </div>):(<div> Nom </div>)}</Form.Label>
-                                <Form.Control type="text" id="exampleInputReadonly" name="nom"  defaultValue={eleve.nom} onChange={handleChange}/>
+                                <Form.Control type="text" id="exampleInputReadonly" name="nom"  value={inputs.nom} onChange={handleChange}/>
                             </Form.Group>
                         </Col>
                         <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Surname</div>):(<div>Prénom </div>)}</Form.Label>
-                                <Form.Control type="text" id="exampleInputReadonly" name="prenom"  defaultValue={eleve.prenom} onChange={handleChange}/>
+                                <Form.Control type="text" id="exampleInputReadonly" name="prenom"  value={inputs.prenom} onChange={handleChange}/>
                             </Form.Group>
                         </Col>
                         
@@ -468,8 +481,8 @@ useEffect(() => {
                         <Col>
                             <Form.Group className="form-group">
                                 <Form.Label htmlFor="exampleInputReadonly">{user.langue === "en" ? (<div>Is the student a repeat student?</div>):(<div>L'élève est-il  redoublant?</div>)}</Form.Label>
-                                <select className="form-select mb-3 shadow-none" name="redouble" onChange={handleChange} >
-                                    <option value={eleve.redouble}>{eleve.redouble}</option>
+                                <select className="form-select mb-3 shadow-none" name="redouble" value={inputs.redouble} onChange={handleChange} >
+                                    <option></option>
                                     
                                         <option value='oui'>Oui</option>
                                         <option value='non'>Non</option>
@@ -488,7 +501,7 @@ useEffect(() => {
                                 <Form.Control
                                   type="text"
                                   name="situation"                                 
-                                 defaultValue={eleve.situation_sante}
+                                 value={inputs.situation}
                                   onChange={handleChange}
 
                                   
@@ -506,7 +519,7 @@ useEffect(() => {
                                 <Form.Control
                                   as="textarea" id="desc_sante" name="desc_sante" rows="5"
                                   onChange={handleChange}
-                                  defaultValue={eleve.description_sante}
+                                  value={inputs.desc_sante}
                                 />
                             </Form.Group>
                         </Col>
@@ -520,7 +533,7 @@ useEffect(() => {
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
-                                  defaultValue={eleve.nom_parent}
+                                  value={inputs.nom_parent}
                                   name="nom_parent"
                                   onChange={handleChange}
 
@@ -534,7 +547,7 @@ useEffect(() => {
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
-                                  defaultValue={eleve.prenom_parent}
+                                  value={inputs.prenom_parent}
                                   name="prenom_parent"
                                   onChange={handleChange}
 
@@ -549,7 +562,7 @@ useEffect(() => {
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
-                                  defaultValue={eleve.numero_parent}
+                                  defaultValue={inputs.numero_parent}
                                   name="numero_parent"
                                   onChange={handleChange}
 
@@ -566,7 +579,7 @@ useEffect(() => {
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
-                                  defaultValue={eleve.profession_parent_1}
+                                  value={inputs.profession_1}
                                   name="profession_1"
                                   onChange={handleChange}
 
@@ -581,7 +594,7 @@ useEffect(() => {
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
-                                  defaultValue={eleve.adresse_parent}
+                                  value={inputs.adresse_parent}
                                   name="adresse_parent"
                                   onChange={handleChange}
 
@@ -600,7 +613,7 @@ useEffect(() => {
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
-                                  defaultValue={eleve.nom_parent_2}
+                                  value={inputs.nom_parent_2}
                                   name="nom_parent_2"
                                   onChange={handleChange}
 
@@ -615,7 +628,7 @@ useEffect(() => {
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
-                                  defaultValue={eleve.prenom_parent_2}
+                                  value={inputs.prenom_parent_2}
                                   name="prenom_parent_2"
                                   onChange={handleChange}
 
@@ -630,7 +643,7 @@ useEffect(() => {
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
-                                  defaultValue={eleve.numero_parent_2}
+                                  value={inputs.numero_parent_2}
                                   name="numero_parent_2"
                                   onChange={handleChange}
 
@@ -648,7 +661,7 @@ useEffect(() => {
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
-                                  defaultValue={eleve.profession_parent_2}
+                                  value={inputs.profession_2}
                                   name="profession_2"
                                   onChange={handleChange}
 
@@ -662,7 +675,7 @@ useEffect(() => {
                                 </Form.Label>
                                 <Form.Control
                                   type="text"
-                                  defaultValue={eleve.adresse_parent_2}
+                                  value={inputs.adresse_parent_2}
                                   name="adresse_parent_2"
                                   onChange={handleChange}
 
