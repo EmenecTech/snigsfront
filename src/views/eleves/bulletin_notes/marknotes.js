@@ -1479,7 +1479,7 @@ const [notescie, setNotescie] = useState([]);
                 </Col>
             </Row>
                                                                                     
-     ///bulletin maternelle
+ 
              <Row>
                 <Col sm="12">
                     <Card>
