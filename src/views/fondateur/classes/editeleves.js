@@ -65,17 +65,32 @@ const EditEleve = memo((props) => {
 
 
 
+useEffect(() => {
+        fetchenseignants();
+    }, []);
+    
+    const fetchenseignants = () => {
+             http.get("/editadmin/" + id + "/edit").then((res) => {
+            setInputs({
+                tel: res.data.telephone,
+                nom: res.data.nom,
+                prenom: res.data.prenom,
+                email: res.data.email,
+                nationalite: res.data.nationalite,
+                cni: res.data.num_cni,
+                date_n: res.data.date_naissance,
+                lieu_n: res.data.lieu_naissance,
 
+            });
+        });
+    };
 
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
 
-        setInputs(values => ({ ...values, [name]: value, id, etab }))
+        setInputs(values => ({ ...values, [name]: value, id}))
     }
-
-
-
 
     const submitForm = () => {
         http.put('/modif_eleve_in_classe', inputs).then((res) => {
