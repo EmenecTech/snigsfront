@@ -349,7 +349,7 @@ const [notescie, setNotescie] = useState([]);
     //pln
     const [notespln, setNotescpln] = useState([]);
     useEffect(() => {
-        fetchAllNotescpln();
+        fetchAllNotespln();
     }, []);
 
     const fetchAllNotespln = () => {
