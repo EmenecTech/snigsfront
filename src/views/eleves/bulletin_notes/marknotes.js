@@ -208,8 +208,19 @@ const EleveBulletinNotes = memo((props) => {
    }; */}
 
 
+   const [allnotes, setallnotes] = useState([]);
 
+useEffect(() => {
+    fetchAllNotes();
+}, []);
 
+const fetchAllNotes = () => {
+    http.get('/all_notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setallnotes(res.data);
+    })
+}
+
+    
     const [notesfg, setNotesfg] = useState([]);
     useEffect(() => {
         fetchAllNotesfg();
@@ -1565,12 +1576,12 @@ const [notescie, setNotescie] = useState([]);
                                                                         </p></th>
                                                                         <th>Matieres</th>
                                                                         <th>Evaluation</th>
-                                                                      <td>&#128522;&#128528;&#128577;</td>
+                                                                     
                                                                    
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    {notescef.map((item) => (
+                                                                    {allnotes.map((item) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
