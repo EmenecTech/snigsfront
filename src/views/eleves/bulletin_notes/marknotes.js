@@ -1782,10 +1782,11 @@ const [notescie, setNotescie] = useState([]);
 
                                                                     <tr>
                                                                         <td>RECAPITULATIFS</td>
+                                                                       <td></td>
                                                                         <td>{sumnotes}</td>
-                                                                        <td>{sumcoef}</td>
-                                                                        <td>{sumnotesfinale}</td>
-                                                                        <td>A</td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        
                                                                     </tr>
                                                                 </tbody>
 
