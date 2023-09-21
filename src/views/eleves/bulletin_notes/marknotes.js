@@ -194,18 +194,18 @@ const EleveBulletinNotes = memo((props) => {
             setmatiereslevel(res.data);
         })
     }
-  //   const getEmojiAndColor = (note) => {
-  //   const numericNote = parseFloat(note);
+    {/*  const getEmojiAndColor = (note) => {
+     const numericNote = parseFloat(note);
     
-  //   if (numericNote >= 0 && numericNote <= 8) {
-  //     return { emoji: '☹️', color: 'red' };
-  //   } else if (numericNote > 8 && numericNote <= 12) {
-  //     return { emoji: '😐', color: 'orange' };
-  //   } else if (numericNote > 12 && numericNote <= 20) {
-  //     return { emoji: '🙂', color: 'green' };
-  //   }
-  //   // Gérer d'autres cas si nécessaire
-  // };
+    if (numericNote >= 0 && numericNote <= 8) {
+     return { emoji: '☹️', color: 'red' };
+   } else if (numericNote > 8 && numericNote <= 12) {
+      return { emoji: '😐', color: 'orange' };
+    } else if (numericNote > 12 && numericNote <= 20) {
+     return { emoji: '🙂', color: 'green' };
+    }
+   Gérer d'autres cas si nécessaire
+   }; */}
 
 
 
@@ -1579,11 +1579,11 @@ const [notescie, setNotescie] = useState([]);
                                                                     
                                                                         </tr>
                                                                     ))}
-                                                                    // {notescef.map((note, index) => {
-                                                                    // const { emoji, color } = getEmojiAndColor(note);
-                                                                    //     <li key={index} style={{ color }}>
-                                                                    //           {emoji} {note}
-                                                                    //    </li>
+                                                                    { /* {notescef.map((note, index) => {
+                                                                    const { emoji, color } = getEmojiAndColor(note);
+                                                                     <li key={index} style={{ color }}>
+                                                                     {emoji} {note}
+                                                                     </li> */}
                                                                 </tbody>
                                                                 <thead>
                                                                     <tr>
