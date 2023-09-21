@@ -194,7 +194,7 @@ const EleveBulletinNotes = memo((props) => {
             setmatiereslevel(res.data);
         })
     }
-    {/*  const getEmojiAndColor = (note) => {
+    {/*  const notesEmoji = (note) => {
      const numericNote = parseFloat(note);
     
     if (numericNote >= 0 && numericNote <= 8) {
@@ -204,7 +204,7 @@ const EleveBulletinNotes = memo((props) => {
     } else if (numericNote > 12 && numericNote <= 20) {
      return { emoji: '🙂', color: 'green' };
     }
-   Gérer d'autres cas si nécessaire
+   
    }; */}
 
 
@@ -1575,12 +1575,12 @@ const [notescie, setNotescie] = useState([]);
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                           <td>&#128522;</td>
+                                                                           <td>&#128522;&#128528;&#128577;</td>
                                                                     
                                                                         </tr>
                                                                     ))}
-                                                                    { /* {notescef.map((note, index) => {
-                                                                    const { emoji, color } = getEmojiAndColor(note);
+                                                                    { /* {notescef.map((item) => {
+                                                                    const { emoji, color } = notesEmoji(note);
                                                                      <li key={index} style={{ color }}>
                                                                      {emoji} {note}
                                                                      </li> */}
