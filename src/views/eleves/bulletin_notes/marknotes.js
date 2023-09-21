@@ -68,6 +68,7 @@ SwiperCore.use([Navigation]);
 
 const EleveBulletinNotes = memo((props) => {
 
+    
     const componentRef = useRef();
     const printData = useReactToPrint({
         content: () => componentRef.current,
@@ -193,6 +194,18 @@ const EleveBulletinNotes = memo((props) => {
             setmatiereslevel(res.data);
         })
     }
+    const getEmojiAndColor = (note) => {
+    const numericNote = parseFloat(note);
+    
+    if (numericNote >= 0 && numericNote <= 8) {
+      return { emoji: '☹️', color: 'red' };
+    } else if (numericNote > 8 && numericNote <= 12) {
+      return { emoji: '😐', color: 'orange' };
+    } else if (numericNote > 12 && numericNote <= 20) {
+      return { emoji: '🙂', color: 'green' };
+    }
+    // Gérer d'autres cas si nécessaire
+  };
 
 
 
@@ -1557,15 +1570,20 @@ const [notescie, setNotescie] = useState([]);
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    {notescef.map((item) => (
+                                                                    // {notescef.map((item) => (
 
-                                                                        <tr>
-                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                           <td>&#128522;</td>
+                                                                    //     <tr>
+                                                                    //         <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                    //         <td>{item.valeur_note}</td>
+                                                                    //        <td>&#128522;</td>
                                                                     
-                                                                        </tr>
-                                                                    ))}
+                                                                    //     </tr>
+                                                                    // ))}
+                                                                    {notescef.map((note, index) => {
+                                                                    const { emoji, color } = getEmojiAndColor(note);
+                                                                        <li key={index} style={{ color }}>
+                                                                              {emoji} {note}
+                                                                       </li>
                                                                 </tbody>
                                                                 <thead>
                                                                     <tr>
