@@ -1569,33 +1569,22 @@ const [notescie, setNotescie] = useState([]);
                                                                 data-toggle="data-table"
                                                             >
                                                                 <thead>
-                                                                    <tr>
+    <tr>
+        <th><p>Compétences</p></th>
+        <th>Matieres</th>
+        <th>Evaluation</th>
+    </tr>
+</thead>
+<tbody>
+    {allnotes.map((item, index) => (
+        <tr key={index}>
+            <td>{item.matiere_cp} ({item.nom} {item.prenom})</td>
+            <td>{item.valeur_note}</td>
+            <td>&#128522;&#128528;&#128577;</td>
+        </tr>
+    ))}
+</tbody>
 
-                                                                        <th><p>
-                                                                           Compétences
-                                                                        </p></th>
-                                                                        <th>Matieres</th>
-                                                                        <th>Evaluation</th>
-                                                                     
-                                                                   
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    {allnotes.map((item) => (
-
-                                                                        <tr>
-                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                           <td>&#128522;&#128528;&#128577;</td>
-                                                                    
-                                                                        </tr>
-                                                                    ))}
-                                                                    { /* {notescef.map((item) => {
-                                                                    const { emoji, color } = notesEmoji(note);
-                                                                     <li key={index} style={{ color }}>
-                                                                     {emoji} {note}
-                                                                     </li> */}
-                                                                </tbody>
                                                                 <thead>
                                                                     <tr>
 
