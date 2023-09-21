@@ -1579,7 +1579,7 @@ const [notescie, setNotescie] = useState([]);
                                                             <tbody>
                                                                 {allnotes.map((item, index) => (
                                                                     <tr key={index}>
-                                                                        <td></td>
+                                                                        <td>{item.groupe_cm}</td>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>&#128522;&#128528;&#128577;</td>
