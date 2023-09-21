@@ -1569,22 +1569,23 @@ const [notescie, setNotescie] = useState([]);
                                                                 data-toggle="data-table"
                                                             >
                                                                 <thead>
-    <tr>
-        <th><p>Compétences</p></th>
-        <th>Matieres</th>
-        <th>Evaluation</th>
-    </tr>
-</thead>
-<tbody>
-    {allnotes.map((item, index) => (
-        <tr key={index}>
-            <td></td>
-            <td>{item.matiere_note}</td>
-            <td>{item.valeur_note}</td>
-            <td>&#128522;&#128528;&#128577;</td>
-        </tr>
-    ))}
-</tbody>
+                                                                <tr>
+                                                                    <th><p>Compétences</p></th>
+                                                                    <th>Matieres</th>
+                                                                    <th>Evaluation</th>
+                                                                    <th>Appréciation</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                {allnotes.map((item, index) => (
+                                                                    <tr key={index}>
+                                                                        <td></td>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>&#128522;&#128528;&#128577;</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
 
                                                                 <thead>
                                                                     <tr>
