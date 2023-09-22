@@ -194,31 +194,32 @@ const EleveBulletinNotes = memo((props) => {
             setmatiereslevel(res.data);
         })
     }
-    {/*  const notesEmoji = (note) => {
-     const numericNote = parseFloat(note);
-    
-    if (numericNote >= 0 && numericNote <= 8) {
-     return { emoji: '☹️', color: 'red' };
-   } else if (numericNote > 8 && numericNote <= 12) {
-      return { emoji: '😐', color: 'orange' };
-    } else if (numericNote > 12 && numericNote <= 20) {
-     return { emoji: '🙂', color: 'green' };
-    }
-   
-   }; */}
 
 
    const [allnotes, setallnotes] = useState([]);
-
-useEffect(() => {
-    fetchAllNotes();
-}, []);
-
-const fetchAllNotes = () => {
-    http.get('/all_notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setallnotes(res.data);
-    })
-}
+    useEffect(() => {
+        fetchAllNotes();
+    }, []);
+        http.get('/all_notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then((response) => {
+        const data = response.data.map((note) => {
+          const valeur = note.valeur;
+          const emoji = getEmojiForNote(valeur);
+          return { valeur, emoji };
+        });
+        setAllNotes(res.data);
+      })
+    
+    }
+     const getEmojiForNote = (note) => {
+    if (note >= 0 && note <= 8) {
+      return '☹️';
+    } else if (note > 8 && note <= 12) {
+      return '😐';
+    } else if (note > 12 && note <= 20) {
+      return '🙂';
+    }
+      return ''; 
+    };
 
     
     const [notesfg, setNotesfg] = useState([]);
@@ -1582,7 +1583,7 @@ const [notescie, setNotescie] = useState([]);
                                                                         <td>{item.groupe_cm}</td>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
-                                                                        <td>&#128522;&#128528;&#128577;</td>
+                                                                     {/* <td>&#128522;&#128528;&#128577;</td>*/}
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
