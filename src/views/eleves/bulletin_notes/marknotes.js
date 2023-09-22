@@ -212,7 +212,7 @@ const EleveBulletinNotes = memo((props) => {
     } else if (note > 8 && note <= 12) {
       return '😐';
     } else if (note > 12 && note <= 20) {
-      return '🙂';
+      return '😃';
     }
       return ''; 
     };
@@ -1579,7 +1579,7 @@ const [notescie, setNotescie] = useState([]);
                                                                         <td>{item.groupe_cm}</td>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                     {/* <td>&#128522;&#128528;&#128577;</td>*/}
+                                                                        <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
@@ -1590,7 +1590,7 @@ const [notescie, setNotescie] = useState([]);
                                                                     <tr>
                                                                         <td>RECAPITULATIFS</td>
                                                                        <td></td>
-                                                                        <td>{sumnotes}</td>
+                                                                        <td></td>
                                                                         <td></td>
                                                                         <td></td>
                                                                         
