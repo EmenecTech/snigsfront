@@ -209,7 +209,7 @@ const EleveBulletinNotes = memo((props) => {
         setAllNotes(res.data);
       })
     
-    }
+    };
      const getEmojiForNote = (note) => {
     if (note >= 0 && note <= 8) {
       return '☹️';
@@ -1582,7 +1582,7 @@ const [notescie, setNotescie] = useState([]);
                                                                     <tr key={index}>
                                                                         <td>{item.groupe_cm}</td>
                                                                         <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                      {/* <td>&#128522;&#128528;&#128577;</td>*/}
                                                                     </tr>
                                                                 ))}
