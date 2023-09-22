@@ -61,14 +61,13 @@ import { useReactToPrint } from "react-to-print";
 
 
 // install Swiper modules
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation]); 
 
 
 
 
-const EleveBulletinNotes = memo((props) => {
+const BulletinByEleve = memo((props) => {
 
-    
     const componentRef = useRef();
     const printData = useReactToPrint({
         content: () => componentRef.current,
@@ -82,11 +81,11 @@ const EleveBulletinNotes = memo((props) => {
     const handleShow = () => setShow(true);
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
-    const { evaluation } = useParams();
+    const { evaluation, userid, classe } = useParams();
     const etab = user.etablissement;
-    const userid = user.id;
+
+
     const niveau = user.fonction_user;
-    const classe = user.other_in_user;
 
 
 
@@ -195,8 +194,7 @@ const EleveBulletinNotes = memo((props) => {
         })
     }
 
-
-   const [allnotes, setAllNotes] = useState([]);
+  const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
         fetchAllNotes();
     }, []);
@@ -217,7 +215,7 @@ const EleveBulletinNotes = memo((props) => {
       return ''; 
     };
 
-    
+
     const [notesfg, setNotesfg] = useState([]);
     useEffect(() => {
         fetchAllNotesfg();
@@ -263,6 +261,17 @@ const EleveBulletinNotes = memo((props) => {
         http.get('/sum/of/notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
             setsumnotes(res.data);
 
+        })
+    }
+
+    const [classes, setclasses] = useState([]);
+    useEffect(() => {
+        fetchAllclasses();
+    }, []);
+
+    const fetchAllclasses = () => {
+        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
+            setclasses(res.data);
         })
     }
 
@@ -338,140 +347,6 @@ const EleveBulletinNotes = memo((props) => {
     const fetchAllNotescg = () => {
         http.get('/notes_cg/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
             setNotescg(res.data);
-
-        })
-    }
-
-    /////Maternelle
-    //cef
-    const [notescef, setNotescef] = useState([]);
-    useEffect(() => {
-        fetchAllNotescef();
-    }, []);
-
-    const fetchAllNotescef = () => {
-        http.get('/notes_cef/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotescef(res.data);
-
-        })
-    }
-    //cie
-const [notescie, setNotescie] = useState([]);
-    useEffect(() => {
-        fetchAllNotescie();
-    }, []);
-
-    const fetchAllNotescie = () => {
-        http.get('/notes_cie/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotescie(res.data);
-
-        })
-    }
-    //pln
-    const [notespln, setNotespln] = useState([]);
-    useEffect(() => {
-        fetchAllNotespln();
-    }, []);
-
-    const fetchAllNotespln = () => {
-        http.get('/notes_pln/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotespln(res.data);
-
-        })
-    }
-//ubm
-    const [notesubm, setNotesubm] = useState([]);
-    useEffect(() => {
-        fetchAllNotesubm();
-    }, []);
-
-    const fetchAllNotesubm = () => {
-        http.get('/notes_ubm/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesubm(res.data);
-
-        })
-    }
-//ubst
-    const [notesubst, setNotesubst] = useState([]);
-    useEffect(() => {
-        fetchAllNotesubst();
-    }, []);
-
-    const fetchAllNotesubst = () => {
-        http.get('/notes_ubst/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesubst(res.data);
-
-        })
-    }
-//pvs
-    const [notespvs, setNotespvs] = useState([]);
-    useEffect(() => {
-        fetchAllNotespvs();
-    }, []);
-
-    const fetchAllNotespvs = () => {
-        http.get('/notes_pvs/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotespvs(res.data);
-
-        })
-    }
-  //pvc
-    const [notespvc, setNotespvc] = useState([]);
-    useEffect(() => {
-        fetchAllNotespvc();
-    }, []);
-
-    const fetchAllNotespvc = () => {
-        http.get('/notes_pvc/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotespvc(res.data);
-
-        })
-    } 
-    //dce
-     const [notesdce, setNotesdce] = useState([]);
-    useEffect(() => {
-        fetchAllNotesdce();
-    }, []);
-
-    const fetchAllNotesdce = () => {
-        http.get('/notes_dce/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesdce(res.data);
-
-        })
-    }
-     //tic
-     const [notestic, setNotestic] = useState([]);
-    useEffect(() => {
-        fetchAllNotestic();
-    }, []);
-
-    const fetchAllNotestic = () => {
-        http.get('/notes_tic/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotestic(res.data);
-
-        })
-    }
- //sport
-     const [notessport, setNotessport] = useState([]);
-    useEffect(() => {
-        fetchAllNotessport();
-    }, []);
-
-    const fetchAllNotessport = () => {
-        http.get('/notes_tic/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotessport(res.data);
-
-        })
-    }
-    //paa
-     const [notespaa, setNotespaa] = useState([]);
-    useEffect(() => {
-        fetchAllNotespaa();
-    }, []);
-
-    const fetchAllNotespaa = () => {
-        http.get('/notes_tic/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotespaa(res.data);
 
         })
     }
@@ -763,7 +638,7 @@ const [notescie, setNotescie] = useState([]);
 
     return (
         <Fragment>
-          { classes.cycle_niveau === 'Secondaire' ? <div>
+        { classes.cycle_niveau === 'Secondaire' ? <div>
             <Row>
                 <Col sm="12">
                     <Card>
@@ -935,7 +810,6 @@ const [notescie, setNotescie] = useState([]);
                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">Professeur principal:</p>
                                                                 <p>Class Master/Mistress</p>
                                                             </div>
-
 
                                                         </Col>
                                                         <Col sm="2" lg="2">
@@ -1155,9 +1029,9 @@ const [notescie, setNotescie] = useState([]);
                     </Card>
                 </Col>
             </Row>
-           </div>:<div>
+        </div>:<div>
             { classes.section_niveau === 'Francophone' ? <div>
-            <Row>
+                    <Row>
                 <Col sm="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
@@ -1493,26 +1367,17 @@ const [notescie, setNotescie] = useState([]);
 
 
                                 </Row>
-                  
 
 
-                            </div>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-                                                                                    
- 
-             
 
                             </div>
                         </Card.Body>
                     </Card>
                 </Col>
             </Row>
-  { classes.section_niveau === 'Anglophone' ? <div>
 
-            <Row>
+                </div> : <div>
+                    <Row>
                 <Col sm="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
@@ -1833,9 +1698,18 @@ const [notescie, setNotescie] = useState([]);
 
                                 </Row>
 
+
+
+                            </div>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
+                </div>}
+            
+        </div>}
                                                                                     
-                </div> : <div>
-             <Row>
+                <Row>
                 <Col sm="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
@@ -2033,8 +1907,10 @@ const [notescie, setNotescie] = useState([]);
                     </Card>
                 </Col>
             </Row>
+
+            
         </Fragment>
     );
 })
 
-export default EleveBulletinNotes
+export default BulletinByEleve
