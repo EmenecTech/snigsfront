@@ -202,16 +202,10 @@ const EleveBulletinNotes = memo((props) => {
     }, []);
 
     const fetchAllNotes = () => {
-        http.get('/all_notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then((response) => {
-        const data = response.data.map((note) => {
-          const valeur = note.valeur;
-          const emoji = getEmojiForNote(valeur);
-          return { valeur, emoji };
-        });
-        setAllNotes(data);
+        http.get('/all_notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotes(res.data);
       })
     };
-    
      const getEmojiForNote = (note) => {
     if (note >= 0 && note <= 8) {
       return '☹️';
