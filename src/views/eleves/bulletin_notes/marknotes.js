@@ -214,8 +214,41 @@ const BulletinByEleve = memo((props) => {
     }
       return ''; 
     };
+    const [allnotespa, setAllNotespa] = useState([]);
+    useEffect(() => {
+        fetchAllNotespa();
+    }, []);
 
-    const [notesfg, setNotesfg] = useState([]);
+    const fetchAllNotespa = () => {
+        http.get('/all_notes_pa/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotespa(res.data);
+      })
+    };
+    
+    const [allnotessf, setAllNotessf] = useState([]);
+    useEffect(() => {
+        fetchAllNotessf();
+    }, []);
+
+    const fetchAllNotessf = () => {
+        http.get('/all_notes_sf/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotessf(res.data);
+      })
+    };
+
+     const [sumnotes, setsumnotes] = useState([]);
+    useEffect(() => {
+        fetchAllsumnotes();
+    }, []);
+
+    const fetchAllsumnotes = () => {
+        http.get('/sum/of/notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setsumnotes(res.data);
+
+        })
+    }
+
+    {/* const [notesfg, setNotesfg] = useState([]);
     useEffect(() => {
         fetchAllNotesfg();
     }, []);
@@ -251,17 +284,7 @@ const BulletinByEleve = memo((props) => {
         })
     }
 
-    const [sumnotes, setsumnotes] = useState([]);
-    useEffect(() => {
-        fetchAllsumnotes();
-    }, []);
-
-    const fetchAllsumnotes = () => {
-        http.get('/sum/of/notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setsumnotes(res.data);
-
-        })
-    }
+   
 
     ////primaire
 
@@ -337,7 +360,7 @@ const BulletinByEleve = memo((props) => {
             setNotescg(res.data);
 
         })
-    }
+    }  */}
 
 
     ////primary
@@ -825,7 +848,7 @@ const BulletinByEleve = memo((props) => {
                                                                 data-toggle="data-table"
                                                             >
                                                                 <thead>
-                                                                    <tr>
+                                                                       <tr>
 
                                                                         <th><p>
                                                                             Discipline /Nom de l'enseignant
@@ -833,11 +856,21 @@ const BulletinByEleve = memo((props) => {
                                                                         <th>Note</th>
                                                                         <th>Coef</th>
                                                                         <th>NxC</th>
-                                                                        <th>Compétence visée</th>
+                                                                       
                                                                         <th>Appreciation</th>
                                                                     </tr>
                                                                 </thead>
-                                                                <tbody>
+                                                            <tbody>
+                                                                {allnotessf.map((item, sf) => (
+                                                                    <tr key={sf}>
+                                                                        <td>{item.groupe_cm}</td>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+{/*  <tbody>
                                                                     {notesfg.map((item, idf) => (
 
                                                                         <tr>
@@ -901,7 +934,7 @@ const BulletinByEleve = memo((props) => {
                                                                         <th>Matières du troisième groupe</th>
 
                                                                     </tr>
-                                                                </thead>
+                                                                </thead> */}
                                                                 <tbody>
 
                                                                     <tr>
@@ -911,7 +944,7 @@ const BulletinByEleve = memo((props) => {
                                                                         <td>{sumnotesfinale}</td>
                                                                         <td>A</td>
                                                                     </tr>
-                                                                </tbody>
+                                                                </tbody> 
 
 
                                                                 <tfoot>
@@ -1083,19 +1116,26 @@ const BulletinByEleve = memo((props) => {
                                                                 data-toggle="data-table"
                                                             >
                                                                 <thead>
-                                                                    <tr>
-
-                                                                        <th><p>
-                                                                            Disciplines
-                                                                        </p></th>
+                                                                   <tr>
+                                                                        <th><p>Compétences</p></th>
                                                                         <th>Matieres</th>
-                                                                        <th>Note sur</th>
-                                                                        <th>Moyenne</th>
-                                                                        <th>Observation et Emargement</th>
-
+                                                                        <th>Notes</th>
+                                                                        <th>Appréciation</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
+                                                                    {allnotespf.map((item, pf) => (
+                                                                        <tr key={pf}>
+                                                                            <td>{item.groupe_cm}</td>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+
+                                                                
+{/*                                  <tbody>
                                                                     {notesfr.map((item, idf) => (
 
                                                                         <tr>
@@ -1248,14 +1288,14 @@ const BulletinByEleve = memo((props) => {
                                                                         <th>Connaissances Générales</th>
 
                                                                     </tr>
-                                                                </thead>
-                                                                <tbody>
+                                                                </thead>  */}
+                                                              <tbody> 
 
                                                                     <tr>
                                                                         <td>RECAPITULATIFS</td>
+                                                                        <td></td>
                                                                         <td>{sumnotes}</td>
-                                                                        <td>{sumcoef}</td>
-                                                                        <td>{sumnotesfinale}</td>
+                                                                        <td></td>
                                                                         <td>A</td>
                                                                     </tr>
                                                                 </tbody>
@@ -1427,20 +1467,25 @@ const BulletinByEleve = memo((props) => {
                                                                 className=""
                                                                 data-toggle="data-table"
                                                             >
-                                                                <thead>
-                                                                    <tr>
-
-                                                                        <th><p>
-                                                                            Disciplines
-                                                                        </p></th>
-                                                                        <th>Matieres</th>
-                                                                        <th>Note sur</th>
-                                                                        <th>Moyenne</th>
-                                                                        <th>Observation et Emargement</th>
-
-                                                                    </tr>
+                                                               <thead>
+                                                                   <tr>
+                                                                    <th><p>Disciplines</p></th>
+                                                                    <th>Matieres</th>
+                                                                    <th>Note</th>
+                                                                    <th>Appréciation</th>
+                                                                </tr>
                                                                 </thead>
-                                                                <tbody>
+                                                            <tbody>
+                                                                {allnotespa.map((item, pa) => (
+                                                                    <tr key={pa}>
+                                                                        <td>{item.groupe_cm}</td>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+{/*        <tbody>
                                                                     {notesfg.map((item, idf) => (
 
                                                                         <tr>
@@ -1577,18 +1622,17 @@ const BulletinByEleve = memo((props) => {
                                                                         <th>Connaissances Générales</th>
 
                                                                     </tr>
-                                                                </thead>
+                                                                </thead> */}
                                                                 <tbody>
 
                                                                     <tr>
                                                                         <td>RECAPITULATIFS</td>
                                                                         <td>{sumnotes}</td>
-                                                                        <td>{sumcoef}</td>
-                                                                        <td>{sumnotesfinale}</td>
+                                                                        <td></td>
+                                                                        <td></td>
                                                                         <td>A</td>
                                                                     </tr>
                                                                 </tbody>
-
 
                                                                 <tfoot>
 
