@@ -215,7 +215,18 @@ const BulletinByEleve = memo((props) => {
       return ''; 
     };
 
+const [allnotespf, setAllNotespf] = useState([]);
+    useEffect(() => {
+        fetchAllNotespf();
+    }, []);
 
+    const fetchAllNotespf = () => {
+        http.get('/all_notes_pf/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotespf(res.data);
+      })
+    };
+
+    
     const [notesfg, setNotesfg] = useState([]);
     useEffect(() => {
         fetchAllNotesfg();
@@ -1296,38 +1307,25 @@ const BulletinByEleve = memo((props) => {
                                                                 className=""
                                                                 data-toggle="data-table"
                                                             >
-                                                                <thead>
-                                                                    <tr>
-
-                                                                        <th><p>
-                                                                            Disciplines
-                                                                        </p></th>
-                                                                        <th>Matieres</th>
-                                                                        <th>Note sur</th>
-                                                                        <th>Moyenne</th>
-                                                                        <th>Observation et Emargement</th>
-                                                                        <th>Appréciation</th>
-
+                                                                 <thead>
+                                                                <tr>
+                                                                    <th><p>Compétences</p></th>
+                                                                    <th>Matieres</th>
+                                                                    <th>Evaluation</th>
+                                                                    <th>Appréciation</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                {allnotes.map((item, index) => (
+                                                                    <tr key={index}>
+                                                                        <td>{item.groupe_cm}</td>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note)}</td>
+                                                                        <td>{item.appreciation_note}</td>
                                                                     </tr>
-                                                                </thead>
-                                                        
-                                                                <tbody>
-
-                                                                    {notesfr.map((item, ids) => (
-
-                                                                        <tr>
-                                                                        
-                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td></td>
-                                                                          
-                                                                            <td>{item.competence_visee_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
-
-                                                                        </tr>
-                                                                    ))}
-                                                                </tbody>
-                                                                <thead>
+                                                                ))}
+                                                            </tbody>
+{/*<thead>
                                                                     <tr>
 
                                                                         <th>Anglais</th>
@@ -1450,7 +1448,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                                <tbody>
+                                                                <tbody> */}
 
                                                                     <tr>
                                                                         <td>RECAPITULATIFS</td>
@@ -1661,7 +1659,7 @@ const BulletinByEleve = memo((props) => {
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                <thead>
+                                                               {/* <thead>
                                                                     <tr>
 
                                                                         <th>LITERACY AND COMMUNICATION</th>
@@ -1788,7 +1786,7 @@ const BulletinByEleve = memo((props) => {
                                                                         <th>Connaissances Générales</th>
 
                                                                     </tr>
-                                                                </thead>
+                                                                </thead> */}
                                                                 <tbody>
 
                                                                     <tr>
