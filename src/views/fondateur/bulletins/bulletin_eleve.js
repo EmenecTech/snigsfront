@@ -1655,6 +1655,7 @@ const BulletinByEleve = memo((props) => {
                                                                         <th>Note sur</th>
                                                                         <th>Moyenne</th>
                                                                         <th>Observation et Emargement</th>
+                                                                        <th>Appréciation</th>
 
                                                                     </tr>
                                                                 </thead>
@@ -1662,10 +1663,11 @@ const BulletinByEleve = memo((props) => {
                                                                     {notesfg.map((item, idf) => (
 
                                                                         <tr>
+                                                                            <td></td>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                            <td>{item.coefficient_note}</td>
-                                                                            <td>{item.note_finale}</td>
+                                                                            <td></td>
+                                                                            <td></td>
                                                                             <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
 
