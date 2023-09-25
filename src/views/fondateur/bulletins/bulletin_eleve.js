@@ -1314,11 +1314,11 @@ const BulletinByEleve = memo((props) => {
                                                                     {notesfr.map((item, idf) => (
 
                                                                         <tr>
-                                                                             <td></td>
+                                                                            
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
                                                                             <td></td>
-                                                                            <td></td>
+                                                                          
                                                                             <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
 
@@ -1337,11 +1337,11 @@ const BulletinByEleve = memo((props) => {
                                                                     {notesfr.map((item, ids) => (
 
                                                                         <tr>
-                                                                         <td></td>
+                                                                        
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
                                                                             <td></td>
-                                                                            <td></td>
+                                                                          
                                                                             <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
 
@@ -1360,11 +1360,11 @@ const BulletinByEleve = memo((props) => {
                                                                     {notesang.map((item, idt) => (
 
                                                                         <tr>
-                                                                             <td></td>
+                                                                          
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
                                                                             <td></td>
-                                                                            <td></td>
+                                                                         
                                                                             <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
 
@@ -1383,11 +1383,11 @@ const BulletinByEleve = memo((props) => {
                                                                     {notesmath.map((item, idt) => (
 
                                                                         <tr>
-                                                                            <td></td>
+                                                                            
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
                                                                             <td></td>
-                                                                            <td></td>
+                                                                       
                                                                             <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
 
@@ -1407,11 +1407,11 @@ const BulletinByEleve = memo((props) => {
                                                                     {notessee.map((item, idt) => (
 
                                                                         <tr>
-                                                                            <td></td>
+                                                                          
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
                                                                             <td></td>
-                                                                            <td></td>
+                                                                           
                                                                             <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
 
@@ -1430,11 +1430,11 @@ const BulletinByEleve = memo((props) => {
                                                                     {notesshs.map((item, idt) => (
 
                                                                         <tr>
-                                                                             <td></td>
+                                                                            
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
                                                                             <td></td>
-                                                                            <td></td>
+                                                                          
                                                                             <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
 
@@ -1453,11 +1453,11 @@ const BulletinByEleve = memo((props) => {
                                                                     {notescg.map((item, idt) => (
 
                                                                         <tr>
-                                                                             <td></td>
+                                                                          
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
                                                                             <td></td>
-                                                                            <td></td>
+                                                                      
                                                                             <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
 
@@ -1671,11 +1671,11 @@ const BulletinByEleve = memo((props) => {
                                                                     {notesfg.map((item, idf) => (
 
                                                                         <tr>
-                                                                            <td></td>
+                                                                            
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
                                                                             <td></td>
-                                                                            <td></td>
+                                                                           
                                                                             <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
 
@@ -1694,11 +1694,11 @@ const BulletinByEleve = memo((props) => {
                                                                     {notessg.map((item, ids) => (
 
                                                                         <tr>
-                                                                            <td></td>
+                                                                           
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
                                                                             <td></td>
-                                                                            <td></td>
+                                                                           
                                                                             <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
 
@@ -1717,11 +1717,11 @@ const BulletinByEleve = memo((props) => {
                                                                     {notestg.map((item, idt) => (
 
                                                                         <tr>
-                                                                            <td></td>
+                                                                           
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
                                                                             <td></td>
-                                                                            <td></td>
+                                                                           
                                                                             <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
 
@@ -1740,10 +1740,10 @@ const BulletinByEleve = memo((props) => {
                                                                     {notestg.map((item, idt) => (
 
                                                                         <tr>
-                                                                            <td></td>
+                                                                            
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                            <td></td>
+                                                                            
                                                                             <td></td>
                                                                             <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
@@ -1770,10 +1770,10 @@ const BulletinByEleve = memo((props) => {
                                                                     {notestg.map((item, idt) => (
 
                                                                         <tr>
-                                                                           <td></td>
+                                                                           
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                            <td></td>
+                                                                          
                                                                             <td></td>
                                                                             <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
@@ -1792,10 +1792,10 @@ const BulletinByEleve = memo((props) => {
                                                                     {notestg.map((item, idt) => (
 
                                                                         <tr>
-                                                                             <td></td>
+                                                                           
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
                                                                             <td>{item.valeur_note}</td>
-                                                                            <td></td>
+                                                                          
                                                                             <td></td>
                                                                             <td>{item.competence_visee_note}</td>
                                                                             <td>{item.appreciation_note}</td>
