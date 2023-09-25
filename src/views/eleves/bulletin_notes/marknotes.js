@@ -200,11 +200,12 @@ const BulletinByEleve = memo((props) => {
     }, []);
 
     const fetchAllenseign = () => {
+    
         http.get('/get_ens_prim/' + etab + '/' + classe).then(res => {
              setenseign(res.data);
         })
    
-
+    }
 
    const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
