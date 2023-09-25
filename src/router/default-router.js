@@ -87,15 +87,15 @@ import AdminListRequest from '../views/fondateur/requetes/list';
 import Enseignant_matieres_chapitres from '../views/enseignant/chapitres/matieres';
 import Enseignant_list_Chapitre from '../views/enseignant/chapitres/listchapitres';
 import EnseignantLeconChapitre from '../views/enseignant/chapitres/lecons_chapitres';
-import Enseignant_matieres_ from '../views/enseignant//listmatiere';
-import EnseignantAddNote from '../views/enseignant//eleves';
-import EnseignantListEvaluations from '../views/enseignant//evalutions';
-import ElevesListEvaluations from '../views/eleves/pedagogie//lisevaluations';
-import EleveListEval from '../views/eleves/pedagogie//eleve';
-import AdminListClasses from '../views/fondateur//listclasses';
-import AdminListEvaluations from '../views/fondateur//evaluations';
-import AdminMatieresEleves from '../views/fondateur//matieres';
-import AdminEdit from '../views/fondateur//';
+import Enseignant_matieres_ from '../views/enseignant/notes/listmatiere';
+import EnseignantAddNote from '../views/enseignant/notes/eleves';
+import EnseignantListEvaluations from '../views/enseignant/notes/evalutions';
+import ElevesListEvaluations from '../views/eleves/pedagogie/notes/lisevaluations';
+import EleveListEval from '../views/eleves/pedagogie/notes/eleve';
+import AdminListClasses from '../views/fondateur/notes/listclasses';
+import AdminListEvaluations from '../views/fondateur/notes/evaluations';
+import AdminMatieresEleves from '../views/fondateur/notes/matieres';
+import AdminEdit from '../views/fondateur/notes/';
 import EleveMatieresClasse from '../views/eleves/cours/matieres';
 import Eleve_list_Chapitre from '../views/eleves/cours/chapitres';
 import EleveLeconChapitre from '../views/eleves/cours/lecons';
@@ -126,7 +126,7 @@ import PayementsListNiveaux from '../views/fondateur/comptabilite/payementniveau
 import PayementsListNiveauClasses from '../views/fondateur/comptabilite/payementclasse';
 import PayementsListNiveauClasseEleves from '../views/fondateur/comptabilite/payementclasseeleves';
 import PayementsListEleve from '../views/fondateur/comptabilite/payementseleve';
-import All from '../views/enseignant//all';
+import All from '../views/enseignant/notes/all';
 import EditUsers from "../views/super_admin/utilisateurs/edit";
 import EleveForumsMatieres from '../views/eleves/forum/forumatieres';
 import EleveForumDiscussion from '../views/eleves/forum/forumdiscussion';
@@ -141,8 +141,8 @@ import ParentslistdocumentsElevesLoad from "../views/parents/documents/documentl
 import ParentslistdocumentsEleves from "../views/parents/documents/listdocumentseleves";
 import Print_parent from "../views/parents/documents/print";
 import ParentsListPlanning from "../views/parents/pedagogie/listplanning";
-import ParentsListEvaluations from "../views/parents/pedagogie//lisevaluations";
-import ParentsListEval from "../views/parents/pedagogie//eleve";
+import ParentsListEvaluations from "../views/parents/pedagogie/notes/lisevaluations";
+import ParentsListEval from "../views/parents/pedagogie/eleve";
 import ParentsPlanningDetail from "../views/parents/pedagogie/planning";
 import ParentsEditProfil from "../views/parents/profil/edit";
 import ParentsAddRequest from "../views/parents/requetes/addrequest";
@@ -203,7 +203,7 @@ export const DefaultRouter = [
                 element: <Gestuser_superadmin />
             },
 
-            /////////////////////////////////////////////////super admin
+            ///////////////////////////////////////////////super admin
             {
                 path: 'etablissement/configurations/list/super/admin',
                 element: <ListConfigurations />
