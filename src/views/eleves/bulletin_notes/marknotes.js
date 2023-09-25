@@ -205,8 +205,7 @@ const BulletinByEleve = memo((props) => {
         })
     }
     console.log(enseign);
-    console.log(1);
-    console.log(aaa);
+
 
    const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
@@ -426,9 +425,6 @@ const BulletinByEleve = memo((props) => {
     }
 
                                                                                               
-
-    console.log(sumnotes);
-
 
 
 
