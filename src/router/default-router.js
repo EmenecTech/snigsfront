@@ -247,11 +247,11 @@ export const DefaultRouter = [
 
             //////////////////////////////////////////////Fondateur
             {
-                path: 'Admin/Evaluation/Marks//',
+                path: 'Admin/Evaluation/Marks/',
                 element: <AdminBulletinListEvaluations />
             },
             {
-                path: '/Admin/Classes/Bulletin//:evaluation',
+                path: '/Admin/Classes/Bulletin/:evaluation',
                 element: <AdminEvaluationListClasses />
             },
             {
