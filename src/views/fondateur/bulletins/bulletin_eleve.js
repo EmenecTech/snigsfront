@@ -949,7 +949,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                         <th>Matières du troisième groupe</th>
 
                                                                     </tr>
-                                                                </thead>
+                                                                </thead> */}
                                                                 <tbody>
 
                                                                     <tr>
@@ -959,7 +959,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                         <td>{sumnotesfinale}</td>
                                                                         <td>A</td>
                                                                     </tr>
-                                                                </tbody> */}
+                                                                </tbody>
 
 
                                                                 <tfoot>
@@ -1478,8 +1478,8 @@ const [allnotespf, setAllNotespf] = useState([]);
 
                                                                     <tr>
                                                                         <td>RECAPITULATIFS</td>
-                                                                        <td>{sumnotes}</td>
                                                                         <td></td>
+                                                                        <td>{sumnotes}</td>
                                                                         <td></td>
                                                                         <td>A</td>
                                                                     </tr>
