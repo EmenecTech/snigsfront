@@ -825,7 +825,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 <p>Registration N°</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant:</p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: {classe} </p>
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
