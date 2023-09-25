@@ -203,8 +203,7 @@ const BulletinByEleve = memo((props) => {
         http.get('/get_ens_prim/' + etab + '/' + classe).then(res => {
              setenseign(res.data);
         })
-    }
-    console.log(enseign);
+   
 
 
    const [allnotes, setAllNotes] = useState([]);
