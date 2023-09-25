@@ -214,6 +214,19 @@ const BulletinByEleve = memo((props) => {
     }
       return ''; 
     };
+
+    const [allnotespf, setAllNotespf] = useState([]);
+    useEffect(() => {
+        fetchAllNotespf();
+    }, []);
+
+    const fetchAllNotespf = () => {
+        http.get('/all_notes_pf/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotespf(res.data);
+      })
+    };
+
+    
     const [allnotespa, setAllNotespa] = useState([]);
     useEffect(() => {
         fetchAllNotespa();
