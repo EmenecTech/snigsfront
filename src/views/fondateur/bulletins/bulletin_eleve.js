@@ -237,6 +237,17 @@ const [allnotespf, setAllNotespf] = useState([]);
         setAllNotespa(res.data);
       })
     };
+    
+    const [allnotessf, setAllNotessf] = useState([]);
+    useEffect(() => {
+        fetchAllNotessf();
+    }, []);
+
+    const fetchAllNotessf = () => {
+        http.get('/all_notes_sf/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotessf(res.data);
+      })
+    };
 
      const [sumnotes, setsumnotes] = useState([]);
     useEffect(() => {
@@ -860,10 +871,20 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                         <th>Note</th>
                                                                         <th>Coef</th>
                                                                         <th>NxC</th>
-                                                                        <th>Compétence visée</th>
+                                                                       
                                                                         <th>Appreciation</th>
                                                                     </tr>
                                                                 </thead>
+                                                            <tbody>
+                                                                {allnotessf.map((item, sf) => (
+                                                                    <tr key={sf}>
+                                                                        <td>{item.groupe_cm}</td>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
 {/*   <tbody>
                                                                     {notesfg.map((item, idf) => (
 
@@ -1636,19 +1657,23 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 data-toggle="data-table"
                                                             >
                                                                 <thead>
-                                                                    <tr>
-
-                                                                        <th><p>
-                                                                            Disciplines
-                                                                        </p></th>
-                                                                        <th>Matieres</th>
-                                                                        <th>Note sur</th>
-                                                                        <th>Moyenne</th>
-                                                                        <th>Observation et Emargement</th>
-                                                                        <th>Appréciation</th>
-
-                                                                    </tr>
+                                                                   <tr>
+                                                                    <th><p>Disciplines</p></th>
+                                                                    <th>Matieres</th>
+                                                                    <th>Note</th>
+                                                                    <th>Appréciation</th>
+                                                                </tr>
                                                                 </thead>
+                                                            <tbody>
+                                                                {allnotespa.map((item, pa) => (
+                                                                    <tr key={pa}>
+                                                                        <td>{item.groupe_cm}</td>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
 {/* <tbody>
                                                                     {notesfg.map((item, idf) => (
 
