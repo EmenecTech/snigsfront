@@ -193,6 +193,7 @@ const BulletinByEleve = memo((props) => {
             setmatiereslevel(res.data);
         })
     }
+    
 
   const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
@@ -237,6 +238,29 @@ const [allnotespf, setAllNotespf] = useState([]);
       })
     };
 
+     const [sumnotes, setsumnotes] = useState([]);
+    useEffect(() => {
+        fetchAllsumnotes();
+    }, []);
+
+    const fetchAllsumnotes = () => {
+        http.get('/sum/of/notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setsumnotes(res.data);
+
+        })
+    }
+
+    const [classes, setclasses] = useState([]);
+    useEffect(() => {
+        fetchAllclasses();
+    }, []);
+
+    const fetchAllclasses = () => {
+        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
+            setclasses(res.data);
+        })
+    }
+
     
     {/*const [notesfg, setNotesfg] = useState([]);
     useEffect(() => {
@@ -274,28 +298,7 @@ const [allnotespf, setAllNotespf] = useState([]);
         })
     }
 
-    const [sumnotes, setsumnotes] = useState([]);
-    useEffect(() => {
-        fetchAllsumnotes();
-    }, []);
-
-    const fetchAllsumnotes = () => {
-        http.get('/sum/of/notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setsumnotes(res.data);
-
-        })
-    }
-
-    const [classes, setclasses] = useState([]);
-    useEffect(() => {
-        fetchAllclasses();
-    }, []);
-
-    const fetchAllclasses = () => {
-        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
-            setclasses(res.data);
-        })
-    }
+   
 
     ////primaire
 
