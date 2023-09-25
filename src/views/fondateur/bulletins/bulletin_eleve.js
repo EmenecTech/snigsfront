@@ -226,8 +226,19 @@ const [allnotespf, setAllNotespf] = useState([]);
       })
     };
 
+    const [allnotespa, setAllNotespa] = useState([]);
+    useEffect(() => {
+        fetchAllNotespa();
+    }, []);
+
+    const fetchAllNotespa = () => {
+        http.get('/all_notes_pa/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotespa(res.data);
+      })
+    };
+
     
-    const [notesfg, setNotesfg] = useState([]);
+    {/*const [notesfg, setNotesfg] = useState([]);
     useEffect(() => {
         fetchAllNotesfg();
     }, []);
@@ -361,7 +372,7 @@ const [allnotespf, setAllNotespf] = useState([]);
 
         })
     }
-
+*/}
 
     ////primary
     const [sumcoef, setsumcoef] = useState([]);
@@ -1308,24 +1319,25 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 data-toggle="data-table"
                                                             >
                                                                  <thead>
-                                                                <tr>
-                                                                    <th><p>Compétences</p></th>
-                                                                    <th>Matieres</th>
-                                                                    <th>Evaluation</th>
-                                                                    <th>Appréciation</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                {allnotes.map((item, index) => (
-                                                                    <tr key={index}>
-                                                                        <td>{item.groupe_cm}</td>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note)}</td>
-                                                                        <td>{item.appreciation_note}</td>
+                                                                    <tr>
+                                                                        <th><p>Compétences</p></th>
+                                                                        <th>Matieres</th>
+                                                                        <th>Notes</th>
+                                                                        <th>Appréciation</th>
                                                                     </tr>
-                                                                ))}
-                                                            </tbody>
-{/*<thead>
+                                                                </thead>
+                                                                <tbody>
+                                                                    {allnotespf.map((item, pf) => (
+                                                                        <tr key={pf}>
+                                                                            <td>{item.groupe_cm}</td>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+
+                                                            {/*<thead>
                                                                     <tr>
 
                                                                         <th>Anglais</th>
