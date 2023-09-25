@@ -1310,28 +1310,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                                <tbody>
-                                                                    {notesfr.map((item, idf) => (
-
-                                                                        <tr>
-                                                                            
-                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td></td>
-                                                                          
-                                                                            <td>{item.competence_visee_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
-
-                                                                        </tr>
-                                                                    ))}
-                                                                </tbody>
-                                                                <thead>
-                                                                    <tr>
-
-                                                                        <th>Fançais</th>
-
-                                                                    </tr>
-                                                                </thead>
+                                                        
                                                                 <tbody>
 
                                                                     {notesfr.map((item, ids) => (
