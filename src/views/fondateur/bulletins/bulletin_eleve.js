@@ -864,7 +864,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                         <th>Appreciation</th>
                                                                     </tr>
                                                                 </thead>
-                                                                <tbody>
+{/*   <tbody>
                                                                     {notesfg.map((item, idf) => (
 
                                                                         <tr>
@@ -938,7 +938,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                         <td>{sumnotesfinale}</td>
                                                                         <td>A</td>
                                                                     </tr>
-                                                                </tbody>
+                                                                </tbody> */}
 
 
                                                                 <tfoot>
@@ -1649,7 +1649,7 @@ const [allnotespf, setAllNotespf] = useState([]);
 
                                                                     </tr>
                                                                 </thead>
-                                                                <tbody>
+{/* <tbody>
                                                                     {notesfg.map((item, idf) => (
 
                                                                         <tr>
@@ -1664,7 +1664,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                               {/* <thead>
+                                                                <thead>
                                                                     <tr>
 
                                                                         <th>LITERACY AND COMMUNICATION</th>
