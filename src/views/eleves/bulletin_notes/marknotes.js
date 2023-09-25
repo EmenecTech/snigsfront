@@ -194,6 +194,17 @@ const BulletinByEleve = memo((props) => {
         })
     }
 
+    const [enseign, setenseign] = useState();
+    useEffect(() => {
+       fetchAllenseign();
+    }, []);
+
+    const fetchAllenseign = () => {
+        http.get('/get_ens_prim/' + etab + '/' + classe).then(res => {
+             setenseign(res.data);
+        })
+    }
+
    const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
         fetchAllNotes();
@@ -1103,9 +1114,12 @@ const BulletinByEleve = memo((props) => {
                                                     <Row>
 
                                                         <Col sm="12" lg="12">
-
+                                                             <div className="mt-2">
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom de l'enseignant: </p>
+                                                               
+                                                            </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant:</p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: </p>
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
