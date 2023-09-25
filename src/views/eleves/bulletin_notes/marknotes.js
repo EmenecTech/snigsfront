@@ -204,7 +204,7 @@ const BulletinByEleve = memo((props) => {
              setenseign(res.data);
         })
     }
-    console.log(enseign.nom);
+    console.log(enseign.users.nom);
 
    const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
