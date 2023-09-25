@@ -414,16 +414,6 @@ const [allnotespf, setAllNotespf] = useState([]);
     console.log(sumnotes);
 
 
-
-
-
-
-
-
-
-
-
-
     useSelector(SettingSelector.theme_color);
 
     const getVariableColor = () => {
@@ -1459,8 +1449,8 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                         <th>Connaissances Générales</th>
 
                                                                     </tr>
-                                                                </thead>
-                                                                <tbody> */}
+                                                                </thead>*/}
+                                                                <tbody> 
 
                                                                     <tr>
                                                                         <td>RECAPITULATIFS</td>
