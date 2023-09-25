@@ -204,7 +204,7 @@ const BulletinByEleve = memo((props) => {
              setenseign(res.data);
         })
     }
-    console.log(enseign);
+    console.log(enseign.nom);
 
    const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
@@ -1116,7 +1116,7 @@ const BulletinByEleve = memo((props) => {
 
                                                         <Col sm="12" lg="12">
                                                              <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom de l'enseignant: {enseign.nom}</p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom de l'enseignant: </p>
                                                                
                                                             </div>
                                                             <div className="mt-2">
