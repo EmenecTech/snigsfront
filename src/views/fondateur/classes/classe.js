@@ -365,6 +365,7 @@ const UniClasse = () => {
                                                                     <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Course</div>):(<div> Matière  </div>)}</Form.Label>
                                                                     <select className="form-select mb-3 shadow-none" name="int" onChange={handleChange} required>
                                                                         <option></option>
+                                                                        <option value="Toutes les matières">Toutes les matières</option>
                                                                         {matieres.map((item) => (
                                                                             <option key={item.id} value={item.intitule_matiere}>{item.intitule_matiere}</option>
 
