@@ -542,7 +542,7 @@ const UniClasse = () => {
     <select className="form-select mb-3 shadow-none" name="groupe" onChange={handleChange} required>
                                                                         <option></option>
 
-    {/*   <option value="Communication in English"> {user.langue === "en" ? (<div> Group 1</div>):(<div>Communication in English</div>)} </option>
+    <option value="Communication in English"> {user.langue === "en" ? (<div> Group 1</div>):(<div>Communication in English</div>)} </option>
                                                                         <option value="Comuniction in french">{user.langue === "en" ? (<div> Group 2</div>):(<div>Comuniction in french</div>)} </option>
                                                                         <option value="Communication in one national language">{user.langue === "en" ? (<div> Group 3</div>):(<div>Communication in one national language</div>)} </option>
                                                                         
@@ -555,7 +555,7 @@ const UniClasse = () => {
 
                                                                         <option value="Practise physical and sports actiovities">Practise physical and sports actiovities</option>
                                                                         <option value="Practice physical sport, for the physically challenged">Practice physical aport, for the physically challenged</option>
-                                                                        <option value="Practice aristic activities">Practice aristic activities</option> */}
+                                                                        <option value="Practice aristic activities">Practice aristic activities</option>
                                                                          {groupes.map((item) => (
                                                                         <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
     
@@ -568,7 +568,7 @@ const UniClasse = () => {
     <select className="form-select mb-3 shadow-none" name="groupe" onChange={handleChange} required>
                                                                         <option></option>
 
-    {/*<option value="Groupe 1"> {user.langue === "en" ? (<div> Group 1</div>):(<div>Groupe 1</div>)} </option>
+    <option value="Groupe 1"> {user.langue === "en" ? (<div> Group 1</div>):(<div>Groupe 1</div>)} </option>
                                                                         <option value="Groupe 2">{user.langue === "en" ? (<div> Group 2</div>):(<div>Groupe 2</div>)} </option>
                                                                         <option value="Groupe 3">{user.langue === "en" ? (<div> Group 3</div>):(<div>Groupe 3</div>)} </option>
                                                                         
@@ -589,7 +589,7 @@ const UniClasse = () => {
                                                                         <option value="SCIENCE AND TECHNOLOGICAL SKILLS DEVELOPMENT">SCIENCE AND TECHNOLOGICAL SKILLS DEVELOPMENT</option>
                                                                         <option value="PRATICAL LIFE SKILLS">PRATICAL LIFE SKILLS</option>
                                                                         <option value="ARTS AND CRAFTS">ARTS AND CRAFTS</option>
-                                                                        <option value="MOTOR SKILLS">MOTOR SKILLS</option> */}
+                                                                        <option value="MOTOR SKILLS">MOTOR SKILLS</option> 
                                                                      {groupes.map((item) => (
                                                                 <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
 
