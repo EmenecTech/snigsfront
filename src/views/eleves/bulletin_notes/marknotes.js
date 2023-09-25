@@ -1493,7 +1493,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr key={pa}>
                                                                         <td>{item.groupe_cm}</td>
                                                                         <td>{item.matiere_note}</td>
-                                                                        <td>item.valeur_note}</td>
+                                                                        <td>{item.valeur_note}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
