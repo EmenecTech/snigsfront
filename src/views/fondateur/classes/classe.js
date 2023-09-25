@@ -86,7 +86,16 @@ const UniClasse = () => {
         console.log(inputs);
 
     }
+ const [groupes, setgroupes] = useState([]);
+  useEffect(() => {
+    fetchAllGroupes();
+  }, []);
 
+  const fetchAllGroupes = () => {
+    http.get("/get_groupes/" + etab).then((res) => {
+      setgroupes(res.data);
+    });
+  };
 
 
     const [matieres, setmatieres] = useState([]);
@@ -577,6 +586,9 @@ const UniClasse = () => {
                                                                         <option value="PRATICAL LIFE SKILLS">PRATICAL LIFE SKILLS</option>
                                                                         <option value="ARTS AND CRAFTS">ARTS AND CRAFTS</option>
                                                                         <option value="MOTOR SKILLS">MOTOR SKILLS</option>
+                                                                        <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
+
+                                                                         ))}
 
 
                                                                     </select>
