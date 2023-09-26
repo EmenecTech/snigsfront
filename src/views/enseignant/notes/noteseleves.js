@@ -136,6 +136,18 @@ const EnseignantAddNote = () => {
                                                 </select>
 
                                             </Form.Group>
+                                    {eleves_classe.cycle_niveau === 'Maternelle' ? <div>
+                                         <Form.Group className='form-group'>
+                                                <Form.Label>Evaluation</Form.Label>
+
+                                          <select className="form-select mb-3 shadow-none" name="evaluation" onChange={handleChange}>
+                                                    <option> </option>
+                                                    <option value="Non acquis">☹️</option>
+                                                    <option value="En cours d'acquisition">😐</option>
+                                                    <option value="Acquis">😃</option>
+                                                </select>
+                                           </Form.Group>
+                                    </div>:<div>
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Note /20</Form.Label>
                                                 <Form.Control type="number" id="valeur_note" name="valeur_note"
@@ -143,8 +155,10 @@ const EnseignantAddNote = () => {
                                                     onChange={handleChange}
                                                 />
                                             </Form.Group>
+                                    </div>}
+                                            
 
-                                            <Form.Group className='form-group'>
+                                             <Form.Group className='form-group'>
                                                 <Form.Label>coefficient</Form.Label>
                                                 <Form.Control type="number" id="coef" name="coef"
                                                     value={coefficient}
