@@ -158,15 +158,15 @@ const EnseignantAddNote = () => {
                                             </Form.Group>
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Appreciation</Form.Label>
-                                                   {classes.cycle_niveau === 'MATERNELLE' && classes.cycle_niveau === 'primaire' ? <div> 
-                                                <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
+                                                
+{/*    <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                                     <option> </option>
                                                     <option value="Oral">Oral</option>
                                                     <option value="Ecrit">Ecrit</option>
                                                     <option value="Pratique">Pratique</option>
-                                                </select>
+                                                </select> */}
                                                        
-                                    </div> : <div> 
+                                 
                                     
                                                  <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                                     <option> </option>
@@ -174,7 +174,7 @@ const EnseignantAddNote = () => {
                                                     <option value="En cours d'acquisition">En cours d'acquisition</option>
                                                     <option value="Acquis">Acquis</option>
                                                 </select>
-                                    </div> }     
+                                      
                                                
                                             </Form.Group>
                                             <Form.Group className='form-group'>
