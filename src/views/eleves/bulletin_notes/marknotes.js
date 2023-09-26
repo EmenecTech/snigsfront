@@ -212,7 +212,7 @@ const BulletinByEleve = memo((props) => {
     }, []);
 
     const fetchAllNotese = () => {
-        http.get('/all_notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        http.get('/all_notese/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
         setAllNotese(res.data);
       })
     };
