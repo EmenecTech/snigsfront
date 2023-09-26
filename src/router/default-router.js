@@ -175,6 +175,7 @@ import AdminEvaluationListClassesEleves from '../views/fondateur/bulletins/eleve
 import BulletinByEleve from '../views/fondateur/bulletins/bulletin_eleve';
 
 import ListGroupes from '../views/fondateur/groupes_matieres/groupes_matieres';
+import ListIndices from '../views/fondateur/indices_evaluations/indices_evaluations';
 
 
 
@@ -335,6 +336,10 @@ export const DefaultRouter = [
             //////
             {   path: 'List/groupes/',
                 element: <ListGroupes />
+            },
+            //////
+            {   path: 'List/indices/',
+                element: <ListIndices />
             },
             //////
             {
