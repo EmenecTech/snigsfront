@@ -376,8 +376,7 @@ const EnseignantListEvaluations = memo((props) => {
                                             <th>Intitulé</th>
                                             <th>Type d'évaluation</th>
                                             <th>Type de période</th>
-                                            <th>Date de début</th>
-                                            <th>Date de fin</th>
+                                            
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -388,8 +387,7 @@ const EnseignantListEvaluations = memo((props) => {
 
                                                 <td>{item.type_evaluation_evaluation}</td>
                                                 <td>{item.reference_evaluation}</td>
-                                                <td>/</td>
-                                                <td>/</td>
+                                               
 
                                                 <td>
                                                     <div className="flex align-items-center list-user-action">
