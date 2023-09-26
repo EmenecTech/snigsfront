@@ -97,7 +97,7 @@ const EleveListNotesEval = () => {
                         <Card.Header className="d-flex justify-content-between">
                             <h4 className="card-title">Note - {matiere}</h4>
 
-                            <div>
+    {/* <div>
                                 <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3" onClick={handleShow}>
                                     <i className="btn-inner">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -169,7 +169,7 @@ const EleveListNotesEval = () => {
                                     </Modal.Body>
                                 </Modal>
 
-                            </div>
+                            </div> */}
                         </Card.Header>
 
                         <Card.Body>
