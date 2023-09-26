@@ -136,7 +136,7 @@ const EnseignantAddNote = () => {
                                                 </select>
 
                                             </Form.Group>
-                                    {eleves_classe.cycle_niveau === 'Maternelle' ? <div>
+                                    {eleves_classe.niveau_classe === 'MATERNELLE' ? <div>
                                          <Form.Group className='form-group'>
                                                 <Form.Label>Evaluation</Form.Label>
 
