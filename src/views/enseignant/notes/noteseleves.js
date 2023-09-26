@@ -152,24 +152,42 @@ const EnseignantAddNote = () => {
                                                     disabled
                                                 />
                                             </Form.Group>
+                                    {eleves_classe.cycle_niveau === 'Secondaire'? <div>
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Appreciation</Form.Label>
-                                                
-{/*    <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Oral">Oral</option>
-                                                    <option value="Ecrit">Ecrit</option>
-                                                    <option value="Pratique">Pratique</option>
-                                                </select> */}
-                                                       
-                                 
-                                    
-                                                 <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
+
+                                          <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                                     <option> </option>
                                                     <option value="Non acquis">Non acquis</option>
                                                     <option value="En cours d'acquisition">En cours d'acquisition</option>
                                                     <option value="Acquis">Acquis</option>
                                                 </select>
+                                           </Form.Group>
+                                    </div>:<div>
+                                             <Form.Group className='form-group'>
+                                                <Form.Label>Appreciation</Form.Label>
+
+                                                <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
+                                                    <option> </option>
+                                                    <option value="Non acquis">Non acquis</option>
+                                                    <option value="En cours d'acquisition">En cours d'acquisition</option>
+                                                    <option value="Acquis">Acquis</option>
+                                                </select>
+                                           </Form.Group>
+                                            <Form.Group className='form-group'>
+                                                <Form.Label>Indices d'évalutation</Form.Label>
+
+                                          <select className="form-select mb-3 shadow-none" name="indices" onChange={handleChange}>
+                                                    <option> </option>
+                                                    <option value="Oral">Oral</option>
+                                                    <option value="Ecrit">Ecrit</option>
+                                                    <option value="Pratique">Pratique</option>
+                                                </select>
+                                           </Form.Group>
+                                    </div>}         
+
+                                    
+                                                 
                                       
                                                
                                             </Form.Group>
