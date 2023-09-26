@@ -185,12 +185,6 @@ const EnseignantAddNote = () => {
                                                 </select>
                                            </Form.Group>
                                     </div>}         
-
-                                    
-                                                 
-                                      
-                                               
-                                            </Form.Group>
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Compétence visée</Form.Label>
                                                 <Form.Control type="text" id="competence_visee" name="competence_visee"
