@@ -1,4 +1,4 @@
-fimport React, { useState, useEffect, memo, Fragment, useCallback, useRef } from "react";
+import React, { useState, useEffect, memo, Fragment, useCallback, useRef } from "react";
 import { Row, Col, Dropdown, Modal, Button, Table, Form, Image } from "react-bootstrap";
 import { createPath, useNavigate, useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
@@ -200,12 +200,11 @@ const BulletinByEleve = memo((props) => {
     }, []);
 
     const fetchAllenseign = () => {
-    
         http.get('/get_ens_prim/' + etab + '/' + classe).then(res => {
              setenseign(res.data);
         })
-   
     }
+    console.log(enseign.users.nom);
 
    const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
@@ -425,6 +424,9 @@ const BulletinByEleve = memo((props) => {
     }
 
                                                                                               
+
+    console.log(sumnotes);
+
 
 
 
