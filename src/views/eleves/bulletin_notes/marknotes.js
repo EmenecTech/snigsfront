@@ -206,14 +206,14 @@ const BulletinByEleve = memo((props) => {
     }
     console.log(enseign);
 
-   const [allnotes, setAllNotes] = useState([]);
+   const [allnotese, setAllNotese] = useState([]);
     useEffect(() => {
-        fetchAllNotes();
+        fetchAllNotese();
     }, []);
 
-    const fetchAllNotes = () => {
+    const fetchAllNotese = () => {
         http.get('/all_notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotes(res.data);
+        setAllNotese(res.data);
       })
     };
      const getEmojiForNote = (note) => {
@@ -1840,7 +1840,7 @@ const BulletinByEleve = memo((props) => {
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                {allnotes.map((item, index) => (
+                                                                {allnotese.map((item, index) => (
                                                                     <tr key={index}>
                                                                         <td>{item.groupe_cm}</td>
                                                                         <td>{item.matiere_note}</td>
