@@ -698,7 +698,7 @@ const VerticalNav = memo((props) => {
                                                     </svg>
                                                 </i>
                                                 <i className="sidenav-mini-icon"> U </i>
-                                                <span className="item-name">{user.langue === "en" ? (<div> Groups </div>):(<div> Indices d'évaluation </div>)}</span>
+                                                <span className="item-name">{user.langue === "en" ? (<div> Evaluation indices </div>):(<div> Indices d'évaluation </div>)}</span>
                                             </Link>
                                         </li>
                                         <li className="nav-item">
