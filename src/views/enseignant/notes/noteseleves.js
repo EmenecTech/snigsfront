@@ -119,11 +119,7 @@ const EnseignantAddNote = () => {
                                     </Modal.Header>
                                     <Modal.Body>
                                         <Form>
-                                    {classes.cycle_niveau === 'MATERNELLE' ? <div> 
-                                    
-                                    </div> : <div> 
-                                    
-                                    </div> }
+                            
                                             <Form.Group className="form-group">
      
                                                 <Form.Label htmlFor="exampleFormControlSelect1">Selectionner l'élève</Form.Label>
