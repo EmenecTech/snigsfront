@@ -152,7 +152,7 @@ const EnseignantAddNote = () => {
                                                     disabled
                                                 />
                                             </Form.Group>
-                                    {eleves_classe.cycle_niveau === 'Secondaire'? <div>
+                                    {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary'? <div>
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Appreciation</Form.Label>
 
