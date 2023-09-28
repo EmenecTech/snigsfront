@@ -1172,9 +1172,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                         <td>RECAPITULATIFS</td>
                                                                         <td></td>
                                                                         <td></td>
-                                                                        <td></td>
-                                                                        
-                                                                        
+                                                                        <td></td>     
                                                                     </tr>
                                                                 </tbody>
 
@@ -1558,11 +1556,12 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
+                                                                    
                                                                     <tr>
-                                                                        <td></td>
-                                                                        <td></td>
-                                                                        <td></td>
-                                                                        <td></td>
+                                                                        <td> </br></br> </td>
+                                                                        <td> </br></br> </td>
+                                                                        <td> </br></br> </td>
+                                                                        <td> </br></br> </td>
                                                                     </tr>
 
                                                                 </tbody>
