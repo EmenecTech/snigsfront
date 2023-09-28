@@ -415,7 +415,7 @@ const StatsEtablissement = memo((props) => {
                                         </tr>
                                         <tr>
                                             <td>Enseignants</td>
-                                            <td>{nbrens_c}</td>
+                                            <td>{nbrens}</td>
                                         </tr>
                                         <tr>
                                             <td>Eleves</td>
