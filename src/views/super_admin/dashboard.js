@@ -2305,9 +2305,9 @@ const [nbrpar_sup, setnbrpar_sup] = useState([]);
                             </svg>
                           </Circularprogressbar>
                           <div className="progress-detail">
-                            <p className="mb-2">Elèves</p>
+                            <p className="mb-2">Etablissements</p>
                             <h4 className="counter">
-                              <CountUp start={0} end={nbreleve_sup} duration={5} />
+                              <CountUp start={0} end={0} duration={5} />
                             </h4>
                           </div>
                         </div>
@@ -2343,7 +2343,7 @@ const [nbrpar_sup, setnbrpar_sup] = useState([]);
                             </svg>
                           </Circularprogressbar>
                           <div className="progress-detail">
-                            <p className="mb-2">Elèves Inscrits</p>
+                            <p className="mb-2">Etablissements Maternelles</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbreleveins_sup} duration={3} />
                             </h4>
@@ -2379,9 +2379,9 @@ const [nbrpar_sup, setnbrpar_sup] = useState([]);
                             </svg>
                           </Circularprogressbar>
                           <div className="progress-detail">
-                            <p className="mb-2">Elèves Préinscrits</p>
+                            <p className="mb-2">Etablissements Primaires</p>
                             <h4 className="counter">
-                              <CountUp start={0} end={nbrpreins_sup} duration={3} />
+                              <CountUp start={0} end={0} duration={3} />
                             </h4>
                           </div>
                         </div>
@@ -2416,9 +2416,9 @@ const [nbrpar_sup, setnbrpar_sup] = useState([]);
                             </svg>
                           </Circularprogressbar>
                           <div className="progress-detail">
-                            <p className="mb-2">Parents</p>
+                            <p className="mb-2">Etablissements Secondaires</p>
                             <h4 className="counter">
-                              <CountUp start={0} end={nbrpar_sup} duration={3} />
+                              <CountUp start={0} end={0} duration={3} />
                             </h4>
                           </div>
                         </div>
