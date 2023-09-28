@@ -342,7 +342,7 @@ const ListEtablissements = memo((props) => {
                                     <tbody>
                                         {etablissements.map((item) => (
                                             <tr key={item.id}>
-                                                <td>{item.nom_etablissement}</td>
+                                                <td> <Link to={"/Stats/Etablissments/" + item.id}> {item.nom_etablissement} </Link></td>
                                                 <td>{item.cygle}</td>
                                                 <td>{item.email_etablissement}</td>
                                                 <td>{item.telephone}</td>
