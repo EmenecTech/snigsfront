@@ -1558,10 +1558,10 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 <tbody>
                                                                     
                                                                     <tr>
-                                                                        <td> </br></br> </td>
-                                                                        <td> </br></br> </td>
-                                                                        <td> </br></br> </td>
-                                                                        <td> </br></br> </td>
+                                                                        <td> / </td>
+                                                                        <td> /  </td>
+                                                                        <td> / </td>
+                                                                        <td> / </td>
                                                                     </tr>
 
                                                                 </tbody>
