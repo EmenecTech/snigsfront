@@ -1875,7 +1875,7 @@ const BulletinByEleve = memo((props) => {
                                                                 className=""
                                                                 data-toggle="data-table"
                                                             >
-                                                                < <thead>
+                                                                 <thead>
                                                                     <tr>
                                                                         <th></th>
                                                                         <th>ENSEIGNANT(E)</th>
