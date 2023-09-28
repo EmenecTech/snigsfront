@@ -1858,7 +1858,7 @@ const BulletinByEleve = memo((props) => {
                                                                        <td></td>
                                                                         <td></td>
                                                                         <td></td>
-                                                                   
+                                                                        <td></td>
                                                                         
                                                                     </tr>
                                                                 </tbody>
@@ -1875,18 +1875,24 @@ const BulletinByEleve = memo((props) => {
                                                                 className=""
                                                                 data-toggle="data-table"
                                                             >
-                                                                 <thead>
+                                                                <thead>
                                                                     <tr>
                                                                         <th></th>
-                                                                        <th>ENSEIGNANT(E)</th>
-                                                                        <th>DIRECTRICE(TEUR)</th>
-                                                                        <th>PARENT</th>
-                                                                        <th>REMARQUES GENERALES</th>
-                                                                       
+                                                                        <th>DISCIPLINE</th>
+                                                                        <th>APPRECIATION DU TRAVAIL</th>
+                                                                        <th><div className="mt-2">
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {moyenneleve}</p>
+                                                                        </div>
+                                                                            <div className="mt-2">
+                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:</p>
+                                                                            </div>
+                                                                            <div className="mt-2">
+                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">MENTION:</p>
+                                                                            </div>
+                                                                        </th>
                                                                     </tr>
                                                                 </thead>
-                                                                
-                                                               <tbody>
+                                                                <tbody>
 
                                                                     <tr>
                                                                         <td>
@@ -1897,17 +1903,41 @@ const BulletinByEleve = memo((props) => {
                                                                             </Col>
 
                                                                         </td>
-                                                                    
-                                                                        <td>    
-                                                                        </td>
-                                                                    
                                                                         <td>
+                                                                            <div className="mt-1">
+                                                                                <p>
+
+                                                                                    Abscences non justifiées :
+                                                                                    <br />
+                                                                                    Abscences justifiées:
+                                                                                    <br />
+                                                                                    Avertissement conduite:
+                                                                                    <br />
+                                                                                    Blame conduite:
+                                                                                </p>
+
+                                                                            </div>
                                                                         </td>
-                                                                    
-                                                                        <td>  
+                                                                        <td>
+                                                                            <div className="mt-1">
+                                                                                <p>Tableau d'honneur:
+                                                                                    <br />
+                                                                                    Encouragement:
+                                                                                    <br />
+                                                                                    Félicitations:
+                                                                                    <br />
+                                                                                    Prime:
+                                                                                </p>
+
+                                                                            </div>
                                                                         </td>
-                                                                    
-                                                                        <td>  
+                                                                        <td>
+                                                                            <div className="mt-1">
+                                                                                <p>Moyenne de la classe:
+
+                                                                                </p>
+
+                                                                            </div>
                                                                         </td>
 
                                                                     </tr>
