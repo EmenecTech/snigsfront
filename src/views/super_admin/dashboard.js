@@ -250,7 +250,7 @@ const [nbrpar_sup, setnbrpar_sup] = useState([]);
   }, []);
 
   const fetchAllnbrpar_sup = () => {
-    http.get('/nbreleve_parent_sup').then(res => {
+    http.get('/nbreleve_parent_sup/' + etab).then(res => {
       setnbrpar_sup(res.data);
     })
   }
