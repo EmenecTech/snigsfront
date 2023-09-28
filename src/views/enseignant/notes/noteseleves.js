@@ -250,7 +250,7 @@ const EnseignantAddNote = () => {
                                         <th></th>
                                           </div>:<div>
                                         <th>Note/Evaluation</th>
-                                        <th>Indices d'évaluation</th>
+                                        <th>Indices</th>
                                         <th></th>      </div>  }
                                         <th>Appreciation</th>
                                         <th>Compétence visée</th>
