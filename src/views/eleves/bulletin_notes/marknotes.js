@@ -285,121 +285,7 @@ const BulletinByEleve = memo((props) => {
         })
     }
 
-    {/* const [notesfg, setNotesfg] = useState([]);
-    useEffect(() => {
-        fetchAllNotesfg();
-    }, []);
-
-    const fetchAllNotesfg = () => {
-        http.get('/notes_fristgroupe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesfg(res.data);
-
-        })
-    }
-
-    const [notessg, setNotessg] = useState([]);
-    useEffect(() => {
-        fetchAllNotessg();
-    }, []);
-
-    const fetchAllNotessg = () => {
-        http.get('/notes_secondgroupe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotessg(res.data);
-
-        })
-    }
-
-    const [notestg, setNotestg] = useState([]);
-    useEffect(() => {
-        fetchAllNotestg();
-    }, []);
-
-    const fetchAllNotestg = () => {
-        http.get('/notes_thirdgroupe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotestg(res.data);
-
-        })
-    }
-
    
-
-    ////primaire
-
-    const [notesfr, setNotesfr] = useState([]);
-    useEffect(() => {
-        fetchAllNotesfr();
-    }, []);
-
-    const fetchAllNotesfr = () => {
-        http.get('/notes_francais/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesfr(res.data);
-
-        })
-    }
-
-    const [notesmath, setNotesmath] = useState([]);
-    useEffect(() => {
-        fetchAllNotesmath();
-    }, []);
-
-    const fetchAllNotesmath = () => {
-        http.get('/notes_maths/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesmath(res.data);
-
-        })
-    }
-
-    const [notesang, setNotesang] = useState([]);
-    useEffect(() => {
-        fetchAllNotesang();
-    }, []);
-
-    const fetchAllNotesang = () => {
-        http.get('/notes_ang/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesang(res.data);
-
-        })
-    }
-
-    const [notessee, setNotessee] = useState([]);
-    useEffect(() => {
-        fetchAllNotessee();
-    }, []);
-
-    const fetchAllNotessee = () => {
-        http.get('/notes_see/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotessee(res.data);
-
-        })
-    }
-
-
-    const [notesshs, setNotesshs] = useState([]);
-    useEffect(() => {
-        fetchAllNotesshs();
-    }, []);
-
-    const fetchAllNotesshs = () => {
-        http.get('/notes_shs/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesshs(res.data);
-
-        })
-    }
-
-
-    const [notescg, setNotescg] = useState([]);
-    useEffect(() => {
-        fetchAllNotescg();
-    }, []);
-
-    const fetchAllNotescg = () => {
-        http.get('/notes_cg/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotescg(res.data);
-
-        })
-    }  */}
-
-
     ////primary
     const [sumcoef, setsumcoef] = useState([]);
     useEffect(() => {
@@ -686,7 +572,7 @@ const BulletinByEleve = memo((props) => {
 
     return (
         <Fragment>
-         { classes.cycle_niveau === 'Secondaire' ? <div>
+         
             <Row>
                 <Col sm="12">
                     <Card>
@@ -1023,10 +909,8 @@ const BulletinByEleve = memo((props) => {
                     </Card>
                 </Col>
             </Row>
-        </div> : <div> 
-                                                                    
-      </div> }
-{classes.cycle_niveau === 'Primaire'? <div>
+
+                                                                                    
        <Row>
                 <Col sm="12">
                     <Card>
@@ -1225,9 +1109,8 @@ const BulletinByEleve = memo((props) => {
                     </Card>
                 </Col>
             </Row>
-</div> : <div></div> }
 
-{classes.cycle_niveau === 'Primary'? <div>
+                                                                                    
     
             <Row>
                 <Col sm="12">
@@ -1426,9 +1309,8 @@ const BulletinByEleve = memo((props) => {
                     </Card>
                 </Col>
             </Row>
-</div> : <div></div> }
 
-{classes.cycle_niveau === 'Maternelle'? <div>
+                                                                                    
      <Row>
                 <Col sm="12">
                     <Card>
@@ -1596,13 +1478,7 @@ const BulletinByEleve = memo((props) => {
                     </Card>
                 </Col>
             </Row>
-                                                                    
-</div> : <div></div>    }
-
-         
-
-
-                                                                                    
+                                                                        
            
         </Fragment>
     );
