@@ -108,7 +108,7 @@ const StatsEtablissement = memo((props) => {
     }
 
 
-
+   const nbreins = nbreleve - nbrpreins;
 
 
 
@@ -411,7 +411,7 @@ const StatsEtablissement = memo((props) => {
                                         </tr>
                                         <tr>
                                             <td>Inscripts</td>
-                                            <td>Enseignants</td>
+                                            <td>{nbreins}</td>
 
                                         </tr>
                                         <tr>
