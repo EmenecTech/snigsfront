@@ -1193,18 +1193,11 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 <thead>
                                                                     <tr>
                                                                         <th></th>
-                                                                        <th>DISCIPLINE</th>
-                                                                        <th>APPRECIATION DU TRAVAIL</th>
-                                                                        <th><div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {moyenneleve}</p>
-                                                                        </div>
-                                                                            <div className="mt-2">
-                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:</p>
-                                                                            </div>
-                                                                            <div className="mt-2">
-                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">MENTION:</p>
-                                                                            </div>
-                                                                        </th>
+                                                                        <th>ENSEIGNANT(E)</th>
+                                                                        <th>DIRECTRICE(TEUR)</th>
+                                                                        <th>PARENT</th>
+                                                                        <th>REMARQUES</th>
+                                                                       
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -1218,41 +1211,14 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                             </Col>
 
                                                                         </td>
-                                                                        <td>
-                                                                            <div className="mt-1">
-                                                                                <p>
-
-                                                                                    Abscences non justifiées :
-                                                                                    <br />
-                                                                                    Abscences justifiées:
-                                                                                    <br />
-                                                                                    Avertissement conduite:
-                                                                                    <br />
-                                                                                    Blame conduite:
-                                                                                </p>
-
-                                                                            </div>
+                                                                    
+                                                                        <td>    
                                                                         </td>
+                                                                    
                                                                         <td>
-                                                                            <div className="mt-1">
-                                                                                <p>Tableau d'honneur:
-                                                                                    <br />
-                                                                                    Encouragement:
-                                                                                    <br />
-                                                                                    Félicitations:
-                                                                                    <br />
-                                                                                    Prime:
-                                                                                </p>
-
-                                                                            </div>
                                                                         </td>
-                                                                        <td>
-                                                                            <div className="mt-1">
-                                                                                <p>Moyenne de la classe:
-
-                                                                                </p>
-
-                                                                            </div>
+                                                                    
+                                                                        <td>  
                                                                         </td>
 
                                                                     </tr>
