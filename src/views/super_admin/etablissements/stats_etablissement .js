@@ -23,7 +23,7 @@ import "swiper/swiper-bundle.min.css";
 
 //progressbar
 import Progress from "../../../components/progress.js";
-nbrens
+
 //img
 import shapes1 from "../../../assets/images/shapes/01.png";
 import shapes2 from "../../../assets/images/shapes/02.png";
