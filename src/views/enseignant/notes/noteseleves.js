@@ -249,7 +249,7 @@ const EnseignantAddNote = () => {
                                         <th>NxC</th> 
                                         <th></th>
                                           </div>:<div>
-                                        <th>Note/Evaluation</th>
+                                        <th>Evaluation</th>
                                         <th>Indices</th>
                                         <th></th>      </div>  }
                                         <th>Appreciation</th>
