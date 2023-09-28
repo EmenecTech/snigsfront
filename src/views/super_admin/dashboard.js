@@ -7,7 +7,7 @@ import AuthUser from "../../components/AuthUser.js";
 //circulars
 import Circularprogressbar from "../../components/circularprogressbar.js";
 
-// AOS
+// AOS 
 import AOS from "aos";
 import "../../../node_modules/aos/dist/aos";
 import "../../../node_modules/aos/dist/aos.css";
