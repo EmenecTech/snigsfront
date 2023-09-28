@@ -257,7 +257,7 @@ const BulletinByEleve = memo((props) => {
 
     const fetchAllNotessfe = () => {
         http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotessf(res.data);
+        setAllNotessfE(res.data);
       })
     };
 
