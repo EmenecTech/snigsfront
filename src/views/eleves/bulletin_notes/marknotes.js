@@ -214,10 +214,10 @@ const BulletinByEleve = memo((props) => {
     const fetchAllNotese = () => {
         http.get('/all_notese/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
         setAllNotese(res.data);
-              console.log(allnotese);
+        
       })
     };
-      
+            console.log(allnotese);
     
      const getEmojiForNote = (note) => {
     if (note >= 0 && note <= 8) {
