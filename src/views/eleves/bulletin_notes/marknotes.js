@@ -229,7 +229,7 @@ const BulletinByEleve = memo((props) => {
       return ''; 
     };
 
-    const [allnotespf, setAllNotespf] = useState([]);
+   const [allnotespf, setAllNotespf] = useState([]);
     useEffect(() => {
         fetchAllNotespf();
     }, []);
@@ -253,7 +253,7 @@ const BulletinByEleve = memo((props) => {
     };
    
     
-    const [allnotessf, setAllNotessf] = useState([]);
+  const [allnotessf, setAllNotessf] = useState([]);
     useEffect(() => {
         fetchAllNotessf();
     }, []);
@@ -876,8 +876,8 @@ const BulletinByEleve = memo((props) => {
                                                                 className=""
                                                                 data-toggle="data-table"
                                                             >
-                                                                <thead>
-                                                                       <tr>
+                                                              <thead>
+                                                                    <tr>
 
                                                                         <th><p>
                                                                             Discipline /Nom de l'enseignant
@@ -1148,7 +1148,7 @@ const BulletinByEleve = memo((props) => {
                                                                 data-toggle="data-table"
                                                             >
                                                                 <thead>
-                                                                   <tr>
+                                                                    <tr>
                                                                         <th><p>Compétences</p></th>
                                                                         <th>Matieres</th>
                                                                         <th>Notes</th>
@@ -1514,7 +1514,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr key={pa}>
                                                                         <td>{item.groupe_cm}</td>
                                                                         <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>item.valeur_note}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
@@ -1835,7 +1835,7 @@ const BulletinByEleve = memo((props) => {
                                                                 className=""
                                                                 data-toggle="data-table"
                                                             >
-                                                                <thead>
+                                                              <thead>
                                                                 <tr>
                                                                     <th><p>Compétences</p></th>
                                                                     <th>Matieres</th>
@@ -1844,7 +1844,7 @@ const BulletinByEleve = memo((props) => {
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                {allnotese.map((item, index) => (
+                                                                {allnotes.map((item, index) => (
                                                                     <tr key={index}>
                                                                         <td>{item.groupe_cm}</td>
                                                                         <td>{item.matiere_note}</td>
@@ -1853,7 +1853,6 @@ const BulletinByEleve = memo((props) => {
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
-
                                                                 
                                                                 <tbody>
 
