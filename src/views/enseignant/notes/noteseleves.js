@@ -237,16 +237,21 @@ const EnseignantAddNote = () => {
 
                         <Card.Body>
                             <table className="table">
-                   {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? <div>
+                  
                                     <thead>
                                                        
                                     <tr>
                                         <th>Sno.</th>
                                         <th>Nom(s)</th>
                                         <th>Prénom(s)</th>
+                                      {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? <div>
                                         <th>Note</th>
-                                        <th>NxC</th>
+                                        <th>NxC</th> 
                                         <th></th>
+                                          </div>:<div>
+                                        <th>Note/Evaluation</th>
+                                        <th>Indices d'évaluation</th>
+                                        <th></th>      </div>  }
                                         <th>Appreciation</th>
                                         <th>Compétence visée</th>
                                         <th> </th>
@@ -262,6 +267,7 @@ const EnseignantAddNote = () => {
                                             <td>
                                                 {item.prenom}
                                             </td>
+                                         {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? <div>
                                             <td>
                                                 {item.valeur_note}
                                             </td>
@@ -270,7 +276,15 @@ const EnseignantAddNote = () => {
                                             </td>
                                             <td>
                                                 {matiere_classe_info.coefficient_cm}
+                                            </td> 
+                                            </div>:<div>  
+                                           <td>
+                                                {item.valeur_note}
                                             </td>
+                                            <td>
+                                               /
+                                            </td>
+                                            </div>  }
                                             <td>
                                                 {item.appreciation_note}
                                             </td>
@@ -283,53 +297,8 @@ const EnseignantAddNote = () => {
                                     ))}
 
                                 </tbody>                     
-                  </div>:<div>
-                               <thead>
-                                                       
-                                    <tr>
-                                        <th>Sno.</th>
-                                        <th>Nom(s)</th>
-                                        <th>Prénom(s)</th>
-                                        <th>Note/Evaluation</th>
-                                        <th>Indices d'évaluation</th>
-                                        <th></th>
-                                        <th>Appreciation</th>
-                                        <th>Compétence visée</th>
-                                        <th> </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {notes.map((item, index) => (
-                                        <tr key={item.id}>
-                                            <td>{++index}</td>
-                                            <td>
-                                                {item.nom}
-                                            </td>
-                                            <td>
-                                                {item.prenom}
-                                            </td>
-                                            <td>
-                                                {item.valeur_note}
-                                            </td>
-                                            <td>
-                                                {item.note_finale}
-                                            </td>
-                                            <td>
-                                                /
-                                            </td>
-                                            <td>
-                                                {item.appreciation_note}
-                                            </td>
-                                            <td>{item.competence_visee_note} </td>
-                                            <td>
-
-
-                                            </td>
-                                        </tr>
-                                    ))}
-
-                                </tbody>                          
-                         </div>  }
+                            
+                      
                                
                             </table>
                         </Card.Body>
