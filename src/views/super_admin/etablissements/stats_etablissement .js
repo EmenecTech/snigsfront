@@ -444,6 +444,7 @@ const StatsEtablissement = memo((props) => {
                                             <td>{nbrpar}</td>
 
                                         </tr>
+                                        
 
                                     </tbody>
                                     <tfoot>
