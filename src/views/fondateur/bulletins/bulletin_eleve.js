@@ -1170,10 +1170,10 @@ const [allnotespf, setAllNotespf] = useState([]);
 
                                                                     <tr>
                                                                         <td>RECAPITULATIFS</td>
-                                                                       <td></td>
                                                                         <td></td>
                                                                         <td></td>
                                                                         <td></td>
+                                                                        
                                                                         
                                                                     </tr>
                                                                 </tbody>
@@ -1196,7 +1196,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                         <th>ENSEIGNANT(E)</th>
                                                                         <th>DIRECTRICE(TEUR)</th>
                                                                         <th>PARENT</th>
-                                                                        <th>REMARQUES</th>
+                                                                        <th>REMARQUES GENERALES</th>
                                                                        
                                                                     </tr>
                                                                 </thead>
@@ -1216,6 +1216,9 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                         </td>
                                                                     
                                                                         <td>
+                                                                        </td>
+                                                                    
+                                                                        <td>  
                                                                         </td>
                                                                     
                                                                         <td>  
