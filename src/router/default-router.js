@@ -178,6 +178,8 @@ import ListGroupes from '../views/fondateur/groupes_matieres/groupes_matieres';
 import ListIndices from '../views/fondateur/indices_evaluations/indices_evaluations';
 
 
+import StatsEtablissement from '../views/super_admin/etablissements/stats_etablissement ';
+
 
 
 export const DefaultRouter = [
@@ -238,6 +240,13 @@ export const DefaultRouter = [
                 path: 'utilisateurs/add/super/admin',
                 element: <AddUtilisateurs />
             },
+
+            //////////27/09/2023
+            {
+                path: 'Stats/Etablissments/:etab',
+                element: <StatsEtablissement />
+            },
+
 
     //27/07/2023
             {
