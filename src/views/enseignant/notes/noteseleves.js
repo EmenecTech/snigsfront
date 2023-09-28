@@ -281,9 +281,8 @@ const EnseignantAddNote = () => {
                                            <td>
                                                 {item.valeur_note}
                                             </td>
-                                            <td>
-                                               /
-                                            </td>
+                                            <td>|</td>
+                                            
                                             </div>  }
                                             <td>
                                                 {item.appreciation_note}
