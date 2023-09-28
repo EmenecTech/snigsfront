@@ -155,9 +155,7 @@ const EnseignantAddNote = () => {
                                                     <option value="Non acquis">☹️</option>
                                                     <option value="En cours d'acquisition">😐</option>
                                                     <option value="Acquis">😃</option>
-                                            {indices.map((item) => (
-                                            <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
-                                                            ))}
+                                           
                                                 </select>
                                            </Form.Group>
                                             <Form.Group className='form-group'>
@@ -168,6 +166,9 @@ const EnseignantAddNote = () => {
                                                     <option value="Oral">Oral</option>
                                                     <option value="Ecrit">Ecrit</option>
                                                     <option value="Pratique">Pratique</option>
+                                         {indices.map((item) => (
+                                            <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
+                                                            ))}
                                                 </select>
                                            </Form.Group>
                                     </div>:<div>
