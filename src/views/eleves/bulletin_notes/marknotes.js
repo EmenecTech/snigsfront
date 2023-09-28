@@ -88,18 +88,6 @@ const BulletinByEleve = memo((props) => {
     const classe = user.other_in_user;
 
 
-    const [classes, setclasses] = useState([]);
-    useEffect(() => {
-        fetchAllclasses();
-    }, []);
-
-    const fetchAllclasses = () => {
-        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
-            setclasses(res.data);
-        })
-    }
-
-
 
 
 
@@ -285,7 +273,121 @@ const BulletinByEleve = memo((props) => {
         })
     }
 
+    {/* const [notesfg, setNotesfg] = useState([]);
+    useEffect(() => {
+        fetchAllNotesfg();
+    }, []);
+
+    const fetchAllNotesfg = () => {
+        http.get('/notes_fristgroupe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotesfg(res.data);
+
+        })
+    }
+
+    const [notessg, setNotessg] = useState([]);
+    useEffect(() => {
+        fetchAllNotessg();
+    }, []);
+
+    const fetchAllNotessg = () => {
+        http.get('/notes_secondgroupe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotessg(res.data);
+
+        })
+    }
+
+    const [notestg, setNotestg] = useState([]);
+    useEffect(() => {
+        fetchAllNotestg();
+    }, []);
+
+    const fetchAllNotestg = () => {
+        http.get('/notes_thirdgroupe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotestg(res.data);
+
+        })
+    }
+
    
+
+    ////primaire
+
+    const [notesfr, setNotesfr] = useState([]);
+    useEffect(() => {
+        fetchAllNotesfr();
+    }, []);
+
+    const fetchAllNotesfr = () => {
+        http.get('/notes_francais/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotesfr(res.data);
+
+        })
+    }
+
+    const [notesmath, setNotesmath] = useState([]);
+    useEffect(() => {
+        fetchAllNotesmath();
+    }, []);
+
+    const fetchAllNotesmath = () => {
+        http.get('/notes_maths/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotesmath(res.data);
+
+        })
+    }
+
+    const [notesang, setNotesang] = useState([]);
+    useEffect(() => {
+        fetchAllNotesang();
+    }, []);
+
+    const fetchAllNotesang = () => {
+        http.get('/notes_ang/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotesang(res.data);
+
+        })
+    }
+
+    const [notessee, setNotessee] = useState([]);
+    useEffect(() => {
+        fetchAllNotessee();
+    }, []);
+
+    const fetchAllNotessee = () => {
+        http.get('/notes_see/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotessee(res.data);
+
+        })
+    }
+
+
+    const [notesshs, setNotesshs] = useState([]);
+    useEffect(() => {
+        fetchAllNotesshs();
+    }, []);
+
+    const fetchAllNotesshs = () => {
+        http.get('/notes_shs/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotesshs(res.data);
+
+        })
+    }
+
+
+    const [notescg, setNotescg] = useState([]);
+    useEffect(() => {
+        fetchAllNotescg();
+    }, []);
+
+    const fetchAllNotescg = () => {
+        http.get('/notes_cg/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setNotescg(res.data);
+
+        })
+    }  */}
+
+
     ////primary
     const [sumcoef, setsumcoef] = useState([]);
     useEffect(() => {
@@ -572,7 +674,6 @@ const BulletinByEleve = memo((props) => {
 
     return (
         <Fragment>
-         
             <Row>
                 <Col sm="12">
                     <Card>
@@ -794,6 +895,71 @@ const BulletinByEleve = memo((props) => {
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
+{/*  <tbody>
+                                                                    {notesfg.map((item, idf) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Matières du premier groupe</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notessg.map((item, ids) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Matières du deuxième groupe</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notestg.map((item, idt) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Matières du troisième groupe</th>
+
+                                                                    </tr>
+                                                                </thead> */}
                                                                 <tbody>
 
                                                                     <tr>
@@ -910,8 +1076,7 @@ const BulletinByEleve = memo((props) => {
                 </Col>
             </Row>
 
-                                                                                    
-       <Row>
+            <Row>
                 <Col sm="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
@@ -996,6 +1161,162 @@ const BulletinByEleve = memo((props) => {
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
+
+                                                                
+{/*                                  <tbody>
+                                                                    {notesfr.map((item, idf) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Fançais</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notesfr.map((item, ids) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Anglais</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notesang.map((item, idt) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Mathématiques</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notesmath.map((item, idt) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Sciences et Education à l'Environnement</th>
+
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+
+                                                                    {notessee.map((item, idt) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Sciences Humaines et Sociales</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notesshs.map((item, idt) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Connaissances Générales</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notescg.map((item, idt) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Connaissances Générales</th>
+
+                                                                    </tr>
+                                                                </thead>  */}
                                                               <tbody> 
 
                                                                     <tr>
@@ -1110,8 +1431,6 @@ const BulletinByEleve = memo((props) => {
                 </Col>
             </Row>
 
-                                                                                    
-    
             <Row>
                 <Col sm="12">
                     <Card>
@@ -1196,7 +1515,144 @@ const BulletinByEleve = memo((props) => {
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
+{/*        <tbody>
+                                                                    {notesfg.map((item, idf) => (
 
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>LITERACY AND COMMUNICATION</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notessg.map((item, ids) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>SCIENCE AND TECHNOLOGICAL SKILLS DEVELOPMENT</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notestg.map((item, idt) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>PRATICAL LIFE SKILLS</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notestg.map((item, idt) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>ARTS AND CRAFTS</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Mathématiques</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notestg.map((item, idt) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Sciences Humaines et Sociales</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notestg.map((item, idt) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Connaissances Générales</th>
+
+                                                                    </tr>
+                                                                </thead> */}
                                                                 <tbody>
 
                                                                     <tr>
@@ -1311,7 +1767,7 @@ const BulletinByEleve = memo((props) => {
             </Row>
 
                                                                                     
-     <Row>
+            <Row>
                 <Col sm="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
@@ -1478,8 +1934,6 @@ const BulletinByEleve = memo((props) => {
                     </Card>
                 </Col>
             </Row>
-                                                                        
-           
         </Fragment>
     );
 })
