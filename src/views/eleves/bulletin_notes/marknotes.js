@@ -227,36 +227,36 @@ const BulletinByEleve = memo((props) => {
       return ''; 
     };
 
-    const [allnotespf, setAllNotespf] = useState([]);
+    const [allnotespfe, setAllNotespfe] = useState([]);
     useEffect(() => {
-        fetchAllNotespf();
+        fetchAllNotespfe();
     }, []);
 
-    const fetchAllNotespf = () => {
-        http.get('/all_notes_pf/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotespf(res.data);
+    const fetchAllNotespfe = () => {
+        http.get('/all_notes_pfe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotespfe(res.data);
       })
     };
 
     
-    const [allnotespa, setAllNotespa] = useState([]);
+    const [allnotespae, setAllNotespae] = useState([]);
     useEffect(() => {
-        fetchAllNotespa();
+        fetchAllNotespae();
     }, []);
 
-    const fetchAllNotespa = () => {
-        http.get('/all_notes_pa/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotespa(res.data);
+    const fetchAllNotespae = () => {
+        http.get('/all_notes_pae/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotespae(res.data);
       })
     };
     
-    const [allnotessf, setAllNotessf] = useState([]);
+    const [allnotessfe, setAllNotessfe] = useState([]);
     useEffect(() => {
-        fetchAllNotessf();
+        fetchAllNotessfe();
     }, []);
 
-    const fetchAllNotessf = () => {
-        http.get('/all_notes_sf/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+    const fetchAllNotessfe = () => {
+        http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
         setAllNotessf(res.data);
       })
     };
@@ -886,7 +886,7 @@ const BulletinByEleve = memo((props) => {
                                                                     </tr>
                                                                 </thead>
                                                             <tbody>
-                                                                {allnotessf.map((item, sf) => (
+                                                                {allnotessfe.map((item, sf) => (
                                                                     <tr key={sf}>
                                                                         <td>{item.groupe_cm}</td>
                                                                         <td>{item.matiere_note}</td>
@@ -1145,14 +1145,14 @@ const BulletinByEleve = memo((props) => {
                                                             >
                                                                 <thead>
                                                                    <tr>
-                                                                        <th><p>Compétences</p></th>
+                                                                       <th><p>Disciplines</p></th>
                                                                         <th>Matieres</th>
                                                                         <th>Notes</th>
                                                                         <th>Appréciation</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    {allnotespf.map((item, pf) => (
+                                                                    {allnotespfe.map((item, pf) => (
                                                                         <tr key={pf}>
                                                                             <td>{item.groupe_cm}</td>
                                                                             <td>{item.matiere_note}</td>
@@ -1333,7 +1333,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                 </tfoot>
                                                             </Table>
-                                                            <Table
+                                                             <Table
                                                                 responsive
                                                                 striped
                                                                 id="datatable"
@@ -1346,14 +1346,16 @@ const BulletinByEleve = memo((props) => {
                                                                         <th>DISCIPLINE</th>
                                                                         <th>APPRECIATION DU TRAVAIL</th>
                                                                         <th><div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {moyenneleve}</p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {moyenneleve} </p>
                                                                         </div>
-                                                                            <div className="mt-2">
+                                                                        <div className="mt-2">
+                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE GENERALE DE LA CLASSE:</p>
+                                                                        </div>
+                                                                        <div className="mt-2">
                                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:</p>
-                                                                            </div>
-                                                                            <div className="mt-2">
-                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">MENTION:</p>
-                                                                            </div>
+                                                                        </div>
+                                                                              
+                                                                            
                                                                         </th>
                                                                     </tr>
                                                                 </thead>
@@ -1372,13 +1374,9 @@ const BulletinByEleve = memo((props) => {
                                                                             <div className="mt-1">
                                                                                 <p>
 
-                                                                                    Abscences non justifiées :
+                                                                                    Avertissement travail:
                                                                                     <br />
-                                                                                    Abscences justifiées:
-                                                                                    <br />
-                                                                                    Avertissement conduite:
-                                                                                    <br />
-                                                                                    Blame conduite:
+                                                                                    Blame travail:
                                                                                 </p>
 
                                                                             </div>
@@ -1390,26 +1388,44 @@ const BulletinByEleve = memo((props) => {
                                                                                     Encouragement:
                                                                                     <br />
                                                                                     Félicitations:
-                                                                                    <br />
-                                                                                    Prime:
                                                                                 </p>
 
                                                                             </div>
                                                                         </td>
                                                                         <td>
-                                                                            <div className="mt-1">
-                                                                                <p>Moyenne de la classe:
-
-                                                                                </p>
-
-                                                                            </div>
+                                                                        
                                                                         </td>
 
                                                                     </tr>
 
                                                                 </tbody>
                                                             </Table>
+                                                                    <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>REMARQUES GENERALES</th>
+                                                                        <th>ENSEIGNANT(E)</th>
+                                                                        <th>DIRECTRICE(TEUR)</th>
+                                                                        <th>PARENT</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    
+                                                                    <tr>
+                                                                        <td> / </td>
+                                                                        <td> /  </td>
+                                                                        <td> / </td>
+                                                                        <td> / </td>
+                                                                    </tr>
 
+                                                                </tbody>
+                                                            </Table>
 
                                                         </div>
 
@@ -1467,18 +1483,19 @@ const BulletinByEleve = memo((props) => {
                                             <Card.Body>
                                                 <div>
 
-                                                    <Row>
+                                                     <Row>
 
                                                         <Col sm="12" lg="12">
-                                                           <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom de l'enseignant: </p>
-                                                                </div>
+                                                             <div className="mt-2">
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Teacher's name: {enseign} </p>
+
+                                                            </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant:</p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Repeating:</p>
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : </strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
 
                                                             </div>
 
@@ -1490,23 +1507,23 @@ const BulletinByEleve = memo((props) => {
                                                     </Row>
                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
-                                                            <Table
+                                                             <Table
                                                                 responsive
                                                                 striped
                                                                 id="datatable"
                                                                 className=""
                                                                 data-toggle="data-table"
                                                             >
-                                                               <thead>
+                                                                <thead>
                                                                    <tr>
                                                                     <th><p>Disciplines</p></th>
-                                                                    <th>Matieres</th>
-                                                                    <th>Note</th>
-                                                                    <th>Appréciation</th>
+                                                                    <th>Materials</th>
+                                                                    <th>Mark</th>
+                                                                    <th>Appreciation</th>
                                                                 </tr>
                                                                 </thead>
                                                             <tbody>
-                                                                {allnotespa.map((item, pa) => (
+                                                                {allnotespae.map((item, pa) => (
                                                                     <tr key={pa}>
                                                                         <td>{item.groupe_cm}</td>
                                                                         <td>{item.matiere_note}</td>
@@ -1656,7 +1673,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <tbody>
 
                                                                     <tr>
-                                                                        <td>RECAPITULATIFS</td>
+                                                                        <td>SUMMARY</td>
                                                                         <td>{sumnotes}</td>
                                                                         <td></td>
                                                                         <td></td>
@@ -1675,24 +1692,26 @@ const BulletinByEleve = memo((props) => {
                                                                 className=""
                                                                 data-toggle="data-table"
                                                             >
-                                                                <thead>
+                                                               <thead>
                                                                     <tr>
                                                                         <th></th>
                                                                         <th>DISCIPLINE</th>
-                                                                        <th>APPRECIATION DU TRAVAIL</th>
+                                                                        <th>WORK APPRECIATION</th>
                                                                         <th><div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {moyenneleve}</p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">AVERAGE: {moyenneleve} </p>
                                                                         </div>
-                                                                            <div className="mt-2">
-                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:</p>
-                                                                            </div>
-                                                                            <div className="mt-2">
-                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">MENTION:</p>
-                                                                            </div>
+                                                                        <div className="mt-2">
+                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">CLASS AVERAGE:</p>
+                                                                        </div>
+                                                                        <div className="mt-2">
+                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">RANK:</p>
+                                                                        </div>
+                                                                              
+                                                                            
                                                                         </th>
                                                                     </tr>
                                                                 </thead>
-                                                                <tbody>
+                                                             <tbody>
 
                                                                     <tr>
                                                                         <td>
@@ -1707,39 +1726,53 @@ const BulletinByEleve = memo((props) => {
                                                                             <div className="mt-1">
                                                                                 <p>
 
-                                                                                    Abscences non justifiées :
+                                                                                   Work warning:
                                                                                     <br />
-                                                                                    Abscences justifiées:
-                                                                                    <br />
-                                                                                    Avertissement conduite:
-                                                                                    <br />
-                                                                                    Blame conduite:
+                                                                                   Blame work:
                                                                                 </p>
 
                                                                             </div>
                                                                         </td>
                                                                         <td>
                                                                             <div className="mt-1">
-                                                                                <p>Tableau d'honneur:
+                                                                                <p>Roll of honor:
                                                                                     <br />
-                                                                                    Encouragement:
+                                                                                    Encouragment:
                                                                                     <br />
-                                                                                    Félicitations:
-                                                                                    <br />
-                                                                                    Prime:
+                                                                                    congratulations:
                                                                                 </p>
 
                                                                             </div>
                                                                         </td>
                                                                         <td>
-                                                                            <div className="mt-1">
-                                                                                <p>Moyenne de la classe:
-
-                                                                                </p>
-
-                                                                            </div>
+                                                                        
                                                                         </td>
 
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </Table>
+                                                                    <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>GENERAL REMARKS</th>
+                                                                        <th>TEACHER</th>
+                                                                        <th>DIRECTOR</th>
+                                                                        <th>PARENT</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>/</td>
+                                                                        <td>/</td>
+                                                                        <td>/</td>
+                                                                        <td>/</td>
                                                                     </tr>
 
                                                                 </tbody>
