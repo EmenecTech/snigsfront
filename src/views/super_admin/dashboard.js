@@ -244,6 +244,16 @@ const Dashboard_superadmin = memo((props) => {
 
 
 
+const [nbrpar_sup, setnbrpar_sup] = useState([]);
+  useEffect(() => {
+    fetchAllnbrpar_sup();
+  }, []);
+
+  const fetchAllnbrpar_sup = () => {
+    http.get('/nbreleve_parent_sup/').then(res => {
+      setnbrarchv(res.data);
+    })
+  }
 
 
 
@@ -2189,6 +2199,43 @@ const Dashboard_superadmin = memo((props) => {
                             <p className="mb-2">Elèves Préinscrits</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbrpreins_sup} duration={3} />
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+
+
+                    <SwiperSlide className=" card card-slide">
+                      <div className="card-body">
+                        <div className="progress-widget">
+                          <Circularprogressbar
+                            stroke={variableColors.info}
+                            width="60px"
+                            height="60px"
+                            trailstroke="#ddd"
+                            strokewidth="4px"
+                            Linecap="rounded"
+                            style={{ width: 60, height: 60 }}
+                            value={60}
+                            id="circle-progress-04"
+                          >
+                            <svg
+                              className=""
+                              width="24px"
+                              height="24px"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                fill="currentColor"
+                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
+                              />
+                            </svg>
+                          </Circularprogressbar>
+                          <div className="progress-detail">
+                            <p className="mb-2">Parents</p>
+                            <h4 className="counter">
+                              <CountUp start={0} end={nbrpar_sup} duration={3} />
                             </h4>
                           </div>
                         </div>
