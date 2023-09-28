@@ -2358,7 +2358,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                           <div className="progress-detail">
                             <p className="mb-2">Etablissements Maternelles</p>
                             <h4 className="counter">
-                              <CountUp start={0} end={nbreleveins_sup} duration={3} />
+                              <CountUp start={0} end={0} duration={3} />
                             </h4>
                           </div>
                         </div>
