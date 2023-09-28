@@ -239,8 +239,7 @@ const BulletinByEleve = memo((props) => {
         setAllNotespf(res.data);
       })
     };
-     console.log(allnotespf);
-
+   
     
     const [allnotespa, setAllNotespa] = useState([]);
     useEffect(() => {
@@ -252,7 +251,7 @@ const BulletinByEleve = memo((props) => {
         setAllNotespa(res.data);
       })
     };
-    console.log(allnotespa);
+   
     
     const [allnotessf, setAllNotessf] = useState([]);
     useEffect(() => {
@@ -264,7 +263,7 @@ const BulletinByEleve = memo((props) => {
         setAllNotessf(res.data);
       })
     };
-    console.log(allnotessf);
+   
 
      const [sumnotes, setsumnotes] = useState([]);
     useEffect(() => {
