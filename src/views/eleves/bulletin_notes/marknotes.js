@@ -1597,7 +1597,7 @@ const BulletinByEleve = memo((props) => {
                 </Col>
             </Row>
                                                                     
-</div> : <div></div>    
+</div> : <div></div>    }
 
          
 
