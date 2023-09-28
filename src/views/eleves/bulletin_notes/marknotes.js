@@ -216,6 +216,8 @@ const BulletinByEleve = memo((props) => {
         setAllNotese(res.data);
       })
     };
+        console.log(allnotese);
+    
      const getEmojiForNote = (note) => {
     if (note >= 0 && note <= 8) {
       return '☹️';
@@ -237,6 +239,7 @@ const BulletinByEleve = memo((props) => {
         setAllNotespf(res.data);
       })
     };
+     console.log(allnotespf);
 
     
     const [allnotespa, setAllNotespa] = useState([]);
@@ -249,6 +252,7 @@ const BulletinByEleve = memo((props) => {
         setAllNotespa(res.data);
       })
     };
+    console.log(allnotespa);
     
     const [allnotessf, setAllNotessf] = useState([]);
     useEffect(() => {
@@ -260,6 +264,7 @@ const BulletinByEleve = memo((props) => {
         setAllNotessf(res.data);
       })
     };
+    console.log(allnotessf);
 
      const [sumnotes, setsumnotes] = useState([]);
     useEffect(() => {
