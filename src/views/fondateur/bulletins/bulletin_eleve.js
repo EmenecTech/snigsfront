@@ -1319,7 +1319,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                             >
                                                                  <thead>
                                                                     <tr>
-                                                                        <th><p>Compétences</p></th>
+                                                                        <th><p>Disciplines</p></th>
                                                                         <th>Matieres</th>
                                                                         <th>Notes</th>
                                                                         <th>Appréciation</th>
@@ -1466,7 +1466,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                         <td></td>
                                                                         <td>{sumnotes}</td>
                                                                         <td></td>
-                                                                        <td>A</td>
+                                                                      
                                                                     </tr>
                                                                 </tbody>
 
@@ -1488,14 +1488,16 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                         <th>DISCIPLINE</th>
                                                                         <th>APPRECIATION DU TRAVAIL</th>
                                                                         <th><div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {moyenneleve}</p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {moyenneleve} </p>
                                                                         </div>
-                                                                            <div className="mt-2">
+                                                                        <div className="mt-2">
+                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE GENERALE DE LA CLASSE:</p>
+                                                                        </div>
+                                                                        <div className="mt-2">
                                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:</p>
-                                                                            </div>
-                                                                            <div className="mt-2">
-                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">MENTION:</p>
-                                                                            </div>
+                                                                        </div>
+                                                                              
+                                                                            
                                                                         </th>
                                                                     </tr>
                                                                 </thead>
@@ -1514,13 +1516,9 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                             <div className="mt-1">
                                                                                 <p>
 
-                                                                                    Abscences non justifiées :
+                                                                                    Avertissement travail:
                                                                                     <br />
-                                                                                    Abscences justifiées:
-                                                                                    <br />
-                                                                                    Avertissement conduite:
-                                                                                    <br />
-                                                                                    Blame conduite:
+                                                                                    Blame travail:
                                                                                 </p>
 
                                                                             </div>
@@ -1532,37 +1530,49 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                                     Encouragement:
                                                                                     <br />
                                                                                     Félicitations:
-                                                                                    <br />
-                                                                                    Prime:
                                                                                 </p>
 
                                                                             </div>
                                                                         </td>
                                                                         <td>
-                                                                            <div className="mt-1">
-                                                                                <p>Moyenne de la classe:
-
-                                                                                </p>
-
-                                                                            </div>
+                                                                        
                                                                         </td>
 
                                                                     </tr>
 
                                                                 </tbody>
                                                             </Table>
+                                                                    <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>REMARQUES GENERALES</th>
+                                                                        <th>ENSEIGNANT(E)</th>
+                                                                        <th>DIRECTRICE(TEUR)</th>
+                                                                        <th>PARENT</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
 
-
+                                                                </tbody>
+                                                            </Table>
                                                         </div>
-
-
                                                     </Row>
                                                 </div>
                                             </Card.Body>
                                         </Card>
                                     </Col>
-
-
                                 </Row>
 
 
@@ -1617,15 +1627,15 @@ const [allnotespf, setAllNotespf] = useState([]);
 
                                                         <Col sm="12" lg="12">
                                                              <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom de l'enseignant: {enseign} </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Teacher's name: {enseign} </p>
 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant:</p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Repeating:</p>
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
 
                                                             </div>
 
@@ -1647,9 +1657,9 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 <thead>
                                                                    <tr>
                                                                     <th><p>Disciplines</p></th>
-                                                                    <th>Matieres</th>
-                                                                    <th>Note</th>
-                                                                    <th>Appréciation</th>
+                                                                    <th>Materials</th>
+                                                                    <th>Mark</th>
+                                                                    <th>Appreciation</th>
                                                                 </tr>
                                                                 </thead>
                                                             <tbody>
@@ -1657,7 +1667,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                     <tr key={pa}>
                                                                         <td>{item.groupe_cm}</td>
                                                                         <td>{item.matiere_note}</td>
-                                                                        <td>item.valeur_note}</td>
+                                                                        <td>{item.valeur_note}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
@@ -1808,7 +1818,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 <tbody>
 
                                                                     <tr>
-                                                                        <td>RECAPITULATIFS</td>
+                                                                        <td>SUMMARY</td>
                                                                         <td>{sumnotes}</td>
                                                                         <td></td>
                                                                         <td></td>
@@ -1832,16 +1842,18 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                     <tr>
                                                                         <th></th>
                                                                         <th>DISCIPLINE</th>
-                                                                        <th>APPRECIATION DU TRAVAIL</th>
+                                                                        <th>WORK APPRECIATION</th>
                                                                         <th><div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {moyenneleve}</p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">AVERAGE: {moyenneleve} </p>
                                                                         </div>
-                                                                            <div className="mt-2">
-                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:</p>
-                                                                            </div>
-                                                                            <div className="mt-2">
-                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">MENTION:</p>
-                                                                            </div>
+                                                                        <div className="mt-2">
+                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">CLASS AVERAGE:</p>
+                                                                        </div>
+                                                                        <div className="mt-2">
+                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">RANK:</p>
+                                                                        </div>
+                                                                              
+                                                                            
                                                                         </th>
                                                                     </tr>
                                                                 </thead>
@@ -1860,45 +1872,57 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                             <div className="mt-1">
                                                                                 <p>
 
-                                                                                    Abscences non justifiées :
+                                                                                   Work warning:
                                                                                     <br />
-                                                                                    Abscences justifiées:
-                                                                                    <br />
-                                                                                    Avertissement conduite:
-                                                                                    <br />
-                                                                                    Blame conduite:
+                                                                                   Blame work:
                                                                                 </p>
 
                                                                             </div>
                                                                         </td>
                                                                         <td>
                                                                             <div className="mt-1">
-                                                                                <p>Tableau d'honneur:
+                                                                                <p>Roll of honor:
                                                                                     <br />
-                                                                                    Encouragement:
+                                                                                    Encouragment:
                                                                                     <br />
-                                                                                    Félicitations:
-                                                                                    <br />
-                                                                                    Prime:
+                                                                                    congratulations:
                                                                                 </p>
 
                                                                             </div>
                                                                         </td>
                                                                         <td>
-                                                                            <div className="mt-1">
-                                                                                <p>Moyenne de la classe:
-
-                                                                                </p>
-
-                                                                            </div>
+                                                                        
                                                                         </td>
 
                                                                     </tr>
 
                                                                 </tbody>
                                                             </Table>
+                                                                    <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>GENERAL REMARKS</th>
+                                                                        <th>TEACHER</th>
+                                                                        <th>DIRECTOR</th>
+                                                                        <th>PARENT</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
 
-
+                                                                </tbody>
+                                                            </Table>
                                                         </div>
 
 
@@ -1921,9 +1945,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                 </div>}
             
         </div>}
-                     
-
-            
+       
         </Fragment>
     );
 })
