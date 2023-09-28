@@ -47,6 +47,16 @@ const EnseignantAddNote = () => {
             setmatiere_classe_info(res.data);
         })
     }
+     const [indices, setindices] = useState([]);
+  useEffect(() => {
+    fetchAllIndices();
+  }, []);
+
+  const fetchAllIndices = () => {
+    http.get("/get_indices/" + etab).then((res) => {
+      setindices(res.data);
+    });
+  };
 
     const coefficient = matiere_classe_info.coefficient_cm;
 
@@ -145,6 +155,19 @@ const EnseignantAddNote = () => {
                                                     <option value="Non acquis">☹️</option>
                                                     <option value="En cours d'acquisition">😐</option>
                                                     <option value="Acquis">😃</option>
+                                            {indices.map((item) => (
+                                            <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
+                                                            ))}
+                                                </select>
+                                           </Form.Group>
+                                            <Form.Group className='form-group'>
+                                                <Form.Label>Indices d'évalutation</Form.Label>
+
+                                          <select className="form-select mb-3 shadow-none" name="indices" onChange={handleChange}>
+                                                    <option> </option>
+                                                    <option value="Oral">Oral</option>
+                                                    <option value="Ecrit">Ecrit</option>
+                                                    <option value="Pratique">Pratique</option>
                                                 </select>
                                            </Form.Group>
                                     </div>:<div>
@@ -155,10 +178,13 @@ const EnseignantAddNote = () => {
                                                     onChange={handleChange}
                                                 />
                                             </Form.Group>
+                                    
                                     </div>}
                                             
 
-                                             <Form.Group className='form-group'>
+                                            
+                                    {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary'? <div>
+                                         <Form.Group className='form-group'>
                                                 <Form.Label>coefficient</Form.Label>
                                                 <Form.Control type="number" id="coef" name="coef"
                                                     value={coefficient}
@@ -166,7 +192,6 @@ const EnseignantAddNote = () => {
                                                     disabled
                                                 />
                                             </Form.Group>
-                                    {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary'? <div>
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Appreciation</Form.Label>
 
@@ -188,16 +213,7 @@ const EnseignantAddNote = () => {
                                                     <option value="Acquis">Acquis</option>
                                                 </select>
                                            </Form.Group>
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Indices d'évalutation</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" name="indices" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Oral">Oral</option>
-                                                    <option value="Ecrit">Ecrit</option>
-                                                    <option value="Pratique">Pratique</option>
-                                                </select>
-                                           </Form.Group>
+                                            
                                     </div>}         
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Compétence visée</Form.Label>
@@ -220,14 +236,16 @@ const EnseignantAddNote = () => {
 
                         <Card.Body>
                             <table className="table">
-                                <thead>
+                   {classes_eleves.cycle_niveau === 'Secondaire' || classes_eleves.cycle_niveau === 'Secondary' ? <div>
+                                    <thead>
+                                                       
                                     <tr>
                                         <th>Sno.</th>
-                                        <th>Nom</th>
-                                        <th>Prénom</th>
+                                        <th>Nom(s)</th>
+                                        <th>Prénom(s)</th>
                                         <th>Note</th>
                                         <th>NxC</th>
-                                        <th>Coefficient</th>
+                                        <th></th>
                                         <th>Appreciation</th>
                                         <th>Compétence visée</th>
                                         <th> </th>
@@ -263,7 +281,55 @@ const EnseignantAddNote = () => {
                                         </tr>
                                     ))}
 
-                                </tbody>
+                                </tbody>                     
+                  </div>:<div>
+                               <thead>
+                                                       
+                                    <tr>
+                                        <th>Sno.</th>
+                                        <th>Nom(s)</th>
+                                        <th>Prénom(s)</th>
+                                        <th>Note/Evaluation</th>
+                                        <th>Indices d'évaluation</th>
+                                        <th></th>
+                                        <th>Appreciation</th>
+                                        <th>Compétence visée</th>
+                                        <th> </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {notes.map((item, index) => (
+                                        <tr key={item.id}>
+                                            <td>{++index}</td>
+                                            <td>
+                                                {item.nom}
+                                            </td>
+                                            <td>
+                                                {item.prenom}
+                                            </td>
+                                            <td>
+                                                {item.valeur_note}
+                                            </td>
+                                            <td>
+                                                {item.note_finale}
+                                            </td>
+                                            <td>
+                                                /
+                                            </td>
+                                            <td>
+                                                {item.appreciation_note}
+                                            </td>
+                                            <td>{item.competence_visee_note} </td>
+                                            <td>
+
+
+                                            </td>
+                                        </tr>
+                                    ))}
+
+                                </tbody>                          
+                         </div>  }
+                               
                             </table>
                         </Card.Body>
                     </Card>
