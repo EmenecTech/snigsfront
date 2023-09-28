@@ -236,7 +236,7 @@ const EnseignantAddNote = () => {
 
                         <Card.Body>
                             <table className="table">
-                   {classes_eleves.cycle_niveau === 'Secondaire' || classes_eleves.cycle_niveau === 'Secondary' ? <div>
+                   {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? <div>
                                     <thead>
                                                        
                                     <tr>
