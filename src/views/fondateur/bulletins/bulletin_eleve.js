@@ -872,12 +872,13 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 className=""
                                                                 data-toggle="data-table"
                                                             >
-                                                                <thead>
-                                                                    <tr>
+                                                                 <thead>
+                                                                       <tr>
 
                                                                         <th><p>
-                                                                            Discipline /Nom de l'enseignant
+                                                                            Disciplines 
                                                                         </p></th>
+                                                                        <th>Matières</th>
                                                                         <th>Note</th>
                                                                         <th>Coef</th>
                                                                         <th>NxC</th>
@@ -889,8 +890,10 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 {allnotessf.map((item, sf) => (
                                                                     <tr key={sf}>
                                                                         <td>{item.groupe_cm}</td>
-                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.matiere_note}( {item.nom} {item.prenom} )</td>
                                                                         <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
@@ -963,11 +966,12 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 <tbody>
 
                                                                     <tr>
-                                                                        <td>RECAPITULATIFS</td>
+                                                                       <td>RECAPITULATIFS</td>
+                                                                        <td></td>
                                                                         <td>{sumnotes}</td>
                                                                         <td>{sumcoef}</td>
                                                                         <td>{sumnotesfinale}</td>
-                                                                        <td>A</td>
+                                                                        <td></td>
                                                                     </tr>
                                                                 </tbody>
 
@@ -1630,8 +1634,8 @@ const [allnotespf, setAllNotespf] = useState([]);
 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Repeating:</p>
-                                                                <p>Repeater</p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Repeater:</p>
+                                                                
                                                             </div>
                                                             <div className="mt-2">
                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
@@ -1818,10 +1822,10 @@ const [allnotespf, setAllNotespf] = useState([]);
 
                                                                     <tr>
                                                                         <td>SUMMARY</td>
+                                                                        <td></td>
                                                                         <td>{sumnotes}</td>
                                                                         <td></td>
-                                                                        <td></td>
-                                                                        <td>A</td>
+                                                                       
                                                                     </tr>
                                                                 </tbody>
 
@@ -1914,10 +1918,10 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td></td>
-                                                                        <td></td>
-                                                                        <td></td>
-                                                                        <td></td>
+                                                                        <td>/</td>
+                                                                        <td>/</td>
+                                                                        <td>/</td>
+                                                                        <td>/</td>
                                                                     </tr>
 
                                                                 </tbody>
