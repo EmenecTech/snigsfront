@@ -171,6 +171,15 @@ const EnseignantAddNote = () => {
                                                             ))}
                                                 </select>
                                            </Form.Group>
+                                           <Form.Group className='form-group'>
+                                                <Form.Label>Compétence visée</Form.Label>
+                                                <Form.Control type="text" id="competence_visee" name="competence_visee"
+                                                    value={inputs.competence_visee || ''}
+                                                    onChange={handleChange}
+                                                />
+                                           </Form.Group>
+
+                                        </Form>
                                     </div>:<div>
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Note /20</Form.Label>
@@ -179,10 +188,7 @@ const EnseignantAddNote = () => {
                                                     onChange={handleChange}
                                                 />
                                             </Form.Group>
-                                    
-                                    </div>}
-                                            
-
+  </div>}
                                             
                                     {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary'? <div>
                                          <Form.Group className='form-group'>
@@ -214,9 +220,7 @@ const EnseignantAddNote = () => {
                                                     <option value="Acquis">Acquis</option>
                                                 </select>
                                            </Form.Group>
-                                            
-                                    </div>}         
-                                            <Form.Group className='form-group'>
+                                                         <Form.Group className='form-group'>
                                                 <Form.Label>Compétence visée</Form.Label>
                                                 <Form.Control type="text" id="competence_visee" name="competence_visee"
                                                     value={inputs.competence_visee || ''}
@@ -225,6 +229,9 @@ const EnseignantAddNote = () => {
                                             </Form.Group>
 
                                         </Form>
+                                            
+                                    </div>}         
+                                           
 
                                         <Button variant="primary" onClick={submitForm}>
                                             Ajouter
