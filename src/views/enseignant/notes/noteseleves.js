@@ -24,17 +24,8 @@ const EnseignantAddNote = () => {
     console.log(niveau);
 
     
-  const [allnotes, setAllNotes] = useState([]);
-    useEffect(() => {
-        fetchNotes();
-    }, []);
-
-    const fetchNotes = () => {
-        http.get('/all_notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotes(res.data);
-      })
-    };
-     const getEmojiForNote = (note) => {
+ 
+    const getEmojiForNote = (note) => {
     if (note = 10) {
       return '☹️';
     } else if (note = 15) {
