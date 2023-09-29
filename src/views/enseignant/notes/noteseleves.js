@@ -255,14 +255,19 @@ const EnseignantAddNote = () => {
                                         <th>Sno.</th>
                                         <th>Nom(s)</th>
                                         <th>Prénom(s)</th>
+
                                       {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? <div>
                                         <th>Note</th>
                                         <th>NxC</th> 
                                         <th></th>
-                                          </div>:<div>
+                                          
+                                        </div>:<div>
+                                          
                                         <th>Evaluation</th>
                                         <th>Indices</th>
                                         <th></th>      </div>  }
+
+                                          
                                         <th>Appreciation</th>
                                         <th>Compétence visée</th>
                                         <th> </th>
@@ -280,7 +285,7 @@ const EnseignantAddNote = () => {
                                             </td>
                                          {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? <div>
                                             <td>
-                                                {getEmojiForNote(item.valeur_note)}
+                                                {item.valeur_note}
                                             </td>
                                             <td>
                                                 {item.note_finale}
@@ -290,8 +295,9 @@ const EnseignantAddNote = () => {
                                             </td> 
                                             </div>:<div>  
                                            <td>
-                                                {item.valeur_note}
+                                               {getEmojiForNote(item.valeur_note)}
                                             </td>
+                                          
                                             <td>|</td>
                                             
                                             </div>  }
