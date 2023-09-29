@@ -1808,7 +1808,7 @@ const BulletinByEleve = memo((props) => {
                 </Col>
             </Row>
 
- {classes.cycle_niveau === 'Maternelle' ? <div>
+ {classes.niveau_classe === 'MATERNELLE' ? <div>
                                                                                     
             <Row>
                 <Col sm="12">
