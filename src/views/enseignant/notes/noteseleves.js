@@ -148,7 +148,7 @@ const EnseignantAddNote = () => {
                                             </Form.Group>
                                     {niveau === 'MATERNELLE' ? <div>
                                          <Form.Group className='form-group'>
-                                                <Form.Label>Evaluation</Form.Label>
+                                                <Form.Label>Note</Form.Label>
 
                                           <select className="form-select mb-3 shadow-none" id="valeur_note" name="valeur_note" onChange={handleChange}>
                                                     <option> </option>
