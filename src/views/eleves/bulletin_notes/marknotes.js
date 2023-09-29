@@ -1328,7 +1328,7 @@ const BulletinByEleve = memo((props) => {
                                                                         <td></td>
                                                                         <td>{sumnotes}</td>
                                                                         <td></td>
-                                                                        <td>A</td>
+                                                                        
                                                                     </tr>
                                                                 </tbody>
 
@@ -1423,7 +1423,7 @@ const BulletinByEleve = memo((props) => {
                                                                     
                                                                     <tr>
                                                                         <td> / </td>
-                                                                        <td> /  </td>
+                                                                        <td> / </td>
                                                                         <td> / </td>
                                                                         <td> / </td>
                                                                     </tr>
@@ -1495,11 +1495,11 @@ const BulletinByEleve = memo((props) => {
 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Repeating:</p>
-                                                                <p>Repeater</p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Repeater:</p>
+                                                                
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : {user.nom} {user.prenom}</strong> </p>
 
                                                             </div>
 
@@ -1678,10 +1678,10 @@ const BulletinByEleve = memo((props) => {
 
                                                                     <tr>
                                                                         <td>SUMMARY</td>
+                                                                        <td></td>
                                                                         <td>{sumnotes}</td>
                                                                         <td></td>
-                                                                        <td></td>
-                                                                        <td>A</td>
+                                                                      
                                                                     </tr>
                                                                 </tbody>
 
@@ -1843,13 +1843,16 @@ const BulletinByEleve = memo((props) => {
                                                     <Row>
 
                                                         <Col sm="12" lg="12">
-
+                                                             <div className="mt-2">
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom de l'enseignant:  {enseign} </p>
+                                                               
+                                                            </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant:</p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: </p>
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom :</strong> {user.nom} {user.prenom} </p>
 
                                                             </div>
 
