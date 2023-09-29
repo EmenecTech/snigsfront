@@ -26,10 +26,10 @@ const EnseignantAddNote = () => {
     
   const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
-        fetchAllNotes();
+        fetchNotes();
     }, []);
 
-    const fetchAllNotes = () => {
+    const fetchNotes = () => {
         http.get('/all_notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
         setAllNotes(res.data);
       })
