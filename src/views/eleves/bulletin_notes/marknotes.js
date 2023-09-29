@@ -435,6 +435,8 @@ const BulletinByEleve = memo((props) => {
     const fetchAllclasses = () => {
         http.get('/classe_bull/' + classe + '/' + etab).then(res => {
             setclasses(res.data);
+            console.log(res.data);
+            console.log(classes);
         })
     }
 
