@@ -150,7 +150,7 @@ const EnseignantAddNote = () => {
                                          <Form.Group className='form-group'>
                                                 <Form.Label>Evaluation</Form.Label>
 
-                                          <select className="form-select mb-3 shadow-none" name="evaluation" onChange={handleChange}>
+                                          <select className="form-select mb-3 shadow-none" id="valeur_note" name="valeur_note" onChange={handleChange}>
                                                     <option> </option>
                                                     <option value="10">☹️</option>
                                                     <option value="15">😐</option>
