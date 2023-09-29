@@ -152,9 +152,9 @@ const EnseignantAddNote = () => {
 
                                           <select className="form-select mb-3 shadow-none" name="evaluation" onChange={handleChange}>
                                                     <option> </option>
-                                                    <option value="Non acquis">☹️</option>
-                                                    <option value="En cours d'acquisition">😐</option>
-                                                    <option value="Acquis">😃</option>
+                                                    <option value="10">☹️</option>
+                                                    <option value="15">😐</option>
+                                                    <option value="20">😃</option>
                                            
                                                 </select>
                                            </Form.Group>
@@ -163,9 +163,9 @@ const EnseignantAddNote = () => {
 
                                           <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                                       <option> </option>
-                                                    <option value="Non acquis">Ecrit</option>
-                                                    <option value="En cours d'acquisition">Oral</option>
-                                                    <option value="Acquis">Pratique</option>>
+                                                    <option value="Ecrit">Ecrit</option>
+                                                    <option value="Oral">Oral</option>
+                                                    <option value="Pratique">Pratique</option>>
                                          {indices.map((item) => (
                                             <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
                                                             ))}
