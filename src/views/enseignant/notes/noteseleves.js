@@ -162,7 +162,7 @@ const EnseignantAddNote = () => {
                                                 <Form.Label>Indices d'évalutation</Form.Label>
 
                                           <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
-                                                      <option> </option>
+                                                    <option> </option>
                                                     <option value="Ecrit">Ecrit</option>
                                                     <option value="Oral">Oral</option>
                                                     <option value="Pratique">Pratique</option>>
@@ -171,6 +171,14 @@ const EnseignantAddNote = () => {
                                                             ))}
                                                 </select>
                                            </Form.Group>
+                                                    <Form.Group className='form-group'>
+                                                <Form.Label>coefficient</Form.Label>
+                                                <Form.Control type="number" id="coef" name="coef"
+                                                    value={coefficient}
+                                                    
+                                                    disabled
+                                                />
+                                            </Form.Group>
                                            <Form.Group className='form-group'>
                                                 <Form.Label>Compétence visée</Form.Label>
                                                 <Form.Control type="text" id="competence_visee" name="competence_visee"
