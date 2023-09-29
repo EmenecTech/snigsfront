@@ -1894,7 +1894,7 @@ const BulletinByEleve = memo((props) => {
                                                             <tbody>
                                                                 {allnotese.map((item, index) => (
                                                                     <tr key={index}>
-                                                                        <td>{item.groupe_cm}</td>
+                                                                        <td>{item.matiere_note}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                         <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                         
