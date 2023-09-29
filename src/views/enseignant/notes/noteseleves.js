@@ -258,17 +258,18 @@ const EnseignantAddNote = () => {
 
                                       {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? <div>
                                         <th>Note</th>
-                                        <th>NxC</th> 
-                                        <th></th>
+                                        <th>Coefficient</th>
+                                        <th>NxC</th>
+                                        <th>Appreciation</th>
                                           
                                         </div>:<div>
                                           
                                         <th>Evaluation</th>
                                         <th>Indices</th>
-                                        <th></th>      </div>  }
+                                            </div>  }
 
                                           
-                                        <th>Appreciation</th>
+                                      
                                         <th>Compétence visée</th>
                                         <th> </th>
                                     </tr>
@@ -283,27 +284,33 @@ const EnseignantAddNote = () => {
                                             <td>
                                                 {item.prenom}
                                             </td>
+                                               
                                          {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? <div>
                                             <td>
                                                 {item.valeur_note}
                                             </td>
+                                          <td>
+                                                {matiere_classe_info.coefficient_cm}
+                                            </td>
                                             <td>
                                                 {item.note_finale}
                                             </td>
-                                            <td>
-                                                {matiere_classe_info.coefficient_cm}
-                                            </td> 
+                                         
+                                            
+                                           <td>
+                                                {item.appreciation_note}
+                                            </td>
+                                          
                                             </div>:<div>  
                                            <td>
                                                {getEmojiForNote(item.valeur_note)}
                                             </td>
                                           
-                                            <td>|</td>
+                                            <td>{item.appreciation_note}</td>
                                             
                                             </div>  }
-                                            <td>
-                                                {item.appreciation_note}
-                                            </td>
+                                          
+                                            
                                             <td>{item.competence_visee_note} </td>
                                             <td>
 
