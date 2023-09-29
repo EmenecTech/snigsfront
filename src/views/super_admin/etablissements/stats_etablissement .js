@@ -48,7 +48,7 @@ SwiperCore.use([Navigation]);
 const StatsEtablissement = memo((props) => {
     const { http, setToken } = AuthUser();
 
-    const { etab } = useParams();
+    const { nometab, etab } = useParams();
 
 
     const [nbreleve, setnbreleve] = useState([]);
@@ -376,7 +376,7 @@ const StatsEtablissement = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Liste d'établissements</h4>
+                                <h4 className="card-title">{nometab}</h4>
                             </div>
 
                             <Link to="/etablissement/add/super/admin">
@@ -402,8 +402,8 @@ const StatsEtablissement = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Nom</th>
-                                            <th>cygle</th>
+                                            <th>Intitulé</th>
+                                            <th>Valeur</th>
                                         </tr>
                                     </thead>
                                     <tbody>
