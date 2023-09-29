@@ -24,7 +24,26 @@ const EnseignantAddNote = () => {
     console.log(niveau);
 
     
+  const [allnotes, setAllNotes] = useState([]);
+    useEffect(() => {
+        fetchAllNotes();
+    }, []);
 
+    const fetchAllNotes = () => {
+        http.get('/all_notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotes(res.data);
+      })
+    };
+     const getEmojiForNote = (note) => {
+    if (note = 10) {
+      return '☹️';
+    } else if (note = 15) {
+      return '😐';
+    } else if (note = 20) {
+      return '😃';
+    }
+      return ''; 
+    };
 
     const [eleves_classe, seteleves_classe] = useState([]);
     useEffect(() => {
@@ -270,7 +289,7 @@ const EnseignantAddNote = () => {
                                             </td>
                                          {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? <div>
                                             <td>
-                                                {item.valeur_note}
+                                                {getEmojiForNote(item.valeur_note)}
                                             </td>
                                             <td>
                                                 {item.note_finale}
