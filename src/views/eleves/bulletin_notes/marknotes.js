@@ -427,14 +427,16 @@ const BulletinByEleve = memo((props) => {
 
     console.log(sumnotes);
 
+ const [classes, setclasses] = useState([]);
+    useEffect(() => {
+        fetchAllclasses();
+    }, []);
 
-
-
-
-
-
-
-
+    const fetchAllclasses = () => {
+        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
+            setclasses(res.data);
+        })
+    }
 
 
 
@@ -968,7 +970,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
                                                                         <td>RECAPITULATIFS</td>
                                                                         <td></td>
-                                                                        <td>{sumnotes}</td>
+                                                                        <td></td>
                                                                         <td>{sumcoef}</td>
                                                                         <td>{sumnotesfinale}</td>
                                                                         <td></td>
