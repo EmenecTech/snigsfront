@@ -678,8 +678,8 @@ const BulletinByEleve = memo((props) => {
 
     return (
         <Fragment>
-       
-            <Row>
+        {classes.cycle_niveau === 'Secondaire' || classes.cycle_niveau === 'Secondary' ? <div>
+         <Row>
                 <Col sm="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
@@ -1084,8 +1084,10 @@ const BulletinByEleve = memo((props) => {
                     </Card>
                 </Col>
             </Row>
-
-            <Row>
+        </div> : <div></div> }
+           
+{classes.cycle_niveau === 'Primaire'  ? <div>
+    <Row>
                 <Col sm="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
@@ -1455,8 +1457,10 @@ const BulletinByEleve = memo((props) => {
                     </Card>
                 </Col>
             </Row>
-
-            <Row>
+    </div> : <div></div> }
+            
+{classes.cycle_niveau === 'Primary'  ? <div>
+      <Row>
                 <Col sm="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
@@ -1807,6 +1811,8 @@ const BulletinByEleve = memo((props) => {
                     </Card>
                 </Col>
             </Row>
+    </div> : <div></div> }
+          
 
  {classes.niveau_classe === 'MATERNELLE' ? <div>
                                                                                     
@@ -1880,7 +1886,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <thead>
                                                                 <tr>
                                                                     <th><p>Compétences</p></th>
-                                                                    <th>{classes.niveau_classe}</th>
+                                                                    <th>Evaluation</th>
                                                                     <th>Appréciation</th>
                                                                    
                                                                 </tr>
