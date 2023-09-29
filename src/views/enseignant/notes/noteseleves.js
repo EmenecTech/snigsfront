@@ -161,11 +161,11 @@ const EnseignantAddNote = () => {
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Indices d'évalutation</Form.Label>
 
-                                          <select className="form-select mb-3 shadow-none" name="indices" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Oral">Oral</option>
-                                                    <option value="Ecrit">Ecrit</option>
-                                                    <option value="Pratique">Pratique</option>
+                                          <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
+                                                      <option> </option>
+                                                    <option value="Non acquis">Ecrit</option>
+                                                    <option value="En cours d'acquisition">Oral</option>
+                                                    <option value="Acquis">Pratique</option>>
                                          {indices.map((item) => (
                                             <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
                                                             ))}
@@ -236,6 +236,7 @@ const EnseignantAddNote = () => {
                                         <Button variant="primary" onClick={submitForm}>
                                             Ajouter
                                         </Button>
+                                    </Form>
                                     </Modal.Body>
                                 </Modal>
 
