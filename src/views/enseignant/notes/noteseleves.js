@@ -179,7 +179,7 @@ const EnseignantAddNote = () => {
                                                 />
                                            </Form.Group>
 
-                                        </Form>
+                                     
                                     </div>:<div>
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Note /20</Form.Label>
