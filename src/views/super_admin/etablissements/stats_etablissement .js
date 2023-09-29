@@ -444,6 +444,26 @@ const StatsEtablissement = memo((props) => {
                                             <td>{nbrpar}</td>
 
                                         </tr>
+
+                                        <tr>
+                                            <td>Nombre d'élèves ayant payés la totalité de le leurs pensions</td>
+                                            <td>0</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>Nombre payé par les totalements en règles</td>
+                                            <td>0</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>Montant de pension enregistré</td>
+                                            <td>0</td>
+
+                                        </tr>
+
+                                        
                                         
 
                                     </tbody>
