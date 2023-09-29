@@ -188,9 +188,7 @@ const EnseignantAddNote = () => {
                                                     onChange={handleChange}
                                                 />
                                             </Form.Group>
-  </div>}
-                                            
-                                    {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary'? <div>
+ 
                                          <Form.Group className='form-group'>
                                                 <Form.Label>coefficient</Form.Label>
                                                 <Form.Control type="number" id="coef" name="coef"
@@ -209,18 +207,8 @@ const EnseignantAddNote = () => {
                                                     <option value="Acquis">Acquis</option>
                                                 </select>
                                            </Form.Group>
-                                    </div>:<div>
-                                             <Form.Group className='form-group'>
-                                                <Form.Label>Appreciation</Form.Label>
-
-                                                <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Non acquis">Non acquis</option>
-                                                    <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                    <option value="Acquis">Acquis</option>
-                                                </select>
-                                           </Form.Group>
-                                                         <Form.Group className='form-group'>
+                                    
+                                               <Form.Group className='form-group'>
                                                 <Form.Label>Compétence visée</Form.Label>
                                                 <Form.Control type="text" id="competence_visee" name="competence_visee"
                                                     value={inputs.competence_visee || ''}
@@ -228,11 +216,8 @@ const EnseignantAddNote = () => {
                                                 />
                                             </Form.Group>
 
-                                     
-                                            
                                     </div>}         
-                                           
-
+                                    
                                         <Button variant="primary" onClick={submitForm}>
                                             Ajouter
                                         </Button>
