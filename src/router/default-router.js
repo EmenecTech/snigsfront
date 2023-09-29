@@ -243,7 +243,7 @@ export const DefaultRouter = [
 
             //////////27/09/2023
             {
-                path: 'Stats/Etablissments/:etab',
+                path: 'Stats/Etablissments/:nometab/:etab',
                 element: <StatsEtablissement />
             },
 
