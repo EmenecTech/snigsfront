@@ -216,11 +216,11 @@ const BulletinByEleve = memo((props) => {
       })
     };
      const getEmojiForNote = (note) => {
-    if (note >= 0 && note <= 8) {
+    if (note = 10) {
       return '☹️';
-    } else if (note > 8 && note <= 12) {
+    } else if (note = 15) {
       return '😐';
-    } else if (note > 12 && note <= 20) {
+    } else if (note = 20) {
       return '😃';
     }
       return ''; 
@@ -1153,18 +1153,18 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 <thead>
                                                                 <tr>
                                                                     <th><p>Compétences</p></th>
-                                                                    <th>Matieres</th>
                                                                     <th>Evaluation</th>
                                                                     <th>Appréciation</th>
+                                                                    <th>/</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 {allnotes.map((item, index) => (
                                                                     <tr key={index}>
                                                                         <td>{item.groupe_cm}</td>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                         <td>{item.appreciation_note}</td>
+                                                                        <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                        <td></td>
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
