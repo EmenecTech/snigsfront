@@ -876,8 +876,9 @@ const BulletinByEleve = memo((props) => {
                                                                        <tr>
 
                                                                         <th><p>
-                                                                            Discipline /Nom de l'enseignant
+                                                                            Disciplines 
                                                                         </p></th>
+                                                                        <th>Matières</th>
                                                                         <th>Note</th>
                                                                         <th>Coef</th>
                                                                         <th>NxC</th>
@@ -889,8 +890,10 @@ const BulletinByEleve = memo((props) => {
                                                                 {allnotessfe.map((item, sf) => (
                                                                     <tr key={sf}>
                                                                         <td>{item.groupe_cm}</td>
-                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.matiere_note}( {item.nom} {item.prenom} )</td>
                                                                         <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
@@ -964,10 +967,11 @@ const BulletinByEleve = memo((props) => {
 
                                                                     <tr>
                                                                         <td>RECAPITULATIFS</td>
+                                                                        <td></td>
                                                                         <td>{sumnotes}</td>
                                                                         <td>{sumcoef}</td>
                                                                         <td>{sumnotesfinale}</td>
-                                                                        <td>A</td>
+                                                                        <td></td>
                                                                     </tr>
                                                                 </tbody> 
 
