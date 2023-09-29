@@ -890,7 +890,7 @@ const BulletinByEleve = memo((props) => {
                                                                 {allnotessfe.map((item, sf) => (
                                                                     <tr key={sf}>
                                                                         <td>{item.groupe_cm}</td>
-                                                                        <td>{item.matiere_note}( {item.nom} {item.prenom} )</td>
+                                                                        <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
