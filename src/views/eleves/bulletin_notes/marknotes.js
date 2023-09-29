@@ -676,6 +676,7 @@ const BulletinByEleve = memo((props) => {
 
     return (
         <Fragment>
+       
             <Row>
                 <Col sm="12">
                     <Card>
@@ -1805,6 +1806,7 @@ const BulletinByEleve = memo((props) => {
                 </Col>
             </Row>
 
+ {classes.cycle_niveau === 'Maternelle' ? <div>
                                                                                     
             <Row>
                 <Col sm="12">
@@ -1975,7 +1977,8 @@ const BulletinByEleve = memo((props) => {
                         </Card.Body>
                     </Card>
                 </Col>
-            </Row>
+            </Row> 
+        </div> : <div>''</div>  }
         </Fragment>
     );
 })
