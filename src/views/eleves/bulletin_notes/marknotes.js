@@ -1880,7 +1880,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <thead>
                                                                 <tr>
                                                                     <th><p>Compétences</p></th>
-                                                                    <th>Evaluation</th>
+                                                                    <th>{classes.niveau_classe}</th>
                                                                     <th>Appréciation</th>
                                                                    
                                                                 </tr>
@@ -1903,7 +1903,7 @@ const BulletinByEleve = memo((props) => {
                                                                         <td>RECAPITULATIFS</td>
                                                                        <td></td>
                                                                         <td></td>
-                                                                        <td></td>
+                                                                     
                                                                    
                                                                         
                                                                     </tr>
