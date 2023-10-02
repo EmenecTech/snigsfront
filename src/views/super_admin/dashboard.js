@@ -1968,7 +1968,6 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                         
                            
-                          </Circularprogressbar>
                           <div className="progress-detail">
                             <p className="mb-2">Utilisateurs</p>
                             <h4 className="counter">
