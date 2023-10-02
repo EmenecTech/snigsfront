@@ -126,7 +126,7 @@ const [sumpay, setsumpay] = useState([]);
   }, []);
 
   const fetchAllsumpay = () => {
-    http.get('/sum/invest/' + etab).then(res => {
+    http.get('/sum/invest/uniq/' + etab).then(res => {
       setsumpay(res.data);
     })
   }
