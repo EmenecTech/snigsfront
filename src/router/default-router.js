@@ -265,7 +265,7 @@ export const DefaultRouter = [
                 element: <AdminEvaluationListClasses />
             },
             {
-                path: '/Admin/Bulletin/:evaluation/:niveau/:classe/Eleve',
+                path: '/Admin/Bulletin/:evaluation/:classe/Eleve',
                 element: <AdminEvaluationListClassesEleves />
             },
             {
