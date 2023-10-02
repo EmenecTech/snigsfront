@@ -237,6 +237,17 @@ const [allnotespf, setAllNotespf] = useState([]);
       })
     };
 
+ const [allind, setAllInd] = useState([]);
+    useEffect(() => {
+        fetchAllInd();  
+    }, []);
+
+    const fetchAllInd = () => {
+        http.get('/get_ind_for_mat/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd(res.data);
+        })
+    };
+
     const [allnotespa, setAllNotespa] = useState([]);
     useEffect(() => {
         fetchAllNotespa();
@@ -1131,7 +1142,7 @@ const [allnotespf, setAllNotespf] = useState([]);
 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: {allind} </p>
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
