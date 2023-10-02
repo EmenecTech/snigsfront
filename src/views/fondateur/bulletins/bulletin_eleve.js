@@ -1123,6 +1123,10 @@ const [allnotespf, setAllNotespf] = useState([]);
 
                                                         <Col sm="12" lg="12">
                                                             <div className="mt-2">
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Evaluation: {evaluation} </p>
+
+                                                            </div>
+                                                            <div className="mt-2">
                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">Nom de l'enseignant:  {enseign} </p>
 
                                                             </div>
@@ -1291,6 +1295,10 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                     <Row>
 
                                                         <Col sm="12" lg="12">
+                                                           <div className="mt-2">
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Evaluation: {evaluation} </p>
+
+                                                            </div>
                                                              <div className="mt-2">
                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">Nom de l'enseignant: {enseign} </p>
 
@@ -1629,6 +1637,10 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                     <Row>
 
                                                         <Col sm="12" lg="12">
+                                                            <div className="mt-2">
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Evaluation: {evaluation} </p>
+
+                                                            </div>
                                                              <div className="mt-2">
                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">Teacher's name: {enseign} </p>
 
