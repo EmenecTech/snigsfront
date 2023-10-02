@@ -315,7 +315,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
   }, []);
 
   const fetchAllsumpay = () => {
-    http.get('/sum/invest/' + etab).then(res => {
+    http.get('/sum/invest').then(res => {
       setsumpay(res.data);
     })
   }
