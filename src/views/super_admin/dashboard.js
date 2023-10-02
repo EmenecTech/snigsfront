@@ -352,7 +352,7 @@ const [sumprim, setsumprim] = useState([]);
   const fetchAllsumprim = () => {
     http.get('/sum/prim/' + etab).then(res => {
       setsumprim(res.data);
-    })
+    }) 
   }
 
   const [sumsec, setsumsec] = useState([]);
