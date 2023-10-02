@@ -1466,29 +1466,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className="card card-slide" >
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.primary}
-                            width="60px"
-                            height="60px"
-                            Linecap="rounded"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            style={{ width: 60, height: 60 }}
-                            value={90}
-                            id="circle-progress-01"
-                          >
-                            <svg
-                              className=""
-                              width="24"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                          
                           <div className="progress-detail">
                             <p className="mb-2">{user.langue === "en" ? (<div> Administration </div>):(<div> Administration</div>)}</p>
                             <h4 className="counter">
@@ -1530,29 +1508,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-02"
-                          >
-                            <svg
-                              className=""
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                        
                           <div className="progress-detail">
                             <p className="mb-2">{user.langue === "en" ? (<div> Teachers </div>):(<div> Enseignants </div>)}</p>
                             <h4 className="counter">
@@ -1565,24 +1521,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.primary}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={70}
-                            id="circle-progress-03"
-                          >
-                            <svg className="" width="24" viewBox="0 0 24 24">
-                              <path
-                                fill="currentColor"
-                                d="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                         
                           <div className="progress-detail">
                             <p className="mb-2">{user.langue === "en" ? (<div> Students </div>):(<div> Elèves </div>)}</p>
                             <h4 className="counter">
@@ -1595,29 +1534,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-04"
-                          >
-                            <svg
-                              className=""
-                              width="24px"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                         
                           <div className="progress-detail">
                             <p className="mb-2">{user.langue === "en" ? (<div> Pre-registered students </div>):(<div> Elèves préinscrit </div>)}</p>
                             <h4 className="counter">
@@ -1630,29 +1547,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.primary}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={50}
-                            id="circle-progress-05"
-                          >
-                            <svg
-                              className=""
-                              width="24px"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                
                           <div className="progress-detail">
                             <p className="mb-2"> {user.langue === "en" ? (<div>Archived students </div>):(<div> Elèves archivés</div>)}</p>
                             <h4 className="counter">
@@ -1982,24 +1877,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.primary}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={70}
-                            id="circle-progress-03"
-                          >
-                            <svg className="" width="24" viewBox="0 0 24 24">
-                              <path
-                                fill="currentColor"
-                                d="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                       
                           <div className="progress-detail">
                             <p className="mb-2">Fondateurs</p>
                             <h4 className="counter">
@@ -2012,29 +1890,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-04"
-                          >
-                            <svg
-                              className=""
-                              width="24px"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                         
                           <div className="progress-detail">
                             <p className="mb-2">Membres de l'administration</p>
                             <h4 className="counter">
@@ -2047,29 +1903,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.primary}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={50}
-                            id="circle-progress-05"
-                          >
-                            <svg
-                              className=""
-                              width="24px"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                        
                           <div className="progress-detail">
                             <p className="mb-2">Enseignants</p>
                             <h4 className="counter">
@@ -2112,29 +1946,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-02"
-                          >
-                            <svg
-                              className=""
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                        
                           <div className="progress-detail">
                             <p className="mb-2">Elèves</p>
                             <h4 className="counter">
@@ -2150,29 +1962,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-04"
-                          >
-                            <svg
-                              className=""
-                              width="24px"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                        
                           <div className="progress-detail">
                             <p className="mb-2">Elèves Inscrits</p>
                             <h4 className="counter">
@@ -2186,29 +1976,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-04"
-                          >
-                            <svg
-                              className=""
-                              width="24px"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+              
                           <div className="progress-detail">
                             <p className="mb-2">Elèves Préinscrits</p>
                             <h4 className="counter">
@@ -2223,29 +1991,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-04"
-                          >
-                            <svg
-                              className=""
-                              width="24px"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                       
                           <div className="progress-detail">
                             <p className="mb-2">Parents</p>
                             <h4 className="counter">
@@ -2294,29 +2040,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-02"
-                          >
-                            <svg
-                              className=""
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                         
                           <div className="progress-detail">
                             <p className="mb-2">Universités</p>
                             <h4 className="counter">
@@ -2332,29 +2056,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-04"
-                          >
-                            <svg
-                              className=""
-                              width="24px"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                        
                           <div className="progress-detail">
                             <p className="mb-2">Etudiants</p>
                             <h4 className="counter">
@@ -2368,29 +2070,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-04"
-                          >
-                            <svg
-                              className=""
-                              width="24px"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                       
                           <div className="progress-detail">
                             <p className="mb-2">Etudiants Inscrits</p>
                             <h4 className="counter">
@@ -2405,29 +2085,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-04"
-                          >
-                            <svg
-                              className=""
-                              width="24px"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                       
                           <div className="progress-detail">
                             <p className="mb-2">Etudiants Préinscrits</p>
                             <h4 className="counter">
@@ -2479,29 +2137,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-02"
-                          >
-                            <svg
-                              className=""
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                          
                           <div className="progress-detail">
                             <p className="mb-2">Etablissements</p>
                             <h4 className="counter">
@@ -2517,29 +2153,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-04"
-                          >
-                            <svg
-                              className=""
-                              width="24px"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                        
                           <div className="progress-detail">
                             <p className="mb-2">Etablissements Maternelles</p>
                             <h4 className="counter">
@@ -2553,29 +2167,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-04"
-                          >
-                            <svg
-                              className=""
-                              width="24px"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                         
                           <div className="progress-detail">
                             <p className="mb-2">Etablissements Primaires</p>
                             <h4 className="counter">
@@ -2590,29 +2182,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-04"
-                          >
-                            <svg
-                              className=""
-                              width="24px"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                     
                           <div className="progress-detail">
                             <p className="mb-2">Etablissements Secondaires</p>
                             <h4 className="counter">
@@ -2669,29 +2239,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className=" card card-slide">
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.info}
-                            width="60px"
-                            height="60px"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            Linecap="rounded"
-                            style={{ width: 60, height: 60 }}
-                            value={60}
-                            id="circle-progress-02"
-                          >
-                            <svg
-                              className=""
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z"
-                              />
-                            </svg>
-                          </Circularprogressbar>
+                       
                           <div className="progress-detail">
                             <p className="mb-2">Montant payés sur la plateforme </p>
                             <h4 className="counter">
