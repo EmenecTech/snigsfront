@@ -440,7 +440,7 @@ const ListEvaluations = memo((props) => {
                                             <th>{user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)} </th>
                                             <th> {user.langue === "en" ? (<div>Type of assessment</div>):(<div>Type d'évaluation </div>)} </th>
                                             <th> {user.langue === "en" ? (<div>Reference</div>):(<div>Référence</div>)}</th>
-                                            <th> {user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)}</th>
+                                        
                                      
                                         </tr>
                                     </thead>
