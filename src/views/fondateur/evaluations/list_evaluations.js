@@ -62,13 +62,14 @@ const ListEvaluations = memo((props) => {
         const name = event.target.name;
         const value = event.target.value;
 
-        setInputs(values => ({ ...values, [name]: value, etab }))
-    }
+        setInputs((values) => ({ ...values, [name]: value, etab }));
+  };
 
 
 
 
-    const submitForm = () => {
+
+    {/* const submitForm = () => {
         http.post('/filieres', inputs).then((res) => {
             alert("Filière ajouté avec succès !")
             navigate('/List/filieres/')
@@ -76,18 +77,19 @@ const ListEvaluations = memo((props) => {
 
         })
 
+    } */}
 
-
-        console.log(inputs);
-
+       
     const submitFormeval = () => {
         http.post('/evaluations', inputs).then((res) => {
             alert("L'évaluation a été ajoutée avec succès !")
             navigate('/List/evaluations/')
             window.location.reload(false);
 
-        })
-    }
+        });
+         console.log(inputs);
+
+    };
         
     const [evaluations_list, setevaluations] = useState([]);
     useEffect(() => {
@@ -97,8 +99,8 @@ const ListEvaluations = memo((props) => {
     const fetchAllevaluations = () => {
         http.get('/get_evaluations/' + etab).then(res => {
             setevaluations(res.data);
-        })
-    }
+        });
+    };
 
 
 
