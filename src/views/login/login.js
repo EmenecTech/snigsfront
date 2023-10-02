@@ -84,13 +84,7 @@ export default function LoginSnigs() {
                                           <Form.Control type="password" className="" aria-describedby="password" placeholder=" " onChange={e => setPassword(e.target.value)} id="password" />
                                        </Form.Group>
                                     </Col>
-                                    <Col lg="12" className="d-flex justify-content-between">
-                                       <Form.Check className="form-check mb-3">
-                                          <Form.Check.Input type="checkbox" id="customCheck1" />
-                                          <Form.Check.Label htmlFor="customCheck1">Remember Me</Form.Check.Label>
-                                       </Form.Check>
-                                       <Link to="/auth/recoverpw">Forgot Password?</Link>
-                                    </Col>
+                                   
                                  </Row>
                                  <div className="d-flex justify-content-center">
                                     <Button onClick={submitForm} type="button" variant="btn btn-primary">Sign In</Button>
