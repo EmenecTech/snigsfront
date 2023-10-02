@@ -89,7 +89,7 @@ export default function LoginSnigs() {
                                  <div className="d-flex justify-content-center">
                                     <Button onClick={submitForm} type="button" variant="btn btn-primary">Sign In</Button>
                                  </div>
-                                 <p className="text-center my-3">or sign in with other accounts?</p>
+      
                                  <div className="d-flex justify-content-center">
                                     <ListGroup as="ul" className="list-group-horizontal list-group-flush">
                                        <ListGroup.Item as="li" className="border-0 pb-0">
