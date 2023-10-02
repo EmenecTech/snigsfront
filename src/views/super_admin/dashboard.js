@@ -2706,7 +2706,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                           <div className="progress-detail">
                             <p className="mb-2">Montant payés sur la plateforme </p>
                             <h4 className="counter">
-                              <CountUp start={0} end={sumpay} duration={5} />
+                              <CountUp start={0} end={sumpay} duration={5} /> FCFA
                             </h4>
                           </div>
                         </div>
