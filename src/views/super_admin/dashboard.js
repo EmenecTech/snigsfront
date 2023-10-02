@@ -1966,28 +1966,8 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                     <SwiperSlide className="card card-slide" >
                       <div className="card-body">
                         <div className="progress-widget">
-                          <Circularprogressbar
-                            stroke={variableColors.primary}
-                            width="60px"
-                            height="60px"
-                            Linecap="rounded"
-                            trailstroke="#ddd"
-                            strokewidth="4px"
-                            style={{ width: 60, height: 60 }}
-                            value={90}
-                            id="circle-progress-01"
-                          >
-                            <svg
-                              className=""
-                              width="24"
-                              height="24px"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z"
-                              />
-                            </svg>
+                        
+                           
                           </Circularprogressbar>
                           <div className="progress-detail">
                             <p className="mb-2">Utilisateurs</p>
