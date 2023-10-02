@@ -485,6 +485,6 @@ const ListEvaluations = memo((props) => {
             </Row>
         </Fragment>
     );
-})
+});
 
 export default ListEvaluations
