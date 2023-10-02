@@ -57,12 +57,12 @@ const ListEvaluations = memo((props) => {
     const handleShow = () => setShow(true);
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
-    const etab = user.etablissement;
+
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
 
-        setInputs((values) => ({ ...values, [name]: value, etab }));
+        setInputs((values) => ({ ...values, [name]: value}));
   };
 
 
@@ -382,7 +382,8 @@ const ListEvaluations = memo((props) => {
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
                                                         <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Type of assessment</div>):(<div>Type d'évaluation </div>)}</Form.Label>
-                                                        <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange}>
+                                                        <select className="form-select mb-3 shadow-none" name="type" onChange={handleChange}>
+                                                            <option></option>
                                                             <option value="Annuel"> {user.langue === "en" ? (<div>Annual</div>):(<div>Annuel</div>)}</option>
                                                             <option value="Semestriel">{user.langue === "en" ? (<div>Semester</div>):(<div>Semestriel </div>)}</option>
                                                             <option value="Trimestriel">{user.langue === "en" ? (<div>Quarterly</div>):(<div>Trimestriel  </div>)}</option>
@@ -401,7 +402,8 @@ const ListEvaluations = memo((props) => {
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
                                                         <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Reference</div>):(<div>Référence</div>)} </Form.Label>
-                                                        <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange}>
+                                                        <select className="form-select mb-3 shadow-none" name="ref" onChange={handleChange}>
+                                                            <option></option>
                                                             <option value="Trimestre 1"> {user.langue === "en" ? (<div>Trimestre 1</div>):(<div>First Term</div>)}</option>
                                                             <option value="Trimestre 2">{user.langue === "en" ? (<div>Trimestre 2</div>):(<div>Second Term</div>)}</option>
                                                             <option value="Trimestre 3">{user.langue === "en" ? (<div>Trimestre 3</div>):(<div>third Term</div>)}</option>
@@ -417,23 +419,16 @@ const ListEvaluations = memo((props) => {
                                                     <Form.Group className="form-group">
                                                         <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Reference</div>):(<div>Référence</div>)} </Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange}>
-                                                            <option value="Maternelle">{user.langue === "en" ? (<div>Maternelle</div>):(<div>Nursery</div>)}</option>
-                                                            <option value="Primaire"> {user.langue === "en" ? (<div>Primaire</div>):(<div>Primary</div>)}</option>
-                                                            <option value="Secondaire">{user.langue === "en" ? (<div>Secondaire</div>):(<div>Secondary</div>)}</option>
+                                                            <option></option>
+                                                            <option value="Maternelle">{user.langue === "en" ? (<div>Nursery</div>):(<div>Maternelle</div>)}</option>
+                                                            <option value="Primaire"> {user.langue === "en" ? (<div>Primary</div>):(<div>Primaire</div>)}</option>
+                                                            <option value="Secondaire">{user.langue === "en" ? (<div>Secondary</div>):(<div>Secondaire</div>)}</option>
                                                         </select>
                                                         
                                                     </Form.Group>
                                                 </Form.Group>
                                             </Col>
                                         </Row>
-
-                                        
-
-
-
-
-
-
 
 
                                         <div className="text-center">
