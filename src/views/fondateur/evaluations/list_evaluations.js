@@ -405,9 +405,9 @@ const ListEvaluations = memo((props) => {
                                                         <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Reference</div>):(<div>Référence</div>)} </Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="ref" onChange={handleChange}>
                                                             <option></option>
-                                                            <option value="Trimestre 1"> {user.langue === "en" ? (<div>Trimestre 1</div>):(<div>First Term</div>)}</option>
-                                                            <option value="Trimestre 2">{user.langue === "en" ? (<div>Trimestre 2</div>):(<div>Second Term</div>)}</option>
-                                                            <option value="Trimestre 3">{user.langue === "en" ? (<div>Trimestre 3</div>):(<div>third Term</div>)}</option>
+                                                            <option value="Trimestre 1"> {user.langue === "en" ? (<div>First Term</div>):(<div>Trimestre 1</div>)}</option>
+                                                            <option value="Trimestre 2">{user.langue === "en" ? (<div>Second Term</div>):(<div>Trimestre 2</div>)}</option>
+                                                            <option value="Trimestre 3">{user.langue === "en" ? (<div>Third Term</div>):(<div>Trimestre 3</div>)}</option>
                                                         </select>
                                                         
                                                     </Form.Group>
