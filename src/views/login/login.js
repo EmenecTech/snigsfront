@@ -86,10 +86,11 @@ export default function LoginSnigs() {
                                     </Col>
                                    
                                  </Row>
+                                 <br/>
                                  <div className="d-flex justify-content-center">
                                     <Button onClick={submitForm} type="button" variant="btn btn-primary">Sign In</Button>
                                  </div>
-      
+                                 <br/>
                                  <div className="d-flex justify-content-center">
                                     <ListGroup as="ul" className="list-group-horizontal list-group-flush">
                                        <ListGroup.Item as="li" className="border-0 pb-0">
