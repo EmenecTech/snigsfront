@@ -120,6 +120,18 @@ const StatsEtablissement = memo((props) => {
     }
 
 
+const [sumpay, setsumpay] = useState([]);
+  useEffect(() => {
+    fetchAllsumpay();
+  }, []);
+
+  const fetchAllsumpay = () => {
+    http.get('/sum/invest/' + etab).then(res => {
+      setsumpay(res.data);
+    })
+  }
+
+
 
    const nbreins = nbreleve - nbrpreins;
 
@@ -459,7 +471,7 @@ const StatsEtablissement = memo((props) => {
 
                                         <tr>
                                             <td>Montant de pension enregistré</td>
-                                            <td>0</td>
+                                            <td>{sumpay} FCFA</td>
 
                                         </tr>
 
