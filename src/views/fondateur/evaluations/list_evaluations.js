@@ -58,6 +58,7 @@ const ListEvaluations = memo((props) => {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
 
+
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
@@ -97,7 +98,7 @@ const ListEvaluations = memo((props) => {
     }, []);
 
     const fetchAllevaluations = () => {
-        http.get('/get_evaluations/' + etab).then(res => {
+        http.get('/get_evaluations').then(res => {
             setevaluations(res.data);
         });
     };
