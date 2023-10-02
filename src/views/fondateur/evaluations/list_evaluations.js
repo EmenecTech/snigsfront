@@ -381,9 +381,6 @@ const ListEvaluations = memo((props) => {
                                                             <option value="Hebdomadaire">{user.langue === "en" ? (<div>Weekly</div>):(<div>Hebdomadaire </div>)}</option>
                                                             <option value="Libre"> {user.langue === "en" ? (<div>Free</div>):(<div>Libre </div>)}</option>
 
-
-
-
                                                         </select>
                                                     </Form.Group>
                                                 </Form.Group>
@@ -393,35 +390,34 @@ const ListEvaluations = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Référence</div>):(<div>Référence</div>)} </Form.Label>
-                                                        <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Reference</div>):(<div>Référence</div>)} </Form.Label>
+                                                        <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange}>
+                                                            <option value="Trimestre 1"> {user.langue === "en" ? (<div>Trimestre 1</div>):(<div>First Term</div>)}</option>
+                                                            <option value="Trimestre 2">{user.langue === "en" ? (<div>Trimestre 2</div>):(<div>Second Term</div>)}</option>
+                                                            <option value="Trimestre 3">{user.langue === "en" ? (<div>Trimestre 3</div>):(<div>third Term</div>)}</option>
+                                                        </select>
+                                                        
                                                     </Form.Group>
                                                 </Form.Group>
                                             </Col>
                                         </Row>
-
-
-                                        <Row>
+                                          <Row>
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Start date</div>):(<div>Date de début</div>)} </Form.Label>
-                                                        <Form.Control type="date" defaultValue="" name="int" onChange={handleChange} required />
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Reference</div>):(<div>Référence</div>)} </Form.Label>
+                                                        <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange}>
+                                                            <option value="Maternelle">{user.langue === "en" ? (<div>Maternelle</div>):(<div>Nursery</div>)}</option>
+                                                            <option value="Primaire"> {user.langue === "en" ? (<div>Primaire</div>):(<div>Primary</div>)}</option>
+                                                            <option value="Secondaire">{user.langue === "en" ? (<div>Secondaire</div>):(<div>Secondary</div>)}</option>
+                                                        </select>
+                                                        
                                                     </Form.Group>
                                                 </Form.Group>
                                             </Col>
                                         </Row>
 
-                                        <Row>
-                                            <Col>
-                                                <Form.Group as={Row} className="form-group">
-                                                    <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>End date</div>):(<div>Date de fin </div>)}  </Form.Label>
-                                                        <Form.Control type="date" defaultValue="" name="int" onChange={handleChange} required />
-                                                    </Form.Group>
-                                                </Form.Group>
-                                            </Col>
-                                        </Row>
+                                        
 
 
 
@@ -452,7 +448,8 @@ const ListEvaluations = memo((props) => {
                                         <tr>
                                             <th>{user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)} </th>
                                             <th> {user.langue === "en" ? (<div>Type of assessment</div>):(<div>Type d'évaluation </div>)} </th>
-                                            <th> {user.langue === "en" ? (<div>Type of period</div>):(<div>Type de période </div>)}</th>
+                                            <th> {user.langue === "en" ? (<div>Reference</div>):(<div>Référence</div>)}</th>
+                                            <th> {user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)}</th>
                                      
                                         </tr>
                                     </thead>
@@ -463,6 +460,7 @@ const ListEvaluations = memo((props) => {
 
                                                 <td>{item.type_evaluation_evaluation}</td>
                                                 <td>{item.reference_evaluation}</td>
+                                                <td>{item.etablissement_evaluation}</td>
                                          
                                             </tr>
                                         ))}
