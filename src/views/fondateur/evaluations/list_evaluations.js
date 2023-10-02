@@ -80,7 +80,15 @@ const ListEvaluations = memo((props) => {
 
         console.log(inputs);
 
+    const submitFormeval = () => {
+        http.post('/evaluations', inputs).then((res) => {
+            alert("L'évaluation a été ajoutée avec succès !")
+            navigate('/List/evaluations/')
+            window.location.reload(false);
+
+        })
     }
+        
     const [evaluations_list, setevaluations] = useState([]);
     useEffect(() => {
         fetchAllevaluations();
@@ -427,7 +435,7 @@ const ListEvaluations = memo((props) => {
 
 
                                         <div className="text-center">
-                                            <Button type="button" variant="primary" onClick={submitForm} >{user.langue === "en" ? (<div>Confirm </div>):(<div>Confirmer </div>)}</Button>
+                                            <Button type="button" variant="primary" onClick={submitFormeval} >{user.langue === "en" ? (<div>Confirm </div>):(<div>Confirmer </div>)}</Button>
                                         </div>
                                     </Form>
                                 </Modal.Body>
