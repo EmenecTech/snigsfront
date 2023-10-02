@@ -355,6 +355,17 @@ const [sumprim, setsumprim] = useState([]);
     })
   }
 
+  const [sumsec, setsumsec] = useState([]);
+  useEffect(() => {
+    fetchAllsumsec();
+  }, []);
+
+  const fetchAllsumsec = () => {
+    http.get('/sum/sec/' + etab).then(res => {
+      setsumsec(res.data);
+    })
+  }
+
   const nbreleveins_sup = nbreleve_sup - nbrpreins_sup;
 
 
@@ -2210,7 +2221,7 @@ const [sumprim, setsumprim] = useState([]);
                           <div className="progress-detail">
                             <p className="mb-2">Etablissements Secondaires</p>
                             <h4 className="counter">
-                              <CountUp start={0} end={0} duration={3} />
+                              <CountUp start={0} end={sumsec} duration={3} />
                             </h4>
                           </div>
                         </div>
