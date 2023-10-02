@@ -133,6 +133,8 @@ const [sumpay, setsumpay] = useState([]);
 
 
 
+
+
    const nbreins = nbreleve - nbrpreins;
 
 
