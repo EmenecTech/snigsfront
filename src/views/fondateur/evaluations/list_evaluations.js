@@ -57,13 +57,13 @@ const ListEvaluations = memo((props) => {
     const handleShow = () => setShow(true);
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
-
+    const etab = user.etablissement;
 
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
 
-        setInputs((values) => ({ ...values, [name]: value}));
+        setInputs((values) => ({ ...values, [name]: value , etab}));
   };
 
 
@@ -98,7 +98,7 @@ const ListEvaluations = memo((props) => {
     }, []);
 
     const fetchAllevaluations = () => {
-        http.get('/get_evaluations').then(res => {
+        http.get('/get_evaluations/' + etab).then(res => {
             setevaluations(res.data);
         });
     };
@@ -414,22 +414,7 @@ const ListEvaluations = memo((props) => {
                                                 </Form.Group>
                                             </Col>
                                         </Row>
-                                          <Row>
-                                            <Col>
-                                                <Form.Group as={Row} className="form-group">
-                                                    <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Reference</div>):(<div>Référence</div>)} </Form.Label>
-                                                        <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange}>
-                                                            <option></option>
-                                                            <option value="Maternelle">{user.langue === "en" ? (<div>Nursery</div>):(<div>Maternelle</div>)}</option>
-                                                            <option value="Primaire"> {user.langue === "en" ? (<div>Primary</div>):(<div>Primaire</div>)}</option>
-                                                            <option value="Secondaire">{user.langue === "en" ? (<div>Secondary</div>):(<div>Secondaire</div>)}</option>
-                                                        </select>
-                                                        
-                                                    </Form.Group>
-                                                </Form.Group>
-                                            </Col>
-                                        </Row>
+                                          
 
 
                                         <div className="text-center">
@@ -466,7 +451,7 @@ const ListEvaluations = memo((props) => {
 
                                                 <td>{item.type_evaluation_evaluation}</td>
                                                 <td>{item.reference_evaluation}</td>
-                                                <td>{item.etablissement_evaluation}</td>
+                                             
                                          
                                             </tr>
                                         ))}
