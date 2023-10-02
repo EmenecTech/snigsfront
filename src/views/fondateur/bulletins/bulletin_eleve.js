@@ -83,8 +83,6 @@ const BulletinByEleve = memo((props) => {
     const [inputs, setInputs] = useState({});
     const { evaluation, classe, userid } = useParams();
     const etab = user.etablissement;
-
-
     const niveau = user.fonction_user;
 
 
@@ -245,9 +243,11 @@ const [allnotespf, setAllNotespf] = useState([]);
     const fetchAllInd = () => {
         http.get('/get_ind_for_mat/' + etab + "/" + niveau + "/" + classe).then(res => {
             setAllInd(res.data);
-        })
+        }); 
     };
-
+    
+    console.log(allind);
+    
     const [allnotespa, setAllNotespa] = useState([]);
     useEffect(() => {
         fetchAllNotespa();
