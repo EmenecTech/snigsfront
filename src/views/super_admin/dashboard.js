@@ -320,6 +320,16 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
     })
   }
 
+  const [nbretap, setnbretap] = useState([]);
+  useEffect(() => {
+    fetchAllnbretap();
+  }, []);
+
+  const fetchAllnbretap = () => {
+    http.get('/nbr/etab/' + etab).then(res => {
+      setnbretap(res.data);
+    })
+  }
 
   const nbreleveins_sup = nbreleve_sup - nbrpreins_sup;
 
@@ -2516,7 +2526,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                           <div className="progress-detail">
                             <p className="mb-2">Etablissements</p>
                             <h4 className="counter">
-                              <CountUp start={0} end={nbretab_sup} duration={5} />
+                              <CountUp start={0} end={nbretap} duration={5} />
                             </h4>
                           </div>
                         </div>
