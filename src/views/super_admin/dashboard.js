@@ -309,6 +309,18 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
   }
 
 
+  const [sumpay, setsumpay] = useState([]);
+  useEffect(() => {
+    fetchAllsumpay();
+  }, []);
+
+  const fetchAllsumpay = () => {
+    http.get('/sum/invest/' + etab).then(res => {
+      setsumpay(res.data);
+    })
+  }
+
+
   const nbreleveins_sup = nbreleve_sup - nbrpreins_sup;
 
 
@@ -2694,7 +2706,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                           <div className="progress-detail">
                             <p className="mb-2">Montant payés sur la plateforme </p>
                             <h4 className="counter">
-                              <CountUp start={0} end={nbretab_sup} duration={5} />
+                              <CountUp start={0} end={sumpay} duration={5} />
                             </h4>
                           </div>
                         </div>
