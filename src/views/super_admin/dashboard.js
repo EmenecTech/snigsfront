@@ -89,13 +89,35 @@ const Dashboard_superadmin = memo((props) => {
 
 
 
-  const etab = user.etablissement;
+  const etab = 0;
   const niveau = user.fonction_user;
   const classe = user.other_in_user;
   const userid = user.id;
 
 
 
+
+  const [sumprim, setsumprim] = useState([]);
+  useEffect(() => {
+    fetchAllsumprim();
+  }, []);
+
+  const fetchAllsumprim = () => {
+    http.get('/sum/prim/' + etab).then(res => {
+      setsumprim(res.data);
+    }) 
+  }
+
+  const [sumsec, setsumsec] = useState([]);
+  useEffect(() => {
+    fetchAllsumsec();
+  }, []);
+
+  const fetchAllsumsec = () => {
+    http.get('/sum/sec/' + etab).then(res => {
+      setsumsec(res.data);
+    })
+  }
 
 
 
@@ -344,27 +366,6 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
     }
 
       
-const [sumprim, setsumprim] = useState([]);
-  useEffect(() => {
-    fetchAllsumprim();
-  }, []);
-
-  const fetchAllsumprim = () => {
-    http.get('/sum/prim/' + etab).then(res => {
-      setsumprim(res.data);
-    }) 
-  }
-
-  const [sumsec, setsumsec] = useState([]);
-  useEffect(() => {
-    fetchAllsumsec();
-  }, []);
-
-  const fetchAllsumsec = () => {
-    http.get('/sum/sec/' + etab).then(res => {
-      setsumsec(res.data);
-    })
-  }
 
   const nbreleveins_sup = nbreleve_sup - nbrpreins_sup;
 
