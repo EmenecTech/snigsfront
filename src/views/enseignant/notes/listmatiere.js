@@ -374,7 +374,7 @@ const Enseignant_matieres_notes = memo((props) => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {matieres.map((item) => (
+                                        {matieresprim.map((item) => (
                                             <tr key={item.id}>
                                                 <td>{item.classe_cp}</td>
                                                 <td>{item.matiere_cp}</td>
