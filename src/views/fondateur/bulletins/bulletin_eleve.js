@@ -246,7 +246,7 @@ const [allnotespf, setAllNotespf] = useState([]);
         }); 
     };
     
-    console.log(allind);
+ 
     
     const [allnotespa, setAllNotespa] = useState([]);
     useEffect(() => {
