@@ -406,7 +406,7 @@ const Enseignant_matieres_notes = memo((props) => {
                             </div>
                         </Card.Body>
                                        
-                       </di>
+                       </div>
                                     
                     ) : (
     
