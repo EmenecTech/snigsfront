@@ -355,7 +355,8 @@ const Enseignant_matieres_notes = memo((props) => {
                         </Card.Header>
                       
         
-        {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? <div>
+        {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? (
+            <div>
                 <Card.Body>
                             <div className="table-responsive border-bottom my-3">
                                 <Table
@@ -405,7 +406,11 @@ const Enseignant_matieres_notes = memo((props) => {
                             </div>
                         </Card.Body>
                                        
-                       </di> : <div>
+                       </di>
+                                    
+                    ) : (
+    
+                     <div>
                                        
                         <Card.Body>
                             <div className="table-responsive border-bottom my-3">
@@ -425,7 +430,7 @@ const Enseignant_matieres_notes = memo((props) => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {matieres.map((item) => (
+                                        {matieresprim.map((item) => (
                                             <tr key={item.id}>
                                                 <td>{item.classe_cp}</td>
                                                
@@ -456,7 +461,8 @@ const Enseignant_matieres_notes = memo((props) => {
                             </div>
                         </Card.Body>
                                         
-                      </di>}
+                      </div>
+                                        )}
         
                     
                     </Card>
