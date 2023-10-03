@@ -96,12 +96,11 @@ const Enseignant_matieres_notes = memo((props) => {
 
         })
 
-
-
         console.log(inputs);
 
     }
-   const [eleves_classe, seteleves_classe] = useState([]);
+    
+    {/* const [eleves_classe, seteleves_classe] = useState([]);
     useEffect(() => {
         fetchAlleleves_classe();
     }, []);
@@ -111,7 +110,7 @@ const Enseignant_matieres_notes = memo((props) => {
             seteleves_classe(res.data);
         })
     }
-
+*/}
 
 
     useSelector(SettingSelector.theme_color);
@@ -355,8 +354,8 @@ const Enseignant_matieres_notes = memo((props) => {
                         </Card.Header>
                       
         
-        {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? (
-            <div>
+    {/* {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? (
+            <div> */}
                 <Card.Body>
                             <div className="table-responsive border-bottom my-3">
                                 <Table
@@ -406,7 +405,7 @@ const Enseignant_matieres_notes = memo((props) => {
                             </div>
                         </Card.Body>
                                        
-                       </div>
+{/*  </div>
                                     
                     ) : (
     
@@ -462,7 +461,7 @@ const Enseignant_matieres_notes = memo((props) => {
                         </Card.Body>
                                         
                       </div>
-                                        )}
+                                        )} */}
         
                     
                     </Card>
