@@ -270,7 +270,7 @@ export const DefaultRouter = [
             },
             {
                 path: '/Admin/Bulletin/:evaluation/:niveau/:classe/:userid',
-                element: < BulletinByEleve/>
+                element: <BulletinByEleve />
             },
     
             //////
