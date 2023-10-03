@@ -1142,7 +1142,7 @@ const [allnotespf, setAllNotespf] = useState([]);
 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: {allind} </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: </p>
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
