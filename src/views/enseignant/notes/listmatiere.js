@@ -65,6 +65,16 @@ const Enseignant_matieres_notes = memo((props) => {
         setInputs(values => ({ ...values, [name]: value, etab }))
     }
 
+     const [confnotes, setconfnotes] = useState([]);
+    useEffect(() => {
+        fetchAllconfnotes();
+    }, []);
+
+    const fetchAllconfnotes = () => {
+        http.get('/conf_notes/' + etab).then(res => {
+            setconfnotes(res.data);
+        })
+    }
 
     const [matieres, setmatieres] = useState([]);
     useEffect(() => {
@@ -354,8 +364,9 @@ const Enseignant_matieres_notes = memo((props) => {
                         </Card.Header>
                       
         
-    {/* {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? (
-            <div> */}
+     {confnotes.niveau_enseignement === 'Secondaire' ? (
+         
+            <div>
                 <Card.Body>
                             <div className="table-responsive border-bottom my-3">
                                 <Table
@@ -405,7 +416,7 @@ const Enseignant_matieres_notes = memo((props) => {
                             </div>
                         </Card.Body>
                                        
-{/*  </div>
+</div>
                                     
                     ) : (
     
@@ -461,7 +472,7 @@ const Enseignant_matieres_notes = memo((props) => {
                         </Card.Body>
                                         
                       </div>
-                                        )} */}
+                                        )} 
         
                     
                     </Card>
