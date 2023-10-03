@@ -281,16 +281,7 @@ const [allnotespf, setAllNotespf] = useState([]);
     };
 
 
-    const [allind3, setAllInd3] = useState([]);
-    useEffect(() => {
-        fetchAllInd3();  
-    }, []); 
-
-    const fetchAllInd3 = () => {
-        http.get('/get_ind_for_mat3/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd3(res.data);
-        }); 
-    };
+  
     
 
 
