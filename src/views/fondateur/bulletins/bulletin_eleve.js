@@ -245,6 +245,43 @@ const [allnotespf, setAllNotespf] = useState([]);
             setAllInd(res.data);
         }); 
     };
+
+    const [allind2, setAllInd2] = useState([]);
+    useEffect(() => {
+        fetchAllInd2();  
+    }, []); 
+
+    const fetchAllInd2 = () => {
+        http.get('/get_ind_for_mat2/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd2(res.data);
+        }); 
+    };
+
+
+    const [allind3, setAllInd3] = useState([]);
+    useEffect(() => {
+        fetchAllInd3();  
+    }, []); 
+
+    const fetchAllInd3 = () => {
+        http.get('/get_ind_for_mat3/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd3(res.data);
+        }); 
+    };
+
+    
+
+
+    const [allind4, setAllInd4] = useState([]);
+    useEffect(() => {
+        fetchAllInd4();  
+    }, []); 
+
+    const fetchAllInd4 = () => {
+        http.get('/get_ind_for_mat4/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd4(res.data);
+        }); 
+    };
     
  
     
