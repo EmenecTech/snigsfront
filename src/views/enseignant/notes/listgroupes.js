@@ -76,6 +76,7 @@ const EnseignantListGroupes = () => {
       setnoteseleves(res.data);
     });
   };
+    console.log(noteseleves);
     
      const [groupes, setgroupes] = useState([]);
   useEffect(() => {
@@ -348,23 +349,18 @@ const EnseignantListGroupes = () => {
                                             </div>:<div> 
 
                                           
-                                           <td> {item.matiere_note}    </td> 
-                                           <td>{getEmojiForNote(item.valeur_note)}
-                                            </td>
-                                          
+                                           <td> {item.matiere_note}</td> 
+                                           <td>{getEmojiForNote(item.valeur_note)}</td>
                                            <td>{item.competence_visee_note} </td>
+                                           <td>{item.appreciation_note}</td> 
                                           
-                                            <td>{item.appreciation_note}</td>  </div>  }
-                                          
-                                            
-                                            
+                                           </div>  }
+                    
                                         </tr>
                                     ))}
 
                                 </tbody>                     
-                            
-                      
-                               
+        
                             </table>
                         </Card.Body>
                     </Card>
