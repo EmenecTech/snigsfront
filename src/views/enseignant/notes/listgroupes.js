@@ -65,6 +65,18 @@ const EnseignantListGroupes = () => {
       setindices(res.data);
     });
   };
+
+     const [noteseleves, setnoteseleves] = useState([]);
+  useEffect(() => {
+    fetchAllNoteseleves();
+  }, []);
+
+  const fetchAllNoteseleves = () => {
+    http.get("/get_notes_eleves/" + etab + classe + evaluation + userid ).then((res) => {
+      setnoteseleves(res.data);
+    });
+  };
+    
      const [groupes, setgroupes] = useState([]);
   useEffect(() => {
     fetchAllGroupes();
@@ -319,7 +331,7 @@ const EnseignantListGroupes = () => {
                                 </thead>
                                           
                                 <tbody>
-                                    {notes.map((item, index) => (
+                                    {noteseleves.map((item, index) => (
                                         <tr key={item.id}>
                                             <td>{++index}</td>
                                             <td>
