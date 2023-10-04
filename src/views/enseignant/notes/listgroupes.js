@@ -24,11 +24,11 @@ const EnseignantListGroupes = () => {
     console.log(niveau);
  
     const getEmojiForNote = (note) => {
-    if (note = 10) {
+    if (note == 10) {
       return '☹️';
-    } else if (note = 15) {
+    } else if (note == 15) {
       return '😐';
-    } else if (note = 20) {
+    } else if (note == 20) {
       return '😃';
     }
       return ''; 
