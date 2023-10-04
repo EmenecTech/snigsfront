@@ -65,7 +65,16 @@ const EnseignantListGroupes = memo((props) => {
         setInputs(values => ({ ...values, [name]: value, etab }))
     }
 
+ const [groupes, setgroupes] = useState([]);
+  useEffect(() => {
+    fetchAllGroupes();
+  }, []);
 
+  const fetchAllGroupes = () => {
+    http.get("/get_groupes/" + etab).then((res) => {
+      setgroupes(res.data);
+    });
+  };
 
     useSelector(SettingSelector.theme_color);
 
@@ -322,9 +331,9 @@ return (
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                    <td>/</td>
-                                                
+                                    {groupes.map((item) => (
+                                            <tr key={item.id}>
+                                                <td>{item.intitule_groupe}</td>
                                                 <td>
                                                     <div className="flex align-items-center list-user-action">
 
@@ -342,7 +351,7 @@ return (
                                                 </td>
 
                                             </tr>
-                                 
+                                   ))}
                                     </tbody>
                                     <tfoot>
 
