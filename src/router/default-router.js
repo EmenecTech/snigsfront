@@ -716,7 +716,7 @@ export const DefaultRouter = [
                 element: <EnseignantListEleves />
             },
             {
-                path: 'Enseignant/List/Eleves/Groupes/:niveau/:classe/:evaluation/:userid'
+                path: 'Enseignant/List/Eleves/Groupes/:niveau/:classe/:evaluation/:userid',
                 element: <EnseignantListGroupes />
             },
             ////Cahier de texte
