@@ -10,7 +10,7 @@ const EnseignantListGroupes = () => {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
     const [notes, setNotes] = useState([]);
-    const {niveau, classe, evaluation, userid, matiere} = useParams();
+    const {niveau, classe, evaluation, userid} = useParams();
 
     const { user, http } = AuthUser();
     const etab = user.etablissement;
@@ -45,16 +45,7 @@ const EnseignantListGroupes = () => {
         })
     }
 
-    const [matiere_classe_info, setmatiere_classe_info] = useState([]);
-    useEffect(() => {
-        fetchAllmatiere_classe_info();
-    }, []);
-
-    const fetchAllmatiere_classe_info = () => {
-        http.get('/get_info_matiere_classe/' + etab + '/' + niveau + '/' +  classe + '/' + matiere ).then(res => {
-            setmatiere_classe_info(res.data);
-        })
-    }
+  
      const [indices, setindices] = useState([]);
   useEffect(() => {
     fetchAllIndices();
@@ -101,25 +92,13 @@ const EnseignantListGroupes = () => {
     //     })
     // }
 
-    useEffect(() => {
-        fetchAllNotes();
-    }, []);
-
-    const fetchAllNotes = () => {
-        http.get('/notes_eleves/' + etab + '/' + classe + '/' + matiere + '/' + evaluation).then(res => {
-            setNotes(res.data);
-
-        })
-
-
-    }
 
 
 
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-        setInputs(values => ({ ...values, [name]: value, etab, classe, matiere, evaluation, coefficient }))
+        setInputs(values => ({ ...values, [name]: value, etab, classe, evaluation, coefficient }))
 
     }
 
