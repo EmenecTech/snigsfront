@@ -706,17 +706,18 @@ export const DefaultRouter = [
                 path: 'Enseignant/List/Evaluations/:classe/:matiere',
                 element: <EnseignantListEvaluations />
             },
-            {
-                path: '/:classe',
-                element: <EnseignantListGroupes />
-            },
+            
             {
                 path: 'Enseignant/List/Groupes/Evaluations/:classe',
                 element: <EnseignantListGroupesEvaluations />
             },
-    {
+            {
                 path: 'Enseignant/List/Eleves/:niveau/:classe/:evaluation',
                 element: <EnseignantListEleves />
+            },
+            {
+                path: 'Enseignant/List/Eleves/Groupes/:niveau/:classe/:evaluation/:userid'
+                element: <EnseignantListGroupes />
             },
             ////Cahier de texte
             {
