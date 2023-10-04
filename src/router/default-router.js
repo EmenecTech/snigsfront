@@ -90,7 +90,7 @@ import EnseignantLeconChapitre from '../views/enseignant/chapitres/lecons_chapit
 import Enseignant_matieres_notes from '../views/enseignant/notes/listmatiere';
 import EnseignantAddNote from '../views/enseignant/notes/noteseleves';
 import EnseignantListEvaluations from '../views/enseignant/notes/notesevalutions';
-import Enseignant_groupes_notes from '../views/enseignant/notes/listgroupes';
+import EnseignantListGroupes from '../views/enseignant/notes/listgroupes';
 import ElevesListEvaluationsNotes from '../views/eleves/pedagogie/notes/lisevaluations';
 
 import EleveListNotesEval from '../views/eleves/pedagogie/notes/noteseleve';
