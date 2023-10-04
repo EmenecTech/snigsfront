@@ -80,8 +80,6 @@ const EnseignantListGroupes = () => {
     });
   };
 
-    const coefficient = matiere_classe_info.coefficient_cm;
-
     // useEffect(()=>{
     //     fetchAllClasses();
     // },[]);
