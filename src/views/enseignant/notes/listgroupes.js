@@ -48,7 +48,7 @@ import Card from "../../../components/Card.js";
 // install Swiper modules
 SwiperCore.use([Navigation]);
 
-const Enseignant_groupes_notes = memo((props) => {
+const EnseignantListGroupes = memo((props) => {
     const [show, setShow] = useState(false);
     const { user, http } = AuthUser();
     const handleClose = () => setShow(false);
@@ -342,7 +342,7 @@ return (
                                                 </td>
 
                                             </tr>
-                                        ))}
+                                 
                                     </tbody>
                                     <tfoot>
 
@@ -358,4 +358,4 @@ return (
     );
 })
 
-export default Enseignant_groupes_notes
+export default EnseignantListGroupes
