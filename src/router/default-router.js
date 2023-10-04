@@ -92,6 +92,7 @@ import EnseignantAddNote from '../views/enseignant/notes/noteseleves';
 import EnseignantListEvaluations from '../views/enseignant/notes/notesevalutions';
 import EnseignantListGroupes from '../views/enseignant/notes/listgroupes';
 import EnseignantListGroupesEvaluations from '../views/enseignant/notes/listgroupesevaluation';
+import EnseignantListEleves from '../views/enseignant/notes/listeleves';
 import ElevesListEvaluationsNotes from '../views/eleves/pedagogie/notes/lisevaluations';
 
 import EleveListNotesEval from '../views/eleves/pedagogie/notes/noteseleve';
@@ -712,6 +713,10 @@ export const DefaultRouter = [
             {
                 path: 'Enseignant/List/Groupes/Evaluations/:classe',
                 element: <EnseignantListGroupesEvaluations />
+            },
+    {
+                path: 'Enseignant/List/Eleves/:niveau/:classe/:evaluation',
+                element: <EnseignantListEleves />
             },
             ////Cahier de texte
             {
