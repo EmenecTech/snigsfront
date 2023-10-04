@@ -301,67 +301,67 @@ const EnseignantListGroupes = () => {
                         </Card.Header>
 
                         <Card.Body>
+                       {eleves_classe.cycle_niveau === 'Primaire' || eleves_classe.cycle_niveau === 'Primary' ? <div>
                             <table className="table">
-                  
-                                    <thead>
-                                                       
+                                    <thead>                  
                                     <tr>
                                         <th>Sno.</th>
                                         <th>Nom(s)</th>
-                                        <th>Prénom(s)</th>
-
-                                      {eleves_classe.cycle_niveau === 'Primaire' || eleves_classe.cycle_niveau === 'Primary' ? <div>
-                                          
+                                        <th>Prénom(s)</th>     
                                         <th>Groupes</th>
                                         <th>Note</th>
-                                       
                                         <th>Indices</th>
                                         <th>Appreciation</th>
                                           
-                                        </div>:<div>
-                                          
-                                         <th>Groupes</th>
-                                        <th>Evaluation</th>
-                                        <th>Indices</th>
-                                        <th>Appreciation</th>
-                                          
-                                            </div>  }
-
-                                       
-                                    </tr>
-                                </thead>
-                                          
-                                <tbody>
+                                  </tr>
+                                 </thead>
+                                    <tbody>
                                     {noteseleves.map((item, index) => (
                                         <tr key={item.id}>
                                             <td>{++index}</td>
                                             <td>{item.nom}</td>
                                             <td>{item.prenom}</td>
-                                               
-                                         {eleves_classe.cycle_niveau === 'Primaire' || eleves_classe.cycle_niveau === 'Primary' ? <div>
-                                          
-                                          <td>{item.matiere_note}</td> 
-                                          <td>{item.valeur_note}</td>
-                                          <td>{item.competence_visee_note}</td>
-                                          <td>{item.appreciation_note}</td>
-
-                                          
-                                            </div>:<div> 
-
-                                          
-                                           <td> {item.matiere_note}</td> 
-                                           <td>{getEmojiForNote(item.valeur_note)}</td>
-                                           <td>{item.competence_visee_note} </td>
-                                           <td>{item.appreciation_note}</td> 
-                                          
-                                           </div>  }
-                    
+                                            <td>{item.matiere_note}</td> 
+                                            <td>{item.valeur_note}</td>
+                                            <td>{item.competence_visee_note}</td>
+                                            <td>{item.appreciation_note}</td>
+                                            
                                         </tr>
                                     ))}
-
-                                </tbody>                     
-        
-                            </table>
+                                      </tbody>      
+                                     </table>    
+                                          
+                                      </div>:<div>    
+                                         <table className="table">
+                                    <thead>              
+                                    <tr>
+                                        <th>Sno.</th>
+                                        <th>Nom(s)</th>
+                                        <th>Prénom(s)</th>     
+                                        <th>Groupes</th>
+                                        <th>Evaluation</th>
+                                        <th>Indices</th>
+                                        <th>Appreciation</th>
+                                          
+                                  </tr>
+                                 </thead>
+                                    <tbody>
+                                    {noteseleves.map((item, index) => (
+                                        <tr key={item.id}>
+                                            <td>{++index}</td>
+                                            <td>{item.nom}</td>
+                                            <td>{item.prenom}</td>
+                                            <td>{item.matiere_note}</td> 
+                                            <td>{getEmojiForNote(item.valeur_note)}</td>
+                                            <td>{item.competence_visee_note}</td>
+                                            <td>{item.appreciation_note}</td>
+                                            
+                                        </tr>
+                                    ))}
+                                      </tbody>      
+                                     </table>    
+                               
+                                  </div>  }
                         </Card.Body>
                     </Card>
                 </Col>
