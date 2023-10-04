@@ -332,7 +332,7 @@ const EnseignantListGroupes = () => {
                                          {eleves_classe.cycle_niveau === 'Primaire' || eleves_classe.cycle_niveau === 'Primary' ? <div>
                                           
                                           <td>
-                                                {item.matiere_note}
+                                                {item.intitule_groupe}
                                             </td> 
                                           <td>
                                                 {item.valeur_note}
@@ -348,7 +348,7 @@ const EnseignantListGroupes = () => {
 
                                           
                                            <td>
-                                                {item.matiere_note}
+                                                {item.intitule_groupe}
                                             </td> 
                                            <td>
                                                {getEmojiForNote(item.valeur_note)}
