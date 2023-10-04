@@ -129,7 +129,7 @@ const EnseignantListGroupes = () => {
                 <Col sm="12" lg="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
-                            <h4 className="card-title">Note - {matiere}</h4>
+                            <h4 className="card-title">Notes</h4>
 
                             <div>
                                 <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3" onClick={handleShow}>
@@ -143,7 +143,7 @@ const EnseignantListGroupes = () => {
                                 </Button>
                                 <Modal show={show} onHide={handleClose}>
                                     <Modal.Header closeButton>
-                                        <Modal.Title>{matiere}</Modal.Title>
+                                        <Modal.Title>Ajouter une note</Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
                                         <Form>
@@ -298,6 +298,7 @@ const EnseignantListGroupes = () => {
                                         <th>Prénom(s)</th>
 
                                       {eleves_classe.cycle_niveau === 'Primaire' || eleves_classe.cycle_niveau === 'Primary' ? <div>
+                                          
                                         <th>Groupes</th>
                                         <th>Note</th>
                                        
@@ -310,6 +311,7 @@ const EnseignantListGroupes = () => {
                                         <th>Evaluation</th>
                                         <th>Indices</th>
                                         <th>Appreciation</th>
+                                          
                                             </div>  }
 
                                         <th> </th>
@@ -328,8 +330,9 @@ const EnseignantListGroupes = () => {
                                             </td>
                                                
                                          {eleves_classe.cycle_niveau === 'Primaire' || eleves_classe.cycle_niveau === 'Primary' ? <div>
+                                          
                                           <td>
-                                                {item.intitule_groupe}
+                                                {item.matiere_note}
                                             </td> 
                                           <td>
                                                 {item.valeur_note}
@@ -345,7 +348,7 @@ const EnseignantListGroupes = () => {
 
                                           
                                            <td>
-                                                {item.intitule_groupe}
+                                                {item.matiere_note}
                                             </td> 
                                            <td>
                                                {getEmojiForNote(item.valeur_note)}
