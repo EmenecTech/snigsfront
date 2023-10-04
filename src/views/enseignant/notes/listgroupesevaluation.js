@@ -423,4 +423,4 @@ const EnseignantListGroupesEvaluations = memo((props) => {
     );
 })
 
-export default EnseignantListGroupeEvaluations
+export default EnseignantListGroupesEvaluations
