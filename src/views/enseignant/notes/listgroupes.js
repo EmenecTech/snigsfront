@@ -72,7 +72,7 @@ const EnseignantListGroupes = () => {
   }, []);
 
   const fetchAllNoteseleves = () => {
-    http.get("/get_notes_eleves/" + etab + classe + evaluation + userid ).then((res) => {
+    http.get("/get_notes_eleves/" + etab + '/' + classe + '/' + evaluation + '/' + userid ).then((res) => {
       setnoteseleves(res.data);
     });
   };
