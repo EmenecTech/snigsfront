@@ -322,8 +322,8 @@ return (
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    
-                                                <td>/</td>
+                                    <tr>
+                                    <td>/</td>
                                                 
                                                 <td>
                                                     <div className="flex align-items-center list-user-action">
