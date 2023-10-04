@@ -326,7 +326,7 @@ const EnseignantListGroupes = () => {
                                           
                                             </div>  }
 
-                                        <th> </th>
+                                       
                                     </tr>
                                 </thead>
                                           
@@ -334,50 +334,30 @@ const EnseignantListGroupes = () => {
                                     {noteseleves.map((item, index) => (
                                         <tr key={item.id}>
                                             <td>{++index}</td>
-                                            <td>
-                                                {item.nom}
-                                            </td>
-                                            <td>
-                                                {item.prenom}
-                                            </td>
+                                            <td>{item.nom}</td>
+                                            <td>{item.prenom}</td>
                                                
                                          {eleves_classe.cycle_niveau === 'Primaire' || eleves_classe.cycle_niveau === 'Primary' ? <div>
                                           
-                                          <td>
-                                                {item.matiere_note}
-                                            </td> 
-                                          <td>
-                                                {item.valeur_note}
-                                            </td>
-                                  
-                                           <td>
-                                                {item.competence_visee_note}
-                                            </td>
-                                             <td>{item.appreciation_note}</td>
+                                          <td>{item.matiere_note}</td> 
+                                          <td>{item.valeur_note}</td>
+                                          <td>{item.competence_visee_note}</td>
+                                          <td>{item.appreciation_note}</td>
 
                                           
                                             </div>:<div> 
 
                                           
-                                           <td>
-                                                 {item.matiere_note}
-                                            </td> 
-                                           <td>
-                                               {getEmojiForNote(item.valeur_note)}
+                                           <td> {item.matiere_note}    </td> 
+                                           <td>{getEmojiForNote(item.valeur_note)}
                                             </td>
                                           
                                            <td>{item.competence_visee_note} </td>
                                           
-                                            <td>{item.appreciation_note}</td>
-                                            
-                                            </div>  }
+                                            <td>{item.appreciation_note}</td>  </div>  }
                                           
                                             
                                             
-                                            <td>
-
-
-                                            </td>
                                         </tr>
                                     ))}
 
