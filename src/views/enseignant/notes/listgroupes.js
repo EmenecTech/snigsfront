@@ -19,7 +19,7 @@ const EnseignantListGroupes = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
+    const coefficient = 1;
     
     console.log(niveau);
  
