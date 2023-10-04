@@ -375,22 +375,7 @@ const UniClasse = () => {
                                                                 </Form.Group>
                                                             </Form.Group>
                                                         </Col>
-     <Col>
-                                                            <Form.Group as={Row} className="form-group">
-                                                                <Form.Group className="form-group">
-                                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Group</div>):(<div> Groupe  </div>)}</Form.Label>
-                                                                    <select className="form-select mb-3 shadow-none" name="int" onChange={handleChange} required>
-                                                                        <option></option>
-                                                                        <option value="Toutes les groupes">Toutes les matières</option>
-                                                                        {groupes.map((item) => (
-                                                                            <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
 
-                                                                        ))}
-
-                                                                    </select>
-                                                                </Form.Group>
-                                                            </Form.Group>
-                                                        </Col>
                                                     </Row>
                                                     <Row>
                                                         <Col>
