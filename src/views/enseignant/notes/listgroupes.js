@@ -154,7 +154,7 @@ const EnseignantListGroupes = () => {
                                                 </select>
 
                                             </Form.Group>
-                                    {niveau === 'MATERNELLE' ? <div>
+                           {niveau == 'PRE NUSERY' || niveau == 'NUSERY ONE' || niveau == 'NUSERY TWO' || niveau == 'MATERNELLE' ? <div>
                                          <Form.Group className='form-group'>
                                                 <Form.Label>Groupes</Form.Label>
 
@@ -278,7 +278,7 @@ const EnseignantListGroupes = () => {
                         </Card.Header>
 
                         <Card.Body>
-                 {eleves_classe.cycle_niveau === 'Primaire' || eleves_classe.cycle_niveau === 'Primary' ? <div>
+                 
                      {niveau == 'PRE NUSERY' || niveau == 'NUSERY ONE' || niveau == 'NUSERY TWO' || niveau == 'MATERNELLE' ? <div>
                        <table className="table">
                                     <thead>              
@@ -340,40 +340,7 @@ const EnseignantListGroupes = () => {
                                       </tbody>      
                                      </table>                
                       </div> }
-                           
-                                          
-                                      </div>:<div>    
-                                           
-                                            
-                            <table className="table">
-                                    <thead>                  
-                                    <tr>
-                                        <th>Sno.</th>
-                                        <th>Nom(s)</th>
-                                        <th>Prénom(s)</th>     
-                                        <th>Groupes</th>
-                                        <th>Note</th>
-                                        <th>Indices</th>
-                                        <th>Appreciation</th>
-                                          
-                                  </tr>
-                                 </thead>
-                                    <tbody>
-                                    {noteseleves.map((item, index) => (
-                                        <tr key={item.id}>
-                                            <td>{++index}</td>
-                                            <td>{item.nom}</td>
-                                            <td>{item.prenom}</td>
-                                            <td>{item.matiere_note}</td> 
-                                            <td>{item.valeur_note}</td>
-                                            <td>{item.competence_visee_note}</td>
-                                            <td>{item.appreciation_note}</td>
-                                            
-                                        </tr>
-                                    ))}
-                                      </tbody>      
-                                     </table>    
-                                  </div>  }
+                        
                         </Card.Body>
                     </Card>
                 </Col>
