@@ -10,7 +10,7 @@ const EnseignantListGroupes = () => {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
     const [notes, setNotes] = useState([]);
-    const {niveau, classe, evaluation, userid} = useParams();
+    const {niveau, classe, evaluation, userid, matiere} = useParams();
 
     const { user, http } = AuthUser();
     const etab = user.etablissement;
