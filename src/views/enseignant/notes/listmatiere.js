@@ -365,7 +365,7 @@ const Enseignant_matieres_notes = memo((props) => {
                         </Card.Header>
                       
         
-     {confnotes.niveau_enseignement === 'Secondaire' ? 
+     {confnotes.niveau_enseignement === "Secondaire" ? 
          
             <div>
                 <Card.Body>
@@ -380,7 +380,7 @@ const Enseignant_matieres_notes = memo((props) => {
                                     <thead>
                                         <tr>
 
-                                            <th>Classe{confnotes.niveau_enseignement}</th>
+                                            <th>Classe {confnotes.niveau_enseignement}</th>
                                             <th>Matière</th>
                                             <th>Action</th>
                                         </tr>
@@ -431,7 +431,7 @@ const Enseignant_matieres_notes = memo((props) => {
                                     <thead>
                                         <tr>
 
-                                            <th>Classe{confnotes.niveau_enseignement}</th>
+                                            <th>Classe {confnotes.niveau_enseignement}</th>
                                           
                                             <th>Action</th>
                                         </tr>
