@@ -249,7 +249,61 @@ const EnseignantListGroupes = () => {
                                     
                                                
 
-                                    </div>}         
+                                    </div>}
+                {etab == 25 && niveau == 'MATERNELLE' ? <div>
+                    <Form.Group className='form-group'>
+                                                <Form.Label>Groupes</Form.Label>
+
+                                          <select className="form-select mb-3 shadow-none" name="matiere" onChange={handleChange}>
+                                                    <option> </option>
+                                                   
+                                         {groupes.map((item) => (
+                                            <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
+                                                            ))}
+                                                </select>
+                                           </Form.Group>
+                                                                
+                                            <Form.Group className='form-group'>
+                                                <Form.Label>Note /20</Form.Label>
+                                                <Form.Control type="number" id="valeur_note" name="valeur_note"
+                                                    value={inputs.valeur_note || ''}
+                                                    onChange={handleChange}
+                                                />
+                                            </Form.Group>
+ 
+                                         <Form.Group className='form-group'>
+                                                <Form.Label>coefficient</Form.Label>
+                                                <Form.Control type="number" id="coef" name="coef"
+                                                    value={coefficient}
+                                                    
+                                                    disabled
+                                                />
+                                            </Form.Group>
+                                                        
+                                                <Form.Group className='form-group'>
+                                                <Form.Label>Indices d'évalutation</Form.Label>
+
+                                          <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
+                                                    <option> </option>
+                                                    <option value="Ecrit">Ecrit</option>
+                                                    <option value="Oral">Oral</option>
+                                                    <option value="Pratique">Pratique</option>>
+                                         {indices.map((item) => (
+                                            <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
+                                                            ))}
+                                                </select>
+                                           </Form.Group>
+                                            <Form.Group className='form-group'>
+                                                <Form.Label>Appreciation</Form.Label>
+
+                                          <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
+                                                    <option> </option>
+                                                    <option value="Non acquis">Non acquis</option>
+                                                    <option value="En cours d'acquisition">En cours d'acquisition</option>
+                                                    <option value="Acquis">Acquis</option>
+                                                </select>
+                                           </Form.Group>
+                    </div> : <div></div>}
                                     
                                         <Button variant="primary" onClick={submitForm}>
                                             Ajouter
@@ -324,6 +378,37 @@ const EnseignantListGroupes = () => {
                                       </tbody>      
                                      </table>                
                       </div> }
+
+                    {etab == 25 && niveau == 'MATERNELLE' ? <div>
+                        <table className="table">
+                                    <thead>                  
+                                    <tr>
+                                        <th>Sno.</th>
+                                        <th>Nom(s)</th>
+                                        <th>Prénom(s)</th>     
+                                        <th>Groupes</th>
+                                        <th>Note</th>
+                                        <th>Indices</th>
+                                        <th>Appreciation</th>
+                                          
+                                  </tr>
+                                 </thead>
+                                    <tbody>
+                                    {noteseleves.map((item, index) => (
+                                        <tr key={item.id}>
+                                            <td>{++index}</td>
+                                            <td>{item.nom}</td>
+                                            <td>{item.prenom}</td>
+                                            <td>{item.matiere_note}</td> 
+                                            <td>{item.valeur_note}</td>
+                                            <td>{item.competence_visee_note}</td>
+                                            <td>{item.appreciation_note}</td>
+                                            
+                                        </tr>
+                                    ))}
+                                      </tbody>      
+                                     </table>
+                        </div> : <div></div>}
                         
                         </Card.Body>
                     </Card>
