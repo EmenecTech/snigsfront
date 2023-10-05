@@ -63,7 +63,7 @@ const ListNiveaux = memo((props) => {
     }, []);
 
     const fetchAllniveaux = () => {
-        http.get('/niveaux/' + user.etablissement).then(res => {
+        http.get('/niveaux').then(res => {
             setniveaux(res.data);
         })
     }
