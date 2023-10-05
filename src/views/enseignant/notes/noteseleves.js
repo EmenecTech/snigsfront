@@ -22,20 +22,6 @@ const EnseignantAddNote = () => {
 
     
     console.log(niveau);
-
-    
- 
-    const getEmojiForNote = (note) => {
-    if (note = 10) {
-      return '☹️';
-    } else if (note = 15) {
-      return '😐';
-    } else if (note = 20) {
-      return '😃';
-    }
-      return ''; 
-    };
-
     const [eleves_classe, seteleves_classe] = useState([]);
     useEffect(() => {
         fetchAlleleves_classe();
@@ -145,60 +131,9 @@ const EnseignantAddNote = () => {
                                                 <Form.Label htmlFor="exampleFormControlSelect1">Selectionner l'élève</Form.Label>
                                                 <select className="form-select" id="id_user" name="id_user" onChange={handleChange}>
                                                     <option> </option>
-                                                    {eleves_classe.map((user) => (
-
-                                                        <option
-                                                            value={user.id}
-                                                        >{user.nom} {user.prenom}</option>
-
-                                                    ))}
-
+                                                    {eleves_classe.map((user) => ( <option value={user.id}>{user.nom} {user.prenom}</option> ))}
                                                 </select>
-
                                             </Form.Group>
-                                    {niveau === 'MATERNELLE' ? <div>
-                                         <Form.Group className='form-group'>
-                                                <Form.Label>Note</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" id="valeur_note" name="valeur_note" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="10">☹️</option>
-                                                    <option value="15">😐</option>
-                                                    <option value="20">😃</option>
-                                           
-                                                </select>
-                                           </Form.Group>
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Indices d'évalutation</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Ecrit">Ecrit</option>
-                                                    <option value="Oral">Oral</option>
-                                                    <option value="Pratique">Pratique</option>>
-                                         {indices.map((item) => (
-                                            <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
-                                                            ))}
-                                                </select>
-                                           </Form.Group>
-                                                    <Form.Group className='form-group'>
-                                                <Form.Label>coefficient</Form.Label>
-                                                <Form.Control type="number" id="coef" name="coef"
-                                                    value={coefficient}
-                                                    
-                                                    disabled
-                                                />
-                                            </Form.Group>
-                                           <Form.Group className='form-group'>
-                                                <Form.Label>Compétence visée</Form.Label>
-                                                <Form.Control type="text" id="competence_visee" name="competence_visee"
-                                                    value={inputs.competence_visee || ''}
-                                                    onChange={handleChange}
-                                                />
-                                           </Form.Group>
-
-                                     
-                                    </div>:<div>
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Note /20</Form.Label>
                                                 <Form.Control type="number" id="valeur_note" name="valeur_note"
@@ -233,12 +168,7 @@ const EnseignantAddNote = () => {
                                                     onChange={handleChange}
                                                 />
                                             </Form.Group>
-
-                                    </div>}         
-                                    
-                                        <Button variant="primary" onClick={submitForm}>
-                                            Ajouter
-                                        </Button>
+                                        <Button variant="primary" onClick={submitForm}>Ajouter </Button>
                                     </Form>
                                     </Modal.Body>
                                 </Modal>
@@ -250,79 +180,35 @@ const EnseignantAddNote = () => {
                             <table className="table">
                   
                                     <thead>
-                                                       
-                                    <tr>
-                                        <th>Sno.</th>
-                                        <th>Nom(s)</th>
-                                        <th>Prénom(s)</th>
-
-                                      {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? <div>
-                                        <th>Note</th>
-                                        <th>Coefficient</th>
-                                        <th>NxC</th>
-                                        <th>Appreciation</th>
-                                          
-                                        </div>:<div>
-                                          
-                                        <th>Evaluation</th>
-                                        <th>Indices</th>
-                                            </div>  }
-
-                                          
-                                      
-                                        <th>Compétence visée</th>
-                                        <th> </th>
-                                    </tr>
+                                        <tr>
+                                            <th>Sno.</th>
+                                            <th>Nom(s)</th>
+                                            <th>Prénom(s)</th>
+                                            <th>Note</th>
+                                            <th>Coefficient</th>
+                                            <th>NxC</th>
+                                            <th>Appreciation</th>
+                                            <th>Compétence visée</th>
+                                            <th> </th>
+                                        </tr>
                                 </thead>
                                 <tbody>
                                     {notes.map((item, index) => (
                                         <tr key={item.id}>
                                             <td>{++index}</td>
-                                            <td>
-                                                {item.nom}
-                                            </td>
-                                            <td>
-                                                {item.prenom}
-                                            </td>
-                                               
-                                         {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? <div>
-                                            <td>
-                                                {item.valeur_note}
-                                            </td>
-                                          <td>
-                                                {matiere_classe_info.coefficient_cm}
-                                            </td>
-                                            <td>
-                                                {item.note_finale}
-                                            </td>
-                                         
-                                            
-                                           <td>
-                                                {item.appreciation_note}
-                                            </td>
-                                          
-                                            </div>:<div>  
-                                           <td>
-                                               {getEmojiForNote(item.valeur_note)}
-                                            </td>
-                                          
+                                            <td>{item.nom}</td>
+                                            <td>{item.prenom} </td>
+                                            <td>{item.valeur_note}</td>
+                                            <td>{matiere_classe_info.coefficient_cm}  </td>
+                                            <td>{item.note_finale}</td>
                                             <td>{item.appreciation_note}</td>
-                                            
-                                            </div>  }
-                                          
-                                            
                                             <td>{item.competence_visee_note} </td>
-                                            <td>
-
-
-                                            </td>
+                                
                                         </tr>
                                     ))}
 
                                 </tbody>                     
-                            
-                      
-                               
+ 
                             </table>
                         </Card.Body>
                     </Card>
