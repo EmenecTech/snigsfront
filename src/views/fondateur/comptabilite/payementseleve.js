@@ -362,13 +362,13 @@ const PayementsListEleve = (props) => {
                                         </Row>
                                         
                                         <Row>
-                                            <Col sm="4" lg="4">
+                                            <Col sm="12" lg="12">
                                                     
                                                     <br/>
                                                 <div ref={componentRef}
                                                 style={{ width: "90%", paddingTop:"15px", MarginTop: "10px" ,height: window.innerHeight }}>
                                                    <div className="d-flex justify-content-between">
-
+                                                <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
                                                     <Row>
                                                         <Col sm="3">
                         
@@ -422,7 +422,7 @@ const PayementsListEleve = (props) => {
                                                             </div>
                                                         </Col>
                                                     </Row>
-
+                                                </Col>
                                                         <div style={{ paddingLeft:"25px" }}>
 
 
