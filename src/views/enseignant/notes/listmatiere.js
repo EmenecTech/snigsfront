@@ -357,7 +357,7 @@ const Enseignant_matieres_notes = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Classes{confnotes.niveau_enseignement}</h4>
+                                <h4 className="card-title">Classes</h4>
                             </div>
 
 
@@ -431,7 +431,7 @@ const Enseignant_matieres_notes = memo((props) => {
                                     <thead>
                                         <tr>
 
-                                            <th>Classe</th>
+                                            <th>Classe{confnotes.niveau_enseignement}</th>
                                           
                                             <th>Action</th>
                                         </tr>
