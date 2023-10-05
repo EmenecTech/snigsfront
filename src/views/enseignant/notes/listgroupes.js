@@ -108,6 +108,17 @@ const EnseignantListGroupes = () => {
         console.log(inputs)
     }
 
+    const [matieres, setmatieres] = useState([]);
+    useEffect(() => {
+        fetchAllmatieres();
+    }, []);
+
+    const fetchAllmatieres = () => {
+        http.get('/get_matieres_enseignant/' + etab + '/' + userid).then(res => {
+            setmatieres(res.data);
+        })
+    }
+
 
 
    
@@ -251,7 +262,51 @@ const EnseignantListGroupes = () => {
                                          
                            
                                     </div>:<div>
-                                              <Form.Group className='form-group'>
+                                    {etab == 24 ? <div>
+                                            <Form.Group className="form-group">
+     
+                                                <Form.Label htmlFor="exampleFormControlSelect1">Selectionner la matière</Form.Label>
+                                                <select className="form-select" id="matiere" name="matiere" onChange={handleChange}>
+                                                    <option> </option>
+                                                    {matieres.map((item) => ( <option value={item.matiere_cp}>{{item.matiere_cp}</option> ))}
+                                                </select>
+                                            </Form.Group>
+                                            <Form.Group className='form-group'>
+                                                <Form.Label>Note /20</Form.Label>
+                                                <Form.Control type="number" id="valeur_note" name="valeur_note"
+                                                    value={inputs.valeur_note || ''}
+                                                    onChange={handleChange}
+                                                />
+                                            </Form.Group>
+ 
+                                         <Form.Group className='form-group'>
+                                                <Form.Label>coefficient</Form.Label>
+                                                <Form.Control type="number" id="coef" name="coef"
+                                                    value={coefficient}
+                                                    
+                                                    disabled
+                                                />
+                                            </Form.Group>
+                                            <Form.Group className='form-group'>
+                                                <Form.Label>Appreciation</Form.Label>
+
+                                          <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
+                                                    <option> </option>
+                                                    <option value="Non acquis">Non acquis</option>
+                                                    <option value="En cours d'acquisition">En cours d'acquisition</option>
+                                                    <option value="Acquis">Acquis</option>
+                                                </select>
+                                           </Form.Group>
+                                    
+                                               <Form.Group className='form-group'>
+                                                <Form.Label>Compétence visée</Form.Label>
+                                                <Form.Control type="text" id="competence_visee" name="competence_visee"
+                                                    value={inputs.competence_visee || ''}
+                                                    onChange={handleChange}
+                                                />
+                                            </Form.Group>
+                                        </div> : <div>
+                                            <Form.Group className='form-group'>
                                                 <Form.Label>Groupes</Form.Label>
 
                                           <select className="form-select mb-3 shadow-none" name="matiere" onChange={handleChange}>
@@ -303,6 +358,8 @@ const EnseignantListGroupes = () => {
                                                     <option value="Acquis">Acquis</option>
                                                 </select>
                                            </Form.Group>
+                                        </div>}
+                                              
                                     
                                                
 
