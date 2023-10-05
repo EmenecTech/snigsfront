@@ -123,6 +123,30 @@ const Dashboard_superadmin = memo((props) => {
 
 
 
+
+  function formatNumberWithCommas(number) {
+  // Convertir le nombre en chaîne de caractères
+  let numberString = number.toString();
+  // Créer un tableau vide pour stocker les parties du nombre
+  let parts = [];
+  // Tant qu'il y a plus de 3 chiffres dans la chaîne
+  while (numberString.length > 3) {
+    // Extraire les 3 derniers chiffres de la chaîne
+    let part = numberString.slice(-3);
+    // Ajouter cette partie au début du tableau
+    parts.unshift(part);
+    // Supprimer les 3 derniers chiffres de la chaîne
+    numberString = numberString.slice(0, -3);
+  }
+  // Si la chaîne n'est pas vide, ajouter la partie restante au début du tableau
+  if (numberString) {
+    parts.unshift(numberString);
+  }
+  // Joindre les parties du tableau avec des virgules et retourner le résultat
+  return parts.join(",");
+}
+
+
   
   const [alluser, setalluser] = useState([]);
   useEffect(() => {
@@ -1838,7 +1862,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         </div>
                         <div className="my-4">
                           <div className="card-number">
-                            <span className="fs-5 me-2">{allg}</span>
+                            <span className="fs-5 me-2">{formatNumberWithCommas(allg)}</span>
 
                             <span className="fs-5 me-2">{user.langue === "en" ? (<div> XAF </div>):(<div> XAF </div>)}</span>
                           </div>
