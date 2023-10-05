@@ -369,7 +369,64 @@ const PayementsListEleve = (props) => {
                                                 style={{ width: "90%", paddingTop:"15px", MarginTop: "10px" ,height: window.innerHeight }}>
                                                    <div className="d-flex justify-content-between">
 
+                                                    <Row>
+                                                        <Col sm="3">
+                        
+                                                            <div className="d-flex justify-content-between align-items-between">
+                                                                {" "}
+                                                                <Image
+                                                                    src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
+                                                                    style={{
+                                                                        width: "100px",
+                                                                        height: "100px",
+                                                                        borderRadius: "50%",
+                                                                        objectFit: "cover",
+                                                                        border: "2px solid black",
+                                                                    }}
+                                                                />
+                                                            </div>
+                                                        </Col>
+                                                        <Col sm="6" className="mt-4
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        ">
+                                                            {" "}
+                                                            <div className="col-sm-12 justify-content-center">
+                                                                <h6 className="text-center">
+                                                                   Facture
+                                                                </h6>
+                                                            </div>
+                                                            <div className="col-sm-12 justify-content-center">
+                                                                <h6 className="text-center">
+                                                                    
+                                                                </h6>
+                                                            </div>
+                                                            {" "}
+                                                        </Col>
+                                                        <Col sm="3">
+                                                            {" "}
+                                                            <div className="flex flex-column justify-content-center align-items-center">
+                                                                <Image
+                                                                    src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
+                                                                    style={{
+                                                                        width: "100px",
+                                                                        height: "100px",
+                                                                        borderRadius: "50%",
+                                                                        objectFit: "cover",
+                                                                        border: "2px solid black",
+                                                                    }}
+                                                                />
+                                                            </div>
+                                                        </Col>
+                                                    </Row>
+
                                                         <div style={{ paddingLeft:"25px" }}>
+
+
+                                                                
 
                                                                 <h3>{user.langue === "en" ? (<div>Payements </div>):(<div>Payements </div>)}</h3>
                                                                     <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
@@ -391,13 +448,6 @@ const PayementsListEleve = (props) => {
                                                         <div style={{ paddingRight:"35px" }}>
 
 
-                                                                        <Image
-                                                                          className="theme-color-default-img  profile-pic rounded avatar-100"
-                                                                          src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
-                                                                          alt="profile-pic"
-                                                                          roundedCircle="yes"
-                                                                          style={{ width: "10px" }}
-                                                                        />
                                                                         <br/> <br/>
                                                                         <h3>Signature</h3>
                                                                         
