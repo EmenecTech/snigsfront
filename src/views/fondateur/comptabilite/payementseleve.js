@@ -365,9 +365,9 @@ const PayementsListEleve = (props) => {
                                             <Col sm="12" lg="12">
                                                     
                                                     <br/>
-                                                <div ref={componentRef}
+                                            <div ref={componentRef}
                                                 style={{ width: "90%", paddingTop:"15px", MarginTop: "10px" ,height: window.innerHeight }}>
-                                                   <div className="d-flex justify-content-between">
+                                                   <div className="">
                                                 <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
                                                     <Row>
                                                         <Col sm="3">
