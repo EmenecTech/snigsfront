@@ -268,7 +268,7 @@ const EnseignantListGroupes = () => {
                                                 <Form.Label htmlFor="exampleFormControlSelect1">Selectionner la matière</Form.Label>
                                                 <select className="form-select" id="matiere" name="matiere" onChange={handleChange}>
                                                     <option> </option>
-                                                    {matieres.map((item) => ( <option value={item.matiere_cp}>{{item.matiere_cp}</option> ))}
+                                                    {matieres.map((item) => ( <option value={item.matiere_cp}>{item.matiere_cp}</option> ))}
                                                 </select>
                                             </Form.Group>
                                             <Form.Group className='form-group'>
