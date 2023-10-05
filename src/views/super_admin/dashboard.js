@@ -219,6 +219,7 @@ const Dashboard_superadmin = memo((props) => {
     })
   }
 
+  console.log(nbreleve)
   const [nbrens, setnbrens] = useState([]);
   useEffect(() => {
     fetchAllnbrens();
