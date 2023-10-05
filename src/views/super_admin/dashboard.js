@@ -2303,8 +2303,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                        
                           <div className="progress-detail">
                             <p className="mb-2">Montant payés sur la plateforme </p>
-                            <h4 className="counter"> XAF
-                              <CountUp start={0} end={formatNumberWithCommas(sumpay)} duration={5} /> 
+                            <h4 className="counter"> XAF {formatNumberWithCommas(sumpay)}
                             </h4>
                           </div>
                         </div>
