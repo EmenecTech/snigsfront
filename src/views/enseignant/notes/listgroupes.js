@@ -14,7 +14,7 @@ const EnseignantListGroupes = () => {
 
     const { user, http } = AuthUser();
     const etab = user.etablissement;
-
+    const id_user = userid;
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -138,22 +138,6 @@ const EnseignantListGroupes = () => {
                                     <Modal.Body>
                                         <Form>
                             
-                                            <Form.Group className="form-group">
-     
-                                                <Form.Label htmlFor="exampleFormControlSelect1">Selectionner l'élève</Form.Label>
-                                                <select className="form-select" id="id_user" name="id_user" onChange={handleChange}>
-                                                    <option> </option>
-                                                    {eleves_classe.map((user) => (
-
-                                                        <option
-                                                            value={user.id}
-                                                        >{user.nom} {user.prenom}</option>
-
-                                                    ))}
-
-                                                </select>
-
-                                            </Form.Group>
                            {niveau == 'PRE NUSERY' || niveau == 'NUSERY ONE' || niveau == 'NUSERY TWO' || niveau == 'MATERNELLE' ? <div>
                                          <Form.Group className='form-group'>
                                                 <Form.Label>Groupes</Form.Label>
