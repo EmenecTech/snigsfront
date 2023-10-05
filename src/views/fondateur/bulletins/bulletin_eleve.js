@@ -214,11 +214,11 @@ const BulletinByEleve = memo((props) => {
       })
     };
      const getEmojiForNote = (note) => {
-    if (note = 10) {
+    if (note == 10) {
       return '☹️';
-    } else if (note = 15) {
+    } else if (note == 15) {
       return '😐';
-    } else if (note = 20) {
+    } else if (note == 20) {
       return '😃';
     }
       return ''; 
@@ -1348,8 +1348,8 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                             <tbody>
                                                                 {allnotes.map((item, index) => (
                                                                     <tr key={index}>
-                                                                        <td>{item.groupe_cm}</td>
-                                                                        <td>{item.appreciation_note}</td>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.competence_visee_note}</td>
                                                                         <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                         <td></td>
                                                                     </tr>
@@ -1513,7 +1513,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                  <thead>
                                                                     <tr>
                                                                         <th><p>Disciplines</p></th>
-                                                                        <th>Matieres</th>
+                                                                       
                                                                         <th>Notes</th>
                                                                         <th>Appréciation</th>
                                                                     </tr>
@@ -1521,7 +1521,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 <tbody>
                                                                     {allnotespf.map((item, pf) => (
                                                                         <tr key={pf}>
-                                                                            <td>{item.groupe_cm}</td>
+                                                                         
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
                                                                             <td>{item.appreciation_note}</td>
@@ -1854,8 +1854,8 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                             >
                                                                 <thead>
                                                                    <tr>
-                                                                    <th><p>Disciplines</p></th>
-                                                                    <th>Materials</th>
+                                                                  
+                                                                    <th>Disciplines</th>
                                                                     <th>Mark</th>
                                                                     <th>Appreciation</th>
                                                                 </tr>
@@ -1863,7 +1863,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                             <tbody>
                                                                 {allnotespa.map((item, pa) => (
                                                                     <tr key={pa}>
-                                                                        <td>{item.groupe_cm}</td>
+                                                                     
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.appreciation_note}</td>
