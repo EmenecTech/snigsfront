@@ -140,7 +140,7 @@ const EnseignantListGroupes = () => {
                             
                            {niveau == 'PRE NUSERY' || niveau == 'NUSERY ONE' || niveau == 'NUSERY TWO' || niveau == 'MATERNELLE' ? <div>
 
-                                {etab == 25 ? <div>
+                                {etab == 24 ? <div>
                                 <Form.Group className='form-group'>
                                                 <Form.Label>Groupes</Form.Label>
 
