@@ -416,10 +416,8 @@ const Enseignant_matieres_notes = memo((props) => {
                             </div>
                         </Card.Body>
                                        
-</div> ) : (  <div>''</div> )} 
-
-{confnotes.niveau_enseignement === 'Secondaire' ?  <div>                 
-                                       
+</div> ) : (  <div> 
+                                                  
                         <Card.Body>
                             <div className="table-responsive border-bottom my-3">
                                 <Table
@@ -468,9 +466,10 @@ const Enseignant_matieres_notes = memo((props) => {
 
                             </div>
                         </Card.Body>
-                                        
- </div> : <div>''</div> }   
-                    
+                                                 
+        </div> )} 
+       
+    
                     </Card>
                 </Col>
             </Row>
