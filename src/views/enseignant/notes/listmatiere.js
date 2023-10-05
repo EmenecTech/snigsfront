@@ -75,7 +75,7 @@ const Enseignant_matieres_notes = memo((props) => {
             setconfnotes(res.data);
         })
     }
-  
+  console.log(confnotes);
 
     const [matieres, setmatieres] = useState([]);
     useEffect(() => {
