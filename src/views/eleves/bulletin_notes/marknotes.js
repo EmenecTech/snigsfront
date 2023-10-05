@@ -261,6 +261,191 @@ const BulletinByEleve = memo((props) => {
       })
     };
 
+     const [allind, setAllInd] = useState([]);
+    useEffect(() => {
+        fetchAllInd();  
+    }, []); 
+
+    const fetchAllInd = () => {
+        http.get('/get_ind_for_mat/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd(res.data);
+        }); 
+    };
+
+    const [allind1, setAllInd1] = useState([]);
+    useEffect(() => {
+        fetchAllInd1();  
+    }, []); 
+
+    const fetchAllInd1 = () => {
+        http.get('/get_ind_for_mat1/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd1(res.data);
+        }); 
+    };
+
+    const [allind2, setAllInd2] = useState([]);
+    useEffect(() => {
+        fetchAllInd2();  
+    }, []); 
+
+    const fetchAllInd2 = () => {
+        http.get('/get_ind_for_mat2/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd2(res.data);
+        }); 
+    };
+
+
+    const [allind3, setAllInd3] = useState([]);
+    useEffect(() => {
+        fetchAllInd3();  
+    }, []); 
+
+    const fetchAllInd3 = () => {
+        http.get('/get_ind_for_mat3/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd3(res.data);
+        }); 
+    };
+
+
+  
+    
+
+
+    const [allind4, setAllInd4] = useState([]);
+    useEffect(() => {
+        fetchAllInd4();  
+    }, []); 
+
+    const fetchAllInd4 = () => {
+        http.get('/get_ind_for_mat4/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd4(res.data);
+        }); 
+    };
+
+    
+    const [allind5, setAllInd5] = useState([]);
+    useEffect(() => {
+        fetchAllInd5();  
+    }, []); 
+
+    const fetchAllInd5 = () => {
+        http.get('/get_ind_for_mat5/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd5(res.data);
+        }); 
+    };
+
+    
+    const [allind6, setAllInd6] = useState([]);
+    useEffect(() => {
+        fetchAllInd6();  
+    }, []); 
+
+    const fetchAllInd6 = () => {
+        http.get('/get_ind_for_mat6/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd6(res.data);
+        }); 
+    };
+
+      const [allind7, setAllInd7] = useState([]);
+    useEffect(() => {
+        fetchAllInd7();  
+    }, []); 
+
+    const fetchAllInd7 = () => {
+        http.get('/get_ind_for_mat7/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd7(res.data);
+        }); 
+    };
+
+    const [allind8, setAllInd8] = useState([]);
+    useEffect(() => {
+        fetchAllInd8();  
+    }, []); 
+
+    const fetchAllInd8 = () => {
+        http.get('/get_ind_for_mat8/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd8(res.data);
+        }); 
+    };
+    
+     const [allind9, setAllInd9] = useState([]);
+    useEffect(() => {
+        fetchAllInd9();  
+    }, []); 
+
+    const fetchAllInd9 = () => {
+        http.get('/get_ind_for_mat9/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd9(res.data);
+        }); 
+    };
+
+    const [allind10, setAllInd10] = useState([]);
+    useEffect(() => {
+        fetchAllInd10();  
+    }, []); 
+
+    const fetchAllInd10 = () => {
+        http.get('/get_ind_for_mat10/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd10(res.data);
+        }); 
+    };
+    
+    const [allind11, setAllInd11] = useState([]);
+    useEffect(() => {
+        fetchAllInd11();  
+    }, []); 
+
+    const fetchAllInd11 = () => {
+        http.get('/get_ind_for_mat11/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd11(res.data);
+        }); 
+    };
+
+      const [allind12, setAllInd12] = useState([]);
+    useEffect(() => {
+        fetchAllInd12();  
+    }, []); 
+
+    const fetchAllInd12 = () => {
+        http.get('/get_ind_for_mat12/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd12(res.data);
+        }); 
+    };
+
+        const [allind13, setAllInd13] = useState([]);
+    useEffect(() => {
+        fetchAllInd12();  
+    }, []); 
+
+    const fetchAllInd13 = () => {
+        http.get('/get_ind_for_mat13/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd13(res.data);
+        }); 
+    };
+
+        const [allind14, setAllInd14] = useState([]);
+    useEffect(() => {
+        fetchAllInd14();  
+    }, []); 
+
+    const fetchAllInd14 = () => {
+        http.get('/get_ind_for_mat14/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd14(res.data);
+        }); 
+    };
+
+    const [allind15, setAllInd15] = useState([]);
+    useEffect(() => {
+        fetchAllInd15();  
+    }, []); 
+
+    const fetchAllInd15 = () => {
+        http.get('/get_ind_for_mat15/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd15(res.data);
+        }); 
+    };
+    
+
      const [sumnotes, setsumnotes] = useState([]);
     useEffect(() => {
         fetchAllsumnotes();
@@ -1161,7 +1346,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <thead>
                                                                    <tr>
                                                                        <th><p>Disciplines</p></th>
-                                                                        <th>Matieres</th>
+                                                                     
                                                                         <th>Notes</th>
                                                                         <th>Appréciation</th>
                                                                     </tr>
@@ -1169,7 +1354,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <tbody>
                                                                     {allnotespfe.map((item, pf) => (
                                                                         <tr key={pf}>
-                                                                            <td>{item.groupe_cm}</td>
+                                                                            
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
                                                                             <td>{item.appreciation_note}</td>
@@ -1538,7 +1723,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <thead>
                                                                    <tr>
                                                                     <th><p>Disciplines</p></th>
-                                                                    <th>Materials</th>
+                                                                   
                                                                     <th>Mark</th>
                                                                     <th>Appreciation</th>
                                                                 </tr>
@@ -1546,7 +1731,7 @@ const BulletinByEleve = memo((props) => {
                                                             <tbody>
                                                                 {allnotespae.map((item, pa) => (
                                                                     <tr key={pa}>
-                                                                        <td>{item.groupe_cm}</td>
+                                                                       
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.appreciation_note}</td>
