@@ -322,7 +322,38 @@ const EnseignantListGroupes = () => {
                         <Card.Body>
                  
                      {niveau == 'PRE NUSERY' || niveau == 'NUSERY ONE' || niveau == 'NUSERY TWO' || niveau == 'MATERNELLE' ? <div>
-                       <table className="table">
+
+                          {etab == 24 ? <div>
+                        <table className="table">
+                                    <thead>                  
+                                    <tr>
+                                        <th>Sno.</th>
+                                        <th>Nom(s)</th>
+                                        <th>Prénom(s)</th>     
+                                        <th>Groupes</th>
+                                        <th>Note</th>
+                                        <th>Indices</th>
+                                        <th>Appreciation</th>
+                                          
+                                  </tr>
+                                 </thead>
+                                    <tbody>
+                                    {noteseleves.map((item, index) => (
+                                        <tr key={item.id}>
+                                            <td>{++index}</td>
+                                            <td>{item.nom}</td>
+                                            <td>{item.prenom}</td>
+                                            <td>{item.matiere_note}</td> 
+                                            <td>{item.valeur_note}</td>
+                                            <td>{item.competence_visee_note}</td>
+                                            <td>{item.appreciation_note}</td>
+                                            
+                                        </tr>
+                                    ))}
+                                      </tbody>      
+                                     </table>
+                        </div> : <div>
+                          <table className="table">
                                     <thead>              
                                     <tr>
                                         <th>Sno.</th>
@@ -350,6 +381,8 @@ const EnseignantListGroupes = () => {
                                     ))}
                                       </tbody>      
                                      </table> 
+                      </div>}
+                       
                                         
                       </div> : <div>
                                               
@@ -382,37 +415,6 @@ const EnseignantListGroupes = () => {
                                       </tbody>      
                                      </table>                
                       </div> }
-
-                    {etab == 25 && niveau == 'MATERNELLE' ? <div>
-                        <table className="table">
-                                    <thead>                  
-                                    <tr>
-                                        <th>Sno.</th>
-                                        <th>Nom(s)</th>
-                                        <th>Prénom(s)</th>     
-                                        <th>Groupes</th>
-                                        <th>Note</th>
-                                        <th>Indices</th>
-                                        <th>Appreciation</th>
-                                          
-                                  </tr>
-                                 </thead>
-                                    <tbody>
-                                    {noteseleves.map((item, index) => (
-                                        <tr key={item.id}>
-                                            <td>{++index}</td>
-                                            <td>{item.nom}</td>
-                                            <td>{item.prenom}</td>
-                                            <td>{item.matiere_note}</td> 
-                                            <td>{item.valeur_note}</td>
-                                            <td>{item.competence_visee_note}</td>
-                                            <td>{item.appreciation_note}</td>
-                                            
-                                        </tr>
-                                    ))}
-                                      </tbody>      
-                                     </table>
-                        </div> : <div></div>}
                         
                         </Card.Body>
                     </Card>
