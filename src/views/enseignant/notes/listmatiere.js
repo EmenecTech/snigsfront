@@ -380,7 +380,7 @@ const Enseignant_matieres_notes = memo((props) => {
                                     <thead>
                                         <tr>
 
-                                            <th>Classe s {confnotes.niveau_enseignement}</th>
+                                            <th>Classe</th>
                                             <th>Matière</th>
                                             <th>Action</th>
                                         </tr>
@@ -431,8 +431,7 @@ const Enseignant_matieres_notes = memo((props) => {
                                     <thead>
                                         <tr>
 
-                                            <th>Classe z {confnotes.niveau_enseignement}</th>
-                                          
+                                            <th>Classe</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
