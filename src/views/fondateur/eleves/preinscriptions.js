@@ -74,7 +74,7 @@ const ListPreinscriptions = memo((props) => {
   }, []);
 
   const fetchAllniveaux = () => {
-    http.get('/niveaux_info/' + user.etablissement).then((res) => {
+    http.get('/niveaux').then((res) => {
       setniveaux(res.data);
     });
   };
