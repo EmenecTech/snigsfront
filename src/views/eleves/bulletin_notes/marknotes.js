@@ -217,11 +217,11 @@ const BulletinByEleve = memo((props) => {
       })
     };
      const getEmojiForNote = (note) => {
-     if (note = 10) {
+     if (note == 10) {
       return '☹️';
-    } else if (note = 15) {
+    } else if (note == 15) {
       return '😐';
-    } else if (note = 20) {
+    } else if (note == 20) {
       return '😃';
     }
       return ''; 
@@ -1907,7 +1907,7 @@ const BulletinByEleve = memo((props) => {
                                                                 {allnotese.map((item, index) => (
                                                                     <tr key={index}>
                                                                         <td>{item.matiere_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
+                                                                        <td>{item.competence_visee_note}</td>
                                                                         <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                         
                                                                     </tr>
