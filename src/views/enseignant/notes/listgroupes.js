@@ -15,6 +15,7 @@ const EnseignantListGroupes = () => {
     const { user, http } = AuthUser();
     const etab = user.etablissement;
     const id_user = userid;
+    const iduser = user.id;
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -114,7 +115,7 @@ const EnseignantListGroupes = () => {
     }, []);
 
     const fetchAllmatieres = () => {
-        http.get('/get_matieres_enseignant/' + etab + '/' + userid).then(res => {
+        http.get('/get_matieres_enseignant/' + etab + '/' + iduser).then(res => {
             setmatieres(res.data);
         })
     }
