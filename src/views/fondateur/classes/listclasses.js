@@ -407,7 +407,7 @@ const ListClasses = memo((props) => {
                                                         <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)} *</Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange} required>
                                                             <option></option>
-                                                            {niveaux.((item) => (
+                                                            {niveaux.map((item) => (
                                                                 <option key={item.id} value={item.intitule_niveau}>{item.intitule_niveau}</option>
 
                                                             ))}
