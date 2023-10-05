@@ -214,7 +214,7 @@ const Dashboard_superadmin = memo((props) => {
   }, []);
 
   const fetchAllnbreleve = () => {
-    http.get('/nbreleve_c/' + etab).then(res => {
+    http.get('/nbreleve_c/' + user.etablissement).then(res => {
       setnbreleve(res.data);
     })
   }
@@ -226,7 +226,7 @@ const Dashboard_superadmin = memo((props) => {
   }, []);
 
   const fetchAllnbrens = () => {
-    http.get('/nbrens_c/' + etab).then(res => {
+    http.get('/nbrens_c/' + user.etablissement).then(res => {
       setnbrens(res.data);
     })
   }
@@ -238,7 +238,7 @@ const Dashboard_superadmin = memo((props) => {
   }, []);
 
   const fetchAllnbrad = () => {
-    http.get('/nbrad_c/' + etab).then(res => {
+    http.get('/nbrad_c/' + user.etablissement).then(res => {
       setnbrad(res.data);
     })
   }
@@ -249,7 +249,7 @@ const Dashboard_superadmin = memo((props) => {
   }, []);
 
   const fetchAllnbrpreins = () => {
-    http.get('/nbreleve_preins/' + etab).then(res => {
+    http.get('/nbreleve_preins/' + user.etablissement).then(res => {
       setnbrpreins(res.data);
     })
   }
@@ -260,7 +260,7 @@ const Dashboard_superadmin = memo((props) => {
   }, []);
 
   const fetchAllnbrarchv = () => {
-    http.get('/nbreleve_arch/' + etab).then(res => {
+    http.get('/nbreleve_arch/' + user.etablissement).then(res => {
       setnbrarchv(res.data);
     })
   }
@@ -303,7 +303,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
     fetchAllmatieres_classe();
   }, []);
   const fetchAllmatieres_classe = () => {
-    http.get('/get_matieres_for_classe/' + etab + '/' + niveau + '/' + classe).then(res => {
+    http.get('/get_matieres_for_classe/' + user.etablissement + '/' + niveau + '/' + classe).then(res => {
       setmatieres_classe(res.data);
     })
   }
@@ -314,7 +314,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
   }, []);
 
   const fetchAllenseignant_in_classe = () => {
-    http.get('/get_enseignant_in_classe/' + etab + '/' + classe).then(res => {
+    http.get('/get_enseignant_in_classe/' + user.etablissement + '/' + classe).then(res => {
       setenseignant_in_classe(res.data);
     })
   }
@@ -326,7 +326,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
   }, []);
 
   const fetchAllallg = () => {
-    http.get('/sum/payement/' + etab).then(res => {
+    http.get('/sum/payement/' + user.etablissement).then(res => {
       setallg(res.data);
     })
   }
