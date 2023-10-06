@@ -153,18 +153,14 @@ const EnseignantListGroupes = () => {
                            {niveau == 'PRE NUSERY' || niveau == 'NUSERY ONE' || niveau == 'NUSERY TWO' || niveau == 'MATERNELLE' ? <div>
 
                                 {etab == 24 ? <div>
-                                <Form.Group className='form-group'>
-                                                <Form.Label>Groupes</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" name="matiere" onChange={handleChange}>
+                                 <Form.Group className="form-group">
+     
+                                                <Form.Label htmlFor="exampleFormControlSelect1">Selectionner la matière</Form.Label>
+                                                <select className="form-select" id="matiere" name="matiere" onChange={handleChange}>
                                                     <option> </option>
-                                                   
-                                         {groupes.map((item) => (
-                                            <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
-                                                            ))}
+                                                    {matieres.map((item) => ( <option value={item.matiere_cp}>{item.matiere_cp}</option> ))}
                                                 </select>
-                                           </Form.Group>
-                                                                
+                                            </Form.Group>
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Note /20</Form.Label>
                                                 <Form.Control type="number" id="valeur_note" name="valeur_note"
@@ -181,20 +177,6 @@ const EnseignantListGroupes = () => {
                                                     disabled
                                                 />
                                             </Form.Group>
-                                                        
-                                                <Form.Group className='form-group'>
-                                                <Form.Label>Indices d'évalutation</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Ecrit">Ecrit</option>
-                                                    <option value="Oral">Oral</option>
-                                                    <option value="Pratique">Pratique</option>>
-                                         {indices.map((item) => (
-                                            <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
-                                                            ))}
-                                                </select>
-                                           </Form.Group>
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Appreciation</Form.Label>
 
@@ -205,6 +187,14 @@ const EnseignantListGroupes = () => {
                                                     <option value="Acquis">Acquis</option>
                                                 </select>
                                            </Form.Group>
+                                    
+                                               <Form.Group className='form-group'>
+                                                <Form.Label>Compétence visée</Form.Label>
+                                                <Form.Control type="text" id="competence_visee" name="competence_visee"
+                                                    value={inputs.competence_visee || ''}
+                                                    onChange={handleChange}
+                                                />
+                                            </Form.Group>
                         </div> : <div>
                                 <Form.Group className='form-group'>
                                                 <Form.Label>Groupes</Form.Label>
