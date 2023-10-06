@@ -957,65 +957,7 @@ const BulletinByEleve = memo((props) => {
                                                         </Col>
                                                     </Row>
     
-                                                    <Row>
-                                                        <Col sm="5" lg="5">
-                                                            <Row style={{ fontSize: "10px" }}>
-                                                                <Col sm="6" lg="6">
-                                                                    <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0" >Classe: {user.other_in_user}</p>
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: {classe} </p>
-                                                                    </div>
-                                                           <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">N° Matricule:</p>
-                                                                <p>Registration N°</p>
-                                                            </div>
-                                                                </Col>
-                                                            </Row>
-
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom et Prénom: {user.nom} {user.prenom}</p>
-                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">Sexe: {user.sexe}</p>
-                                                            </div>
-
-                                                            <div className="mt-1">
-                                                                <Row>
-                                                                    <Col sm="6" lg="6">
-                                                                        <div className="mt-1">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-1">Né(e) le: {user.date_naissance} à: {user.lieu_naissance}</p>
-                                                                          
-                                                                        </div>
-                                                                    </col>
-                                                                </Row>
-                                                            </div>
-                                                            <div className="mt-1">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-1">Téléphone du parent ou tuteur:</p>
-                                                                <p>Parent's/guardian's Address</p>
-                                                            </div>
-
-                                                        </Col>
-                                                        <Col sm="5" lg="5">
-
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Professeur principal:</p>
-                                                               
-                                                            </div>
-
-                                                        </Col>
-                                                        <Col sm="2" lg="2">
-                                                            <div className="bd-example">
-                                                                <figure className="figure">
-                                                                    <Image
-                                                                        className="theme-color-default-img  profile-pic rounded avatar-100"
-                                                                        src={image}
-                                                                        alt="profile-pic"
-                                                                        style={{ width: "100px" }}
-                                                                    />
-                                                                </figure>
-                                                            </div>
-
-                                                        </Col>
-
-                                                    </Row>
+                                                   
                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
                                                             <Table
