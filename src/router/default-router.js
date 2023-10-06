@@ -165,6 +165,10 @@ import AdminlistdocumentsElevesLoad from '../views/fondateur/documents/eleveslis
 import DocumentsListNiveauClasseEleves from '../views/fondateur/documents/doumentsclasseeleves';
 import AdminlistdocumentsOfEleves from '../views/fondateur/documents/documentsofelevesload';
 
+//06/10/2023
+import ListClassesFiche from '../views/fondateur/documents/listclasses'
+import ListelevesforClasses from '../views/fondateur/documents/listelevesforclasse'
+
 //21/07/2023
 import EditEleve from '../views/fondateur/classes/editeleves';
 import EditEnseignants from '../views/fondateur/enseignants/editenseignants';
@@ -503,6 +507,18 @@ export const DefaultRouter = [
                 element: <EditEleve />
 
             },
+
+    ///06/10/2023
+
+            {
+                path: 'FicheEleve/classe',
+                element: <ListClassesFiche />
+            };
+
+            {
+                path:'FicheEleve/:niveau/:classe',
+                element: <ListelevesforClasses />
+            };
 
             ///////////////////////////////////////////////////////////////////////////Eleves
             ////////////
