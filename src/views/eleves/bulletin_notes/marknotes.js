@@ -932,18 +932,11 @@ const BulletinByEleve = memo((props) => {
                                                                     </div>
                                                                 </Col>
                                                             </Row>
-
-
-
                                                         </Col>
                                                         <Col sm="4" lg="4">
-                                                            <p className="text-center">REPUBLIC OF CAMEROON <br />
-                                                                Peace - Work - Fatherland <br />
-                                                                MINISTRY OF SECONDARY EDUCATION <br />
-
+                                                            <p className="text-center">ETABLISSEMENT : <br />
+                                                                BP :      TEL: <br />
                                                             </p>
-
-
                                                         </Col>
 
                                                     </Row>
@@ -957,7 +950,28 @@ const BulletinByEleve = memo((props) => {
                                                         </Col>
                                                     </Row>
     
-                                                   
+                                                   <Row>
+                                                     <Col sm="5" lg="5">
+                                                       <Row style={{ fontSize: "10px" }}>
+                                                                <Col sm="6" lg="6">
+                                                                    <div className="mt-2">
+                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0" >Nom et Prénom: {user.nom}{user.prénom}</p>
+                                                                         <p tyle={{ fontSize: "10px" }} className="mb-1">Né(e) le: {user.date_naissance} à {user.lieu_naissance}</p>
+                                                                          <p tyle={{ fontSize: "10px" }} className="mb-1">Sexe : {user.sexe}</p>
+                                                                          <p tyle={{ fontSize: "10px" }} className="mb-1">Matricule : {user.matricule}</p>
+                                                                    </div>
+                                                                </Col>
+                                                               <Col sm="6" lg="6">
+                                                                    <div className="mt-2">
+                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">Classe: {user.other_in_user}</p>
+                                                                         <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant(e): {user.other_in_user}</p>
+                                                                         <p tyle={{ fontSize: "10px" }} className="mb-0">Professeur principal:</p>
+                                                                    </div>
+                                                                </Col>
+
+                                                            </Row>
+                                                    </col>
+                                                    </Row>
                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
                                                             <Table
