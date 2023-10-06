@@ -2917,7 +2917,7 @@ const ParentsBulletinNotes = memo((props) => {
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                {allnotes.map((item, index) => (
+                                                                {allnotese.map((item, index) => (
                                                                     <tr key={index}>
                                                                         <td>{item.groupe_cm}</td>
                                                                         <td>{item.matiere_note}</td>
@@ -3096,7 +3096,7 @@ const ParentsBulletinNotes = memo((props) => {
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                {allnotes.map((item, index) => (
+                                                                {allnotese.map((item, index) => (
                                                                     <tr key={index}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.competence_visee_note}</td>
