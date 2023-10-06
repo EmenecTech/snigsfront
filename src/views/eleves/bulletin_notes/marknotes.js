@@ -952,7 +952,7 @@ const BulletinByEleve = memo((props) => {
                                                     </Row>
     
                                             <Row>
-                                               <Col sm="12" lg="12" className="d-flex justify-content-center">
+                                               <Col sm="12" lg="12">
                                                     <Row style={{ fontSize: "10px" }}>
                                                       <Col sm="4" lg="4">
                                                         <div className="mt-2">
