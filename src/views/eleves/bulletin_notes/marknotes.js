@@ -966,19 +966,32 @@ const BulletinByEleve = memo((props) => {
                                                     <Row style={{ fontSize: "10px" }}>
                                                       <Col sm="6" lg="6">
                                                         <div className="mt-2">
-                                                          <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom: {user.nom} {user.prénom}</p>
-                                                          <p style={{ fontSize: "10px" }} className="mb-1">Né(e) le: {user.date_naissance} à {user.lieu_naissance}</p>
-                                                          <p style={{ fontSize: "10px" }} className="mb-1">Sexe: {user.sexe}</p>
-                                                          <p style={{ fontSize: "10px" }} className="mb-1">Matricule: {user.matricule}</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {user.nom} {user.prénom}</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : {user.date_naissance} à {user.lieu_naissance}</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Sexe : {user.sexe}</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Matricule : {user.matricule}</p>
                                                         </div>
                                                       </Col>
                                                       <Col sm="6" lg="6">
                                                         <div className="mt-2">
-                                                          <p style={{ fontSize: "10px" }} className="mb-0">Classe: {user.other_in_user}</p>
-                                                          <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e): {user.other_in_user}</p>
-                                                          <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal:</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Classe : {user.other_in_user}</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : {user.other_in_user}</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal :</p>
                                                         </div>
                                                       </Col>
+                                                            <Col sm="2" lg="2">
+                                                            <div className="bd-example">
+                                                                <figure className="figure">
+                                                                    <Image
+                                                                        className="theme-color-default-img  profile-pic rounded avatar-100"
+                                                                        src={image}
+                                                                        alt="profile-pic"
+                                                                        style={{ width: "100px" }}
+                                                                    />
+                                                                </figure>
+                                                            </div>
+
+                                                        </Col>
                                                     </Row>
                                                   </Col>
                                                 </Row>
