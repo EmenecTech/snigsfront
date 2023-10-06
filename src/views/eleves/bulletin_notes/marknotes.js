@@ -439,10 +439,33 @@ const [matiereslevel, setmatiereslevel] = useState([]);
     }, []);
 
     const fetchAllNotessfe = () => {
-        http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/' + groupe + '/' + userid).then(res => {
+        http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/' + allind.intitule_groupe + '/' + userid).then(res => {
         setAllNotessfe(res.data);
       })
     };
+
+      const [allnotessfe1, setAllNotessfe1] = useState([]);
+    useEffect(() => {
+        fetchAllNotessfe1();
+    }, []);
+
+    const fetchAllNotessfe1 = () => {
+        http.get('/all_notes_sfe1/' + etab + '/' + classe + "/" + evaluation + '/' + allind1.intitule_groupe + '/' + userid).then(res => {
+        setAllNotessfe1(res.data);
+      })
+    };
+
+      const [allnotessfe2, setAllNotessfe2] = useState([]);
+    useEffect(() => {
+        fetchAllNotessfe2();
+    }, []);
+
+    const fetchAllNotessfe2 = () => {
+        http.get('/all_notes_sfe2/' + etab + '/' + classe + "/" + evaluation + '/' + allind2.intitule_groupe + '/' + userid).then(res => {
+        setAllNotessfe2(res.data);
+      })
+    };
+    
      const [sumnotes, setsumnotes] = useState([]);
     useEffect(() => {
         fetchAllsumnotes();
@@ -1008,15 +1031,7 @@ const [matiereslevel, setmatiereslevel] = useState([]);
                                                                     </tr>
                                                                 </thead>
                                                             <tbody>
-                                                                    <tr>
-                                                                    <td>{allind.intitule_groupe}</td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    
-                                                                    </tr>
+                                                                   
                                                                 {allnotessfe.map((item, sf) => (
                                                                     <tr key={sf}>
                                                                         <td></td>
@@ -1028,49 +1043,53 @@ const [matiereslevel, setmatiereslevel] = useState([]);
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
-                                                                <tbody>
+                                                               <thead>
                                                                     <tr>
-                                                                    <td>{allind1.intitule_groupe}</td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    
-                                                                    </tr>
-                                                                {allnotessfe.map((item, sf) => (
-                                                                    <tr key={sf}>
-                                                                        <td></td>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.coefficient_note}</td>
-                                                                        <td>{item.note_finale}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                                <tbody>
-                                                                    <tr>
-                                                                    <td>{allind2.intitule_groupe}</td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    
-                                                                    </tr>
-                                                                {allnotessfe.map((item, sf) => (
-                                                                    <tr key={sf}>
-                                                                        <td></td>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.coefficient_note}</td>
-                                                                        <td>{item.note_finale}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
 
+                                                                        <th>{allind.intitule_groupe}</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                 <tbody>
+                                                                   
+                                                                {allnotessfe1.map((item, sf1) => (
+                                                                    <tr key={sf1}>
+                                                                        <td></td>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allind1.intitule_groupe}</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                 <tbody>
+                                                                   
+                                                                {allnotessfe2.map((item, sf2) => (
+                                                                    <tr key={sf2}>
+                                                                        <td></td>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allind2.intitule_groupe}</th>
+
+                                                                    </tr>
+                                                                </thead>
                                                                 <tbody>
 
                                                                     <tr>
