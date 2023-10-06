@@ -925,8 +925,9 @@ const BulletinByEleve = memo((props) => {
                                                         </Col>
                                                         <Col sm="4" lg="4">
                                                             <p className="text-center">ETABLISSEMENT : <br />
-                                                                BP : <br />     
-                                                                TEL: <br />
+                                                             <p>BP : <br />
+                                                             <p>TEL : <br />
+                                                               
                                                             </p>
                                                         </Col>
 
@@ -942,8 +943,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <hr />
                                                                 2022 - 2023
                                                             </p>
-
-
+    
                                                         </Col>
                                                         <Col sm="4" lg="4">
 
@@ -953,7 +953,7 @@ const BulletinByEleve = memo((props) => {
                                                     </Row>
     
                                                    <Row>
-                                               
+                                               <Col sm="12" lg="12" className="d-flex justify-content-center">
                                                     <Row style={{ fontSize: "10px" }}>
                                                       <Col sm="4" lg="4">
                                                         <div className="mt-2">
@@ -984,7 +984,7 @@ const BulletinByEleve = memo((props) => {
 
                                                         </Col>
                                                     </Row>
-                                               
+                                                  </col>
                                                 </Row>
                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
