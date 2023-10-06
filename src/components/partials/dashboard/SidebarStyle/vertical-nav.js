@@ -763,6 +763,24 @@ const VerticalNav = memo((props) => {
                                      
                                     </ul>
                                 </Accordion.Collapse>
+                                        <Accordion.Collapse eventKey="sidebar-form-documents" >
+                                    <ul className="sub-nav">
+                                        <li className="nav-item">
+                                            <Link className={`${location.pathname === '/FicheEleves/Classes' ? 'active' : ''} nav-link`} to="/FicheEleves/Classes">
+                                                <i className="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                                        <g>
+                                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                                        </g>
+                                                    </svg>
+                                                </i>
+                                                <i className="sidenav-mini-icon"> E </i>
+                                                <span className="item-name"> {user.langue === "en" ? (<div>Student files</div>):(<div> Fiches Elèves </div>)}</span>
+                                            </Link>
+                                        </li>
+                                     
+                                    </ul>
+                                </Accordion.Collapse>
                             </Accordion.Item>
                             <Accordion.Item as="li" eventKey="sidebar-comptabilite" bsPrefix={`nav-item ${active === 'user' ? 'active' : ''} `} onClick={() => setActive('user')}>
                                 <CustomToggle eventKey="sidebar-comptabilite" onClick={(activeKey) => setActiveMenu(activeKey)}>
