@@ -921,21 +921,12 @@ const BulletinByEleve = memo((props) => {
                                                                 </Col>
                                                             </Row>
                                                             <br />
-                                                            <Row>
-                                                                <Col sm="12">
-                                                                    <div className="container text-center">
-                                                                        <p>Nom de l'établissement
-                                                                            <br />
-                                                                            <smal>BP: Tel:</smal>
-                                                                        </p>
-
-                                                                    </div>
-                                                                </Col>
-                                                            </Row>
+    
                                                         </Col>
                                                         <Col sm="4" lg="4">
                                                             <p className="text-center">ETABLISSEMENT : <br />
-                                                                BP :      TEL: <br />
+                                                                BP : <br />     
+                                                                TEL: <br />
                                                             </p>
                                                         </Col>
 
