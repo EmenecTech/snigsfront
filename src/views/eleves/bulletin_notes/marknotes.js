@@ -951,7 +951,7 @@ const BulletinByEleve = memo((props) => {
 
                                                     </Row>
     
-                                                   <Row>
+                                            <Row>
                                                <Col sm="12" lg="12" className="d-flex justify-content-center">
                                                     <Row style={{ fontSize: "10px" }}>
                                                       <Col sm="4" lg="4">
@@ -983,7 +983,7 @@ const BulletinByEleve = memo((props) => {
 
                                                         </Col>
                                                     </Row>
-                                                  </col>
+                                                  </Col>
                                                 </Row>
                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
