@@ -979,7 +979,7 @@ const BulletinByEleve = memo((props) => {
                                                           <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal :</p>
                                                         </div>
                                                       </Col>
-                                                            <Col sm="2" lg="2">
+                                                            <Col sm="6" lg="6">
                                                             <div className="bd-example">
                                                                 <figure className="figure">
                                                                     <Image
