@@ -851,14 +851,8 @@ const BulletinByEleve = memo((props) => {
 
 
 
-
-
-
-
-
-
-
     return (
+        
         <Fragment>
         
         {classes.cycle_niveau === 'Secondaire' || classes.cycle_niveau === 'Secondary' ? <div>
@@ -960,59 +954,39 @@ const BulletinByEleve = memo((props) => {
                                                         </Col>
                                                         <Col sm="4" lg="4">
                                                             <p className="text-center">
-                                                                Intitulé du bulletin
+                                                               BULLETIN DE NOTES
                                                                 <hr />
                                                                 2022 - 2023
                                                             </p>
-
-
                                                         </Col>
-                                                        <Col sm="4" lg="4">
-
-
-                                                        </Col>
-
                                                     </Row>
+    
                                                     <Row>
                                                         <Col sm="5" lg="5">
                                                             <Row style={{ fontSize: "10px" }}>
                                                                 <Col sm="6" lg="6">
                                                                     <div className="mt-2">
                                                                         <p tyle={{ fontSize: "10px" }} className="mb-0" >Classe: {user.other_in_user}</p>
-                                                                        <p>Class</p>
+                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: {classe} </p>
                                                                     </div>
-
+                                                           <div className="mt-2">
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">N° Matricule:</p>
+                                                                <p>Registration N°</p>
+                                                            </div>
                                                                 </Col>
-                                                                <Col sm="6" lg="6">
-                                                                    <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">Effectif:</p>
-                                                                        <p>Number</p>
-                                                                    </div>
-                                                                </Col>
-
                                                             </Row>
 
                                                             <div className="mt-2">
                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">Nom et Prénom: {user.nom} {user.prenom}</p>
-                                                                <p>Name and Surname</p>
                                                             </div>
 
                                                             <div className="mt-1">
                                                                 <Row>
                                                                     <Col sm="6" lg="6">
                                                                         <div className="mt-1">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-1">Né(e) le: {user.date_naissance}</p>
-                                                                            <p>Born on</p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-1">Né(e) le: {user.date_naissance} à: {user.lieu_naissance}</p>
+                                                                          
                                                                         </div>
-
-                                                                    </Col>
-                                                                    <Col sm="6" lg="6">
-                                                                        <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">A: {user.lieu_naissance}</p>
-                                                                            <p>AT</p>
-                                                                        </div>
-                                                                    </Col>
-
                                                                 </Row>
                                                             </div>
                                                             <div className="mt-1">
@@ -1024,20 +998,12 @@ const BulletinByEleve = memo((props) => {
                                                         <Col sm="5" lg="5">
 
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">N° Matricule:</p>
-                                                                <p>Registration N°</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: {classe} </p>
-                                                                <p>Repeater</p>
-                                                            </div>
-                                                            <div className="mt-2">
                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">Sexe: {user.sexe}</p>
-                                                                <p>Sex</p>
+                                                         
                                                             </div>
                                                             <div className="mt-2">
                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">Professeur principal:</p>
-                                                                <p>Class Master/Mistress</p>
+                                                               
                                                             </div>
 
                                                         </Col>
