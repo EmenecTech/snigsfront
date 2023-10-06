@@ -860,11 +860,14 @@ const BulletinByEleve = memo((props) => {
 
     return (
         <Fragment>
+        
         {classes.cycle_niveau === 'Secondaire' || classes.cycle_niveau === 'Secondary' ? <div>
   
-   {classes.section_niveau === 'Francophone' ? <div>
+        {classes.section_niveau === 'Francophone' ? <div>
 
-    {/* Bulletin du secondaire francophone */}
+           {/* Bulletin du secondaire francophone */}
+
+
           <Row>
                 <Col sm="12">
                     <Card>
@@ -1072,7 +1075,6 @@ const BulletinByEleve = memo((props) => {
                                                                         <th>Note</th>
                                                                         <th>Coef</th>
                                                                         <th>NxC</th>
-                                                                       
                                                                         <th>Appreciation</th>
                                                                     </tr>
                                                                 </thead>
@@ -1080,7 +1082,7 @@ const BulletinByEleve = memo((props) => {
                                                                 {allnotessfe.map((item, sf) => (
                                                                     <tr key={sf}>
                                                                         <td>{item.groupe_cm}</td>
-                                                                        <td>{item.matiere_note}( {item.nom} {item.prenom} )</td>
+                                                                        <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
@@ -1094,8 +1096,8 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
                                                                        <td>RECAPITULATIFS</td>
                                                                         <td></td>
-                                                                        <td>{sumnotes}</td>
-                                                                        <td>{sumcoef}</td>
+                                                                        <td></td>
+                                                                        <td></td>
                                                                         <td>{sumnotesfinale}</td>
                                                                         <td></td>
                                                                     </tr>
@@ -1424,7 +1426,7 @@ const BulletinByEleve = memo((props) => {
                                                                 {allnotessfe.map((item, sf) => (
                                                                     <tr key={sf}>
                                                                         <td>{item.groupe_cm}</td>
-                                                                        <td>{item.matiere_note}( {item.nom} {item.prenom} )</td>
+                                                                        <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
