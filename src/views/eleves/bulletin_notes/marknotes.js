@@ -953,7 +953,7 @@ const BulletinByEleve = memo((props) => {
                                                     </Row>
     
                                                    <Row>
-                                                  <col sm="12" lg="12">
+                                               
                                                     <Row style={{ fontSize: "10px" }}>
                                                       <Col sm="4" lg="4">
                                                         <div className="mt-2">
@@ -984,7 +984,7 @@ const BulletinByEleve = memo((props) => {
 
                                                         </Col>
                                                     </Row>
-                                                 </col>
+                                               
                                                 </Row>
                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
