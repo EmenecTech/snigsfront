@@ -1008,9 +1008,18 @@ const BulletinByEleve = memo((props) => {
                                                                     </tr>
                                                                 </thead>
                                                             <tbody>
+                                                                    <tr>
+                                                                    <td>{allind1}</td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    
+                                                                    </tr>
                                                                 {allnotessfe.map((item, sf) => (
                                                                     <tr key={sf}>
-                                                                        <td>{item.groupe_cm}</td>
+                                                                        <td></td>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
