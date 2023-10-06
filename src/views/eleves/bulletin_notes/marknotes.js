@@ -180,83 +180,7 @@ const BulletinByEleve = memo((props) => {
             imageRef.current = null;
         };
     }, [fetchProductImage]);
-    const [matiereslevel, setmatiereslevel] = useState([]);
-    useEffect(() => {
-        fetchAllmatiereslevel();
-    }, []);
-
-    const fetchAllmatiereslevel = () => {
-        http.get('/get_matieres_niveau_planning/' + niveau + '/' + etab).then(res => {
-            setmatiereslevel(res.data);
-        })
-    }
-
-    const [enseign, setenseign] = useState();
-    useEffect(() => {
-       fetchAllenseign();
-    }, []);
-
-    const fetchAllenseign = () => {
-        http.get('/get_ens_prim/' + etab + '/' + classe).then(res => {
-             setenseign(res.data);
-        })
-    }
-    console.log(enseign);
-
-   const [allnotese, setAllNotese] = useState([]);
-    useEffect(() => {
-        fetchAllNotese();
-    }, []);
-
-    const fetchAllNotese = () => {
-        http.get('/all_notese/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotese(res.data);
-      })
-    };
-     const getEmojiForNote = (note) => {
-     if (note == 10) {
-      return '☹️';
-    } else if (note == 15) {
-      return '😐';
-    } else if (note == 20) {
-      return '😃';
-    }
-      return ''; 
-    };
-
-    const [allnotespfe, setAllNotespfe] = useState([]);
-    useEffect(() => {
-        fetchAllNotespfe();
-    }, []);
-
-    const fetchAllNotespfe = () => {
-        http.get('/all_notes_pfe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotespfe(res.data);
-      })
-    };
-
     
-    const [allnotespae, setAllNotespae] = useState([]);
-    useEffect(() => {
-        fetchAllNotespae();
-    }, []);
-
-    const fetchAllNotespae = () => {
-        http.get('/all_notes_pae/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotespae(res.data);
-      })
-    };
-    
-    const [allnotessfe, setAllNotessfe] = useState([]);
-    useEffect(() => {
-        fetchAllNotessfe();
-    }, []);
-
-    const fetchAllNotessfe = () => {
-        http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotessfe(res.data);
-      })
-    };
 
      const [allind, setAllInd] = useState([]);
     useEffect(() => {
@@ -442,7 +366,83 @@ const BulletinByEleve = memo((props) => {
         }); 
     };
     
+const [matiereslevel, setmatiereslevel] = useState([]);
+    useEffect(() => {
+        fetchAllmatiereslevel();
+    }, []);
 
+    const fetchAllmatiereslevel = () => {
+        http.get('/get_matieres_niveau_planning/' + niveau + '/' + etab).then(res => {
+            setmatiereslevel(res.data);
+        })
+    }
+
+    const [enseign, setenseign] = useState();
+    useEffect(() => {
+       fetchAllenseign();
+    }, []);
+
+    const fetchAllenseign = () => {
+        http.get('/get_ens_prim/' + etab + '/' + classe).then(res => {
+             setenseign(res.data);
+        })
+    }
+    console.log(enseign);
+
+   const [allnotese, setAllNotese] = useState([]);
+    useEffect(() => {
+        fetchAllNotese();
+    }, []);
+
+    const fetchAllNotese = () => {
+        http.get('/all_notese/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotese(res.data);
+      })
+    };
+     const getEmojiForNote = (note) => {
+     if (note == 10) {
+      return '☹️';
+    } else if (note == 15) {
+      return '😐';
+    } else if (note == 20) {
+      return '😃';
+    }
+      return ''; 
+    };
+
+    const [allnotespfe, setAllNotespfe] = useState([]);
+    useEffect(() => {
+        fetchAllNotespfe();
+    }, []);
+
+    const fetchAllNotespfe = () => {
+        http.get('/all_notes_pfe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotespfe(res.data);
+      })
+    };
+
+    
+    const [allnotespae, setAllNotespae] = useState([]);
+    useEffect(() => {
+        fetchAllNotespae();
+    }, []);
+
+    const fetchAllNotespae = () => {
+        http.get('/all_notes_pae/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotespae(res.data);
+      })
+    };
+    
+    const [allnotessfe, setAllNotessfe] = useState([]);
+    useEffect(() => {
+        fetchAllNotessfe();
+    }, []);
+
+    const fetchAllNotessfe = () => {
+        http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/' + groupe + '/' + userid).then(res => {
+        setAllNotessfe(res.data);
+      })
+    };
      const [sumnotes, setsumnotes] = useState([]);
     useEffect(() => {
         fetchAllsumnotes();
@@ -1010,6 +1010,48 @@ const BulletinByEleve = memo((props) => {
                                                             <tbody>
                                                                     <tr>
                                                                     <td>{allind.intitule_groupe}</td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    
+                                                                    </tr>
+                                                                {allnotessfe.map((item, sf) => (
+                                                                    <tr key={sf}>
+                                                                        <td></td>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                                <tbody>
+                                                                    <tr>
+                                                                    <td>{allind1.intitule_groupe}</td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    
+                                                                    </tr>
+                                                                {allnotessfe.map((item, sf) => (
+                                                                    <tr key={sf}>
+                                                                        <td></td>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                                <tbody>
+                                                                    <tr>
+                                                                    <td>{allind2.intitule_groupe}</td>
                                                                     <td></td>
                                                                     <td></td>
                                                                     <td></td>
