@@ -511,14 +511,14 @@ export const DefaultRouter = [
     ///06/10/2023
 
             {
-                path: 'FicheEleve/classe',
+                path: 'FicheEleves/Classes',
                 element: <ListClassesFiche />
-            };
+            },
 
             {
                 path:'FicheEleve/:niveau/:classe',
                 element: <ListelevesforClasses />
-            };
+            },
 
             ///////////////////////////////////////////////////////////////////////////Eleves
             ////////////
