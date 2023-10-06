@@ -410,10 +410,6 @@ const [matiereslevel, setmatiereslevel] = useState([]);
       return ''; 
     };
 
-    const groupe = allind.intitule_groupe;
-     const groupe2 = allind2.intitule_groupe;
-     const groupe = allind3.intitule_groupe;
-    
     const [allnotespfe, setAllNotespfe] = useState([]);
     useEffect(() => {
         fetchAllNotespfe();
@@ -443,7 +439,7 @@ const [matiereslevel, setmatiereslevel] = useState([]);
     }, []);
 
     const fetchAllNotessfe = () => {
-        http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/' + groupe + '/' + userid).then(res => {
+        http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/Groupe 1/' + userid).then(res => {
         setAllNotessfe(res.data);
       })
     };
@@ -454,7 +450,7 @@ const [matiereslevel, setmatiereslevel] = useState([]);
     }, []);
 
     const fetchAllNotessfe1 = () => {
-        http.get('/all_notes_sfe1/' + etab + '/' + classe + "/" + evaluation + '/' + groupe1 + '/' + userid).then(res => {
+        http.get('/all_notes_sfe1/' + etab + '/' + classe + "/" + evaluation + '/Groupe 2/' + userid).then(res => {
         setAllNotessfe1(res.data);
       })
     };
@@ -465,7 +461,7 @@ const [matiereslevel, setmatiereslevel] = useState([]);
     }, []);
 
     const fetchAllNotessfe2 = () => {
-        http.get('/all_notes_sfe2/' + etab + '/' + classe + "/" + evaluation + '/' + groupe2 + '/' + userid).then(res => {
+        http.get('/all_notes_sfe2/' + etab + '/' + classe + "/" + evaluation + '/Groupe 3/' + userid).then(res => {
         setAllNotessfe2(res.data);
       })
     };
@@ -936,7 +932,7 @@ const [matiereslevel, setmatiereslevel] = useState([]);
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{groupe}</th>
+                                                                        <th>{allind.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
@@ -956,7 +952,7 @@ const [matiereslevel, setmatiereslevel] = useState([]);
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{groupe1}</th>
+                                                                        <th>{allind1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
@@ -976,7 +972,7 @@ const [matiereslevel, setmatiereslevel] = useState([]);
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{groupe2}</th>
+                                                                        <th>{allind2.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
