@@ -949,10 +949,6 @@ const BulletinByEleve = memo((props) => {
                                                     </Row>
                                                     <Row className="mt-2">
                                                         <Col sm="4" lg="4">
-
-
-                                                        </Col>
-                                                        <Col sm="4" lg="4">
                                                             <p className="text-center">
                                                                BULLETIN DE NOTES
                                                                 <hr />
@@ -978,6 +974,7 @@ const BulletinByEleve = memo((props) => {
 
                                                             <div className="mt-2">
                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">Nom et Prénom: {user.nom} {user.prenom}</p>
+                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">Sexe: {user.sexe}</p>
                                                             </div>
 
                                                             <div className="mt-1">
@@ -987,6 +984,7 @@ const BulletinByEleve = memo((props) => {
                                                                             <p tyle={{ fontSize: "10px" }} className="mb-1">Né(e) le: {user.date_naissance} à: {user.lieu_naissance}</p>
                                                                           
                                                                         </div>
+                                                                    </col>
                                                                 </Row>
                                                             </div>
                                                             <div className="mt-1">
@@ -997,10 +995,6 @@ const BulletinByEleve = memo((props) => {
                                                         </Col>
                                                         <Col sm="5" lg="5">
 
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Sexe: {user.sexe}</p>
-                                                         
-                                                            </div>
                                                             <div className="mt-2">
                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">Professeur principal:</p>
                                                                
