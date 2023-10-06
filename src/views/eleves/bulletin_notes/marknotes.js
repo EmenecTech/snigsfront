@@ -962,9 +962,9 @@ const BulletinByEleve = memo((props) => {
                                                     </Row>
     
                                                    <Row>
-                                                  <Col sm="5" lg="5">
+                                                  
                                                     <Row style={{ fontSize: "10px" }}>
-                                                      <Col sm="6" lg="6">
+                                                      <Col sm="4" lg="4">
                                                         <div className="mt-2">
                                                           <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {user.nom} {user.prénom}</p>
                                                           <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : {user.date_naissance} à {user.lieu_naissance}</p>
@@ -972,14 +972,14 @@ const BulletinByEleve = memo((props) => {
                                                           <p style={{ fontSize: "10px" }} className="mb-1">Matricule : {user.matricule}</p>
                                                         </div>
                                                       </Col>
-                                                      <Col sm="6" lg="6">
+                                                      <Col sm="4" lg="4">
                                                         <div className="mt-2">
                                                           <p style={{ fontSize: "10px" }} className="mb-0">Classe : {user.other_in_user}</p>
                                                           <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : {user.other_in_user}</p>
                                                           <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal :</p>
                                                         </div>
                                                       </Col>
-                                                            <Col sm="6" lg="6">
+                                                            <Col sm="4" lg="4">
                                                             <div className="bd-example">
                                                                 <figure className="figure">
                                                                     <Image
@@ -993,7 +993,7 @@ const BulletinByEleve = memo((props) => {
 
                                                         </Col>
                                                     </Row>
-                                                  </Col>
+                                                
                                                 </Row>
                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
