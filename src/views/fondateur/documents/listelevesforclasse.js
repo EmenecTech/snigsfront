@@ -47,9 +47,9 @@ const ListelevesforClasses = memo((props) => {
   }, []);
 
   const fetchAlleleves_classe = () => {
-    http.get("/fetch_eleves_in_classe/" + etab + "/" + classe).then((res) => {
-      seteleves_classe(res.data);
-    });
+    // http.get("/fetch_eleves_in_classe/" + etab + "/" + classe).then((res) => {
+    //   seteleves_classe(res.data);
+    // });
   };
   useSelector(SettingSelector.theme_color);
 
