@@ -166,8 +166,8 @@ import DocumentsListNiveauClasseEleves from '../views/fondateur/documents/doumen
 import AdminlistdocumentsOfEleves from '../views/fondateur/documents/documentsofelevesload';
 
 //06/10/2023
-import ListClassesFiche from '../views/fondateur/documents/listclasses'
-import ListelevesforClasses from '../views/fondateur/documents/listelevesforclasse'
+import ListClassesFiche from '../views/fondateur/documents/listclasses';
+import ListelevesforClasses from '../views/fondateur/documents/listelevesforclasse';
 
 //21/07/2023
 import EditEleve from '../views/fondateur/classes/editeleves';
