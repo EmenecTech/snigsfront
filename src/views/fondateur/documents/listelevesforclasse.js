@@ -35,21 +35,17 @@ import * as SettingSelector from "../../../store/setting/selectors";
 SwiperCore.use([Navigation]);
 
 const ListClassesFiche = memo((props) => {
-  const [show, setShow] = useState(false);
-  const { user, http } = AuthUser();
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const navigate = useNavigate();
-  const [inputs, setInputs] = useState({});
+
   const etab = user.etablissement;
   const classe = useParams();
+
+  console.log(classe);
 
   const [eleves_classe, seteleves_classe] = useState([]);
     useEffect(() => {
         fetchAlleleves_classe();
     }, []);
 
-  console.log(classe);
 
     const fetchAlleleves_classe = () => {
         http.get('/fetch_eleves_in_classe/' + etab + '/' + classe).then(res => {
