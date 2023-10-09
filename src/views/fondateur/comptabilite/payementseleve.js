@@ -366,7 +366,7 @@ const PayementsListEleve = (props) => {
                                                     
                                                     <br/>
                                             <div ref={componentRef}
-                                                style={{ width: "90%", paddingTop:"15px", MarginTop: "10px" ,paddingRight:"150px" , height: window.innerHeight }}>
+                                                style={{ width: "90%", paddingTop:"15px", MarginTop: "10px" ,paddingRight:"150px" , height: window.innerHeight }} className="flex flex-column justify-content-center align-items-center">
 
                                                 
 
@@ -376,8 +376,7 @@ const PayementsListEleve = (props) => {
                                                    <div className="">
                                                 <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
                                                     <Row>
-                                                        <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
-                                                        <Col sm="3" className="flex flex-column justify-content-center align-items-center">
+                                                       <Col sm="3" className="flex flex-column justify-content-center align-items-center">
                         
                                                           <div className="flex flex-column justify-content-center align-items-center">
                                                                 {"     "}
@@ -426,7 +425,7 @@ const PayementsListEleve = (props) => {
                                                                 />
                                                             </div>
                                                         </Col>
-                                                    </Col>
+                                                
                                                     </Row>
                                                 </Col>
                                                         <div style={{ paddingLeft:"25px" }}>
