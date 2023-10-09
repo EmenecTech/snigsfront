@@ -322,7 +322,7 @@ const BulletinByEleve = memo((props) => {
         }); 
     };
 
-      const [allind12, setAllInd12] = useState([]);
+    const [allind12, setAllInd12] = useState([]);
     useEffect(() => {
         fetchAllInd12();  
     }, []); 
@@ -366,7 +366,7 @@ const BulletinByEleve = memo((props) => {
         }); 
     };
     
-const [matiereslevel, setmatiereslevel] = useState([]);
+   const [matiereslevel, setmatiereslevel] = useState([]);
     useEffect(() => {
         fetchAllmatiereslevel();
     }, []);
