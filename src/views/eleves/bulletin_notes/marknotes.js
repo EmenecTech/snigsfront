@@ -84,14 +84,14 @@ const BulletinByEleve = memo((props) => {
     const classe = user.other_in_user;
 
     
-    const [allind, setAllInd] = useState([]);
+    const [groupe_one, setAllgroupe_one] = useState([]);
     useEffect(() => {
-        fetchAllInd();  
+        fetchAllgroupe_one();  
     }, []); 
 
-    const fetchAllInd = () => {
+    const fetchAllgroupe_one = () => {
         http.get('/get_ind_for_mat/' + etab).then(res => {
-            setAllInd(res.data);
+            setAllgroupe_one(res.data);
         }); 
     };
 
