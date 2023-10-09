@@ -439,14 +439,14 @@ const [matiereslevel, setmatiereslevel] = useState([]);
     }, []);
 
     const fetchAllNotessfe = () => {
-        http.get("/all_notes_sfe/" + etab + "/" + classe + "/" + evaluation + "/" + allind + "/" + userid).then(res => {
+        http.get("/all_notes_sfe/" + etab + "/" + classe + "/" + evaluation + "/" + allind.intitule_groupe + "/" + userid).then(res => {
         setAllNotessfe(res.data);
       })
     };
 
     console.log(allnotessfe);
      console.log(123);
-         console.log(allind);
+         console.log(allind.intitule_groupe);
 
       const [allnotessfe1, setAllNotessfe1] = useState([]);
     useEffect(() => {
