@@ -2072,7 +2072,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind.goupe_one_groupe}</th>
+                                                                        <th>{groupe_one.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
