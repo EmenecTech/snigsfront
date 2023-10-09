@@ -1051,7 +1051,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                    
                                                                 {allnotessf.map((item, sf) => (
                                                                     <tr key={sf}>
-                                                                        <td></td>
+                                                                        <td>{item.matiere_note}</td>
                                                                       
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
@@ -1071,7 +1071,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                    
                                                                 {allnotessf1.map((item, sf1) => (
                                                                     <tr key={sf1}>
-                                                                        <td></td>
+                                                                        <td>{item.matiere_note}</td>
                                                                   
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
@@ -1091,7 +1091,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                    
                                                                 {allnotessf2.map((item, sf2) => (
                                                                     <tr key={sf2}>
-                                                                        <td></td>
+                                                                        <td>{item.matiere_note}</td>
                                                                      
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
