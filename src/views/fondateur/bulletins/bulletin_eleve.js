@@ -320,7 +320,7 @@ const [allnotespf, setAllNotespf] = useState([]);
         }); 
     };
 
-      const [allind7, setAllInd7] = useState([]);
+    const [allind7, setAllInd7] = useState([]);
     useEffect(() => {
         fetchAllInd7();  
     }, []); 
@@ -342,7 +342,7 @@ const [allnotespf, setAllNotespf] = useState([]);
         }); 
     };
     
-     const [allind9, setAllInd9] = useState([]);
+    const [allind9, setAllInd9] = useState([]);
     useEffect(() => {
         fetchAllInd9();  
     }, []); 
