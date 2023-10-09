@@ -591,10 +591,10 @@ const UniClasse = () => {
                                                                         <option value="PRATICAL LIFE SKILLS">PRATICAL LIFE SKILLS</option>
                                                                         <option value="ARTS AND CRAFTS">ARTS AND CRAFTS</option>
                                                                         <option value="MOTOR SKILLS">MOTOR SKILLS</option> 
-                                                                     {groupes.map((item) => (
-                                                                <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
-
-                                                            ))}
+                                                                         {groupes.map((item) => (
+                                                                                <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
+                
+                                                                            ))}
 
 
                                                                     </select>
