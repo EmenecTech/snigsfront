@@ -383,7 +383,7 @@ const PayementsListEleve = (props) => {
                                                                 <Image
                                                                     src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
                                                                     style={{
-                                                                        paddingRight:"150px"
+                                                                        paddingRight:"150px",
                                                                         width: "100px",
                                                                         height: "100px",
                                                                         borderRadius: "50%",
