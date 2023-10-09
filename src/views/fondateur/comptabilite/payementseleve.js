@@ -200,7 +200,7 @@ const PayementsListEleve = (props) => {
     }
 
 
-        const reste = infopayement.montant_pension - item.montant_detailpayement ;
+        const reste = infopayement.montant_pension - payementsum.montant_payementsum ;
     return (
         <>
             <div>
