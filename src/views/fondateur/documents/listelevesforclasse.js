@@ -49,6 +49,8 @@ const ListClassesFiche = memo((props) => {
         fetchAlleleves_classe();
     }, []);
 
+  console.log(classe);
+
     const fetchAlleleves_classe = () => {
         http.get('/fetch_eleves_in_classe/' + etab + '/' + classe).then(res => {
             seteleves_classe(res.data);
