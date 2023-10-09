@@ -41,16 +41,16 @@ const ListelevesforClasses = memo((props) => {
 
   const [niveau, classe] = useParams();
 
-  const [eleves_classe, seteleves_classe] = useState([]);
-  useEffect(() => {
-    fetchAlleleves_classe();
-  }, []);
+  // const [eleves_classe, seteleves_classe] = useState([]);
+  // useEffect(() => {
+  //   fetchAlleleves_classe();
+  // }, []);
 
-  const fetchAlleleves_classe = () => {
-    // http.get("/fetch_eleves_in_classe/" + etab + "/" + classe).then((res) => {
-    //   seteleves_classe(res.data);
-    // });
-  };
+  // const fetchAlleleves_classe = () => {
+  //   // http.get("/fetch_eleves_in_classe/" + etab + "/" + classe).then((res) => {
+  //   //   seteleves_classe(res.data);
+  //   // });
+  // };
   useSelector(SettingSelector.theme_color);
 
   const getVariableColor = () => {
