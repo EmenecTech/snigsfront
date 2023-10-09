@@ -42,7 +42,7 @@ const ListClassesFiche = memo((props) => {
   const navigate = useNavigate();
   const [inputs, setInputs] = useState({});
   const etab = user.etablissement;
-  const classe = useParams();
+  const [niveau, classe] = useParams();
 
   const [eleves_classe, seteleves_classe] = useState([]);
     useEffect(() => {
