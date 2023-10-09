@@ -320,7 +320,7 @@ const ListClassesFiche = memo((props) => {
                   <tbody>
                                                     {eleves_classe.map((item) => (
                                                         <tr key={item.id}>
-                                                            <td>{item.matricule}</td>
+                                                            <td>{classe}</td>
                                                             <td>{item.nom}</td>
                                                             <td>{item.prenom}</td>
                                                             <td>{item.sexe}</td>
