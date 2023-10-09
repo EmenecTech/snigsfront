@@ -3013,7 +3013,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                         <th>{goupe_one.intitule_groupe}</th>
 
-                                                                    </tr>
+                                                                    </tr> 
                                                                 </thead>
                                                                  <tbody>
                                                                    
