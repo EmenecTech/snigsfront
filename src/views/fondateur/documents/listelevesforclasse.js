@@ -40,7 +40,7 @@ const ListClassesFiche = memo((props) => {
   const etab = user.etablissement;
   const classe = useParams();
 
-  console.log(classe);
+console.log(classe);
 
   const [eleves_classe, seteleves_classe] = useState([]);
     useEffect(() => {
