@@ -36,6 +36,7 @@ SwiperCore.use([Navigation]);
 
 const ListClassesFiche = memo((props) => {
 
+  const { user, http } = AuthUser();
   const etab = user.etablissement;
   const classe = useParams();
 
