@@ -437,7 +437,7 @@ const BulletinByEleve = memo((props) => {
     useEffect(() => {
         fetchAllNotessfe();
     }, []);
-    const gr = allind.intitule_groupe;
+    const gr = allind.id;
     const fetchAllNotessfe = () => {
         http.get("/all_notes_sfe/" + etab + "/" + classe + "/" + evaluation +  "/" + gr).then(res => {
         setAllNotessfe(res.data);
