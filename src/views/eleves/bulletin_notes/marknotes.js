@@ -182,16 +182,7 @@ const BulletinByEleve = memo((props) => {
     }, [fetchProductImage]);
     
 
-     const [allind, setAllInd] = useState([]);
-    useEffect(() => {
-        fetchAllInd();  
-    }, []); 
-
-    const fetchAllInd = () => {
-        http.get('/get_ind_for_mat/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd(res.data);
-        }); 
-    };
+  
 
     const [allind1, setAllInd1] = useState([]);
     useEffect(() => {
@@ -432,12 +423,23 @@ const BulletinByEleve = memo((props) => {
         setAllNotespae(res.data);
       })
     };
-    
+
+
+    const [allind, setAllInd] = useState([]);
+    useEffect(() => {
+        fetchAllInd();  
+    }, []); 
+
+    const fetchAllInd = () => {
+        http.get('/get_ind_for_mat/' + etab + "/" + niveau + "/" + classe).then(res => {
+            setAllInd(res.data);
+        }); 
+    };
     const [allnotessfe, setAllNotessfe] = useState([]);
     useEffect(() => {
         fetchAllNotessfe();
     }, []);
-    const gr = allind.id;
+    const gr = allind.intitule_groupe;
     const fetchAllNotessfe = () => {
         http.get("/all_notes_sfe/" + etab + "/" + classe + "/" + evaluation +  "/" + gr).then(res => {
         setAllNotessfe(res.data);
