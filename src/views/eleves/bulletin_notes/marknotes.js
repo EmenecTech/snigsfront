@@ -438,8 +438,9 @@ const [matiereslevel, setmatiereslevel] = useState([]);
         fetchAllNotessfe();
     }, []);
 
-    const fetchAllNotessfe = () => {
-        http.get("/all_notes_sfe/" + etab + "/" + classe + "/" + evaluation + "/${allind.intitule_groupe}/" + userid).then(res => {
+    String gr = allind.intitule_groupe;
+    const fetchAllNotessfe = () => 
+        http.get("/all_notes_sfe/" + etab + "/" + classe + "/" + evaluation + "/" + ${allind.intitule_groupe} + "/" + userid).then(res => {
         setAllNotessfe(res.data);
       })
     };
