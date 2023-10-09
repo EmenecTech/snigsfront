@@ -478,7 +478,7 @@ const ParentsBulletinNotes = memo((props) => {
     }, []);
 
     const fetchAllNotessfe = () => {
-        http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/Groupe 1/' + userid).then(res => {
+        http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/Matières Littéraires/' + userid).then(res => {
         setAllNotessfe(res.data);
       })
     };
@@ -489,7 +489,7 @@ const ParentsBulletinNotes = memo((props) => {
     }, []);
 
     const fetchAllNotessfe1 = () => {
-        http.get('/all_notes_sfe1/' + etab + '/' + classe + "/" + evaluation + '/Groupe 2/' + userid).then(res => {
+        http.get('/all_notes_sfe1/' + etab + '/' + classe + "/" + evaluation + '/Matières Scientiques/' + userid).then(res => {
         setAllNotessfe1(res.data);
       })
     };
@@ -500,7 +500,7 @@ const ParentsBulletinNotes = memo((props) => {
     }, []);
 
     const fetchAllNotessfe2 = () => {
-        http.get('/all_notes_sfe2/' + etab + '/' + classe + "/" + evaluation + '/Groupe 3/' + userid).then(res => {
+        http.get('/all_notes_sfe2/' + etab + '/' + classe + "/" + evaluation + '/Matières Complémentaires/' + userid).then(res => {
         setAllNotessfe2(res.data);
       })
     };
