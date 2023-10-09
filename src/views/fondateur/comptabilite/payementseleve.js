@@ -366,7 +366,7 @@ const PayementsListEleve = (props) => {
                                                     
                                                     <br/>
                                             <div ref={componentRef}
-                                                style={{ width: "90%", paddingTop:"15px", MarginTop: "10px" ,height: window.innerHeight }}>
+                                                style={{ width: "90%", paddingTop:"15px", MarginTop: "10px" ,paddingRight:"150px" , height: window.innerHeight }}>
 
                                                 
 
@@ -383,7 +383,7 @@ const PayementsListEleve = (props) => {
                                                                 <Image
                                                                     src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
                                                                     style={{
-                                                                        paddingRight:"150px",
+                                                                      
                                                                         width: "100px",
                                                                         height: "100px",
                                                                         borderRadius: "50%",
