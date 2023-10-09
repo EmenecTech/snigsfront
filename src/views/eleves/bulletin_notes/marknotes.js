@@ -75,11 +75,6 @@ const BulletinByEleve = memo((props) => {
         onafterprint: () => alert("print success"),
     });
 
-    const [show, setShow] = useState(false);
-    const { user, http } = AuthUser();
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
     const { evaluation } = useParams();
     const etab = user.etablissement;
