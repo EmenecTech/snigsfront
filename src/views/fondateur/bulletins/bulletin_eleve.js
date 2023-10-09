@@ -438,7 +438,7 @@ const [allnotespf, setAllNotespf] = useState([]);
     }, []);
 
     const fetchAllNotessf = () => {
-        http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/Groupe 1/' + userid).then(res => {
+        http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/Matières Littéraires/' + userid).then(res => {
         setAllNotessf(res.data);
       })
     };
@@ -449,7 +449,7 @@ const [allnotespf, setAllNotespf] = useState([]);
     }, []);
 
     const fetchAllNotessf1 = () => {
-        http.get('/all_notes_sfe1/' + etab + '/' + classe + "/" + evaluation + '/Groupe 2/' + userid).then(res => {
+        http.get('/all_notes_sfe1/' + etab + '/' + classe + "/" + evaluation + '/Matières Scientifiques/' + userid).then(res => {
         setAllNotessf1(res.data);
       })
     };
@@ -460,7 +460,7 @@ const [allnotespf, setAllNotespf] = useState([]);
     }, []);
 
     const fetchAllNotessf2 = () => {
-        http.get('/all_notes_sfe2/' + etab + '/' + classe + "/" + evaluation + '/Groupe 3/' + userid).then(res => {
+        http.get('/all_notes_sfe2/' + etab + '/' + classe + "/" + evaluation + '/Matières Complémentaires/' + userid).then(res => {
         setAllNotessf2(res.data);
       })
     };
