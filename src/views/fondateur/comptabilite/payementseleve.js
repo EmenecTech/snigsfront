@@ -368,6 +368,64 @@ const PayementsListEleve = (props) => {
                                             <div ref={componentRef}
                                                 style={{ width: "90%", paddingTop:"15px", MarginTop: "10px" ,height: window.innerHeight }}>
                                                    <div className="">
+
+
+                                                    <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
+                            <Row>
+                                <Col sm="3">
+
+                                    <div className="d-flex justify-content-between align-items-between">
+                                        {" "}
+                                        <Image
+                                            style={{
+                                                src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
+                                                width: "100px",
+                                                height: "100px",
+                                                borderRadius: "50%",
+                                                objectFit: "cover",
+                                                border: "2px solid black",
+                                            }}
+                                        />
+                                    </div>
+                                </Col>
+                                <Col sm="6" className="mt-4
+                                
+                                
+                                
+                                
+                                
+                                ">
+                                    {" "}
+                                    <div className="col-sm-12 justify-content-center">
+                                        <h6 className="text-center">
+                                            Institut Africain D'informatique
+                                        </h6>
+                                    </div>
+                                    <div className="col-sm-12 justify-content-center">
+                                        <h6 className="text-center">
+                                            Africain Institute of computer science
+                                        </h6>
+                                    </div>
+                                    {" "}
+                                </Col>
+                                <Col sm="3">
+                                    {" "}
+                                    <div className="flex flex-column justify-content-center align-items-center">
+                                        <Image
+src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
+                                            style={{
+                                                width: "100px",
+                                                height: "100px",
+                                                borderRadius: "50%",
+                                                objectFit: "cover",
+                                                border: "2px solid black",
+                                            }}
+                                        />
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Col>
+                                                    
                                                 <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
                                                     <Row>
                                                         <Col sm="3">
