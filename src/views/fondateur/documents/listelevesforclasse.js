@@ -310,13 +310,13 @@ const ListelevesforClasses = memo((props) => {
                   <tbody>
                     {eleves_classe.map((item) => (
                       <tr key={item.id}>
-                        <td>{item.nom}</td>
-                        <td>{item.prenom}</td>
-                        <td>{item.sexe}</td>
-                        <td>{item.date_naissance}</td>
-                        <td>{item.lieu_naissance}</td>
-                        <td>{item.email}</td>
-                        <td>{item.telephone}</td>
+                        // <td>{item.nom}</td>
+                        // <td>{item.prenom}</td>
+                        // <td>{item.sexe}</td>
+                        // <td>{item.date_naissance}</td>
+                        // <td>{item.lieu_naissance}</td>
+                        // <td>{item.email}</td>
+                        // <td>{item.telephone}</td>
                         <td>
                           <div className="flex align-items-center list-user-action">
                             <Link
