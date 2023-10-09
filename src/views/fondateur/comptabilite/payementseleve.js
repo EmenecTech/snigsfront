@@ -18,11 +18,11 @@ import Axios from 'axios';
 import { useReactToPrint } from "react-to-print";
 
 
-const PayementsListEleve = (props) => 
+const PayementsListEleve = (props) => {
     const componentRef = useRef();
     const printData = useReactToPrint({
         content: () => componentRef.current,
-        documentTitle: "Document", 
+        documentTitle: "employee data", 
         onafterprint: () => alert("print success"),
     });
     const [imagedata, setImagedata] = useState("");
@@ -195,10 +195,9 @@ const PayementsListEleve = (props) =>
     const detelepayementeleve = (id) => {
         http.delete('delete_payement_eleve/' + id).then(res => {
             fetchAlllistpayements();
+            fetchAllpayementsum();
         })
     }
-
-    const reste = infopayement.montant_pension - infopayement.montant_pension;
 
 
 
@@ -377,12 +376,14 @@ const PayementsListEleve = (props) =>
                                                    <div className="">
                                                 <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
                                                     <Row>
-                                                      <Col sm="3">
-                                                            {" "}
-                                                            <div className="flex flex-column justify-content-center align-items-center">
+                                                       <Col sm="3" className="flex flex-column justify-content-center align-items-center">
+                        
+                                                          <div className="flex flex-column justify-content-center align-items-center">
+                                                                {"     "}
                                                                 <Image
                                                                     src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
                                                                     style={{
+                                                                      
                                                                         width: "100px",
                                                                         height: "100px",
                                                                         borderRadius: "50%",
@@ -392,7 +393,6 @@ const PayementsListEleve = (props) =>
                                                                 />
                                                             </div>
                                                         </Col>
-                                                
                                                         <Col sm="6" className="mt-4">
                                                             {" "}
 
@@ -461,7 +461,7 @@ const PayementsListEleve = (props) =>
 
 
                                                                         <br/> <br/>
-                                                                       <h4>Reste: XAF {reste}</h4> <h3>Signature</h3>
+                                                                        <h3>Signature</h3>
                                                                         
                                                                         
                                                                         
