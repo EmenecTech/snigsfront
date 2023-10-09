@@ -362,12 +362,12 @@ const PayementsListEleve = (props) => {
                                         </Row>
                                         
                                         <Row>
-                                            <Col sm="12" lg="12">
+                                           
                                                     
                                                     <br/>
                                             <div ref={componentRef}
-                                                style={{ width: "90%", paddingTop:"15px", MarginTop: "10px" ,paddingRight:"150px" , height: window.innerHeight }} >
-
+                                                style={{ width: "100%", paddingTop:"15px", MarginTop: "10px" ,paddingRight:"150px" , height: window.innerHeight }} >
+                                 <Col sm="12" lg="12">
                                                 
 
                                                 
@@ -524,9 +524,9 @@ const PayementsListEleve = (props) => {
                                                     </div>
                                                 
 
-
+                                                  </Col>
                                             </div>
-                                            </Col>
+                                          
                                          
 
                                         </Row>
