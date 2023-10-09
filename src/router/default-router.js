@@ -516,7 +516,7 @@ export const DefaultRouter = [
             },
 
             {
-                path:'FicheEleve/:niveau/:classe',
+                path:'FicheEleve/:classe',
                 element: <ListelevesforClasses />
             },
 
