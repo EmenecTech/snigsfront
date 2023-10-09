@@ -367,6 +367,12 @@ const PayementsListEleve = (props) => {
                                                     <br/>
                                             <div ref={componentRef}
                                                 style={{ width: "90%", paddingTop:"15px", MarginTop: "10px" ,height: window.innerHeight }}>
+
+                                                
+
+
+
+                                                    
                                                    <div className="">
                                                 <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
                                                     <Row>
@@ -395,9 +401,12 @@ const PayementsListEleve = (props) => {
                                                         ">
                                                             {" "}
                                                             <div className="col-sm-12 justify-content-center">
-                                                                <h6 className="text-center">
-                                                                   Facture
-                                                                </h6>
+                                                                <h5 className="text-center">
+                                                                    SAINT JULIE BILINGUAL SCHOOL COMPLEX
+                                                                </h5>
+                                                                <h6> Complexe Scolaire Bilingue Intégrale Saint Julie <br/> (SIS Nouvelle route Tam Tam Week-end) </h6>
+                                                                <h6>B.P: Yaoundé, MOTTO: DISCIPLINE-PROGRESS-SUCCESS </h6>
+                                                                 <h6>ARRETE NO: 280/JI/7/A/MINEDUB/SG/DSEPB/SDAAP Du 19 Septembre 2016 </h6>
                                                             </div>
                                                             <div className="col-sm-12 justify-content-center">
                                                                 <h6 className="text-center">
