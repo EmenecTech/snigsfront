@@ -18,7 +18,7 @@ import Axios from 'axios';
 import { useReactToPrint } from "react-to-print";
 
 
-const PayementsListEleve = (props) => {
+const PayementsListEleve = (props) => 
     const componentRef = useRef();
     const printData = useReactToPrint({
         content: () => componentRef.current,
@@ -195,7 +195,6 @@ const PayementsListEleve = (props) => {
     const detelepayementeleve = (id) => {
         http.delete('delete_payement_eleve/' + id).then(res => {
             fetchAlllistpayements();
-            fetchAll();
         })
     }
 
