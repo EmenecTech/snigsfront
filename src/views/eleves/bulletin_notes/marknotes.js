@@ -439,7 +439,7 @@ const BulletinByEleve = memo((props) => {
     }, []);
     const gr = allind.intitule_groupe;
     const fetchAllNotessfe = () => {
-        http.get("/all_notes_sfe/" + etab + "/" + classe + "/" + evaluation +  "/" + gr + "/"  + userid).then(res => {
+        http.get("/all_notes_sfe/" + etab + "/" + classe + "/" + evaluation +  "/" + gr).then(res => {
         setAllNotessfe(res.data);
       })
     };
