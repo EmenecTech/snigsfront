@@ -437,16 +437,16 @@ const BulletinByEleve = memo((props) => {
     useEffect(() => {
         fetchAllNotessfe();
     }, []);
-
+    const gr = "Groupe 1";
     const fetchAllNotessfe = () => {
-        http.get("/all_notes_sfe/" + etab + "/" + classe + "/" + evaluation +  '/Groupe 1/'  + userid).then(res => {
+        http.get("/all_notes_sfe/" + etab + "/" + classe + "/" + evaluation +  "/" + gr + "/"  + userid).then(res => {
         setAllNotessfe(res.data);
       })
     };
 
     console.log(allnotessfe);
-     console.log(123);
-         console.log(allind.intitule_groupe);
+    console.log(123);
+    console.log(allind.intitule_groupe);
 
       const [allnotessfe1, setAllNotessfe1] = useState([]);
     useEffect(() => {
