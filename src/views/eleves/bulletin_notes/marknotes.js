@@ -87,6 +87,17 @@ const BulletinByEleve = memo((props) => {
     const niveau = user.fonction_user;
     const classe = user.other_in_user;
 
+    
+    const [allind, setAllInd] = useState([]);
+    useEffect(() => {
+        fetchAllInd();  
+    }, []); 
+
+    const fetchAllInd = () => {
+        http.get('/get_ind_for_mat/' + etab).then(res => {
+            setAllInd(res.data);
+        }); 
+    };
 
     const [image2, setImage2] = useState("");
     const imageRef2 = useRef(null);
@@ -378,7 +389,7 @@ const BulletinByEleve = memo((props) => {
              setenseign(res.data);
         })
     }
-    console.log(enseign);
+
 
    const [allnotese, setAllNotese] = useState([]);
     useEffect(() => {
@@ -425,16 +436,6 @@ const BulletinByEleve = memo((props) => {
     };
 
 
-    const [allind, setAllInd] = useState([]);
-    useEffect(() => {
-        fetchAllInd();  
-    }, []); 
-
-    const fetchAllInd = () => {
-        http.get('/get_ind_for_mat/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd(res.data);
-        }); 
-    };
     const [allnotessfe, setAllNotessfe] = useState([]);
     useEffect(() => {
         fetchAllNotessfe();
@@ -522,7 +523,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                                               
 
-    console.log(sumnotes);
+
 
  const [classes, setclasses] = useState([]);
     useEffect(() => {
@@ -532,8 +533,7 @@ const BulletinByEleve = memo((props) => {
     const fetchAllclasses = () => {
         http.get('/classe_bull/' + classe + '/' + etab).then(res => {
             setclasses(res.data);
-            console.log(res.data);
-            console.log(classes);
+            
         })
     }
 
