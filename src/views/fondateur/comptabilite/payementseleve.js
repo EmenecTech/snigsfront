@@ -195,9 +195,11 @@ const PayementsListEleve = (props) => {
     const detelepayementeleve = (id) => {
         http.delete('delete_payement_eleve/' + id).then(res => {
             fetchAlllistpayements();
-            fetchAllpayementsum();
+            fetchAll();
         })
     }
+
+    const reste = infopayement.montant_pension;
 
 
 
@@ -376,14 +378,12 @@ const PayementsListEleve = (props) => {
                                                    <div className="">
                                                 <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
                                                     <Row>
-                                                       <Col sm="3" className="flex flex-column justify-content-center align-items-center">
-                        
-                                                          <div className="flex flex-column justify-content-center align-items-center">
-                                                                {"     "}
+                                                      <Col sm="3">
+                                                            {" "}
+                                                            <div className="flex flex-column justify-content-center align-items-center">
                                                                 <Image
                                                                     src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
                                                                     style={{
-                                                                      
                                                                         width: "100px",
                                                                         height: "100px",
                                                                         borderRadius: "50%",
@@ -393,6 +393,7 @@ const PayementsListEleve = (props) => {
                                                                 />
                                                             </div>
                                                         </Col>
+                                                
                                                         <Col sm="6" className="mt-4">
                                                             {" "}
 
@@ -461,7 +462,7 @@ const PayementsListEleve = (props) => {
 
 
                                                                         <br/> <br/>
-                                                                        <h3>Signature</h3>
+                                                                       <h4>Reste: {payementsum}</h4> <h3>Signature</h3>
                                                                         
                                                                         
                                                                         
