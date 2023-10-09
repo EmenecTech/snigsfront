@@ -243,75 +243,8 @@ const ParentsBulletinNotes = memo((props) => {
         })
     }
     console.log(enseign);
-   const [allnotese, setAllNotese] = useState([]);
-    useEffect(() => {
-        fetchAllNotese();
-    }, []);
 
-    const fetchAllNotese = () => {
-        http.get('/all_notese/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotese(res.data);
-      })
-    };
-     const getEmojiForNote = (note) => {
-     if (note == 10) {
-      return '☹️';
-    } else if (note == 15) {
-      return '😐';
-    } else if (note == 20) {
-      return '😃';
-    }
-      return ''; 
-    };
-
-    const [allnotespfe, setAllNotespfe] = useState([]);
-    useEffect(() => {
-        fetchAllNotespfe();
-    }, []);
-
-    const fetchAllNotespfe = () => {
-        http.get('/all_notes_pfe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotespfe(res.data);
-      })
-    };
-
-    
-    const [allnotespae, setAllNotespae] = useState([]);
-    useEffect(() => {
-        fetchAllNotespae();
-    }, []);
-
-    const fetchAllNotespae = () => {
-        http.get('/all_notes_pae/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotespae(res.data);
-      })
-    };
-    
-    const [allnotessfe, setAllNotessfe] = useState([]);
-    useEffect(() => {
-        fetchAllNotessfe();
-    }, []);
-
-    const fetchAllNotessfe = () => {
-        http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotessfe(res.data);
-      })
-    };
-  
-   const [classes, setclasses] = useState([]);
-    useEffect(() => {
-        fetchAllclasses();
-    }, []);
-
-    const fetchAllclasses = () => {
-        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
-            setclasses(res.data);
-            console.log(res.data);
-            console.log(classes);
-        })
-    }
-
-    const [allind, setAllInd] = useState([]);
+  const [allind, setAllInd] = useState([]);
     useEffect(() => {
         fetchAllInd();  
     }, []); 
@@ -494,6 +427,97 @@ const ParentsBulletinNotes = memo((props) => {
             setAllInd15(res.data);
         }); 
     };
+    
+   const [allnotese, setAllNotese] = useState([]);
+    useEffect(() => {
+        fetchAllNotese();
+    }, []);
+
+    const fetchAllNotese = () => {
+        http.get('/all_notese/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotese(res.data);
+      })
+    };
+     const getEmojiForNote = (note) => {
+     if (note == 10) {
+      return '☹️';
+    } else if (note == 15) {
+      return '😐';
+    } else if (note == 20) {
+      return '😃';
+    }
+      return ''; 
+    };
+
+    const [allnotespfe, setAllNotespfe] = useState([]);
+    useEffect(() => {
+        fetchAllNotespfe();
+    }, []);
+
+    const fetchAllNotespfe = () => {
+        http.get('/all_notes_pfe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotespfe(res.data);
+      })
+    };
+
+    
+    const [allnotespae, setAllNotespae] = useState([]);
+    useEffect(() => {
+        fetchAllNotespae();
+    }, []);
+
+    const fetchAllNotespae = () => {
+        http.get('/all_notes_pae/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotespae(res.data);
+      })
+    };
+    
+   const [allnotessfe, setAllNotessfe] = useState([]);
+    useEffect(() => {
+        fetchAllNotessfe();
+    }, []);
+
+    const fetchAllNotessfe = () => {
+        http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/Groupe 1/' + userid).then(res => {
+        setAllNotessfe(res.data);
+      })
+    };
+
+      const [allnotessfe1, setAllNotessfe1] = useState([]);
+    useEffect(() => {
+        fetchAllNotessfe1();
+    }, []);
+
+    const fetchAllNotessfe1 = () => {
+        http.get('/all_notes_sfe1/' + etab + '/' + classe + "/" + evaluation + '/Groupe 2/' + userid).then(res => {
+        setAllNotessfe1(res.data);
+      })
+    };
+
+      const [allnotessfe2, setAllNotessfe2] = useState([]);
+    useEffect(() => {
+        fetchAllNotessfe2();
+    }, []);
+
+    const fetchAllNotessfe2 = () => {
+        http.get('/all_notes_sfe2/' + etab + '/' + classe + "/" + evaluation + '/Groupe 3/' + userid).then(res => {
+        setAllNotessfe2(res.data);
+      })
+    };
+  
+   const [classes, setclasses] = useState([]);
+    useEffect(() => {
+        fetchAllclasses();
+    }, []);
+
+    const fetchAllclasses = () => {
+        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
+            setclasses(res.data);
+            console.log(res.data);
+            console.log(classes);
+        })
+    }
+
     
 
   const [sumnotes, setsumnotes] = useState([]);
@@ -1004,7 +1028,7 @@ const ParentsBulletinNotes = memo((props) => {
                                                                         <th><p>
                                                                             Disciplines 
                                                                         </p></th>
-                                                                        <th>Matières</th>
+                                                                       
                                                                         <th>Note</th>
                                                                         <th>Coef</th>
                                                                         <th>NxC</th>
@@ -1013,10 +1037,11 @@ const ParentsBulletinNotes = memo((props) => {
                                                                     </tr>
                                                                 </thead>
                                                             <tbody>
+                                                                   
                                                                 {allnotessfe.map((item, sf) => (
                                                                     <tr key={sf}>
-                                                                        <td>{item.groupe_cm}</td>
-                                                                        <td>{item.matiere_note}( {item.nom} {item.prenom} )</td>
+                                                                        <td>{item.matiere_note}</td>
+                                                                  
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
@@ -1024,6 +1049,53 @@ const ParentsBulletinNotes = memo((props) => {
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allind.intitule_groupe}</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                 <tbody>
+                                                                   
+                                                                {allnotessfe1.map((item, sf1) => (
+                                                                    <tr key={sf1}>  
+                                                                        <td>{item.matiere_note}</td>
+                                                                     
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allind1.intitule_groupe}</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                 <tbody>
+                                                                   
+                                                                {allnotessfe2.map((item, sf2) => (
+                                                                    <tr key={sf2}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                       
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allind2.intitule_groupe}</th>
+
+                                                                    </tr>
+                                                                </thead>
 
                                                                 <tbody>
 
