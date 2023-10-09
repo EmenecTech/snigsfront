@@ -478,9 +478,7 @@ const ListClassesFiche = memo((props) => {
                               title="Edit"
                               data-original-title="Edit"
                               to={
-                                "/FicheEleve/" +
-                                item.niveau_classe +
-                                "/" +
+                                "/FicheEleve/"+
                                 item.intitule_classe
                               }
                             >
