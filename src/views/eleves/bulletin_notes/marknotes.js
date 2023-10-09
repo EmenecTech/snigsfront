@@ -74,6 +74,7 @@ const BulletinByEleve = memo((props) => {
         documentTitle: "employee data",
         onafterprint: () => alert("print success"),
     });
+ const { user, http } = AuthUser();
 
     const [inputs, setInputs] = useState({});
     const { evaluation } = useParams();
