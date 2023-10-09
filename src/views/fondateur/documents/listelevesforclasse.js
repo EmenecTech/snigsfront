@@ -303,7 +303,7 @@ const ListClassesFiche = memo((props) => {
                 >
                   <thead>
                                                     <tr>
-                                                        <th>{user.langue === "en" ? (<div>Registration number</div>):(<div> {etab} </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div>Registration number</div>):(<div> {classe} </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Name</div>):(<div> Nom  </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Prename</div>):(<div> Prénom  </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Gender </div>):(<div> Genre  </div>)}</th>
