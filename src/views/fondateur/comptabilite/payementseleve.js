@@ -366,7 +366,7 @@ const PayementsListEleve = (props) => {
                                                     
                                                     <br/>
                                             <div ref={componentRef}
-                                                style={{ width: "100%", paddingTop:"15px", MarginTop: "10px" ,paddingLeft:"150px" , height: window.innerHeight }} >
+                                                style={{ width: "100%", paddingTop:"15px", MarginTop: "10px" , height: window.innerHeight }} >
                                  <Col sm="12" lg="12">
                                                 
 
