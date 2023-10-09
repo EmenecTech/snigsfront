@@ -440,7 +440,7 @@ const [matiereslevel, setmatiereslevel] = useState([]);
 
     String gr = allind.intitule_groupe;
     const fetchAllNotessfe = () => 
-       http.get(`/all_notes_sfe/${etab}/${classe}/${evaluation}/${allind.intitule_groupe}/${userid}`).then(res => {
+           http.get('/all_notes_sfe1/' + etab + '/' + classe + "/" + evaluation + "/" + gr + "/" + userid).then(res => {
         setAllNotessfe(res.data);
       })
     };
