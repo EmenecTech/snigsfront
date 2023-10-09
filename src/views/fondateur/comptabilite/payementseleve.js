@@ -39,6 +39,18 @@ const PayementsListEleve = (props) => {
     const etab = user.etablissement;
 
 
+    const [info_etab, setinfo_etab] = useState([]);
+
+    useEffect(() => {
+        fetchAllinfo_etab()
+    }, []);
+
+    const fetchAllinfo_etab = () => {
+        http.get('/info/etablissement/' + etab).then((res) => {
+            setinfo_etab(res.data);
+        });
+    }
+
 
 
     const [infopayement, setinfopayement] = useState([]);
@@ -76,7 +88,7 @@ const PayementsListEleve = (props) => {
 
         setInputs(values => ({ ...values, [name]: value, etab, classe, ideleve, idpension }))
     }
-
+famous
 
     const handleChange2 = (file) => {
         setImagedata(file[0]);
@@ -409,9 +421,9 @@ const PayementsListEleve = (props) => {
                                                                 </div>}
                                                            
                                                             <div className="col-sm-12 justify-content-center">
-                                                                <h6 className="text-center">
-                                                                    
-                                                                </h6>
+                                                                <h5 className="text-center">
+                                                                    {info_etab.nom_etablissement}
+                                                                </h5>
                                                             </div>
                                                             {" "}
                                                         </Col>
