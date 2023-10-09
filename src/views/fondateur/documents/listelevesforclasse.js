@@ -289,7 +289,7 @@ const ListClassesFiche = memo((props) => {
           <Card>
             <Card.Header className="d-flex justify-content-between">
               <div className="header-title">
-                <h4 className="card-title">Classes</h4>
+                <h4 className="card-title">{classe}</h4>
               </div>
 
               
