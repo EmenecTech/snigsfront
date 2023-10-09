@@ -432,14 +432,36 @@ const [allnotespf, setAllNotespf] = useState([]);
       })
     };
     
-    const [allnotessf, setAllNotessf] = useState([]);
+     const [allnotessf, setAllNotessf] = useState([]);
     useEffect(() => {
         fetchAllNotessf();
     }, []);
 
     const fetchAllNotessf = () => {
-        http.get('/all_notes_sf/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/Groupe 1/' + userid).then(res => {
         setAllNotessf(res.data);
+      })
+    };
+
+      const [allnotessf1, setAllNotessf1] = useState([]);
+    useEffect(() => {
+        fetchAllNotessf1();
+    }, []);
+
+    const fetchAllNotessf1 = () => {
+        http.get('/all_notes_sfe1/' + etab + '/' + classe + "/" + evaluation + '/Groupe 2/' + userid).then(res => {
+        setAllNotessf1(res.data);
+      })
+    };
+
+      const [allnotessf2, setAllNotessf2] = useState([]);
+    useEffect(() => {
+        fetchAllNotessf2();
+    }, []);
+
+    const fetchAllNotessf2 = () => {
+        http.get('/all_notes_sfe2/' + etab + '/' + classe + "/" + evaluation + '/Groupe 3/' + userid).then(res => {
+        setAllNotessf2(res.data);
       })
     };
 
@@ -969,74 +991,24 @@ const [allnotespf, setAllNotespf] = useState([]);
 
                                                     </Row>
                                                     <Row>
-                                                        <Col sm="5" lg="5">
-                                                            <Row style={{ fontSize: "10px" }}>
-                                                                <Col sm="6" lg="6">
-                                                                    <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0" >Classe: {user.other_in_user}</p>
-                                                                        <p>Class</p>
-                                                                    </div>
-
-                                                                </Col>
-                                                                <Col sm="6" lg="6">
-                                                                    <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">Effectif:</p>
-                                                                        <p>Number</p>
-                                                                    </div>
-                                                                </Col>
-
-                                                            </Row>
-
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom et Prénom: {user.nom} {user.prenom}</p>
-                                                                <p>Name and Surname</p>
-                                                            </div>
-
-                                                            <div className="mt-1">
-                                                                <Row>
-                                                                    <Col sm="6" lg="6">
-                                                                        <div className="mt-1">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-1">Né(e) le: {user.date_naissance}</p>
-                                                                            <p>Born on</p>
-                                                                        </div>
-
-                                                                    </Col>
-                                                                    <Col sm="6" lg="6">
-                                                                        <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">A: {user.lieu_naissance}</p>
-                                                                            <p>AT</p>
-                                                                        </div>
-                                                                    </Col>
-
-                                                                </Row>
-                                                            </div>
-                                                            <div className="mt-1">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-1">Téléphone du parent ou tuteur:</p>
-                                                                <p>Parent's/guardian's Address</p>
-                                                            </div>
-
-                                                        </Col>
-                                                        <Col sm="5" lg="5">
-
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">N° Matricule:</p>
-                                                                <p>Registration N°</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: {classe} </p>
-                                                                <p>Repeater</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Sexe: {user.sexe}</p>
-                                                                <p>Sex</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Professeur principal:</p>
-                                                                <p>Class Master/Mistress</p>
-                                                            </div>
-
-                                                        </Col>
-                                                        <Col sm="2" lg="2">
+                                               <Col sm="12" lg="12">
+                                                    <Row style={{ fontSize: "10px" }}>
+                                                      <Col sm="4" lg="4">
+                                                        <div className="mt-2">
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {user.nom} {user.prénom}</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : {user.date_naissance} à {user.lieu_naissance}</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Sexe : {user.sexe}</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Matricule : {user.matricule}</p>
+                                                        </div>
+                                                      </Col>
+                                                      <Col sm="4" lg="4">
+                                                        <div className="mt-2">
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Classe : {user.other_in_user}</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : {user.other_in_user}</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal :</p>
+                                                        </div>
+                                                      </Col>
+                                                            <Col sm="4" lg="4">
                                                             <div className="bd-example">
                                                                 <figure className="figure">
                                                                     <Image
@@ -1049,8 +1021,9 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                             </div>
 
                                                         </Col>
-
                                                     </Row>
+                                                  </Col>
+                                                </Row>
                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
                                                             <Table
@@ -1066,7 +1039,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                         <th><p>
                                                                             Disciplines 
                                                                         </p></th>
-                                                                        <th>Matières</th>
+                                                                        
                                                                         <th>Note</th>
                                                                         <th>Coef</th>
                                                                         <th>NxC</th>
@@ -1075,10 +1048,11 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                     </tr>
                                                                 </thead>
                                                             <tbody>
+                                                                   
                                                                 {allnotessf.map((item, sf) => (
                                                                     <tr key={sf}>
-                                                                        <td>{item.groupe_cm}</td>
-                                                                        <td>{item.matiere_note}( {item.nom} {item.prenom} )</td>
+                                                                        <td></td>
+                                                                      
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
@@ -1086,6 +1060,53 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allind.intitule_groupe}</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                 <tbody>
+                                                                   
+                                                                {allnotessf1.map((item, sf1) => (
+                                                                    <tr key={sf1}>
+                                                                        <td></td>
+                                                                  
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allind1.intitule_groupe}</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                 <tbody>
+                                                                   
+                                                                {allnotessf2.map((item, sf2) => (
+                                                                    <tr key={sf2}>
+                                                                        <td></td>
+                                                                     
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allind2.intitule_groupe}</th>
+
+                                                                    </tr>
+                                                                </thead>
 
                                                                 <tbody>
 
