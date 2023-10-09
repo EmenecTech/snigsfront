@@ -22,7 +22,7 @@ const PayementsListEleve = (props) => {
     const componentRef = useRef();
     const printData = useReactToPrint({
         content: () => componentRef.current,
-        documentTitle: "employee data",
+        documentTitle: "employee data", 
         onafterprint: () => alert("print success"),
     });
     const [imagedata, setImagedata] = useState("");
