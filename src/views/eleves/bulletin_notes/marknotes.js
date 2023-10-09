@@ -216,6 +216,19 @@ const BulletinByEleve = memo((props) => {
     };
 
 
+    const [info_etab, setAllinfo_etab] = useState([]);
+    useEffect(() => {
+        fetchAllinfo_etab();  
+    }, []); 
+
+    const fetchAllinfo_etab = () => {
+        http.get('/info/etablissement/' + etab).then(res => {
+            setAllinfo_etab(res.data);
+        }); 
+    };
+
+
+
     const [allind3, setAllInd3] = useState([]);
     useEffect(() => {
         fetchAllInd3();  
