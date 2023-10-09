@@ -385,6 +385,7 @@ const PayementsListEleve = (props) => {
                                                                     style={{
                                                                       
                                                                         width: "100px",
+                                                                        paddingLeft:"200px",
                                                                         height: "100px",
                                                                         borderRadius: "50%",
                                                                         objectFit: "cover",
