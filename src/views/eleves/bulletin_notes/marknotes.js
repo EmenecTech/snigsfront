@@ -920,7 +920,7 @@ const [matiereslevel, setmatiereslevel] = useState([]);
                                                                    
                                                                 {allnotessfe.map((item, sf) => (
                                                                     <tr key={sf}>
-                                                                        <td></td>
+                                                                        <td>{item.matiere_note}</td>
                                                                   
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
@@ -939,8 +939,8 @@ const [matiereslevel, setmatiereslevel] = useState([]);
                                                                  <tbody>
                                                                    
                                                                 {allnotessfe1.map((item, sf1) => (
-                                                                    <tr key={sf1}>
-                                                                        <td></td>
+                                                                    <tr key={sf1}>  
+                                                                        <td>{item.matiere_note}</td>
                                                                      
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
@@ -960,7 +960,7 @@ const [matiereslevel, setmatiereslevel] = useState([]);
                                                                    
                                                                 {allnotessfe2.map((item, sf2) => (
                                                                     <tr key={sf2}>
-                                                                        <td></td>
+                                                                        <td>{item.matiere_note}</td>
                                                                        
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
