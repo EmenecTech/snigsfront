@@ -395,14 +395,21 @@ const PayementsListEleve = (props) => {
                                                         </Col>
                                                         <Col sm="6" className="mt-4">
                                                             {" "}
-                                                            <div className="col-sm-12 justify-content-center">
-                                                                <h5 className="text-center">
-                                                                    SAINT JULIE BILINGUAL SCHOOL COMPLEX
-                                                                </h5>
+
+                                                            {etab === 25 ? <div>
+
+                                                                 <div className="col-sm-12 justify-content-center">
+                                                                
                                                                 <h6 className="text-center"> Complexe Scolaire Bilingue Intégrale Saint Julie <br/> (SIS Nouvelle route Tam Tam Week-end) </h6>
                                                                 <h6 className="text-center">B.P: Yaoundé, MOTTO: DISCIPLINE-PROGRESS-SUCCESS </h6>
                                                                  <h6 className="text-center">ARRETE NO: 280/JI/7/A/MINEDUB/SG/DSEPB/SDAAP Du 19 Septembre 2016 </h6>
                                                             </div>
+                                                                
+                                                                </div> : 
+                                                                <div>
+                                                                    <h5 className="text-center">SAINT JULIE BILINGUAL SCHOOL COMPLEX</h5>
+                                                                </div>}
+                                                           
                                                             <div className="col-sm-12 justify-content-center">
                                                                 <h6 className="text-center">
                                                                     
