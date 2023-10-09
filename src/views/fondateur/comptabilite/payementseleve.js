@@ -200,7 +200,7 @@ const PayementsListEleve = (props) => {
     }
 
 
-
+        const reste = infopayement.montant_pension - item.montant_detailpayement ;
     return (
         <>
             <div>
@@ -376,14 +376,13 @@ const PayementsListEleve = (props) => {
                                                    <div className="">
                                                 <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
                                                     <Row>
-                                                       <Col sm="3" className="flex flex-column justify-content-center align-items-center">
+                                                       <Col sm="3">
                         
                                                           <div className="flex flex-column justify-content-center align-items-center">
                                                                 {"     "}
                                                                 <Image
                                                                     src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
                                                                     style={{
-                                                                      
                                                                         width: "100px",
                                                                         height: "100px",
                                                                         borderRadius: "50%",
@@ -461,7 +460,7 @@ const PayementsListEleve = (props) => {
 
 
                                                                         <br/> <br/>
-                                                                        <h3>Signature</h3>
+                                                                       <h4>Reste  : {reste} XAF</h4> <h3>Signature</h3>
                                                                         
                                                                         
                                                                         
