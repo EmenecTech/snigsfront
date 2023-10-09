@@ -88,7 +88,7 @@ const PayementsListEleve = (props) => {
 
         setInputs(values => ({ ...values, [name]: value, etab, classe, ideleve, idpension }))
     }
-famous
+
 
     const handleChange2 = (file) => {
         setImagedata(file[0]);
