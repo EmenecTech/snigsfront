@@ -1,6 +1,6 @@
 import { Fragment, memo, useEffect, useState } from "react";
-import { Col, Row, Table } from "react-bootstrap";
-import { Link, useParams } from "react-router-dom";
+import { Button, Col, Form, Modal, Row, Table } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 import AuthUser from "../../../components/AuthUser.js";
 
 //circular
@@ -34,23 +34,70 @@ import * as SettingSelector from "../../../store/setting/selectors";
 // install Swiper modules
 SwiperCore.use([Navigation]);
 
-const ListelevesforClasses = memo((props) => {
+const ListClassesFiche = memo((props) => {
+  const [show, setShow] = useState(false);
   const { user, http } = AuthUser();
-
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const navigate = useNavigate();
+  const [inputs, setInputs] = useState({});
   const etab = user.etablissement;
+  const id_classe = user.classes;
 
-  const [niveau, classe] = useParams();
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
 
-  // const [eleves_classe, seteleves_classe] = useState([]);
-  // useEffect(() => {
-  //   fetchAlleleves_classe();
-  // }, []);
+    setInputs((values) => ({ ...values, [name]: value, etab }));
+  };
 
-  // const fetchAlleleves_classe = () => {
-  //   // http.get("/fetch_eleves_in_classe/" + etab + "/" + classe).then((res) => {
-  //   //   seteleves_classe(res.data);
-  //   // });
-  // };
+  const submitForm = () => {
+    http.post("/classes", inputs).then((res) => {
+      alert("Classe ajoutée avec succès !");
+      navigate("/List/classes/");
+      window.location.reload(false);
+    });
+
+    console.log(inputs);
+  };
+  const [niveaux, setniveaux] = useState([]);
+  useEffect(() => {
+    fetchAllniveaux();
+  }, []);
+
+  const fetchAllniveaux = () => {
+    http.get("/niveaux").then((res) => {
+      setniveaux(res.data);
+    });
+  };
+
+  const [filieres, setfilieres] = useState([]);
+  useEffect(() => {
+    fetchAllfilieres();
+  }, []);
+
+  const fetchAllfilieres = () => {
+    http.get("/get_filieres/" + etab).then((res) => {
+      setfilieres(res.data);
+    });
+  };
+
+  const [classes, setclasses] = useState([]);
+  useEffect(() => {
+    fetchAllclasses();
+  }, []);
+
+  const fetchAllclasses = () => {
+    http.get("/get_classes/" + etab).then((res) => {
+      setclasses(res.data);
+    });
+  };
+
+  const deleteClasses = (id) => {
+    http.delete("/delete_classes/" + etab + "/" + id).then((res) => {
+      fetchAllclasses();
+    });
+  };
   useSelector(SettingSelector.theme_color);
 
   const getVariableColor = () => {
@@ -283,8 +330,119 @@ const ListelevesforClasses = memo((props) => {
           <Card>
             <Card.Header className="d-flex justify-content-between">
               <div className="header-title">
-                <h4 className="card-title">Elèves</h4>
+                <h4 className="card-title">Classes</h4>
               </div>
+
+              <Button variant="primary mt-2" onClick={handleShow}>
+                <span className="btn-inner">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                    />
+                  </svg>
+                </span>
+                Ajouter
+              </Button>
+              {/* <!-- Modal --> */}
+              <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title as="h5">Ajouter une nouvelle classe</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <Form>
+                    <Row>
+                      <Col>
+                        <Form.Group as={Row} className="form-group">
+                          <Form.Group className="form-group">
+                            <Form.Label htmlFor="exampleInputText1">
+                              Intitulé *
+                            </Form.Label>
+                            <Form.Control
+                              type="text"
+                              defaultValue=""
+                              name="int"
+                              onChange={handleChange}
+                              required
+                            />
+                          </Form.Group>
+                        </Form.Group>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col>
+                        <Form.Group as={Row} className="form-group">
+                          <Form.Group className="form-group">
+                            <Form.Label htmlFor="exampleInputText1">
+                              Niveau *
+                            </Form.Label>
+                            <select
+                              className="form-select mb-3 shadow-none"
+                              name="niveau"
+                              onChange={handleChange}
+                              required
+                            >
+                              <option></option>
+                              {niveaux.map((item) => (
+                                <option
+                                  key={item.id}
+                                  value={item.intitule_niveau}
+                                >
+                                  {item.intitule_niveau}
+                                </option>
+                              ))}
+                            </select>
+                          </Form.Group>
+                        </Form.Group>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col>
+                        <Form.Group as={Row} className="form-group">
+                          <Form.Group className="form-group">
+                            <Form.Label htmlFor="exampleInputText1">
+                              Filière
+                            </Form.Label>
+                            <select
+                              className="form-select mb-3 shadow-none"
+                              name="filiere"
+                              onChange={handleChange}
+                              required
+                            >
+                              <option></option>
+                              {filieres.map((item) => (
+                                <option
+                                  key={item.id}
+                                  value={item.intitule_filiere}
+                                >
+                                  {item.intitule_filiere}
+                                </option>
+                              ))}
+                            </select>
+                          </Form.Group>
+                        </Form.Group>
+                      </Col>
+                    </Row>
+                    <div className="text-center">
+                      <Button
+                        type="button"
+                        variant="primary"
+                        onClick={submitForm}
+                      >
+                        Confirmer
+                      </Button>
+                    </div>
+                  </Form>
+                </Modal.Body>
+              </Modal>
             </Card.Header>
             <Card.Body>
               <div className="table-responsive border-bottom my-3">
@@ -297,29 +455,23 @@ const ListelevesforClasses = memo((props) => {
                 >
                   <thead>
                     <tr>
-                      <th>Nom</th>
-                      <th>Prénom</th>
-                      <th>Genre</th>
-                      <th>Date de naissance</th>
-                      <th>Lieu de naissance</th>
-                      <th>Email</th>
-                      <th>Téléphone</th>
+                      <th>Intitulé</th>
+                      <th>Niveau</th>
+                      <th>Filière </th>
+                      <th>Cycle </th>
                       <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {/* {eleves_classe.map((item) => (
+                    {classes.map((item) => (
                       <tr key={item.id}>
-                        <td>{item.nom}</td>
-                        <td>{item.prenom}</td>
-                        <td>{item.sexe}</td>
-                        <td>{item.date_naissance}</td>
-                        <td>{item.lieu_naissance}</td>
-                        <td>{item.email}</td>
-                        <td>{item.telephone}</td>
-                         <td>
-                           <div className="flex align-items-center list-user-action">
-                             <Link
+                        <td>{item.intitule_classe}</td>
+                        <td>{item.niveau_classe}</td>
+                        <td>{item.filiere}</td>
+                        <td>{item.cycle_niveau}</td>
+                        <td>
+                          <div className="flex align-items-center list-user-action">
+                            <Link
                               className="btn btn-sm btn-icon btn-warning"
                               data-toggle="tooltip"
                               data-placement="top"
@@ -327,11 +479,9 @@ const ListelevesforClasses = memo((props) => {
                               data-original-title="Edit"
                               to={
                                 "/FicheEleve/" +
-                                niveau +
+                                item.niveau_classe +
                                 "/" +
-                                classe +
-                                "/" +
-                                item.id
+                                item.intitule_classe
                               }
                             >
                               <span className="btn-inner">
@@ -367,10 +517,11 @@ const ListelevesforClasses = memo((props) => {
                                 </svg>
                               </span>
                             </Link>{" "}
+                            
                           </div>
                         </td>
                       </tr>
-                    ))} */}
+                    ))}
                   </tbody>
                   <tfoot></tfoot>
                 </Table>
@@ -383,4 +534,4 @@ const ListelevesforClasses = memo((props) => {
   );
 });
 
-export default ListelevesforClasses;
+export default ListClassesFiche;
