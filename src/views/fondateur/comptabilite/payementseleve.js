@@ -199,7 +199,7 @@ const PayementsListEleve = (props) => {
         })
     }
 
-    const reste = infopayement.montant_pension;
+    const reste = infopayement.montant_pension - infopayement.montant_pension;
 
 
 
@@ -462,7 +462,7 @@ const PayementsListEleve = (props) => {
 
 
                                                                         <br/> <br/>
-                                                                       <h4>Reste: {payementsum}</h4> <h3>Signature</h3>
+                                                                       <h4>Reste: XAF {reste}</h4> <h3>Signature</h3>
                                                                         
                                                                         
                                                                         
