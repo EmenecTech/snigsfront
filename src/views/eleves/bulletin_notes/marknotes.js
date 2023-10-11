@@ -50,6 +50,8 @@ const BulletinByEleve = memo((props) => {
     const classe = user.other_in_user;
 
     
+   const groupe = " " ;
+    
     const [allind, setAllInd] = useState([]);
     useEffect(() => {
         fetchAllInd();  
@@ -156,7 +158,8 @@ const BulletinByEleve = memo((props) => {
     
 
   
-
+    
+    
     const [allind1, setAllInd1] = useState([]);
     useEffect(() => {
         fetchAllInd1();  
@@ -397,9 +400,9 @@ const BulletinByEleve = memo((props) => {
     useEffect(() => {
         fetchAllNotessfe();
     }, []);
-    const gr = allind.intitule_groupe;
+    
     const fetchAllNotessfe = () => {
-        http.get("/all_notes_sfe/" + etab + "/" + classe + "/" + evaluation +  "/" + gr).then(res => {
+        http.get("/all_notes_sfe/" + etab + "/" + classe + "/" + evaluation +  "/" + groupe).then(res => {
         setAllNotessfe(res.data);
       })
     };
@@ -490,6 +493,8 @@ const BulletinByEleve = memo((props) => {
         })
     }
 
+     const groupe = allind.intitule_groupe;
+        
       useSelector(SettingSelector.theme_color);
 
 
