@@ -169,7 +169,7 @@ const EnseignantListGroupes = () => {
                                                 />
                                             </Form.Group>
  
-                                            </Form.Group>
+                                     
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Appreciation</Form.Label>
 
