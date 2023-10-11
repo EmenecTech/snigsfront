@@ -214,7 +214,7 @@ const BulletinByEleve = memo((props) => {
         })
     };
 
-    console.log(elevesinclass);
+    
     
   const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
@@ -245,7 +245,7 @@ const [allnotespf, setAllNotespf] = useState([]);
     const fetchAllNotespf = () => {
         http.get('/all_notes_pf/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
         setAllNotespf(res.data);
-              console.log(allnotespf);
+             
       })
     };
 
@@ -1011,16 +1011,16 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                     <Row style={{ fontSize: "10px" }}>
                                                       <Col sm="4" lg="4">
                                                         <div className="mt-2">
-                                                          <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {user.nom} {user.prénom}</p>
-                                                          <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : {user.date_naissance} à {user.lieu_naissance}</p>
-                                                          <p style={{ fontSize: "10px" }} className="mb-1">Sexe : {user.sexe}</p>
-                                                          <p style={{ fontSize: "10px" }} className="mb-1">Matricule : {user.matricule}</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass} </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Sexe : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Matricule : </p>
                                                         </div>
                                                       </Col>
                                                       <Col sm="4" lg="4">
                                                         <div className="mt-2">
-                                                          <p style={{ fontSize: "10px" }} className="mb-0">Classe : {user.other_in_user}</p>
-                                                          <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : {user.other_in_user}</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Classe : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : </p>
                                                           <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal :</p>
                                                         </div>
                                                       </Col>
@@ -1354,7 +1354,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                             <Row style={{ fontSize: "10px" }}>
                                                                 <Col sm="6" lg="6">
                                                                     <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0" >Classe: {user.other_in_user}</p>
+                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0" >Classe: </p>
                                                                         <p>Class</p>
                                                                     </div>
 
@@ -1369,7 +1369,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                             </Row>
 
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom et Prénom: {user.nom} {user.prenom}</p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom et Prénom:{elevesinclass} </p>
                                                                 <p>Name and Surname</p>
                                                             </div>
 
@@ -1377,14 +1377,14 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 <Row>
                                                                     <Col sm="6" lg="6">
                                                                         <div className="mt-1">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-1">Né(e) le: {user.date_naissance}</p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-1">Né(e) le: </p>
                                                                             <p>Born on</p>
                                                                         </div>
 
                                                                     </Col>
                                                                     <Col sm="6" lg="6">
                                                                         <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">A: {user.lieu_naissance}</p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">A: </p>
                                                                             <p>AT</p>
                                                                         </div>
                                                                     </Col>
@@ -1408,7 +1408,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Sexe: {user.sexe}</p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Sexe: </p>
                                                                 <p>Sex</p>
                                                             </div>
                                                             <div className="mt-2">
@@ -1694,7 +1694,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom :{elevesinclass}  </strong> </p>
 
                                                             </div>
 
@@ -2177,7 +2177,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : {elevesinclass} </strong> </p>
 
                                                             </div>
 
@@ -2430,7 +2430,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :{elevesinclass}  </strong> </p>
 
                                                             </div>
 
@@ -2699,7 +2699,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : {elevesinclass} </strong> </p>
 
                                                             </div>
 
@@ -2919,7 +2919,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : {elevesinclass} </strong> </p>
 
                                                             </div>
 
@@ -3150,7 +3150,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {allind.intitule_groupe} </strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {elevesinclass}  </strong> </p>
 
                                                             </div>
 
@@ -3371,7 +3371,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {allind.intitule_groupe} </strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {elevesinclass} </strong> </p>
 
                                                             </div>
 
