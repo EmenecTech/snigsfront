@@ -84,14 +84,14 @@ const BulletinByEleve = memo((props) => {
     const classe = user.other_in_user;
 
     
-    const [groupe_one, setAllgroupe_one] = useState([]);
+    const [allind, setAllInd] = useState([]);
     useEffect(() => {
-        fetchAllgroupe_one();  
+        fetchAllInd();  
     }, []); 
 
-    const fetchAllgroupe_one = () => {
+    const fetchAllInd = () => {
         http.get('/get_ind_for_mat/' + etab).then(res => {
-            setAllgroupe_one(res.data);
+            setAllInd(res.data);
         }); 
     };
 
@@ -436,7 +436,7 @@ const BulletinByEleve = memo((props) => {
     useEffect(() => {
         fetchAllNotessfe();
     }, []);
-    const gr = groupe_one.intitule_groupe;
+    const gr = allind.intitule_groupe;
     const fetchAllNotessfe = () => {
         http.get("/all_notes_sfe/" + etab + "/" + classe + "/" + evaluation +  "/" + gr).then(res => {
         setAllNotessfe(res.data);
@@ -445,7 +445,7 @@ const BulletinByEleve = memo((props) => {
 
     console.log(allnotessfe);
     console.log(123);
-    console.log(groupe_one);
+    console.log(allind.intitule_groupe);
 
       const [allnotessfe1, setAllNotessfe1] = useState([]);
     useEffect(() => {
@@ -934,7 +934,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{groupe_one.intitule_groupe}</th>
+                                                                        <th>{allind.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
@@ -1324,7 +1324,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{groupe_one}</th>
+                                                                        <th>{allind.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
@@ -1585,7 +1585,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{groupe_one}</th>
+                                                                        <th>{allind.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
@@ -2072,7 +2072,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{groupe_one.intitule_groupe}</th>
+                                                                        <th>{allind.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
@@ -2970,7 +2970,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {groupe_one.intitule_groupe} </strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {allind.intitule_groupe} </strong> </p>
 
                                                             </div>
 
@@ -3011,9 +3011,9 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{goupe_one.intitule_groupe}</th>
+                                                                        <th>{allind.intitule_groupe}</th>
 
-                                                                    </tr> 
+                                                                    </tr>
                                                                 </thead>
                                                                  <tbody>
                                                                    
@@ -3190,7 +3190,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : </strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {allind.intitule_groupe} </strong> </p>
 
                                                             </div>
 
