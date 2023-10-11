@@ -202,6 +202,19 @@ const BulletinByEleve = memo((props) => {
              setenseign(res.data);
         })
     }
+
+     const [elevesinclass, setelevesinclass] = useState();
+    useEffect(() => {
+       fetchAllelevesinclass();
+    }, []);
+
+    const fetchAllelevesinclass = () => {
+        http.get('/get_eleve_in_class/' + etab + '/' + classe + '/' + userid).then(res => {
+             setelevesinclass(res.data);
+        })
+    };
+
+    console.log(elevesinclass);
     
   const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
@@ -1937,7 +1950,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {elevesinclass.nom} {elevesinclass.prenom} </strong> </p>
 
                                                             </div>
 
