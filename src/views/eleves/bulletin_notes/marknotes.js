@@ -52,7 +52,7 @@ const BulletinByEleve = memo((props) => {
     
    var groupe = " " ;
     
-    const [allind, setAllInd] = useState([]);
+    var [allind, setAllInd] = useState([]);
     useEffect(() => {
         fetchAllInd();  
     }, []); 
