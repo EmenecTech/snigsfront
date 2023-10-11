@@ -169,13 +169,6 @@ const EnseignantListGroupes = () => {
                                                 />
                                             </Form.Group>
  
-                                         <Form.Group className='form-group'>
-                                                <Form.Label>coefficient</Form.Label>
-                                                <Form.Control type="number" id="coef" name="coef"
-                                                    value={coefficient}
-                                                    
-                                                    disabled
-                                                />
                                             </Form.Group>
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Appreciation</Form.Label>
@@ -271,7 +264,7 @@ const EnseignantListGroupes = () => {
                                             </Form.Group>
  
                                          <Form.Group className='form-group'>
-                                                <Form.Label>coefficient</Form.Label>
+                                                <Form.Label>Note sur</Form.Label>
                                                 <Form.Control type="number" id="coef" name="coef"
                                                     value={coefficient}
                                                     
