@@ -400,7 +400,7 @@ const BulletinByEleve = memo((props) => {
     useEffect(() => {
         fetchAllNotessfe();
     }, []);
-    
+    groupe = allind.intitule_groupe;
     const fetchAllNotessfe = () => {
         http.get("/all_notes_sfe/" + etab + "/" + classe + "/" + evaluation +  "/" + groupe).then(res => {
         setAllNotessfe(res.data);
@@ -492,8 +492,8 @@ const BulletinByEleve = memo((props) => {
             
         })
     }
-
-     const groupe = allind.intitule_groupe;
+    
+ 
         
       useSelector(SettingSelector.theme_color);
 
