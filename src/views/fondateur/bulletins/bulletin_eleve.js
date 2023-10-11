@@ -235,6 +235,8 @@ const [allnotespf, setAllNotespf] = useState([]);
       })
     };
 
+    console.log(allnotespf);
+
  const [allind, setAllInd] = useState([]);
     useEffect(() => {
         fetchAllInd();  
