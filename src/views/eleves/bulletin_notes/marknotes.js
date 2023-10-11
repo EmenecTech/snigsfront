@@ -50,7 +50,7 @@ const BulletinByEleve = memo((props) => {
     const classe = user.other_in_user;
 
     
-   const groupe = " " ;
+   var groupe = " " ;
     
     const [allind, setAllInd] = useState([]);
     useEffect(() => {
