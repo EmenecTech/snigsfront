@@ -1965,7 +1965,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                     {allnotespf.map((item, pf) => (
                                                                         <tr key={pf}>
                                                                           
-                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.groupe_cm}</td>
                                                                             <td>{item.competence_visee_note}</td>
                                                                             <td>{item.valeur_note}</td>
                                                                             <td>{item.appreciation_note}</td>
@@ -2934,7 +2934,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                             <tbody>
                                                                 {allnotespa.map((item, pa) => (
                                                                     <tr key={pa}>  
-                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.groupe_cm}</td>
                                                                         <td>{item.competence_visee_note}</td>
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.appreciation_note}</td>
