@@ -232,10 +232,11 @@ const [allnotespf, setAllNotespf] = useState([]);
     const fetchAllNotespf = () => {
         http.get('/all_notes_pf/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
         setAllNotespf(res.data);
+              console.log(allnotespf);
       })
     };
 
-    console.log(allnotespf);
+  
 
  const [allind, setAllInd] = useState([]);
     useEffect(() => {
