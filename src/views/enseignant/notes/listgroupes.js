@@ -162,7 +162,7 @@ const EnseignantListGroupes = () => {
                                                 </select>
                                             </Form.Group>
                                             <Form.Group className='form-group'>
-                                                <Form.Label>Note /20</Form.Label>
+                                                <Form.Label>Note</Form.Label>
                                                 <Form.Control type="number" id="valeur_note" name="valeur_note"
                                                     value={inputs.valeur_note || ''}
                                                     onChange={handleChange}
@@ -256,21 +256,14 @@ const EnseignantListGroupes = () => {
                                                 </select>
                                             </Form.Group>
                                             <Form.Group className='form-group'>
-                                                <Form.Label>Note /20</Form.Label>
+                                                <Form.Label>Note </Form.Label>
                                                 <Form.Control type="number" id="valeur_note" name="valeur_note"
                                                     value={inputs.valeur_note || ''}
                                                     onChange={handleChange}
                                                 />
                                             </Form.Group>
  
-                                         <Form.Group className='form-group'>
-                                                <Form.Label>Note sur</Form.Label>
-                                                <Form.Control type="number" id="coef" name="coef"
-                                                    value={coefficient}
-                                                    
-                                                    disabled
-                                                />
-                                            </Form.Group>
+                                         
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Appreciation</Form.Label>
 
