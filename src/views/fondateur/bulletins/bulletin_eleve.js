@@ -1950,7 +1950,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {elevesinclass.nom} {elevesinclass.prenom} </strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {elevesinclass} </strong> </p>
 
                                                             </div>
 
