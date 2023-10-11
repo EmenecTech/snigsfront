@@ -38,7 +38,7 @@ const ListClassesFiche = memo((props) => {
 
   const { user, http } = AuthUser();
   const etab = user.etablissement;
-  const classe = useParams();
+  const {classe} = useParams();
 
 console.log(classe);
 
