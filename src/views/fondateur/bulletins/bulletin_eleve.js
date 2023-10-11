@@ -1131,7 +1131,7 @@ const [allnotespf, setAllNotespf] = useState([]);
 
                                                                     <tr>
                                                                        <td>RECAPITULATIFS</td>
-                                                                        <td></td>
+                                                                       
                                                                         <td>{sumnotes}</td>
                                                                         <td>{sumcoef}</td>
                                                                         <td>{sumnotesfinale}</td>
@@ -1353,74 +1353,24 @@ const [allnotespf, setAllNotespf] = useState([]);
 
                                                     </Row>
                                                     <Row>
-                                                        <Col sm="5" lg="5">
-                                                            <Row style={{ fontSize: "10px" }}>
-                                                                <Col sm="6" lg="6">
-                                                                    <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0" >Classe: </p>
-                                                                        <p>Class</p>
-                                                                    </div>
-
-                                                                </Col>
-                                                                <Col sm="6" lg="6">
-                                                                    <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">Effectif:</p>
-                                                                        <p>Number</p>
-                                                                    </div>
-                                                                </Col>
-
-                                                            </Row>
-
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom et Prénom:{elevesinclass} </p>
-                                                                <p>Name and Surname</p>
-                                                            </div>
-
-                                                            <div className="mt-1">
-                                                                <Row>
-                                                                    <Col sm="6" lg="6">
-                                                                        <div className="mt-1">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-1">Né(e) le: </p>
-                                                                            <p>Born on</p>
-                                                                        </div>
-
-                                                                    </Col>
-                                                                    <Col sm="6" lg="6">
-                                                                        <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">A: </p>
-                                                                            <p>AT</p>
-                                                                        </div>
-                                                                    </Col>
-
-                                                                </Row>
-                                                            </div>
-                                                            <div className="mt-1">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-1">Téléphone du parent ou tuteur:</p>
-                                                                <p>Parent's/guardian's Address</p>
-                                                            </div>
-
-                                                        </Col>
-                                                        <Col sm="5" lg="5">
-
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">N° Matricule:</p>
-                                                                <p>Registration N°</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: {classe} </p>
-                                                                <p>Repeater</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Sexe: </p>
-                                                                <p>Sex</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Professeur principal:</p>
-                                                                <p>Class Master/Mistress</p>
-                                                            </div>
-
-                                                        </Col>
-                                                        <Col sm="2" lg="2">
+                                               <Col sm="12" lg="12">
+                                                    <Row style={{ fontSize: "10px" }}>
+                                                      <Col sm="4" lg="4">
+                                                        <div className="mt-2">
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass} </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Sexe : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Matricule : </p>
+                                                        </div>
+                                                      </Col>
+                                                      <Col sm="4" lg="4">
+                                                        <div className="mt-2">
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Classe : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal :</p>
+                                                        </div>
+                                                      </Col>
+                                                            <Col sm="4" lg="4">
                                                             <div className="bd-example">
                                                                 <figure className="figure">
                                                                     <Image
@@ -1433,8 +1383,9 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                             </div>
 
                                                         </Col>
-
                                                     </Row>
+                                                  </Col>
+                                                </Row>
                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
                                                             <Table
@@ -1523,7 +1474,7 @@ const [allnotespf, setAllNotespf] = useState([]);
 
                                                                     <tr>
                                                                        <td>SUMMARY</td>
-                                                                        <td></td>
+                                                                       
                                                                         <td>{sumnotes}</td>
                                                                         <td>{sumcoef}</td>
                                                                         <td>{sumnotesfinale}</td>
