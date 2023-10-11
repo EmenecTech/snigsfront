@@ -517,10 +517,6 @@ const BulletinByEleve = memo((props) => {
         })
     }
 
-                                                                                              
-
-
-
  const [classes, setclasses] = useState([]);
     useEffect(() => {
         fetchAllclasses();
@@ -578,7 +574,7 @@ const BulletinByEleve = memo((props) => {
             },
             throttleDelay: 10,
             once: true,
-            duration: 700,
+         
             offset: 10,
         });
     });
