@@ -655,6 +655,9 @@ const [allnotespf, setAllNotespf] = useState([]);
         })
     }
 
+    console.log(moyenneleve);
+     console.log(sumcoef);
+
 
 
     console.log(sumnotes);
