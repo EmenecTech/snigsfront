@@ -447,7 +447,7 @@ const PayementsListEleve = (props) => {
                                                 
                                                     </Row>
                                                 </Col>
-                                                        <div style={{ paddingLeft:"25px" }}>
+                                                        <div className="mt-4" style={{ paddingLeft:"25px" }}>
 
 
                                                                 
