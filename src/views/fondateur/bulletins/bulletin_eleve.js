@@ -1418,7 +1418,7 @@ const fetchAllNotesgr30 = () => {
 
                                                                     </tr>
                                                                 </thead>
-{/*       <tbody>
+     <tbody>
                                                                    
                                                                 {allnotessf1.map((item, sf1) => (
                                                                     <tr key={sf1}>
@@ -1434,7 +1434,7 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind1.intitule_groupe}</th>
+                                                                        <th>{allnotesgr2}</th>
 
                                                                     </tr>
                                                                 </thead>
@@ -1454,10 +1454,10 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind2.intitule_groupe}</th>
+                                                                        <th>{allnotesgr3}</th>
 
                                                                     </tr>
-                                                                </thead> */}
+                                                                </thead> 
 
                                                                 <tbody>
 
