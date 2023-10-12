@@ -789,7 +789,7 @@ const fetchAllNotesgr30 = () => {
     }, []);
     
     const fetchInfo_grp_1 = () => {
-        http.get('/info/groupe_1/' + etab + '/Groupe 1').then(res => {
+        http.get('/info/groupe_1/' + etab).then(res => {
         setInfo_grp_1(res.data);
       })
     };
@@ -1445,7 +1445,7 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_1.num_groupe}</th>
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
