@@ -383,12 +383,12 @@ const PayementsListEleve = (props) => {
                                         <Col sm="12" lg="12">
                                                 
            
-                                            <div className="d-flex align-items-center justify-content-center mt-2 mb-3">
-                                                <Col sm="12" >
+                                            <div className="">
+                                                <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
                                                     <Row>
                                                        <Col sm="3">
                                                             {" "}
-                                                            <div>
+                                                            <div className="flex flex-column justify-content-center align-items-center">
                                                                 <Image
                                                                     src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
                                                                     style={{
@@ -426,7 +426,7 @@ const PayementsListEleve = (props) => {
                                                         </Col>
                                                         <Col sm="3">
                                                             {" "}
-                                                            <div>
+                                                            <div className="flex flex-column justify-content-center align-items-center">
                                                                 <Image
                                                                     src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
                                                                     style={{
