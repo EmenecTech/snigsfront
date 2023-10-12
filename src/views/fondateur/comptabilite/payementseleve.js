@@ -46,7 +46,7 @@ const PayementsListEleve = (props) => {
     }, []);
 
     const fetchAllinfo_etab = () => {
-        http.get('/info/etablissement/' + etab).then((res) => {
+        http.get('/get_name_logo/' + etab).then((res) => {
             setinfo_etab(res.data);
         });
     }
