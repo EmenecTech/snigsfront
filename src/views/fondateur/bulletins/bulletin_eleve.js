@@ -817,11 +817,82 @@ const fetchAllNotesgr30 = () => {
         setAllSumallnote_1(res.data);
       })
     };
-        
-    //////////////////////////////////////////////
 
     
+    //////////////////////////////////////////////
+    const [Info_grp_2, setInfo_grp_2] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_2();
+    }, []);
+     console.log(Info_grp_2);
+    const fetchInfo_grp_2 = () => {
+        http.get('/info/groupe_2/' + etab + '/Groupe 2/').then(res => {
+        setInfo_grp_2(res.data);
+      })
+    };
+    const [allnote_2, setAllNote_2] = useState([]);
+    useEffect(() => {
+        fetchAllNote_2();
+    }, []);
 
+    const fetchAllNote_2 = () => {
+        http.get('/all/notes_2/' + etab + '/' + classe + "/" + evaluation + '/Groupe 2/' + userid).then(res => {
+        setAllNote_2(res.data);
+      })
+    };
+    
+    const [sumallnote_2, setAllSumallnote_2] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_2();
+    }, []);
+
+    const fetchAllSumallnote_2= () => {
+        http.get('/sum/all/notes_2/' + etab + '/' + classe + "/" + evaluation + '/Groupe 2/' + userid).then(res => {
+        setAllSumallnote_2(res.data);
+      })
+    };
+    
+        
+    //////////////////////////////////////////////
+    const [Info_grp_3, setInfo_grp_3] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_3();
+    }, []);
+     console.log(Info_grp_3);
+    const fetchInfo_grp_3 = () => {
+        http.get('/info/groupe_3/' + etab + '/Groupe 3/').then(res => {
+        setInfo_grp_3(res.data);
+      })
+    };
+    const [allnote_3, setAllNote_3] = useState([]);
+    useEffect(() => {
+        fetchAllNote_3();
+    }, []);
+
+    const fetchAllNote_3 = () => {
+        http.get('/all/notes_3/' + etab + '/' + classe + "/" + evaluation + '/Groupe 3/' + userid).then(res => {
+        setAllNote_1(res.data);
+      })
+    };
+    
+    const [sumallnote_3, setAllSumallnote_3] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_3();
+    }, []);
+
+    const fetchAllSumallnote_3 = () => {
+        http.get('/sum/all/notes_3/' + etab + '/' + classe + "/" + evaluation + '/Groupe 3/' + userid).then(res => {
+        setAllSumallnote_3(res.data);
+      })
+    };
+    ///////////////////////////////////////////////
+
+
+
+
+
+
+    
       const [allnotessf1, setAllNotessf1] = useState([]);
     useEffect(() => {
         fetchAllNotessf1();
@@ -868,121 +939,6 @@ const fetchAllNotesgr30 = () => {
     }
 
     
-    {/*const [notesfg, setNotesfg] = useState([]);
-    useEffect(() => {
-        fetchAllNotesfg();
-    }, []);
-
-    const fetchAllNotesfg = () => {
-        http.get('/notes_fristgroupe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesfg(res.data);
-
-        })
-    }
-
-    const [notessg, setNotessg] = useState([]);
-    useEffect(() => {
-        fetchAllNotessg();
-    }, []);
-
-    const fetchAllNotessg = () => {
-        http.get('/notes_secondgroupe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotessg(res.data);
-
-        })
-    }
-
-    const [notestg, setNotestg] = useState([]);
-    useEffect(() => {
-        fetchAllNotestg();
-    }, []);
-
-    const fetchAllNotestg = () => {
-        http.get('/notes_thirdgroupe/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotestg(res.data);
-
-        })
-    }
-
-   
-
-    ////primaire
-
-    const [notesfr, setNotesfr] = useState([]);
-    useEffect(() => {
-        fetchAllNotesfr();
-    }, []);
-
-    const fetchAllNotesfr = () => {
-        http.get('/notes_francais/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesfr(res.data);
-
-        })
-    }
-
-    const [notesmath, setNotesmath] = useState([]);
-    useEffect(() => {
-        fetchAllNotesmath();
-    }, []);
-
-    const fetchAllNotesmath = () => {
-        http.get('/notes_maths/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesmath(res.data);
-
-        })
-    }
-
-    const [notesang, setNotesang] = useState([]);
-    useEffect(() => {
-        fetchAllNotesang();
-    }, []);
-
-    const fetchAllNotesang = () => {
-        http.get('/notes_ang/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesang(res.data);
-
-        })
-    }
-
-    const [notessee, setNotessee] = useState([]);
-    useEffect(() => {
-        fetchAllNotessee();
-    }, []);
-
-    const fetchAllNotessee = () => {
-        http.get('/notes_see/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotessee(res.data);
-
-        })
-    }
-
-
-    const [notesshs, setNotesshs] = useState([]);
-    useEffect(() => {
-        fetchAllNotesshs();
-    }, []);
-
-    const fetchAllNotesshs = () => {
-        http.get('/notes_shs/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotesshs(res.data);
-
-        })
-    }
-
-
-    const [notescg, setNotescg] = useState([]);
-    useEffect(() => {
-        fetchAllNotescg();
-    }, []);
-
-    const fetchAllNotescg = () => {
-        http.get('/notes_cg/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setNotescg(res.data);
-
-        })
-    }
-*/}
-
     ////primary
     const [sumcoef, setsumcoef] = useState([]);
     useEffect(() => {
