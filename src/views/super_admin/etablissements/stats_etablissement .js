@@ -539,6 +539,13 @@ function formatNumberWithCommas(number) {
                                                 </Form.Group>
                                             </Col>
 
+                                            
+                                             <Col md="6">
+                                                a
+                                             </Col>
+                                             <Col md="6">
+                                                a
+                                             </Col>
                                         </Row>
 
                                         <Row>
@@ -555,6 +562,13 @@ function formatNumberWithCommas(number) {
                                                     </Form.Group>
                                                 </Form.Group>
                                             </Col>
+
+                                            <Col md="6">
+                                                
+                                             </Col>
+                                             <Col md="6">
+                                                
+                                             </Col>
 
                                         </Row>
 
@@ -574,6 +588,12 @@ function formatNumberWithCommas(number) {
                                                 </Form.Group>
                                             </Col>
 
+                                          <Col md="6">
+                                                
+                                             </Col>
+                                             <Col md="6">
+                                                
+                                             </Col>
                                         </Row>
 
 
