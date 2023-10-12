@@ -430,7 +430,17 @@ const [allnotespf, setAllNotespf] = useState([]);
             setAllInd15(res.data);
         }); 
     };
-    
+
+     const [allnotessf, setAllNotessf] = useState([]);
+    useEffect(() => {
+        fetchAllNotessf();
+    }, []);
+
+    const fetchAllNotessf = () => {
+        http.get('/all_notes_sf/' + etab + '/' + classe + "/" + evaluation + '/Groupe 1/' + userid).then(res => {
+        setAllNotessf(res.data);
+      })
+    };
 
     
     const [allnotesgr1, setAllNotesgr1] = useState([]);
