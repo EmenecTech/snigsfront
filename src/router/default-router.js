@@ -67,7 +67,7 @@ import ListFilieres from '../views/fondateur/filieres/filieres';
 import UniClasse from '../views/fondateur/classes/classe';
 
 //oct 12 
-import PrimClasse from '../views/fondateur/classes/classe';
+import PrimClasse from '../views/fondateur/classes/classe primaire';
 
 
 import ListMatieres from '../views/fondateur/matieres/matieres';
