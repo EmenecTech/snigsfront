@@ -46,7 +46,7 @@ SwiperCore.use([Navigation]);
 
 
 const StatsEtablissement = memo((props) => {
-    const { http, setToken } = AuthUser();
+    const { http, setToken, user } = AuthUser();
     const [activeTab, setActiveTab] = useState('Onglet1');
     const { nometab, etab } = useParams();
 
