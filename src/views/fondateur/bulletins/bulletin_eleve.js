@@ -246,7 +246,7 @@ const BulletinByEleve = memo((props) => {
     }, []);
 
     const fetchAllNote_1 = () => {
-        http.get('/all/notes_1/' + etab + '/' + classe + "/" + evaluation + '/Groupe 1/' + userid).then(res => {
+        http.get('/all/notes_1/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
         setAllNote_1(res.data);
       })
     };
@@ -257,7 +257,7 @@ const BulletinByEleve = memo((props) => {
     }, []);
 
     const fetchAllSumallnote_1 = () => {
-        http.get('/sum/all/notes_1/' + etab + '/' + classe + "/" + evaluation + '/Groupe 1/' + userid).then(res => {
+        http.get('/sum/all/notes_1/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
         setAllSumallnote_1(res.data);
       })
     };
@@ -280,7 +280,7 @@ const BulletinByEleve = memo((props) => {
     }, []);
 
     const fetchAllNote_2 = () => {
-        http.get('/all/notes_2/' + etab + '/' + classe + "/" + evaluation + '/Groupe 2/' + userid).then(res => {
+        http.get('/all/notes_2/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
         setAllNote_2(res.data);
       })
     };
@@ -291,7 +291,7 @@ const BulletinByEleve = memo((props) => {
     }, []);
 
     const fetchAllSumallnote_2= () => {
-        http.get('/sum/all/notes_2/' + etab + '/' + classe + "/" + evaluation + '/Groupe 2/' + userid).then(res => {
+        http.get('/sum/all/notes_2/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
         setAllSumallnote_2(res.data);
       })
     };
@@ -314,7 +314,7 @@ const BulletinByEleve = memo((props) => {
     }, []);
 
     const fetchAllNote_3 = () => {
-        http.get('/all/notes_3/' + etab + '/' + classe + "/" + evaluation + '/Groupe 3/' + userid).then(res => {
+        http.get('/all/notes_3/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
         setAllNote_3(res.data);
       })
     };
@@ -325,7 +325,7 @@ const BulletinByEleve = memo((props) => {
     }, []);
 
     const fetchAllSumallnote_3 = () => {
-        http.get('/sum/all/notes_3/' + etab + '/' + classe + "/" + evaluation + '/Groupe 3/' + userid).then(res => {
+        http.get('/sum/all/notes_3/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
         setAllSumallnote_3(res.data);
       })
     };
