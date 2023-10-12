@@ -435,7 +435,339 @@ const [allnotespf, setAllNotespf] = useState([]);
         }); 
     };
     
- 
+
+    
+    const [allnotesgr1, setAllNotesgr1] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr1();
+}, []);
+
+const fetchAllNotesgr1 = () => {
+    http.get('/all_notes_gr1/' + etab + '/' + classe + "/" + evaluation + '/Groupe 1/' + userid).then(res => {
+    setAllNotesgr1(res.data);
+  })
+};
+
+ const [allnotesgr2, setAllNotesgr2] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr2();
+}, []);
+
+const fetchAllNotesgr2 = () => {
+    http.get('/all_notes_gr2/' + etab + '/' + classe + "/" + evaluation + '/Groupe 2/' + userid).then(res => {
+    setAllNotesgr2(res.data);
+  })
+};
+
+ const [allnotesgr3, setAllNotesgr3] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr3();
+}, []);
+
+const fetchAllNotesgr3 = () => {
+    http.get('/all_notes_gr3/' + etab + '/' + classe + "/" + evaluation + '/Groupe 3/' + userid).then(res => {
+    setAllNotesgr3(res.data);
+  })
+};
+
+ const [allnotesgr4, setAllNotesgr4] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr1();
+}, []);
+
+const fetchAllNotesgr4 = () => {
+    http.get('/all_notes_gr4/' + etab + '/' + classe + "/" + evaluation + '/Groupe 4/' + userid).then(res => {
+    setAllNotesgr4(res.data);
+  })
+};
+
+const [allnotesgr5, setAllNotesgr5] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr5();
+}, []);
+
+const fetchAllNotesgr5 = () => {
+    http.get('/all_notes_gr5/' + etab + '/' + classe + "/" + evaluation + '/Groupe 5/' + userid).then(res => {
+    setAllNotesgr5(res.data);
+  })
+};
+
+const [allnotesgr6, setAllNotesgr6] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr6();
+}, []);
+
+const fetchAllNotesgr6 = () => {
+    http.get('/all_notes_gr6/' + etab + '/' + classe + "/" + evaluation + '/Groupe 6/' + userid).then(res => {
+    setAllNotesgr6(res.data);
+  })
+};
+
+const [allnotesgr7, setAllNotesgr7] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr7();
+}, []);
+
+const fetchAllNotesgr7= () => {
+    http.get('/all_notes_gr7/' + etab + '/' + classe + "/" + evaluation + '/Groupe 7/' + userid).then(res => {
+    setAllNotesgr7(res.data);
+  })
+};
+
+
+ const [allnotesgr8, setAllNotesgr8] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr8();
+}, []);
+
+const fetchAllNotesgr8 = () => {
+    http.get('/all_notes_gr8/' + etab + '/' + classe + "/" + evaluation + '/Groupe 8/' + userid).then(res => {
+    setAllNotesgr8(res.data);
+  })
+};
+
+ const [allnotesgr9, setAllNotesgr9] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr9();
+}, []);
+
+const fetchAllNotesgr9 = () => {
+    http.get('/all_notes_gr9/' + etab + '/' + classe + "/" + evaluation + '/Groupe 9/' + userid).then(res => {
+    setAllNotesgr9(res.data);
+  })
+};
+
+ const [allnotesgr10, setAllNotesgr10] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr10();
+}, []);
+
+const fetchAllNotesgr10 = () => {
+    http.get('/all_notes_gr10/' + etab + '/' + classe + "/" + evaluation + '/Groupe 10/' + userid).then(res => {
+    setAllNotesgr10(res.data);
+  })
+};
+
+ const [allnotesgr11, setAllNotesgr11] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr11();
+}, []);
+
+const fetchAllNotesgr11 = () => {
+    http.get('/all_notes_gr11/' + etab + '/' + classe + "/" + evaluation + '/Groupe 11/' + userid).then(res => {
+    setAllNotesgr11(res.data);
+  })
+};
+
+ const [allnotesgr12, setAllNotesgr12] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr12();
+}, []);
+
+const fetchAllNotesgr12 = () => {
+    http.get('/all_notes_gr12/' + etab + '/' + classe + "/" + evaluation + '/Groupe 12/' + userid).then(res => {
+    setAllNotesgr12(res.data);
+  })
+};
+
+ const [allnotesgr13, setAllNotesgr13] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr13();
+}, []);
+
+const fetchAllNotesgr13 = () => {
+    http.get('/all_notes_gr13/' + etab + '/' + classe + "/" + evaluation + '/Groupe 13/' + userid).then(res => {
+    setAllNotesgr13(res.data);
+  })
+};
+
+ const [allnotesgr14, setAllNotesgr14] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr14();
+}, []);
+
+const fetchAllNotesgr14 = () => {
+    http.get('/all_notes_gr14/' + etab + '/' + classe + "/" + evaluation + '/Groupe 14/' + userid).then(res => {
+    setAllNotesgr14(res.data);
+  })
+};
+
+ const [allnotesgr15, setAllNotesgr15] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr15();
+}, []);
+
+const fetchAllNotesgr15 = () => {
+    http.get('/all_notes_gr15/' + etab + '/' + classe + "/" + evaluation + '/Groupe 15/' + userid).then(res => {
+    setAllNotesgr15(res.data);
+  })
+};
+
+ const [allnotesgr16, setAllNotesgr16] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr16();
+}, []);
+
+const fetchAllNotesgr16 = () => {
+    http.get('/all_notes_gr16/' + etab + '/' + classe + "/" + evaluation + '/Groupe 16/' + userid).then(res => {
+    setAllNotesgr16(res.data);
+  })
+};
+
+ const [allnotesgr17, setAllNotesgr17] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr17();
+}, []);
+
+const fetchAllNotesgr17 = () => {
+    http.get('/all_notes_gr17/' + etab + '/' + classe + "/" + evaluation + '/Groupe 17/' + userid).then(res => {
+    setAllNotesgr17(res.data);
+  })
+};
+
+ const [allnotesgr18, setAllNotesgr18] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr18();
+}, []);
+
+const fetchAllNotesgr18 = () => {
+    http.get('/all_notes_gr18/' + etab + '/' + classe + "/" + evaluation + '/Groupe 18/' + userid).then(res => {
+    setAllNotesgr18(res.data);
+  })
+};
+
+ const [allnotesgr19, setAllNotesgr19] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr19();
+}, []);
+
+const fetchAllNotesgr19 = () => {
+    http.get('/all_notes_gr19/' + etab + '/' + classe + "/" + evaluation + '/Groupe 19/' + userid).then(res => {
+    setAllNotesgr19(res.data);
+  })
+};
+
+ const [allnotesgr20, setAllNotesgr20] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr20();
+}, []);
+
+const fetchAllNotesgr20 = () => {
+    http.get('/all_notes_gr20/' + etab + '/' + classe + "/" + evaluation + '/Groupe 20/' + userid).then(res => {
+    setAllNotesgr20(res.data);
+  })
+};
+
+const [allnotesgr21, setAllNotesgr21] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr21();
+}, []);
+
+const fetchAllNotesgr21 = () => {
+    http.get('/all_notes_gr21/' + etab + '/' + classe + "/" + evaluation + '/Groupe 21/' + userid).then(res => {
+    setAllNotesgr20(res.data);
+  })
+};
+
+const [allnotesgr22, setAllNotesgr22] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr22();
+}, []);
+
+const fetchAllNotesgr22 = () => {
+    http.get('/all_notes_gr22/' + etab + '/' + classe + "/" + evaluation + '/Groupe 22/' + userid).then(res => {
+    setAllNotesgr21(res.data);
+  })
+};
+
+const [allnotesgr23, setAllNotesgr23] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr23();
+}, []);
+
+const fetchAllNotesgr23 = () => {
+    http.get('/all_notes_gr23/' + etab + '/' + classe + "/" + evaluation + '/Groupe 23/' + userid).then(res => {
+    setAllNotesgr23(res.data);
+  })
+};
+
+const [allnotesgr24, setAllNotesgr24] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr24();
+}, []);
+
+const fetchAllNotesgr24 = () => {
+    http.get('/all_notes_gr24/' + etab + '/' + classe + "/" + evaluation + '/Groupe 24/' + userid).then(res => {
+    setAllNotesgr20(res.data);
+  })
+};
+
+const [allnotesgr25, setAllNotesgr25] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr25();
+}, []);
+
+const fetchAllNotesgr25 = () => {
+    http.get('/all_notes_gr25/' + etab + '/' + classe + "/" + evaluation + '/Groupe 25/' + userid).then(res => {
+    setAllNotesgr25(res.data);
+  })
+};
+
+
+const [allnotesgr26, setAllNotesgr26] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr26();
+}, []);
+
+const fetchAllNotesgr26 = () => {
+    http.get('/all_notes_gr26/' + etab + '/' + classe + "/" + evaluation + '/Groupe 26/' + userid).then(res => {
+    setAllNotesgr26(res.data);
+  })
+};
+
+const [allnotesgr27, setAllNotesgr27] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr27();
+}, []);
+
+const fetchAllNotesgr27 = () => {
+    http.get('/all_notes_gr27/' + etab + '/' + classe + "/" + evaluation + '/Groupe 27/' + userid).then(res => {
+    setAllNotesgr27(res.data);
+  })
+};
+
+const [allnotesgr28, setAllNotesgr28] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr28();
+}, []);
+
+const fetchAllNotesgr28 = () => {
+    http.get('/all_notes_gr28/' + etab + '/' + classe + "/" + evaluation + '/Groupe 28/' + userid).then(res => {
+    setAllNotesgr28(res.data);
+  })
+};
+
+const [allnotesgr29, setAllNotesgr29] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr29();
+}, []);
+
+const fetchAllNotesgr29 = () => {
+    http.get('/all_notes_gr29/' + etab + '/' + classe + "/" + evaluation + '/Groupe 29/' + userid).then(res => {
+    setAllNotesgr29(res.data);
+  })
+};
+
+const [allnotesgr30, setAllNotesgr30] = useState([]);
+useEffect(() => {
+    fetchAllNotesgr30();
+}, []);
+
+const fetchAllNotesgr30 = () => {
+    http.get('/all_notes_gr30/' + etab + '/' + classe + "/" + evaluation + '/Groupe 30/' + userid).then(res => {
+    setAllNotesgr30(res.data);
+  })
+};
     
     const [allnotespa, setAllNotespa] = useState([]);
     useEffect(() => {
@@ -1082,11 +1414,11 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind.intitule_groupe}</th>
+                                                                        <th>{allnotesgr1}</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                 <tbody>
+{/*       <tbody>
                                                                    
                                                                 {allnotessf1.map((item, sf1) => (
                                                                     <tr key={sf1}>
@@ -1125,7 +1457,7 @@ const [allnotespf, setAllNotespf] = useState([]);
                                                                         <th>{allind2.intitule_groupe}</th>
 
                                                                     </tr>
-                                                                </thead>
+                                                                </thead> */}
 
                                                                 <tbody>
 
