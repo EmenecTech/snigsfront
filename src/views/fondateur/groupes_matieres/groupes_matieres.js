@@ -68,6 +68,7 @@ const ListGroupes = memo((props) => {
       setgroupes(res.data);
     });
   };
+  console.log(groupes);
 
   const deleteGroupes = (id) => {
     if(window.confirm("Voulez-vous supprimer cet élément?") == true){
