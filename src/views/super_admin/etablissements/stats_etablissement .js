@@ -397,7 +397,7 @@ const [sumpay, setsumpay] = useState([]);
         ],
     };
 
-
+const [activeTab, setActiveTab] = useState('Onglet1');
 
 
 
@@ -418,6 +418,17 @@ const [sumpay, setsumpay] = useState([]);
 
                         </Card.Header>
                         <Card.Body>
+                               <div>
+                                  <div>
+                                    <button onClick={() => setActiveTab('Onglet1')}>Onglet1</button>
+                                    <button onClick={() => setActiveTab('Onglet2')}>Onglet2</button>
+                                  </div>
+                            
+                                  <div>
+                                    {activeTab === 'Onglet1' && <div>Contenu de l'Onglet1</div>}
+                                    {activeTab === 'Onglet2' && <div>Contenu de l'Onglet2</div>}
+                                  </div>
+                                </div>
 
                             <div className="table-responsive border-bottom my-3">
                                 <Table
