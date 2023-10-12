@@ -191,8 +191,19 @@ const BulletinByEleve = memo((props) => {
             setmatiereslevel(res.data);
         })
     }
+
+    const [classes, setclasses] = useState([]);
+    useEffect(() => {
+        fetchAllclasses();
+    }, []);
+
+    const fetchAllclasses = () => {
+        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
+            setclasses(res.data);
+        })
+    }
     
- const [enseign, setenseign] = useState();
+   const [enseign, setenseign] = useState();
     useEffect(() => {
        fetchAllenseign();
     }, []);
@@ -213,573 +224,6 @@ const BulletinByEleve = memo((props) => {
              setelevesinclass(res.data);
         })
     };
-
-    
-    
-  const [allnotes, setAllNotes] = useState([]);
-    useEffect(() => {
-        fetchAllNotes();
-    }, []);
-
-    const fetchAllNotes = () => {
-        http.get('/all_notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotes(res.data);
-      })
-    };
-     const getEmojiForNote = (note) => {
-    if (note == 10) {
-      return '☹️';
-    } else if (note == 15) {
-      return '😐';
-    } else if (note == 20) {
-      return '😃';
-    }
-      return ''; 
-    };
-
-const [allnotespf, setAllNotespf] = useState([]);
-    useEffect(() => {
-        fetchAllNotespf();
-    }, []);
-
-    const fetchAllNotespf = () => {
-        http.get('/all_notes_pf/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotespf(res.data);
-             
-      })
-    };
-
-  
-
- const [allind, setAllInd] = useState([]);
-    useEffect(() => {
-        fetchAllInd();  
-    }, []); 
-
-    const fetchAllInd = () => {
-        http.get('/get_ind_for_mat/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd(res.data);
-        }); 
-    };
-
-    const [allind1, setAllInd1] = useState([]);
-    useEffect(() => {
-        fetchAllInd1();  
-    }, []); 
-
-    const fetchAllInd1 = () => {
-        http.get('/get_ind_for_mat1/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd1(res.data);
-        }); 
-    };
-
-    const [allind2, setAllInd2] = useState([]);
-    useEffect(() => {
-        fetchAllInd2();  
-    }, []); 
-
-    const fetchAllInd2 = () => {
-        http.get('/get_ind_for_mat2/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd2(res.data);
-        }); 
-    };
-
-
-    const [allind3, setAllInd3] = useState([]);
-    useEffect(() => {
-        fetchAllInd3();  
-    }, []); 
-
-    const fetchAllInd3 = () => {
-        http.get('/get_ind_for_mat3/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd3(res.data);
-        }); 
-    };
-
-
-    const [allind4, setAllInd4] = useState([]);
-    useEffect(() => {
-        fetchAllInd4();  
-    }, []); 
-
-    const fetchAllInd4 = () => {
-        http.get('/get_ind_for_mat4/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd4(res.data);
-        }); 
-    };
-
-    
-    const [allind5, setAllInd5] = useState([]);
-    useEffect(() => {
-        fetchAllInd5();  
-    }, []); 
-
-    const fetchAllInd5 = () => {
-        http.get('/get_ind_for_mat5/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd5(res.data);
-        }); 
-    };
-
-    
-    const [allind6, setAllInd6] = useState([]);
-    useEffect(() => {
-        fetchAllInd6();  
-    }, []); 
-
-    const fetchAllInd6 = () => {
-        http.get('/get_ind_for_mat6/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd6(res.data);
-        }); 
-    };
-
-    const [allind7, setAllInd7] = useState([]);
-    useEffect(() => {
-        fetchAllInd7();  
-    }, []); 
-
-    const fetchAllInd7 = () => {
-        http.get('/get_ind_for_mat7/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd7(res.data);
-        }); 
-    };
-
-    const [allind8, setAllInd8] = useState([]);
-    useEffect(() => {
-        fetchAllInd8();  
-    }, []); 
-
-    const fetchAllInd8 = () => {
-        http.get('/get_ind_for_mat8/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd8(res.data);
-        }); 
-    };
-    
-    const [allind9, setAllInd9] = useState([]);
-    useEffect(() => {
-        fetchAllInd9();  
-    }, []); 
-
-    const fetchAllInd9 = () => {
-        http.get('/get_ind_for_mat9/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd9(res.data);
-        }); 
-    };
-
-    const [allind10, setAllInd10] = useState([]);
-    useEffect(() => {
-        fetchAllInd10();  
-    }, []); 
-
-    const fetchAllInd10 = () => {
-        http.get('/get_ind_for_mat10/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd10(res.data);
-        }); 
-    };
-    
-    const [allind11, setAllInd11] = useState([]);
-    useEffect(() => {
-        fetchAllInd11();  
-    }, []); 
-
-    const fetchAllInd11 = () => {
-        http.get('/get_ind_for_mat11/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd11(res.data);
-        }); 
-    };
-
-      const [allind12, setAllInd12] = useState([]);
-    useEffect(() => {
-        fetchAllInd12();  
-    }, []); 
-
-    const fetchAllInd12 = () => {
-        http.get('/get_ind_for_mat12/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd12(res.data);
-        }); 
-    };
-
-        const [allind13, setAllInd13] = useState([]);
-    useEffect(() => {
-        fetchAllInd12();  
-    }, []); 
-
-    const fetchAllInd13 = () => {
-        http.get('/get_ind_for_mat13/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd13(res.data);
-        }); 
-    };
-
-        const [allind14, setAllInd14] = useState([]);
-    useEffect(() => {
-        fetchAllInd14();  
-    }, []); 
-
-    const fetchAllInd14 = () => {
-        http.get('/get_ind_for_mat14/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd14(res.data);
-        }); 
-    };
-
-    const [allind15, setAllInd15] = useState([]);
-    useEffect(() => {
-        fetchAllInd15();  
-    }, []); 
-
-    const fetchAllInd15 = () => {
-        http.get('/get_ind_for_mat15/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd15(res.data);
-        }); 
-    };
-
-     const [allnotessf, setAllNotessf] = useState([]);
-    useEffect(() => {
-        fetchAllNotessf();
-    }, []);
-
-    const fetchAllNotessf = () => {
-        http.get('/all_notes_sf/' + etab + '/' + classe + "/" + evaluation + '/Groupe 1/' + userid).then(res => {
-        setAllNotessf(res.data);
-      })
-    };
-
-    
-
-
- const [allnotesgr2, setAllNotesgr2] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr2();
-}, []);
-
-const fetchAllNotesgr2 = () => {
-    http.get('/all_notes_gr2/' + etab + '/' + classe + "/" + evaluation + '/Groupe 2/' + userid).then(res => {
-    setAllNotesgr2(res.data);
-  })
-};
-
- const [allnotesgr3, setAllNotesgr3] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr3();
-}, []);
-
-const fetchAllNotesgr3 = () => {
-    http.get('/all_notes_gr3/' + etab + '/' + classe + "/" + evaluation + '/Groupe 3/' + userid).then(res => {
-    setAllNotesgr3(res.data);
-  })
-};
-
- const [allnotesgr4, setAllNotesgr4] = useState([]);
-useEffect(() => {
-    fetchInfo_grp_1();
-}, []);
-
-const fetchAllNotesgr4 = () => {
-    http.get('/all_notes_gr4/' + etab + '/' + classe + "/" + evaluation + '/Groupe 4/' + userid).then(res => {
-    setAllNotesgr4(res.data);
-  })
-};
-
-
-const [allnotesgr5, setAllNotesgr5] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr5();
-}, []);
-
-const fetchAllNotesgr5 = () => {
-    http.get('/all_notes_gr5/' + etab + '/' + classe + "/" + evaluation + '/Groupe 5/' + userid).then(res => {
-    setAllNotesgr5(res.data);
-  })
-};
-
-const [allnotesgr6, setAllNotesgr6] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr6();
-}, []);
-
-const fetchAllNotesgr6 = () => {
-    http.get('/all_notes_gr6/' + etab + '/' + classe + "/" + evaluation + '/Groupe 6/' + userid).then(res => {
-    setAllNotesgr6(res.data);
-  })
-};
-
-const [allnotesgr7, setAllNotesgr7] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr7();
-}, []);
-
-const fetchAllNotesgr7= () => {
-    http.get('/all_notes_gr7/' + etab + '/' + classe + "/" + evaluation + '/Groupe 7/' + userid).then(res => {
-    setAllNotesgr7(res.data);
-  })
-};
-
-
- const [allnotesgr8, setAllNotesgr8] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr8();
-}, []);
-
-const fetchAllNotesgr8 = () => {
-    http.get('/all_notes_gr8/' + etab + '/' + classe + "/" + evaluation + '/Groupe 8/' + userid).then(res => {
-    setAllNotesgr8(res.data);
-  })
-};
-
- const [allnotesgr9, setAllNotesgr9] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr9();
-}, []);
-
-const fetchAllNotesgr9 = () => {
-    http.get('/all_notes_gr9/' + etab + '/' + classe + "/" + evaluation + '/Groupe 9/' + userid).then(res => {
-    setAllNotesgr9(res.data);
-  })
-};
-
- const [Info_grp_10, setInfo_grp_10] = useState([]);
-useEffect(() => {
-    fetchInfo_grp_10();
-}, []);
-
-const fetchInfo_grp_10 = () => {
-    http.get('/all_notes_gr10/' + etab + '/' + classe + "/" + evaluation + '/Groupe 10/' + userid).then(res => {
-    setInfo_grp_10(res.data);
-  })
-};
-
- const [Info_grp_11, setInfo_grp_11] = useState([]);
-useEffect(() => {
-    fetchInfo_grp_11();
-}, []);
-
-const fetchInfo_grp_11 = () => {
-    http.get('/all_notes_gr11/' + etab + '/' + classe + "/" + evaluation + '/Groupe 11/' + userid).then(res => {
-    setInfo_grp_11(res.data);
-  })
-};
-
- const [Info_grp_12, setInfo_grp_12] = useState([]);
-useEffect(() => {
-    fetchInfo_grp_12();
-}, []);
-
-const fetchInfo_grp_12 = () => {
-    http.get('/all_notes_gr12/' + etab + '/' + classe + "/" + evaluation + '/Groupe 12/' + userid).then(res => {
-    setInfo_grp_12(res.data);
-  })
-};
-
- const [Info_grp_13, setInfo_grp_13] = useState([]);
-useEffect(() => {
-    fetchInfo_grp_13();
-}, []);
-
-const fetchInfo_grp_13 = () => {
-    http.get('/all_notes_gr13/' + etab + '/' + classe + "/" + evaluation + '/Groupe 13/' + userid).then(res => {
-    setInfo_grp_13(res.data);
-  })
-};
-
- const [Info_grp_14, setInfo_grp_14] = useState([]);
-useEffect(() => {
-    fetchInfo_grp_14();
-}, []);
-
-const fetchInfo_grp_14 = () => {
-    http.get('/all_notes_gr14/' + etab + '/' + classe + "/" + evaluation + '/Groupe 14/' + userid).then(res => {
-    setInfo_grp_14(res.data);
-  })
-};
-
- const [Info_grp_15, setInfo_grp_15] = useState([]);
-useEffect(() => {
-    fetchInfo_grp_15();
-}, []);
-
-const fetchInfo_grp_15 = () => {
-    http.get('/all_notes_gr15/' + etab + '/' + classe + "/" + evaluation + '/Groupe 15/' + userid).then(res => {
-    setInfo_grp_15(res.data);
-  })
-};
-
- const [Info_grp_16, setInfo_grp_16] = useState([]);
-useEffect(() => {
-    fetchInfo_grp_16();
-}, []);
-
-const fetchInfo_grp_16 = () => {
-    http.get('/all_notes_gr16/' + etab + '/' + classe + "/" + evaluation + '/Groupe 16/' + userid).then(res => {
-    setInfo_grp_16(res.data);
-  })
-};
-
- const [Info_grp_17, setInfo_grp_17] = useState([]);
-useEffect(() => {
-    fetchInfo_grp_17();
-}, []);
-
-const fetchInfo_grp_17 = () => {
-    http.get('/all_notes_gr17/' + etab + '/' + classe + "/" + evaluation + '/Groupe 17/' + userid).then(res => {
-    setInfo_grp_17(res.data);
-  })
-};
-
- const [Info_grp_18, setInfo_grp_18] = useState([]);
-useEffect(() => {
-    fetchInfo_grp_18();
-}, []);
-
-const fetchInfo_grp_18 = () => {
-    http.get('/all_notes_gr18/' + etab + '/' + classe + "/" + evaluation + '/Groupe 18/' + userid).then(res => {
-    setInfo_grp_18(res.data);
-  })
-};
-
- const [Info_grp_19, setInfo_grp_19] = useState([]);
-useEffect(() => {
-    fetchInfo_grp_19();
-}, []);
-
-const fetchInfo_grp_19 = () => {
-    http.get('/all_notes_gr19/' + etab + '/' + classe + "/" + evaluation + '/Groupe 19/' + userid).then(res => {
-    setInfo_grp_19(res.data);
-  })
-};
-
- const [allnotesgr20, setAllNotesgr20] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr20();
-}, []);
-
-const fetchAllNotesgr20 = () => {
-    http.get('/all_notes_gr20/' + etab + '/' + classe + "/" + evaluation + '/Groupe 20/' + userid).then(res => {
-    setAllNotesgr20(res.data);
-  })
-};
-
-const [allnotesgr21, setAllNotesgr21] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr21();
-}, []);
-
-const fetchAllNotesgr21 = () => {
-    http.get('/all_notes_gr21/' + etab + '/' + classe + "/" + evaluation + '/Groupe 21/' + userid).then(res => {
-    setAllNotesgr20(res.data);
-  })
-};
-
-const [allnotesgr22, setAllNotesgr22] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr22();
-}, []);
-
-const fetchAllNotesgr22 = () => {
-    http.get('/all_notes_gr22/' + etab + '/' + classe + "/" + evaluation + '/Groupe 22/' + userid).then(res => {
-    setAllNotesgr21(res.data);
-  })
-};
-
-const [allnotesgr23, setAllNotesgr23] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr23();
-}, []);
-
-const fetchAllNotesgr23 = () => {
-    http.get('/all_notes_gr23/' + etab + '/' + classe + "/" + evaluation + '/Groupe 23/' + userid).then(res => {
-    setAllNotesgr23(res.data);
-  })
-};
-
-const [allnotesgr24, setAllNotesgr24] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr24();
-}, []);
-
-const fetchAllNotesgr24 = () => {
-    http.get('/all_notes_gr24/' + etab + '/' + classe + "/" + evaluation + '/Groupe 24/' + userid).then(res => {
-    setAllNotesgr20(res.data);
-  })
-};
-
-const [allnotesgr25, setAllNotesgr25] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr25();
-}, []);
-
-const fetchAllNotesgr25 = () => {
-    http.get('/all_notes_gr25/' + etab + '/' + classe + "/" + evaluation + '/Groupe 25/' + userid).then(res => {
-    setAllNotesgr25(res.data);
-  })
-};
-
-
-const [allnotesgr26, setAllNotesgr26] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr26();
-}, []);
-
-const fetchAllNotesgr26 = () => {
-    http.get('/all_notes_gr26/' + etab + '/' + classe + "/" + evaluation + '/Groupe 26/' + userid).then(res => {
-    setAllNotesgr26(res.data);
-  })
-};
-
-const [allnotesgr27, setAllNotesgr27] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr27();
-}, []);
-
-const fetchAllNotesgr27 = () => {
-    http.get('/all_notes_gr27/' + etab + '/' + classe + "/" + evaluation + '/Groupe 27/' + userid).then(res => {
-    setAllNotesgr27(res.data);
-  })
-};
-
-const [allnotesgr28, setAllNotesgr28] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr28();
-}, []);
-
-const fetchAllNotesgr28 = () => {
-    http.get('/all_notes_gr28/' + etab + '/' + classe + "/" + evaluation + '/Groupe 28/' + userid).then(res => {
-    setAllNotesgr28(res.data);
-  })
-};
-
-const [allnotesgr29, setAllNotesgr29] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr29();
-}, []);
-
-const fetchAllNotesgr29 = () => {
-    http.get('/all_notes_gr29/' + etab + '/' + classe + "/" + evaluation + '/Groupe 29/' + userid).then(res => {
-    setAllNotesgr29(res.data);
-  })
-};
-
-const [allnotesgr30, setAllNotesgr30] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr30();
-}, []);
-
-const fetchAllNotesgr30 = () => {
-    http.get('/all_notes_gr30/' + etab + '/' + classe + "/" + evaluation + '/Groupe 30/' + userid).then(res => {
-    setAllNotesgr30(res.data);
-  })
-};
-    
-    const [allnotespa, setAllNotespa] = useState([]);
-    useEffect(() => {
-        fetchAllNotespa();
-    }, []);
-
-    const fetchAllNotespa = () => {
-        http.get('/all_notes_pa/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNotespa(res.data);
-      })
-    };
-    
-    
-
 
 
     ////////////////////////////////
@@ -888,33 +332,52 @@ const fetchAllNotesgr30 = () => {
     ///////////////////////////////////////////////
 
 
+   const [allnotes, setAllNotes] = useState([]);
+    useEffect(() => {
+        fetchAllNotes();
+    }, []);
 
+    const fetchAllNotes = () => {
+        http.get('/all_notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotes(res.data);
+      })
+    };
+     const getEmojiForNote = (note) => {
+    if (note == 10) {
+      return '☹️';
+    } else if (note == 15) {
+      return '😐';
+    } else if (note == 20) {
+      return '😃';
+    }
+      return ''; 
+    };
 
+    const [allnotespf, setAllNotespf] = useState([]);
+    useEffect(() => {
+        fetchAllNotespf();
+    }, []);
 
+    const fetchAllNotespf = () => {
+        http.get('/all_notes_pf/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotespf(res.data);
+             
+      })
+    };
 
+    const [allnotespa, setAllNotespa] = useState([]);
+    useEffect(() => {
+        fetchAllNotespa();
+    }, []);
+
+    const fetchAllNotespa = () => {
+        http.get('/all_notes_pa/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNotespa(res.data);
+      })
+    };
     
-      const [allnotessf1, setAllNotessf1] = useState([]);
-    useEffect(() => {
-        fetchAllNotessf1();
-    }, []);
 
-    const fetchAllNotessf1 = () => {
-        http.get('/all_notes_sf1/' + etab + '/' + classe + "/" + evaluation + '/Groupe 2/' + userid).then(res => {
-        setAllNotessf1(res.data);
-      })
-    };
-
-      const [allnotessf2, setAllNotessf2] = useState([]);
-    useEffect(() => {
-        fetchAllNotessf2();
-    }, []);
-
-    const fetchAllNotessf2 = () => {
-        http.get('/all_notes_sf2/' + etab + '/' + classe + "/" + evaluation + '/Groupe 3/' + userid).then(res => {
-        setAllNotessf2(res.data);
-      })
-    };
-
+    /////Somme des notes et moyenne
      const [sumnotes, setsumnotes] = useState([]);
     useEffect(() => {
         fetchAllsumnotes();
@@ -923,23 +386,9 @@ const fetchAllNotesgr30 = () => {
     const fetchAllsumnotes = () => {
         http.get('/sum/of/notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
             setsumnotes(res.data);
-
         })
     }
 
-    const [classes, setclasses] = useState([]);
-    useEffect(() => {
-        fetchAllclasses();
-    }, []);
-
-    const fetchAllclasses = () => {
-        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
-            setclasses(res.data);
-        })
-    }
-
-    
-    ////primary
     const [sumcoef, setsumcoef] = useState([]);
     useEffect(() => {
         fetchAllsumcoef();
@@ -973,15 +422,9 @@ const fetchAllNotesgr30 = () => {
 
         })
     }
+  /////////////////////////////////////////////
 
-    console.log(moyenneleve);
-     console.log(sumcoef);
-
-
-
-    console.log(sumnotes);
-
-
+    
     useSelector(SettingSelector.theme_color);
 
     const getVariableColor = () => {
@@ -1405,12 +848,13 @@ const fetchAllNotesgr30 = () => {
 
                                                                     </tr>
                                                                 </thead>
-{/*       <tbody>
+
+                                                                <tbody>
                                                                    
-                                                                {allnotessf1.map((item, sf1) => (
-                                                                    <tr key={sf1}>
+                                                                {allnote_2.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
-                                                                  
+                                                                      
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
@@ -1421,16 +865,16 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind1.intitule_groupe}</th>
+                                                                        <th>{Info_grp_2.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                 <tbody>
+                                                              <tbody>
                                                                    
-                                                                {allnotessf2.map((item, sf2) => (
-                                                                    <tr key={sf2}>
+                                                                {allnote_3.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
-                                                                     
+                                                                      
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
@@ -1441,10 +885,10 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind2.intitule_groupe}</th>
+                                                                        <th>{Info_grp_3.intitule_groupe}</th>
 
                                                                     </tr>
-                                                                </thead> */}
+                                                                </thead>
 
                                                                 <tbody>
 
@@ -1728,10 +1172,10 @@ const fetchAllNotesgr30 = () => {
                                                                         <th>Appreciation</th>
                                                                     </tr>
                                                                 </thead>
-                                                          <tbody>
+                                                         <tbody>
                                                                    
-                                                                {allnotessf.map((item, sf) => (
-                                                                    <tr key={sf}>
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
                                                                       
                                                                         <td>{item.valeur_note}</td>
@@ -1744,51 +1188,10 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind.intitule_groupe}</th>
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessf1.map((item, sf1) => (
-                                                                    <tr key={sf1}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                  
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.coefficient_note}</td>
-                                                                        <td>{item.note_finale}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allind1.intitule_groupe}</th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessf2.map((item, sf2) => (
-                                                                    <tr key={sf2}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                     
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.coefficient_note}</td>
-                                                                        <td>{item.note_finale}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allind2.intitule_groupe}</th>
-
-                                                                    </tr>
-                                                                </thead>
-
                                                                 <tbody>
 
                                                                     <tr>
@@ -1995,27 +1398,13 @@ const fetchAllNotesgr30 = () => {
                                                                 </thead>
                                                                 <tbody>
                                                                    
-                                                                {allnotessf.map((item, sf) => (
-                                                                    <tr key={sf}>
-                                                                       <td>{item.matiere_note}</td>
-                                                                       <td>{item.valeur_note}</td>
-                                                                       <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allind.intitule_groupe}</th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessf1.map((item, sf1) => (
-                                                                    <tr key={sf1}>
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>    
+                                                                      
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
@@ -2023,28 +1412,10 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind1.intitule_groupe}</th>
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessf2.map((item, sf2) => (
-                                                                    <tr key={sf2}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td> 
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allind2.intitule_groupe}</th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                          
                                                                 <tbody> 
 
                                                                     <tr>
@@ -2479,27 +1850,13 @@ const fetchAllNotesgr30 = () => {
                                                                 </thead>
                                                            <tbody>
                                                                    
-                                                                {allnotessf.map((item, sf) => (
-                                                                    <tr key={sf}>
-                                                                       <td>{item.matiere_note}</td>
-                                                                       <td>{item.valeur_note}</td>
-                                                                       <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allind.intitule_groupe}</th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessf1.map((item, sf1) => (
-                                                                    <tr key={sf1}>
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
+                                                                      
                                                                         <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
@@ -2507,21 +1864,10 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind1.intitule_groupe}</th>
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessf2.map((item, sf2) => (
-                                                                    <tr key={sf2}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td> 
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-
                                                                 <tbody>
 
                                                                     <tr>
@@ -2733,13 +2079,13 @@ const fetchAllNotesgr30 = () => {
                                                                 </thead>
                                                             <tbody>
                                                                    
-                                                                {allnotessf.map((item, sf) => (
-                                                                    <tr key={sf}>
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
                                                                       
                                                                         <td>{item.valeur_note}</td>
-                                                                     
-                                                                       
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
@@ -2747,44 +2093,10 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind.intitule_groupe}</th>
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessf1.map((item, sf1) => (
-                                                                    <tr key={sf1}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                  
-                                                                        <td>{item.valeur_note}</td>
-                                                                      
-                                                                        
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allind1.intitule_groupe}</th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessf2.map((item, sf2) => (
-                                                                    <tr key={sf2}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                     
-                                                                        <td>{item.valeur_note}</td>
-                                                                        
-                                                                        
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-
                                                                 <tbody>
 
                                                                     <tr>
@@ -3451,15 +2763,15 @@ const fetchAllNotesgr30 = () => {
                                                                     <th>/</th>
                                                                 </tr>
                                                             </thead>
-                                                           <tbody>
+                                                          <tbody>
                                                                    
-                                                                {allnotessf.map((item, sf) => (
-                                                                    <tr key={sf}>
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
                                                                       
                                                                         <td>{item.valeur_note}</td>
-                                                                     
-                                                                       
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
@@ -3467,44 +2779,10 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind.intitule_groupe}</th>
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessf1.map((item, sf1) => (
-                                                                    <tr key={sf1}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                  
-                                                                        <td>{item.valeur_note}</td>
-                                                                      
-                                                                        
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allind1.intitule_groupe}</th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessf2.map((item, sf2) => (
-                                                                    <tr key={sf2}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                     
-                                                                        <td>{item.valeur_note}</td>
-                                                                        
-                                                                        
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-
                                                                 
                                                                 <tbody>
 
