@@ -297,10 +297,6 @@ const [allnotespf, setAllNotespf] = useState([]);
     };
 
 
-  
-    
-
-
     const [allind4, setAllInd4] = useState([]);
     useEffect(() => {
         fetchAllInd4();  
@@ -768,10 +764,6 @@ const fetchAllNotesgr30 = () => {
     setAllNotesgr30(res.data);
   })
 };
-       console.log(allnotesgr1);
-       console.log(allnotesgr2);
-       console.log(allnotesgr3);
-
     
     const [allnotespa, setAllNotespa] = useState([]);
     useEffect(() => {
@@ -990,6 +982,13 @@ const fetchAllNotesgr30 = () => {
 
         })
     }
+
+    console.log(moyenneleve);
+     console.log(sumcoef);
+
+
+
+    console.log(sumnotes);
 
 
     useSelector(SettingSelector.theme_color);
@@ -1397,7 +1396,7 @@ const fetchAllNotesgr30 = () => {
                                                                 </thead>
                                                             <tbody>
                                                                    
-                                                                {allnotesgr1.map((item, sf) => (
+                                                                {allnotessf.map((item, sf) => (
                                                                     <tr key={sf}>
                                                                         <td>{item.matiere_note}</td>
                                                                       
@@ -1411,13 +1410,13 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allnotesgr1.intitule_groupe}</th>
+                                                                        <th>{allnotesgr1}</th>
 
                                                                     </tr>
                                                                 </thead>
-     <tbody>
+{/*       <tbody>
                                                                    
-                                                                {allnotesgr2.map((item, sf1) => (
+                                                                {allnotessf1.map((item, sf1) => (
                                                                     <tr key={sf1}>
                                                                         <td>{item.matiere_note}</td>
                                                                   
@@ -1431,13 +1430,13 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allnotesgr2.intitule_groupe}</th>
+                                                                        <th>{allind1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
                                                                  <tbody>
                                                                    
-                                                                {allnotesgr3.map((item, sf2) => (
+                                                                {allnotessf2.map((item, sf2) => (
                                                                     <tr key={sf2}>
                                                                         <td>{item.matiere_note}</td>
                                                                      
@@ -1451,10 +1450,10 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allnotesgr3.intitule_groupe}</th>
+                                                                        <th>{allind2.intitule_groupe}</th>
 
                                                                     </tr>
-                                                                </thead> 
+                                                                </thead> */}
 
                                                                 <tbody>
 
