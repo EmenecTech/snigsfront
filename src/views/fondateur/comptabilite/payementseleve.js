@@ -426,7 +426,7 @@ const PayementsListEleve = (props) => {
                                                         </Col>
                                                         <Col sm="3">
                                                             {" "}
-                                                            <div className="flex flex-column justify-content-center align-items-center">
+                                                            <div className="flex flex-column justify-content-center align-items-center" style={{ paddingRight:"35px" }}>
                                                                 <Image
                                                                     src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
                                                                     style={{
