@@ -377,15 +377,13 @@ const PayementsListEleve = (props) => {
                                            
                                                     
                                                     <br/>
-                                            <div ref={componentRef}
-                                                style={{ width: "100%", paddingTop:"15px", MarginTop: "10px" , paddingLeft:"60px", height: window.innerHeight }} >
-                                 <Col sm="12" lg="12">
-                                                
-
-                 
-
+                                    <div ref={componentRef} style={{ width: "100%", paddingTop:"15px", MarginTop: "10px" , paddingLeft:"60px", height: window.innerHeight }}>
+                                 
                                                     
-                                                   <div className="">
+                                        <Col sm="12" lg="12">
+                                                
+           
+                                            <div className="">
                                                 <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
                                                     <Row>
                                                        <Col sm="3">
@@ -405,7 +403,6 @@ const PayementsListEleve = (props) => {
                                                         </Col>
                                                         <Col sm="6" className="mt-4">
                                                             {" "}
-
                                                             {etab === 25 ? <div>
 
                                                                  <div className="col-sm-12 justify-content-center">
@@ -417,12 +414,12 @@ const PayementsListEleve = (props) => {
                                                                 
                                                                 </div> : 
                                                                 <div>
-                                                                    <h5 className="text-center">SAINT JULIE BILINGUAL SCHOOL COMPLEX</h5>
+                                                                    <h5 className="text-center"> {info_etab.nom_etablissement}</h5>
                                                                 </div>}
                                                            
                                                             <div className="col-sm-12 justify-content-center">
                                                                 <h5 className="text-center">
-                                                                    {info_etab.nom_etablissement}
+                                                                 
                                                                 </h5>
                                                             </div>
                                                             {" "}
