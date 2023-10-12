@@ -768,6 +768,10 @@ const fetchAllNotesgr30 = () => {
     setAllNotesgr30(res.data);
   })
 };
+       console.log(allnotesgr1);
+       console.log(allnotesgr2);
+       console.log(allnotesgr3);
+
     
     const [allnotespa, setAllNotespa] = useState([]);
     useEffect(() => {
@@ -986,13 +990,6 @@ const fetchAllNotesgr30 = () => {
 
         })
     }
-
-    console.log(moyenneleve);
-     console.log(sumcoef);
-
-
-
-    console.log(sumnotes);
 
 
     useSelector(SettingSelector.theme_color);
