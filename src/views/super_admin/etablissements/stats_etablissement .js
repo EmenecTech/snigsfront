@@ -143,17 +143,20 @@ function formatNumberWithCommas(number) {
     }
 
 
-const [sumpay, setsumpay] = useState([]);
-  useEffect(() => {
-    fetchAllsumpay();
-  }, []);
+    const [sumpay, setsumpay] = useState([]);
+      useEffect(() => {
+        fetchAllsumpay();
+      }, []);
+    
+      const fetchAllsumpay = () => {
+        http.get('/sum/invest/uniq/' + etab).then(res => {
+          setsumpay(res.data);
+        })
+      }
 
-  const fetchAllsumpay = () => {
-    http.get('/sum/invest/uniq/' + etab).then(res => {
-      setsumpay(res.data);
-    })
-  }
 
+
+    
 
 
 
@@ -162,6 +165,23 @@ const [sumpay, setsumpay] = useState([]);
 
 
 
+
+  const handleChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+
+        setInputs(values => ({ ...values, [name]: value, fondateur }))
+    }
+
+    const submitForm = () => {
+        http.post('/etablissements', inputs).then((res) => {
+            alert("établissement ajouté avec succès !")
+            navigate('/etablissement/list/super/admin')
+        })
+
+
+        console.log(inputs);
+    }
 
 
 
