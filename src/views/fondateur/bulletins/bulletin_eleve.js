@@ -477,6 +477,7 @@ const fetchAllNotesgr4 = () => {
     setAllNotesgr4(res.data);
   })
 };
+    console.log(
 
 const [allnotesgr5, setAllNotesgr5] = useState([]);
 useEffect(() => {
@@ -786,7 +787,7 @@ const fetchAllNotesgr30 = () => {
     useEffect(() => {
         fetchInfo_grp_1();
     }, []);
-    
+     console.log(Info_grp_1);
     const fetchInfo_grp_1 = () => {
         http.get('/info/groupe_1/' + etab + '/Groupe 1/').then(res => {
         setInfo_grp_1(res.data);
@@ -1441,7 +1442,7 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_1.intitule_groupe}</th>
+                                                                        <th>{Info_grp_1.num_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
