@@ -1411,7 +1411,7 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allnotesgr1}</th>
+                                                                        <th>{allnotesgr1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
@@ -1431,7 +1431,7 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allnotesgr2}</th>
+                                                                        <th>{allnotesgr2.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
@@ -1451,7 +1451,7 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allnotesgr3}</th>
+                                                                        <th>{allnotesgr3.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead> 
