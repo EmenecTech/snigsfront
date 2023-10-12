@@ -386,9 +386,8 @@ const PayementsListEleve = (props) => {
                                             <div className="">
                                                 <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
                                                     <Row>
-                                                       <Col sm="3">
-                                                            {" "}
-                                                            <div className="flex flex-column justify-content-center align-items-center">
+                                                        <Col sm="3">
+                                                            <div className="d-flex justify-content-center align-items-center">
                                                                 <Image
                                                                     src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
                                                                     style={{
@@ -397,6 +396,9 @@ const PayementsListEleve = (props) => {
                                                                         borderRadius: "50%",
                                                                         objectFit: "cover",
                                                                         border: "2px solid black",
+                                                                        display: "block",
+                                                                        marginLeft: "auto",
+                                                                        marginRight: "auto"
                                                                     }}
                                                                 />
                                                             </div>
@@ -425,22 +427,22 @@ const PayementsListEleve = (props) => {
                                                             {" "}
                                                         </Col>
                                                        <Col sm="3">
-    <div className="d-flex justify-content-center align-items-center">
-        <Image
-            src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
-            style={{
-                width: "100px",
-                height: "100px",
-                borderRadius: "50%",
-                objectFit: "cover",
-                border: "2px solid black",
-                display: "block",
-                marginLeft: "auto",
-                marginRight: "auto"
-            }}
-        />
-    </div>
-</Col>
+                                                            <div className="d-flex justify-content-center align-items-center">
+                                                                <Image
+                                                                    src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
+                                                                    style={{
+                                                                        width: "100px",
+                                                                        height: "100px",
+                                                                        borderRadius: "50%",
+                                                                        objectFit: "cover",
+                                                                        border: "2px solid black",
+                                                                        display: "block",
+                                                                        marginLeft: "auto",
+                                                                        marginRight: "auto"
+                                                                    }}
+                                                                />
+                                                            </div>
+                                                        </Col>
 
                                                 
                                                     </Row>
