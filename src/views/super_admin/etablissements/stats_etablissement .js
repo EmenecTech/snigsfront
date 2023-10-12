@@ -530,7 +530,7 @@ function formatNumberWithCommas(number) {
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
                                                         <Form.Label htmlFor="exampleInputText1"> Maternelle </Form.Label>
-                                                        <select className="form-select mb-3 shadow-none" name="filiere" onChange={handleChange} required>
+                                                        <select className="form-select mb-1 shadow-none" name="filiere" onChange={handleChange} required>
                                                             <option></option>
                                                             <option> Nouvelle Version</option>
                                                             <option> Ancienne Version</option>
@@ -539,22 +539,23 @@ function formatNumberWithCommas(number) {
                                                 </Form.Group>
                                             </Col>
 
-                                            
-                                             <Col md="6">
-                                                a
-                                             </Col>
-                                             <Col md="6">
-                                                a
-                                             </Col>
+                                            <div className="container">
+                                                 <Col md="6">
+                                                    a
+                                                 </Col>
+                                                 <Col md="6">
+                                                    a
+                                                 </Col>
+                                            </div>
                                         </Row>
 
                                         <Row>
 
-                                            <Col md="12">
+                                            <Col md="12" className="mt-2">
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
                                                         <Form.Label htmlFor="exampleInputText1"> Primaire </Form.Label>
-                                                        <select className="form-select mb-3 shadow-none" name="filiere" onChange={handleChange} required>
+                                                        <select className="form-select mb-1 shadow-none" name="filiere" onChange={handleChange} required>
                                                              <option></option>
                                                             <option> Nouvelle Version</option>
                                                             <option> Ancienne Version</option>
@@ -563,23 +564,25 @@ function formatNumberWithCommas(number) {
                                                 </Form.Group>
                                             </Col>
 
-                                            <Col md="6">
-                                                
-                                             </Col>
-                                             <Col md="6">
-                                                
-                                             </Col>
+                                            <div className="container">
+                                                 <Col md="6">
+                                                   
+                                                 </Col>
+                                                 <Col md="6">
+                                                  
+                                                 </Col>
+                                            </div>
 
                                         </Row>
 
 
                                         <Row>
 
-                                            <Col md="12">
+                                            <Col md="12" className="mt-2">
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
                                                         <Form.Label htmlFor="exampleInputText1"> Secondaire </Form.Label>
-                                                        <select className="form-select mb-3 shadow-none" name="filiere" onChange={handleChange} required>
+                                                        <select className="form-select mb-1 shadow-none" name="filiere" onChange={handleChange} required>
                                                             <option></option>
                                                             <option> Nouvelle Version</option>
                                                             <option> Ancienne Version</option>
@@ -588,12 +591,14 @@ function formatNumberWithCommas(number) {
                                                 </Form.Group>
                                             </Col>
 
-                                          <Col md="6">
-                                                
-                                             </Col>
-                                             <Col md="6">
-                                                
-                                             </Col>
+                                           <div className="container">
+                                                 <Col md="6">
+                                                   
+                                                 </Col>
+                                                 <Col md="6">
+                                                  
+                                                 </Col>
+                                            </div>
                                         </Row>
 
 
