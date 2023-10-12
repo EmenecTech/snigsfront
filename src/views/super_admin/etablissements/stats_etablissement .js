@@ -172,7 +172,7 @@ function formatNumberWithCommas(number) {
         const name = event.target.name;
         const value = event.target.value;
 
-        setInputs(values => ({ ...values, [name]: value, fondateur }))
+        setInputs(values => ({ ...values, [name]: value }))
     }
 
     const submitForm = () => {
@@ -559,10 +559,7 @@ function formatNumberWithCommas(number) {
                                                         <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Sector</div>):(<div>Filière</div>)} </Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="filiere" onChange={handleChange} required>
                                                             <option></option>
-                                                            {filieres.map((item) => (
-                                                                <option key={item.id} value={item.intitule_filiere}>{item.intitule_filiere}</option>
-
-                                                            ))}
+                                                          
 
                                                         </select>
                                                     </Form.Group>
