@@ -294,25 +294,8 @@ const EnseignantListGroupes = () => {
                                                             ))}
                                                 </select>
                                            </Form.Group>
-                                                                
+
                                             <Form.Group className='form-group'>
-                                                <Form.Label>Note /20</Form.Label>
-                                                <Form.Control type="number" id="valeur_note" name="valeur_note"
-                                                    value={inputs.valeur_note || ''}
-                                                    onChange={handleChange}
-                                                />
-                                            </Form.Group>
- 
-                                         <Form.Group className='form-group'>
-                                                <Form.Label>coefficient</Form.Label>
-                                                <Form.Control type="number" id="coef" name="coef"
-                                                    value={coefficient}
-                                                    
-                                                    disabled
-                                                />
-                                            </Form.Group>
-                                                        
-                                                <Form.Group className='form-group'>
                                                 <Form.Label>Indices d'évalutation</Form.Label>
 
                                           <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
@@ -325,6 +308,15 @@ const EnseignantListGroupes = () => {
                                                             ))}
                                                 </select>
                                            </Form.Group>
+
+                                            <Form.Group className='form-group'>
+                                                <Form.Label>Note /{coefficient}</Form.Label>
+                                                <Form.Control type="number" id="valeur_note" name="valeur_note"
+                                                    value={inputs.valeur_note || ''}
+                                                    onChange={handleChange}
+                                                />
+                                            </Form.Group>
+                                                
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Appreciation</Form.Label>
 
@@ -336,9 +328,6 @@ const EnseignantListGroupes = () => {
                                                 </select>
                                            </Form.Group>
                                         </div>}
-                                              
-                                    
-                                               
 
                                     </div>}
                 
