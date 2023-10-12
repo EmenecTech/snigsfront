@@ -539,14 +539,13 @@ function formatNumberWithCommas(number) {
                                                 </Form.Group>
                                             </Col>
 
-                                            <div className="container">
                                                  <Col md="6">
                                                     a
                                                  </Col>
                                                  <Col md="6">
                                                     a
                                                  </Col>
-                                            </div>
+                                            
                                         </Row>
 
                                         <Row>
@@ -564,14 +563,13 @@ function formatNumberWithCommas(number) {
                                                 </Form.Group>
                                             </Col>
 
-                                            <div className="container">
                                                  <Col md="6">
                                                    
                                                  </Col>
                                                  <Col md="6">
                                                   
                                                  </Col>
-                                            </div>
+                                       
 
                                         </Row>
 
@@ -591,14 +589,13 @@ function formatNumberWithCommas(number) {
                                                 </Form.Group>
                                             </Col>
 
-                                           <div className="container">
                                                  <Col md="6">
                                                    
                                                  </Col>
                                                  <Col md="6">
                                                   
                                                  </Col>
-                                            </div>
+                                           
                                         </Row>
 
 
