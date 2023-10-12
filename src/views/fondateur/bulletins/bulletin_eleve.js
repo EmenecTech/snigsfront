@@ -871,7 +871,7 @@ const fetchAllNotesgr30 = () => {
 
     const fetchAllNote_3 = () => {
         http.get('/all/notes_3/' + etab + '/' + classe + "/" + evaluation + '/Groupe 3/' + userid).then(res => {
-        setAllNote_1(res.data);
+        setAllNote_3(res.data);
       })
     };
     
