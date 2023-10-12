@@ -420,7 +420,7 @@ const [activeTab, setActiveTab] = useState('Onglet1');
                         <Card.Body>
                                <div>
                                   <div>
-                                    <button className="btn btn-info" onClick={() => setActiveTab('Onglet1')}>Statistiques</button>
+                                    <button className="btn btn-info" onClick={() => setActiveTab('Onglet1')}>Statistiques</button>{" "}
                                     <button className="btn btn-info" onClick={() => setActiveTab('Onglet2')}>Bulletins de notes</button>
                                   </div>
                             
