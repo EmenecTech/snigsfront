@@ -420,87 +420,89 @@ const [activeTab, setActiveTab] = useState('Onglet1');
                         <Card.Body>
                                <div>
                                   <div>
-                                    <button onClick={() => setActiveTab('Onglet1')}>Onglet1</button>
-                                    <button onClick={() => setActiveTab('Onglet2')}>Onglet2</button>
+                                    <button className="btn btn-info" onClick={() => setActiveTab('Onglet1')}>Statistiques</button>
+                                    <button className="btn btn-info" onClick={() => setActiveTab('Onglet2')}>Bulletins de notes</button>
                                   </div>
                             
                                   <div>
-                                    {activeTab === 'Onglet1' && <div>Contenu de l'Onglet1</div>}
+                                    {activeTab === 'Onglet1' && <div><div className="table-responsive border-bottom my-3">
+                                                    <Table
+                                                        responsive
+                                                        striped
+                                                        id="datatable"
+                                                        className=""
+                                                        data-toggle="data-table"
+                                                    >
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Intitulé</th>
+                                                                <th>Valeur</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                    
+                                                            <tr>
+                                                                <td>Membres d'Administration</td>
+                                                                <td>{nbrad}</td>
+                    
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Enseignants</td>
+                                                                <td>{nbrens}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Eleves</td>
+                                                                <td>{nbreleve}</td>
+                    
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Inscripts</td>
+                                                                <td>{nbreins}</td>
+                    
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Préinscription</td>
+                                                                <td>{nbrpreins}</td>
+                    
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Eleves archivés</td>
+                                                                <td>{nbrarchv}</td>
+                    
+                                                            </tr>
+                    
+                    
+                                                            <tr>
+                                                                <td>Parents</td>
+                                                                <td>{nbrpar}</td>
+                    
+                                                            </tr>
+                    
+                                                           
+                    
+                                                            <tr>
+                                                                <td>Montant de pension enregistré</td>
+                                                                <td>XAF {formatNumberWithCommas(sumpay)} </td>
+                    
+                                                            </tr>
+                    
+                                                            
+                                                            
+                    
+                                                        </tbody>
+                                                        <tfoot>
+                    
+                                                        </tfoot>
+                                                    </Table>
+                    
+                                                </div>
+                                
+                                </div>}
                                     {activeTab === 'Onglet2' && <div>Contenu de l'Onglet2</div>}
                                   </div>
                                 </div>
 
-                            <div className="table-responsive border-bottom my-3">
-                                <Table
-                                    responsive
-                                    striped
-                                    id="datatable"
-                                    className=""
-                                    data-toggle="data-table"
-                                >
-                                    <thead>
-                                        <tr>
-                                            <th>Intitulé</th>
-                                            <th>Valeur</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
-                                        <tr>
-                                            <td>Membres d'Administration</td>
-                                            <td>{nbrad}</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Enseignants</td>
-                                            <td>{nbrens}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Eleves</td>
-                                            <td>{nbreleve}</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Inscripts</td>
-                                            <td>{nbreins}</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Préinscription</td>
-                                            <td>{nbrpreins}</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Eleves archivés</td>
-                                            <td>{nbrarchv}</td>
-
-                                        </tr>
-
-
-                                        <tr>
-                                            <td>Parents</td>
-                                            <td>{nbrpar}</td>
-
-                                        </tr>
-
-                                       
-
-                                        <tr>
-                                            <td>Montant de pension enregistré</td>
-                                            <td>XAF {formatNumberWithCommas(sumpay)} </td>
-
-                                        </tr>
-
-                                        
-                                        
-
-                                    </tbody>
-                                    <tfoot>
-
-                                    </tfoot>
-                                </Table>
-
-                            </div>
+                            
                         </Card.Body>
                     </Card>
                 </Col>
