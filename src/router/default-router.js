@@ -65,6 +65,11 @@ import ListNiveaux from '../views/fondateur/niveaux/listniveaux';
 import ListClasses from '../views/fondateur/classes/listclasses';
 import ListFilieres from '../views/fondateur/filieres/filieres';
 import UniClasse from '../views/fondateur/classes/classe';
+
+//oct 12 
+import PrimClasse from '../views/fondateur/classes/classe';
+
+
 import ListMatieres from '../views/fondateur/matieres/matieres';
 import NiveauxMatieres from '../views/fondateur/niveaux/niveaux_matieres';
 import EnseignantsListe from '../views/fondateur/enseignants/listenseignants';
@@ -339,6 +344,12 @@ export const DefaultRouter = [
             {
                 path: 'Details/classe/:niveau/:classe',
                 element: <UniClasse />
+            },
+
+    //oct 12
+            {
+                path: 'Details/classePrim/:niveau/:classe',
+                element: <PrimClasse />
             },
 
             //////
