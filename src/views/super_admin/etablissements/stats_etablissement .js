@@ -47,7 +47,7 @@ SwiperCore.use([Navigation]);
 
 const StatsEtablissement = memo((props) => {
     const { http, setToken } = AuthUser();
-
+    const [activeTab, setActiveTab] = useState('Onglet1');
     const { nometab, etab } = useParams();
 
 
@@ -397,8 +397,6 @@ const [sumpay, setsumpay] = useState([]);
         ],
     };
 
-const [activeTab, setActiveTab] = useState('Onglet1');
-
 
 
 
@@ -498,7 +496,71 @@ const [activeTab, setActiveTab] = useState('Onglet1');
                                                 </div>
                                 
                                 </div>}
-                                    {activeTab === 'Onglet2' && <div>Contenu de l'Onglet2</div>}
+                                    {activeTab === 'Onglet2' && <div>
+
+
+                                        <Form>
+
+                                        <Row>
+
+                                            <Col>
+                                                <Form.Group as={Row} className="form-group">
+                                                    <Form.Group className="form-group">
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé</div>)} *</Form.Label>
+                                                        <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
+                                                    </Form.Group>
+                                                </Form.Group>
+                                            </Col>
+
+                                        </Row>
+                                        <Row>
+
+                                            <Col>
+                                                <Form.Group as={Row} className="form-group">
+                                                    <Form.Group className="form-group">
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)} *</Form.Label>
+                                                        <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange} required>
+                                                            <option></option>
+                                                         
+
+                                                        </select>
+                                                    </Form.Group>
+                                                </Form.Group>
+                                            </Col>
+
+                                        </Row>
+                                        <Row>
+
+                                            <Col>
+                                                <Form.Group as={Row} className="form-group">
+                                                    <Form.Group className="form-group">
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Sector</div>):(<div>Filière</div>)} </Form.Label>
+                                                        <select className="form-select mb-3 shadow-none" name="filiere" onChange={handleChange} required>
+                                                            <option></option>
+                                                            {filieres.map((item) => (
+                                                                <option key={item.id} value={item.intitule_filiere}>{item.intitule_filiere}</option>
+
+                                                            ))}
+
+                                                        </select>
+                                                    </Form.Group>
+                                                </Form.Group>
+                                            </Col>
+
+                                        </Row>
+
+
+
+
+
+                                        <div className="text-center">
+                                            <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                        </div>
+                                    </Form>
+                                        
+                                        
+                                        
+                                        </div>}
                                   </div>
                                 </div>
 
