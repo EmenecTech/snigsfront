@@ -776,16 +776,31 @@ const fetchAllNotesgr30 = () => {
       })
     };
     
-     const [allnotessf, setAllNotessf] = useState([]);
+    const [allnote_1, setAllNote_1] = useState([]);
     useEffect(() => {
-        fetchAllNotessf();
+        fetchAllNote_1();
     }, []);
 
-    const fetchAllNotessf = () => {
-        http.get('/all_notes_sf/' + etab + '/' + classe + "/" + evaluation + '/Groupe 1/' + userid).then(res => {
-        setAllNotessf(res.data);
+    const fetchAllNote_1 = () => {
+        http.get('/all/notes_1/' + etab + '/' + classe + "/" + evaluation + '/Groupe 1/' + userid).then(res => {
+        setAllNote_1(res.data);
       })
     };
+
+    const [sumallnote_1, setAllSumallnote_1] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_1();
+    }, []);
+
+    const fetchAllSumallnote_1 = () => {
+        http.get('/sum/all/notes_1/' + etab + '/' + classe + "/" + evaluation + '/Groupe 1/' + userid).then(res => {
+        setAllSumallnote_1(res.data);
+      })
+    };
+
+
+
+    
 
       const [allnotessf1, setAllNotessf1] = useState([]);
     useEffect(() => {
@@ -1396,8 +1411,8 @@ const fetchAllNotesgr30 = () => {
                                                                 </thead>
                                                             <tbody>
                                                                    
-                                                                {allnotessf.map((item, sf) => (
-                                                                    <tr key={sf}>
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
                                                                       
                                                                         <td>{item.valeur_note}</td>
