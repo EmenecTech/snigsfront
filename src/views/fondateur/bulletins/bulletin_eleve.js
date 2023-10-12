@@ -270,7 +270,7 @@ const BulletinByEleve = memo((props) => {
     }, []);
      console.log(Info_grp_2);
     const fetchInfo_grp_2 = () => {
-        http.get('/info/groupe_2/' + etab + '/Groupe 2/').then(res => {
+        http.get('/info/groupe_2/' + etab ).then(res => {
         setInfo_grp_2(res.data);
       })
     };
@@ -304,7 +304,7 @@ const BulletinByEleve = memo((props) => {
     }, []);
      console.log(Info_grp_3);
     const fetchInfo_grp_3 = () => {
-        http.get('/info/groupe_3/' + etab + '/Groupe 3/').then(res => {
+        http.get('/info/groupe_3/' + etab).then(res => {
         setInfo_grp_3(res.data);
       })
     };
