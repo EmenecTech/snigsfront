@@ -523,23 +523,8 @@ function formatNumberWithCommas(number) {
 
                                         <Form>
 
-                                        <Row>
-
-                                            <Col>
-                                                <Form.Group as={Row} className="form-group">
-                                                    <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)} *</Form.Label>
-                                                        <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange} required>
-                                                            <option></option>
-                                                         
-
-                                                        </select>
-                                                    </Form.Group>
-                                                </Form.Group>
-                                            </Col>
-
-                                        </Row>
-                                        <Row>
+                                        
+                                        <Row className="mt-4">
 
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
