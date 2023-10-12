@@ -1400,7 +1400,7 @@ const fetchAllNotesgr30 = () => {
                                                                 </thead>
                                                             <tbody>
                                                                    
-                                                                {allnotessf.map((item, sf) => (
+                                                                {allnotesgr1.map((item, sf) => (
                                                                     <tr key={sf}>
                                                                         <td>{item.matiere_note}</td>
                                                                       
@@ -1420,7 +1420,7 @@ const fetchAllNotesgr30 = () => {
                                                                 </thead>
      <tbody>
                                                                    
-                                                                {allnotessf1.map((item, sf1) => (
+                                                                {allnotesgr2.map((item, sf1) => (
                                                                     <tr key={sf1}>
                                                                         <td>{item.matiere_note}</td>
                                                                   
@@ -1440,7 +1440,7 @@ const fetchAllNotesgr30 = () => {
                                                                 </thead>
                                                                  <tbody>
                                                                    
-                                                                {allnotessf2.map((item, sf2) => (
+                                                                {allnotesgr3.map((item, sf2) => (
                                                                     <tr key={sf2}>
                                                                         <td>{item.matiere_note}</td>
                                                                      
