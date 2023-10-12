@@ -424,21 +424,24 @@ const PayementsListEleve = (props) => {
                                                             </div>
                                                             {" "}
                                                         </Col>
-                                                        <Col sm="3">
-                                                            {" "}
-                                                            <div className="flex flex-column justify-content-center align-items-center">
-                                                                <Image
-                                                                    src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
-                                                                    style={{
-                                                                        width: "100px",
-                                                                        height: "100px",
-                                                                        borderRadius: "50%",
-                                                                        objectFit: "cover",
-                                                                        border: "2px solid black",
-                                                                    }}
-                                                                />
-                                                            </div>
-                                                        </Col>
+                                                       <Col sm="3">
+    <div className="d-flex justify-content-center align-items-center">
+        <Image
+            src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
+            style={{
+                width: "100px",
+                height: "100px",
+                borderRadius: "50%",
+                objectFit: "cover",
+                border: "2px solid black",
+                display: "block",
+                marginLeft: "auto",
+                marginRight: "auto"
+            }}
+        />
+    </div>
+</Col>
+
                                                 
                                                     </Row>
                                                 </Col>
