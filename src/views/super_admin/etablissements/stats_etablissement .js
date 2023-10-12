@@ -526,7 +526,7 @@ function formatNumberWithCommas(number) {
                                         
                                         <Row className="mt-4">
 
-                                            <Col>
+                                            <Col md="12">
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
                                                         <Form.Label htmlFor="exampleInputText1"> Maternelle </Form.Label>
@@ -550,7 +550,7 @@ function formatNumberWithCommas(number) {
 
                                         <Row>
 
-                                            <Col>
+                                            <Col md="12">
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
                                                         <Form.Label htmlFor="exampleInputText1"> Primaire </Form.Label>
@@ -575,7 +575,7 @@ function formatNumberWithCommas(number) {
 
                                         <Row>
 
-                                            <Col>
+                                            <Col md="12">
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
                                                         <Form.Label htmlFor="exampleInputText1"> Secondaire </Form.Label>
