@@ -477,7 +477,7 @@ const fetchAllNotesgr4 = () => {
     setAllNotesgr4(res.data);
   })
 };
-    console.log(
+
 
 const [allnotesgr5, setAllNotesgr5] = useState([]);
 useEffect(() => {
