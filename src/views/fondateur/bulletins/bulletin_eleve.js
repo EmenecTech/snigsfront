@@ -443,16 +443,7 @@ const [allnotespf, setAllNotespf] = useState([]);
     };
 
     
-    const [allnotesgr1, setAllNotesgr1] = useState([]);
-useEffect(() => {
-    fetchAllNotesgr1();
-}, []);
 
-const fetchAllNotesgr1 = () => {
-    http.get('/all_notes_gr1/' + etab + '/' + classe + "/" + evaluation + '/Groupe 1/' + userid).then(res => {
-    setAllNotesgr1(res.data);
-  })
-};
 
  const [allnotesgr2, setAllNotesgr2] = useState([]);
 useEffect(() => {
@@ -478,7 +469,7 @@ const fetchAllNotesgr3 = () => {
 
  const [allnotesgr4, setAllNotesgr4] = useState([]);
 useEffect(() => {
-    fetchAllNotesgr1();
+    fetchInfo_grp_1();
 }, []);
 
 const fetchAllNotesgr4 = () => {
@@ -543,113 +534,113 @@ const fetchAllNotesgr9 = () => {
   })
 };
 
- const [allnotesgr10, setAllNotesgr10] = useState([]);
+ const [Info_grp_10, setInfo_grp_10] = useState([]);
 useEffect(() => {
-    fetchAllNotesgr10();
+    fetchInfo_grp_10();
 }, []);
 
-const fetchAllNotesgr10 = () => {
+const fetchInfo_grp_10 = () => {
     http.get('/all_notes_gr10/' + etab + '/' + classe + "/" + evaluation + '/Groupe 10/' + userid).then(res => {
-    setAllNotesgr10(res.data);
+    setInfo_grp_10(res.data);
   })
 };
 
- const [allnotesgr11, setAllNotesgr11] = useState([]);
+ const [Info_grp_11, setInfo_grp_11] = useState([]);
 useEffect(() => {
-    fetchAllNotesgr11();
+    fetchInfo_grp_11();
 }, []);
 
-const fetchAllNotesgr11 = () => {
+const fetchInfo_grp_11 = () => {
     http.get('/all_notes_gr11/' + etab + '/' + classe + "/" + evaluation + '/Groupe 11/' + userid).then(res => {
-    setAllNotesgr11(res.data);
+    setInfo_grp_11(res.data);
   })
 };
 
- const [allnotesgr12, setAllNotesgr12] = useState([]);
+ const [Info_grp_12, setInfo_grp_12] = useState([]);
 useEffect(() => {
-    fetchAllNotesgr12();
+    fetchInfo_grp_12();
 }, []);
 
-const fetchAllNotesgr12 = () => {
+const fetchInfo_grp_12 = () => {
     http.get('/all_notes_gr12/' + etab + '/' + classe + "/" + evaluation + '/Groupe 12/' + userid).then(res => {
-    setAllNotesgr12(res.data);
+    setInfo_grp_12(res.data);
   })
 };
 
- const [allnotesgr13, setAllNotesgr13] = useState([]);
+ const [Info_grp_13, setInfo_grp_13] = useState([]);
 useEffect(() => {
-    fetchAllNotesgr13();
+    fetchInfo_grp_13();
 }, []);
 
-const fetchAllNotesgr13 = () => {
+const fetchInfo_grp_13 = () => {
     http.get('/all_notes_gr13/' + etab + '/' + classe + "/" + evaluation + '/Groupe 13/' + userid).then(res => {
-    setAllNotesgr13(res.data);
+    setInfo_grp_13(res.data);
   })
 };
 
- const [allnotesgr14, setAllNotesgr14] = useState([]);
+ const [Info_grp_14, setInfo_grp_14] = useState([]);
 useEffect(() => {
-    fetchAllNotesgr14();
+    fetchInfo_grp_14();
 }, []);
 
-const fetchAllNotesgr14 = () => {
+const fetchInfo_grp_14 = () => {
     http.get('/all_notes_gr14/' + etab + '/' + classe + "/" + evaluation + '/Groupe 14/' + userid).then(res => {
-    setAllNotesgr14(res.data);
+    setInfo_grp_14(res.data);
   })
 };
 
- const [allnotesgr15, setAllNotesgr15] = useState([]);
+ const [Info_grp_15, setInfo_grp_15] = useState([]);
 useEffect(() => {
-    fetchAllNotesgr15();
+    fetchInfo_grp_15();
 }, []);
 
-const fetchAllNotesgr15 = () => {
+const fetchInfo_grp_15 = () => {
     http.get('/all_notes_gr15/' + etab + '/' + classe + "/" + evaluation + '/Groupe 15/' + userid).then(res => {
-    setAllNotesgr15(res.data);
+    setInfo_grp_15(res.data);
   })
 };
 
- const [allnotesgr16, setAllNotesgr16] = useState([]);
+ const [Info_grp_16, setInfo_grp_16] = useState([]);
 useEffect(() => {
-    fetchAllNotesgr16();
+    fetchInfo_grp_16();
 }, []);
 
-const fetchAllNotesgr16 = () => {
+const fetchInfo_grp_16 = () => {
     http.get('/all_notes_gr16/' + etab + '/' + classe + "/" + evaluation + '/Groupe 16/' + userid).then(res => {
-    setAllNotesgr16(res.data);
+    setInfo_grp_16(res.data);
   })
 };
 
- const [allnotesgr17, setAllNotesgr17] = useState([]);
+ const [Info_grp_17, setInfo_grp_17] = useState([]);
 useEffect(() => {
-    fetchAllNotesgr17();
+    fetchInfo_grp_17();
 }, []);
 
-const fetchAllNotesgr17 = () => {
+const fetchInfo_grp_17 = () => {
     http.get('/all_notes_gr17/' + etab + '/' + classe + "/" + evaluation + '/Groupe 17/' + userid).then(res => {
-    setAllNotesgr17(res.data);
+    setInfo_grp_17(res.data);
   })
 };
 
- const [allnotesgr18, setAllNotesgr18] = useState([]);
+ const [Info_grp_18, setInfo_grp_18] = useState([]);
 useEffect(() => {
-    fetchAllNotesgr18();
+    fetchInfo_grp_18();
 }, []);
 
-const fetchAllNotesgr18 = () => {
+const fetchInfo_grp_18 = () => {
     http.get('/all_notes_gr18/' + etab + '/' + classe + "/" + evaluation + '/Groupe 18/' + userid).then(res => {
-    setAllNotesgr18(res.data);
+    setInfo_grp_18(res.data);
   })
 };
 
- const [allnotesgr19, setAllNotesgr19] = useState([]);
+ const [Info_grp_19, setInfo_grp_19] = useState([]);
 useEffect(() => {
-    fetchAllNotesgr19();
+    fetchInfo_grp_19();
 }, []);
 
-const fetchAllNotesgr19 = () => {
+const fetchInfo_grp_19 = () => {
     http.get('/all_notes_gr19/' + etab + '/' + classe + "/" + evaluation + '/Groupe 19/' + userid).then(res => {
-    setAllNotesgr19(res.data);
+    setInfo_grp_19(res.data);
   })
 };
 
@@ -786,6 +777,21 @@ const fetchAllNotesgr30 = () => {
       })
     };
     
+    
+
+
+
+    ////////////////////////////////
+    const [Info_grp_1, setInfo_grp_1] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_1();
+    }, []);
+    
+    const fetchInfo_grp_1 = () => {
+        http.get('/info/groupe_1/' + etab + '/Groupe 1/').then(res => {
+        setInfo_grp_1(res.data);
+      })
+    };
     const [allnote_1, setAllNote_1] = useState([]);
     useEffect(() => {
         fetchAllNote_1();
@@ -796,7 +802,7 @@ const fetchAllNotesgr30 = () => {
         setAllNote_1(res.data);
       })
     };
-
+    
     const [sumallnote_1, setAllSumallnote_1] = useState([]);
     useEffect(() => {
         fetchAllSumallnote_1();
@@ -807,8 +813,8 @@ const fetchAllNotesgr30 = () => {
         setAllSumallnote_1(res.data);
       })
     };
-
-
+        
+    //////////////////////////////////////////////
 
     
 
@@ -1435,7 +1441,7 @@ const fetchAllNotesgr30 = () => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allnotesgr1}</th>
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
