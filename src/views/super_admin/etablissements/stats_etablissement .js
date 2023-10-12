@@ -1,5 +1,5 @@
 import React, { useState, useEffect, memo, Fragment } from "react";
-import { Row, Col, Dropdown, Button, Table } from "react-bootstrap";
+import { Row, Col, Dropdown, Button, Form, Table } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import AuthUser from "../../../components/AuthUser.js";
 
@@ -165,8 +165,10 @@ function formatNumberWithCommas(number) {
 
 
 
+    const navigate = useNavigate();
+    const [inputs, setInputs] = useState({});
 
-  const handleChange = (event) => {
+    const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
 
