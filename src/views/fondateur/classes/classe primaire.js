@@ -631,7 +631,7 @@ const PrimClasse = () => {
                                                     {matieres_classe.map((item) => (
                                                         <tr key={item.id}>
                                                             <td>{item.matiere_cm}</td>
-                                                            <td>{user.langue === "en" ? (<div>{item.coefficient_cm} Marks</div>):(<div>{item.coefficient_cm} Points </div>)} </td>
+                                                            
                                                             <td>{item.groupe_cm}</td>
                                                             <td>
                                                                 <div className="flex align-items-center list-user-action">
