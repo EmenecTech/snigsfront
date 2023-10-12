@@ -38,7 +38,7 @@ import pages2 from '../../../assets/images/pages/02-page.png'
 
 import ShareOffcanvas from '../../../components/partials/components/shareoffcanvas'
 
-const UniClasse = () => {
+const PrimClasse = () => {
     const [toggler, setToggler] = useState();
     const [show, setShow] = useState(false);
     const { user, http } = AuthUser();
@@ -906,4 +906,4 @@ const UniClasse = () => {
 
 }
 
-export default UniClasse;
+export default PrimClasse;
