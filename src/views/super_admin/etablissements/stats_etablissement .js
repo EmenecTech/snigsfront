@@ -528,18 +528,6 @@ function formatNumberWithCommas(number) {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé</div>)} *</Form.Label>
-                                                        <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
-                                                    </Form.Group>
-                                                </Form.Group>
-                                            </Col>
-
-                                        </Row>
-                                        <Row>
-
-                                            <Col>
-                                                <Form.Group as={Row} className="form-group">
-                                                    <Form.Group className="form-group">
                                                         <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)} *</Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange} required>
                                                             <option></option>
@@ -556,17 +544,54 @@ function formatNumberWithCommas(number) {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Sector</div>):(<div>Filière</div>)} </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1"> Maternelle </Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="filiere" onChange={handleChange} required>
                                                             <option></option>
-                                                          
-
+                                                            <option> Nouvelle Version</option>
+                                                            <option> Ancienne Version</option>
                                                         </select>
                                                     </Form.Group>
                                                 </Form.Group>
                                             </Col>
 
                                         </Row>
+
+                                        <Row>
+
+                                            <Col>
+                                                <Form.Group as={Row} className="form-group">
+                                                    <Form.Group className="form-group">
+                                                        <Form.Label htmlFor="exampleInputText1"> Primaire </Form.Label>
+                                                        <select className="form-select mb-3 shadow-none" name="filiere" onChange={handleChange} required>
+                                                             <option></option>
+                                                            <option> Nouvelle Version</option>
+                                                            <option> Ancienne Version</option>
+                                                        </select>
+                                                    </Form.Group>
+                                                </Form.Group>
+                                            </Col>
+
+                                        </Row>
+
+
+                                        <Row>
+
+                                            <Col>
+                                                <Form.Group as={Row} className="form-group">
+                                                    <Form.Group className="form-group">
+                                                        <Form.Label htmlFor="exampleInputText1"> Secondaire </Form.Label>
+                                                        <select className="form-select mb-3 shadow-none" name="filiere" onChange={handleChange} required>
+                                                            <option></option>
+                                                            <option> Nouvelle Version</option>
+                                                            <option> Ancienne Version</option>
+                                                        </select>
+                                                    </Form.Group>
+                                                </Form.Group>
+                                            </Col>
+
+                                        </Row>
+
+
 
 
 
