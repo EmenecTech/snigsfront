@@ -2397,9 +2397,9 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
-                                                                        <th>{sumallnote_1}</th>
-                                                                        <th>{sumcoefnote_1}</th>
-                                                                        <th>{sumfinalnote_1}</th>
+                                                                        <th>{allnote_1.sumnote}</th>
+                                                                        <th>{allnote_1.sumcoef}</th>
+                                                                        <th>{allnote_1.sumfinalnotes}</th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -2755,9 +2755,9 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
-                                                                        <th>{sumallnote_1}</th>
-                                                                        <th>{sumcoefnote_1}</th>
-                                                                        <th>{sumfinalnote_1}</th>
+                                                                         <th>{allnote_1.sumnote}</th>
+                                                                        <th>{allnote_1.sumcoef}</th>
+                                                                        <th>{allnote_1.sumfinalnotes}</th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -3030,7 +3030,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
-                                                                        <th>{sumallnote_1}</th>
+                                                                         <th>{allnote_1.sumnote}</th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -4033,7 +4033,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
-                                                                        <th>{sumallnote_1}</th>
+                                                                         <th>{allnote_1.sumnote}</th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -4528,7 +4528,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
-                                                                        <th>{sumallnote_1}</th>
+                                                                         <th>{allnote_1.sumnote}</th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -5480,7 +5480,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
-                                                                        <th>{sumallnote_1}</th>
+                                                                         <th>{allnote_1.sumnote}</th>
                                                                         <th></th>
 
                                                                     </tr>
