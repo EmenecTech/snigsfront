@@ -1167,7 +1167,7 @@ const BulletinByEleve = memo((props) => {
                                                                 </thead>
                                                             <tbody>
                                                                     
-             {allnote_1.existgrp === 0 || allnote_1.existgrp ? : 
+             {allnote_1.existgrp === 0 || allnote_1.existgrp ? null : (
                                                                     
                                                                 {allnote_1.listnotes  && allnote_1.listnotes.map((item, grp_1) => (
                                                                     <tr key={grp_1}>
@@ -1190,7 +1190,7 @@ const BulletinByEleve = memo((props) => {
                                                                         <th></th>
 
                                                                     </tr>
-                                                                </thead> }
+                                                                </thead> )}
 
                                                                 <tbody>
                                                                    
