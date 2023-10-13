@@ -562,7 +562,7 @@ const PrimClasse = () => {
                                                                     <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div> Group </div>):(<div>Groupe</div>)} </Form.Label>
                                                                     
     {etab === 25 ? <div>
-    <select className="form-select mb-3 shadow-none" name="int" onChange={handleChange} required>
+    <select className="form-select mb-3 shadow-none" name="groupe" onChange={handleChange} required>
                                                                         <option></option>
 
     <option value="Communication in English"> {user.langue === "en" ? (<div> Group 1</div>):(<div>Communication in English</div>)} </option>
@@ -744,7 +744,7 @@ const PrimClasse = () => {
 
                                                                     </select>
     </div> : <div>
-    <select className="form-select mb-3 shadow-none" name="groupe" onChange={handleChange} required>
+    <select className="form-select mb-3 shadow-none" name="int" onChange={handleChange} required>
                                                                         <option></option>
 
     <option value="Groupe 1"> {user.langue === "en" ? (<div> Group 1</div>):(<div>Groupe 1</div>)} </option>
