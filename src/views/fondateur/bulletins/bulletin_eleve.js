@@ -548,6 +548,27 @@ const BulletinByEleve = memo((props) => {
         setAllSumallnote_6(res.data);
       })
     };
+    const [sumcoefnote_6, setAllSumcoefnote_6] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_6();
+    }, []);
+
+    const fetchAllSumcoefnote_6 = () => {
+        http.get('/sum/coef/notes_6/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_6(res.data);
+      })
+    };
+
+    const [sumfinalnote_6, setAllSumfinalnote_6] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_6();
+    }, []);
+
+    const fetchAllSumfinalnote_6 = () => {
+        http.get('/sum/final/notes_6/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_6(res.data);
+      })
+    };   
     //////////////////////////////////////////////
      const [Info_grp_7, setInfo_grp_7] = useState([]);
     useEffect(() => {
@@ -581,6 +602,27 @@ const BulletinByEleve = memo((props) => {
         setAllSumallnote_7(res.data);
       })
     };
+    const [sumcoefnote_7, setAllSumcoefnote_7] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_7();
+    }, []);
+
+    const fetchAllSumcoefnote_7 = () => {
+        http.get('/sum/coef/notes_7/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_7(res.data);
+      })
+    };
+
+    const [sumfinalnote_7, setAllSumfinalnote_7] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_7();
+    }, []);
+
+    const fetchAllSumfinalnote_7 = () => {
+        http.get('/sum/final/notes_7/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_7(res.data);
+      })
+    };   
     //////////////////////////////////////////////
        const [Info_grp_8, setInfo_grp_8] = useState([]);
     useEffect(() => {
@@ -614,7 +656,27 @@ const BulletinByEleve = memo((props) => {
         setAllSumallnote_8(res.data);
       })
     };
-    
+    const [sumcoefnote_8, setAllSumcoefnote_8] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_5();
+    }, []);
+
+    const fetchAllSumcoefnote_8 = () => {
+        http.get('/sum/coef/notes_5/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_5(res.data);
+      })
+    };
+
+    const [sumfinalnote_8, setAllSumfinalnote_8] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_8();
+    }, []);
+
+    const fetchAllSumfinalnote_8 = () => {
+        http.get('/sum/final/notes_8/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_8(res.data);
+      })
+    };   
   //////////////////////////////////////////////
        const [Info_grp_9, setInfo_grp_9] = useState([]);
     useEffect(() => {
@@ -648,6 +710,27 @@ const BulletinByEleve = memo((props) => {
         setAllSumallnote_9(res.data);
       })
     };
+    const [sumcoefnote_9, setAllSumcoefnote_9] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_9();
+    }, []);
+
+    const fetchAllSumcoefnote_9 = () => {
+        http.get('/sum/coef/notes_9/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_9(res.data);
+      })
+    };
+
+    const [sumfinalnote_9, setAllSumfinalnote_9] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_9();
+    }, []);
+
+    const fetchAllSumfinalnote_9 = () => {
+        http.get('/sum/final/notes_9/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_9(res.data);
+      })
+    };   
     //////////////////////////////////////////////
        const [Info_grp_10, setInfo_grp_10] = useState([]);
     useEffect(() => {
@@ -681,6 +764,27 @@ const BulletinByEleve = memo((props) => {
         setAllSumallnote_10(res.data);
       })
     };
+    const [sumcoefnote_10, setAllSumcoefnote_10] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_10();
+    }, []);
+
+    const fetchAllSumcoefnote_10 = () => {
+        http.get('/sum/coef/notes_10/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_10(res.data);
+      })
+    };
+
+    const [sumfinalnote_10, setAllSumfinalnote_10] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_10();
+    }, []);
+
+    const fetchAllSumfinalnote_10 = () => {
+        http.get('/sum/final/notes_10/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_10(res.data);
+      })
+    };   
     //////////////////////////////////////////////
        const [Info_grp_11, setInfo_grp_11] = useState([]);
     useEffect(() => {
@@ -714,6 +818,27 @@ const BulletinByEleve = memo((props) => {
         setAllSumallnote_11(res.data);
       })
     };
+    const [sumcoefnote_11, setAllSumcoefnote_11] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_11();
+    }, []);
+
+    const fetchAllSumcoefnote_11 = () => {
+        http.get('/sum/coef/notes_11/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_5(res.data);
+      })
+    };
+
+    const [sumfinalnote_11, setAllSumfinalnote_11] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_11();
+    }, []);
+
+    const fetchAllSumfinalnote_11 = () => {
+        http.get('/sum/final/notes_11/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_11(res.data);
+      })
+    };   
     //////////////////////////////////////////////
        const [Info_grp_12, setInfo_grp_12] = useState([]);
     useEffect(() => {
@@ -747,6 +872,27 @@ const BulletinByEleve = memo((props) => {
         setAllSumallnote_12(res.data);
       })
     };
+    const [sumcoefnote_12, setAllSumcoefnote_12] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_12();
+    }, []);
+
+    const fetchAllSumcoefnote_12 = () => {
+        http.get('/sum/coef/notes_12/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_12(res.data);
+      })
+    };
+
+    const [sumfinalnote_12, setAllSumfinalnote_12] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_12();
+    }, []);
+
+    const fetchAllSumfinalnote_12 = () => {
+        http.get('/sum/final/notes_12/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_12(res.data);
+      })
+    };   
     //////////////////////////////////////////////
        const [Info_grp_13, setInfo_grp_13] = useState([]);
     useEffect(() => {
@@ -780,6 +926,27 @@ const BulletinByEleve = memo((props) => {
         setAllSumallnote_13(res.data);
       })
     };
+    const [sumcoefnote_13, setAllSumcoefnote_13] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_13();
+    }, []);
+
+    const fetchAllSumcoefnote_13 = () => {
+        http.get('/sum/coef/notes_13/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_13(res.data);
+      })
+    };
+
+    const [sumfinalnote_13, setAllSumfinalnote_13] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_13();
+    }, []);
+
+    const fetchAllSumfinalnote_13 = () => {
+        http.get('/sum/final/notes_13/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_13(res.data);
+      })
+    };   
     //////////////////////////////////////////////
        const [Info_grp_14, setInfo_grp_14] = useState([]);
     useEffect(() => {
@@ -813,6 +980,27 @@ const BulletinByEleve = memo((props) => {
         setAllSumallnote_14(res.data);
       })
     };
+    const [sumcoefnote_14, setAllSumcoefnote_14] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_14();
+    }, []);
+
+    const fetchAllSumcoefnote_14 = () => {
+        http.get('/sum/coef/notes_14/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_14(res.data);
+      })
+    };
+
+    const [sumfinalnote_14, setAllSumfinalnote_14] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_14();
+    }, []);
+
+    const fetchAllSumfinalnote_14 = () => {
+        http.get('/sum/final/notes_14/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_14(res.data);
+      })
+    };   
     //////////////////////////////////////////////
        const [Info_grp_15, setInfo_grp_15] = useState([]);
     useEffect(() => {
@@ -820,7 +1008,7 @@ const BulletinByEleve = memo((props) => {
     }, []);
     
     const fetchInfo_grp_15 = () => {
-        http.get('/info/groupe_1/' + etab).then(res => {
+        http.get('/info/groupe_15/' + etab).then(res => {
         setInfo_grp_15(res.data);
       })
     };
@@ -831,8 +1019,8 @@ const BulletinByEleve = memo((props) => {
     }, []);
 
     const fetchAllNote_15 = () => {
-        http.get('/all/notes_1/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllNote_1(res.data);
+        http.get('/all/notes_15/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_15(res.data);
       })
     };
     
@@ -846,8 +1034,852 @@ const BulletinByEleve = memo((props) => {
         setAllSumallnote_15(res.data);
       })
     };
+    const [sumcoefnote_15, setAllSumcoefnote_15] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_15();
+    }, []);
+
+    const fetchAllSumcoefnote_15 = () => {
+        http.get('/sum/coef/notes_15/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_15(res.data);
+      })
+    };
+
+    const [sumfinalnote_15, setAllSumfinalnote_15] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_15();
+    }, []);
+
+    const fetchAllSumfinalnote_15 = () => {
+        http.get('/sum/final/notes_15/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_15(res.data);
+      })
+    };   
+    //////////////////////////////////////////////
+       const [Info_grp_16, setInfo_grp_16] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_16();
+    }, []);
+    
+    const fetchInfo_grp_16 = () => {
+        http.get('/info/groupe_16/' + etab).then(res => {
+        setInfo_grp_16(res.data);
+      })
+    };
+    
+    const [allnote_16, setAllNote_16] = useState([]);
+    useEffect(() => {
+        fetchAllNote_16();
+    }, []);
+
+    const fetchAllNote_16 = () => {
+        http.get('/all/notes_16/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_16(res.data);
+      })
+    };
+    
+    const [sumallnote_16, setAllSumallnote_16] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_16();
+    }, []);
+
+    const fetchAllSumallnote_16 = () => {
+        http.get('/sum/all/notes_16/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_16(res.data);
+      })
+    };
+    const [sumcoefnote_16, setAllSumcoefnote_16] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_16();
+    }, []);
+
+    const fetchAllSumcoefnote_16 = () => {
+        http.get('/sum/coef/notes_16/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_16(res.data);
+      })
+    };
+
+    const [sumfinalnote_16, setAllSumfinalnote_16] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_16();
+    }, []);
+
+    const fetchAllSumfinalnote_16 = () => {
+        http.get('/sum/final/notes_16/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_16(res.data);
+      })
+    };   
     //////////////////////////////////////////////
 
+       const [Info_grp_17, setInfo_grp_17] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_17();
+    }, []);
+    
+    const fetchInfo_grp_17 = () => {
+        http.get('/info/groupe_17/' + etab).then(res => {
+        setInfo_grp_17(res.data);
+      })
+    };
+    
+    const [allnote_17, setAllNote_17] = useState([]);
+    useEffect(() => {
+        fetchAllNote_17();
+    }, []);
+
+    const fetchAllNote_17 = () => {
+        http.get('/all/notes_17/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_17(res.data);
+      })
+    };
+    
+    const [sumallnote_17, setAllSumallnote_17] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_17();
+    }, []);
+
+    const fetchAllSumallnote_17 = () => {
+        http.get('/sum/all/notes_17/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_17(res.data);
+      })
+    };
+    const [sumcoefnote_17, setAllSumcoefnote_17] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_17();
+    }, []);
+
+    const fetchAllSumcoefnote_17 = () => {
+        http.get('/sum/coef/notes_17/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_17(res.data);
+      })
+    };
+
+    const [sumfinalnote_17, setAllSumfinalnote_17] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_17();
+    }, []);
+
+    const fetchAllSumfinalnote_17 = () => {
+        http.get('/sum/final/notes_17/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_17(res.data);
+      })
+    };   
+    //////////////////////////////////////////////
+
+       const [Info_grp_18, setInfo_grp_18] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_18();
+    }, []);
+    
+    const fetchInfo_grp_18 = () => {
+        http.get('/info/groupe_18/' + etab).then(res => {
+        setInfo_grp_18(res.data);
+      })
+    };
+    
+    const [allnote_18, setAllNote_18] = useState([]);
+    useEffect(() => {
+        fetchAllNote_18();
+    }, []);
+
+    const fetchAllNote_18 = () => {
+        http.get('/all/notes_18/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_18(res.data);
+      })
+    };
+    
+    const [sumallnote_18, setAllSumallnote_18] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_18();
+    }, []);
+
+    const fetchAllSumallnote_18 = () => {
+        http.get('/sum/all/notes_18/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_18(res.data);
+      })
+    };
+    const [sumcoefnote_18, setAllSumcoefnote_18] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_18();
+    }, []);
+
+    const fetchAllSumcoefnote_18 = () => {
+        http.get('/sum/coef/notes_18/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_18(res.data);
+      })
+    };
+
+    const [sumfinalnote_18, setAllSumfinalnote_18] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_18();
+    }, []);
+
+    const fetchAllSumfinalnote_18 = () => {
+        http.get('/sum/final/notes_18/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_18(res.data);
+      })
+    };   
+     //////////////////////////////////////////////
+
+       const [Info_grp_19, setInfo_grp_19] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_19();
+    }, []);
+    
+    const fetchInfo_grp_19 = () => {
+        http.get('/info/groupe_19/' + etab).then(res => {
+        setInfo_grp_19(res.data);
+      })
+    };
+    
+    const [allnote_19, setAllNote_19] = useState([]);
+    useEffect(() => {
+        fetchAllNote_19();
+    }, []);
+
+    const fetchAllNote_19 = () => {
+        http.get('/all/notes_19/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_19(res.data);
+      })
+    };
+    
+    const [sumallnote_19, setAllSumallnote_19] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_19();
+    }, []);
+
+    const fetchAllSumallnote_19 = () => {
+        http.get('/sum/all/notes_19/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_19(res.data);
+      })
+    };
+    const [sumcoefnote_19, setAllSumcoefnote_19] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_19();
+    }, []);
+
+    const fetchAllSumcoefnote_19 = () => {
+        http.get('/sum/coef/notes_19/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_19(res.data);
+      })
+    };
+
+    const [sumfinalnote_19, setAllSumfinalnote_19] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_19();
+    }, []);
+
+    const fetchAllSumfinalnote_19 = () => {
+        http.get('/sum/final/notes_19/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_19(res.data);
+      })
+    };   
+     //////////////////////////////////////////////
+
+       const [Info_grp_20, setInfo_grp_20] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_20();
+    }, []);
+    
+    const fetchInfo_grp_20 = () => {
+        http.get('/info/groupe_20/' + etab).then(res => {
+        setInfo_grp_20(res.data);
+      })
+    };
+    
+    const [allnote_20, setAllNote_20] = useState([]);
+    useEffect(() => {
+        fetchAllNote_20();
+    }, []);
+
+    const fetchAllNote_20 = () => {
+        http.get('/all/notes_20/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_20(res.data);
+      })
+    };
+    
+    const [sumallnote_20, setAllSumallnote_20] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_20();
+    }, []);
+
+    const fetchAllSumallnote_20 = () => {
+        http.get('/sum/all/notes_20/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_20(res.data);
+      })
+    };
+    const [sumcoefnote_20, setAllSumcoefnote_20] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_20();
+    }, []);
+
+    const fetchAllSumcoefnote_20 = () => {
+        http.get('/sum/coef/notes_20/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_20(res.data);
+      })
+    };
+
+    const [sumfinalnote_20, setAllSumfinalnote_20] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_20();
+    }, []);
+
+    const fetchAllSumfinalnote_20 = () => {
+        http.get('/sum/final/notes_20/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_20(res.data);
+      })
+    };   
+     //////////////////////////////////////////////
+
+       const [Info_grp_21, setInfo_grp_21] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_21();
+    }, []);
+    
+    const fetchInfo_grp_21 = () => {
+        http.get('/info/groupe_21/' + etab).then(res => {
+        setInfo_grp_21(res.data);
+      })
+    };
+    
+    const [allnote_21, setAllNote_21] = useState([]);
+    useEffect(() => {
+        fetchAllNote_21();
+    }, []);
+
+    const fetchAllNote_21 = () => {
+        http.get('/all/notes_21/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_21(res.data);
+      })
+    };
+    
+    const [sumallnote_21, setAllSumallnote_21] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_21();
+    }, []);
+
+    const fetchAllSumallnote_21 = () => {
+        http.get('/sum/all/notes_21/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_21(res.data);
+      })
+    };
+    const [sumcoefnote_21, setAllSumcoefnote_21] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_21();
+    }, []);
+
+    const fetchAllSumcoefnote_21 = () => {
+        http.get('/sum/coef/notes_21/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_21(res.data);
+      })
+    };
+
+    const [sumfinalnote_21, setAllSumfinalnote_21] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_21();
+    }, []);
+
+    const fetchAllSumfinalnote_21 = () => {
+        http.get('/sum/final/notes_21/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_21(res.data);
+      })
+    };   
+     //////////////////////////////////////////////
+
+       const [Info_grp_22, setInfo_grp_22] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_22();
+    }, []);
+    
+    const fetchInfo_grp_22 = () => {
+        http.get('/info/groupe_22/' + etab).then(res => {
+        setInfo_grp_22(res.data);
+      })
+    };
+    
+    const [allnote_22, setAllNote_22] = useState([]);
+    useEffect(() => {
+        fetchAllNote_22();
+    }, []);
+
+    const fetchAllNote_22 = () => {
+        http.get('/all/notes_22/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_22(res.data);
+      })
+    };
+    
+    const [sumallnote_22, setAllSumallnote_22] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_22();
+    }, []);
+
+    const fetchAllSumallnote_22 = () => {
+        http.get('/sum/all/notes_22/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_22(res.data);
+      })
+    };
+    const [sumcoefnote_22, setAllSumcoefnote_22] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_22();
+    }, []);
+
+    const fetchAllSumcoefnote_22 = () => {
+        http.get('/sum/coef/notes_22/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_22(res.data);
+      })
+    };
+
+    const [sumfinalnote_22, setAllSumfinalnote_22] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_22();
+    }, []);
+
+    const fetchAllSumfinalnote_22 = () => {
+        http.get('/sum/final/notes_22/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_22(res.data);
+      })
+    };   
+     //////////////////////////////////////////////
+
+       const [Info_grp_23, setInfo_grp_23] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_23();
+    }, []);
+    
+    const fetchInfo_grp_23 = () => {
+        http.get('/info/groupe_23/' + etab).then(res => {
+        setInfo_grp_23(res.data);
+      })
+    };
+    
+    const [allnote_23, setAllNote_23] = useState([]);
+    useEffect(() => {
+        fetchAllNote_23();
+    }, []);
+
+    const fetchAllNote_23 = () => {
+        http.get('/all/notes_23/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_23(res.data);
+      })
+    };
+    
+    const [sumallnote_23, setAllSumallnote_23] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_23();
+    }, []);
+
+    const fetchAllSumallnote_23 = () => {
+        http.get('/sum/all/notes_23/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_23(res.data);
+      })
+    };
+    const [sumcoefnote_23, setAllSumcoefnote_23] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_23();
+    }, []);
+
+    const fetchAllSumcoefnote_23 = () => {
+        http.get('/sum/coef/notes_23/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_23(res.data);
+      })
+    };
+
+    const [sumfinalnote_23, setAllSumfinalnote_23] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_23();
+    }, []);
+
+    const fetchAllSumfinalnote_23 = () => {
+        http.get('/sum/final/notes_23/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_23(res.data);
+      })
+    };   
+     //////////////////////////////////////////////
+
+       const [Info_grp_24, setInfo_grp_24] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_24();
+    }, []);
+    
+    const fetchInfo_grp_24 = () => {
+        http.get('/info/groupe_24/' + etab).then(res => {
+        setInfo_grp_24(res.data);
+      })
+    };
+    
+    const [allnote_24, setAllNote_24] = useState([]);
+    useEffect(() => {
+        fetchAllNote_24();
+    }, []);
+
+    const fetchAllNote_24 = () => {
+        http.get('/all/notes_24/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_24(res.data);
+      })
+    };
+    
+    const [sumallnote_24, setAllSumallnote_24] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_24();
+    }, []);
+
+    const fetchAllSumallnote_24 = () => {
+        http.get('/sum/all/notes_24/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_24(res.data);
+      })
+    };
+    const [sumcoefnote_24, setAllSumcoefnote_24] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_24();
+    }, []);
+
+    const fetchAllSumcoefnote_24 = () => {
+        http.get('/sum/coef/notes_24/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_24(res.data);
+      })
+    };
+
+    const [sumfinalnote_24, setAllSumfinalnote_24] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_24();
+    }, []);
+
+    const fetchAllSumfinalnote_24 = () => {
+        http.get('/sum/final/notes_24/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_24(res.data);
+      })
+    };   
+     //////////////////////////////////////////////
+
+       const [Info_grp_25, setInfo_grp_25] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_25();
+    }, []);
+    
+    const fetchInfo_grp_25 = () => {
+        http.get('/info/groupe_25/' + etab).then(res => {
+        setInfo_grp_25(res.data);
+      })
+    };
+    
+    const [allnote_25, setAllNote_25] = useState([]);
+    useEffect(() => {
+        fetchAllNote_25();
+    }, []);
+
+    const fetchAllNote_25 = () => {
+        http.get('/all/notes_25/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_25(res.data);
+      })
+    };
+    
+    const [sumallnote_25, setAllSumallnote_25] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_25();
+    }, []);
+
+    const fetchAllSumallnote_25 = () => {
+        http.get('/sum/all/notes_25/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_25(res.data);
+      })
+    };
+    const [sumcoefnote_25, setAllSumcoefnote_25] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_25();
+    }, []);
+
+    const fetchAllSumcoefnote_25 = () => {
+        http.get('/sum/coef/notes_25/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_25(res.data);
+      })
+    };
+
+    const [sumfinalnote_25, setAllSumfinalnote_25] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_25();
+    }, []);
+
+    const fetchAllSumfinalnote_25 = () => {
+        http.get('/sum/final/notes_25/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_25(res.data);
+      })
+    };   
+     //////////////////////////////////////////////
+
+       const [Info_grp_26, setInfo_grp_26] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_26();
+    }, []);
+    
+    const fetchInfo_grp_26 = () => {
+        http.get('/info/groupe_26/' + etab).then(res => {
+        setInfo_grp_26(res.data);
+      })
+    };
+    
+    const [allnote_26, setAllNote_26] = useState([]);
+    useEffect(() => {
+        fetchAllNote_26();
+    }, []);
+
+    const fetchAllNote_26 = () => {
+        http.get('/all/notes_26/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_26(res.data);
+      })
+    };
+    
+    const [sumallnote_26, setAllSumallnote_26] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_26();
+    }, []);
+
+    const fetchAllSumallnote_26 = () => {
+        http.get('/sum/all/notes_26/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_26(res.data);
+      })
+    };
+    const [sumcoefnote_26, setAllSumcoefnote_26] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_26();
+    }, []);
+
+    const fetchAllSumcoefnote_26 = () => {
+        http.get('/sum/coef/notes_26/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_26(res.data);
+      })
+    };
+
+    const [sumfinalnote_26, setAllSumfinalnote_26] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_26();
+    }, []);
+
+    const fetchAllSumfinalnote_26 = () => {
+        http.get('/sum/final/notes_26/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_26(res.data);
+      })
+    };   
+     //////////////////////////////////////////////
+
+       const [Info_grp_27, setInfo_grp_27] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_27();
+    }, []);
+    
+    const fetchInfo_grp_27 = () => {
+        http.get('/info/groupe_27/' + etab).then(res => {
+        setInfo_grp_27(res.data);
+      })
+    };
+    
+    const [allnote_27, setAllNote_27] = useState([]);
+    useEffect(() => {
+        fetchAllNote_27();
+    }, []);
+
+    const fetchAllNote_27 = () => {
+        http.get('/all/notes_27/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_27(res.data);
+      })
+    };
+    
+    const [sumallnote_27, setAllSumallnote_27] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_27();
+    }, []);
+
+    const fetchAllSumallnote_27 = () => {
+        http.get('/sum/all/notes_27/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_27(res.data);
+      })
+    };
+    const [sumcoefnote_27, setAllSumcoefnote_27] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_27();
+    }, []);
+
+    const fetchAllSumcoefnote_27 = () => {
+        http.get('/sum/coef/notes_27/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_27(res.data);
+      })
+    };
+
+    const [sumfinalnote_27, setAllSumfinalnote_27] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_27();
+    }, []);
+
+    const fetchAllSumfinalnote_27 = () => {
+        http.get('/sum/final/notes_27/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_27(res.data);
+      })
+    }; 
+     //////////////////////////////////////////////
+
+       const [Info_grp_28, setInfo_grp_28] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_28();
+    }, []);
+    
+    const fetchInfo_grp_28 = () => {
+        http.get('/info/groupe_28/' + etab).then(res => {
+        setInfo_grp_28(res.data);
+      })
+    };
+    
+    const [allnote_28, setAllNote_28] = useState([]);
+    useEffect(() => {
+        fetchAllNote_28();
+    }, []);
+
+    const fetchAllNote_28 = () => {
+        http.get('/all/notes_28/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_28(res.data);
+      })
+    };
+    
+    const [sumallnote_28, setAllSumallnote_28] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_28();
+    }, []);
+
+    const fetchAllSumallnote_28 = () => {
+        http.get('/sum/all/notes_28/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_28(res.data);
+      })
+    };
+    const [sumcoefnote_28, setAllSumcoefnote_28] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_28();
+    }, []);
+
+    const fetchAllSumcoefnote_28 = () => {
+        http.get('/sum/coef/notes_28/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_28(res.data);
+      })
+    };
+
+    const [sumfinalnote_28, setAllSumfinalnote_28] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_28();
+    }, []);
+
+    const fetchAllSumfinalnote_28 = () => {
+        http.get('/sum/final/notes_28/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_28(res.data);
+      })
+    };   
+     //////////////////////////////////////////////
+
+       const [Info_grp_29, setInfo_grp_29] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_29();
+    }, []);
+    
+    const fetchInfo_grp_29 = () => {
+        http.get('/info/groupe_29/' + etab).then(res => {
+        setInfo_grp_29(res.data);
+      })
+    };
+    
+    const [allnote_29, setAllNote_29] = useState([]);
+    useEffect(() => {
+        fetchAllNote_29();
+    }, []);
+
+    const fetchAllNote_29 = () => {
+        http.get('/all/notes_29/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_29(res.data);
+      })
+    };
+    
+    const [sumallnote_29, setAllSumallnote_29] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_29();
+    }, []);
+
+    const fetchAllSumallnote_29 = () => {
+        http.get('/sum/all/notes_29/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_29(res.data);
+      })
+    };
+    const [sumcoefnote_29, setAllSumcoefnote_29] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_29();
+    }, []);
+
+    const fetchAllSumcoefnote_29 = () => {
+        http.get('/sum/coef/notes_29/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_29(res.data);
+      })
+    };
+
+    const [sumfinalnote_29, setAllSumfinalnote_29] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_29();
+    }, []);
+
+    const fetchAllSumfinalnote_29 = () => {
+        http.get('/sum/final/notes_29/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_29(res.data);
+      })
+    };   
+     //////////////////////////////////////////////
+
+       const [Info_grp_30, setInfo_grp_30] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_30();
+    }, []);
+    
+    const fetchInfo_grp_30 = () => {
+        http.get('/info/groupe_30/' + etab).then(res => {
+        setInfo_grp_30(res.data);
+      })
+    };
+    
+    const [allnote_30, setAllNote_30] = useState([]);
+    useEffect(() => {
+        fetchAllNote_30();
+    }, []);
+
+    const fetchAllNote_30 = () => {
+        http.get('/all/notes_30/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_30(res.data);
+      })
+    };
+    
+    const [sumallnote_30, setAllSumallnote_30] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_30();
+    }, []);
+
+    const fetchAllSumallnote_30 = () => {
+        http.get('/sum/all/notes_30/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_30(res.data);
+      })
+    };
+    const [sumcoefnote_30, setAllSumcoefnote_30] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_30();
+    }, []);
+
+    const fetchAllSumcoefnote_30 = () => {
+        http.get('/sum/coef/notes_30/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_30(res.data);
+      })
+    };
+
+    const [sumfinalnote_30, setAllSumfinalnote_30] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_30();
+    }, []);
+
+    const fetchAllSumfinalnote_30 = () => {
+        http.get('/sum/final/notes_30/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_30(res.data);
+      })
+    };   
+    ////////////////////////////////////////////
     
    const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
@@ -2266,6 +3298,291 @@ const BulletinByEleve = memo((props) => {
 
                                                                         <th>{Info_grp_15.intitule_groupe}</th>
                                                                         <th>{sumallnote_15}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                  <tbody>
+                                                                   
+                                                                {allnote_16.map((item, grp_16) => (
+                                                                    <tr key={grp_16}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_16.intitule_groupe}</th>
+                                                                        <th>{sumallnote_16}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                  <tbody>
+                                                                   
+                                                                {allnote_17.map((item, grp_17) => (
+                                                                    <tr key={grp_17}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_17.intitule_groupe}</th>
+                                                                        <th>{sumallnote_17}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_18.map((item, grp_18) => (
+                                                                    <tr key={grp_18}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_18.intitule_groupe}</th>
+                                                                        <th>{sumallnote_18}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                             <tbody>
+                                                                   
+                                                                {allnote_19.map((item, grp_19) => (
+                                                                    <tr key={grp_19}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_19.intitule_groupe}</th>
+                                                                        <th>{sumallnote_19}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                             <tbody>
+                                                                   
+                                                                {allnote_20.map((item, grp_20) => (
+                                                                    <tr key={grp_20}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_20.intitule_groupe}</th>
+                                                                        <th>{sumallnote_20}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                   
+                                                                {allnote_21.map((item, grp_21) => (
+                                                                    <tr key={grp_21}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_21.intitule_groupe}</th>
+                                                                        <th>{sumallnote_21}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                   
+                                                                {allnote_22.map((item, grp_22) => (
+                                                                    <tr key={grp_22}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_22.intitule_groupe}</th>
+                                                                        <th>{sumallnote_22}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                   
+                                                                {allnote_23.map((item, grp_23) => (
+                                                                    <tr key={grp_23}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_23.intitule_groupe}</th>
+                                                                        <th>{sumallnote_23}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                   
+                                                                {allnote_24.map((item, grp_24) => (
+                                                                    <tr key={grp_24}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_24.intitule_groupe}</th>
+                                                                        <th>{sumallnote_24}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                   
+                                                                {allnote_25.map((item, grp_25) => (
+                                                                    <tr key={grp_25}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_25.intitule_groupe}</th>
+                                                                        <th>{sumallnote_25}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                   
+                                                                {allnote_26.map((item, grp_26) => (
+                                                                    <tr key={grp_26}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_26.intitule_groupe}</th>
+                                                                        <th>{sumallnote_26}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                   
+                                                                {allnote_27.map((item, grp_27) => (
+                                                                    <tr key={grp_27}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_27.intitule_groupe}</th>
+                                                                        <th>{sumallnote_27}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                   
+                                                                {allnote_28.map((item, grp_28) => (
+                                                                    <tr key={grp_28}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_28.intitule_groupe}</th>
+                                                                        <th>{sumallnote_28}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                   
+                                                                {allnote_29.map((item, grp_29) => (
+                                                                    <tr key={grp_29}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_29.intitule_groupe}</th>
+                                                                        <th>{sumallnote_29}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                   
+                                                                {allnote_30.map((item, grp_30) => (
+                                                                    <tr key={grp_30}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_30.intitule_groupe}</th>
+                                                                        <th>{sumallnote_30}</th>
                                                                         <th></th>
 
                                                                     </tr>
