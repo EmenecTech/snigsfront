@@ -406,8 +406,449 @@ const BulletinByEleve = memo((props) => {
       })
     };
     ///////////////////////////////////////////////
+   const [Info_grp_4, setInfo_grp_4] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_1();
+    }, []);
+    
+    const fetchInfo_grp_4 = () => {
+        http.get('/info/groupe_4/' + etab).then(res => {
+        setInfo_grp_1(res.data);
+      })
+    };
+    
+    const [allnote_4, setAllNote_4] = useState([]);
+    useEffect(() => {
+        fetchAllNote_4();
+    }, []);
 
+    const fetchAllNote_4 = () => {
+        http.get('/all/notes_4/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_4(res.data);
+      })
+    };
+    
+    const [sumallnote_4, setAllSumallnote_4] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_4();
+    }, []);
 
+    const fetchAllSumallnote_4 = () => {
+        http.get('/sum/all/notes_4/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_1(res.data);
+      })
+    };
+
+    const [sumcoefnote_4, setAllSumcoefnote_4] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_4();
+    }, []);
+
+    const fetchAllSumcoefnote_4 = () => {
+        http.get('/sum/coef/notes_4/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_4(res.data);
+      })
+    };
+
+    const [sumfinalnote_4, setAllSumfinalnote_4] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_4();
+    }, []);
+
+    const fetchAllSumfinalnote_4 = () => {
+        http.get('/sum/final/notes_4/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_4(res.data);
+      })
+    }; 
+    //////////////////////////////////////////////
+       const [Info_grp_5, setInfo_grp_5] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_5();
+    }, []);
+    
+    const fetchInfo_grp_5 = () => {
+        http.get('/info/groupe_5/' + etab).then(res => {
+        setInfo_grp_5(res.data);
+      })
+    };
+    
+    const [allnote_5, setAllNote_5] = useState([]);
+    useEffect(() => {
+        fetchAllNote_5();
+    }, []);
+
+    const fetchAllNote_5 = () => {
+        http.get('/all/notes_5/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_5(res.data);
+      })
+    };
+    
+    const [sumallnote_5, setAllSumallnote_5] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_5();
+    }, []);
+
+    const fetchAllSumallnote_5 = () => {
+        http.get('/sum/all/notes_5/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_1(res.data);
+      })
+    };
+
+    const [sumcoefnote_5, setAllSumcoefnote_5] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_5();
+    }, []);
+
+    const fetchAllSumcoefnote_5 = () => {
+        http.get('/sum/coef/notes_5/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_5(res.data);
+      })
+    };
+
+    const [sumfinalnote_5, setAllSumfinalnote_5] = useState([]);
+    useEffect(() => {
+        fetchAllSumfinalnote_5();
+    }, []);
+
+    const fetchAllSumfinalnote_5 = () => {
+        http.get('/sum/final/notes_5/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_5(res.data);
+      })
+    };   
+    //////////////////////////////////////////////
+       const [Info_grp_6, setInfo_grp_6] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_6();
+    }, []);
+    
+    const fetchInfo_grp_6 = () => {
+        http.get('/info/groupe_6/' + etab).then(res => {
+        setInfo_grp_6(res.data);
+      })
+    };
+     
+    const [allnote_6, setAllNote_6] = useState([]);
+    useEffect(() => {
+        fetchAllNote_6();
+    }, []);
+
+    const fetchAllNote_6 = () => {
+        http.get('/all/notes_6/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_6(res.data);
+      })
+    };
+    
+    const [sumallnote_6, setAllSumallnote_6] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_1();
+    }, []);
+
+    const fetchAllSumallnote_6 = () => {
+        http.get('/sum/all/notes_6/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_6(res.data);
+      })
+    };
+    //////////////////////////////////////////////
+     const [Info_grp_7, setInfo_grp_7] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_7();
+    }, []);
+    
+    const fetchInfo_grp_7 = () => {
+        http.get('/info/groupe_7/' + etab).then(res => {
+        setInfo_grp_7(res.data);
+      })
+    };
+    
+    const [allnote_7, setAllNote_7] = useState([]);
+    useEffect(() => {
+        fetchAllNote_7();
+    }, []);
+
+    const fetchAllNote_7 = () => {
+        http.get('/all/notes_7/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_7(res.data);
+      })
+    };
+    
+    const [sumallnote_7, setAllSumallnote_7] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_7();
+    }, []);
+
+    const fetchAllSumallnote_7 = () => {
+        http.get('/sum/all/notes_7/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_7(res.data);
+      })
+    };
+    //////////////////////////////////////////////
+       const [Info_grp_8, setInfo_grp_8] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_8();
+    }, []);
+    
+    const fetchInfo_grp_8 = () => {
+        http.get('/info/groupe_8/' + etab).then(res => {
+        setInfo_grp_8(res.data);
+      })
+    };
+    
+    const [allnote_8, setAllNote_8] = useState([]);
+    useEffect(() => {
+        fetchAllNote_8();
+    }, []);
+
+    const fetchAllNote_8 = () => {
+        http.get('/all/notes_8/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_8(res.data);
+      })
+    };
+    
+    const [sumallnote_8, setAllSumallnote_8] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_8();
+    }, []);
+
+    const fetchAllSumallnote_8 = () => {
+        http.get('/sum/all/notes_8/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_8(res.data);
+      })
+    };
+    
+  //////////////////////////////////////////////
+       const [Info_grp_9, setInfo_grp_9] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_9();
+    }, []);
+    
+    const fetchInfo_grp_9 = () => {
+        http.get('/info/groupe_9/' + etab).then(res => {
+        setInfo_grp_9(res.data);
+      })
+    };
+    
+    const [allnote_9, setAllNote_9] = useState([]);
+    useEffect(() => {
+        fetchAllNote_9();
+    }, []);
+
+    const fetchAllNote_9 = () => {
+        http.get('/all/notes_9/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_1(res.data);
+      })
+    };
+    
+    const [sumallnote_9, setAllSumallnote_9] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_9();
+    }, []);
+
+    const fetchAllSumallnote_9 = () => {
+        http.get('/sum/all/notes_9/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_9(res.data);
+      })
+    };
+    //////////////////////////////////////////////
+       const [Info_grp_10, setInfo_grp_10] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_10();
+    }, []);
+    
+    const fetchInfo_grp_10 = () => {
+        http.get('/info/groupe_10/' + etab).then(res => {
+        setInfo_grp_1(res.data);
+      })
+    };
+    
+    const [allnote_10, setAllNote_10] = useState([]);
+    useEffect(() => {
+        fetchAllNote_10();
+    }, []);
+
+    const fetchAllNote_10 = () => {
+        http.get('/all/notes_10/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_10(res.data);
+      })
+    };
+    
+    const [sumallnote_10, setAllSumallnote_10] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_10();
+    }, []);
+
+    const fetchAllSumallnote_10 = () => {
+        http.get('/sum/all/notes_10/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_10(res.data);
+      })
+    };
+    //////////////////////////////////////////////
+       const [Info_grp_11, setInfo_grp_11] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_11();
+    }, []);
+    
+    const fetchInfo_grp_11 = () => {
+        http.get('/info/groupe_11/' + etab).then(res => {
+        setInfo_grp_11(res.data);
+      })
+    };
+    
+    const [allnote_11, setAllNote_11] = useState([]);
+    useEffect(() => {
+        fetchAllNote_11();
+    }, []);
+
+    const fetchAllNote_11 = () => {
+        http.get('/all/notes_11/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_1(res.data);
+      })
+    };
+    
+    const [sumallnote_11, setAllSumallnote_11] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_11();
+    }, []);
+
+    const fetchAllSumallnote_11 = () => {
+        http.get('/sum/all/notes_11/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_11(res.data);
+      })
+    };
+    //////////////////////////////////////////////
+       const [Info_grp_12, setInfo_grp_12] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_12();
+    }, []);
+    
+    const fetchInfo_grp_12 = () => {
+        http.get('/info/groupe_12/' + etab).then(res => {
+        setInfo_grp_1(res.data);
+      })
+    };
+    
+    const [allnote_12, setAllNote_12] = useState([]);
+    useEffect(() => {
+        fetchAllNote_12();
+    }, []);
+
+    const fetchAllNote_12 = () => {
+        http.get('/all/notes_12/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_12(res.data);
+      })
+    };
+    
+    const [sumallnote_12, setAllSumallnote_12] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_12();
+    }, []);
+
+    const fetchAllSumallnote_12 = () => {
+        http.get('/sum/all/notes_12/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_12(res.data);
+      })
+    };
+    //////////////////////////////////////////////
+       const [Info_grp_13, setInfo_grp_13] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_13();
+    }, []);
+    
+    const fetchInfo_grp_13 = () => {
+        http.get('/info/groupe_13/' + etab).then(res => {
+        setInfo_grp_13(res.data);
+      })
+    };
+    
+    const [allnote_13, setAllNote_13] = useState([]);
+    useEffect(() => {
+        fetchAllNote_13();
+    }, []);
+
+    const fetchAllNote_13 = () => {
+        http.get('/all/notes_13/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_13(res.data);
+      })
+    };
+    
+    const [sumallnote_13, setAllSumallnote_13] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_13();
+    }, []);
+
+    const fetchAllSumallnote_13 = () => {
+        http.get('/sum/all/notes_13/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_13(res.data);
+      })
+    };
+    //////////////////////////////////////////////
+       const [Info_grp_14, setInfo_grp_14] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_14();
+    }, []);
+    
+    const fetchInfo_grp_14 = () => {
+        http.get('/info/groupe_14/' + etab).then(res => {
+        setInfo_grp_14(res.data);
+      })
+    };
+    
+    const [allnote_14, setAllNote_14] = useState([]);
+    useEffect(() => {
+        fetchAllNote_14();
+    }, []);
+
+    const fetchAllNote_14 = () => {
+        http.get('/all/notes_14/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_14(res.data);
+      })
+    };
+    
+    const [sumallnote_14, setAllSumallnote_14] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_14();
+    }, []);
+
+    const fetchAllSumallnote_14 = () => {
+        http.get('/sum/all/notes_14/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_14(res.data);
+      })
+    };
+    //////////////////////////////////////////////
+       const [Info_grp_15, setInfo_grp_15] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_15();
+    }, []);
+    
+    const fetchInfo_grp_15 = () => {
+        http.get('/info/groupe_1/' + etab).then(res => {
+        setInfo_grp_15(res.data);
+      })
+    };
+    
+    const [allnote_15, setAllNote_15] = useState([]);
+    useEffect(() => {
+        fetchAllNote_15();
+    }, []);
+
+    const fetchAllNote_15 = () => {
+        http.get('/all/notes_1/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_1(res.data);
+      })
+    };
+    
+    const [sumallnote_15, setAllSumallnote_15] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_15();
+    }, []);
+
+    const fetchAllSumallnote_15 = () => {
+        http.get('/sum/all/notes_15/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_15(res.data);
+      })
+    };
+    //////////////////////////////////////////////
+
+    
    const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
         fetchAllNotes();
@@ -418,6 +859,8 @@ const BulletinByEleve = memo((props) => {
         setAllNotes(res.data);
       })
     };
+
+    
      const getEmojiForNote = (note) => {
     if (note == 10) {
       return '☹️';
@@ -804,9 +1247,8 @@ const BulletinByEleve = memo((props) => {
                                                             <Row>
                                                                 <Col sm="12">
                                                                     <div className="container text-center">
-                                                                        <p> <strong style={{ fontSize: "18px" }}> {info_etab.nom_etablissement} </strong>
-                                                                        
-                                                                            <br/>
+                                                                        <p>{info_etab.nom_etablissement}
+                                                                            <br />
                                                                             <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal>
                                                                         </p>
 
@@ -820,7 +1262,6 @@ const BulletinByEleve = memo((props) => {
                                                         <Col sm="4" lg="4">
                                                             <p className="text-center">REPUBLIC OF CAMEROON <br />
                                                                 Peace - Work - Fatherland <br />
-        
                                                                 MINISTRY OF SECONDARY EDUCATION <br />
 
                                                             </p>
@@ -835,13 +1276,10 @@ const BulletinByEleve = memo((props) => {
 
                                                         </Col>
                                                         <Col sm="4" lg="4">
-                                                            <p style={{ fontSize: "15px" }} className="text-center">
-                                                               Bulletin De Notes {evaluation}
-                                                            </p>
-                                                            <hr />
-                                                                
                                                             <p className="text-center">
-                                                               2022 - 2023
+                                                               Bulletin De Notes {evaluation}
+                                                                <hr />
+                                                                2022 - 2023
                                                             </p>
 
 
@@ -1282,9 +1720,63 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
+                                                                        <th>{sumallnote_1}</th>
+                                                                        <th>{sumcoefnote_1}</th>
+                                                                        <th>{sumfinalnote_1}</th>
+                                                                        <th></th>
 
                                                                     </tr>
                                                                 </thead>
+
+                                                                <tbody>
+                                                                   
+                                                                {allnote_2.map((item, grp_2) => (
+                                                                    <tr key={grp_2}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                      
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_2.intitule_groupe}</th>
+                                                                        <th>{sumallnote_2}</th>
+                                                                        <th>{sumcoefnote_2}</th>
+                                                                        <th>{sumfinalnote_2}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                              <tbody>
+                                                                   
+                                                                {allnote_3.map((item, grp_3) => (
+                                                                    <tr key={grp_3}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                      
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_3.intitule_groupe}</th>
+                                                                        <th>{sumallnote_3}</th>
+                                                                        <th>{sumcoefnote_3}</th>
+                                                                        <th>{sumfinalnote_3}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+
                                                                 <tbody>
 
                                                                     <tr>
@@ -1494,10 +1986,7 @@ const BulletinByEleve = memo((props) => {
                                                                 {allnote_1.map((item, grp_1) => (
                                                                     <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
-                                                                      
                                                                         <td>{item.valeur_note}</td>
-                                                                        <td>{item.coefficient_note}</td>
-                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
@@ -1506,6 +1995,275 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
+                                                                        <th>{sumallnote_1}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+                                                                   
+                                                                {allnote_2.map((item, grp_2) => (
+                                                                    <tr key={grp_2}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td> 
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_2.intitule_groupe}</th>
+                                                                        <th>{sumallnote_2}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                              <tbody>
+                                                                   
+                                                                {allnote_3.map((item, grp_3) => (
+                                                                    <tr key={grp_3}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_3.intitule_groupe}</th>
+                                                                        <th>{sumallnote_3}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_4.map((item, grp_4) => (
+                                                                    <tr key={grp_4}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_4.intitule_groupe}</th>
+                                                                        <th>{sumallnote_4}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_5.map((item, grp_5) => (
+                                                                    <tr key={grp_5}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_5.intitule_groupe}</th>
+                                                                        <th>{sumallnote_5}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_6.map((item, grp_6) => (
+                                                                    <tr key={grp_6}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_6.intitule_groupe}</th>
+                                                                        <th>{sumallnote_6}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                     <tbody>
+                                                                   
+                                                                {allnote_7.map((item, grp_7) => (
+                                                                    <tr key={grp_7}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_7.intitule_groupe}</th>
+                                                                        <th>{sumallnote_7}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                     <tbody>
+                                                                   
+                                                                {allnote_8.map((item, grp_8) => (
+                                                                    <tr key={grp_8}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_8.intitule_groupe}</th>
+                                                                        <th>{sumallnote_8}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_9.map((item, grp_9) => (
+                                                                    <tr key={grp_9}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_9.intitule_groupe}</th>
+                                                                        <th>{sumallnote_9}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                             <tbody>
+                                                                   
+                                                                {allnote_10.map((item, grp_10) => (
+                                                                    <tr key={grp_10}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_10.intitule_groupe}</th>
+                                                                        <th>{sumallnote_10}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                   
+                                                                {allnote_11.map((item, grp_11) => (
+                                                                    <tr key={grp_11}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_11.intitule_groupe}</th>
+                                                                        <th>{sumallnote_11}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                     <tbody>
+                                                                   
+                                                                {allnote_12.map((item, grp_12) => (
+                                                                    <tr key={grp_12}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_12.intitule_groupe}</th>
+                                                                        <th>{sumallnote_12}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                             <tbody>
+                                                                   
+                                                                {allnote_13.map((item, grp_13) => (
+                                                                    <tr key={grp_13}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_13.intitule_groupe}</th>
+                                                                        <th>{sumallnote_13}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_14.map((item, grp_14) => (
+                                                                    <tr key={grp_14}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_14.intitule_groupe}</th>
+                                                                        <th>{sumallnote_14}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                             <tbody>
+                                                                   
+                                                                {allnote_15.map((item, grp_15) => (
+                                                                    <tr key={grp_15}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_15.intitule_groupe}</th>
+                                                                        <th>{sumallnote_15}</th>
+                                                                        <th></th>
 
                                                                     </tr>
                                                                 </thead>
@@ -1941,15 +2699,12 @@ const BulletinByEleve = memo((props) => {
                                                                     <th>Appreciation</th>
                                                                 </tr>
                                                                 </thead>
-                                                           <tbody>
+                                                             <tbody>
                                                                    
                                                                 {allnote_1.map((item, grp_1) => (
                                                                     <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
-                                                                      
                                                                         <td>{item.valeur_note}</td>
-                                                                        <td>{item.coefficient_note}</td>
-                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
@@ -1958,6 +2713,275 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
+                                                                        <th>{sumallnote_1}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+                                                                   
+                                                                {allnote_2.map((item, grp_2) => (
+                                                                    <tr key={grp_2}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td> 
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_2.intitule_groupe}</th>
+                                                                        <th>{sumallnote_2}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                              <tbody>
+                                                                   
+                                                                {allnote_3.map((item, grp_3) => (
+                                                                    <tr key={grp_3}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_3.intitule_groupe}</th>
+                                                                        <th>{sumallnote_3}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_4.map((item, grp_4) => (
+                                                                    <tr key={grp_4}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_4.intitule_groupe}</th>
+                                                                        <th>{sumallnote_4}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_5.map((item, grp_5) => (
+                                                                    <tr key={grp_5}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_5.intitule_groupe}</th>
+                                                                        <th>{sumallnote_5}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_6.map((item, grp_6) => (
+                                                                    <tr key={grp_6}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_6.intitule_groupe}</th>
+                                                                        <th>{sumallnote_6}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                     <tbody>
+                                                                   
+                                                                {allnote_7.map((item, grp_7) => (
+                                                                    <tr key={grp_7}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_7.intitule_groupe}</th>
+                                                                        <th>{sumallnote_7}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                     <tbody>
+                                                                   
+                                                                {allnote_8.map((item, grp_8) => (
+                                                                    <tr key={grp_8}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_8.intitule_groupe}</th>
+                                                                        <th>{sumallnote_8}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_9.map((item, grp_9) => (
+                                                                    <tr key={grp_9}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_9.intitule_groupe}</th>
+                                                                        <th>{sumallnote_9}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                             <tbody>
+                                                                   
+                                                                {allnote_10.map((item, grp_10) => (
+                                                                    <tr key={grp_10}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_10.intitule_groupe}</th>
+                                                                        <th>{sumallnote_10}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                   
+                                                                {allnote_11.map((item, grp_11) => (
+                                                                    <tr key={grp_11}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_11.intitule_groupe}</th>
+                                                                        <th>{sumallnote_11}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                     <tbody>
+                                                                   
+                                                                {allnote_12.map((item, grp_12) => (
+                                                                    <tr key={grp_12}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_12.intitule_groupe}</th>
+                                                                        <th>{sumallnote_12}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                             <tbody>
+                                                                   
+                                                                {allnote_13.map((item, grp_13) => (
+                                                                    <tr key={grp_13}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_13.intitule_groupe}</th>
+                                                                        <th>{sumallnote_13}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_14.map((item, grp_14) => (
+                                                                    <tr key={grp_14}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_14.intitule_groupe}</th>
+                                                                        <th>{sumallnote_14}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                             <tbody>
+                                                                   
+                                                                {allnote_15.map((item, grp_15) => (
+                                                                    <tr key={grp_15}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_15.intitule_groupe}</th>
+                                                                        <th>{sumallnote_15}</th>
+                                                                        <th></th>
 
                                                                     </tr>
                                                                 </thead>
@@ -2170,15 +3194,12 @@ const BulletinByEleve = memo((props) => {
                                                                     <th>Appreciation</th>
                                                                 </tr>
                                                                 </thead>
-                                                            <tbody>
+                                                                <tbody>
                                                                    
                                                                 {allnote_1.map((item, grp_1) => (
                                                                     <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
-                                                                      
                                                                         <td>{item.valeur_note}</td>
-                                                                        <td>{item.coefficient_note}</td>
-                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
@@ -2187,6 +3208,275 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
+                                                                        <th>{sumallnote_1}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+                                                                   
+                                                                {allnote_2.map((item, grp_2) => (
+                                                                    <tr key={grp_2}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td> 
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_2.intitule_groupe}</th>
+                                                                        <th>{sumallnote_2}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                              <tbody>
+                                                                   
+                                                                {allnote_3.map((item, grp_3) => (
+                                                                    <tr key={grp_3}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_3.intitule_groupe}</th>
+                                                                        <th>{sumallnote_3}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_4.map((item, grp_4) => (
+                                                                    <tr key={grp_4}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_4.intitule_groupe}</th>
+                                                                        <th>{sumallnote_4}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_5.map((item, grp_5) => (
+                                                                    <tr key={grp_5}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_5.intitule_groupe}</th>
+                                                                        <th>{sumallnote_5}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_6.map((item, grp_6) => (
+                                                                    <tr key={grp_6}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_6.intitule_groupe}</th>
+                                                                        <th>{sumallnote_6}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                     <tbody>
+                                                                   
+                                                                {allnote_7.map((item, grp_7) => (
+                                                                    <tr key={grp_7}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_7.intitule_groupe}</th>
+                                                                        <th>{sumallnote_7}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                     <tbody>
+                                                                   
+                                                                {allnote_8.map((item, grp_8) => (
+                                                                    <tr key={grp_8}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_8.intitule_groupe}</th>
+                                                                        <th>{sumallnote_8}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_9.map((item, grp_9) => (
+                                                                    <tr key={grp_9}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_9.intitule_groupe}</th>
+                                                                        <th>{sumallnote_9}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                             <tbody>
+                                                                   
+                                                                {allnote_10.map((item, grp_10) => (
+                                                                    <tr key={grp_10}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_10.intitule_groupe}</th>
+                                                                        <th>{sumallnote_10}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                   
+                                                                {allnote_11.map((item, grp_11) => (
+                                                                    <tr key={grp_11}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_11.intitule_groupe}</th>
+                                                                        <th>{sumallnote_11}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                     <tbody>
+                                                                   
+                                                                {allnote_12.map((item, grp_12) => (
+                                                                    <tr key={grp_12}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_12.intitule_groupe}</th>
+                                                                        <th>{sumallnote_12}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                             <tbody>
+                                                                   
+                                                                {allnote_13.map((item, grp_13) => (
+                                                                    <tr key={grp_13}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_13.intitule_groupe}</th>
+                                                                        <th>{sumallnote_13}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_14.map((item, grp_14) => (
+                                                                    <tr key={grp_14}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_14.intitule_groupe}</th>
+                                                                        <th>{sumallnote_14}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                             <tbody>
+                                                                   
+                                                                {allnote_15.map((item, grp_15) => (
+                                                                    <tr key={grp_15}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_15.intitule_groupe}</th>
+                                                                        <th>{sumallnote_15}</th>
+                                                                        <th></th>
 
                                                                     </tr>
                                                                 </thead>
@@ -2856,15 +4146,12 @@ const BulletinByEleve = memo((props) => {
                                                                     <th>/</th>
                                                                 </tr>
                                                             </thead>
-                                                          <tbody>
+                                                             <tbody>
                                                                    
                                                                 {allnote_1.map((item, grp_1) => (
                                                                     <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
-                                                                      
                                                                         <td>{item.valeur_note}</td>
-                                                                        <td>{item.coefficient_note}</td>
-                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
@@ -2873,6 +4160,275 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
+                                                                        <th>{sumallnote_1}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+                                                                   
+                                                                {allnote_2.map((item, grp_2) => (
+                                                                    <tr key={grp_2}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td> 
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_2.intitule_groupe}</th>
+                                                                        <th>{sumallnote_2}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                              <tbody>
+                                                                   
+                                                                {allnote_3.map((item, grp_3) => (
+                                                                    <tr key={grp_3}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_3.intitule_groupe}</th>
+                                                                        <th>{sumallnote_3}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_4.map((item, grp_4) => (
+                                                                    <tr key={grp_4}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_4.intitule_groupe}</th>
+                                                                        <th>{sumallnote_4}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_5.map((item, grp_5) => (
+                                                                    <tr key={grp_5}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_5.intitule_groupe}</th>
+                                                                        <th>{sumallnote_5}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_6.map((item, grp_6) => (
+                                                                    <tr key={grp_6}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_6.intitule_groupe}</th>
+                                                                        <th>{sumallnote_6}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                     <tbody>
+                                                                   
+                                                                {allnote_7.map((item, grp_7) => (
+                                                                    <tr key={grp_7}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_7.intitule_groupe}</th>
+                                                                        <th>{sumallnote_7}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                     <tbody>
+                                                                   
+                                                                {allnote_8.map((item, grp_8) => (
+                                                                    <tr key={grp_8}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_8.intitule_groupe}</th>
+                                                                        <th>{sumallnote_8}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_9.map((item, grp_9) => (
+                                                                    <tr key={grp_9}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_9.intitule_groupe}</th>
+                                                                        <th>{sumallnote_9}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                             <tbody>
+                                                                   
+                                                                {allnote_10.map((item, grp_10) => (
+                                                                    <tr key={grp_10}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_10.intitule_groupe}</th>
+                                                                        <th>{sumallnote_10}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                   
+                                                                {allnote_11.map((item, grp_11) => (
+                                                                    <tr key={grp_11}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_11.intitule_groupe}</th>
+                                                                        <th>{sumallnote_11}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                     <tbody>
+                                                                   
+                                                                {allnote_12.map((item, grp_12) => (
+                                                                    <tr key={grp_12}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_12.intitule_groupe}</th>
+                                                                        <th>{sumallnote_12}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                             <tbody>
+                                                                   
+                                                                {allnote_13.map((item, grp_13) => (
+                                                                    <tr key={grp_13}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_13.intitule_groupe}</th>
+                                                                        <th>{sumallnote_13}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                            <tbody>
+                                                                   
+                                                                {allnote_14.map((item, grp_14) => (
+                                                                    <tr key={grp_14}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_14.intitule_groupe}</th>
+                                                                        <th>{sumallnote_14}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                             <tbody>
+                                                                   
+                                                                {allnote_15.map((item, grp_15) => (
+                                                                    <tr key={grp_15}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{Info_grp_15.intitule_groupe}</th>
+                                                                        <th>{sumallnote_15}</th>
+                                                                        <th></th>
 
                                                                     </tr>
                                                                 </thead>
