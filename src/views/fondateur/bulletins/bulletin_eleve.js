@@ -1247,10 +1247,11 @@ const BulletinByEleve = memo((props) => {
                                                             <Row>
                                                                 <Col sm="12">
                                                                     <div className="container text-center">
-                                                                        <p>{info_etab.nom_etablissement}
-                                                                            <br />
-                                                                            <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal>
-                                                                        </p>
+                                                                         <p> <strong style={{ fontSize: "18px" }}> {info_etab.nom_etablissement} </strong>
+                                                                        
+                                                                        <br/>
+                                                                        <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal>
+                                                                    </p>
 
                                                                     </div>
                                                                 </Col>
@@ -1277,8 +1278,8 @@ const BulletinByEleve = memo((props) => {
                                                         </Col>
                                                         <Col sm="4" lg="4">
                                                             <p className="text-center">
-                                                               Bulletin De Notes {evaluation}
-                                                                <hr />
+                                                              <span style={{ fontSize: "15px" }}> Bulletin De Notes {evaluation}</span>
+                                                                <br/>
                                                                 2022 - 2023
                                                             </p>
 
@@ -1603,10 +1604,11 @@ const BulletinByEleve = memo((props) => {
                                                             <Row>
                                                                 <Col sm="12">
                                                                     <div className="container text-center">
-                                                                        <p>Nom de l'établissement
-                                                                            <br />
-                                                                            <smal>BP: Tel:</smal>
-                                                                        </p>
+                                                                         <p> <strong style={{ fontSize: "18px" }}> {info_etab.nom_etablissement} </strong>
+                                                                        
+                                                                        <br/>
+                                                                        <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal>
+                                                                    </p>
 
                                                                     </div>
                                                                 </Col>
@@ -1632,11 +1634,12 @@ const BulletinByEleve = memo((props) => {
 
                                                         </Col>
                                                         <Col sm="4" lg="4">
-                                                            <p className="text-center">
-                                                               Title :
-                                                                <hr />
+                                                           <p className="text-center">
+                                                              <span style={{ fontSize: "15px" }}> Gradebook - {evaluation}</span>
+                                                                <br/>
                                                                 2022 - 2023
                                                             </p>
+
 
 
                                                         </Col>
