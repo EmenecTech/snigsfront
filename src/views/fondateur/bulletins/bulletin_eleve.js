@@ -275,7 +275,7 @@ const BulletinByEleve = memo((props) => {
 
     const [sumfinalnote_1, setAllSumfinalnote_1] = useState([]);
     useEffect(() => {
-        fetchAllSumcoefnote_1();
+        fetchAllSumfinalnote_1();
     }, []);
 
     const fetchAllSumfinalnote_1 = () => {
@@ -331,7 +331,7 @@ const BulletinByEleve = memo((props) => {
 
     const [sumfinalnote_2, setAllSumfinalnote_2] = useState([]);
     useEffect(() => {
-        fetchAllSumcoefnote_2();
+        fetchAllSumfinalnote_2();
     }, []);
 
     const fetchAllSumfinalnote_2 = () => {
@@ -387,7 +387,7 @@ const BulletinByEleve = memo((props) => {
 
     const [sumfinalnote_3, setAllSumfinalnote_3] = useState([]);
     useEffect(() => {
-        fetchAllSumcoefnote_3();
+        fetchAllSumfinalnote_3();
     }, []);
 
     const fetchAllSumfinalnote_3 = () => {
