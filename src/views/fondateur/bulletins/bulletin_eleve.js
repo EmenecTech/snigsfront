@@ -1207,9 +1207,9 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_2.groupe}</th>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                        <th></th>
+                                                                        <th>{allnote_2.sumnote}</th>
+                                                                        <th>{allnote_2.sumcoef}</th>
+                                                                        <th>{allnote_2.sumfinalnotes}</th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -1231,9 +1231,9 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_3.groupe}</th>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                        <th></th>
+                                                                         <th>{allnote_3.sumnote}</th>
+                                                                        <th>{allnote_3.sumcoef}</th>
+                                                                        <th>{allnote_3.sumfinalnotes}</th>
                                                                         <th></th>
 
                                                                     </tr>
