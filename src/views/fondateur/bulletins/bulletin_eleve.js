@@ -806,8 +806,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <div className="container text-center">
                                                                         <p style={{ fontSize: "18px" }}> <strong> {info_etab.nom_etablissement} </strong>
                                                                          </p>
-                                                                         <p>
-                                                                           
+                                                                         <p className="text-center">
                                                                             <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal>
                                                                         </p>
 
@@ -841,7 +840,7 @@ const BulletinByEleve = memo((props) => {
                                                             </p>
                                                             <hr />
                                                                 
-                                                            <p>
+                                                            <p className="text-center">
                                                                2022 - 2023
                                                             </p>
 
