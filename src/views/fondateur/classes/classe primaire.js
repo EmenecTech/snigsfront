@@ -120,6 +120,8 @@ const PrimClasse = () => {
     http.get("/get_groupes_for_classe/" + etab + "/" + classe).then((res) => {
       setgroupesclasse(res.data);
     });
+
+      console.log(groupesclasse.id);
   };
 
 
