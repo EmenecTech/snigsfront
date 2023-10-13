@@ -154,85 +154,18 @@ const ParentsBulletinNotes = memo((props) => {
       imageRef.current = null;
     };
   }, [fetchProductImage]);
-  const [matiereslevel, setmatiereslevel] = useState([]);
-  useEffect(() => {
-    fetchAllmatiereslevel();
-  }, []);
+ 
 
-  const fetchAllmatiereslevel = () => {
-    http
-      .get("/get_matieres_niveau_planning/" + niveau + "/" + etab)
-      .then((res) => {
-        setmatiereslevel(res.data);
-      });
-  };
-
-  const [notesfg, setNotesfg] = useState([]);
-  useEffect(() => {
-    fetchAllNotesfg();
-  }, []);
-
-  const fetchAllNotesfg = () => {
-    http
-      .get(
-        "/notes_fristgroupe/" +
-          etab +
-          "/" +
-          classe +
-          "/" +
-          evaluation +
-          "/" +
-          userid
-      )
-      .then((res) => {
-        setNotesfg(res.data);
-      });
-  };
-
-  const [notessg, setNotessg] = useState([]);
-  useEffect(() => {
-    fetchAllNotessg();
-  }, []);
-
-  const fetchAllNotessg = () => {
-    http
-      .get(
-        "/notes_secondgroupe/" +
-          etab +
-          "/" +
-          classe +
-          "/" +
-          evaluation +
-          "/" +
-          userid
-      )
-      .then((res) => {
-        setNotessg(res.data);
-      });
-  };
-
-  const [notestg, setNotestg] = useState([]);
-  useEffect(() => {
-    fetchAllNotestg();
-  }, []);
-
-  const fetchAllNotestg = () => {
-    http
-      .get(
-        "/notes_thirdgroupe/" +
-          etab +
-          "/" +
-          classe +
-          "/" +
-          evaluation +
-          "/" +
-          userid
-      )
-      .then((res) => {
-        setNotestg(res.data);
-      });
-  };
-   const [enseign, setenseign] = useState();
+   const [matiereslevel, setmatiereslevel] = useState([]);
+    useEffect(() => {
+        fetchAllmatiereslevel();
+    }, []);
+    const fetchAllmatiereslevel = () => {
+        http.get('/get_matieres_niveau_planning/' + niveau + '/' + etab).then(res => {
+            setmatiereslevel(res.data);
+        })
+    }
+    const [enseign, setenseign] = useState();
     useEffect(() => {
        fetchAllenseign();
     }, []);
@@ -242,191 +175,168 @@ const ParentsBulletinNotes = memo((props) => {
              setenseign(res.data);
         })
     }
-    console.log(enseign);
-
-  const [allind, setAllInd] = useState([]);
+    const [classes, setclasses] = useState([]);
     useEffect(() => {
-        fetchAllInd();  
-    }, []); 
+        fetchAllclasses();
+    }, []);
 
-    const fetchAllInd = () => {
-        http.get('/get_ind_for_mat/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd(res.data);
-        }); 
+    const fetchAllclasses = () => {
+        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
+            setclasses(res.data);
+            
+        })
+    }
+
+     const [elevesinclass, setelevesinclass] = useState();
+    useEffect(() => {
+       fetchAllelevesinclass();
+    }, []);
+
+    const fetchAllelevesinclass = () => {
+        http.get('/get_eleve_in_class/' + etab + '/' + classe + '/' + userid).then(res => {
+             setelevesinclass(res.data);
+        })
     };
 
-    const [allind1, setAllInd1] = useState([]);
+      /////////////////////////////////////////////////////
+    const [Info_grp_1, setInfo_grp_1] = useState([]);
     useEffect(() => {
-        fetchAllInd1();  
-    }, []); 
+        fetchInfo_grp_1();
+    }, []);
+    
+    const fetchInfo_grp_1 = () => {
+        http.get('/info/groupe_1/' + etab).then(res => {
+        setInfo_grp_1(res.data);
+      })
+    };
+     console.log(Info_grp_1);
+    
+    
+    const [allnote_1, setAllNote_1] = useState([]);
+    useEffect(() => {
+        fetchAllNote_1();
+    }, []);
 
-    const fetchAllInd1 = () => {
-        http.get('/get_ind_for_mat1/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd1(res.data);
-        }); 
+    const fetchAllNote_1 = () => {
+        http.get('/all/notes_1/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_1(res.data);
+      })
+    };
+    
+    const [sumallnote_1, setAllSumallnote_1] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_1();
+    }, []);
+
+    const fetchAllSumallnote_1 = () => {
+        http.get('/sum/all/notes_1/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_1(res.data);
+      })
     };
 
-    const [allind2, setAllInd2] = useState([]);
+    
+    //////////////////////////////////////////////
+    const [Info_grp_2, setInfo_grp_2] = useState([]);
     useEffect(() => {
-        fetchAllInd2();  
-    }, []); 
-
-    const fetchAllInd2 = () => {
-        http.get('/get_ind_for_mat2/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd2(res.data);
-        }); 
+        fetchInfo_grp_2();
+    }, []);
+     console.log(Info_grp_2);
+    const fetchInfo_grp_2 = () => {
+        http.get('/info/groupe_2/' + etab ).then(res => {
+        setInfo_grp_2(res.data);
+      })
     };
-
-
-    const [allind3, setAllInd3] = useState([]);
+    const [allnote_2, setAllNote_2] = useState([]);
     useEffect(() => {
-        fetchAllInd3();  
-    }, []); 
+        fetchAllNote_2();
+    }, []);
 
-    const fetchAllInd3 = () => {
-        http.get('/get_ind_for_mat3/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd3(res.data);
-        }); 
+    const fetchAllNote_2 = () => {
+        http.get('/all/notes_2/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_2(res.data);
+      })
     };
+    
+    const [sumallnote_2, setAllSumallnote_2] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_2();
+    }, []);
 
+    const fetchAllSumallnote_2= () => {
+        http.get('/sum/all/notes_2/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_2(res.data);
+      })
+    };
+        
+    //////////////////////////////////////////////
+    const [Info_grp_3, setInfo_grp_3] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_3();
+    }, []);
+     console.log(Info_grp_3);
+    const fetchInfo_grp_3 = () => {
+        http.get('/info/groupe_3/' + etab).then(res => {
+        setInfo_grp_3(res.data);
+      })
+    };
+    const [allnote_3, setAllNote_3] = useState([]);
+    useEffect(() => {
+        fetchAllNote_3();
+    }, []);
 
+    const fetchAllNote_3 = () => {
+        http.get('/all/notes_3/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_3(res.data);
+      })
+    };
+    
+    const [sumallnote_3, setAllSumallnote_3] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_3();
+    }, []);
+
+    const fetchAllSumallnote_3 = () => {
+        http.get('/sum/all/notes_3/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_3(res.data);
+      })
+    };
+    ///////////////////////////////////////////////
   
-    
-
-
-    const [allind4, setAllInd4] = useState([]);
+    const [Info_grp_4, setInfo_grp_4] = useState([]);
     useEffect(() => {
-        fetchAllInd4();  
-    }, []); 
-
-    const fetchAllInd4 = () => {
-        http.get('/get_ind_for_mat4/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd4(res.data);
-        }); 
+        fetchInfo_grp_4();
+    }, []);
+     console.log(Info_grp_4);
+    const fetchInfo_grp_4 = () => {
+        http.get('/info/groupe_4/' + etab).then(res => {
+        setInfo_grp_3(res.data);
+      })
     };
-
-    
-    const [allind5, setAllInd5] = useState([]);
+    const [allnote_4, setAllNote_4] = useState([]);
     useEffect(() => {
-        fetchAllInd5();  
-    }, []); 
+        fetchAllNote_4();
+    }, []);
 
-    const fetchAllInd5 = () => {
-        http.get('/get_ind_for_mat5/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd5(res.data);
-        }); 
-    };
-
-    
-    const [allind6, setAllInd6] = useState([]);
-    useEffect(() => {
-        fetchAllInd6();  
-    }, []); 
-
-    const fetchAllInd6 = () => {
-        http.get('/get_ind_for_mat6/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd6(res.data);
-        }); 
-    };
-
-      const [allind7, setAllInd7] = useState([]);
-    useEffect(() => {
-        fetchAllInd7();  
-    }, []); 
-
-    const fetchAllInd7 = () => {
-        http.get('/get_ind_for_mat7/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd7(res.data);
-        }); 
-    };
-
-    const [allind8, setAllInd8] = useState([]);
-    useEffect(() => {
-        fetchAllInd8();  
-    }, []); 
-
-    const fetchAllInd8 = () => {
-        http.get('/get_ind_for_mat8/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd8(res.data);
-        }); 
+    const fetchAllNote_4 = () => {
+        http.get('/all/notes_4/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_3(res.data);
+      })
     };
     
-     const [allind9, setAllInd9] = useState([]);
+    const [sumallnote_4, setAllSumallnote_4] = useState([]);
     useEffect(() => {
-        fetchAllInd9();  
-    }, []); 
+        fetchAllSumallnote_4();
+    }, []);
 
-    const fetchAllInd9 = () => {
-        http.get('/get_ind_for_mat9/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd9(res.data);
-        }); 
+    const fetchAllSumallnote_4 = () => {
+        http.get('/sum/all/notes_4/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_4(res.data);
+      })
     };
+    /////////////////////////////////////
 
-    const [allind10, setAllInd10] = useState([]);
-    useEffect(() => {
-        fetchAllInd10();  
-    }, []); 
 
-    const fetchAllInd10 = () => {
-        http.get('/get_ind_for_mat10/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd10(res.data);
-        }); 
-    };
-    
-    const [allind11, setAllInd11] = useState([]);
-    useEffect(() => {
-        fetchAllInd11();  
-    }, []); 
 
-    const fetchAllInd11 = () => {
-        http.get('/get_ind_for_mat11/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd11(res.data);
-        }); 
-    };
-
-      const [allind12, setAllInd12] = useState([]);
-    useEffect(() => {
-        fetchAllInd12();  
-    }, []); 
-
-    const fetchAllInd12 = () => {
-        http.get('/get_ind_for_mat12/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd12(res.data);
-        }); 
-    };
-
-        const [allind13, setAllInd13] = useState([]);
-    useEffect(() => {
-        fetchAllInd12();  
-    }, []); 
-
-    const fetchAllInd13 = () => {
-        http.get('/get_ind_for_mat13/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd13(res.data);
-        }); 
-    };
-
-        const [allind14, setAllInd14] = useState([]);
-    useEffect(() => {
-        fetchAllInd14();  
-    }, []); 
-
-    const fetchAllInd14 = () => {
-        http.get('/get_ind_for_mat14/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd14(res.data);
-        }); 
-    };
-
-    const [allind15, setAllInd15] = useState([]);
-    useEffect(() => {
-        fetchAllInd15();  
-    }, []); 
-
-    const fetchAllInd15 = () => {
-        http.get('/get_ind_for_mat15/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd15(res.data);
-        }); 
-    };
     
    const [allnotese, setAllNotese] = useState([]);
     useEffect(() => {
@@ -459,8 +369,7 @@ const ParentsBulletinNotes = memo((props) => {
         setAllNotespfe(res.data);
       })
     };
-
-    
+   
     const [allnotespae, setAllNotespae] = useState([]);
     useEffect(() => {
         fetchAllNotespae();
@@ -471,356 +380,65 @@ const ParentsBulletinNotes = memo((props) => {
         setAllNotespae(res.data);
       })
     };
-    
-   const [allnotessfe, setAllNotessfe] = useState([]);
+
+    ///////////////////////////////////////////Sommes
+
+     const [sumnotes, setsumnotes] = useState([]);
     useEffect(() => {
-        fetchAllNotessfe();
+        fetchAllsumnotes();
     }, []);
 
-    const fetchAllNotessfe = () => {
-        http.get('/all_notes_sfe/' + etab + '/' + classe + "/" + evaluation + '/Matières Littéraires/' + userid).then(res => {
-        setAllNotessfe(res.data);
-      })
-    };
+    const fetchAllsumnotes = () => {
+        http.get('/sum/of/notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setsumnotes(res.data);
 
-      const [allnotessfe1, setAllNotessfe1] = useState([]);
-    useEffect(() => {
-        fetchAllNotessfe1();
-    }, []);
-
-    const fetchAllNotessfe1 = () => {
-        http.get('/all_notes_sfe1/' + etab + '/' + classe + "/" + evaluation + '/Matières Scientiques/' + userid).then(res => {
-        setAllNotessfe1(res.data);
-      })
-    };
-
-      const [allnotessfe2, setAllNotessfe2] = useState([]);
-    useEffect(() => {
-        fetchAllNotessfe2();
-    }, []);
-
-    const fetchAllNotessfe2 = () => {
-        http.get('/all_notes_sfe2/' + etab + '/' + classe + "/" + evaluation + '/Matières Complémentaires/' + userid).then(res => {
-        setAllNotessfe2(res.data);
-      })
-    };
-  
-   const [classes, setclasses] = useState([]);
-    useEffect(() => {
-        fetchAllclasses();
-    }, []);
-
-    const fetchAllclasses = () => {
-        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
-            setclasses(res.data);
-            console.log(res.data);
-            console.log(classes);
         })
     }
 
-    
+    const [sumcoef, setsumcoef] = useState([]);
+    useEffect(() => {
+        fetchAllsumcoef();
+    }, []);
 
-  const [sumnotes, setsumnotes] = useState([]);
-  useEffect(() => {
-    fetchAllsumnotes();
-  }, []);
+    const fetchAllsumcoef = () => {
+        http.get('/sum/of/coef/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setsumcoef(res.data);
 
-  const fetchAllsumnotes = () => {
-    http
-      .get(
-        "/sum/of/notes/" + etab + "/" + classe + "/" + evaluation + "/" + userid
-      )
-      .then((res) => {
-        setsumnotes(res.data);
-      });
-  };
-  const [sumcoef, setsumcoef] = useState([]);
-  useEffect(() => {
-    fetchAllsumcoef();
-  }, []);
-
-  const fetchAllsumcoef = () => {
-    http
-      .get(
-        "/sum/of/coef/" + etab + "/" + classe + "/" + evaluation + "/" + userid
-      )
-      .then((res) => {
-        setsumcoef(res.data);
-      });
-  };
-  const [sumnotesfinale, setsumnotesfinale] = useState([]);
-  useEffect(() => {
-    fetchAllsumnotesfinale();
-  }, []);
-
-  const fetchAllsumnotesfinale = () => {
-    http
-      .get(
-        "/sum/of/final/notes/" +
-          etab +
-          "/" +
-          classe +
-          "/" +
-          evaluation +
-          "/" +
-          userid
-      )
-      .then((res) => {
-        setsumnotesfinale(res.data);
-      });
-  };
-  const [moyenneleve, setmoyenneleve] = useState([]);
-  useEffect(() => {
-    fetchAllmoyenneleve();
-  }, []);
-
-  const fetchAllmoyenneleve = () => {
-    http
-      .get(
-        "/moyenne/eleve/" +
-          etab +
-          "/" +
-          classe +
-          "/" +
-          evaluation +
-          "/" +
-          userid
-      )
-      .then((res) => {
-        setmoyenneleve(res.data);
-      });
-  };
-
-  console.log(sumnotes);
-
-  useSelector(SettingSelector.theme_color);
-
-  const getVariableColor = () => {
-    let prefix =
-      getComputedStyle(document.body).getPropertyValue("--prefix") || "bs-";
-    if (prefix) {
-      prefix = prefix.trim();
+        })
     }
-    const color1 = getComputedStyle(document.body).getPropertyValue(
-      `--${prefix}primary`
-    );
-    const color2 = getComputedStyle(document.body).getPropertyValue(
-      `--${prefix}info`
-    );
-    const color3 = getComputedStyle(document.body).getPropertyValue(
-      `--${prefix}primary-tint-20`
-    );
-    const color4 = getComputedStyle(document.body).getPropertyValue(
-      `--${prefix}warning`
-    );
-    return {
-      primary: color1.trim(),
-      info: color2.trim(),
-      warning: color4.trim(),
-      primary_light: color3.trim(),
-    };
-  };
-  const variableColors = getVariableColor();
+    const [sumnotesfinale, setsumnotesfinale] = useState([]);
+    useEffect(() => {
+        fetchAllsumnotesfinale();
+    }, []);
 
-  const colors = [variableColors.primary, variableColors.info];
-  useEffect(() => {
-    return () => colors;
-  });
+    const fetchAllsumnotesfinale = () => {
+        http.get('/sum/of/final/notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setsumnotesfinale(res.data);
 
-  useEffect(() => {
-    AOS.init({
-      startEvent: "DOMContentLoaded",
-      disable: function () {
-        var maxWidth = 996;
-        return window.innerWidth < maxWidth;
-      },
-      throttleDelay: 10,
-      once: true,
-      duration: 700,
-      offset: 10,
-    });
-  });
-  const chart1 = {
-    options: {
-      chart: {
-        fontFamily:
-          '"Inter", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-        toolbar: {
-          show: false,
-        },
-        sparkline: {
-          enabled: false,
-        },
-      },
-      colors: colors,
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        curve: "smooth",
-        width: 3,
-      },
-      yaxis: {
-        show: true,
-        labels: {
-          show: true,
-          minWidth: 19,
-          maxWidth: 19,
-          style: {
-            colors: "#8A92A6",
-          },
-          offsetX: -5,
-        },
-      },
-      legend: {
-        show: false,
-      },
-      xaxis: {
-        labels: {
-          minHeight: 22,
-          maxHeight: 22,
-          show: true,
-          style: {
-            colors: "#8A92A6",
-          },
-        },
-        lines: {
-          show: false, //or just here to disable only x axis grids
-        },
-        categories: ["Jan", "Feb", "Mar", "Apr", "Jun", "Jul", "Aug"],
-      },
-      grid: {
-        show: false,
-      },
-      fill: {
-        type: "gradient",
-        gradient: {
-          shade: "dark",
-          type: "vertical",
-          shadeIntensity: 0,
-          gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
-          inverseColors: true,
-          opacityFrom: 0.4,
-          opacityTo: 0.1,
-          stops: [0, 50, 80],
-          colors: colors,
-        },
-      },
-      tooltip: {
-        enabled: true,
-      },
-    },
-    series: [
-      {
-        name: "total",
-        data: [94, 80, 94, 80, 94, 80, 94],
-      },
-      {
-        name: "pipline",
-        data: [72, 60, 84, 60, 74, 60, 78],
-      },
-    ],
-  };
+        })
+    }
+    const [moyenneleve, setmoyenneleve] = useState([]);
+    useEffect(() => {
+        fetchAllmoyenneleve();
+    }, []);
 
-  //chart2
-  const chart2 = {
-    options: {
-      colors: colors,
-      plotOptions: {
-        radialBar: {
-          hollow: {
-            margin: 10,
-            size: "50%",
-          },
-          track: {
-            margin: 10,
-            strokeWidth: "50%",
-          },
-          dataLabels: {
-            show: false,
-          },
-        },
-      },
-      labels: ["Apples", "Oranges"],
-    },
-    series: [55, 75],
-  };
-  const chart3 = {
-    options: {
-      chart: {
-        stacked: true,
-        toolbar: {
-          show: false,
-        },
-      },
-      colors: colors,
-      plotOptions: {
-        bar: {
-          horizontal: false,
-          columnWidth: "28%",
-          endingShape: "rounded",
-          borderRadius: 5,
-        },
-      },
-      legend: {
-        show: false,
-      },
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        show: true,
-        width: 2,
-        colors: ["transparent"],
-      },
-      xaxis: {
-        categories: ["S", "M", "T", "W", "T", "F", "S", "M", "T", "W"],
-        labels: {
-          minHeight: 20,
-          maxHeight: 20,
-          style: {
-            colors: "#8A92A6",
-          },
-        },
-      },
-      yaxis: {
-        title: {
-          text: "",
-        },
-        labels: {
-          minWidth: 19,
-          maxWidth: 19,
-          style: {
-            colors: "#8A92A6",
-          },
-        },
-      },
-      fill: {
-        opacity: 1,
-      },
-      tooltip: {
-        y: {
-          formatter: function (val) {
-            return "$ " + val + " thousands";
-          },
-        },
-      },
-    },
-    series: [
-      {
-        name: "Successful deals",
-        data: [30, 50, 35, 60, 40, 60, 60, 30, 50, 35],
-      },
-      {
-        name: "Failed deals",
-        data: [40, 50, 55, 50, 30, 80, 30, 40, 50, 55],
-      },
-    ],
-  };
+    const fetchAllmoyenneleve = () => {
+        http.get('/moyenne/eleve/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setmoyenneleve(res.data);
 
-  return (
-    <Fragment>
-     {classes.cycle_niveau === 'Secondaire' || classes.cycle_niveau === 'Secondary' ? <div>
+        })
+    }
+   ///////////////////////////////////////////////
+
+    
+ 
+        
+    useSelector(SettingSelector.theme_color);
+
+    return (
+
+     <Fragment>
+        {classes.cycle_niveau === 'Secondaire' || classes.cycle_niveau === 'Secondary' ? <div>
   
    {classes.section_niveau === 'Francophone' ? <div>
 
@@ -931,74 +549,24 @@ const ParentsBulletinNotes = memo((props) => {
 
                                                     </Row>
                                                     <Row>
-                                                        <Col sm="5" lg="5">
-                                                            <Row style={{ fontSize: "10px" }}>
-                                                                <Col sm="6" lg="6">
-                                                                    <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0" >Classe: {user.other_in_user}</p>
-                                                                        <p>Class</p>
-                                                                    </div>
-
-                                                                </Col>
-                                                                <Col sm="6" lg="6">
-                                                                    <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">Effectif:</p>
-                                                                        <p>Number</p>
-                                                                    </div>
-                                                                </Col>
-
-                                                            </Row>
-
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom et Prénom: {user.nom} {user.prenom}</p>
-                                                                <p>Name and Surname</p>
-                                                            </div>
-
-                                                            <div className="mt-1">
-                                                                <Row>
-                                                                    <Col sm="6" lg="6">
-                                                                        <div className="mt-1">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-1">Né(e) le: {user.date_naissance}</p>
-                                                                            <p>Born on</p>
-                                                                        </div>
-
-                                                                    </Col>
-                                                                    <Col sm="6" lg="6">
-                                                                        <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">A: {user.lieu_naissance}</p>
-                                                                            <p>AT</p>
-                                                                        </div>
-                                                                    </Col>
-
-                                                                </Row>
-                                                            </div>
-                                                            <div className="mt-1">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-1">Téléphone du parent ou tuteur:</p>
-                                                                <p>Parent's/guardian's Address</p>
-                                                            </div>
-
-                                                        </Col>
-                                                        <Col sm="5" lg="5">
-
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">N° Matricule:</p>
-                                                                <p>Registration N°</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: {classe} </p>
-                                                                <p>Repeater</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Sexe: {user.sexe}</p>
-                                                                <p>Sex</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Professeur principal:</p>
-                                                                <p>Class Master/Mistress</p>
-                                                            </div>
-
-                                                        </Col>
-                                                        <Col sm="2" lg="2">
+                                               <Col sm="12" lg="12">
+                                                    <Row style={{ fontSize: "10px" }}>
+                                                      <Col sm="4" lg="4">
+                                                        <div className="mt-2">
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass} </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Sexe : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Matricule : </p>
+                                                        </div>
+                                                      </Col>
+                                                      <Col sm="4" lg="4">
+                                                        <div className="mt-2">
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Classe : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal :</p>
+                                                        </div>
+                                                      </Col>
+                                                            <Col sm="4" lg="4">
                                                             <div className="bd-example">
                                                                 <figure className="figure">
                                                                     <Image
@@ -1011,8 +579,9 @@ const ParentsBulletinNotes = memo((props) => {
                                                             </div>
 
                                                         </Col>
-
                                                     </Row>
+                                                  </Col>
+                                                </Row>
                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
                                                             <Table
@@ -1028,7 +597,7 @@ const ParentsBulletinNotes = memo((props) => {
                                                                         <th><p>
                                                                             Disciplines 
                                                                         </p></th>
-                                                                       
+                                                                        
                                                                         <th>Note</th>
                                                                         <th>Coef</th>
                                                                         <th>NxC</th>
@@ -1038,10 +607,10 @@ const ParentsBulletinNotes = memo((props) => {
                                                                 </thead>
                                                             <tbody>
                                                                    
-                                                                {allnotessfe.map((item, sf) => (
-                                                                    <tr key={sf}>
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
-                                                                  
+                                                                      
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
@@ -1052,16 +621,17 @@ const ParentsBulletinNotes = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind.intitule_groupe}</th>
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                 <tbody>
+
+                                                                <tbody>
                                                                    
-                                                                {allnotessfe1.map((item, sf1) => (
-                                                                    <tr key={sf1}>  
+                                                                {allnote_2.map((item, grp_2) => (
+                                                                    <tr key={grp_2}>
                                                                         <td>{item.matiere_note}</td>
-                                                                     
+                                                                      
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
@@ -1072,16 +642,16 @@ const ParentsBulletinNotes = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind1.intitule_groupe}</th>
+                                                                        <th>{Info_grp_2.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                 <tbody>
+                                                              <tbody>
                                                                    
-                                                                {allnotessfe2.map((item, sf2) => (
-                                                                    <tr key={sf2}>
+                                                                {allnote_3.map((item, grp_3) => (
+                                                                    <tr key={grp_3}>
                                                                         <td>{item.matiere_note}</td>
-                                                                       
+                                                                      
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
@@ -1092,7 +662,7 @@ const ParentsBulletinNotes = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind2.intitule_groupe}</th>
+                                                                        <th>{Info_grp_3.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
@@ -1101,7 +671,7 @@ const ParentsBulletinNotes = memo((props) => {
 
                                                                     <tr>
                                                                        <td>RECAPITULATIFS</td>
-                                                                        <td></td>
+                                                                       
                                                                         <td>{sumnotes}</td>
                                                                         <td>{sumcoef}</td>
                                                                         <td>{sumnotesfinale}</td>
@@ -1323,74 +893,24 @@ const ParentsBulletinNotes = memo((props) => {
 
                                                     </Row>
                                                     <Row>
-                                                        <Col sm="5" lg="5">
-                                                            <Row style={{ fontSize: "10px" }}>
-                                                                <Col sm="6" lg="6">
-                                                                    <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0" >Classe: {user.other_in_user}</p>
-                                                                        <p>Class</p>
-                                                                    </div>
-
-                                                                </Col>
-                                                                <Col sm="6" lg="6">
-                                                                    <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">Effectif:</p>
-                                                                        <p>Number</p>
-                                                                    </div>
-                                                                </Col>
-
-                                                            </Row>
-
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom et Prénom: {user.nom} {user.prenom}</p>
-                                                                <p>Name and Surname</p>
-                                                            </div>
-
-                                                            <div className="mt-1">
-                                                                <Row>
-                                                                    <Col sm="6" lg="6">
-                                                                        <div className="mt-1">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-1">Né(e) le: {user.date_naissance}</p>
-                                                                            <p>Born on</p>
-                                                                        </div>
-
-                                                                    </Col>
-                                                                    <Col sm="6" lg="6">
-                                                                        <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">A: {user.lieu_naissance}</p>
-                                                                            <p>AT</p>
-                                                                        </div>
-                                                                    </Col>
-
-                                                                </Row>
-                                                            </div>
-                                                            <div className="mt-1">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-1">Téléphone du parent ou tuteur:</p>
-                                                                <p>Parent's/guardian's Address</p>
-                                                            </div>
-
-                                                        </Col>
-                                                        <Col sm="5" lg="5">
-
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">N° Matricule:</p>
-                                                                <p>Registration N°</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: {classe} </p>
-                                                                <p>Repeater</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Sexe: {user.sexe}</p>
-                                                                <p>Sex</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Professeur principal:</p>
-                                                                <p>Class Master/Mistress</p>
-                                                            </div>
-
-                                                        </Col>
-                                                        <Col sm="2" lg="2">
+                                               <Col sm="12" lg="12">
+                                                    <Row style={{ fontSize: "10px" }}>
+                                                      <Col sm="4" lg="4">
+                                                        <div className="mt-2">
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass} </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Sexe : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Matricule : </p>
+                                                        </div>
+                                                      </Col>
+                                                      <Col sm="4" lg="4">
+                                                        <div className="mt-2">
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Classe : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal :</p>
+                                                        </div>
+                                                      </Col>
+                                                            <Col sm="4" lg="4">
                                                             <div className="bd-example">
                                                                 <figure className="figure">
                                                                     <Image
@@ -1403,8 +923,9 @@ const ParentsBulletinNotes = memo((props) => {
                                                             </div>
 
                                                         </Col>
-
                                                     </Row>
+                                                  </Col>
+                                                </Row>
                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
                                                             <Table
@@ -1420,7 +941,7 @@ const ParentsBulletinNotes = memo((props) => {
                                                                         <th><p>
                                                                             Disciplines 
                                                                         </p></th>
-                                                                        <th>Subjects</th>
+                                                                    
                                                                         <th>Note</th>
                                                                         <th>Cote</th>
                                                                         <th>NxC</th>
@@ -1428,11 +949,12 @@ const ParentsBulletinNotes = memo((props) => {
                                                                         <th>Appreciation</th>
                                                                     </tr>
                                                                 </thead>
-                                                            <tbody>
-                                                                {allnotessfe.map((item, sf) => (
-                                                                    <tr key={sf}>
-                                                                        <td>{item.groupe_cm}</td>
-                                                                        <td>{item.matiere_note}( {item.nom} {item.prenom} )</td>
+                                                         <tbody>
+                                                                   
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                      
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
@@ -1440,12 +962,18 @@ const ParentsBulletinNotes = memo((props) => {
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
+                                                               <thead>
+                                                                    <tr>
 
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
+
+                                                                    </tr>
+                                                                </thead>
                                                                 <tbody>
 
                                                                     <tr>
                                                                        <td>SUMMARY</td>
-                                                                        <td></td>
+                                                                       
                                                                         <td>{sumnotes}</td>
                                                                         <td>{sumcoef}</td>
                                                                         <td>{sumnotesfinale}</td>
@@ -1619,7 +1147,7 @@ const ParentsBulletinNotes = memo((props) => {
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom :{elevesinclass}  </strong> </p>
 
                                                             </div>
 
@@ -1641,23 +1169,30 @@ const ParentsBulletinNotes = memo((props) => {
                                                                  <thead>
                                                                     <tr>
                                                                         <th><p>Disciplines</p></th>
-                                                                        <th>Matières</th>
                                                                         <th>Notes</th>
                                                                         <th>Appréciation</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    {allnotespfe.map((item, pf) => (
-                                                                        <tr key={pf}>
-                                                                            <td>{item.groupe_cm}</td>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
-                                                                        </tr>
-                                                                    ))}
-                                                                </tbody>
+                                                                   
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                      
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
 
-                                                          
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
+
+                                                                    </tr>
+                                                                </thead>
                                                                 <tbody> 
 
                                                                     <tr>
@@ -1836,7 +1371,7 @@ const ParentsBulletinNotes = memo((props) => {
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {elevesinclass} </strong> </p>
 
                                                             </div>
 
@@ -2063,7 +1598,7 @@ const ParentsBulletinNotes = memo((props) => {
                                                                 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : {elevesinclass} </strong> </p>
 
                                                             </div>
 
@@ -2086,22 +1621,30 @@ const ParentsBulletinNotes = memo((props) => {
                                                                    <tr>
                                                                   
                                                                     <th>Disciplines</th>
-                                                                    <th>Subjects</th>
-                                                                    <th>Mark</th>
+                                                                     <th>Mark</th>
                                                                     <th>Appreciation</th>
                                                                 </tr>
                                                                 </thead>
-                                                            <tbody>
-                                                                {allnotespae.map((item, pa) => (
-                                                                    <tr key={pa}>
-                                                                        <td>{item.groupe_cm}</td>
+                                                           <tbody>
+                                                                   
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
+                                                                      
                                                                         <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
+                                                               <thead>
+                                                                    <tr>
 
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
+
+                                                                    </tr>
+                                                                </thead>
                                                                 <tbody>
 
                                                                     <tr>
@@ -2283,7 +1826,7 @@ const ParentsBulletinNotes = memo((props) => {
                                                                 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :{elevesinclass}  </strong> </p>
 
                                                             </div>
 
@@ -2306,22 +1849,31 @@ const ParentsBulletinNotes = memo((props) => {
                                                                    <tr>
                                                                   
                                                                     <th>Disciplines</th>
-                                                                    <th>Subjects</th>
+                                                                   
                                                                     <th>Mark</th>
                                                                     <th>Appreciation</th>
                                                                 </tr>
                                                                 </thead>
                                                             <tbody>
-                                                                {allnotespae.map((item, pa) => (
-                                                                    <tr key={pa}>
-                                                                        <td>{item.groupe_cm}</td>
+                                                                   
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
+                                                                      
                                                                         <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
+                                                               <thead>
+                                                                    <tr>
 
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
+
+                                                                    </tr>
+                                                                </thead>
                                                                 <tbody>
 
                                                                     <tr>
@@ -2509,7 +2061,7 @@ const ParentsBulletinNotes = memo((props) => {
                                                                 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : {elevesinclass} </strong> </p>
 
                                                             </div>
 
@@ -2729,7 +2281,7 @@ const ParentsBulletinNotes = memo((props) => {
                                                                 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : {elevesinclass} </strong> </p>
 
                                                             </div>
 
@@ -2960,7 +2512,7 @@ const ParentsBulletinNotes = memo((props) => {
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {allind.intitule_groupe} </strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {elevesinclass}  </strong> </p>
 
                                                             </div>
 
@@ -2982,24 +2534,32 @@ const ParentsBulletinNotes = memo((props) => {
                                                                 <thead>
                                                                 <tr>
                                                                     <th><p>Compétences</p></th>
-                                                                    <th>Matières</th>
+                                                                  
                                                                     <th>Note</th>
                                                                     <th>Appréciation</th>
                                                                     <th>/</th>
                                                                 </tr>
                                                             </thead>
-                                                            <tbody>
-                                                                {allnotese.map((item, index) => (
-                                                                    <tr key={index}>
-                                                                        <td>{item.groupe_cm}</td>
+                                                          <tbody>
+                                                                   
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
+                                                                      
                                                                         <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
-                                                                        <td></td>
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
+                                                               <thead>
+                                                                    <tr>
 
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
+
+                                                                    </tr>
+                                                                </thead>
                                                                 
                                                                 <tbody>
 
@@ -3139,7 +2699,7 @@ const ParentsBulletinNotes = memo((props) => {
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {allind.intitule_groupe} </strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {elevesinclass} </strong> </p>
 
                                                             </div>
 
@@ -3243,18 +2803,13 @@ const ParentsBulletinNotes = memo((props) => {
 
 
                                                         </div>
-
-
+                                                                    
                                                     </Row>
                                                 </div>
                                             </Card.Body>
                                         </Card>
                                     </Col>
-
-
                                 </Row>
-
-
 
                             </div>
                         </Card.Body>
@@ -3276,8 +2831,12 @@ const ParentsBulletinNotes = memo((props) => {
     </div>}
     
 </div>}
-    </Fragment>
-  );
-});
+       
+        </Fragment>
+    );
+})
+
+                                                                    
+                                                               
 
 export default ParentsBulletinNotes;
