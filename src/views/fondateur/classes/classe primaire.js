@@ -11,7 +11,7 @@ import AuthUser from '../../../components/AuthUser';
 // img
 
 import avatars11 from '../../../assets/images/avatars/01.png'
-import avatars22 from '../../../assets/images/avatars/avtar_1.png'
+import avatars22 from '../../../assets/images/avatars/avtar_1.png' 
 import avatars33 from '../../../assets/images/avatars/avtar_2.png'
 import avatars44 from '../../../assets/images/avatars/avtar_3.png'
 import avatars55 from '../../../assets/images/avatars/avtar_4.png'
