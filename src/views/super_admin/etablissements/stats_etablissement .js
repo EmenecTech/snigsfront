@@ -97,7 +97,7 @@ function formatNumberWithCommas(number) {
     }
 
 
-    const [nbrad, setnbrad] = useState({});
+    const [nbrad, setnbrad] = useState([]);
     useEffect(() => {
         fetchAllnbrad();
     }, []);
@@ -463,7 +463,7 @@ function formatNumberWithCommas(number) {
                     
                                                             <tr>
                                                                 <td>Membres d'Administration</td>
-                                                                <td>{nbrad.var1} {nbrad.var2}</td>
+                                                                <td>{nbrad}</td>
                     
                                                             </tr>
                                                             <tr>
