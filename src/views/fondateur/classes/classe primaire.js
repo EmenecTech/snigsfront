@@ -76,6 +76,20 @@ const PrimClasse = () => {
 
     }
 
+    const submitFormG = () => {
+        http.post('/classesgroupes', inputs).then((res) => {
+            alert("Groupe ajoutée avec succès !")
+
+            window.location.reload(false);
+
+        })
+
+
+
+        console.log(inputs);
+
+    }
+
     const submitForm2 = () => {
         http.post('/add_enseignant_classe', inputs).then((res) => {
             alert("L'enseignant a été ajouté avec succès !")
@@ -94,6 +108,17 @@ const PrimClasse = () => {
   const fetchAllGroupes = () => {
     http.get("/get_groupes/" + etab).then((res) => {
       setgroupes(res.data);
+    });
+  };
+
+    const [groupesclasse, setgroupesclasse] = useState([]);
+  useEffect(() => {
+    fetchAllGroupesClasse();
+  }, []);
+
+  const fetchAllGroupesClasse = () => {
+    http.get("/get_groupes_for_classe/" + etab + "/" + classe).then((res) => {
+      setgroupesclasse(res.data);
     });
   };
 
@@ -774,7 +799,7 @@ const PrimClasse = () => {
 
 
                                                     <div className="text-center">
-                                                        <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                                        <Button type="button" variant="primary" onClick={submitFormG} >Confirmer</Button>
                                                     </div>
                                                 </Form>
                                             </Modal.Body>
@@ -800,10 +825,10 @@ const PrimClasse = () => {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    {matieres_classe.map((item) => (
+                                                    {groupesclasse.map((item) => (
                                                         <tr key={item.id}>
-                                                            <td>{item.groupe_cm}</td>
-                                                            <td>{user.langue === "en" ? (<div>{item.coefficient_cm} Marks</div>):(<div>{item.coefficient_cm} Points </div>)} </td>
+                                                            <td>{item.groupe_cg}</td>
+                                                            <td>{user.langue === "en" ? (<div>{item.marks_cg} Marks</div>):(<div>{item.marks_cg} Points </div>)} </td>
                                                             
                                                             <td>
                                                                 <div className="flex align-items-center list-user-action">
