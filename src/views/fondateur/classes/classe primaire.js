@@ -544,8 +544,12 @@ const PrimClasse = () => {
                                                                     <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div> Course </div>):(<div>Matière</div>)}</Form.Label>
                                                                     <select className="form-select mb-3 shadow-none" name="int" onChange={handleChange} required>
                                                                         <option></option>
-                                                                        {matieres.map((item) => (
+                                                                        {matieres_classe.map((item) => (
                                                                             <option key={item.id} value={item.intitule_matiere}>{item.intitule_matiere}</option>
+
+                                                                        ))}
+                                                                        {groupesclasse.map((item) => (
+                                                                            <option key={item.id} value={item.groupe_cp}>{item.groupe_cp}</option>
 
                                                                         ))}
 
