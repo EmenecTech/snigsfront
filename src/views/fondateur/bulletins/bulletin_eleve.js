@@ -1164,11 +1164,10 @@ const BulletinByEleve = memo((props) => {
                                                                        
                                                                         <th>Appreciation</th>
                                                                     </tr>
-                                                                </thead>
-                                                            <tbody>
-                                                                    
-             {allnote_1.existgrp === 0 || allnote_1.existgrp ? null : (
-                                                                    
+                                                                    </thead>
+
+                                                      {allnote_1.existgrp === 0 || allnote_1.existgrp ? null : (
+                                                            <tbody>     
                                                                 {allnote_1.listnotes  && allnote_1.listnotes.map((item, grp_1) => (
                                                                     <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
@@ -1190,9 +1189,10 @@ const BulletinByEleve = memo((props) => {
                                                                         <th></th>
 
                                                                     </tr>
-                                                                </thead> )}
+                                                                </thead> 
 
                                                                 <tbody>
+                                                                )}
                                                                    
                                                                 {allnote_2.listnotes  && allnote_2.listnotes.map((item, grp_2) => (
                                                                     <tr key={grp_2}>
