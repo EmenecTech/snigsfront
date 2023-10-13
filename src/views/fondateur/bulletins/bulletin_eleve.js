@@ -806,7 +806,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <div className="container text-center">
                                                                         <p> <strong style={{ fontSize: "18px" }}> {info_etab.nom_etablissement} </strong>
                                                                         
-                                                                        
+                                                                            <br/>
                                                                             <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal>
                                                                         </p>
 
