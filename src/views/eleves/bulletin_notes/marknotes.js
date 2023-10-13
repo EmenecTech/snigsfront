@@ -2300,7 +2300,7 @@ const BulletinByEleve = memo((props) => {
                                                                 </tr>
                                                                 </thead>
                                                             <tbody>
-                                                                {allnotespa.map((item, pa) => (
+                                                                {allnotespae.map((item, pa) => (
                                                                     <tr key={pa}>  
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.competence_visee_note}</td>
