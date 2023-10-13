@@ -317,6 +317,28 @@ const BulletinByEleve = memo((props) => {
         setAllSumallnote_2(res.data);
       })
     };
+
+    const [sumcoefnote_2, setAllSumcoefnote_2] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_2();
+    }, []);
+
+    const fetchAllSumcoefnote_2 = () => {
+        http.get('/sum/coef/notes_2/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_2(res.data);
+      })
+    };
+
+    const [sumfinalnote_2, setAllSumfinalnote_2] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_2();
+    }, []);
+
+    const fetchAllSumfinalnote_2 = () => {
+        http.get('/sum/final/notes_2/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_2(res.data);
+      })
+    };
     
         
     //////////////////////////////////////////////
@@ -349,6 +371,28 @@ const BulletinByEleve = memo((props) => {
     const fetchAllSumallnote_3 = () => {
         http.get('/sum/all/notes_3/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
         setAllSumallnote_3(res.data);
+      })
+    };
+
+    const [sumcoefnote_3, setAllSumcoefnote_3] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_3();
+    }, []);
+
+    const fetchAllSumcoefnote_3 = () => {
+        http.get('/sum/coef/notes_3/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_3(res.data);
+      })
+    };
+
+    const [sumfinalnote_3, setAllSumfinalnote_3] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_3();
+    }, []);
+
+    const fetchAllSumfinalnote_3 = () => {
+        http.get('/sum/final/notes_3/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_3(res.data);
       })
     };
     ///////////////////////////////////////////////
@@ -892,6 +936,10 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{Info_grp_2.intitule_groupe}</th>
+                                                                        <th>{sumallnote_2}</th>
+                                                                        <th>{sumcoefnote_2}</th>
+                                                                        <th>{sumfinalnote_2}</th>
+                                                                        <th></th>
 
                                                                     </tr>
                                                                 </thead>
@@ -912,6 +960,10 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{Info_grp_3.intitule_groupe}</th>
+                                                                        <th>{sumallnote_3}</th>
+                                                                        <th>{sumcoefnote_3}</th>
+                                                                        <th>{sumfinalnote_3}</th>
+                                                                        <th></th>
 
                                                                     </tr>
                                                                 </thead>
