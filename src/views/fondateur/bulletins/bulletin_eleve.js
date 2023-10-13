@@ -834,7 +834,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
                                                                       
-                                                                        <td>{sumallnote_1}</td>
+                                                                        <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
@@ -845,7 +845,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
-                                                                        <th>{Info_grp_1.intitule_groupe}</th>
+                                                                        <th>{sumallnote_1}</th>
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
