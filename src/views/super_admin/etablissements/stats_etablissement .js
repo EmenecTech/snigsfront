@@ -463,7 +463,7 @@ function formatNumberWithCommas(number) {
                     
                                                             <tr>
                                                                 <td>Membres d'Administration</td>
-                                                                <td>{nbrad}</td>
+                                                                <td>{nbrad.var1} {nbrad.var2}</td>
                     
                                                             </tr>
                                                             <tr>
