@@ -1191,7 +1191,7 @@ const BulletinByEleve = memo((props) => {
                                                                     </React.Fragment>
                                                                 )}
 
-                                                                   
+                                                             <tbody>
                                                                 {allnote_2.listnotes  && allnote_2.listnotes.map((item, grp_2) => (
                                                                     <tr key={grp_2}>
                                                                         <td>{item.matiere_note}</td>
