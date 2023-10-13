@@ -2813,7 +2813,7 @@ const BulletinByEleve = memo((props) => {
     
 </div>}
        
-        </Fragment>ent>
+        </Fragment>
     );
 })
 
