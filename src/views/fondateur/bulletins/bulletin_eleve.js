@@ -804,9 +804,9 @@ const BulletinByEleve = memo((props) => {
                                                             <Row>
                                                                 <Col sm="12">
                                                                     <div className="container text-center">
-                                                                        <p style={{ fontSize: "18px" }}> <strong> {info_etab.nom_etablissement} </strong>
-                                                                         </p>
-                                                                         <p className="text-center">
+                                                                        <p> <strong style={{ fontSize: "18px" }}> {info_etab.nom_etablissement} </strong>
+                                                                        
+                                                                        
                                                                             <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal>
                                                                         </p>
 
