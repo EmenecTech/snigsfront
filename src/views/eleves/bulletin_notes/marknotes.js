@@ -177,7 +177,16 @@ const BulletinByEleve = memo((props) => {
         })
     }
 
-    
+     const [elevesinclass, setelevesinclass] = useState();
+    useEffect(() => {
+       fetchAllelevesinclass();
+    }, []);
+
+    const fetchAllelevesinclass = () => {
+        http.get('/get_eleve_in_class/' + etab + '/' + classe + '/' + userid).then(res => {
+             setelevesinclass(res.data);
+        })
+    };
 
       /////////////////////////////////////////////////////
     const [Info_grp_1, setInfo_grp_1] = useState([]);
@@ -1380,7 +1389,7 @@ const BulletinByEleve = memo((props) => {
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    {allnotespf.map((item, pf) => (
+                                                                    {allnotespfe.map((item, pf) => (
                                                                         <tr key={pf}>
                                                                           
                                                                             <td>{item.matiere_note}</td>
@@ -2071,7 +2080,7 @@ const BulletinByEleve = memo((props) => {
                                                                 </tr>
                                                                 </thead>
                                                             <tbody>
-                                                                {allnotespa.map((item, pa) => (
+                                                                {allnotespae.map((item, pa) => (
                                                                     <tr key={pa}>
                                                                        <td>{item.matiere_note}</td>
                                                                         <td>{item.competence_visee_note}</td>
@@ -2709,7 +2718,7 @@ const BulletinByEleve = memo((props) => {
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                {allnotes.map((item, index) => (
+                                                                {allnotese.map((item, index) => (
                                                                     <tr key={index}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.competence_visee_note}</td>
