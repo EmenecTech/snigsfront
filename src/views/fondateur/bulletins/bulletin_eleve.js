@@ -262,6 +262,28 @@ const BulletinByEleve = memo((props) => {
       })
     };
 
+    const [sumcoefnote_1, setAllSumcoefnote_1] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_1();
+    }, []);
+
+    const fetchAllSumcoefnote_1 = () => {
+        http.get('/sum/coef/notes_1/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumcoefnote_1(res.data);
+      })
+    };
+
+    const [sumfinalnote_1, setAllSumfinalnote_1] = useState([]);
+    useEffect(() => {
+        fetchAllSumcoefnote_1();
+    }, []);
+
+    const fetchAllSumfinalnote_1 = () => {
+        http.get('/sum/final/notes_1/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumfinalnote_1(res.data);
+      })
+    };
+
     
     //////////////////////////////////////////////
     const [Info_grp_2, setInfo_grp_2] = useState([]);
@@ -846,9 +868,9 @@ const BulletinByEleve = memo((props) => {
 
                                                                         <th>{Info_grp_1.intitule_groupe}</th>
                                                                         <th>{sumallnote_1}</th>
-                                                                        <th>{Info_grp_1.intitule_groupe}</th>
-                                                                        <th>{Info_grp_1.intitule_groupe}</th>
-                                                                        <th>{Info_grp_1.intitule_groupe}</th>
+                                                                        <th>{sumcoefnote_1}</th>
+                                                                        <th>{sumfinalnote_1}</th>
+                                                                        <th></th>
 
                                                                     </tr>
                                                                 </thead>
