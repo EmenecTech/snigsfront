@@ -237,19 +237,7 @@ const BulletinByEleve = memo((props) => {
 
 
     ////////////////////////////////
-    const [Info_grp_1, setInfo_grp_1] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_1();
-    }, []);
-    
-    const fetchInfo_grp_1 = () => {
-        http.get('/info/groupe_1/' + etab).then(res => {
-        setInfo_grp_1(res.data);
-      })
-    };
-     console.log(Info_grp_1);
-     console.log(222);
-    
+   
     const [allnote_1, setAllNote_1] = useState({});
     useEffect(() => {
         fetchAllNote_1();
@@ -261,51 +249,9 @@ const BulletinByEleve = memo((props) => {
       })
     };
     
-    const [sumallnote_1, setAllSumallnote_1] = useState([]);
-    useEffect(() => {
-        fetchAllSumallnote_1();
-    }, []);
-
-    const fetchAllSumallnote_1 = () => {
-        http.get('/sum/all/notes_1/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllSumallnote_1(res.data);
-      })
-    };
-
-    const [sumcoefnote_1, setAllSumcoefnote_1] = useState([]);
-    useEffect(() => {
-        fetchAllSumcoefnote_1();
-    }, []);
-
-    const fetchAllSumcoefnote_1 = () => {
-        http.get('/sum/coef/notes_1/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllSumcoefnote_1(res.data);
-      })
-    };
-
-    const [sumfinalnote_1, setAllSumfinalnote_1] = useState([]);
-    useEffect(() => {
-        fetchAllSumfinalnote_1();
-    }, []);
-
-    const fetchAllSumfinalnote_1 = () => {
-        http.get('/sum/final/notes_1/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllSumfinalnote_1(res.data);
-      })
-    };
-
     
     //////////////////////////////////////////////
-    const [Info_grp_2, setInfo_grp_2] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_2();
-    }, []);
-     console.log(Info_grp_2);
-    const fetchInfo_grp_2 = () => {
-        http.get('/info/groupe_2/' + etab ).then(res => {
-        setInfo_grp_2(res.data);
-      })
-    };
+   
     const [allnote_2, setAllNote_2] = useState([]);
     useEffect(() => {
         fetchAllNote_2();
@@ -317,51 +263,9 @@ const BulletinByEleve = memo((props) => {
       })
     };
     
-    const [sumallnote_2, setAllSumallnote_2] = useState([]);
-    useEffect(() => {
-        fetchAllSumallnote_2();
-    }, []);
-
-    const fetchAllSumallnote_2= () => {
-        http.get('/sum/all/notes_2/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllSumallnote_2(res.data);
-      })
-    };
-
-    const [sumcoefnote_2, setAllSumcoefnote_2] = useState([]);
-    useEffect(() => {
-        fetchAllSumcoefnote_2();
-    }, []);
-
-    const fetchAllSumcoefnote_2 = () => {
-        http.get('/sum/coef/notes_2/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllSumcoefnote_2(res.data);
-      })
-    };
-
-    const [sumfinalnote_2, setAllSumfinalnote_2] = useState([]);
-    useEffect(() => {
-        fetchAllSumfinalnote_2();
-    }, []);
-
-    const fetchAllSumfinalnote_2 = () => {
-        http.get('/sum/final/notes_2/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllSumfinalnote_2(res.data);
-      })
-    };
-    
-        
+   
     //////////////////////////////////////////////
-    const [Info_grp_3, setInfo_grp_3] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_3();
-    }, []);
-     console.log(Info_grp_3);
-    const fetchInfo_grp_3 = () => {
-        http.get('/info/groupe_3/' + etab).then(res => {
-        setInfo_grp_3(res.data);
-      })
-    };
+  
     const [allnote_3, setAllNote_3] = useState([]);
     useEffect(() => {
         fetchAllNote_3();
@@ -373,50 +277,9 @@ const BulletinByEleve = memo((props) => {
       })
     };
     
-    const [sumallnote_3, setAllSumallnote_3] = useState([]);
-    useEffect(() => {
-        fetchAllSumallnote_3();
-    }, []);
-
-    const fetchAllSumallnote_3 = () => {
-        http.get('/sum/all/notes_3/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllSumallnote_3(res.data);
-      })
-    };
-
-    const [sumcoefnote_3, setAllSumcoefnote_3] = useState([]);
-    useEffect(() => {
-        fetchAllSumcoefnote_3();
-    }, []);
-
-    const fetchAllSumcoefnote_3 = () => {
-        http.get('/sum/coef/notes_3/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllSumcoefnote_3(res.data);
-      })
-    };
-
-    const [sumfinalnote_3, setAllSumfinalnote_3] = useState([]);
-    useEffect(() => {
-        fetchAllSumfinalnote_3();
-    }, []);
-
-    const fetchAllSumfinalnote_3 = () => {
-        http.get('/sum/final/notes_3/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-        setAllSumfinalnote_3(res.data);
-      })
-    };
+   
     ///////////////////////////////////////////////
-   const [Info_grp_4, setInfo_grp_4] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_1();
-    }, []);
-    
-    const fetchInfo_grp_4 = () => {
-        http.get('/info/groupe_4/' + etab).then(res => {
-        setInfo_grp_1(res.data);
-      })
-    };
-    
+ 
     const [allnote_4, setAllNote_4] = useState([]);
     useEffect(() => {
         fetchAllNote_4();
@@ -430,17 +293,7 @@ const BulletinByEleve = memo((props) => {
   
    
     //////////////////////////////////////////////
-       const [Info_grp_5, setInfo_grp_5] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_5();
-    }, []);
-    
-    const fetchInfo_grp_5 = () => {
-        http.get('/info/groupe_5/' + etab).then(res => {
-        setInfo_grp_5(res.data);
-      })
-    };
-    
+     
     const [allnote_5, setAllNote_5] = useState([]);
     useEffect(() => {
         fetchAllNote_5();
@@ -454,17 +307,7 @@ const BulletinByEleve = memo((props) => {
     
    
     //////////////////////////////////////////////
-       const [Info_grp_6, setInfo_grp_6] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_6();
-    }, []);
-    
-    const fetchInfo_grp_6 = () => {
-        http.get('/info/groupe_6/' + etab).then(res => {
-        setInfo_grp_6(res.data);
-      })
-    };
-     
+   
     const [allnote_6, setAllNote_6] = useState([]);
     useEffect(() => {
         fetchAllNote_6();
@@ -478,17 +321,7 @@ const BulletinByEleve = memo((props) => {
     
     
     //////////////////////////////////////////////
-     const [Info_grp_7, setInfo_grp_7] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_7();
-    }, []);
-    
-    const fetchInfo_grp_7 = () => {
-        http.get('/info/groupe_7/' + etab).then(res => {
-        setInfo_grp_7(res.data);
-      })
-    };
-    
+   
     const [allnote_7, setAllNote_7] = useState([]);
     useEffect(() => {
         fetchAllNote_7();
@@ -501,16 +334,6 @@ const BulletinByEleve = memo((props) => {
     };
     
     //////////////////////////////////////////////
-       const [Info_grp_8, setInfo_grp_8] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_8();
-    }, []);
-    
-    const fetchInfo_grp_8 = () => {
-        http.get('/info/groupe_8/' + etab).then(res => {
-        setInfo_grp_8(res.data);
-      })
-    };
     
     const [allnote_8, setAllNote_8] = useState([]);
     useEffect(() => {
@@ -525,16 +348,7 @@ const BulletinByEleve = memo((props) => {
     
   
   //////////////////////////////////////////////
-       const [Info_grp_9, setInfo_grp_9] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_9();
-    }, []);
     
-    const fetchInfo_grp_9 = () => {
-        http.get('/info/groupe_9/' + etab).then(res => {
-        setInfo_grp_9(res.data);
-      })
-    };
     
     const [allnote_9, setAllNote_9] = useState([]);
     useEffect(() => {
@@ -549,17 +363,7 @@ const BulletinByEleve = memo((props) => {
     
     
     //////////////////////////////////////////////
-       const [Info_grp_10, setInfo_grp_10] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_10();
-    }, []);
-    
-    const fetchInfo_grp_10 = () => {
-        http.get('/info/groupe_10/' + etab).then(res => {
-        setInfo_grp_1(res.data);
-      })
-    };
-    
+   
     const [allnote_10, setAllNote_10] = useState([]);
     useEffect(() => {
         fetchAllNote_10();
@@ -573,16 +377,7 @@ const BulletinByEleve = memo((props) => {
     
    
     //////////////////////////////////////////////
-       const [Info_grp_11, setInfo_grp_11] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_11();
-    }, []);
     
-    const fetchInfo_grp_11 = () => {
-        http.get('/info/groupe_11/' + etab).then(res => {
-        setInfo_grp_11(res.data);
-      })
-    };
     
     const [allnote_11, setAllNote_11] = useState([]);
     useEffect(() => {
@@ -597,17 +392,7 @@ const BulletinByEleve = memo((props) => {
     
     
     //////////////////////////////////////////////
-       const [Info_grp_12, setInfo_grp_12] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_12();
-    }, []);
-    
-    const fetchInfo_grp_12 = () => {
-        http.get('/info/groupe_12/' + etab).then(res => {
-        setInfo_grp_1(res.data);
-      })
-    };
-    
+  
     const [allnote_12, setAllNote_12] = useState([]);
     useEffect(() => {
         fetchAllNote_12();
@@ -621,17 +406,7 @@ const BulletinByEleve = memo((props) => {
     
 
     //////////////////////////////////////////////
-       const [Info_grp_13, setInfo_grp_13] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_13();
-    }, []);
-    
-    const fetchInfo_grp_13 = () => {
-        http.get('/info/groupe_13/' + etab).then(res => {
-        setInfo_grp_13(res.data);
-      })
-    };
-    
+   
     const [allnote_13, setAllNote_13] = useState([]);
     useEffect(() => {
         fetchAllNote_13();
@@ -644,17 +419,7 @@ const BulletinByEleve = memo((props) => {
     };
  
     //////////////////////////////////////////////
-       const [Info_grp_14, setInfo_grp_14] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_14();
-    }, []);
-    
-    const fetchInfo_grp_14 = () => {
-        http.get('/info/groupe_14/' + etab).then(res => {
-        setInfo_grp_14(res.data);
-      })
-    };
-    
+  
     const [allnote_14, setAllNote_14] = useState([]);
     useEffect(() => {
         fetchAllNote_14();
@@ -668,16 +433,7 @@ const BulletinByEleve = memo((props) => {
     
    
     //////////////////////////////////////////////
-       const [Info_grp_15, setInfo_grp_15] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_15();
-    }, []);
-    
-    const fetchInfo_grp_15 = () => {
-        http.get('/info/groupe_15/' + etab).then(res => {
-        setInfo_grp_15(res.data);
-      })
-    };
+   
     
     const [allnote_15, setAllNote_15] = useState([]);
     useEffect(() => {
@@ -692,16 +448,7 @@ const BulletinByEleve = memo((props) => {
     
   
     //////////////////////////////////////////////
-       const [Info_grp_16, setInfo_grp_16] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_16();
-    }, []);
-    
-    const fetchInfo_grp_16 = () => {
-        http.get('/info/groupe_16/' + etab).then(res => {
-        setInfo_grp_16(res.data);
-      })
-    };
+   
     
     const [allnote_16, setAllNote_16] = useState([]);
     useEffect(() => {
@@ -717,17 +464,7 @@ const BulletinByEleve = memo((props) => {
  
     //////////////////////////////////////////////
 
-       const [Info_grp_17, setInfo_grp_17] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_17();
-    }, []);
-    
-    const fetchInfo_grp_17 = () => {
-        http.get('/info/groupe_17/' + etab).then(res => {
-        setInfo_grp_17(res.data);
-      })
-    };
-    
+      
     const [allnote_17, setAllNote_17] = useState([]);
     useEffect(() => {
         fetchAllNote_17();
@@ -742,16 +479,7 @@ const BulletinByEleve = memo((props) => {
   
     //////////////////////////////////////////////
 
-       const [Info_grp_18, setInfo_grp_18] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_18();
-    }, []);
-    
-    const fetchInfo_grp_18 = () => {
-        http.get('/info/groupe_18/' + etab).then(res => {
-        setInfo_grp_18(res.data);
-      })
-    };
+      
     
     const [allnote_18, setAllNote_18] = useState([]);
     useEffect(() => {
@@ -767,17 +495,7 @@ const BulletinByEleve = memo((props) => {
   
      //////////////////////////////////////////////
 
-       const [Info_grp_19, setInfo_grp_19] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_19();
-    }, []);
-    
-    const fetchInfo_grp_19 = () => {
-        http.get('/info/groupe_19/' + etab).then(res => {
-        setInfo_grp_19(res.data);
-      })
-    };
-    
+     
     const [allnote_19, setAllNote_19] = useState([]);
     useEffect(() => {
         fetchAllNote_19();
@@ -791,17 +509,6 @@ const BulletinByEleve = memo((props) => {
     
     
      //////////////////////////////////////////////
-
-       const [Info_grp_20, setInfo_grp_20] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_20();
-    }, []);
-    
-    const fetchInfo_grp_20 = () => {
-        http.get('/info/groupe_20/' + etab).then(res => {
-        setInfo_grp_20(res.data);
-      })
-    };
     
     const [allnote_20, setAllNote_20] = useState([]);
     useEffect(() => {
@@ -817,17 +524,6 @@ const BulletinByEleve = memo((props) => {
    
      //////////////////////////////////////////////
 
-       const [Info_grp_21, setInfo_grp_21] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_21();
-    }, []);
-    
-    const fetchInfo_grp_21 = () => {
-        http.get('/info/groupe_21/' + etab).then(res => {
-        setInfo_grp_21(res.data);
-      })
-    };
-    
     const [allnote_21, setAllNote_21] = useState([]);
     useEffect(() => {
         fetchAllNote_21();
@@ -842,17 +538,6 @@ const BulletinByEleve = memo((props) => {
     
      //////////////////////////////////////////////
 
-       const [Info_grp_22, setInfo_grp_22] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_22();
-    }, []);
-    
-    const fetchInfo_grp_22 = () => {
-        http.get('/info/groupe_22/' + etab).then(res => {
-        setInfo_grp_22(res.data);
-      })
-    };
-    
     const [allnote_22, setAllNote_22] = useState([]);
     useEffect(() => {
         fetchAllNote_22();
@@ -866,17 +551,6 @@ const BulletinByEleve = memo((props) => {
     
    
      //////////////////////////////////////////////
-
-       const [Info_grp_23, setInfo_grp_23] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_23();
-    }, []);
-    
-    const fetchInfo_grp_23 = () => {
-        http.get('/info/groupe_23/' + etab).then(res => {
-        setInfo_grp_23(res.data);
-      })
-    };
     
     const [allnote_23, setAllNote_23] = useState([]);
     useEffect(() => {
@@ -892,17 +566,6 @@ const BulletinByEleve = memo((props) => {
   
      //////////////////////////////////////////////
 
-       const [Info_grp_24, setInfo_grp_24] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_24();
-    }, []);
-    
-    const fetchInfo_grp_24 = () => {
-        http.get('/info/groupe_24/' + etab).then(res => {
-        setInfo_grp_24(res.data);
-      })
-    };
-    
     const [allnote_24, setAllNote_24] = useState([]);
     useEffect(() => {
         fetchAllNote_24();
@@ -916,17 +579,6 @@ const BulletinByEleve = memo((props) => {
     
    
      //////////////////////////////////////////////
-
-       const [Info_grp_25, setInfo_grp_25] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_25();
-    }, []);
-    
-    const fetchInfo_grp_25 = () => {
-        http.get('/info/groupe_25/' + etab).then(res => {
-        setInfo_grp_25(res.data);
-      })
-    };
     
     const [allnote_25, setAllNote_25] = useState([]);
     useEffect(() => {
@@ -942,17 +594,6 @@ const BulletinByEleve = memo((props) => {
    
      //////////////////////////////////////////////
 
-       const [Info_grp_26, setInfo_grp_26] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_26();
-    }, []);
-    
-    const fetchInfo_grp_26 = () => {
-        http.get('/info/groupe_26/' + etab).then(res => {
-        setInfo_grp_26(res.data);
-      })
-    };
-    
     const [allnote_26, setAllNote_26] = useState([]);
     useEffect(() => {
         fetchAllNote_26();
@@ -966,17 +607,6 @@ const BulletinByEleve = memo((props) => {
     
     
      //////////////////////////////////////////////
-
-       const [Info_grp_27, setInfo_grp_27] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_27();
-    }, []);
-    
-    const fetchInfo_grp_27 = () => {
-        http.get('/info/groupe_27/' + etab).then(res => {
-        setInfo_grp_27(res.data);
-      })
-    };
     
     const [allnote_27, setAllNote_27] = useState([]);
     useEffect(() => {
@@ -990,17 +620,6 @@ const BulletinByEleve = memo((props) => {
     };
     
      //////////////////////////////////////////////
-
-       const [Info_grp_28, setInfo_grp_28] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_28();
-    }, []);
-    
-    const fetchInfo_grp_28 = () => {
-        http.get('/info/groupe_28/' + etab).then(res => {
-        setInfo_grp_28(res.data);
-      })
-    };
     
     const [allnote_28, setAllNote_28] = useState([]);
     useEffect(() => {
@@ -1015,17 +634,6 @@ const BulletinByEleve = memo((props) => {
     
   
      //////////////////////////////////////////////
-
-       const [Info_grp_29, setInfo_grp_29] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_29();
-    }, []);
-    
-    const fetchInfo_grp_29 = () => {
-        http.get('/info/groupe_29/' + etab).then(res => {
-        setInfo_grp_29(res.data);
-      })
-    };
     
     const [allnote_29, setAllNote_29] = useState([]);
     useEffect(() => {
@@ -1040,17 +648,6 @@ const BulletinByEleve = memo((props) => {
     
   
      //////////////////////////////////////////////
-
-       const [Info_grp_30, setInfo_grp_30] = useState([]);
-    useEffect(() => {
-        fetchInfo_grp_30();
-    }, []);
-    
-    const fetchInfo_grp_30 = () => {
-        http.get('/info/groupe_30/' + etab).then(res => {
-        setInfo_grp_30(res.data);
-      })
-    };
     
     const [allnote_30, setAllNote_30] = useState([]);
     useEffect(() => {
@@ -1581,7 +1178,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_1.intitule_groupe}</th>
+                                                                        <th>{allnote_1.groupe}</th>
                                                                         <th>{allnote_1.sumnote}</th>
                                                                         <th>{allnote_1.sumcoef}</th>
                                                                         <th>{allnote_1.sumfinalnotes}</th>
@@ -1606,7 +1203,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_2.intitule_groupe}</th>
+                                                                        <th>{allnote_2.groupe}</th>
                                                                         <th>{sumallnote_2}</th>
                                                                         <th>{sumcoefnote_2}</th>
                                                                         <th>{sumfinalnote_2}</th>
@@ -1630,7 +1227,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_3.intitule_groupe}</th>
+                                                                        <th>{allnote_3.groupe}</th>
                                                                         <th>{sumallnote_3}</th>
                                                                         <th>{sumcoefnote_3}</th>
                                                                         <th>{sumfinalnote_3}</th>
@@ -1939,7 +1536,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_1.intitule_groupe}</th>
+                                                                        <th>{allnote_1.groupe}</th>
                                                                          <th>{allnote_1.sumnote}</th>
                                                                         <th>{allnote_1.sumcoef}</th>
                                                                         <th>{allnote_1.sumfinalnotes}</th>
@@ -1964,7 +1561,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_2.intitule_groupe}</th>
+                                                                        <th>{allnote_2.groupe}</th>
                                                                         <th>{sumallnote_2}</th>
                                                                         <th>{sumcoefnote_2}</th>
                                                                         <th>{sumfinalnote_2}</th>
@@ -1988,7 +1585,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_3.intitule_groupe}</th>
+                                                                        <th>{allnote_3.groupe}</th>
                                                                         <th>{sumallnote_3}</th>
                                                                         <th>{sumcoefnote_3}</th>
                                                                         <th>{sumfinalnote_3}</th>
@@ -2214,7 +1811,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_1.intitule_groupe}</th>
+                                                                        <th>{allnote_1.groupe}</th>
                                                                          <th>{allnote_1.sumnote}</th>
                                                                         <th></th>
 
@@ -2234,7 +1831,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_2.intitule_groupe}</th>
+                                                                        <th>{allnote_2.groupe}</th>
                                                                         <th>{sumallnote_2}</th>
                                                                         <th></th>
 
@@ -2253,7 +1850,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_3.intitule_groupe}</th>
+                                                                        <th>{allnote_3.groupe}</th>
                                                                         <th>{sumallnote_3}</th>
                                                                         <th></th>
 
@@ -2272,7 +1869,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_4.intitule_groupe}</th>
+                                                                        <th>{allnote_4.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2291,7 +1888,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_5.intitule_groupe}</th>
+                                                                        <th>{allnote_5.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2310,7 +1907,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_6.intitule_groupe}</th>
+                                                                        <th>{allnote_6.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2329,7 +1926,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_7.intitule_groupe}</th>
+                                                                        <th>{allnote_7.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2348,7 +1945,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_8.intitule_groupe}</th>
+                                                                        <th>{allnote_8.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2367,7 +1964,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_9.intitule_groupe}</th>
+                                                                        <th>{allnote_9.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2386,7 +1983,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_10.intitule_groupe}</th>
+                                                                        <th>{allnote_10.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2405,7 +2002,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_11.intitule_groupe}</th>
+                                                                        <th>{allnote_11.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2424,7 +2021,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_12.intitule_groupe}</th>
+                                                                        <th>{allnote_12.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2443,7 +2040,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_13.intitule_groupe}</th>
+                                                                        <th>{allnote_13.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2462,7 +2059,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_14.intitule_groupe}</th>
+                                                                        <th>{allnote_14.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2481,7 +2078,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_15.intitule_groupe}</th>
+                                                                        <th>{allnote_15.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2500,7 +2097,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_16.intitule_groupe}</th>
+                                                                        <th>{allnote_16.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2519,7 +2116,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_17.intitule_groupe}</th>
+                                                                        <th>{allnote_17.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2538,7 +2135,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_18.intitule_groupe}</th>
+                                                                        <th>{allnote_18.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2557,7 +2154,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_19.intitule_groupe}</th>
+                                                                        <th>{allnote_19.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2576,7 +2173,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_20.intitule_groupe}</th>
+                                                                        <th>{allnote_20.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2595,7 +2192,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_21.intitule_groupe}</th>
+                                                                        <th>{allnote_21.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2614,7 +2211,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_22.intitule_groupe}</th>
+                                                                        <th>{allnote_22.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2633,7 +2230,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_23.intitule_groupe}</th>
+                                                                        <th>{allnote_23.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2652,7 +2249,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_24.intitule_groupe}</th>
+                                                                        <th>{allnote_24.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2671,7 +2268,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_25.intitule_groupe}</th>
+                                                                        <th>{allnote_25.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2690,7 +2287,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_26.intitule_groupe}</th>
+                                                                        <th>{allnote_26.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2709,7 +2306,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_27.intitule_groupe}</th>
+                                                                        <th>{allnote_27.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2728,7 +2325,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_28.intitule_groupe}</th>
+                                                                        <th>{allnote_28.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2747,7 +2344,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_29.intitule_groupe}</th>
+                                                                        <th>{allnote_29.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -2766,7 +2363,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_30.intitule_groupe}</th>
+                                                                        <th>{allnote_30.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3217,7 +2814,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_1.intitule_groupe}</th>
+                                                                        <th>{allnote_1.groupe}</th>
                                                                          <th>{allnote_1.sumnote}</th>
                                                                         <th></th>
 
@@ -3237,7 +2834,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_2.intitule_groupe}</th>
+                                                                        <th>{allnote_2.groupe}</th>
                                                                         <th>{sumallnote_2}</th>
                                                                         <th></th>
 
@@ -3256,7 +2853,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_3.intitule_groupe}</th>
+                                                                        <th>{allnote_3.groupe}</th>
                                                                         <th>{sumallnote_3}</th>
                                                                         <th></th>
 
@@ -3275,7 +2872,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_4.intitule_groupe}</th>
+                                                                        <th>{allnote_4.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3294,7 +2891,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_5.intitule_groupe}</th>
+                                                                        <th>{allnote_5.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3313,7 +2910,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_6.intitule_groupe}</th>
+                                                                        <th>{allnote_6.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3332,7 +2929,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_7.intitule_groupe}</th>
+                                                                        <th>{allnote_7.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3351,7 +2948,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_8.intitule_groupe}</th>
+                                                                        <th>{allnote_8.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3370,7 +2967,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_9.intitule_groupe}</th>
+                                                                        <th>{allnote_9.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3389,7 +2986,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_10.intitule_groupe}</th>
+                                                                        <th>{allnote_10.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3408,7 +3005,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_11.intitule_groupe}</th>
+                                                                        <th>{allnote_11.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3427,7 +3024,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_12.intitule_groupe}</th>
+                                                                        <th>{allnote_12.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3446,7 +3043,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_13.intitule_groupe}</th>
+                                                                        <th>{allnote_13.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3465,7 +3062,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_14.intitule_groupe}</th>
+                                                                        <th>{allnote_14.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3484,7 +3081,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_15.intitule_groupe}</th>
+                                                                        <th>{allnote_15.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3712,7 +3309,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_1.intitule_groupe}</th>
+                                                                        <th>{allnote_1.groupe}</th>
                                                                          <th>{allnote_1.sumnote}</th>
                                                                         <th></th>
 
@@ -3732,7 +3329,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_2.intitule_groupe}</th>
+                                                                        <th>{allnote_2.groupe}</th>
                                                                         <th>{sumallnote_2}</th>
                                                                         <th></th>
 
@@ -3751,7 +3348,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_3.intitule_groupe}</th>
+                                                                        <th>{allnote_3.groupe}</th>
                                                                         <th>{sumallnote_3}</th>
                                                                         <th></th>
 
@@ -3770,7 +3367,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_4.intitule_groupe}</th>
+                                                                        <th>{allnote_4.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3789,7 +3386,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_5.intitule_groupe}</th>
+                                                                        <th>{allnote_5.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3808,7 +3405,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_6.intitule_groupe}</th>
+                                                                        <th>{allnote_6.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3827,7 +3424,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_7.intitule_groupe}</th>
+                                                                        <th>{allnote_7.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3846,7 +3443,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_8.intitule_groupe}</th>
+                                                                        <th>{allnote_8.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3865,7 +3462,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_9.intitule_groupe}</th>
+                                                                        <th>{allnote_9.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3884,7 +3481,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_10.intitule_groupe}</th>
+                                                                        <th>{allnote_10.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3903,7 +3500,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_11.intitule_groupe}</th>
+                                                                        <th>{allnote_11.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3922,7 +3519,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_12.intitule_groupe}</th>
+                                                                        <th>{allnote_12.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3941,7 +3538,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_13.intitule_groupe}</th>
+                                                                        <th>{allnote_13.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3960,7 +3557,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_14.intitule_groupe}</th>
+                                                                        <th>{allnote_14.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -3979,7 +3576,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_15.intitule_groupe}</th>
+                                                                        <th>{allnote_15.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -4664,7 +4261,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_1.intitule_groupe}</th>
+                                                                        <th>{allnote_1.groupe}</th>
                                                                          <th>{allnote_1.sumnote}</th>
                                                                         <th></th>
 
@@ -4684,7 +4281,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_2.intitule_groupe}</th>
+                                                                        <th>{allnote_2.groupe}</th>
                                                                         <th>{sumallnote_2}</th>
                                                                         <th></th>
 
@@ -4703,7 +4300,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_3.intitule_groupe}</th>
+                                                                        <th>{allnote_3.groupe}</th>
                                                                         <th>{sumallnote_3}</th>
                                                                         <th></th>
 
@@ -4722,7 +4319,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_4.intitule_groupe}</th>
+                                                                        <th>{allnote_4.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -4741,7 +4338,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_5.intitule_groupe}</th>
+                                                                        <th>{allnote_5.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -4760,7 +4357,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_6.intitule_groupe}</th>
+                                                                        <th>{allnote_6.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -4779,7 +4376,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_7.intitule_groupe}</th>
+                                                                        <th>{allnote_7.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -4798,7 +4395,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_8.intitule_groupe}</th>
+                                                                        <th>{allnote_8.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -4817,7 +4414,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_9.intitule_groupe}</th>
+                                                                        <th>{allnote_9.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -4836,7 +4433,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_10.intitule_groupe}</th>
+                                                                        <th>{allnote_10.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -4855,7 +4452,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_11.intitule_groupe}</th>
+                                                                        <th>{allnote_11.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -4874,7 +4471,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_12.intitule_groupe}</th>
+                                                                        <th>{allnote_12.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -4893,7 +4490,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_13.intitule_groupe}</th>
+                                                                        <th>{allnote_13.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -4912,7 +4509,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_14.intitule_groupe}</th>
+                                                                        <th>{allnote_14.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
@@ -4931,7 +4528,7 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{Info_grp_15.intitule_groupe}</th>
+                                                                        <th>{allnote_15.groupe}</th>
                                                                         <th></th>
                                                                         <th></th>
 
