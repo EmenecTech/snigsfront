@@ -7,7 +7,7 @@ import { Row, Col, Image, Form, Nav, Dropdown, Tab, Modal, Button, Table } from 
 import Card from '../../../components/Card'
 
 import { Link } from 'react-router-dom'
-import AuthUser from '../../../components/AuthUser';
+import AuthUser from '../../../components/AuthUser'; 
 // img
 
 import avatars11 from '../../../assets/images/avatars/01.png'
