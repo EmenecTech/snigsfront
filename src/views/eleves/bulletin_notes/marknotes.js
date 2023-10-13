@@ -49,19 +49,6 @@ const BulletinByEleve = memo((props) => {
     const niveau = user.fonction_user;
     const classe = user.other_in_user;
 
-    
-   var groupe = " " ;
-    
-    var [allind, setAllInd] = useState([]);
-    useEffect(() => {
-        fetchAllInd();  
-    }, []); 
-
-    const fetchAllInd = () => {
-        http.get('/get_ind_for_mat/' + etab).then(res => {
-            setAllInd(res.data);
-        }); 
-    };
 
     const [image2, setImage2] = useState("");
     const imageRef2 = useRef(null);
@@ -159,186 +146,15 @@ const BulletinByEleve = memo((props) => {
 
   
     
-    
-    const [allind1, setAllInd1] = useState([]);
-    useEffect(() => {
-        fetchAllInd1();  
-    }, []); 
-
-    const fetchAllInd1 = () => {
-        http.get('/get_ind_for_mat1/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd1(res.data);
-        }); 
-    };
-
-    const [allind2, setAllInd2] = useState([]);
-    useEffect(() => {
-        fetchAllInd2();  
-    }, []); 
-
-    const fetchAllInd2 = () => {
-        http.get('/get_ind_for_mat2/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd2(res.data);
-        }); 
-    };
-
-
-    const [allind3, setAllInd3] = useState([]);
-    useEffect(() => {
-        fetchAllInd3();  
-    }, []); 
-
-    const fetchAllInd3 = () => {
-        http.get('/get_ind_for_mat3/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd3(res.data);
-        }); 
-    };
-
-    const [allind4, setAllInd4] = useState([]);
-    useEffect(() => {
-        fetchAllInd4();  
-    }, []); 
-
-    const fetchAllInd4 = () => {
-        http.get('/get_ind_for_mat4/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd4(res.data);
-        }); 
-    };
-
-    
-    const [allind5, setAllInd5] = useState([]);
-    useEffect(() => {
-        fetchAllInd5();  
-    }, []); 
-
-    const fetchAllInd5 = () => {
-        http.get('/get_ind_for_mat5/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd5(res.data);
-        }); 
-    };
-
-    
-    const [allind6, setAllInd6] = useState([]);
-    useEffect(() => {
-        fetchAllInd6();  
-    }, []); 
-
-    const fetchAllInd6 = () => {
-        http.get('/get_ind_for_mat6/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd6(res.data);
-        }); 
-    };
-
-      const [allind7, setAllInd7] = useState([]);
-    useEffect(() => {
-        fetchAllInd7();  
-    }, []); 
-
-    const fetchAllInd7 = () => {
-        http.get('/get_ind_for_mat7/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd7(res.data);
-        }); 
-    };
-
-    const [allind8, setAllInd8] = useState([]);
-    useEffect(() => {
-        fetchAllInd8();  
-    }, []); 
-
-    const fetchAllInd8 = () => {
-        http.get('/get_ind_for_mat8/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd8(res.data);
-        }); 
-    };
-    
-     const [allind9, setAllInd9] = useState([]);
-    useEffect(() => {
-        fetchAllInd9();  
-    }, []); 
-
-    const fetchAllInd9 = () => {
-        http.get('/get_ind_for_mat9/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd9(res.data);
-        }); 
-    };
-
-    const [allind10, setAllInd10] = useState([]);
-    useEffect(() => {
-        fetchAllInd10();  
-    }, []); 
-
-    const fetchAllInd10 = () => {
-        http.get('/get_ind_for_mat10/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd10(res.data);
-        }); 
-    };
-    
-    const [allind11, setAllInd11] = useState([]);
-    useEffect(() => {
-        fetchAllInd11();  
-    }, []); 
-
-    const fetchAllInd11 = () => {
-        http.get('/get_ind_for_mat11/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd11(res.data);
-        }); 
-    };
-
-    const [allind12, setAllInd12] = useState([]);
-    useEffect(() => {
-        fetchAllInd12();  
-    }, []); 
-
-    const fetchAllInd12 = () => {
-        http.get('/get_ind_for_mat12/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd12(res.data);
-        }); 
-    };
-
-        const [allind13, setAllInd13] = useState([]);
-    useEffect(() => {
-        fetchAllInd12();  
-    }, []); 
-
-    const fetchAllInd13 = () => {
-        http.get('/get_ind_for_mat13/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd13(res.data);
-        }); 
-    };
-
-        const [allind14, setAllInd14] = useState([]);
-        useEffect(() => {
-        fetchAllInd14();  
-    }, []); 
-
-    const fetchAllInd14 = () => {
-        http.get('/get_ind_for_mat14/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd14(res.data);
-        }); 
-    };
-
-    const [allind15, setAllInd15] = useState([]);
-    useEffect(() => {
-        fetchAllInd15();  
-    }, []); 
-
-    const fetchAllInd15 = () => {
-        http.get('/get_ind_for_mat15/' + etab + "/" + niveau + "/" + classe).then(res => {
-            setAllInd15(res.data);
-        }); 
-    };
-    
    const [matiereslevel, setmatiereslevel] = useState([]);
     useEffect(() => {
         fetchAllmatiereslevel();
     }, []);
-
     const fetchAllmatiereslevel = () => {
         http.get('/get_matieres_niveau_planning/' + niveau + '/' + etab).then(res => {
             setmatiereslevel(res.data);
         })
     }
-
     const [enseign, setenseign] = useState();
     useEffect(() => {
        fetchAllenseign();
@@ -349,8 +165,160 @@ const BulletinByEleve = memo((props) => {
              setenseign(res.data);
         })
     }
+    const [classes, setclasses] = useState([]);
+    useEffect(() => {
+        fetchAllclasses();
+    }, []);
+
+    const fetchAllclasses = () => {
+        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
+            setclasses(res.data);
+            
+        })
+    }
+
+    
+
+      /////////////////////////////////////////////////////
+    const [Info_grp_1, setInfo_grp_1] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_1();
+    }, []);
+    
+    const fetchInfo_grp_1 = () => {
+        http.get('/info/groupe_1/' + etab).then(res => {
+        setInfo_grp_1(res.data);
+      })
+    };
+     console.log(Info_grp_1);
+    
+    
+    const [allnote_1, setAllNote_1] = useState([]);
+    useEffect(() => {
+        fetchAllNote_1();
+    }, []);
+
+    const fetchAllNote_1 = () => {
+        http.get('/all/notes_1/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_1(res.data);
+      })
+    };
+    
+    const [sumallnote_1, setAllSumallnote_1] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_1();
+    }, []);
+
+    const fetchAllSumallnote_1 = () => {
+        http.get('/sum/all/notes_1/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_1(res.data);
+      })
+    };
+
+    
+    //////////////////////////////////////////////
+    const [Info_grp_2, setInfo_grp_2] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_2();
+    }, []);
+     console.log(Info_grp_2);
+    const fetchInfo_grp_2 = () => {
+        http.get('/info/groupe_2/' + etab ).then(res => {
+        setInfo_grp_2(res.data);
+      })
+    };
+    const [allnote_2, setAllNote_2] = useState([]);
+    useEffect(() => {
+        fetchAllNote_2();
+    }, []);
+
+    const fetchAllNote_2 = () => {
+        http.get('/all/notes_2/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_2(res.data);
+      })
+    };
+    
+    const [sumallnote_2, setAllSumallnote_2] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_2();
+    }, []);
+
+    const fetchAllSumallnote_2= () => {
+        http.get('/sum/all/notes_2/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_2(res.data);
+      })
+    };
+        
+    //////////////////////////////////////////////
+    const [Info_grp_3, setInfo_grp_3] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_3();
+    }, []);
+     console.log(Info_grp_3);
+    const fetchInfo_grp_3 = () => {
+        http.get('/info/groupe_3/' + etab).then(res => {
+        setInfo_grp_3(res.data);
+      })
+    };
+    const [allnote_3, setAllNote_3] = useState([]);
+    useEffect(() => {
+        fetchAllNote_3();
+    }, []);
+
+    const fetchAllNote_3 = () => {
+        http.get('/all/notes_3/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_3(res.data);
+      })
+    };
+    
+    const [sumallnote_3, setAllSumallnote_3] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_3();
+    }, []);
+
+    const fetchAllSumallnote_3 = () => {
+        http.get('/sum/all/notes_3/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_3(res.data);
+      })
+    };
+    ///////////////////////////////////////////////
+  
+    const [Info_grp_4, setInfo_grp_4] = useState([]);
+    useEffect(() => {
+        fetchInfo_grp_4();
+    }, []);
+     console.log(Info_grp_4);
+    const fetchInfo_grp_4 = () => {
+        http.get('/info/groupe_4/' + etab).then(res => {
+        setInfo_grp_3(res.data);
+      })
+    };
+    const [allnote_4, setAllNote_4] = useState([]);
+    useEffect(() => {
+        fetchAllNote_4();
+    }, []);
+
+    const fetchAllNote_4 = () => {
+        http.get('/all/notes_4/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllNote_3(res.data);
+      })
+    };
+    
+    const [sumallnote_4, setAllSumallnote_4] = useState([]);
+    useEffect(() => {
+        fetchAllSumallnote_4();
+    }, []);
+
+    const fetchAllSumallnote_4 = () => {
+        http.get('/sum/all/notes_4/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        setAllSumallnote_4(res.data);
+      })
+    };
+    /////////////////////////////////////
 
 
+
+    
    const [allnotese, setAllNotese] = useState([]);
     useEffect(() => {
         fetchAllNotese();
@@ -382,8 +350,7 @@ const BulletinByEleve = memo((props) => {
         setAllNotespfe(res.data);
       })
     };
-
-    
+   
     const [allnotespae, setAllNotespae] = useState([]);
     useEffect(() => {
         fetchAllNotespae();
@@ -395,44 +362,8 @@ const BulletinByEleve = memo((props) => {
       })
     };
 
+    ///////////////////////////////////////////Sommes
 
-    const [allnotessfe, setAllNotessfe] = useState([]);
-    useEffect(() => {
-        fetchAllNotessfe();
-    }, []);
-    groupe = allind.intitule_groupe;
-    const fetchAllNotessfe = () => {
-        http.get("/all_notes_sfe/" + etab + "/" + classe + "/" + evaluation +  "/" + groupe).then(res => {
-        setAllNotessfe(res.data);
-      })
-    };
-
-    console.log(allnotessfe);
-    console.log(123);
-    console.log(allind.intitule_groupe);
-
-      const [allnotessfe1, setAllNotessfe1] = useState([]);
-    useEffect(() => {
-        fetchAllNotessfe1();
-    }, []);
-
-    const fetchAllNotessfe1 = () => {
-        http.get('/all_notes_sfe1/' + etab + '/' + classe + "/" + evaluation + '/Groupe 2/' + userid).then(res => {
-        setAllNotessfe1(res.data);
-      })
-    };
-
-      const [allnotessfe2, setAllNotessfe2] = useState([]);
-    useEffect(() => {
-        fetchAllNotessfe2();
-    }, []);
-
-    const fetchAllNotessfe2 = () => {
-        http.get('/all_notes_sfe2/' + etab + '/' + classe + "/" + evaluation + '/Groupe 3/' + userid).then(res => {
-        setAllNotessfe2(res.data);
-      })
-    };
-    
      const [sumnotes, setsumnotes] = useState([]);
     useEffect(() => {
         fetchAllsumnotes();
@@ -445,8 +376,6 @@ const BulletinByEleve = memo((props) => {
         })
     }
 
-
-    ////primary
     const [sumcoef, setsumcoef] = useState([]);
     useEffect(() => {
         fetchAllsumcoef();
@@ -480,43 +409,21 @@ const BulletinByEleve = memo((props) => {
 
         })
     }
+   ///////////////////////////////////////////////
 
- const [classes, setclasses] = useState([]);
-    useEffect(() => {
-        fetchAllclasses();
-    }, []);
-
-    const fetchAllclasses = () => {
-        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
-            setclasses(res.data);
-            
-        })
-    }
     
  
         
-      useSelector(SettingSelector.theme_color);
-
-
-
-
-    
-
-
-   
+    useSelector(SettingSelector.theme_color);
 
     return (
 
-        
-    <Fragment>
-        
+     <Fragment>
         {classes.cycle_niveau === 'Secondaire' || classes.cycle_niveau === 'Secondary' ? <div>
   
-        {classes.section_niveau === 'Francophone' ? <div>
+   {classes.section_niveau === 'Francophone' ? <div>
 
-           {/* Bulletin du secondaire francophone */}
-
-
+    {/* Bulletin du secondaire francophone */}
           <Row>
                 <Col sm="12">
                     <Card>
@@ -576,28 +483,45 @@ const BulletinByEleve = memo((props) => {
                                                                 </Col>
                                                             </Row>
                                                             <br />
-    
+                                                            <Row>
+                                                                <Col sm="12">
+                                                                    <div className="container text-center">
+                                                                        <p>Nom de l'établissement
+                                                                            <br />
+                                                                            <smal>BP: Tel:</smal>
+                                                                        </p>
+
+                                                                    </div>
+                                                                </Col>
+                                                            </Row>
+
+
+
                                                         </Col>
                                                         <Col sm="4" lg="4">
-                                                            <p className="text-center">ETABLISSEMENT :   </p>
-                                                             <p>BP :   </p>
-                                                             <p>TEL :   </p>
-                                                                    
+                                                            <p className="text-center">REPUBLIC OF CAMEROON <br />
+                                                                Peace - Work - Fatherland <br />
+                                                                MINISTRY OF SECONDARY EDUCATION <br />
+
+                                                            </p>
+
+
                                                         </Col>
 
                                                     </Row>
-                                                     <Row className="mt-2">
+                                                    <Row className="mt-2">
                                                         <Col sm="4" lg="4">
 
 
                                                         </Col>
                                                         <Col sm="4" lg="4">
                                                             <p className="text-center">
-                                                                BULLETIN DE NOTE - {evaluation}
+                                                                Intitulé du bulletin
                                                                 <hr />
                                                                 2022 - 2023
                                                             </p>
-    
+
+
                                                         </Col>
                                                         <Col sm="4" lg="4">
 
@@ -605,22 +529,21 @@ const BulletinByEleve = memo((props) => {
                                                         </Col>
 
                                                     </Row>
-    
-                                            <Row>
+                                                    <Row>
                                                <Col sm="12" lg="12">
                                                     <Row style={{ fontSize: "10px" }}>
                                                       <Col sm="4" lg="4">
                                                         <div className="mt-2">
-                                                          <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {user.nom} {user.prénom}</p>
-                                                          <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : {user.date_naissance} à {user.lieu_naissance}</p>
-                                                          <p style={{ fontSize: "10px" }} className="mb-1">Sexe : {user.sexe}</p>
-                                                          <p style={{ fontSize: "10px" }} className="mb-1">Matricule : {user.matricule}</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass} </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Sexe : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Matricule : </p>
                                                         </div>
                                                       </Col>
                                                       <Col sm="4" lg="4">
                                                         <div className="mt-2">
-                                                          <p style={{ fontSize: "10px" }} className="mb-0">Classe : {user.other_in_user}</p>
-                                                          <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : {user.other_in_user}</p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Classe : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : </p>
                                                           <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal :</p>
                                                         </div>
                                                       </Col>
@@ -655,19 +578,20 @@ const BulletinByEleve = memo((props) => {
                                                                         <th><p>
                                                                             Disciplines 
                                                                         </p></th>
-                                                                     
+                                                                        
                                                                         <th>Note</th>
                                                                         <th>Coef</th>
                                                                         <th>NxC</th>
+                                                                       
                                                                         <th>Appreciation</th>
                                                                     </tr>
                                                                 </thead>
                                                             <tbody>
                                                                    
-                                                                {allnotessfe.map((item, sf) => (
-                                                                    <tr key={sf}>
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
-                                                                  
+                                                                      
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
@@ -678,16 +602,17 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind.intitule_groupe}</th>
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                 <tbody>
+
+                                                                <tbody>
                                                                    
-                                                                {allnotessfe1.map((item, sf1) => (
-                                                                    <tr key={sf1}>  
+                                                                {allnote_2.map((item, grp_2) => (
+                                                                    <tr key={grp_2}>
                                                                         <td>{item.matiere_note}</td>
-                                                                     
+                                                                      
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
@@ -698,16 +623,16 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind1.intitule_groupe}</th>
+                                                                        <th>{Info_grp_2.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                 <tbody>
+                                                              <tbody>
                                                                    
-                                                                {allnotessfe2.map((item, sf2) => (
-                                                                    <tr key={sf2}>
+                                                                {allnote_3.map((item, grp_3) => (
+                                                                    <tr key={grp_3}>
                                                                         <td>{item.matiere_note}</td>
-                                                                       
+                                                                      
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
@@ -718,17 +643,18 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind2.intitule_groupe}</th>
+                                                                        <th>{Info_grp_3.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
+
                                                                 <tbody>
 
                                                                     <tr>
                                                                        <td>RECAPITULATIFS</td>
-                                                                        <td></td>
-                                                                        <td></td>
-                                                                        <td></td>
+                                                                       
+                                                                        <td>{sumnotes}</td>
+                                                                        <td>{sumcoef}</td>
                                                                         <td>{sumnotesfinale}</td>
                                                                         <td></td>
                                                                     </tr>
@@ -948,74 +874,24 @@ const BulletinByEleve = memo((props) => {
 
                                                     </Row>
                                                     <Row>
-                                                        <Col sm="5" lg="5">
-                                                            <Row style={{ fontSize: "10px" }}>
-                                                                <Col sm="6" lg="6">
-                                                                    <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0" >Classe: {user.other_in_user}</p>
-                                                                        <p>Class</p>
-                                                                    </div>
-
-                                                                </Col>
-                                                                <Col sm="6" lg="6">
-                                                                    <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">Effectif:</p>
-                                                                        <p>Number</p>
-                                                                    </div>
-                                                                </Col>
-
-                                                            </Row>
-
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom et Prénom: {user.nom} {user.prenom}</p>
-                                                                <p>Name and Surname</p>
-                                                            </div>
-
-                                                            <div className="mt-1">
-                                                                <Row>
-                                                                    <Col sm="6" lg="6">
-                                                                        <div className="mt-1">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-1">Né(e) le: {user.date_naissance}</p>
-                                                                            <p>Born on</p>
-                                                                        </div>
-
-                                                                    </Col>
-                                                                    <Col sm="6" lg="6">
-                                                                        <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">A: {user.lieu_naissance}</p>
-                                                                            <p>AT</p>
-                                                                        </div>
-                                                                    </Col>
-
-                                                                </Row>
-                                                            </div>
-                                                            <div className="mt-1">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-1">Téléphone du parent ou tuteur:</p>
-                                                                <p>Parent's/guardian's Address</p>
-                                                            </div>
-
-                                                        </Col>
-                                                        <Col sm="5" lg="5">
-
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">N° Matricule:</p>
-                                                                <p>Registration N°</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: {classe} </p>
-                                                                <p>Repeater</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Sexe: {user.sexe}</p>
-                                                                <p>Sex</p>
-                                                            </div>
-                                                            <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Professeur principal:</p>
-                                                                <p>Class Master/Mistress</p>
-                                                            </div>
-
-                                                        </Col>
-                                                        <Col sm="2" lg="2">
+                                               <Col sm="12" lg="12">
+                                                    <Row style={{ fontSize: "10px" }}>
+                                                      <Col sm="4" lg="4">
+                                                        <div className="mt-2">
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass} </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Sexe : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-1">Matricule : </p>
+                                                        </div>
+                                                      </Col>
+                                                      <Col sm="4" lg="4">
+                                                        <div className="mt-2">
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Classe : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : </p>
+                                                          <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal :</p>
+                                                        </div>
+                                                      </Col>
+                                                            <Col sm="4" lg="4">
                                                             <div className="bd-example">
                                                                 <figure className="figure">
                                                                     <Image
@@ -1028,8 +904,9 @@ const BulletinByEleve = memo((props) => {
                                                             </div>
 
                                                         </Col>
-
                                                     </Row>
+                                                  </Col>
+                                                </Row>
                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
                                                             <Table
@@ -1045,7 +922,7 @@ const BulletinByEleve = memo((props) => {
                                                                         <th><p>
                                                                             Disciplines 
                                                                         </p></th>
-                                                                        <th>Subjects</th>
+                                                                    
                                                                         <th>Note</th>
                                                                         <th>Cote</th>
                                                                         <th>NxC</th>
@@ -1053,11 +930,12 @@ const BulletinByEleve = memo((props) => {
                                                                         <th>Appreciation</th>
                                                                     </tr>
                                                                 </thead>
-                                                            <tbody>
+                                                         <tbody>
                                                                    
-                                                                {allnotessfe.map((item, sf) => (
-                                                                    <tr key={sf}>
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
+                                                                      
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.coefficient_note}</td>
                                                                         <td>{item.note_finale}</td>
@@ -1068,54 +946,15 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind.intitule_groupe}</th>
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessfe1.map((item, sf1) => (
-                                                                    <tr key={sf1}>  
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.coefficient_note}</td>
-                                                                        <td>{item.note_finale}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allind1.intitule_groupe}</th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessfe2.map((item, sf2) => (
-                                                                    <tr key={sf2}>
-                                                                        <td>{item.matiere_note}</td> 
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.coefficient_note}</td>
-                                                                        <td>{item.note_finale}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allind2.intitule_groupe}</th>
-
-                                                                    </tr>
-                                                                </thead>
-
                                                                 <tbody>
 
                                                                     <tr>
                                                                        <td>SUMMARY</td>
-                                                                        <td></td>
+                                                                       
                                                                         <td>{sumnotes}</td>
                                                                         <td>{sumcoef}</td>
                                                                         <td>{sumnotesfinale}</td>
@@ -1289,7 +1128,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom :{elevesinclass}  </strong> </p>
 
                                                             </div>
 
@@ -1311,34 +1150,19 @@ const BulletinByEleve = memo((props) => {
                                                                  <thead>
                                                                     <tr>
                                                                         <th><p>Disciplines</p></th>
-                                                                       
                                                                         <th>Notes</th>
                                                                         <th>Appréciation</th>
                                                                     </tr>
                                                                 </thead>
-                                                              <tbody>
+                                                                <tbody>
                                                                    
-                                                                {allnotessfe.map((item, sf) => (
-                                                                    <tr key={sf}>
-                                                                       <td>{item.matiere_note}</td>
-                                                                       <td>{item.valeur_note}</td>
-                                                                       <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allind.intitule_groupe}</th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessfe1.map((item, sf1) => (
-                                                                    <tr key={sf1}>
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>    
+                                                                      
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
@@ -1346,30 +1170,10 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind1.intitule_groupe}</th>
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessfe2.map((item, sf2) => (
-                                                                    <tr key={sf2}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td> 
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allind2.intitule_groupe}</th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                          
-
-                                                            
                                                                 <tbody> 
 
                                                                     <tr>
@@ -1548,7 +1352,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {elevesinclass} </strong> </p>
 
                                                             </div>
 
@@ -1576,7 +1380,7 @@ const BulletinByEleve = memo((props) => {
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    {allnotespfe.map((item, pf) => (
+                                                                    {allnotespf.map((item, pf) => (
                                                                         <tr key={pf}>
                                                                           
                                                                             <td>{item.matiere_note}</td>
@@ -1775,7 +1579,7 @@ const BulletinByEleve = memo((props) => {
                                                                 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : {elevesinclass} </strong> </p>
 
                                                             </div>
 
@@ -1798,34 +1602,19 @@ const BulletinByEleve = memo((props) => {
                                                                    <tr>
                                                                   
                                                                     <th>Disciplines</th>
-                                                                    
-                                                                    <th>Mark</th>
+                                                                     <th>Mark</th>
                                                                     <th>Appreciation</th>
                                                                 </tr>
                                                                 </thead>
-                                                            <tbody>
+                                                           <tbody>
                                                                    
-                                                                {allnotessfe.map((item, sf) => (
-                                                                    <tr key={sf}>
-                                                                       <td>{item.matiere_note}</td>
-                                                                       <td>{item.valeur_note}</td>
-                                                                       <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allind.intitule_groupe}</th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessfe1.map((item, sf1) => (
-                                                                    <tr key={sf1}>
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>    
+                                                                      
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
@@ -1833,29 +1622,10 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind1.intitule_groupe}</th>
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessfe2.map((item, sf2) => (
-                                                                    <tr key={sf2}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td> 
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allind2.intitule_groupe}</th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                          
-
                                                                 <tbody>
 
                                                                     <tr>
@@ -2037,7 +1807,7 @@ const BulletinByEleve = memo((props) => {
                                                                 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :{elevesinclass}  </strong> </p>
 
                                                             </div>
 
@@ -2060,22 +1830,31 @@ const BulletinByEleve = memo((props) => {
                                                                    <tr>
                                                                   
                                                                     <th>Disciplines</th>
-                                                                    <th>Subjects</th>
+                                                                   
                                                                     <th>Mark</th>
                                                                     <th>Appreciation</th>
                                                                 </tr>
                                                                 </thead>
                                                             <tbody>
-                                                                {allnotespae.map((item, pa) => (
-                                                                    <tr key={pa}>
-                                                                        <td>{item.groupe_cm}</td>
+                                                                   
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
+                                                                      
                                                                         <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
+                                                               <thead>
+                                                                    <tr>
 
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
+
+                                                                    </tr>
+                                                                </thead>
                                                                 <tbody>
 
                                                                     <tr>
@@ -2263,7 +2042,7 @@ const BulletinByEleve = memo((props) => {
                                                                 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : {elevesinclass} </strong> </p>
 
                                                             </div>
 
@@ -2292,7 +2071,7 @@ const BulletinByEleve = memo((props) => {
                                                                 </tr>
                                                                 </thead>
                                                             <tbody>
-                                                                {allnotespae.map((item, pa) => (
+                                                                {allnotespa.map((item, pa) => (
                                                                     <tr key={pa}>
                                                                        <td>{item.matiere_note}</td>
                                                                         <td>{item.competence_visee_note}</td>
@@ -2483,7 +2262,7 @@ const BulletinByEleve = memo((props) => {
                                                                 
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name :</strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : {elevesinclass} </strong> </p>
 
                                                             </div>
 
@@ -2512,7 +2291,7 @@ const BulletinByEleve = memo((props) => {
                                                                 </tr>
                                                                 </thead>
                                                             <tbody>
-                                                                {allnotespae.map((item, pa) => (
+                                                                {allnotespa.map((item, pa) => (
                                                                     <tr key={pa}>  
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.competence_visee_note}</td>
@@ -2714,7 +2493,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {allind.intitule_groupe} </strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {elevesinclass}  </strong> </p>
 
                                                             </div>
 
@@ -2736,35 +2515,21 @@ const BulletinByEleve = memo((props) => {
                                                                 <thead>
                                                                 <tr>
                                                                     <th><p>Compétences</p></th>
-                                                                    
+                                                                  
                                                                     <th>Note</th>
                                                                     <th>Appréciation</th>
                                                                     <th>/</th>
                                                                 </tr>
                                                             </thead>
-                                                             <tbody>
+                                                          <tbody>
                                                                    
-                                                                {allnotessfe.map((item, sf) => (
-                                                                    <tr key={sf}>
-                                                                       <td>{item.matiere_note}</td>
-                                                                       <td>{item.valeur_note}</td>
-                                                                       <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allind.intitule_groupe}</th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessfe1.map((item, sf1) => (
-                                                                    <tr key={sf1}>
+                                                                {allnote_1.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
                                                                         <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>    
+                                                                      
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.coefficient_note}</td>
+                                                                        <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
@@ -2772,29 +2537,10 @@ const BulletinByEleve = memo((props) => {
                                                                <thead>
                                                                     <tr>
 
-                                                                        <th>{allind1.intitule_groupe}</th>
+                                                                        <th>{Info_grp_1.intitule_groupe}</th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                 <tbody>
-                                                                   
-                                                                {allnotessfe2.map((item, sf2) => (
-                                                                    <tr key={sf2}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td> 
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allind2.intitule_groupe}</th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                          
-
                                                                 
                                                                 <tbody>
 
@@ -2934,7 +2680,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <p>Repeater</p>
                                                             </div>
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {allind.intitule_groupe} </strong> </p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {elevesinclass} </strong> </p>
 
                                                             </div>
 
@@ -2963,7 +2709,7 @@ const BulletinByEleve = memo((props) => {
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                {allnotese.map((item, index) => (
+                                                                {allnotes.map((item, index) => (
                                                                     <tr key={index}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.competence_visee_note}</td>
@@ -3038,18 +2784,13 @@ const BulletinByEleve = memo((props) => {
 
 
                                                         </div>
-
-
+                                                                    
                                                     </Row>
                                                 </div>
                                             </Card.Body>
                                         </Card>
                                     </Col>
-
-
                                 </Row>
-
-
 
                             </div>
                         </Card.Body>
@@ -3071,7 +2812,8 @@ const BulletinByEleve = memo((props) => {
     </div>}
     
 </div>}
-        </Fragment>
+       
+        </Fragment>ent>
     );
 })
 
