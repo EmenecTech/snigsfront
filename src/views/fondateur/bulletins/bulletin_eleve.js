@@ -819,6 +819,7 @@ const BulletinByEleve = memo((props) => {
                                                         <Col sm="4" lg="4">
                                                             <p className="text-center">REPUBLIC OF CAMEROON <br />
                                                                 Peace - Work - Fatherland <br />
+        
                                                                 MINISTRY OF SECONDARY EDUCATION <br />
 
                                                             </p>
@@ -835,8 +836,10 @@ const BulletinByEleve = memo((props) => {
                                                         <Col sm="4" lg="4">
                                                             <p className="text-center">
                                                                Bulletin De Notes {evaluation}
-                                                                <hr />
-                                                                2022 - 2023
+                                                            </p>
+                                                            <hr />
+                                                            <p>
+                                                               2022 - 2023
                                                             </p>
 
 
