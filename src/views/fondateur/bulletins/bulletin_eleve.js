@@ -248,8 +248,8 @@ const BulletinByEleve = memo((props) => {
         setAllNote_1(res.data);
       })
     };
-    console.log(allnote_1.existgrp);
-     console.log(allnote_10.existgrp);
+    
+    
     
     //////////////////////////////////////////////
    
@@ -376,7 +376,9 @@ const BulletinByEleve = memo((props) => {
       })
     };
     
-   
+     console.log(allnote_1.existgrp);
+     console.log(allnote_10.existgrp);
+    
     //////////////////////////////////////////////
     
     
