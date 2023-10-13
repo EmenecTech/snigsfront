@@ -1204,9 +1204,9 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_2.groupe}</th>
-                                                                        <th>{sumallnote_2}</th>
-                                                                        <th>{sumcoefnote_2}</th>
-                                                                        <th>{sumfinalnote_2}</th>
+                                                                        <th></th>
+                                                                        <th></th>
+                                                                        <th></th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -1228,9 +1228,9 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_3.groupe}</th>
-                                                                        <th>{sumallnote_3}</th>
-                                                                        <th>{sumcoefnote_3}</th>
-                                                                        <th>{sumfinalnote_3}</th>
+                                                                        <th></th>
+                                                                        <th></th>
+                                                                        <th></th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -1562,9 +1562,9 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_2.groupe}</th>
-                                                                        <th>{sumallnote_2}</th>
-                                                                        <th>{sumcoefnote_2}</th>
-                                                                        <th>{sumfinalnote_2}</th>
+                                                                        <th></th>
+                                                                        <th></th>
+                                                                        <th></th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -1586,9 +1586,9 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_3.groupe}</th>
-                                                                        <th>{sumallnote_3}</th>
-                                                                        <th>{sumcoefnote_3}</th>
-                                                                        <th>{sumfinalnote_3}</th>
+                                                                        <th></th>
+                                                                        <th></th>
+                                                                        <th></th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -1832,7 +1832,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_2.groupe}</th>
-                                                                        <th>{sumallnote_2}</th>
+                                                                        <th></th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -1851,7 +1851,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_3.groupe}</th>
-                                                                        <th>{sumallnote_3}</th>
+                                                                        <th></th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -2835,7 +2835,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_2.groupe}</th>
-                                                                        <th>{sumallnote_2}</th>
+                                                                        <th></th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -2854,7 +2854,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_3.groupe}</th>
-                                                                        <th>{sumallnote_3}</th>
+                                                                        <th></th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -3330,7 +3330,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_2.groupe}</th>
-                                                                        <th>{sumallnote_2}</th>
+                                                                        <th></th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -3349,7 +3349,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_3.groupe}</th>
-                                                                        <th>{sumallnote_3}</th>
+                                                                        <th></th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -4282,7 +4282,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_2.groupe}</th>
-                                                                        <th>{sumallnote_2}</th>
+                                                                        <th></th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -4301,7 +4301,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_3.groupe}</th>
-                                                                        <th>{sumallnote_3}</th>
+                                                                        <th></th>
                                                                         <th></th>
 
                                                                     </tr>
