@@ -834,7 +834,7 @@ const BulletinByEleve = memo((props) => {
                                                         </Col>
                                                         <Col sm="4" lg="4">
                                                             <p className="text-center">
-                                                                Intitulé du bulletin
+                                                               Bulletin De Notes Séquence 1
                                                                 <hr />
                                                                 2022 - 2023
                                                             </p>
