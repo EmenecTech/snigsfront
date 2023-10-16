@@ -2861,9 +2861,9 @@ const BulletinByEleve = memo((props) => {
 
 
                                                     </Row>
-                                                    <Row>
+                                                   <Row>
                                                         <div className="table-responsive border-bottom my-3">
-                                                         {allnoteprim_1.groupe === "No" || allnoteprim_1.groupe ?  null : (<div>
+                                                         {allnoteprim_1.existgrp === 0 || allnoteprim_1.existgrp ? (<div>
                                                             <Table
                                                                 responsive
                                                                 striped
@@ -2902,7 +2902,7 @@ const BulletinByEleve = memo((props) => {
                                                             </thead>
                                                             </Table> 
                                     
-                                                        </div>)}
+                                                        </div>) : null }
                                                             
                                                                 
 
