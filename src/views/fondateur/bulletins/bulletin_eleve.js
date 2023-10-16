@@ -5054,7 +5054,7 @@ const BulletinByEleve = memo((props) => {
                                                         <tbody>
                                                         {allnoteprim_5.listnotes  && allnoteprim_5.listnotes.map((item, grp_5) => (
                                                             <tr key={grp_5}>
-                                                                <td>{item.competence_visee_note)}</td>
+                                                                <td>{item.competence_visee_note}</td>
                                                                 <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                 <td>{item.appreciation_note}</td>
                                                             </tr>
@@ -5110,7 +5110,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_8.listnotes && allnoteprim_8.listnotes.map((item, grp_8) => (
                                                                 <tr key={grp_8}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5130,7 +5130,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_9.listnotes && allnoteprim_9.listnotes.map((item, grp_9) => (
                                                                 <tr key={grp_9}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5149,7 +5149,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_10.listnotes && allnoteprim_10.listnotes.map((item, grp_10) => (
                                                                 <tr key={grp_10}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5169,7 +5169,7 @@ const BulletinByEleve = memo((props) => {
                                                            
                                                         {allnoteprim_11.listnotes && allnoteprim_11.listnotes.map((item, grp_11) => (
                                                             <tr key={grp_11}>
-                                                                <td>{item.competence_visee_note)}</td>
+                                                                <td>{item.competence_visee_note}</td>
                                                                 <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                 <td>{item.appreciation_note}</td>
                                                             </tr>
@@ -5188,7 +5188,7 @@ const BulletinByEleve = memo((props) => {
                                                         <tbody>
                                                         {allnoteprim_12.listnotes  && allnoteprim_12.listnotes.map((item, grp_12) => (
                                                                 <tr key={grp_12}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5207,7 +5207,7 @@ const BulletinByEleve = memo((props) => {
                                                         <tbody>
                                                         {allnoteprim_13.listnotes  && allnoteprim_13.listnotes.map((item, grp_13) => (
                                                                 <tr key={grp_13}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5227,7 +5227,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_14.listnotes  && allnoteprim_14.listnotes.map((item, grp_14) => (
                                                                 <tr key={grp_14}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5247,7 +5247,7 @@ const BulletinByEleve = memo((props) => {
                                                            
                                                         {allnoteprim_15.listnotes && allnoteprim_15.listnotes.map((item, grp_15) => (
                                                             <tr key={grp_15}>
-                                                                <td>{item.competence_visee_note)}</td>
+                                                                <td>{item.competence_visee_note}</td>
                                                                 <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                 <td>{item.appreciation_note}</td>
                                                             </tr>
@@ -5267,7 +5267,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_16.listnotes && allnoteprim_16.listnotes.map((item, grp_16) => (
                                                                 <tr key={grp_16}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5287,7 +5287,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_17.listnotes && allnoteprim_17.listnotes.map((item, grp_17) => (
                                                                 <tr key={grp_17}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5306,7 +5306,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_18.listnotes  && allnoteprim_18.listnotes.map((item, grp_18) => (
                                                                 <tr key={grp_18}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5326,7 +5326,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_19.listnotes  && allnoteprim_19.listnotes.map((item, grp_19) => (
                                                                 <tr key={grp_19}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5346,7 +5346,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_20.listnotes && allnoteprim_20.listnotes.map((item, grp_20) => (
                                                                 <tr key={grp_20}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5366,7 +5366,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_21.listnotes  && allnoteprim_21.listnotes.map((item, grp_21) => (
                                                                 <tr key={grp_21}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5386,7 +5386,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_22.listnotes  && allnoteprim_22.listnotes.map((item, grp_22) => (
                                                                 <tr key={grp_22}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5406,7 +5406,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_23.listnotes  && allnoteprim_23.listnotes.map((item, grp_23) => (
                                                                 <tr key={grp_23}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5426,7 +5426,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_24.listnotes  && allnoteprim_24.listnotes.map((item, grp_24) => (
                                                                 <tr key={grp_24}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5445,7 +5445,7 @@ const BulletinByEleve = memo((props) => {
                                                         <tbody>
                                                         {allnoteprim_25.listnotes && allnoteprim_25.listnotes.map((item, grp_25) => (
                                                             <tr key={grp_25}>
-                                                                <td>{item.competence_visee_note)}</td>
+                                                                <td>{item.competence_visee_note}</td>
                                                                 <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                 <td>{item.appreciation_note}</td>
                                                             </tr>
@@ -5465,7 +5465,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_26.listnotes && allnoteprim_26.listnotes.map((item, grp_26) => (
                                                                 <tr key={grp_26}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5485,7 +5485,7 @@ const BulletinByEleve = memo((props) => {
                                                                    
                                                                 {allnoteprim_27.listnotes && allnoteprim_27.listnotes.map((item, grp_27) => (
                                                                     <tr key={grp_27}>
-                                                                        <td>{item.competence_visee_note)}</td>
+                                                                        <td>{item.competence_visee_note}</td>
                                                                         <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
@@ -5505,7 +5505,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_28.listnotes  && allnoteprim_28.listnotes.map((item, grp_28) => (
                                                                 <tr key={grp_28}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5525,7 +5525,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_29.listnotes && allnoteprim_29.listnotes.map((item, grp_29) => (
                                                                 <tr key={grp_29}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -5545,7 +5545,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_30.listnotes && allnoteprim_30.listnotes.map((item, grp_30) => (
                                                                 <tr key={grp_30}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7429,7 +7429,7 @@ const BulletinByEleve = memo((props) => {
                                                         <tbody>
                                                         {allnoteprim_5.listnotes  && allnoteprim_5.listnotes.map((item, grp_5) => (
                                                             <tr key={grp_5}>
-                                                                <td>{item.competence_visee_note)}</td>
+                                                                <td>{item.competence_visee_note}</td>
                                                                 <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                 <td>{item.appreciation_note}</td>
                                                             </tr>
@@ -7485,7 +7485,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_8.listnotes && allnoteprim_8.listnotes.map((item, grp_8) => (
                                                                 <tr key={grp_8}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7505,7 +7505,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_9.listnotes && allnoteprim_9.listnotes.map((item, grp_9) => (
                                                                 <tr key={grp_9}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7524,7 +7524,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_10.listnotes && allnoteprim_10.listnotes.map((item, grp_10) => (
                                                                 <tr key={grp_10}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7544,7 +7544,7 @@ const BulletinByEleve = memo((props) => {
                                                            
                                                         {allnoteprim_11.listnotes && allnoteprim_11.listnotes.map((item, grp_11) => (
                                                             <tr key={grp_11}>
-                                                                <td>{item.competence_visee_note)}</td>
+                                                                <td>{item.competence_visee_note}</td>
                                                                 <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                 <td>{item.appreciation_note}</td>
                                                             </tr>
@@ -7563,7 +7563,7 @@ const BulletinByEleve = memo((props) => {
                                                         <tbody>
                                                         {allnoteprim_12.listnotes  && allnoteprim_12.listnotes.map((item, grp_12) => (
                                                                 <tr key={grp_12}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7582,7 +7582,7 @@ const BulletinByEleve = memo((props) => {
                                                         <tbody>
                                                         {allnoteprim_13.listnotes  && allnoteprim_13.listnotes.map((item, grp_13) => (
                                                                 <tr key={grp_13}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7602,7 +7602,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_14.listnotes  && allnoteprim_14.listnotes.map((item, grp_14) => (
                                                                 <tr key={grp_14}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7622,7 +7622,7 @@ const BulletinByEleve = memo((props) => {
                                                            
                                                         {allnoteprim_15.listnotes && allnoteprim_15.listnotes.map((item, grp_15) => (
                                                             <tr key={grp_15}>
-                                                                <td>{item.competence_visee_note)}</td>
+                                                                <td>{item.competence_visee_note}</td>
                                                                 <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                 <td>{item.appreciation_note}</td>
                                                             </tr>
@@ -7642,7 +7642,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_16.listnotes && allnoteprim_16.listnotes.map((item, grp_16) => (
                                                                 <tr key={grp_16}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7662,7 +7662,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_17.listnotes && allnoteprim_17.listnotes.map((item, grp_17) => (
                                                                 <tr key={grp_17}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7681,7 +7681,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_18.listnotes  && allnoteprim_18.listnotes.map((item, grp_18) => (
                                                                 <tr key={grp_18}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7701,7 +7701,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_19.listnotes  && allnoteprim_19.listnotes.map((item, grp_19) => (
                                                                 <tr key={grp_19}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7721,7 +7721,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_20.listnotes && allnoteprim_20.listnotes.map((item, grp_20) => (
                                                                 <tr key={grp_20}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7741,7 +7741,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_21.listnotes  && allnoteprim_21.listnotes.map((item, grp_21) => (
                                                                 <tr key={grp_21}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7761,7 +7761,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_22.listnotes  && allnoteprim_22.listnotes.map((item, grp_22) => (
                                                                 <tr key={grp_22}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7781,7 +7781,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_23.listnotes  && allnoteprim_23.listnotes.map((item, grp_23) => (
                                                                 <tr key={grp_23}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7801,7 +7801,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_24.listnotes  && allnoteprim_24.listnotes.map((item, grp_24) => (
                                                                 <tr key={grp_24}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7820,7 +7820,7 @@ const BulletinByEleve = memo((props) => {
                                                         <tbody>
                                                         {allnoteprim_25.listnotes && allnoteprim_25.listnotes.map((item, grp_25) => (
                                                             <tr key={grp_25}>
-                                                                <td>{item.competence_visee_note)}</td>
+                                                                <td>{item.competence_visee_note}</td>
                                                                 <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                 <td>{item.appreciation_note}</td>
                                                             </tr>
@@ -7840,7 +7840,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_26.listnotes && allnoteprim_26.listnotes.map((item, grp_26) => (
                                                                 <tr key={grp_26}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7860,7 +7860,7 @@ const BulletinByEleve = memo((props) => {
                                                                    
                                                                 {allnoteprim_27.listnotes && allnoteprim_27.listnotes.map((item, grp_27) => (
                                                                     <tr key={grp_27}>
-                                                                        <td>{item.competence_visee_note)}</td>
+                                                                        <td>{item.competence_visee_note}</td>
                                                                         <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
@@ -7880,7 +7880,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_28.listnotes  && allnoteprim_28.listnotes.map((item, grp_28) => (
                                                                 <tr key={grp_28}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7900,7 +7900,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_29.listnotes && allnoteprim_29.listnotes.map((item, grp_29) => (
                                                                 <tr key={grp_29}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
@@ -7920,7 +7920,7 @@ const BulletinByEleve = memo((props) => {
                                                                
                                                             {allnoteprim_30.listnotes && allnoteprim_30.listnotes.map((item, grp_30) => (
                                                                 <tr key={grp_30}>
-                                                                    <td>{item.competence_visee_note)}</td>
+                                                                    <td>{item.competence_visee_note}</td>
                                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                     <td>{item.appreciation_note}</td>
                                                                 </tr>
