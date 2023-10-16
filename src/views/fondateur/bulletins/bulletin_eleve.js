@@ -2863,7 +2863,7 @@ const BulletinByEleve = memo((props) => {
                                                     </Row>
                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
-                                                         {allnoteprim_1.existgrp === 0 || allnoteprim_1.existgrp ? null : (
+                                                         {allnoteprim_1.existgrp === 0 || allnoteprim_1.existgrp ? (<div>aaa</div>) : (
                                                             <Table
                                                                 responsive
                                                                 striped
