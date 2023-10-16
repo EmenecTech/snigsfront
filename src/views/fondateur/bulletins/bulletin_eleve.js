@@ -2086,7 +2086,7 @@ const BulletinByEleve = memo((props) => {
                                                                         <th></th>
                                                                     </tr>
                                                                 </thead>
-                                                       </table>
+                                                       </Table>
                                                                     ) }   
                                                                 
                                                          
