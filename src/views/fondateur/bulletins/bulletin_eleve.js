@@ -1166,8 +1166,6 @@ const BulletinByEleve = memo((props) => {
                                                                     </tr>
                                                                     </thead>
 
-                                                            {allnote_1.existgrp === 0 || allnote_1.existgrp ? null : (
-                                                                    <React.Fragment>
                                                                         <tbody>
                                                                             {allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
                                                                                 <tr key={grp_1}>
@@ -1188,10 +1186,7 @@ const BulletinByEleve = memo((props) => {
                                                                                 <th></th>
                                                                             </tr>
                                                                         </thead> 
-                                                                    </React.Fragment>
-                                                                )}
-                                                    {allnote_2.existgrp === 0 || allnote_2.existgrp ? null : (
-                                                        <React.Fragment>
+                                                
                                                              <tbody>
                                                                 {allnote_2.listnotes  && allnote_2.listnotes.map((item, grp_2) => (
                                                                     <tr key={grp_2}>
@@ -1216,7 +1211,7 @@ const BulletinByEleve = memo((props) => {
                                                                     </tr>
                                                                 </thead>
                                                                 </React.Fragment>
-                                                                )}
+                                                           
                                                            {allnote_3.existgrp === 0 || allnote_3.existgrp ? null : (
                                                         <React.Fragment>           
                                                               <tbody>
