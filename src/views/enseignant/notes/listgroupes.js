@@ -105,8 +105,8 @@ const EnseignantListGroupes = () => {
         http.post('/notes', inputs).then((res) => {
             
         })
-      
-        console.log(inputs)
+        
+        window.location.reload(false); 
     }
 
     const [matieres, setmatieres] = useState([]);
