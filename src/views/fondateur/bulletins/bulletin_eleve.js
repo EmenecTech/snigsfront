@@ -2052,6 +2052,7 @@ const BulletinByEleve = memo((props) => {
                                                     </Row>
                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
+                                             {allnote_1.existgrp === 0 || allnote_1.existgrp ? null : (
                                                             <Table
                                                                 responsive
                                                                 striped
@@ -2066,9 +2067,10 @@ const BulletinByEleve = memo((props) => {
                                                                         <th>Appréciation</th>
                                                                     </tr>
                                                                 </thead>
-                                                             <tbody>
-                                                                   
-                                                                {allnote_1.listnotes && allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
+                                                    
+                                                                 <tbody>
+                                                                        
+                                                                   {allnote_1.listnotes && allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
                                                                     <tr key={grp_1}>
                                                                    
                                                                         <td>{item.matiere_note}</td>
@@ -2079,16 +2081,30 @@ const BulletinByEleve = memo((props) => {
                                                             </tbody>
                                                                <thead>
                                                                     <tr>
-
                                                                         <th>{allnote_1.groupe}</th>
                                                                          <th>{allnote_1.sumnote}</th>
                                                                         <th></th>
-
                                                                     </tr>
                                                                 </thead>
+                                                       </table>
+                                                                    ) }   
+                                                                
                                                          
                                                                
-                                                            
+                                                         <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
+                                                                 <thead>
+                                                                    <tr>
+                                                                        <th><p>Disciplines</p></th>
+                                                                        <th>Notes</th>
+                                                                        <th>Appréciation</th>
+                                                                    </tr>
+                                                                </thead>   
                                                         <tbody>
                                                                    
                                                                 {allnote_2.listnotes && allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
@@ -3681,7 +3697,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_1.groupe}</th>
-                                                                         <th>{allnote_1.sumnote}</th>
+                                                                        <th>{allnote_1.sumnote}</th>
                                                                         <th></th>
 
                                                                     </tr>
