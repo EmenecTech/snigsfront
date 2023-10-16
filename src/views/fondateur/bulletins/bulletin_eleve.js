@@ -1188,7 +1188,7 @@ const BulletinByEleve = memo((props) => {
                                                                         </thead> 
                                                 
                                                              <tbody>
-                                                                {allnote_2.listnotes  && allnote_2.listnotes.map((item, grp_2) => (
+                                                                    {allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
                                                                     <tr key={grp_2}>
                                                                         <td>{item.matiere_note}</td>
                                                                       
@@ -1197,7 +1197,8 @@ const BulletinByEleve = memo((props) => {
                                                                         <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
-                                                                ))}
+                                                                         ))}
+                                                    
                                                             </tbody>
                                                                <thead>
                                                                     <tr>
@@ -1211,9 +1212,7 @@ const BulletinByEleve = memo((props) => {
                                                                     </tr>
                                                                 </thead>
                                                             
-                                                           
-                                                           {allnote_3.existgrp === 0 || allnote_3.existgrp ? null : (
-                                                        <React.Fragment>           
+                                                               
                                                               <tbody>
                                                                    
                                                                 {allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
@@ -1225,7 +1224,8 @@ const BulletinByEleve = memo((props) => {
                                                                         <td>{item.note_finale}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
-                                                                ))}
+                                                                   ))}
+                                                          
                                                             </tbody>
                                                                <thead>
                                                                     <tr>
@@ -1238,8 +1238,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                             </React.Fragment>
-                                                                )}
+                                                          
                                                                     
                                                                 <tbody>
 
