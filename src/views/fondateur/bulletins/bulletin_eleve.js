@@ -2727,7 +2727,7 @@ const BulletinByEleve = memo((props) => {
                                                             
                                                         <tbody>
                                                                    
-                                                                {allnote_2.map((item, grp_2) => (
+                                                                {allnote_2.listnotes && allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
                                                                     <tr key={grp_2}>
                                                                     
                                                                         <td>{item.competence_visee_note}</td>
@@ -2747,7 +2747,7 @@ const BulletinByEleve = memo((props) => {
                                                                 </thead>
                                                         <tbody>
                                                                    
-                                                                {allnote_3.map((item, grp_3) => (
+                                                                {allnote_3.listnotes && allnote_3.listnotes && allnote3.listnotes.map((item, grp_3) => (
                                                                     <tr key={grp_3}>
                                                                       
                                                                         <td>{item.competence_visee_note}</td>
@@ -2767,7 +2767,7 @@ const BulletinByEleve = memo((props) => {
                                                                 </thead>
                                                       
                                                          <tbody>
-                                                            {allnote_4.map((item, grp_4) => (
+                                                            {allnote_4.listnotes && allnote_4.listnotes && allnote_4.listnotes.map((item, grp_4) => (
                                                                     <tr key={grp_4}>
                                                                         <td>{item.competence_visee_note}</td>
                                                                         <td>{item.valeur_note}</td>
@@ -2786,7 +2786,7 @@ const BulletinByEleve = memo((props) => {
                                                                 </thead>
                                                      
                                                         <tbody>
-                                                             {allnote_5.map((item, grp_5) => (
+                                                             {allnote_5.listnotes && allnote_5.listnotes && allnote_5.listnotes.map((item, grp_5) => (
                                                                     <tr key={grp_5}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
