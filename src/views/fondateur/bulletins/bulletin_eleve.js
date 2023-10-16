@@ -2724,7 +2724,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_1.groupe}</th>
-                                                                         <th>{allnote_1.sumnote}/{item.coefficient_note}</th>
+                                                                         <th>{allnote_1.sumnote}</th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -2749,7 +2749,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_2.groupe}</th>
-                                                                        <th>{allnote_2.sumnote}/{item.coefficient_note}</th>
+                                                                        <th>{allnote_2.sumnote}</th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -2773,7 +2773,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_3.groupe}</th>
-                                                                        <th>{allnote_3.sumnote}/{item.coefficient_note}</th>
+                                                                        <th>{allnote_3.sumnote}</th>
                                                                         <th></th>
 
                                                                     </tr>
@@ -2796,7 +2796,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <tr>
 
                                                                         <th>{allnote_4.groupe}</th>
-                                                                        <th>{allnote_4.sumnote}/{item.coefficient_note}</th>
+                                                                        <th>{allnote_4.sumnote}</th>
                                                                         <th></th>
 
                                                                     </tr>
