@@ -447,7 +447,7 @@ const BulletinByEleve = memo((props) => {
     }, []);
 
     const fetchAllNoteprim_9 = () => {
-        http.get(' /all/prim/notes_9/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+        http.get('/all/prim/notes_9/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
         setAllNoteprim_1(res.data);
       })
     };
