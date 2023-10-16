@@ -2903,7 +2903,7 @@ const BulletinByEleve = memo((props) => {
                                                             </Table> 
                                                                 )}
 
-                                                        {allnoteprim_1.existgrp === 0 || allnoteprim_1.existgrp ? null : (
+                                                        {allnoteprim_2.existgrp === 0 || allnoteprim_2.existgrp ? null : (
                                                              <Table
                                                                 responsive
                                                                 striped
