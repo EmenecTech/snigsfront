@@ -1190,7 +1190,8 @@ const BulletinByEleve = memo((props) => {
                                                                         </thead> 
                                                                     </React.Fragment>
                                                                 )}
-
+                                                    {allnote_2.existgrp === 0 || allnote_2.existgrp ? null : (
+                                                        <React.Fragment>
                                                              <tbody>
                                                                 {allnote_2.listnotes  && allnote_2.listnotes.map((item, grp_2) => (
                                                                     <tr key={grp_2}>
@@ -1214,6 +1215,10 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
+                                                                </React.Fragment>
+                                                                )}
+                                                           {allnote_3.existgrp === 0 || allnote_3.existgrp ? null : (
+                                                        <React.Fragment>           
                                                               <tbody>
                                                                    
                                                                 {allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
@@ -1238,7 +1243,9 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-
+                                                             </React.Fragment>
+                                                                )}
+                                                                    
                                                                 <tbody>
 
                                                                     <tr>
@@ -1522,7 +1529,9 @@ const BulletinByEleve = memo((props) => {
                                                                        
                                                                         <th>Appreciation</th>
                                                                     </tr>
-                                                                </thead>
+                                                               </thead>
+                                                {allnote_1.existgrp === 0 || allnote_1.existgrp ? null : (
+                                                    <React.Fragment>   
                                                          <tbody>
                                                                    
                                                                 {allnote_1.listnotes && allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
@@ -1547,8 +1556,11 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-
-                                                                <tbody>
+                                                                </React.Fragment>
+                                                                )}
+                                                    {allnote_2.existgrp === 0 || allnote_2.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                        <tbody>
                                                                    
                                                                 {allnote_2.listnotes  && allnote_2.listnotes.map((item, grp_2) => (
                                                                     <tr key={grp_2}>
@@ -1572,7 +1584,12 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                              <tbody>
+                                                       </React.Fragment>
+                                                                )}
+
+                                                                     {allnote_3.existgrp === 0 || allnote_3.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                         <tbody>
                                                                    
                                                                 {allnote_3.listnotes  && allnote_3.listnotes.map((item, grp_3) => (
                                                                     <tr key={grp_3}>
@@ -1596,6 +1613,9 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                             
 
                                                                 <tbody>
 
@@ -1801,7 +1821,9 @@ const BulletinByEleve = memo((props) => {
                                                                         <th>Appréciation</th>
                                                                     </tr>
                                                                 </thead>
-                                                                <tbody>
+                                                                {allnote_1.existgrp === 0 || allnote_1.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                         <tbody>
                                                                    
                                                                 {allnote_1.listnotes && allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
                                                                     <tr key={grp_1}>
@@ -1820,8 +1842,12 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-
-                                                                <tbody>
+                                                       </React.Fragment>
+                                                                )}     
+                                                               
+                                                              {allnote_2.existgrp === 0 || allnote_2.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                        <tbody>
                                                                    
                                                                 {allnote_2.map((item, grp_2) => (
                                                                     <tr key={grp_2}>
@@ -1840,7 +1866,11 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                              <tbody>
+                                                       </React.Fragment>
+                                                                )}
+                                                             {allnote_3.existgrp === 0 || allnote_3.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                        <tbody>
                                                                    
                                                                 {allnote_3.map((item, grp_3) => (
                                                                     <tr key={grp_3}>
@@ -1859,9 +1889,13 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                            <tbody>
-                                                                   
-                                                                {allnote_4.map((item, grp_4) => (
+                                                       </React.Fragment>
+                                                                )}    
+
+                                                     {allnote_4.existgrp === 0 || allnote_4.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                         <tbody>
+                                                            {allnote_4.map((item, grp_4) => (
                                                                     <tr key={grp_4}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
@@ -1878,9 +1912,13 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                            <tbody>
-                                                                   
-                                                                {allnote_5.map((item, grp_5) => (
+                                                       </React.Fragment>
+                                                                )}
+
+                                                    {allnote_5.existgrp === 0 || allnote_5.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                        <tbody>
+                                                             {allnote_5.map((item, grp_5) => (
                                                                     <tr key={grp_5}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
@@ -1897,28 +1935,33 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
+                                                       </React.Fragment>
+                                                                )}  
+                                                 {allnote_6.existgrp === 0 || allnote_6.existgrp ? null : (
+                                                       <React.Fragment> 
                                                             <tbody>
-                                                                   
-                                                                {allnote_6.map((item, grp_6) => (
-                                                                    <tr key={grp_6}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_6.groupe}</th>
-                                                                        <th>{allnote_6.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                     <tbody>
-                                                                   
-                                                                {allnote_7.map((item, grp_7) => (
+                                                                    {allnote_6.map((item, grp_6) => (
+                                                                        <tr key={grp_6}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+                                                                            <th>{allnote_6.groupe}</th>
+                                                                            <th>{allnote_6.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                 {allnote_7.existgrp === 0 || allnote_7.existgrp ? null : (
+                                                      <React.Fragment> 
+                                                        <tbody>
+                                                          {allnote_7.map((item, grp_7) => (
                                                                     <tr key={grp_7}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
@@ -1928,71 +1971,85 @@ const BulletinByEleve = memo((props) => {
                                                             </tbody>
                                                                <thead>
                                                                     <tr>
-
                                                                         <th>{allnote_7.groupe}</th>
                                                                         <th>{allnote_7.sumnote}</th>
                                                                         <th></th>
 
                                                                     </tr>
                                                                 </thead>
-                                                                     <tbody>
-                                                                   
-                                                                {allnote_8.map((item, grp_8) => (
-                                                                    <tr key={grp_8}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_8.groupe}</th>
-                                                                        <th>{allnote_8.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
+                                                        </React.Fragment>
+                                                                )} 
+                                                 {allnote_8.existgrp === 0 || allnote_8.existgrp ? null : (
+                                                       <React.Fragment> 
                                                             <tbody>
-                                                                   
-                                                                {allnote_9.map((item, grp_9) => (
-                                                                    <tr key={grp_9}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_9.groupe}</th>
-                                                                        <th>{allnote_9.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
+                                                                       
+                                                                    {allnote_8.map((item, grp_8) => (
+                                                                        <tr key={grp_8}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_8.groupe}</th>
+                                                                            <th>{allnote_8.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                     {allnote_9.existgrp === 0 || allnote_9.existgrp ? null : (
+                                                       <React.Fragment> 
                                                              <tbody>
-                                                                   
-                                                                {allnote_10.map((item, grp_10) => (
-                                                                    <tr key={grp_10}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_10.groupe}</th>
-                                                                        <th>{allnote_10.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
+                                                                       
+                                                                    {allnote_9.map((item, grp_9) => (
+                                                                        <tr key={grp_9}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+                                                                            <th>{allnote_9.groupe}</th>
+                                                                            <th>{allnote_9.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}            
+                                                    {allnote_10.existgrp === 0 || allnote_10.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_10.map((item, grp_10) => (
+                                                                        <tr key={grp_10}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_10.groupe}</th>
+                                                                            <th>{allnote_10.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                    {allnote_11.existgrp === 0 || allnote_11.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                         <tbody>
                                                                    
                                                                 {allnote_11.map((item, grp_11) => (
                                                                     <tr key={grp_11}>
@@ -2011,64 +2068,78 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                                     <tbody>
-                                                                   
-                                                                {allnote_12.map((item, grp_12) => (
-                                                                    <tr key={grp_12}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_12.groupe}</th>
-                                                                        <th>{allnote_12.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                             <tbody>
-                                                                   
-                                                                {allnote_13.map((item, grp_13) => (
-                                                                    <tr key={grp_13}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_13.groupe}</th>
-                                                                        <th>{allnote_13.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                     {allnote_12.existgrp === 0 || allnote_12.existgrp ? null : (
+                                                       <React.Fragment> 
                                                             <tbody>
-                                                                   
-                                                                {allnote_14.map((item, grp_14) => (
-                                                                    <tr key={grp_14}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_14.groupe}</th>
-                                                                        <th>{allnote_14.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
+                                                               {allnote_12.map((item, grp_12) => (
+                                                                        <tr key={grp_12}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_12.groupe}</th>
+                                                                            <th>{allnote_12.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )} 
+                                                    {allnote_13.existgrp === 0 || allnote_13.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                               {allnote_13.map((item, grp_13) => (
+                                                                        <tr key={grp_13}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_13.groupe}</th>
+                                                                            <th>{allnote_13.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}    
+                                                    {allnote_14.existgrp === 0 || allnote_14.existgrp ? null : (
+                                                       <React.Fragment> 
                                                              <tbody>
+                                                                       
+                                                                    {allnote_14.map((item, grp_14) => (
+                                                                        <tr key={grp_14}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_14.groupe}</th>
+                                                                            <th>{allnote_14.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}  
+                                                   {allnote_15.existgrp === 0 || allnote_15.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                                   <tbody>
                                                                    
                                                                 {allnote_15.map((item, grp_15) => (
                                                                     <tr key={grp_15}>
@@ -2087,180 +2158,218 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                                  <tbody>
-                                                                   
-                                                                {allnote_16.map((item, grp_16) => (
-                                                                    <tr key={grp_16}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_16.groupe}</th>
-                                                                        <th>{allnote_16.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                  <tbody>
-                                                                   
-                                                                {allnote_17.map((item, grp_17) => (
-                                                                    <tr key={grp_17}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_17.groupe}</th>
-                                                                        <th>{allnote_17.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                     {allnote_16.existgrp === 0 || allnote_16.existgrp ? null : (
+                                                       <React.Fragment> 
                                                             <tbody>
-                                                                   
-                                                                {allnote_18.map((item, grp_18) => (
-                                                                    <tr key={grp_18}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_18.groupe}</th>
-                                                                        <th>{allnote_18.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
+                                                                       
+                                                                    {allnote_16.map((item, grp_16) => (
+                                                                        <tr key={grp_16}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_16.groupe}</th>
+                                                                            <th>{allnote_16.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                     {allnote_17.existgrp === 0 || allnote_17.existgrp ? null : (
+                                                       <React.Fragment> 
                                                              <tbody>
-                                                                   
-                                                                {allnote_19.map((item, grp_19) => (
-                                                                    <tr key={grp_19}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_19.groupe}</th>
-                                                                        <th>{allnote_19.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
+                                                                       
+                                                                    {allnote_17.map((item, grp_17) => (
+                                                                        <tr key={grp_17}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+                                                                            <th>{allnote_17.groupe}</th>
+                                                                            <th>{allnote_17.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}      
+                                                     {allnote_18.existgrp === 0 || allnote_18.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_18.map((item, grp_18) => (
+                                                                        <tr key={grp_18}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_18.groupe}</th>
+                                                                            <th>{allnote_18.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}         
+                                                 {allnote_19.existgrp === 0 || allnote_19.existgrp ? null : (
+                                                       <React.Fragment> 
                                                              <tbody>
-                                                                   
-                                                                {allnote_20.map((item, grp_20) => (
-                                                                    <tr key={grp_20}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_20.groupe}</th>
-                                                                        <th>{allnote_20.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                   
-                                                                {allnote_21.map((item, grp_21) => (
-                                                                    <tr key={grp_21}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_21.groupe}</th>
-                                                                        <th>{allnote_21.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                   
-                                                                {allnote_22.map((item, grp_22) => (
-                                                                    <tr key={grp_22}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_22.groupe}</th>
-                                                                        <th>{allnote_22.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                   
-                                                                {allnote_23.map((item, grp_23) => (
-                                                                    <tr key={grp_23}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_23.groupe}</th>
-                                                                        <th>{allnote_23.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                   
-                                                                {allnote_24.map((item, grp_24) => (
-                                                                    <tr key={grp_24}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_24.groupe}</th>
-                                                                        <th></th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                   
-                                                                {allnote_25.map((item, grp_25) => (
+                                                                       
+                                                                    {allnote_19.map((item, grp_19) => (
+                                                                        <tr key={grp_19}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_19.groupe}</th>
+                                                                            <th>{allnote_19.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}  
+                                                             {allnote_20.existgrp === 0 || allnote_20.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_20.map((item, grp_20) => (
+                                                                        <tr key={grp_20}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_20.groupe}</th>
+                                                                            <th>{allnote_20.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                  {allnote_21.existgrp === 0 || allnote_21.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_21.map((item, grp_21) => (
+                                                                        <tr key={grp_21}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_21.groupe}</th>
+                                                                            <th>{allnote_21.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                 {allnote_22.existgrp === 0 || allnote_22.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_22.map((item, grp_22) => (
+                                                                        <tr key={grp_22}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_22.groupe}</th>
+                                                                            <th>{allnote_22.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                     {allnote_23.existgrp === 0 || allnote_23.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                             <tbody>
+                                                                       
+                                                                    {allnote_23.map((item, grp_23) => (
+                                                                        <tr key={grp_23}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_23.groupe}</th>
+                                                                            <th>{allnote_23.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}    
+                                                             {allnote_24.existgrp === 0 || allnote_24.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_24.map((item, grp_24) => (
+                                                                        <tr key={grp_24}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_24.groupe}</th>
+                                                                            <th></th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}   
+                                                      {allnote_25.existgrp === 0 || allnote_25.existgrp ? null : (
+                                                         <React.Fragment> 
+                                                            <tbody>
+                                                              {allnote_25.map((item, grp_25) => (
                                                                     <tr key={grp_25}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
@@ -2277,101 +2386,124 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
+                                                          </React.Fragment>
+                                                                )} 
+                                                          {allnote_26.existgrp === 0 || allnote_26.existgrp ? null : (
+                                                         <React.Fragment> 
                                                                 <tbody>
-                                                                   
-                                                                {allnote_26.map((item, grp_26) => (
-                                                                    <tr key={grp_26}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_26.groupe}</th>
-                                                                        <th>{allnote_26.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                   
-                                                                {allnote_27.map((item, grp_27) => (
-                                                                    <tr key={grp_27}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_27.groupe}</th>
-                                                                        <th>{allnote_27.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                   
-                                                                {allnote_28.map((item, grp_28) => (
-                                                                    <tr key={grp_28}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_28.groupe}</th>
-                                                                        <th>{allnote_28.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                   
-                                                                {allnote_29.map((item, grp_29) => (
-                                                                    <tr key={grp_29}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_29.groupe}</th>
-                                                                        <th>{allnote_29.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                   
-                                                                {allnote_30.map((item, grp_30) => (
-                                                                    <tr key={grp_30}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
-                                                                    <tr>
-
-                                                                        <th>{allnote_30.groupe}</th>
-                                                                        <th>{allnote_30.sumnote}</th>
-                                                                        <th></th>
-
-                                                                    </tr>
-                                                                </thead>
+                                                                       
+                                                                    {allnote_26.map((item, grp_26) => (
+                                                                        <tr key={grp_26}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_26.groupe}</th>
+                                                                            <th>{allnote_26.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>   
+                                                          </React.Fragment>
+                                                                )}        
+                                                     {allnote_27.existgrp === 0 || allnote_27.existgrp ? null : (
+                                                           <React.Fragment> 
+                                                                 <tbody>
+                                                                           
+                                                                        {allnote_27.map((item, grp_27) => (
+                                                                            <tr key={grp_27}>
+                                                                                <td>{item.matiere_note}</td>
+                                                                                <td>{item.valeur_note}</td>
+                                                                                <td>{item.appreciation_note}</td>
+                                                                            </tr>
+                                                                        ))}
+                                                                    </tbody>
+                                                                       <thead>
+                                                                            <tr>
+        
+                                                                                <th>{allnote_27.groupe}</th>
+                                                                                <th>{allnote_27.sumnote}</th>
+                                                                                <th></th>
+        
+                                                                            </tr>
+                                                                        </thead>
+                                                           </React.Fragment>
+                                                                )}      
+                                                    {allnote_28.existgrp === 0 || allnote_28.existgrp ? null : (
+                                                         <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_28.map((item, grp_28) => (
+                                                                        <tr key={grp_28}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_28.groupe}</th>
+                                                                            <th>{allnote_28.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                         </React.Fragment>
+                                                                )}   
+                                                             {allnote_29.existgrp === 0 || allnote_29.existgrp ? null : (
+                                                         <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_29.map((item, grp_29) => (
+                                                                        <tr key={grp_29}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_29.groupe}</th>
+                                                                            <th>{allnote_29.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                         </React.Fragment>
+                                                                )}        
+                                                    {allnote_26.existgrp === 0 || allnote_26.existgrp ? null : (
+                                                         <React.Fragment> 
+                                                             <tbody>
+                                                                       
+                                                                    {allnote_30.map((item, grp_30) => (
+                                                                        <tr key={grp_30}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_30.groupe}</th>
+                                                                            <th>{allnote_30.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                         </React.Fragment>
+                                                                )}       
+                                                               
                                                                 <tbody> 
 
                                                                     <tr>
@@ -2409,9 +2541,7 @@ const BulletinByEleve = memo((props) => {
                                                                         <div className="mt-2">
                                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:</p>
                                                                         </div>
-                                                                              
-                                                                            
-                                                                        </th>
+                                                                       </th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
@@ -2577,17 +2707,691 @@ const BulletinByEleve = memo((props) => {
                                                                         <th>Appréciation</th>
                                                                     </tr>
                                                                 </thead>
-                                                                <tbody>
-                                                                    {allnotespf.map((item, pf) => (
-                                                                        <tr key={pf}>
-                                                                          
+                                                                    {allnote_1.existgrp === 0 || allnote_1.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                         <tbody>
+                                                                   
+                                                                {allnote_1.listnotes && allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
+                                                                    <tr key={grp_1}>
+                                                                   
+                                                                        <td>{item.competence_visee_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allnote_1.groupe}</th>
+                                                                         <th>{allnote_1.sumnote}/{item.coefficient_note}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                       </React.Fragment>
+                                                                )}     
+                                                               
+                                                              {allnote_2.existgrp === 0 || allnote_2.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                        <tbody>
+                                                                   
+                                                                {allnote_2.map((item, grp_2) => (
+                                                                    <tr key={grp_2}>
+                                                                    
+                                                                        <td>{item.competence_visee_note}</td>
+                                                                        <td>{item.valeur_note}</td> 
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allnote_2.groupe}</th>
+                                                                        <th>{allnote_2.sumnote}/{item.coefficient_note}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                             {allnote_3.existgrp === 0 || allnote_3.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                        <tbody>
+                                                                   
+                                                                {allnote_3.map((item, grp_3) => (
+                                                                    <tr key={grp_3}>
+                                                                      
+                                                                        <td>{item.competence_visee_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allnote_3.groupe}</th>
+                                                                        <th>{allnote_3.sumnote}/{item.coefficient_note}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                       </React.Fragment>
+                                                                )}    
+
+                                                     {allnote_4.existgrp === 0 || allnote_4.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                         <tbody>
+                                                            {allnote_4.map((item, grp_4) => (
+                                                                    <tr key={grp_4}>
+                                                                        <td>{item.competence_visee_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allnote_4.groupe}</th>
+                                                                        <th>{allnote_4.sumnote}/{item.coefficient_note}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                       </React.Fragment>
+                                                                )}
+
+                                                    {allnote_5.existgrp === 0 || allnote_5.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                        <tbody>
+                                                             {allnote_5.map((item, grp_5) => (
+                                                                    <tr key={grp_5}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allnote_5.groupe}</th>
+                                                                        <th>{allnote_5.sumnote}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                       </React.Fragment>
+                                                                )}  
+                                                 {allnote_6.existgrp === 0 || allnote_6.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                                    {allnote_6.map((item, grp_6) => (
+                                                                        <tr key={grp_6}>
                                                                             <td>{item.matiere_note}</td>
-                                                                            <td>{item.competence_visee_note}</td>
                                                                             <td>{item.valeur_note}</td>
                                                                             <td>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
+                                                                   <thead>
+                                                                        <tr>
+                                                                            <th>{allnote_6.groupe}</th>
+                                                                            <th>{allnote_6.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                 {allnote_7.existgrp === 0 || allnote_7.existgrp ? null : (
+                                                      <React.Fragment> 
+                                                        <tbody>
+                                                          {allnote_7.map((item, grp_7) => (
+                                                                    <tr key={grp_7}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+                                                                        <th>{allnote_7.groupe}</th>
+                                                                        <th>{allnote_7.sumnote}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                        </React.Fragment>
+                                                                )} 
+                                                 {allnote_8.existgrp === 0 || allnote_8.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_8.map((item, grp_8) => (
+                                                                        <tr key={grp_8}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_8.groupe}</th>
+                                                                            <th>{allnote_8.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                     {allnote_9.existgrp === 0 || allnote_9.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                             <tbody>
+                                                                       
+                                                                    {allnote_9.map((item, grp_9) => (
+                                                                        <tr key={grp_9}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+                                                                            <th>{allnote_9.groupe}</th>
+                                                                            <th>{allnote_9.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}            
+                                                    {allnote_10.existgrp === 0 || allnote_10.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_10.map((item, grp_10) => (
+                                                                        <tr key={grp_10}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_10.groupe}</th>
+                                                                            <th>{allnote_10.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                    {allnote_11.existgrp === 0 || allnote_11.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                         <tbody>
+                                                                   
+                                                                {allnote_11.map((item, grp_11) => (
+                                                                    <tr key={grp_11}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allnote_11.groupe}</th>
+                                                                        <th>{allnote_11.sumnote}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                     {allnote_12.existgrp === 0 || allnote_12.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                               {allnote_12.map((item, grp_12) => (
+                                                                        <tr key={grp_12}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_12.groupe}</th>
+                                                                            <th>{allnote_12.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )} 
+                                                    {allnote_13.existgrp === 0 || allnote_13.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                               {allnote_13.map((item, grp_13) => (
+                                                                        <tr key={grp_13}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_13.groupe}</th>
+                                                                            <th>{allnote_13.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}    
+                                                    {allnote_14.existgrp === 0 || allnote_14.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                             <tbody>
+                                                                       
+                                                                    {allnote_14.map((item, grp_14) => (
+                                                                        <tr key={grp_14}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_14.groupe}</th>
+                                                                            <th>{allnote_14.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}  
+                                                   {allnote_15.existgrp === 0 || allnote_15.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                                   <tbody>
+                                                                   
+                                                                {allnote_15.map((item, grp_15) => (
+                                                                    <tr key={grp_15}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allnote_15.groupe}</th>
+                                                                        <th>{allnote_15.sumnote}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                     {allnote_16.existgrp === 0 || allnote_16.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_16.map((item, grp_16) => (
+                                                                        <tr key={grp_16}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_16.groupe}</th>
+                                                                            <th>{allnote_16.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                     {allnote_17.existgrp === 0 || allnote_17.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                             <tbody>
+                                                                       
+                                                                    {allnote_17.map((item, grp_17) => (
+                                                                        <tr key={grp_17}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+                                                                            <th>{allnote_17.groupe}</th>
+                                                                            <th>{allnote_17.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}      
+                                                     {allnote_18.existgrp === 0 || allnote_18.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_18.map((item, grp_18) => (
+                                                                        <tr key={grp_18}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_18.groupe}</th>
+                                                                            <th>{allnote_18.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}         
+                                                 {allnote_19.existgrp === 0 || allnote_19.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                             <tbody>
+                                                                       
+                                                                    {allnote_19.map((item, grp_19) => (
+                                                                        <tr key={grp_19}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_19.groupe}</th>
+                                                                            <th>{allnote_19.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}  
+                                                             {allnote_20.existgrp === 0 || allnote_20.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_20.map((item, grp_20) => (
+                                                                        <tr key={grp_20}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_20.groupe}</th>
+                                                                            <th>{allnote_20.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                  {allnote_21.existgrp === 0 || allnote_21.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_21.map((item, grp_21) => (
+                                                                        <tr key={grp_21}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_21.groupe}</th>
+                                                                            <th>{allnote_21.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                 {allnote_22.existgrp === 0 || allnote_22.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_22.map((item, grp_22) => (
+                                                                        <tr key={grp_22}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_22.groupe}</th>
+                                                                            <th>{allnote_22.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}
+                                                     {allnote_23.existgrp === 0 || allnote_23.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                             <tbody>
+                                                                       
+                                                                    {allnote_23.map((item, grp_23) => (
+                                                                        <tr key={grp_23}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_23.groupe}</th>
+                                                                            <th>{allnote_23.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}    
+                                                             {allnote_24.existgrp === 0 || allnote_24.existgrp ? null : (
+                                                       <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_24.map((item, grp_24) => (
+                                                                        <tr key={grp_24}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_24.groupe}</th>
+                                                                            <th></th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                       </React.Fragment>
+                                                                )}   
+                                                      {allnote_25.existgrp === 0 || allnote_25.existgrp ? null : (
+                                                         <React.Fragment> 
+                                                            <tbody>
+                                                              {allnote_25.map((item, grp_25) => (
+                                                                    <tr key={grp_25}>
+                                                                        <td>{item.matiere_note}</td>
+                                                                        <td>{item.valeur_note}</td>
+                                                                        <td>{item.appreciation_note}</td>
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                               <thead>
+                                                                    <tr>
+
+                                                                        <th>{allnote_25.groupe}</th>
+                                                                        <th>{allnote_25.sumnote}</th>
+                                                                        <th></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                          </React.Fragment>
+                                                                )} 
+                                                          {allnote_26.existgrp === 0 || allnote_26.existgrp ? null : (
+                                                         <React.Fragment> 
+                                                                <tbody>
+                                                                       
+                                                                    {allnote_26.map((item, grp_26) => (
+                                                                        <tr key={grp_26}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_26.groupe}</th>
+                                                                            <th>{allnote_26.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>   
+                                                          </React.Fragment>
+                                                                )}        
+                                                     {allnote_27.existgrp === 0 || allnote_27.existgrp ? null : (
+                                                           <React.Fragment> 
+                                                                 <tbody>
+                                                                           
+                                                                        {allnote_27.map((item, grp_27) => (
+                                                                            <tr key={grp_27}>
+                                                                                <td>{item.matiere_note}</td>
+                                                                                <td>{item.valeur_note}</td>
+                                                                                <td>{item.appreciation_note}</td>
+                                                                            </tr>
+                                                                        ))}
+                                                                    </tbody>
+                                                                       <thead>
+                                                                            <tr>
+        
+                                                                                <th>{allnote_27.groupe}</th>
+                                                                                <th>{allnote_27.sumnote}</th>
+                                                                                <th></th>
+        
+                                                                            </tr>
+                                                                        </thead>
+                                                           </React.Fragment>
+                                                                )}      
+                                                    {allnote_28.existgrp === 0 || allnote_28.existgrp ? null : (
+                                                         <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_28.map((item, grp_28) => (
+                                                                        <tr key={grp_28}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_28.groupe}</th>
+                                                                            <th>{allnote_28.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                         </React.Fragment>
+                                                                )}   
+                                                             {allnote_29.existgrp === 0 || allnote_29.existgrp ? null : (
+                                                         <React.Fragment> 
+                                                            <tbody>
+                                                                       
+                                                                    {allnote_29.map((item, grp_29) => (
+                                                                        <tr key={grp_29}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_29.groupe}</th>
+                                                                            <th>{allnote_29.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                         </React.Fragment>
+                                                                )}        
+                                                    {allnote_26.existgrp === 0 || allnote_26.existgrp ? null : (
+                                                         <React.Fragment> 
+                                                             <tbody>
+                                                                       
+                                                                    {allnote_30.map((item, grp_30) => (
+                                                                        <tr key={grp_30}>
+                                                                            <td>{item.matiere_note}</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                   <thead>
+                                                                        <tr>
+    
+                                                                            <th>{allnote_30.groupe}</th>
+                                                                            <th>{allnote_30.sumnote}</th>
+                                                                            <th></th>
+    
+                                                                        </tr>
+                                                                    </thead>
+                                                         </React.Fragment>
+                                                                )} 
 
                                                           
                                                                 <tbody> 
