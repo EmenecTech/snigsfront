@@ -2881,7 +2881,7 @@ const BulletinByEleve = memo((props) => {
                                                                  <thead>
                                                                     <tr> 
                                                                         <th><p>Disciplines</p></th> 
-                                                                        <th>Evaluation</th>
+                                                                        
                                                                         <th>Notes</th>
                                                                         <th>Appréciation</th>
                                                                     </tr>
@@ -3484,8 +3484,8 @@ const BulletinByEleve = memo((props) => {
 
                                                                     <tr>
                                                                         <td>RECAPITULATIFS</td>
-                                                                        <td></td>
                                                                         <td>{sumnotes}</td>
+                                                                        <td></td>
                                                                         <td></td>
                                                                       
                                                                     </tr>
