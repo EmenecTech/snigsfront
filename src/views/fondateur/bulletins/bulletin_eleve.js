@@ -2744,7 +2744,7 @@ const BulletinByEleve = memo((props) => {
                                                                         <th></th>
 
                                                                     </tr>
-                                                               
+                                                                </thead>
                                                         <tbody>
                                                                    
                                                                 {allnote_3.map((item, grp_3) => (
@@ -2802,6 +2802,7 @@ const BulletinByEleve = memo((props) => {
                                                                         <th></th>
 
                                                                     </tr>
+                                                                </thead>
                                                    
                                                             <tbody>
                                                                     {allnote_6.map((item, grp_6) => (
