@@ -2906,8 +2906,9 @@ const BulletinByEleve = memo((props) => {
                                                             
                                                                 
 
-                                                        {allnoteprim_2.existgrp === 0 || allnoteprim_2.existgrp ? null : (
-                                                             <Table
+                                                        {allnoteprim_2.existgrp === 0 || allnoteprim_2.existgrp ? (<div>
+                                                            
+                                                            <Table
                                                                 responsive
                                                                 striped
                                                                 id="datatable"
@@ -2941,9 +2942,12 @@ const BulletinByEleve = memo((props) => {
                                                             
                                                                 </tr>
                                                             </thead>
-                                                         </Table> )}
-
-                                                                  <Table>
+                                                         </Table> 
+                                                            </div>) : null}
+                                                             
+                                                            {allnoteprim_3.existgrp === 0 || allnoteprim_3.existgrp ? (<div>
+                                                            
+                                                             <Table>
                                                                   <thead>
                                                                     <tr> 
                                                                         <th><p>Disciplines</p></th> 
@@ -2971,8 +2975,27 @@ const BulletinByEleve = memo((props) => {
                                                             
                                                                 </tr>
                                                             </thead>
+                                                            </Table>
+                                                            </div>) : null}
+                                                                 
+
+                                                                {allnoteprim_4.existgrp === 0 || allnoteprim_4.existgrp ? (<div>
                                                             
-                                                            <tbody>
+                                                               <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
+                                                                   <thead>
+                                                                     <tr> 
+                                                                        <th><p>Disciplines</p></th> 
+                                                                        <th>Notes</th>
+                                                                        <th>Appréciation</th>
+                                                                    </tr>
+                                                                 </thead>  
+                                                                    <tbody>
                                                             {allnoteprim_4.listnotes && allnoteprim_4.listnotes.map((item, grp_4) => (
                                                                 <tr key={grp_4}>
                                                                     <td>{item.competence_visee_note}</td>
@@ -2990,8 +3013,26 @@ const BulletinByEleve = memo((props) => {
                                                             
                                                                 </tr>
                                                             </thead>
+                                                                </Table>
+                                                                </div>) : null}
+                                                             
+                                                                 {allnoteprim_5.existgrp === 0 || allnoteprim_5.existgrp ? (<div>
                                                             
-                                                            <tbody>
+                                                               <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
+                                                                   <thead>
+                                                                     <tr> 
+                                                                        <th><p>Disciplines</p></th> 
+                                                                        <th>Notes</th>
+                                                                        <th>Appréciation</th>
+                                                                    </tr>
+                                                                 </thead>  
+                                                                    <tbody>
                                                             {allnoteprim_5.listnotes  && allnoteprim_5.listnotes.map((item, grp_5) => (
                                                                 <tr key={grp_5}>
                                                                     <td>{item.competence_visee_note}</td>
@@ -3009,6 +3050,11 @@ const BulletinByEleve = memo((props) => {
                                                             
                                                                 </tr>
                                                             </thead>
+                                                                </Table>
+                                                                </div>) : null}    
+                                                            
+                                                            
+                                                            <Table>
                                                             
                                                             <tbody>
                                                                 {allnoteprim_6.listnotes && allnoteprim_6.listnotes.map((item, grp_6) => (
