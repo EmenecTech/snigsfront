@@ -303,7 +303,7 @@ const EnseignantListGroupes = () => {
                                                     <option> </option>
                                                    
                                          {groupesclasse.map((item) => (
-                                            <option key={item.id} value={item.groupe_cg}>{item.groupe_cg}</option>
+                                            <option key={item.id} value={item.groupe_cg}>{item.groupe_cg} (/ {item.marks_cg})</option>
                                                             ))}
                                                 </select>
                                            </Form.Group>
@@ -323,7 +323,7 @@ const EnseignantListGroupes = () => {
                                            </Form.Group>
 
                                             <Form.Group className='form-group'>
-                                                <Form.Label>Note /{groupesclasse.marks_cg}</Form.Label>
+                                                <Form.Label>Note</Form.Label>
                                                 <Form.Control type="number" id="valeur_note" name="valeur_note"
                                                     value={inputs.valeur_note || ''}
                                                     onChange={handleChange}
