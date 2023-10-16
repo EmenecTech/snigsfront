@@ -1815,12 +1815,11 @@ const BulletinByEleve = memo((props) => {
                                                                         <th>Appréciation</th>
                                                                     </tr>
                                                                 </thead>
-                                                                {allnote_1.existgrp === 0 || allnote_1.existgrp ? null : (
-                                                       <React.Fragment> 
-                                                         <tbody>
+                                                             <tbody>
                                                                    
                                                                 {allnote_1.listnotes && allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
                                                                     <tr key={grp_1}>
+                                                                   
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.appreciation_note}</td>
@@ -1836,15 +1835,14 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                       </React.Fragment>
-                                                                )}     
+                                                         
                                                                
-                                                              {allnote_2.existgrp === 0 || allnote_2.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                            
                                                         <tbody>
                                                                    
-                                                                {allnote_2.map((item, grp_2) => (
+                                                                {allnote_2.listnotes && allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
                                                                     <tr key={grp_2}>
+                                                                    
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td> 
                                                                         <td>{item.appreciation_note}</td>
@@ -1860,14 +1858,11 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                       </React.Fragment>
-                                                                )}
-                                                             {allnote_3.existgrp === 0 || allnote_3.existgrp ? null : (
-                                                       <React.Fragment> 
                                                         <tbody>
                                                                    
-                                                                {allnote_3.map((item, grp_3) => (
+                                                                {allnote_3.listnotes && allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
                                                                     <tr key={grp_3}>
+                                                                      
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.appreciation_note}</td>
@@ -1883,13 +1878,9 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                       </React.Fragment>
-                                                                )}    
-
-                                                     {allnote_4.existgrp === 0 || allnote_4.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                      
                                                          <tbody>
-                                                            {allnote_4.map((item, grp_4) => (
+                                                            {allnote_4.listnotes && allnote_4.listnotes && allnote_4.listnotes.map((item, grp_4) => (
                                                                     <tr key={grp_4}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
@@ -1906,13 +1897,9 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                       </React.Fragment>
-                                                                )}
-
-                                                    {allnote_5.existgrp === 0 || allnote_5.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                     
                                                         <tbody>
-                                                             {allnote_5.map((item, grp_5) => (
+                                                             {allnote_5.listnotes && allnote_5.listnotes && allnote_5.listnotes.map((item, grp_5) => (
                                                                     <tr key={grp_5}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
@@ -1929,13 +1916,11 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                       </React.Fragment>
-                                                                )}  
-                                                 {allnote_6.existgrp === 0 || allnote_6.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                   
                                                             <tbody>
-                                                                    {allnote_6.map((item, grp_6) => (
+                                                                    {allnote_6.listnotes && allnote_6.listnotes && allnote_6.listnotes.map((item, grp_6) => (
                                                                         <tr key={grp_6}>
+                                                                                
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
                                                                             <td>{item.appreciation_note}</td>
@@ -1950,14 +1935,11 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )}
-                                                 {allnote_7.existgrp === 0 || allnote_7.existgrp ? null : (
-                                                      <React.Fragment> 
+                                                     
                                                         <tbody>
-                                                          {allnote_7.map((item, grp_7) => (
+                                                          {allnote_7.listnotes && allnote_7.listnotes && allnote_7.listnotes.map((item, grp_7) => (
                                                                     <tr key={grp_7}>
-                                                                        <td>{item.matiere_note}</td>
+                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
                                                                         <td>{item.appreciation_note}</td>
                                                                     </tr>
@@ -1971,13 +1953,10 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                        </React.Fragment>
-                                                                )} 
-                                                 {allnote_8.existgrp === 0 || allnote_8.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                        
                                                             <tbody>
                                                                        
-                                                                    {allnote_8.map((item, grp_8) => (
+                                                                    {allnote_8.listnotes && allnote_8.listnotes && allnote_8.listnotes.map((item, grp_8) => (
                                                                         <tr key={grp_8}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -1994,13 +1973,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )}
-                                                     {allnote_9.existgrp === 0 || allnote_9.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                      
                                                              <tbody>
                                                                        
-                                                                    {allnote_9.map((item, grp_9) => (
+                                                                    {allnote_9.listnotes && allnote_9.listnotes && allnote_9.listnotes.map((item, grp_9) => (
                                                                         <tr key={grp_9}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2016,13 +1992,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )}            
-                                                    {allnote_10.existgrp === 0 || allnote_10.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                      
                                                             <tbody>
                                                                        
-                                                                    {allnote_10.map((item, grp_10) => (
+                                                                    {allnote_10.listnotes && allnote_10.listnotes && allnote_10.listnotes.map((item, grp_10) => (
                                                                         <tr key={grp_10}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2039,13 +2012,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )}
-                                                    {allnote_11.existgrp === 0 || allnote_11.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                      
                                                          <tbody>
                                                                    
-                                                                {allnote_11.map((item, grp_11) => (
+                                                                {allnote_11.listnotes && allnote_11.listnotes && allnote_11.listnotes.map((item, grp_11) => (
                                                                     <tr key={grp_11}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
@@ -2062,12 +2032,9 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                       </React.Fragment>
-                                                                )}
-                                                     {allnote_12.existgrp === 0 || allnote_12.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                     
                                                             <tbody>
-                                                               {allnote_12.map((item, grp_12) => (
+                                                               {allnote_12.listnotes && allnote_12.listnotes && allnote_12.listnotes.map((item, grp_12) => (
                                                                         <tr key={grp_12}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2084,12 +2051,9 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )} 
-                                                    {allnote_13.existgrp === 0 || allnote_13.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                    
                                                             <tbody>
-                                                               {allnote_13.map((item, grp_13) => (
+                                                               {allnote_13.listnotes && allnote_13.listnotes && allnote_13.listnotes.map((item, grp_13) => (
                                                                         <tr key={grp_13}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2106,13 +2070,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )}    
-                                                    {allnote_14.existgrp === 0 || allnote_14.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                     
                                                              <tbody>
                                                                        
-                                                                    {allnote_14.map((item, grp_14) => (
+                                                                    {allnote_14.listnotes && allnote_14.listnotes && allnote_14.listnotes.map((item, grp_14) => (
                                                                         <tr key={grp_14}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2129,13 +2090,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )}  
-                                                   {allnote_15.existgrp === 0 || allnote_15.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                      
                                                                    <tbody>
                                                                    
-                                                                {allnote_15.map((item, grp_15) => (
+                                                                {allnote_15.listnotes && allnote_15.listnotes && allnote_15.listnotes.map((item, grp_15) => (
                                                                     <tr key={grp_15}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
@@ -2152,13 +2110,10 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                       </React.Fragment>
-                                                                )}
-                                                     {allnote_16.existgrp === 0 || allnote_16.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                     
                                                             <tbody>
                                                                        
-                                                                    {allnote_16.map((item, grp_16) => (
+                                                                    {allnote_16.listnotes && allnote_16.listnotes && allnote_16.listnotes.map((item, grp_16) => (
                                                                         <tr key={grp_16}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2175,13 +2130,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )}
-                                                     {allnote_17.existgrp === 0 || allnote_17.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                     
                                                              <tbody>
                                                                        
-                                                                    {allnote_17.map((item, grp_17) => (
+                                                                    {allnote_17.listnotes && allnote_17.listnotes && allnote_17.listnotes.map((item, grp_17) => (
                                                                         <tr key={grp_17}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2197,13 +2149,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )}      
-                                                     {allnote_18.existgrp === 0 || allnote_18.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                     
                                                             <tbody>
                                                                        
-                                                                    {allnote_18.map((item, grp_18) => (
+                                                                    {allnote_18.listnotes && allnote_18.listnotes && allnote_18.listnotes.map((item, grp_18) => (
                                                                         <tr key={grp_18}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2220,13 +2169,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )}         
-                                                 {allnote_19.existgrp === 0 || allnote_19.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                     
                                                              <tbody>
                                                                        
-                                                                    {allnote_19.map((item, grp_19) => (
+                                                                    {allnote_19.listnotes && allnote_19.listnotes && allnote_19.listnotes.map((item, grp_19) => (
                                                                         <tr key={grp_19}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2243,13 +2189,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )}  
-                                                             {allnote_20.existgrp === 0 || allnote_20.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                       
                                                             <tbody>
                                                                        
-                                                                    {allnote_20.map((item, grp_20) => (
+                                                                    {allnote_20.listnotes && allnote_20.listnotes && allnote_20.listnotes.map((item, grp_20) => (
                                                                         <tr key={grp_20}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2266,13 +2209,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )}
-                                                  {allnote_21.existgrp === 0 || allnote_21.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                       
                                                             <tbody>
                                                                        
-                                                                    {allnote_21.map((item, grp_21) => (
+                                                                    {allnote_21.listnotes && allnote_21.listnotes && allnote_21.listnotes.map((item, grp_21) => (
                                                                         <tr key={grp_21}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2289,13 +2229,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )}
-                                                 {allnote_22.existgrp === 0 || allnote_22.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                        
                                                             <tbody>
                                                                        
-                                                                    {allnote_22.map((item, grp_22) => (
+                                                                    {allnote_22.listnotes && allnote_22.listnotes && allnote_22.listnotes.map((item, grp_22) => (
                                                                         <tr key={grp_22}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2312,13 +2249,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )}
-                                                     {allnote_23.existgrp === 0 || allnote_23.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                    
                                                              <tbody>
                                                                        
-                                                                    {allnote_23.map((item, grp_23) => (
+                                                                    {allnote_23.listnotes && allnote_23.listnotes && allnote_23.listnotes.map((item, grp_23) => (
                                                                         <tr key={grp_23}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2335,13 +2269,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )}    
-                                                             {allnote_24.existgrp === 0 || allnote_24.existgrp ? null : (
-                                                       <React.Fragment> 
+                                                     
                                                             <tbody>
                                                                        
-                                                                    {allnote_24.map((item, grp_24) => (
+                                                                    {allnote_24.listnotes && allnote_24.listnotes && allnote_24.listnotes.map((item, grp_24) => (
                                                                         <tr key={grp_24}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2358,12 +2289,9 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                       </React.Fragment>
-                                                                )}   
-                                                      {allnote_25.existgrp === 0 || allnote_25.existgrp ? null : (
-                                                         <React.Fragment> 
+                                                       
                                                             <tbody>
-                                                              {allnote_25.map((item, grp_25) => (
+                                                              {allnote_25.listnotes && allnote_25.listnotes && allnote_25.listnotes.map((item, grp_25) => (
                                                                     <tr key={grp_25}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
@@ -2380,13 +2308,10 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                          </React.Fragment>
-                                                                )} 
-                                                          {allnote_26.existgrp === 0 || allnote_26.existgrp ? null : (
-                                                         <React.Fragment> 
+                                                        
                                                                 <tbody>
                                                                        
-                                                                    {allnote_26.map((item, grp_26) => (
+                                                                    {allnote_26.listnotes && allnote_26.listnotes && allnote_26.listnotes.map((item, grp_26) => (
                                                                         <tr key={grp_26}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2403,13 +2328,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>   
-                                                          </React.Fragment>
-                                                                )}        
-                                                     {allnote_27.existgrp === 0 || allnote_27.existgrp ? null : (
-                                                           <React.Fragment> 
+                                                        
                                                                  <tbody>
                                                                            
-                                                                        {allnote_27.map((item, grp_27) => (
+                                                                        {allnote_27.listnotes && allnote_27.listnotes && allnote_27.listnotes.map((item, grp_27) => (
                                                                             <tr key={grp_27}>
                                                                                 <td>{item.matiere_note}</td>
                                                                                 <td>{item.valeur_note}</td>
@@ -2426,13 +2348,10 @@ const BulletinByEleve = memo((props) => {
         
                                                                             </tr>
                                                                         </thead>
-                                                           </React.Fragment>
-                                                                )}      
-                                                    {allnote_28.existgrp === 0 || allnote_28.existgrp ? null : (
-                                                         <React.Fragment> 
+                                                         
                                                             <tbody>
                                                                        
-                                                                    {allnote_28.map((item, grp_28) => (
+                                                                    {allnote_28.listnotes && allnote_28.listnotes && allnote_28.listnotes.map((item, grp_28) => (
                                                                         <tr key={grp_28}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2449,13 +2368,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                         </React.Fragment>
-                                                                )}   
-                                                             {allnote_29.existgrp === 0 || allnote_29.existgrp ? null : (
-                                                         <React.Fragment> 
+                                                       
                                                             <tbody>
                                                                        
-                                                                    {allnote_29.map((item, grp_29) => (
+                                                                    {allnote_29.listnotes && allnote_29.listnotes && allnote_29.listnotes.map((item, grp_29) => (
                                                                         <tr key={grp_29}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2472,13 +2388,10 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                         </React.Fragment>
-                                                                )}        
-                                                    {allnote_30.existgrp === 0 || allnote_30.existgrp ? null : (
-                                                         <React.Fragment> 
+                                                     
                                                              <tbody>
                                                                        
-                                                                    {allnote_30.map((item, grp_30) => (
+                                                                    {allnote_30.listnotes && allnote_30.listnotes && allnote_30.listnotes.map((item, grp_30) => (
                                                                         <tr key={grp_30}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2495,9 +2408,6 @@ const BulletinByEleve = memo((props) => {
     
                                                                         </tr>
                                                                     </thead>
-                                                         </React.Fragment>
-                                                                )}       
-                                                               
                                                                 <tbody> 
 
                                                                     <tr>
@@ -2747,7 +2657,7 @@ const BulletinByEleve = memo((props) => {
                                                                 </thead>
                                                         <tbody>
                                                                    
-                                                                {allnote_3.listnotes && allnote_3.listnotes && allnote3.listnotes.map((item, grp_3) => (
+                                                                {allnote_3.listnotes && allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
                                                                     <tr key={grp_3}>
                                                                       
                                                                         <td>{item.competence_visee_note}</td>
@@ -2805,7 +2715,7 @@ const BulletinByEleve = memo((props) => {
                                                                 </thead>
                                                    
                                                             <tbody>
-                                                                    {allnote_6.map((item, grp_6) => (
+                                                                    {allnote_6.listnotes && allnote_6.listnotes && allnote_6.listnotes.map((item, grp_6) => (
                                                                         <tr key={grp_6}>
                                                                            <td>{item.competence_visee_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2823,7 +2733,7 @@ const BulletinByEleve = memo((props) => {
                                                                     </thead>
                                                      
                                                         <tbody>
-                                                          {allnote_7.map((item, grp_7) => (
+                                                          {allnote_7.listnotes && allnote_7.listnotes && allnote_7.listnotes.map((item, grp_7) => (
                                                                     <tr key={grp_7}>
                                                                       <td>{item.competence_visee_note}</td>
                                                                         <td>{item.valeur_note}</td>
@@ -2842,7 +2752,7 @@ const BulletinByEleve = memo((props) => {
                                                         
                                                             <tbody>
                                                                        
-                                                                    {allnote_8.map((item, grp_8) => (
+                                                                    {allnote_8.listnotes && allnote_8.listnotes && allnote_8.listnotes.map((item, grp_8) => (
                                                                         <tr key={grp_8}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2862,7 +2772,7 @@ const BulletinByEleve = memo((props) => {
                                                       
                                                              <tbody>
                                                                        
-                                                                    {allnote_9.map((item, grp_9) => (
+                                                                    {allnote_9.listnotes && allnote_9.listnotes && allnote_9.listnotes.map((item, grp_9) => (
                                                                         <tr key={grp_9}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2881,7 +2791,7 @@ const BulletinByEleve = memo((props) => {
                                                       
                                                             <tbody>
                                                                        
-                                                                    {allnote_10.map((item, grp_10) => (
+                                                                    {allnote_10.listnotes && allnote_10.listnotes && allnote_10.listnotes.map((item, grp_10) => (
                                                                         <tr key={grp_10}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2901,7 +2811,7 @@ const BulletinByEleve = memo((props) => {
                                                       
                                                          <tbody>
                                                                    
-                                                                {allnote_11.map((item, grp_11) => (
+                                                                {allnote_11.listnotes && allnote_11.listnotes && allnote_11.listnotes.map((item, grp_11) => (
                                                                     <tr key={grp_11}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
@@ -2920,7 +2830,7 @@ const BulletinByEleve = memo((props) => {
                                                                 </thead>
                                                      
                                                             <tbody>
-                                                               {allnote_12.map((item, grp_12) => (
+                                                               {allnote_12.listnotes && allnote_12.listnotes && allnote_12.listnotes.map((item, grp_12) => (
                                                                         <tr key={grp_12}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2939,7 +2849,7 @@ const BulletinByEleve = memo((props) => {
                                                                     </thead>
                                                     
                                                             <tbody>
-                                                               {allnote_13.map((item, grp_13) => (
+                                                               {allnote_13.listnotes && allnote_13.listnotes && allnote_13.listnotes.map((item, grp_13) => (
                                                                         <tr key={grp_13}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2959,7 +2869,7 @@ const BulletinByEleve = memo((props) => {
                                                      
                                                              <tbody>
                                                                        
-                                                                    {allnote_14.map((item, grp_14) => (
+                                                                    {allnote_14.listnotes && allnote_14.listnotes && allnote_14.listnotes.map((item, grp_14) => (
                                                                         <tr key={grp_14}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -2979,7 +2889,7 @@ const BulletinByEleve = memo((props) => {
                                                       
                                                                    <tbody>
                                                                    
-                                                                {allnote_15.map((item, grp_15) => (
+                                                                {allnote_15.listnotes && allnote_15.listnotes && allnote_15.listnotes.map((item, grp_15) => (
                                                                     <tr key={grp_15}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
@@ -2999,7 +2909,7 @@ const BulletinByEleve = memo((props) => {
                                                      
                                                             <tbody>
                                                                        
-                                                                    {allnote_16.map((item, grp_16) => (
+                                                                    {allnote_16.listnotes && allnote_16.listnotes && allnote_16.listnotes.map((item, grp_16) => (
                                                                         <tr key={grp_16}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -3019,7 +2929,7 @@ const BulletinByEleve = memo((props) => {
                                                      
                                                              <tbody>
                                                                        
-                                                                    {allnote_17.map((item, grp_17) => (
+                                                                    {allnote_17.listnotes && allnote_17.listnotes && allnote_17.listnotes.map((item, grp_17) => (
                                                                         <tr key={grp_17}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -3038,7 +2948,7 @@ const BulletinByEleve = memo((props) => {
                                                      
                                                             <tbody>
                                                                        
-                                                                    {allnote_18.map((item, grp_18) => (
+                                                                    {allnote_18.listnotes && allnote_18.listnotes && allnote_18.listnotes.map((item, grp_18) => (
                                                                         <tr key={grp_18}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -3058,7 +2968,7 @@ const BulletinByEleve = memo((props) => {
                                                      
                                                              <tbody>
                                                                        
-                                                                    {allnote_19.map((item, grp_19) => (
+                                                                    {allnote_19.listnotes && allnote_19.listnotes && allnote_19.listnotes.map((item, grp_19) => (
                                                                         <tr key={grp_19}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -3078,7 +2988,7 @@ const BulletinByEleve = memo((props) => {
                                                        
                                                             <tbody>
                                                                        
-                                                                    {allnote_20.map((item, grp_20) => (
+                                                                    {allnote_20.listnotes && allnote_20.listnotes && allnote_20.listnotes.map((item, grp_20) => (
                                                                         <tr key={grp_20}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -3098,7 +3008,7 @@ const BulletinByEleve = memo((props) => {
                                                        
                                                             <tbody>
                                                                        
-                                                                    {allnote_21.map((item, grp_21) => (
+                                                                    {allnote_21.listnotes && allnote_21.listnotes && allnote_21.listnotes.map((item, grp_21) => (
                                                                         <tr key={grp_21}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -3118,7 +3028,7 @@ const BulletinByEleve = memo((props) => {
                                                         
                                                             <tbody>
                                                                        
-                                                                    {allnote_22.map((item, grp_22) => (
+                                                                    {allnote_22.listnotes && allnote_22.listnotes && allnote_22.listnotes.map((item, grp_22) => (
                                                                         <tr key={grp_22}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -3138,7 +3048,7 @@ const BulletinByEleve = memo((props) => {
                                                     
                                                              <tbody>
                                                                        
-                                                                    {allnote_23.map((item, grp_23) => (
+                                                                    {allnote_23.listnotes && allnote_23.listnotes && allnote_23.listnotes.map((item, grp_23) => (
                                                                         <tr key={grp_23}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -3158,7 +3068,7 @@ const BulletinByEleve = memo((props) => {
                                                      
                                                             <tbody>
                                                                        
-                                                                    {allnote_24.map((item, grp_24) => (
+                                                                    {allnote_24.listnotes && allnote_24.listnotes && allnote_24.listnotes.map((item, grp_24) => (
                                                                         <tr key={grp_24}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -3177,7 +3087,7 @@ const BulletinByEleve = memo((props) => {
                                                                     </thead>
                                                        
                                                             <tbody>
-                                                              {allnote_25.map((item, grp_25) => (
+                                                              {allnote_25.listnotes && allnote_25.listnotes && allnote_25.listnotes.map((item, grp_25) => (
                                                                     <tr key={grp_25}>
                                                                         <td>{item.matiere_note}</td>
                                                                         <td>{item.valeur_note}</td>
@@ -3197,7 +3107,7 @@ const BulletinByEleve = memo((props) => {
                                                         
                                                                 <tbody>
                                                                        
-                                                                    {allnote_26.map((item, grp_26) => (
+                                                                    {allnote_26.listnotes && allnote_26.listnotes && allnote_26.listnotes.map((item, grp_26) => (
                                                                         <tr key={grp_26}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -3217,7 +3127,7 @@ const BulletinByEleve = memo((props) => {
                                                         
                                                                  <tbody>
                                                                            
-                                                                        {allnote_27.map((item, grp_27) => (
+                                                                        {allnote_27.listnotes && allnote_27.listnotes && allnote_27.listnotes.map((item, grp_27) => (
                                                                             <tr key={grp_27}>
                                                                                 <td>{item.matiere_note}</td>
                                                                                 <td>{item.valeur_note}</td>
@@ -3237,7 +3147,7 @@ const BulletinByEleve = memo((props) => {
                                                          
                                                             <tbody>
                                                                        
-                                                                    {allnote_28.map((item, grp_28) => (
+                                                                    {allnote_28.listnotes && allnote_28.listnotes && allnote_28.listnotes.map((item, grp_28) => (
                                                                         <tr key={grp_28}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -3257,7 +3167,7 @@ const BulletinByEleve = memo((props) => {
                                                        
                                                             <tbody>
                                                                        
-                                                                    {allnote_29.map((item, grp_29) => (
+                                                                    {allnote_29.listnotes && allnote_29.listnotes && allnote_29.listnotes.map((item, grp_29) => (
                                                                         <tr key={grp_29}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
@@ -3277,7 +3187,7 @@ const BulletinByEleve = memo((props) => {
                                                      
                                                              <tbody>
                                                                        
-                                                                    {allnote_30.map((item, grp_30) => (
+                                                                    {allnote_30.listnotes && allnote_30.listnotes && allnote_30.listnotes.map((item, grp_30) => (
                                                                         <tr key={grp_30}>
                                                                             <td>{item.matiere_note}</td>
                                                                             <td>{item.valeur_note}</td>
