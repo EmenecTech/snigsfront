@@ -3305,11 +3305,8 @@ const BulletinByEleve = memo((props) => {
                                                                     </tr>
                                                                 </tbody>
 
-
-                                                                <tfoot>
-
-                                                                </tfoot>
                                                             </Table>
+                                                                    
                                                             <Table
                                                                 responsive
                                                                 striped
