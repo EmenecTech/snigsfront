@@ -400,6 +400,10 @@ const PrimClasse = () => {
                                                                             <option key={item.id} value={item.intitule_matiere}>{item.intitule_matiere}</option>
 
                                                                         ))}
+                                                                        {groupesclasse.map((item) => (
+                                                                            <option key={item.id} value={item.groupe_cp}>{item.groupe_cp}</option>
+
+                                                                        ))}
 
                                                                     </select>
                                                                 </Form.Group>
@@ -548,10 +552,7 @@ const PrimClasse = () => {
                                                                             <option key={item.id} value={item.intitule_matiere}>{item.intitule_matiere}</option>
 
                                                                         ))}
-                                                                        {groupesclasse.map((item) => (
-                                                                            <option key={item.id} value={item.groupe_cp}>{item.groupe_cp}</option>
-
-                                                                        ))}
+                                                                        
 
                                                                     </select>
                                                                 </Form.Group>
