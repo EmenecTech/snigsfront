@@ -4186,10 +4186,8 @@ const BulletinByEleve = memo((props) => {
                                                                     <th>Appreciation</th>
                                                                 </tr>
                                                                 </thead>
-                                                                <tbody>
-                                                                   
-                                                                 <tbody>
-                                                                   
+                                                             <tbody>
+                                                                    
                                                                 {allnote_1.listnotes && allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
                                                                     <tr key={grp_1}>
                                                                    
@@ -4208,9 +4206,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </tr>
                                                                 </thead>
-                                                         
-                                                               
-                                                            
+                    
                                                         <tbody>
                                                                    
                                                                 {allnote_2.listnotes && allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
