@@ -2480,7 +2480,7 @@ const BulletinByEleve = memo((props) => {
                                                                     </thead>
                                                          </React.Fragment>
                                                                 )}        
-                                                    {allnote_26.existgrp === 0 || allnote_26.existgrp ? null : (
+                                                    {allnote_30.existgrp === 0 || allnote_30.existgrp ? null : (
                                                          <React.Fragment> 
                                                              <tbody>
                                                                        
