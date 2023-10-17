@@ -2052,7 +2052,7 @@ const BulletinByEleve = memo((props) => {
                                                     </Row>
                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
-                                             {allnote_1.existgrp === "No" || allnote_1.existgrp ? null : (
+                                                  {allnote_1.existgrp == 0 || allnote_1.existgrp ? null : (
                                                             <Table
                                                                 responsive
                                                                 striped
@@ -2854,12 +2854,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {elevesinclass} </strong> </p>
 
                                                             </div>
-
-
-
                                                         </Col>
-
-
                                                     </Row>
                                                    <Row>
                                                         <div className="table-responsive border-bottom my-3">
