@@ -46,7 +46,7 @@ const UniClasse = () => {
     const componentRef = useRef();
     const printData = useReactToPrint({
         content: () => componentRef.current,
-        documentTitle: "employee data",
+        documentTitle: "Document",
         onafterprint: () => alert("print success"),
     });
     const [toggler, setToggler] = useState();
