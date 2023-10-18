@@ -784,9 +784,7 @@ const [total_garcons, settotal_garcons] = useState([]);
                             <Tab.Pane eventKey="five" id="profile-profile">
                                 <Card>
                                      <Card.Header className="d-flex justify-content-between">
-                                            <div className="header-title">
-                                                <h4 className="card-title">Statistiques ({classe})</h4>
-                                            </div>
+                                           
                 
                 
                                             <Button variant="primary mt-2" onClick={printData}>
@@ -804,7 +802,9 @@ const [total_garcons, settotal_garcons] = useState([]);
                                    
                                     <Card.Body>
                                         <div className="table-responsive border-bottom my-3" ref={componentRef} style={{ width: "100%", height: window.innerHeight }}>
-                                
+                                            <div className="header-title">
+                                                <h4 className="card-title">Statistiques ({classe})</h4>
+                                            </div>
                                             <Table
                                                 responsive
                                                 striped
