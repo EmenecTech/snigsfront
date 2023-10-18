@@ -755,18 +755,59 @@ const UniClasse = () => {
                                             >
                                                 <thead>
                                                     <tr>
-                                                        <th>Intitulés</th>
-                                                        <th>Coefficient </th>
-                                                        <th>Groupe</th>
-                                                        <th>Action</th>
+                                                        
+                                                        <th>Intitulé</th>
+                                                        <th>Resultat</th>
+
+                                                    </tr>
 
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     
                                                         <tr>
-                                                           
-
+                                                           <td>Nombre total d'élèves</td>
+                                                           <td></td>
+                                                        </tr>
+    <tr>
+                                                           <td></td>
+                                                           <td></td>
+                                                        </tr>
+    <tr>
+                                                           <td></td>
+                                                           <td></td>
+                                                        </tr>
+    <tr>
+                                                           <td></td>
+                                                           <td></td>
+                                                        </tr>
+    <tr>
+                                                           <td></td>
+                                                           <td></td>
+                                                        </tr>
+    <tr>
+                                                           <td></td>
+                                                           <td></td>
+                                                        </tr>
+    <tr>
+                                                           <td></td>
+                                                           <td></td>
+                                                        </tr>
+    <tr>
+                                                           <td></td>
+                                                           <td></td>
+                                                        </tr>
+    <tr>
+                                                           <td></td>
+                                                           <td></td>
+                                                        </tr>
+    <tr>
+                                                           <td></td>
+                                                           <td></td>
+                                                        </tr>
+    <tr>
+                                                           <td></td>
+                                                           <td></td>
                                                         </tr>
                                                
                                                 </tbody>
