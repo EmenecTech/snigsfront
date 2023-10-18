@@ -42,6 +42,13 @@ import pages2 from '../../../assets/images/pages/02-page.png'
 import ShareOffcanvas from '../../../components/partials/components/shareoffcanvas'
 
 const UniClasse = () => {
+
+    const componentRef = useRef();
+    const printData = useReactToPrint({
+        content: () => componentRef.current,
+        documentTitle: "employee data",
+        onafterprint: () => alert("print success"),
+    });
     const [toggler, setToggler] = useState();
     const [show, setShow] = useState(false);
     const { user, http } = AuthUser();
