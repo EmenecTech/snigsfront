@@ -2070,7 +2070,7 @@ const BulletinByEleve = memo((props) => {
                                                                         <th>{allnote_1.groupe}</th>
                                                                         <th>{allnote_1.sumnote}</th>
                                                                         <th></th>
-                                                                    </tr>
+                                                                    </tr> 
                                                                     </tfoot>
                                                                 )} </div>
                                                             )}
