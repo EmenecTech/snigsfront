@@ -803,7 +803,7 @@ const [total_garcons, settotal_garcons] = useState([]);
                                     <Card.Body>
                                         <div className="table-responsive border-bottom my-3" ref={componentRef} style={{ width: "100%", height: window.innerHeight }}>
                                             <div className="header-title">
-                                                <h4 className="card-title">Statistiques ({classe})</h4>
+                                                <h4 className="card-title mb-4">Statistiques ({classe})</h4>
                                             </div>
                                             <Table
                                                 responsive
