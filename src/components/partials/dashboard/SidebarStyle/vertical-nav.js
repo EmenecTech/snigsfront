@@ -763,41 +763,7 @@ const VerticalNav = memo((props) => {
                                      
                                     </ul>
                                 </Accordion.Collapse>
-                                <Accordion.Collapse eventKey="horizontal-menu" >
-                                        <ul className="sub-nav">
-                                            <li className="nav-item" >
-                                                <Link className={`${location.pathname === '/horizontal' ? 'active' : ''} nav-link`} to="Admin/list/privileges" >
-                                                    <i className="icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                                                            <g>
-                                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                                            </g>
-                                                        </svg>
-                                                    </i>
-                                                    <i className="sidenav-mini-icon"> H </i>
-                                                    <span className="item-name">{user.langue === "en" ? (<div>Statistics</div>):(<div>Statistiques</div>)} </span>
-                                                </Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                <Link className="nav-link " to="/Admin/list/roles" title={textrole}>
-                                                    <i className="icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                                                            <g>
-                                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                                            </g>
-                                                        </svg>
-                                                    </i>
-                                                    <i className="sidenav-mini-icon"> D </i>
-                                                    <span className="item-name">{user.langue === "en" ? (<div>Roles</div>):(<div> Rôles  </div>)}</span>
-                                                </Link>
-                                            </li>
-    
-    
-    
-                                        </ul>
-                                    </Accordion.Collapse>
-                                </Accordion.Item>
-                                <Accordion.Collapse eventKey="sidebar-form-documents" >
+                                        <Accordion.Collapse eventKey="sidebar-form-documents" >
                                     <ul className="sub-nav">
                                         <li className="nav-item">
                                             <Link className={`${location.pathname === '/FicheEleves/Classes' ? 'active' : ''} nav-link`} to="/FicheEleves/Classes">
