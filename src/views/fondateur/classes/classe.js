@@ -780,7 +780,7 @@ const [total_eleves, settotal_eleves] = useState([]);
                                                     
                                                         <tr>
                                                            <td>Nombre total d'élèves</td>
-                                                           <td></td>
+                                                           <td>{total_eleves}</td>
                                                         </tr>
                                                         <tr>
                                                            <td>Nombre de garçons</td>
