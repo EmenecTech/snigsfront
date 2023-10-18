@@ -2038,8 +2038,8 @@ const BulletinByEleve = memo((props) => {
                                                      </Row>
                                                      <Row>
                                                         <div className="table-responsive border-bottom my-3">
-                                                        {allnote_1.existgrp > 0 && (
-                                                            <div>
+                                                        
+                                                           
                                                                 <Table 
                                                                    responsive 
                                                                    striped 
@@ -2053,7 +2053,7 @@ const BulletinByEleve = memo((props) => {
                                                                        <th  style={{width: '170px' }}>Appréciation</th>
                                                                     </tr>
                                                                 </thead>
-
+                                                        {allnote_1.existgrp > 0 && ( <div>
                                                                 <tbody>
                                                                     {allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
                                                                         <tr key={grp_1}>
@@ -2072,10 +2072,10 @@ const BulletinByEleve = memo((props) => {
                                                                         <th></th>
                                                                     </tr>
                                                                     </tfoot>
-                                                                )}
-                                                                </Table>
-                                                            </div>
+                                                                )} </div>
                                                             )}
+                                                                </Table>
+                                                           
 
                                                                             
                                                          {allnote_2.existgrp > 0 && (<div>
