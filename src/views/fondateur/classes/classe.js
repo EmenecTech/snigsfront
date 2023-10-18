@@ -73,6 +73,26 @@ const [total_eleves, settotal_eleves] = useState([]);
       settotal_eleves(res.data);
     });
   };
+const [total_garcons, settotal_garcons] = useState([]);
+  useEffect(() => {
+    fetchAlltotal_garcons();
+  }, []);
+
+  const fetchAlltotal_garcons = () => {
+    http.get("/nbreleve_garcon_classe/" + etab + '/' + classe).then((res) => {
+      settotal_garcons(res.data);
+    });
+  }; 
+    const [total_filles, settotal_filles] = useState([]);
+  useEffect(() => {
+    fetchAlltotal_filles();
+  }, []);
+
+  const fetchAlltotal_filles = () => {
+    http.get("/nbreleve_fille_classe/" + etab + '/' + classe).then((res) => {
+      settotal_filles(res.data);
+    });
+  }; 
 
     /////////////
 
@@ -784,11 +804,11 @@ const [total_eleves, settotal_eleves] = useState([]);
                                                         </tr>
                                                         <tr>
                                                            <td>Nombre de garçons</td>
-                                                           <td></td>
+                                                           <td>{total_garcons}</td>
                                                         </tr>
                                                         <tr>
                                                            <td>Nombre de filles</td>
-                                                           <td></td>
+                                                           <td>{total_filles}</td>
                                                         </tr>
                                                         <tr>
                                                            <td>Nombre d'enseignants</td>
