@@ -1248,15 +1248,6 @@ const BulletinByEleve = memo((props) => {
         ],
     };
 
-
-
-
-
-
-
-
-
-
     return (
         <Fragment>
         {classes.cycle_niveau === 'Secondaire' || classes.cycle_niveau === 'Secondary' ? <div>
@@ -2043,54 +2034,51 @@ const BulletinByEleve = memo((props) => {
                                                                 <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom :{elevesinclass}  </strong> </p>
 
                                                             </div>
-
-
-
-                                                        </Col>
-
-
-                                                    </Row>
-                                                    <Row>
+                                                         </Col>
+                                                     </Row>
+                                                     <Row>
                                                         <div className="table-responsive border-bottom my-3">
-                                                  {allnote_1.existgrp === 0 || allnote_1.existgrp ? (<div>
-                                                             <Table
-                                                                responsive
-                                                                striped
-                                                                id="datatable"
-                                                                className=""
-                                                                data-toggle="data-table"
-                                                            >
-                                                                 <thead>
+                                                        {allnote_1.existgrp > 0 && (
+                                                            <div>
+                                                                <Table 
+                                                                   responsive 
+                                                                   striped 
+                                                                   id="datatable" 
+                                                                   className="" 
+                                                                   data-toggle="data-table">
+                                                                <thead>
                                                                     <tr>
-                                                                        <th><p>Disciplines</p></th>
-                                                                        <th>Notes</th>
-                                                                        <th>Appréciation</th>
+                                                                       <th  style={{width: '130px' }}>Disciplines</th>
+                                                                       <th  style={{width: '50px' }}>Notes</th>
+                                                                       <th  style={{width: '170px' }}>Appréciation</th>
                                                                     </tr>
                                                                 </thead>
-                                                    
-                                                                 <tbody>
-                                                                        
-                                                                   {allnote_1.listnotes && allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
-                                                                    <tr key={grp_1}>
-                                                                   
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
-                                                                    </tr>
-                                                                ))}
-                                                            </tbody>
-                                                               <thead>
+
+                                                                <tbody>
+                                                                    {allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
+                                                                        <tr key={grp_1}>
+                                                                           <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                           <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                           <td style={{width: '170px' }}>{item.appreciation_note}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+
+                                                                {allnote_1.groupe && allnote_1.sumnote && (
+                                                                    <tfoot>
                                                                     <tr>
                                                                         <th>{allnote_1.groupe}</th>
-                                                                         <th>{allnote_1.sumnote}</th>
+                                                                        <th>{allnote_1.sumnote}</th>
                                                                         <th></th>
                                                                     </tr>
-                                                                </thead>
-                                                       </Table>
-                                                    
-                                                    </div>) : null }   
+                                                                    </tfoot>
+                                                                )}
+                                                                </Table>
+                                                            </div>
+                                                            )}
+
                                                                             
-                                                         {allnote_2.existgrp === 0 || allnote_2.existgrp ? (<div>
+                                                         {allnote_2.existgrp > 0 && (<div>
                                                             <Table
                                                                responsive
                                                                striped
@@ -2098,38 +2086,29 @@ const BulletinByEleve = memo((props) => {
                                                                className=""
                                                                data-toggle="data-table"
                                                            >
-                                                                <thead>
-                                                                   <tr>
-                                                                       <th><p>Disciplines</p></th>
-                                                                       <th>Notes</th>
-                                                                       <th>Appréciation</th>
-                                                                   </tr>
-                                                               </thead>
                                                                  <tbody>
                                                                    
-                                                                {allnote_2.listnotes && allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
+                                                                {allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
                                                                     <tr key={grp_2}>
-                                                                    
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td> 
-                                                                        <td>{item.appreciation_note}</td>
+                                                                        <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                        <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                        <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
-                                                               <thead>
+                                                            <tfoot>
                                                                     <tr>
-
                                                                         <th>{allnote_2.groupe}</th>
                                                                         <th>{allnote_2.sumnote}</th>
                                                                         <th></th>
-
                                                                     </tr>
-                                                                </thead>
+                                                            </tfoot>
+
                                                             </Table>
                                                         
-                                                        </div>) : null }  
+                                                        </div>) }  
 
-                                                                {allnote_3.existgrp === 0 || allnote_3.existgrp ? (<div>
+                                                         {allnote_3.existgrp > 0 && (<div>
                                                             <Table
                                                                responsive
                                                                striped
@@ -2137,38 +2116,29 @@ const BulletinByEleve = memo((props) => {
                                                                className=""
                                                                data-toggle="data-table"
                                                            >
-                                                                <thead>
-                                                                   <tr>
-                                                                       <th><p>Disciplines</p></th>
-                                                                       <th>Notes</th>
-                                                                       <th>Appréciation</th>
-                                                                   </tr>
-                                                               </thead>
-                                                                 <tbody>
+                                                            <tbody>
                                                                    
-                                                                {allnote_3.listnotes && allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
+                                                                {allnote_3.listnotes  && allnote_3.listnotes.map((item, grp_3) => (
                                                                     <tr key={grp_3}>
-                                                                      
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
+                                                                        <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                        <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                        <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
-                                                               <thead>
+                                                               <tfoot>
                                                                     <tr>
-
                                                                         <th>{allnote_3.groupe}</th>
                                                                         <th>{allnote_3.sumnote}</th>
                                                                         <th></th>
 
                                                                     </tr>
-                                                                </thead>
+                                                                </tfoot>
                                                             </Table>
                                                         
-                                                        </div>) : null }  
+                                                        </div>) }  
                                                        
-                                                      {allnote_4.existgrp === 0 || allnote_4.existgrp ? (<div>
+                                                      {allnote_4.existgrp > 0 && (<div>
                                                             <Table
                                                                responsive
                                                                striped
@@ -2176,36 +2146,27 @@ const BulletinByEleve = memo((props) => {
                                                                className=""
                                                                data-toggle="data-table"
                                                            >
-                                                                <thead>
-                                                                   <tr>
-                                                                       <th><p>Disciplines</p></th>
-                                                                       <th>Notes</th>
-                                                                       <th>Appréciation</th>
-                                                                   </tr>
-                                                               </thead>
                                                                 <tbody>
-                                                            {allnote_4.listnotes && allnote_4.listnotes && allnote_4.listnotes.map((item, grp_4) => (
+                                                            {allnote_4.listnotes && allnote_4.listnotes.map((item, grp_4) => (
                                                                     <tr key={grp_4}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
+                                                                       <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                        <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                        <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
-                                                               <thead>
+                                                               <tfoot>
                                                                     <tr>
-
                                                                         <th>{allnote_4.groupe}</th>
                                                                         <th>{allnote_4.sumnote}</th>
                                                                         <th></th>
-
                                                                     </tr>
-                                                                </thead>
+                                                                </tfoot>
                                                             </Table>
                                                         
-                                                        </div>) : null }  
+                                                        </div>) }  
 
-                                                          {allnote_5.existgrp === 0 || allnote_5.existgrp ? (<div>
+                                                          {allnote_5.existgrp > 0 && (<div>
                                                             <Table
                                                                responsive
                                                                striped
@@ -2213,36 +2174,27 @@ const BulletinByEleve = memo((props) => {
                                                                className=""
                                                                data-toggle="data-table"
                                                            >
-                                                                <thead>
-                                                                   <tr>
-                                                                       <th><p>Disciplines</p></th>
-                                                                       <th>Notes</th>
-                                                                       <th>Appréciation</th>
-                                                                   </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                             {allnote_5.listnotes && allnote_5.listnotes && allnote_5.listnotes.map((item, grp_5) => (
+                                                            <tbody>
+                                                             {allnote_5.listnotes && allnote_5.listnotes.map((item, grp_5) => (
                                                                     <tr key={grp_5}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
+                                                                        <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                        <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                        <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
-                                                               <thead>
+                                                               <tfoot>
                                                                     <tr>
-
                                                                         <th>{allnote_5.groupe}</th>
                                                                         <th>{allnote_5.sumnote}</th>
                                                                         <th></th>
-
                                                                     </tr>
-                                                                </thead>
+                                                                </tfoot>
                                                             </Table>
                                                         
-                                                        </div>) : null } 
+                                                        </div>)} 
                                                          
-                                                         {allnote_6.existgrp === 0 || allnote_6.existgrp ? (<div>
+                                                         {allnote_6.existgrp > 0 && (<div>
                                                             <Table
                                                                responsive
                                                                striped
@@ -2250,36 +2202,27 @@ const BulletinByEleve = memo((props) => {
                                                                className=""
                                                                data-toggle="data-table"
                                                            >
-                                                                <thead>
-                                                                   <tr>
-                                                                       <th><p>Disciplines</p></th>
-                                                                       <th>Notes</th>
-                                                                       <th>Appréciation</th>
-                                                                   </tr>
-                                                               </thead>
-                                                                 <tbody>
-                                                                    {allnote_6.listnotes && allnote_6.listnotes && allnote_6.listnotes.map((item, grp_6) => (
+                                                              <tbody>
+                                                                    {allnote_6.listnotes && allnote_6.listnotes.map((item, grp_6) => (
                                                                         <tr key={grp_6}>
-                                                                                
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                           <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                           <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                           <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
                                                                             <th>{allnote_6.groupe}</th>
                                                                             <th>{allnote_6.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
+                                                                    </tfoot>
                                                              </Table>
                                                         
-                                                        </div>) : null } 
+                                                        </div>)} 
                                                    
-                                                            {allnote_7.existgrp === 0 || allnote_7.existgrp ? (<div>
+                                                            {allnote_7.existgrp > 0 && (<div>
                                                             <Table
                                                                responsive
                                                                striped
@@ -2287,35 +2230,27 @@ const BulletinByEleve = memo((props) => {
                                                                className=""
                                                                data-toggle="data-table"
                                                            >
-                                                                <thead>
-                                                                   <tr>
-                                                                       <th><p>Disciplines</p></th>
-                                                                       <th>Notes</th>
-                                                                       <th>Appréciation</th>
-                                                                   </tr>
-                                                               </thead>
                                                                  <tbody>
                                                           {allnote_7.listnotes && allnote_7.listnotes && allnote_7.listnotes.map((item, grp_7) => (
                                                                     <tr key={grp_7}>
-                                                                         <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
+                                                                        <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                        <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                        <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
-                                                               <thead>
+                                                               <tfoot>
                                                                     <tr>
                                                                         <th>{allnote_7.groupe}</th>
                                                                         <th>{allnote_7.sumnote}</th>
                                                                         <th></th>
-
                                                                     </tr>
-                                                                </thead>
+                                                                </tfoot>
                                                             </Table>
                                                         
-                                                        </div>) : null } 
+                                                        </div>) } 
 
-                                                                {allnote_8.existgrp === 0 || allnote_8.existgrp ? (<div>
+                                                                {allnote_8.existgrp > 0 && (<div>
                                                             <Table
                                                                responsive
                                                                striped
@@ -2323,37 +2258,27 @@ const BulletinByEleve = memo((props) => {
                                                                className=""
                                                                data-toggle="data-table"
                                                            >
-                                                                <thead>
-                                                                   <tr>
-                                                                       <th><p>Disciplines</p></th>
-                                                                       <th>Notes</th>
-                                                                       <th>Appréciation</th>
-                                                                   </tr>
-                                                                </thead>
                                                                    <tbody>
-                                                                       
-                                                                    {allnote_8.listnotes && allnote_8.listnotes && allnote_8.listnotes.map((item, grp_8) => (
+                                                                {allnote_8.listnotes && allnote_8.listnotes && allnote_8.listnotes.map((item, grp_8) => (
                                                                         <tr key={grp_8}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                          <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                          <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                          <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_8.groupe}</th>
                                                                             <th>{allnote_8.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
+                                                                    </tfoot>
                                                             </Table>
                                                         
-                                                        </div>) : null }  
+                                                        </div>) }  
                                                        
-                                                         {allnote_9.existgrp === 0 || allnote_9.existgrp ? (<div>
+                                                         {allnote_9.existgrp > 0 && (<div>
                                                             <Table
                                                                responsive
                                                                striped
@@ -2363,7 +2288,7 @@ const BulletinByEleve = memo((props) => {
                                                            >
                                                                 <thead>
                                                                    <tr>
-                                                                       <th><p>Disciplines</p></th>
+                                                                       <th>Disciplines</th>
                                                                        <th>Notes</th>
                                                                        <th>Appréciation</th>
                                                                    </tr>
@@ -2372,25 +2297,24 @@ const BulletinByEleve = memo((props) => {
                                                                        
                                                                     {allnote_9.listnotes && allnote_9.listnotes && allnote_9.listnotes.map((item, grp_9) => (
                                                                         <tr key={grp_9}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                            <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                            <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                            <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
                                                                             <th>{allnote_9.groupe}</th>
                                                                             <th>{allnote_9.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
+                                                                    </tfoot>
                                                             </Table>
                                                         
-                                                        </div>) : null } 
+                                                        </div>) } 
                                                       
-                                                            {allnote_10.existgrp === 0 || allnote_10.existgrp ? (<div>
+                                                            {allnote_10.existgrp > 0 && (<div>
                                                             <Table
                                                                responsive
                                                                striped
@@ -2398,449 +2322,624 @@ const BulletinByEleve = memo((props) => {
                                                                className=""
                                                                data-toggle="data-table"
                                                            >
-                                                                <thead>
-                                                                   <tr>
-                                                                       <th><p>Disciplines</p></th>
-                                                                       <th>Notes</th>
-                                                                       <th>Appréciation</th>
-                                                                   </tr>
-                                                               </thead>
-                                                                   <tbody>
+                                                              <tbody>
                                                                        
                                                                     {allnote_10.listnotes && allnote_10.listnotes && allnote_10.listnotes.map((item, grp_10) => (
                                                                         <tr key={grp_10}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                            <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                            <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                            <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                    <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_10.groupe}</th>
                                                                             <th>{allnote_10.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
+                                                                    </tfoot>
                                                             </Table>
                                                         
-                                                        </div>) : null } 
+                                                        </div>)} 
                                                       
-                                                         
-                                                      <Table>
-                                                         <tbody>
+                                                        {allnote_11.existgrp > 0 && (<div>
+
+                                                              <Table
+                                                               responsive
+                                                               striped
+                                                               id="datatable"
+                                                               className=""
+                                                               data-toggle="data-table"
+                                                           >
+                                                                <tbody>
                                                                    
                                                                 {allnote_11.listnotes && allnote_11.listnotes && allnote_11.listnotes.map((item, grp_11) => (
                                                                     <tr key={grp_11}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
+                                                                      <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                      <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                      <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
-                                                               <thead>
+                                                               <tfoot>
                                                                     <tr>
-
                                                                         <th>{allnote_11.groupe}</th>
                                                                         <th>{allnote_11.sumnote}</th>
                                                                         <th></th>
-
                                                                     </tr>
-                                                                </thead>
+                                                                </tfoot>
+                                                           </Table> 
+                                                        </div>)}
                                                      
+                                                        
+                                                        {allnote_12.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                               responsive
+                                                               striped
+                                                               id="datatable"
+                                                               className=""
+                                                               data-toggle="data-table"
+                                                           >
                                                             <tbody>
                                                                {allnote_12.listnotes && allnote_12.listnotes && allnote_12.listnotes.map((item, grp_12) => (
                                                                         <tr key={grp_12}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                          <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                          <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                          <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_12.groupe}</th>
                                                                             <th>{allnote_12.sumnote}</th>
-                                                                            <th></th>
-    
+                                                                            <th></th> 
                                                                         </tr>
-                                                                    </thead>
-                                                    
-                                                            <tbody>
-                                                               {allnote_13.listnotes && allnote_13.listnotes && allnote_13.listnotes.map((item, grp_13) => (
+                                                                    </tfoot>
+
+                                                           </Table>
+                                                        </div>)}
+                                                        
+                                                        {allnote_13.existgrp > 0 && (<div>
+                                                            <Table
+                                                               responsive
+                                                               striped
+                                                               id="datatable"
+                                                               className=""
+                                                               data-toggle="data-table"
+                                                           ><tbody>
+                                                               {allnote_13.listnotes && allnote_13.listnotes.map((item, grp_13) => (
                                                                         <tr key={grp_13}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                           <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                           <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                           <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_13.groupe}</th>
                                                                             <th>{allnote_13.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
-                                                     
-                                                             <tbody>
+                                                                    </tfoot>
+
+                                                           </Table>
+
+                                                        </div>)}
+                                                        
+                                                        {allnote_14.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
+                                                            <tbody>
                                                                        
-                                                                    {allnote_14.listnotes && allnote_14.listnotes && allnote_14.listnotes.map((item, grp_14) => (
+                                                                {allnote_14.listnotes && allnote_14.listnotes.map((item, grp_14) => (
                                                                         <tr key={grp_14}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                           <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                           <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                           <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_14.groupe}</th>
                                                                             <th>{allnote_14.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
-                                                      
-                                                                   <tbody>
+                                                                    </tfoot>
+                                                            </Table>
+                                                            </div>)}
+                                                            
+                                                           
+                                                            {allnote_15.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
+                                                                <tbody>
                                                                    
-                                                                {allnote_15.listnotes && allnote_15.listnotes && allnote_15.listnotes.map((item, grp_15) => (
+                                                                {allnote_15.listnotes && allnote_15.listnotes.map((item, grp_15) => (
                                                                     <tr key={grp_15}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
+                                                                        <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                        <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                        <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
-                                                            </tbody>
-                                                               <thead>
+                                                                </tbody>
+                                                                <tfoot>
                                                                     <tr>
-
                                                                         <th>{allnote_15.groupe}</th>
                                                                         <th>{allnote_15.sumnote}</th>
                                                                         <th></th>
-
                                                                     </tr>
-                                                                </thead>
-                                                     
-                                                            <tbody>
-                                                                       
-                                                                    {allnote_16.listnotes && allnote_16.listnotes && allnote_16.listnotes.map((item, grp_16) => (
+                                                                </tfoot>
+
+                                                            </Table>
+                                                            </div>)}
+
+                                                             {allnote_16.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            ><tbody>
+                                                                
+                                                               {allnote_16.listnotes && allnote_16.listnotes.map((item, grp_16) => (
                                                                         <tr key={grp_16}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                           <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                           <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                           <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_16.groupe}</th>
                                                                             <th>{allnote_16.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
-                                                     
-                                                             <tbody>
+                                                                    </tfoot>
+
+                                                            </Table>
+                                                            </div>)}
+
+                                                                {allnote_17.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            ><tbody>
                                                                        
-                                                                    {allnote_17.listnotes && allnote_17.listnotes && allnote_17.listnotes.map((item, grp_17) => (
+                                                                    {allnote_17.listnotes  && allnote_17.listnotes.map((item, grp_17) => (
                                                                         <tr key={grp_17}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                            <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                            <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                            <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
                                                                             <th>{allnote_17.groupe}</th>
                                                                             <th>{allnote_17.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
-                                                     
-                                                            <tbody>
+                                                                    </tfoot>
+
+                                                            </Table>
+                                                            </div>)}
+
+                                                              {allnote_18.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            > <tbody>
                                                                        
-                                                                    {allnote_18.listnotes && allnote_18.listnotes && allnote_18.listnotes.map((item, grp_18) => (
+                                                                    {allnote_18.listnotes && allnote_18.listnotes.map((item, grp_18) => (
                                                                         <tr key={grp_18}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                            <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                            <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                            <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_18.groupe}</th>
                                                                             <th>{allnote_18.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
-                                                     
-                                                             <tbody>
+                                                                    </tfoot>
+
+                                                            </Table>
+                                                            </div>)}
+
+                                                                {allnote_19.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >     <tbody>
                                                                        
-                                                                    {allnote_19.listnotes && allnote_19.listnotes && allnote_19.listnotes.map((item, grp_19) => (
+                                                                    {allnote_19.listnotes && allnote_19.listnotes.map((item, grp_19) => (
                                                                         <tr key={grp_19}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                            <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                            <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                            <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_19.groupe}</th>
                                                                             <th>{allnote_19.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
-                                                       
+                                                                    </tfoot>
+
+                                                            </Table>
+                                                            </div>)}
+
+                                                            {allnote_20.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >  
                                                             <tbody>
                                                                        
-                                                                    {allnote_20.listnotes && allnote_20.listnotes && allnote_20.listnotes.map((item, grp_20) => (
+                                                                    {allnote_20.listnotes && allnote_20.listnotes.map((item, grp_20) => (
                                                                         <tr key={grp_20}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                            <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                            <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                            <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_20.groupe}</th>
                                                                             <th>{allnote_20.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
-                                                       
-                                                            <tbody>
+                                                                    </tfoot>
+
+                                                            </Table>
+                                                            </div>)}
+
+                                                            {allnote_21.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
+                                                                <tbody>
                                                                        
-                                                                    {allnote_21.listnotes && allnote_21.listnotes && allnote_21.listnotes.map((item, grp_21) => (
+                                                                    {allnote_21.listnotes && allnote_21.listnotes.map((item, grp_21) => (
                                                                         <tr key={grp_21}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                            <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                            <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                            <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_21.groupe}</th>
                                                                             <th>{allnote_21.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
-                                                        
-                                                            <tbody>
+                                                                    </tfoot>
+
+                                                            </Table>
+                                                            </div>)}
+
+                                                            {allnote_22.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            ><tbody>
                                                                        
-                                                                    {allnote_22.listnotes && allnote_22.listnotes && allnote_22.listnotes.map((item, grp_22) => (
+                                                                    {allnote_22.listnotes && allnote_22.listnotes.map((item, grp_22) => (
                                                                         <tr key={grp_22}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                            <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                            <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                            <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_22.groupe}</th>
                                                                             <th>{allnote_22.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
-                                                    
+                                                                    </tfoot>
+
+                                                            </Table>
+                                                            </div>)}
+
+                                                           {allnote_23.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
                                                              <tbody>
                                                                        
-                                                                    {allnote_23.listnotes && allnote_23.listnotes && allnote_23.listnotes.map((item, grp_23) => (
+                                                                    {allnote_23.listnotes && allnote_23.listnotes.map((item, grp_23) => (
                                                                         <tr key={grp_23}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                            <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                            <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                            <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_23.groupe}</th>
                                                                             <th>{allnote_23.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
-                                                     
-                                                            <tbody>
+                                                                    </tfoot>
+
+                                                            </Table>
+                                                            </div>)}
+
+                                                            {allnote_24.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            > <tbody>
                                                                        
-                                                                    {allnote_24.listnotes && allnote_24.listnotes && allnote_24.listnotes.map((item, grp_24) => (
+                                                                    {allnote_24.listnotes && allnote_24.listnotes.map((item, grp_24) => (
                                                                         <tr key={grp_24}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                            <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                            <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                            <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_24.groupe}</th>
+                                                                            <th>{allnote_24.sumnote}</th>
                                                                             <th></th>
-                                                                            <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
-                                                       
-                                                            <tbody>
-                                                              {allnote_25.listnotes && allnote_25.listnotes && allnote_25.listnotes.map((item, grp_25) => (
+                                                                    </tfoot>
+
+                                                            </Table>
+                                                            </div>)}
+
+                                                            {allnote_25.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >  <tbody>
+                                                              {allnote_25.listnotes && allnote_25.listnotes.map((item, grp_25) => (
                                                                     <tr key={grp_25}>
-                                                                        <td>{item.matiere_note}</td>
-                                                                        <td>{item.valeur_note}</td>
-                                                                        <td>{item.appreciation_note}</td>
+                                                                        <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                        <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                        <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                     </tr>
                                                                 ))}
                                                             </tbody>
-                                                               <thead>
+                                                               <tfoot>
                                                                     <tr>
-
                                                                         <th>{allnote_25.groupe}</th>
                                                                         <th>{allnote_25.sumnote}</th>
                                                                         <th></th>
-
                                                                     </tr>
-                                                                </thead>
+                                                                </tfoot>
+
+                                                            </Table>
+                                                            </div>)}
                                                         
-                                                                <tbody>
+                                                           {allnote_26.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            ><tbody>
                                                                        
-                                                                    {allnote_26.listnotes && allnote_26.listnotes && allnote_26.listnotes.map((item, grp_26) => (
+                                                                    {allnote_26.listnotes && allnote_26.listnotes.map((item, grp_26) => (
                                                                         <tr key={grp_26}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                            <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                            <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                            <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                    <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_26.groupe}</th>
                                                                             <th>{allnote_26.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>   
-                                                        
-                                                                 <tbody>
+                                                                    </tfoot>
+
+                                                            </Table>
+                                                            </div>)}
+
+                                                            {allnote_27.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            ><tbody>
                                                                            
-                                                                        {allnote_27.listnotes && allnote_27.listnotes && allnote_27.listnotes.map((item, grp_27) => (
+                                                                        {allnote_27.listnotes && allnote_27.listnotes.map((item, grp_27) => (
                                                                             <tr key={grp_27}>
-                                                                                <td>{item.matiere_note}</td>
-                                                                                <td>{item.valeur_note}</td>
-                                                                                <td>{item.appreciation_note}</td>
+                                                                                <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                                <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                                <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                             </tr>
                                                                         ))}
                                                                     </tbody>
-                                                                       <thead>
+                                                                       <tfoot>
                                                                             <tr>
-        
                                                                                 <th>{allnote_27.groupe}</th>
                                                                                 <th>{allnote_27.sumnote}</th>
                                                                                 <th></th>
-        
                                                                             </tr>
-                                                                        </thead>
-                                                         
-                                                            <tbody>
+                                                                        </tfoot>
+
+                                                            </Table>
+                                                            </div>)}
+                                                                
+                                                                {allnote_11.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            ><tbody>
                                                                        
-                                                                    {allnote_28.listnotes && allnote_28.listnotes && allnote_28.listnotes.map((item, grp_28) => (
+                                                                    {allnote_28.listnotes && allnote_28.listnotes.map((item, grp_28) => (
                                                                         <tr key={grp_28}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                            <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                            <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                            <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_28.groupe}</th>
                                                                             <th>{allnote_28.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
-                                                       
+                                                                    </tfoot>
+
+                                                            </Table>
+                                                            </div>)}
+                                                                
+                                                                {allnote_29.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
                                                             <tbody>
                                                                        
-                                                                    {allnote_29.listnotes && allnote_29.listnotes && allnote_29.listnotes.map((item, grp_29) => (
+                                                                 {allnote_29.listnotes && allnote_29.listnotes.map((item, grp_29) => (
                                                                         <tr key={grp_29}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                            <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                            <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                            <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_29.groupe}</th>
                                                                             <th>{allnote_29.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
-                                                     
+                                                                    </tfoot>
+
+                                                            </Table>
+                                                            </div>)}
+                                                     {allnote_30.existgrp > 0 && (<div>
+
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
                                                              <tbody>
                                                                        
-                                                                    {allnote_30.listnotes && allnote_30.listnotes && allnote_30.listnotes.map((item, grp_30) => (
+                                                                    {allnote_30.listnotes && allnote_30.listnotes.map((item, grp_30) => (
                                                                         <tr key={grp_30}>
-                                                                            <td>{item.matiere_note}</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                            <td style={{width: '130px' }}>{item.matiere_note}</td>
+                                                                            <td style={{width: '50px' }}>{item.valeur_note}</td> 
+                                                                            <td style={{width: '170px' }}>{item.appreciation_note}</td>
                                                                         </tr>
                                                                     ))}
                                                                 </tbody>
-                                                                   <thead>
+                                                                   <tfoot>
                                                                         <tr>
-    
                                                                             <th>{allnote_30.groupe}</th>
                                                                             <th>{allnote_30.sumnote}</th>
                                                                             <th></th>
-    
                                                                         </tr>
-                                                                    </thead>
-                                                                <tbody> 
+                                                                    </tfoot>
 
+                                                            </Table>
+                                                            </div>)}
+
+                                                            <Table>
+                                                                <tbody> 
                                                                     <tr>
-                                                                        <td>RECAPITULATIFS</td>
+                                                                        <td style={{width: '130px' }}>RECAPITULATIFS</td>
+                                                                        <td style={{width: '50px' }}></td>
+                                                                        <td style={{width: '170px' }}>{sumnotes}</td>
                                                                         <td></td>
-                                                                        <td>{sumnotes}</td>
-                                                                        <td></td>
-                                                                      
                                                                     </tr>
                                                                 </tbody>
 
-
-                                                                <tfoot>
-
-                                                                </tfoot>
                                                             </Table>
+
                                                             <Table
                                                                 responsive
                                                                 striped
