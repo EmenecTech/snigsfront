@@ -761,7 +761,6 @@ const UniClasse = () => {
 
                                                     </tr>
 
-                                                    </tr>
                                                 </thead>
                                                 <tbody>
                                                     
@@ -769,46 +768,52 @@ const UniClasse = () => {
                                                            <td>Nombre total d'élèves</td>
                                                            <td></td>
                                                         </tr>
-    <tr>
-                                                           <td></td>
-                                                           <td></td>
-                                                        </tr>
-    <tr>
-                                                           <td></td>
+                                                        <tr>
+                                                           <td>Nombre de garçons</td>
                                                            <td></td>
                                                         </tr>
-    <tr>
-                                                           <td></td>
-                                                           <td></td>
-                                                        </tr>
-    <tr>
-                                                           <td></td>
+                                                        <tr>
+                                                           <td>Nombre de filles</td>
                                                            <td></td>
                                                         </tr>
-    <tr>
-                                                           <td></td>
-                                                           <td></td>
-                                                        </tr>
-    <tr>
-                                                           <td></td>
+                                                        <tr>
+                                                           <td>Nombre d'enseignants</td>
                                                            <td></td>
                                                         </tr>
-    <tr>
-                                                           <td></td>
-                                                           <td></td>
-                                                        </tr>
-    <tr>
-                                                           <td></td>
+                                                        <tr>
+                                                           <td>Moyenne du premier</td>
                                                            <td></td>
                                                         </tr>
-    <tr>
-                                                           <td></td>
-                                                           <td></td>
-                                                        </tr>
-    <tr>
-                                                           <td></td>
+                                                        <tr>
+                                                           <td>Moyenne du dernier</td>
                                                            <td></td>
                                                         </tr>
+
+                                                         <tr> 
+                                                           <td>Nombre d'élèves ayant une moyenne supérieur ou égal à 10</td>
+                                                           <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                           <td>Nombre d'élèves ayant une moyenne inférieur ou égal à 10</td>
+                                                           <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                           <td>Nombre de filles ayant une moyenne supérieur ou égal à 10</td>
+                                                           <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                           <td>Nombre de garçon ayant une moyenne supérieur ou égal à 10</td>
+                                                           <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                           <td>Nombre de filles ayant une moyenne inférieur ou égal à 10</td>
+                                                           <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                           <td>Nombre de garçon ayant une moyenne inférieur ou égal à 10</td>
+                                                           <td></td>
+                                                        </tr>
+  
                                                
                                                 </tbody>
                                                
