@@ -61,6 +61,20 @@ const UniClasse = () => {
 
 
 
+    ////////////////////Stats
+
+const [total_eleves, settotal_eleves] = useState([]);
+  useEffect(() => {
+    fetchAlltotal_eleves();
+  }, []);
+
+  const fetchAlltotal_eleves = () => {
+    http.get("/nbreleves_classe/" + etab + '/' + classe).then((res) => {
+      settotal_eleves(res.data);
+    });
+  };
+
+    /////////////
 
     const submitForm = () => {
         http.post('/classesmatieres', inputs).then((res) => {
