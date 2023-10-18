@@ -230,6 +230,9 @@ const UniClasse = () => {
                                         <Nav.Item as="li">
                                             <Nav.Link eventKey="fourth">Parents</Nav.Link>
                                         </Nav.Item>
+                                        <Nav.Item as="li">
+                                            <Nav.Link eventKey="five">Statistiques</Nav.Link>
+                                        </Nav.Item>
                                     </Nav>
                                 </div>
                             </Card.Body>
@@ -733,6 +736,47 @@ const UniClasse = () => {
                                     </Card.Body>
                                 </Card>
                              
+                            </Tab.Pane >
+                            <Tab.Pane eventKey="five" id="profile-profile">
+                                <Card>
+                                    <Card.Header>
+                                        <div className="header-title">
+                                            <h4 className="card-title">Statistiques</h4>
+                                        </div>
+                                    </Card.Header>
+                                    <Card.Body>
+                                        <div className="table-responsive border-bottom my-3">
+                                            <Table
+                                                responsive
+                                                striped
+                                                id="datatable"
+                                                className=""
+                                                data-toggle="data-table"
+                                            >
+                                                <thead>
+                                                    <tr>
+                                                        <th>Intitulés</th>
+                                                        <th>Coefficient </th>
+                                                        <th>Groupe</th>
+                                                        <th>Action</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                                        <tr>
+                                                           
+
+                                                        </tr>
+                                               
+                                                </tbody>
+                                               
+                                            </Table>
+
+                                        </div>
+                                    </Card.Body>
+                                </Card>
+
                             </Tab.Pane >
                         </Tab.Content>
                     </Col>
