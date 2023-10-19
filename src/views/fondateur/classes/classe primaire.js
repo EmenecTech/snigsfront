@@ -569,63 +569,18 @@ const PrimClasse = () => {
     {etab === 25 ? <div>
     <select className="form-select mb-3 shadow-none" name="groupe" onChange={handleChange} required>
                                                                         <option></option>
-
-    <option value="Communication in English"> {user.langue === "en" ? (<div> Group 1</div>):(<div>Communication in English</div>)} </option>
-                                                                        <option value="Comuniction in french">{user.langue === "en" ? (<div> Group 2</div>):(<div>Comuniction in french</div>)} </option>
-                                                                        <option value="Communication in one national language">{user.langue === "en" ? (<div> Group 3</div>):(<div>Communication in one national language</div>)} </option>
-                                                                        
-                                                                        <option value="Use basic notions in Mathematics">Use basic notion in Mathematics</option>
-                                                                        <option value="Use basic notions in science and technology">Use basic notions in science and technology</option>
-                                                                        <option value="Practise Citizenship value">Practise Citizenship value</option>
-                                                                        <option value="Demonstrate autonomy, spirit of initiative creativity and entrepreneurship in vocational studies">Demonstrate autonomy, spirit of initiative creativity and entrepreuneurship in vocational studies</option>
-                                                                        <option value="Demonstrate autonomy, spirit of initiative creativity and entrepreneurship">Demonstrate autonomy, spirit of initiative creativity and entrepreneurship</option>
-                                                                        <option value="Use basic concept and tools of information and communication">Use basic concept and tools of information and communication</option>
-
-                                                                        <option value="Practise physical and sports actiovities">Practise physical and sports actiovities</option>
-                                                                        <option value="Practice physical sport, for the physically challenged">Practice physical aport, for the physically challenged</option>
-                                                                        <option value="Practice aristic activities">Practice aristic activities</option>
                                                                          {groupes.map((item) => (
                                                                         <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
     
                                                                        ))}
-        
-
-
-                                                                    </select>
+                                                                       </select>
     </div> : <div>
     <select className="form-select mb-3 shadow-none" name="groupe" onChange={handleChange} required>
                                                                         <option></option>
-
-    <option value="Groupe 1"> {user.langue === "en" ? (<div> Group 1</div>):(<div>Groupe 1</div>)} </option>
-                                                                        <option value="Groupe 2">{user.langue === "en" ? (<div> Group 2</div>):(<div>Groupe 2</div>)} </option>
-                                                                        <option value="Groupe 3">{user.langue === "en" ? (<div> Group 3</div>):(<div>Groupe 3</div>)} </option>
-                                                                        
-                                                                        <option value="Français">Français</option>
-                                                                        <option value="Anglais">Anglais</option>
-                                                                        <option value="Mathématiques">Mathématiques</option>
-                                                                        <option value="Sciences et Education à l'Environnement">Sciences et Education à l'Environnement</option>
-                                                                        <option value="Sciences Humaines et Sociales">Sciences Humaines et Sociales</option>
-                                                                        <option value="Connaissances Générales">Connaissances Générales</option>
-
-                                                                        <option value="LANGUE ET COMMUNICATION">LANGUE ET COMMUNICATION</option>
-                                                                        <option value="EVEIL SCIENTIFQUE & TECHNOLOGIQUE">EVEIL SCIENTIFQUE & TECHNOLOGIQUE</option>
-                                                                        <option value="VIE COURANTE">VIE COURANTE</option>
-                                                                        <option value="CREATION ARTISTIQUE & ACTIVITES MANUELLES">CREATION ARTISTIQUE & ACTIVITES MANUELLES</option>
-            
-                        
-                                                                        <option value="LITERACY AND COMMUNICATION">LITERACY AND COMMUNICATION</option>
-                                                                        <option value="SCIENCE AND TECHNOLOGICAL SKILLS DEVELOPMENT">SCIENCE AND TECHNOLOGICAL SKILLS DEVELOPMENT</option>
-                                                                        <option value="PRATICAL LIFE SKILLS">PRATICAL LIFE SKILLS</option>
-                                                                        <option value="ARTS AND CRAFTS">ARTS AND CRAFTS</option>
-                                                                        <option value="MOTOR SKILLS">MOTOR SKILLS</option> 
                                                                          {groupes.map((item) => (
-                                                                                <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
-                
-                                                                            ))}
-
-
-                                                                    </select>
-    </div>}
+                                                                        <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>))}
+                                                                      </select>
+            </div>}
                                                                         
                                                                 </Form.Group>
                                                             </Form.Group>
@@ -725,62 +680,19 @@ const PrimClasse = () => {
     {etab === 25 ? <div>
     <select className="form-select mb-3 shadow-none" name="groupe" onChange={handleChange} required>
                                                                         <option></option>
-
-    <option value="Communication in English"> {user.langue === "en" ? (<div> Group 1</div>):(<div>Communication in English</div>)} </option>
-                                                                        <option value="Comuniction in french">{user.langue === "en" ? (<div> Group 2</div>):(<div>Comuniction in french</div>)} </option>
-                                                                        <option value="Communication in one national language">{user.langue === "en" ? (<div> Group 3</div>):(<div>Communication in one national language</div>)} </option>
-                                                                        
-                                                                        <option value="Use basic notions in Mathematics">Use basic notion in Mathematics</option>
-                                                                        <option value="Use basic notions in science and technology">Use basic notions in science and technology</option>
-                                                                        <option value="Practise Citizenship value">Practise Citizenship value</option>
-                                                                        <option value="Demonstrate autonomy, spirit of initiative creativity and entrepreneurship in vocational studies">Demonstrate autonomy, spirit of initiative creativity and entrepreuneurship in vocational studies</option>
-                                                                        <option value="Demonstrate autonomy, spirit of initiative creativity and entrepreneurship">Demonstrate autonomy, spirit of initiative creativity and entrepreneurship</option>
-                                                                        <option value="Use basic concept and tools of information and communication">Use basic concept and tools of information and communication</option>
-
-                                                                        <option value="Practise physical and sports actiovities">Practise physical and sports actiovities</option>
-                                                                        <option value="Practice physical sport, for the physically challenged">Practice physical aport, for the physically challenged</option>
-                                                                        <option value="Practice aristic activities">Practice aristic activities</option>
                                                                          {groupes.map((item) => (
                                                                         <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
     
                                                                        ))}
-        
-
-
-                                                                    </select>
+    </select>
     </div> : <div>
     <select className="form-select mb-3 shadow-none" name="int" onChange={handleChange} required>
                                                                         <option></option>
-
-    <option value="Groupe 1"> {user.langue === "en" ? (<div> Group 1</div>):(<div>Groupe 1</div>)} </option>
-                                                                        <option value="Groupe 2">{user.langue === "en" ? (<div> Group 2</div>):(<div>Groupe 2</div>)} </option>
-                                                                        <option value="Groupe 3">{user.langue === "en" ? (<div> Group 3</div>):(<div>Groupe 3</div>)} </option>
-                                                                        
-                                                                        <option value="Français">Français</option>
-                                                                        <option value="Anglais">Anglais</option>
-                                                                        <option value="Mathématiques">Mathématiques</option>
-                                                                        <option value="Sciences et Education à l'Environnement">Sciences et Education à l'Environnement</option>
-                                                                        <option value="Sciences Humaines et Sociales">Sciences Humaines et Sociales</option>
-                                                                        <option value="Connaissances Générales">Connaissances Générales</option>
-
-                                                                        <option value="LANGUE ET COMMUNICATION">LANGUE ET COMMUNICATION</option>
-                                                                        <option value="EVEIL SCIENTIFQUE & TECHNOLOGIQUE">EVEIL SCIENTIFQUE & TECHNOLOGIQUE</option>
-                                                                        <option value="VIE COURANTE">VIE COURANTE</option>
-                                                                        <option value="CREATION ARTISTIQUE & ACTIVITES MANUELLES">CREATION ARTISTIQUE & ACTIVITES MANUELLES</option>
-            
-                        
-                                                                        <option value="LITERACY AND COMMUNICATION">LITERACY AND COMMUNICATION</option>
-                                                                        <option value="SCIENCE AND TECHNOLOGICAL SKILLS DEVELOPMENT">SCIENCE AND TECHNOLOGICAL SKILLS DEVELOPMENT</option>
-                                                                        <option value="PRATICAL LIFE SKILLS">PRATICAL LIFE SKILLS</option>
-                                                                        <option value="ARTS AND CRAFTS">ARTS AND CRAFTS</option>
-                                                                        <option value="MOTOR SKILLS">MOTOR SKILLS</option> 
                                                                          {groupes.map((item) => (
                                                                                 <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
                 
                                                                             ))}
-
-
-                                                                    </select>
+                                                                        </select>
     </div>}
                                                                         
                                                                 </Form.Group>
