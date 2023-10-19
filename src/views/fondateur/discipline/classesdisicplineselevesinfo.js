@@ -74,16 +74,19 @@ const DisciplineEleveInfo = (props) => {
         setInputs((values) => ({ ...values, [name]: value }));
     };
 
-    const submitForm = () => {
+   const submitForm = () => {
+        http.post('/userinfo', inputs).then((res) => {
+            alert("Discipline ajoutée avec succès !")
+            window.location.reload(false);
 
-        http.put("/edituser/" + id, inputs).then((res) => {
-            alert("Compte modifié avec succès !");
-            navigate("/Eleve/Edit/Profil/" + id);
-        });
+        })
+
+
 
         console.log(inputs);
-    };
 
+    }
+    
     const [userinfo, setuserinfo] = useState([]);
     useEffect(() => {
         fetchAlluserinfo();
@@ -310,7 +313,15 @@ const DisciplineEleveInfo = (props) => {
                                         />
                                     </Form.Group>
                                
-
+                                    <div className="text-center">
+                                 <Button
+                                type="button"
+                                variant="primary"
+                               onClick={submitForm}
+                               >
+                            {user.langue === "en" ? (<div> Confirm</div>):(<div> Confirmer</div>)}
+                       
+                      </Button>
 
 
                                 </Form>
