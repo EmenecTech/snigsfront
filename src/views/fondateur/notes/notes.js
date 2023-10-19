@@ -133,7 +133,7 @@ const AdminEditNotes = () => {
       console.log(groupesclasse.id);
   };
 
-    const deleteNotes = (id) => {
+    const deleteNotes = () => {
         http.delete('/delete_note/' + etab + "/" + classe + "/" + evaluation + "/" iduser).then(res => {
             fetchAllNoteseleves();
         })
