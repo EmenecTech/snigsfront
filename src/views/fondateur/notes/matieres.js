@@ -48,7 +48,7 @@ import Card from "../../../components/Card.js";
 // install Swiper modules
 SwiperCore.use([Navigation]);
 
-const EnseignantListEleves = memo((props) => {
+const AdminMatieresNotesEleves = memo((props) => {
     const [show, setShow] = useState(false);
     const { user, http } = AuthUser();
     const handleClose = () => setShow(false);
@@ -367,4 +367,4 @@ return (
     );
 })
 
-export default EnseignantListEleves
+export default AdminMatieresNotesEleves
