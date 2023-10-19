@@ -57,7 +57,7 @@ const Editnote = memo((props) => {
 
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
-    const { idnote } = useParams();
+    const { niveau, idnote } = useParams();
     const etab = user.etablissement;
 
 
@@ -96,6 +96,8 @@ const Editnote = memo((props) => {
         console.log(inputs);
 
     }
+
+    const coefficient = 1;
 
 
 
