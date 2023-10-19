@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Row, Col, Form, Button, Card, Modal, FormGroup } from 'react-bootstrap'
-import { useNavigate, useParams } from 'react-router-dom';
-import http from '../../../http';
-import AuthUser from '../../../components/AuthUser';
+import { useNavigate, useParams, Link } from 'react-router-dom';
+
+import AuthUser from "../../../components/AuthUser.js";
 
 
 
@@ -146,213 +146,7 @@ const AdminEditNotes = () => {
                         <Card.Header className="d-flex justify-content-between">
                             <h4 className="card-title">Notes</h4>
 
-                            <div>
-                                <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3" onClick={handleShow}>
-                                    <i className="btn-inner">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                                        </svg>
-                                    </i>
-
-                                    <span>Ajouter la Note</span>
-                                </Button>
-                                <Modal show={show} onHide={handleClose}>
-                                    <Modal.Header closeButton>
-                                        <Modal.Title>Ajouter une note</Modal.Title>
-                                    </Modal.Header>
-                                    <Modal.Body>
-                                        <Form>
                             
-                           {niveau == 'PRE NUSERY' || niveau == 'NUSERY ONE' || niveau == 'NUSERY TWO' || niveau == 'MATERNELLE' ? <div>
-
-                                {etab == 24 ? <div>
-                                 <Form.Group className="form-group">
-     
-                                                <Form.Label htmlFor="exampleFormControlSelect1">Selectionner la matière</Form.Label>
-                                                <select className="form-select" id="matiere" name="matiere" onChange={handleChange}>
-                                                    <option> </option>
-                                                    {matieres.map((item) => ( <option value={item.matiere_cp}>{item.matiere_cp}</option> ))}
-                                                </select>
-                                            </Form.Group>
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Note</Form.Label>
-                                                <Form.Control type="number" id="valeur_note" name="valeur_note"
-                                                    value={inputs.valeur_note || ''}
-                                                    onChange={handleChange}
-                                                />
-                                            </Form.Group>
- 
-                                     
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Appreciation</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Non acquis">Non acquis</option>
-                                                    <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                    <option value="Acquis">Acquis</option>
-                                                </select>
-                                           </Form.Group>
-                                    
-                                               <Form.Group className='form-group'>
-                                                <Form.Label>Compétence visée</Form.Label>
-                                                <Form.Control type="text" id="competence_visee" name="competence_visee"
-                                                    value={inputs.competence_visee || ''}
-                                                    onChange={handleChange}
-                                                />
-                                            </Form.Group>
-                        </div> : <div>
-                                <Form.Group className='form-group'>
-                                                <Form.Label>Groupes</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" name="matiere" onChange={handleChange}>
-                                                    <option> </option>
-                                                   
-                                         {groupes.map((item) => (
-                                            <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
-                                                            ))}
-                                                </select>
-                                           </Form.Group>
-                                         <Form.Group className='form-group'>
-                                                <Form.Label>Note</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" id="valeur_note" name="valeur_note" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="10">☹️</option>
-                                                    <option value="15">😐</option>
-                                                    <option value="20">😃</option>
-                                           
-                                                </select>
-                                             </Form.Group>
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>coefficient</Form.Label>
-                                                <Form.Control type="number" id="coef" name="coef"
-                                                    value={coefficient}
-                                                    
-                                                    disabled
-                                                />
-                                            </Form.Group>
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Indices d'évalutation</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Ecrit">Ecrit</option>
-                                                    <option value="Oral">Oral</option>
-                                                    <option value="Pratique">Pratique</option>>
-                                         {indices.map((item) => (
-                                            <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
-                                                            ))}
-                                                </select>
-                                           </Form.Group>
-                                                 <Form.Group className='form-group'>
-                                                <Form.Label>Appreciation</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Non acquis">Non acquis</option>
-                                                    <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                    <option value="Acquis">Acquis</option>
-                                                </select>
-                                           </Form.Group>                                
-                                </div>}
-                                         
-                           
-                                    </div>:<div>
-                                    {etab == 24 ? <div>
-                                            <Form.Group className="form-group">
-     
-                                                <Form.Label htmlFor="exampleFormControlSelect1">Selectionner la matière</Form.Label>
-                                                <select className="form-select" id="matiere" name="matiere" onChange={handleChange}>
-                                                    <option> </option>
-                                                    {matieres.map((item) => ( <option value={item.matiere_cp}>{item.matiere_cp}</option> ))}
-                                                </select>
-                                            </Form.Group>
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Note </Form.Label>
-                                                <Form.Control type="number" id="valeur_note" name="valeur_note"
-                                                    value={inputs.valeur_note || ''}
-                                                    onChange={handleChange}
-                                                />
-                                            </Form.Group>
- 
-                                         
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Appreciation</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Non acquis">Non acquis</option>
-                                                    <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                    <option value="Acquis">Acquis</option>
-                                                </select>
-                                           </Form.Group>
-                                    
-                                               <Form.Group className='form-group'>
-                                                <Form.Label>Compétence visée</Form.Label>
-                                                <Form.Control type="text" id="competence_visee" name="competence_visee"
-                                                    value={inputs.competence_visee || ''}
-                                                    onChange={handleChange}
-                                                />
-                                            </Form.Group>
-                                        </div> : <div>
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Groupes</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" name="matiere" onChange={handleChange}>
-                                                    <option> </option>
-                                                   
-                                         {groupesclasse.map((item) => (
-                                            <option key={item.id} value={item.groupe_cg}>{item.groupe_cg} (/ {item.marks_cg})</option>
-                                                            ))}
-                                                </select>
-                                           </Form.Group>
-
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Indices d'évalutation</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Ecrit">Ecrit</option>
-                                                    <option value="Oral">Oral</option>
-                                                    <option value="Pratique">Pratique</option>>
-                                         {indices.map((item) => (
-                                            <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
-                                                            ))}
-                                                </select>
-                                           </Form.Group>
-
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Note</Form.Label>
-                                                <Form.Control type="number" id="valeur_note" name="valeur_note"
-                                                    value={inputs.valeur_note || ''}
-                                                    onChange={handleChange}
-                                                />
-                                            </Form.Group>
-                                                
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Appreciation</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Non acquis">Non acquis</option>
-                                                    <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                    <option value="Acquis">Acquis</option>
-                                                </select>
-                                           </Form.Group>
-                                        </div>}
-
-                                    </div>}
-                
-                                    
-                                        <Button variant="primary" onClick={submitForm}>
-                                            Ajouter
-                                        </Button>
-                                    </Form>
-                                    </Modal.Body>
-                                </Modal>
-
-                            </div>
                         </Card.Header>
 
                         <Card.Body>
@@ -399,6 +193,7 @@ const AdminEditNotes = () => {
                                         <th>Evaluation</th>
                                         <th>Indices</th>
                                         <th>Appreciation</th>
+                                        <th>Action</th>
                                           
                                   </tr>
                                  </thead>
@@ -412,6 +207,29 @@ const AdminEditNotes = () => {
                                             <td>{getEmojiForNote(item.valeur_note)}</td>
                                             <td>{item.competence_visee_note}</td>
                                             <td>{item.appreciation_note}</td>
+                                            <td>
+                                                <div className="flex align-items-center list-user-action">
+
+                                                               <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Admin/edit/notes/" + item.id}>
+                                                                    <span className="btn-inner">
+                                                                        <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M11.4925 2.78906H7.75349C4.67849 2.78906 2.75049 4.96606 2.75049 8.04806V16.3621C2.75049 19.4441 4.66949 21.6211 7.75349 21.6211H16.5775C19.6625 21.6211 21.5815 19.4441 21.5815 16.3621V12.3341" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                            <path fillRule="evenodd" clipRule="evenodd" d="M8.82812 10.921L16.3011 3.44799C17.2321 2.51799 18.7411 2.51799 19.6721 3.44799L20.8891 4.66499C21.8201 5.59599 21.8201 7.10599 20.8891 8.03599L13.3801 15.545C12.9731 15.952 12.4211 16.181 11.8451 16.181H8.09912L8.19312 12.401C8.20712 11.845 8.43412 11.315 8.82812 10.921Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                            <path d="M15.1655 4.60254L19.7315 9.16854" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                </Link>{' '}
+                                                                  <Link className="btn btn-sm btn-icon btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" to="#" onClick={() => { deleteMembres(item.id) }}>
+                                                                    <span className="btn-inner">
+                                                                        <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                                                                            <path d="M19.3248 9.46826C19.3248 9.46826 18.7818 16.2033 18.4668 19.0403C18.3168 20.3953 17.4798 21.1893 16.1088 21.2143C13.4998 21.2613 10.8878 21.2643 8.27979 21.2093C6.96079 21.1823 6.13779 20.3783 5.99079 19.0473C5.67379 16.1853 5.13379 9.46826 5.13379 9.46826" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                            <path d="M20.708 6.23975H3.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                            <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                        </svg>
+                                                                    </span>
+                                                                </Link>{' '}
+                                                            </div>
+                                                    </td>
                                             
                                         </tr>
                                     ))}
