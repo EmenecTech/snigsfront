@@ -75,7 +75,7 @@ const DisciplineEleveInfo = (props) => {
     };
 
    const submitForm = () => {
-        http.post('/userinfo', inputs).then((res) => {
+        http.post('/discipline', inputs).then((res) => {
             alert("Discipline ajoutée avec succès !")
             window.location.reload(false);
 
@@ -321,7 +321,7 @@ const DisciplineEleveInfo = (props) => {
                                >
                             {user.langue === "en" ? (<div> Confirm</div>):(<div> Confirmer</div>)}
                        
-                      </Button>
+                            </Button>
 
 
                                 </Form>
