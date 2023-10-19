@@ -208,7 +208,7 @@ const AdminEditNotes = () => {
                                             <td>{item.competence_visee_note}</td>
                                             <td>{item.appreciation_note}</td>
                                             <td>
-                                                <div className="flex align-items-center list-user-action">
+                                            <div className="flex align-items-center list-user-action">
 
                                                                <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Admin/edit/notes/" + item.id}>
                                                                     <span className="btn-inner">
@@ -227,7 +227,7 @@ const AdminEditNotes = () => {
                                                                             <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                                                         </svg>
                                                                     </span>
-                                                                </Link>{' '}
+                                                                </Link>
                                                             </div>
                                                     </td>
                                             
