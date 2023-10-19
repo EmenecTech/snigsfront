@@ -37,6 +37,7 @@ const DisciplineEleveInfo = (props) => {
                 console.error("Faillure", e);
             });
     };
+    
     const { user } = AuthUser();
 
     const [message, setMessage] = useState("");
@@ -95,13 +96,6 @@ const DisciplineEleveInfo = (props) => {
 
 
 
-
-
-
-
-
-
-
     const [image, setImage] = useState("");
     const imageRef = useRef(null);
 
@@ -150,7 +144,6 @@ const DisciplineEleveInfo = (props) => {
 
 
     console.log()
-
 
 
 
