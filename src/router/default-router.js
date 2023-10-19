@@ -419,7 +419,7 @@ export const DefaultRouter = [
                 element: <AdminMatieresNotesEleves />
             },
             {
-                path: 'Admin/Edit/Notes/:niveau/:classe/:evaluation/:id',
+                path: 'Admin/Edit/Notes/:niveau/:classe/:evaluation/:userid',
                 element: <AdminEditNotes />
             },
             ///
