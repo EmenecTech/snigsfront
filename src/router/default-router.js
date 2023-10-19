@@ -415,11 +415,11 @@ export const DefaultRouter = [
                 element: <AdminListEvaluationsNotes />
             },
             {
-                path: 'Admin/List/Matieres/Notes/:niveau/:classe/:evaluation',
+                path: 'Admin/List/Eleves/Notes/:niveau/:classe/:evaluation',
                 element: <AdminMatieresNotesEleves />
             },
             {
-                path: 'Admin/Edit/Notes/:niveau/:classe/:evaluation/:matiere',
+                path: 'Admin/Edit/Notes/:niveau/:classe/:evaluation/:id',
                 element: <AdminEditNotes />
             },
             ///
