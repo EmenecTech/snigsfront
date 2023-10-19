@@ -431,7 +431,7 @@ export const DefaultRouter = [
 
     //Oct 19
     {
-        path: '/Admin/edit/notes/:idnote',
+        path: '/Admin/edit/notes/:niveau/:idnote',
         element: <Editnote />
     },
             ///
