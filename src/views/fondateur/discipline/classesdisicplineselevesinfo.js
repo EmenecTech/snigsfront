@@ -72,19 +72,6 @@ const DisciplineEleveInfo = (props) => {
         setInputs((values) => ({ ...values, [name]: value }));
     };
 
-   const submitForm = () => {
-        http.post('/discipline', inputs).then((res) => {
-            alert("Discipline ajoutée avec succès !")
-            window.location.reload(false);
-
-        })
-
-
-
-        console.log(inputs);
-
-    }
-    
     const [userinfo, setuserinfo] = useState([]);
     useEffect(() => {
         fetchAlluserinfo();
@@ -310,16 +297,6 @@ const DisciplineEleveInfo = (props) => {
                                             placeholder=""
                                         />
                                     </Form.Group>
-                               
-                                    <div className="text-center">
-                                 <Button
-                                type="button"
-                                variant="primary"
-                               onClick={submitForm}
-                               >
-                            {user.langue === "en" ? (<div> Confirm</div>):(<div> Confirmer</div>)}
-                       
-                            </Button>
 
 
                                 </Form>
