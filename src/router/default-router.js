@@ -105,6 +105,11 @@ import AdminListClassesNotes from '../views/fondateur/notes/listclasses';
 import AdminListEvaluationsNotes from '../views/fondateur/notes/evaluations';
 import AdminMatieresNotesEleves from '../views/fondateur/notes/matieres';
 import AdminEditNotes from '../views/fondateur/notes/notes';
+
+
+//Oct 19
+import Editnote from '../views/fondateur/notes/edit_note;
+
 import EleveMatieresClasse from '../views/eleves/cours/matieres';
 import Eleve_list_Chapitre from '../views/eleves/cours/chapitres';
 import EleveLeconChapitre from '../views/eleves/cours/lecons';
@@ -422,6 +427,13 @@ export const DefaultRouter = [
                 path: 'Admin/Edit/Notes/:niveau/:classe/:evaluation/:userid',
                 element: <AdminEditNotes />
             },
+
+
+    //Oct 19
+    {
+        path: '/Admin/edit/notes/:idnote',
+        element: <Editnote />
+    },
             ///
             {
                 path: 'ReportMark/',
