@@ -108,7 +108,7 @@ import AdminEditNotes from '../views/fondateur/notes/notes';
 
 
 //Oct 19
-import Editnote from '../views/fondateur/notes/edit_note;
+import Editnote from '../views/fondateur/notes/edit_note';
 
 import EleveMatieresClasse from '../views/eleves/cours/matieres';
 import Eleve_list_Chapitre from '../views/eleves/cours/chapitres';
