@@ -282,7 +282,6 @@ const DisciplineEleveInfo = (props) => {
                                         <Form.Control
                                             type="text"
                                             id="furl"
-                                            disabled
                                             placeholder={userinfo.nom + " " + userinfo.prenom}
                                         />
                                     </Form.Group>
@@ -291,7 +290,6 @@ const DisciplineEleveInfo = (props) => {
                                         <Form.Control
                                             type="text"
                                             id="furl"
-                                            disabled
                                             placeholder={userinfo.other_in_user}
                                         />
                                     </Form.Group>
@@ -300,7 +298,6 @@ const DisciplineEleveInfo = (props) => {
                                         <Form.Control
                                             type="text"
                                             id="furl"
-                                            disabled
                                             placeholder=""
                                         />
                                     </Form.Group>
@@ -309,7 +306,6 @@ const DisciplineEleveInfo = (props) => {
                                         <Form.Control
                                             type="text"
                                             id="furl"
-                                            disabled
                                             placeholder=""
                                         />
                                     </Form.Group>
