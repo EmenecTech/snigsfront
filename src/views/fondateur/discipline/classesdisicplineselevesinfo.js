@@ -37,8 +37,6 @@ const DisciplineEleveInfo = (props) => {
                 console.error("Faillure", e);
             });
     };
-
-    const navigate = useNavigate();
     const { user } = AuthUser();
 
     const [message, setMessage] = useState("");
