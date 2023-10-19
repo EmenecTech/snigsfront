@@ -380,7 +380,7 @@ const AdminListEvaluationsNotes = memo((props) => {
                                                     <div className="flex align-items-center list-user-action">
 
 
-                                                        <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" to={"/Admin/List/Matieres/Notes/" + niveau + "/" + classe + "/" + item.intitule_evaluation}>
+                                                        <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" to={"/Admin/List/Eleves/Notes/" + niveau + "/" + classe + "/" + item.intitule_evaluation}>
 
                                                             Consulter
 
