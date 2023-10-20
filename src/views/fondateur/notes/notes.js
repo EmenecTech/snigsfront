@@ -133,20 +133,20 @@ const [indices, setindices] = useState([]);
       
   };
 
-    const deleteNotes = (id) => {
+   {/* const deleteNotes = (id) => {
         http.delete('/delete_note/' + id).then(res => {
             fetchAllNoteseleves();
         })
-    } 
+    } */}
     
-   {/* const deleteNotes = (id) => {
+    const deleteNotes = (id) => {
        if(window.confirm("Voulez-vous supprimer cet élément?") == true){
-    http.delete("/delete_note/" + id).then((res) => {
+    http.delete('/delete_note/' + etab + "/" + classe + "/" + evaluation + "/" + iuserid).then((res) => {
       fetchAllNoteseleves();
     });
       alert('Supprimé!');
   };
-  }*/}
+  }
 
 
 
