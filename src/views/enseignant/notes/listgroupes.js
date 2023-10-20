@@ -10,7 +10,7 @@ const EnseignantListGroupes = () => {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
     const [notes, setNotes] = useState([]);
-    const {niveau, classe, evaluation, userid} = useParams();
+    const { niveau, classe, evaluation, userid } = useParams();
 
     const { user, http } = AuthUser();
     const etab = user.etablissement;
@@ -21,18 +21,18 @@ const EnseignantListGroupes = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const coefficient = 1;
-    
+
     console.log(niveau);
- 
+
     const getEmojiForNote = (note) => {
-    if (note == 10) {
-      return '☹️';
-    } else if (note == 15) {
-      return '😐';
-    } else if (note == 20) {
-      return '😃';
-    }
-      return ''; 
+        if (note == 10) {
+            return '☹️';
+        } else if (note == 15) {
+            return '😐';
+        } else if (note == 20) {
+            return '😃';
+        }
+        return '';
     };
 
     const [eleves_classe, seteleves_classe] = useState([]);
@@ -46,40 +46,40 @@ const EnseignantListGroupes = () => {
         })
     }
 
-  
-     const [indices, setindices] = useState([]);
-  useEffect(() => {
-    fetchAllIndices();
-  }, []);
 
-  const fetchAllIndices = () => {
-    http.get("/get_indices/" + etab).then((res) => {
-      setindices(res.data);
-    });
-  };
+    const [indices, setindices] = useState([]);
+    useEffect(() => {
+        fetchAllIndices();
+    }, []);
 
-     const [noteseleves, setnoteseleves] = useState([]);
-  useEffect(() => {
-    fetchAllNoteseleves();
-  }, []);
+    const fetchAllIndices = () => {
+        http.get("/get_indices/" + etab).then((res) => {
+            setindices(res.data);
+        });
+    };
 
-  const fetchAllNoteseleves = () => {
-    http.get("/get_notes_elevesprim/" + etab + '/' + classe + '/' + evaluation + '/' + userid ).then((res) => {
-      setnoteseleves(res.data);
-    });
-  };
+    const [noteseleves, setnoteseleves] = useState([]);
+    useEffect(() => {
+        fetchAllNoteseleves();
+    }, []);
+
+    const fetchAllNoteseleves = () => {
+        http.get("/get_notes_elevesprim/" + etab + '/' + classe + '/' + evaluation + '/' + userid).then((res) => {
+            setnoteseleves(res.data);
+        });
+    };
     console.log(noteseleves);
-    
-     const [groupes, setgroupes] = useState([]);
-  useEffect(() => {
-    fetchAllGroupes();
-  }, []);
 
-  const fetchAllGroupes = () => {
-    http.get("/get_groupes/" + etab).then((res) => {
-      setgroupes(res.data);
-    });
-  };
+    const [groupes, setgroupes] = useState([]);
+    useEffect(() => {
+        fetchAllGroupes();
+    }, []);
+
+    const fetchAllGroupes = () => {
+        http.get("/get_groupes/" + etab).then((res) => {
+            setgroupes(res.data);
+        });
+    };
 
     // useEffect(()=>{
     //     fetchAllClasses();
@@ -103,10 +103,10 @@ const EnseignantListGroupes = () => {
 
     const submitForm = () => {
         http.post('/notes', inputs).then((res) => {
-            
+
         })
-        
-        window.location.reload(false); 
+
+        window.location.reload(false);
     }
 
     const [matieres, setmatieres] = useState([]);
@@ -121,21 +121,21 @@ const EnseignantListGroupes = () => {
     }
 
     const [groupesclasse, setgroupesclasse] = useState([]);
-  useEffect(() => {
-    fetchAllGroupesClasse();
-  }, []);
+    useEffect(() => {
+        fetchAllGroupesClasse();
+    }, []);
 
-  const fetchAllGroupesClasse = () => {
-    http.get("/get_groupes_for_classe/" + etab + "/" + classe).then((res) => {
-      setgroupesclasse(res.data);
-    });
+    const fetchAllGroupesClasse = () => {
+        http.get("/get_groupes_for_classe/" + etab + "/" + classe).then((res) => {
+            setgroupesclasse(res.data);
+        });
 
-      console.log(groupesclasse.id);
-  };
+        console.log(groupesclasse.id);
+    };
 
 
 
-   
+
 
     return (
 
@@ -162,193 +162,193 @@ const EnseignantListGroupes = () => {
                                     </Modal.Header>
                                     <Modal.Body>
                                         <Form>
-                            
-                           {niveau == 'PRE NUSERY' || niveau == 'NUSERY ONE' || niveau == 'NUSERY TWO' || niveau == 'MATERNELLE' ? <div>
 
-                                {etab == 24 ? <div>
-                                 <Form.Group className="form-group">
-     
-                                                <Form.Label htmlFor="exampleFormControlSelect1">Selectionner la matière</Form.Label>
-                                                <select className="form-select" id="matiere" name="matiere" onChange={handleChange}>
-                                                    <option> </option>
-                                                    {matieres.map((item) => ( <option value={item.matiere_cp}>{item.matiere_cp}</option> ))}
-                                                </select>
-                                            </Form.Group>
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Note</Form.Label>
-                                                <Form.Control type="number" id="valeur_note" name="valeur_note"
-                                                    value={inputs.valeur_note || ''}
-                                                    onChange={handleChange}
-                                                />
-                                            </Form.Group>
- 
-                                     
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Appreciation</Form.Label>
+                                            {niveau == 'PRE NUSERY' || niveau == 'NUSERY ONE' || niveau == 'NUSERY TWO' || niveau == 'MATERNELLE' ? <div>
 
-                                          <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Non acquis">Non acquis</option>
-                                                    <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                    <option value="Acquis">Acquis</option>
-                                                </select>
-                                           </Form.Group>
-                                    
-                                               <Form.Group className='form-group'>
-                                                <Form.Label>Compétence visée</Form.Label>
-                                                <Form.Control type="text" id="competence_visee" name="competence_visee"
-                                                    value={inputs.competence_visee || ''}
-                                                    onChange={handleChange}
-                                                />
-                                            </Form.Group>
-                        </div> : <div>
-                                <Form.Group className='form-group'>
-                                                <Form.Label>Groupes</Form.Label>
+                                                {etab == 24 ? <div>
+                                                    <Form.Group className="form-group">
 
-                                          <select className="form-select mb-3 shadow-none" name="matiere" onChange={handleChange}>
-                                                    <option> </option>
-                                                   
-                                         {groupes.map((item) => (
-                                            <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
+                                                        <Form.Label htmlFor="exampleFormControlSelect1">Selectionner la matière</Form.Label>
+                                                        <select className="form-select" id="matiere" name="matiere" onChange={handleChange}>
+                                                            <option> </option>
+                                                            {matieres.map((item) => (<option value={item.matiere_cp}>{item.matiere_cp}</option>))}
+                                                        </select>
+                                                    </Form.Group>
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Note</Form.Label>
+                                                        <Form.Control type="number" id="valeur_note" name="valeur_note"
+                                                            value={inputs.valeur_note || ''}
+                                                            onChange={handleChange}
+                                                        />
+                                                    </Form.Group>
+
+
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Appreciation</Form.Label>
+
+                                                        <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
+                                                            <option> </option>
+                                                            <option value="Non acquis">Non acquis</option>
+                                                            <option value="En cours d'acquisition">En cours d'acquisition</option>
+                                                            <option value="Acquis">Acquis</option>
+                                                        </select>
+                                                    </Form.Group>
+
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Compétence visée</Form.Label>
+                                                        <Form.Control type="text" id="competence_visee" name="competence_visee"
+                                                            value={inputs.competence_visee || ''}
+                                                            onChange={handleChange}
+                                                        />
+                                                    </Form.Group>
+                                                </div> : <div>
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Groupes</Form.Label>
+
+                                                        <select className="form-select mb-3 shadow-none" name="matiere" onChange={handleChange}>
+                                                            <option> </option>
+
+                                                            {groupes.map((item) => (
+                                                                <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
                                                             ))}
-                                                </select>
-                                           </Form.Group>
-                                         <Form.Group className='form-group'>
-                                                <Form.Label>Note</Form.Label>
+                                                        </select>
+                                                    </Form.Group>
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Note</Form.Label>
 
-                                          <select className="form-select mb-3 shadow-none" id="valeur_note" name="valeur_note" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="10">☹️</option>
-                                                    <option value="15">😐</option>
-                                                    <option value="20">😃</option>
-                                           
-                                                </select>
-                                             </Form.Group>
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>coefficient</Form.Label>
-                                                <Form.Control type="number" id="coef" name="coef"
-                                                    value={coefficient}
-                                                    
-                                                    disabled
-                                                />
-                                            </Form.Group>
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Indices d'évalutation</Form.Label>
+                                                        <select className="form-select mb-3 shadow-none" id="valeur_note" name="valeur_note" onChange={handleChange}>
+                                                            <option> </option>
+                                                            <option value="10">☹️</option>
+                                                            <option value="15">😐</option>
+                                                            <option value="20">😃</option>
 
-                                          <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Ecrit">Ecrit</option>
-                                                    <option value="Oral">Oral</option>
-                                                    <option value="Pratique">Pratique</option>>
-                                         {indices.map((item) => (
-                                            <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
+                                                        </select>
+                                                    </Form.Group>
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>coefficient</Form.Label>
+                                                        <Form.Control type="number" id="coef" name="coef"
+                                                            value={coefficient}
+
+                                                            disabled
+                                                        />
+                                                    </Form.Group>
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Indices d'évalutation</Form.Label>
+
+                                                        <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
+                                                            <option> </option>
+                                                            <option value="Ecrit">Ecrit</option>
+                                                            <option value="Oral">Oral</option>
+                                                            <option value="Pratique">Pratique</option>
+                                                            {indices.map((item) => (
+                                                                <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
                                                             ))}
-                                                </select>
-                                           </Form.Group>
-                                                 <Form.Group className='form-group'>
-                                                <Form.Label>Appreciation</Form.Label>
+                                                        </select>
+                                                    </Form.Group>
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Appreciation</Form.Label>
 
-                                          <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Non acquis">Non acquis</option>
-                                                    <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                    <option value="Acquis">Acquis</option>
-                                                </select>
-                                           </Form.Group>                                
-                                </div>}
-                                         
-                           
-                                    </div>:<div>
-                                    {etab == 24 ? <div>
-                                            <Form.Group className="form-group">
-     
-                                                <Form.Label htmlFor="exampleFormControlSelect1">Selectionner la matière</Form.Label>
-                                                <select className="form-select" id="matiere" name="matiere" onChange={handleChange}>
-                                                    <option> </option>
-                                                    {matieres.map((item) => ( <option value={item.matiere_cp}>{item.matiere_cp}</option> ))}
-                                                </select>
-                                            </Form.Group>
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Note </Form.Label>
-                                                <Form.Control type="number" id="valeur_note" name="valeur_note"
-                                                    value={inputs.valeur_note || ''}
-                                                    onChange={handleChange}
-                                                />
-                                            </Form.Group>
- 
-                                         
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Appreciation</Form.Label>
+                                                        <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
+                                                            <option> </option>
+                                                            <option value="Non acquis">Non acquis</option>
+                                                            <option value="En cours d'acquisition">En cours d'acquisition</option>
+                                                            <option value="Acquis">Acquis</option>
+                                                        </select>
+                                                    </Form.Group>
+                                                </div>}
 
-                                          <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Non acquis">Non acquis</option>
-                                                    <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                    <option value="Acquis">Acquis</option>
-                                                </select>
-                                           </Form.Group>
-                                    
-                                               <Form.Group className='form-group'>
-                                                <Form.Label>Compétence visée</Form.Label>
-                                                <Form.Control type="text" id="competence_visee" name="competence_visee"
-                                                    value={inputs.competence_visee || ''}
-                                                    onChange={handleChange}
-                                                />
-                                            </Form.Group>
-                                        </div> : <div>
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Groupes</Form.Label>
 
-                                          <select className="form-select mb-3 shadow-none" name="matiere" onChange={handleChange}>
-                                                    <option> </option>
-                                                   
-                                         {groupesclasse.map((item) => (
-                                            <option key={item.id} value={item.groupe_cg}>{item.groupe_cg} (/ {item.marks_cg})</option>
+                                            </div> : <div>
+                                                {etab == 24 ? <div>
+                                                    <Form.Group className="form-group">
+
+                                                        <Form.Label htmlFor="exampleFormControlSelect1">Selectionner la matière</Form.Label>
+                                                        <select className="form-select" id="matiere" name="matiere" onChange={handleChange}>
+                                                            <option> </option>
+                                                            {matieres.map((item) => (<option value={item.matiere_cp}>{item.matiere_cp}</option>))}
+                                                        </select>
+                                                    </Form.Group>
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Note </Form.Label>
+                                                        <Form.Control type="number" id="valeur_note" name="valeur_note"
+                                                            value={inputs.valeur_note || ''}
+                                                            onChange={handleChange}
+                                                        />
+                                                    </Form.Group>
+
+
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Appreciation</Form.Label>
+
+                                                        <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
+                                                            <option> </option>
+                                                            <option value="Non acquis">Non acquis</option>
+                                                            <option value="En cours d'acquisition">En cours d'acquisition</option>
+                                                            <option value="Acquis">Acquis</option>
+                                                        </select>
+                                                    </Form.Group>
+
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Compétence visée</Form.Label>
+                                                        <Form.Control type="text" id="competence_visee" name="competence_visee"
+                                                            value={inputs.competence_visee || ''}
+                                                            onChange={handleChange}
+                                                        />
+                                                    </Form.Group>
+                                                </div> : <div>
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Groupes</Form.Label>
+
+                                                        <select className="form-select mb-3 shadow-none" name="matiere" onChange={handleChange}>
+                                                            <option> </option>
+
+                                                            {groupesclasse.map((item) => (
+                                                                <option key={item.id} value={item.groupe_cg}>{item.groupe_cg}(/ {item.marks_cg})</option>
                                                             ))}
-                                                </select>
-                                           </Form.Group>
+                                                        </select>
+                                                    </Form.Group>
 
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Indices d'évalutation</Form.Label>
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Indices d'évalutation</Form.Label>
 
-                                          <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Ecrit">Ecrit</option>
-                                                    <option value="Oral">Oral</option>
-                                                    <option value="Pratique">Pratique</option>>
-                                         {indices.map((item) => (
-                                            <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
+                                                        <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
+                                                            <option> </option>
+                                                            <option value="Ecrit">Ecrit</option>
+                                                            <option value="Oral">Oral</option>
+                                                            <option value="Pratique">Pratique</option>
+                                                            {indices.map((item) => (
+                                                                <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
                                                             ))}
-                                                </select>
-                                           </Form.Group>
+                                                        </select>
+                                                    </Form.Group>
 
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Note</Form.Label>
-                                                <Form.Control type="number" id="valeur_note" name="valeur_note"
-                                                    value={inputs.valeur_note || ''}
-                                                    onChange={handleChange}
-                                                />
-                                            </Form.Group>
-                                                
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Appreciation</Form.Label>
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Note</Form.Label>
+                                                        <Form.Control type="number" id="valeur_note" name="valeur_note"
+                                                            value={inputs.valeur_note || ''}
+                                                            onChange={handleChange}
+                                                        />
+                                                    </Form.Group>
 
-                                          <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Non acquis">Non acquis</option>
-                                                    <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                    <option value="Acquis">Acquis</option>
-                                                </select>
-                                           </Form.Group>
-                                        </div>}
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Appreciation</Form.Label>
 
-                                    </div>}
-                
-                                    
-                                        <Button variant="primary" onClick={submitForm}>
-                                            Ajouter
-                                        </Button>
-                                    </Form>
+                                                        <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
+                                                            <option> </option>
+                                                            <option value="Non acquis">Non acquis</option>
+                                                            <option value="En cours d'acquisition">En cours d'acquisition</option>
+                                                            <option value="Acquis">Acquis</option>
+                                                        </select>
+                                                    </Form.Group>
+                                                </div>}
+
+                                            </div>}
+
+
+                                            <Button variant="primary" onClick={submitForm}>
+                                                Ajouter
+                                            </Button>
+                                        </Form>
                                     </Modal.Body>
                                 </Modal>
 
@@ -356,102 +356,101 @@ const EnseignantListGroupes = () => {
                         </Card.Header>
 
                         <Card.Body>
-                 
-                     {niveau == 'PRE NUSERY' || niveau == 'NUSERY ONE' || niveau == 'NUSERY TWO' || niveau == 'MATERNELLE' ? <div>
 
-                          {etab == 24 ? <div>
-                        <table className="table">
-                                    <thead>                  
-                                    <tr>
-                                        <th>Sno.</th>
-                                        <th>Nom(s)</th>
-                                        <th>Prénom(s)</th>     
-                                        <th>Groupes</th>
-                                        <th>Note</th>
-                                        <th>Indices</th>
-                                        <th>Appreciation</th>
-                                          
-                                  </tr>
-                                 </thead>
-                                    <tbody>
-                                    {noteseleves.map((item, index) => (
-                                        <tr key={item.id}>
-                                            <td>{++index}</td>
-                                            <td>{item.nom}</td>
-                                            <td>{item.prenom}</td>
-                                            <td>{item.matiere_note}</td> 
-                                            <td>{item.valeur_note}</td>
-                                            <td>{item.competence_visee_note}</td>
-                                            <td>{item.appreciation_note}</td>
-                                            
+                            {niveau == 'PRE NUSERY' || niveau == 'NUSERY ONE' || niveau == 'NUSERY TWO' || niveau == 'MATERNELLE' ? <div>
+
+                                {etab == 24 ? <div>
+                                    <table className="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Sno.</th>
+                                                <th>Nom(s)</th>
+                                                <th>Prénom(s)</th>
+                                                <th>Groupes</th>
+                                                <th>Note</th>
+                                                <th>Indices</th>
+                                                <th>Appreciation</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {noteseleves.map((item, index) => (
+                                                <tr key={item.id}>
+                                                    <td>{++index}</td>
+                                                    <td>{item.nom}</td>
+                                                    <td>{item.prenom}</td>
+                                                    <td>{item.matiere_note}</td>
+                                                    <td>{item.valeur_note}</td>
+                                                    <td>{item.competence_visee_note}</td>
+                                                    <td>{item.appreciation_note}</td>
+
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div> : <div>
+                                    <table className="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Sno. </th>
+                                                <th>Nom(s)</th>
+                                                <th>Prénom(s)</th>
+                                                <th>Groupes</th>
+                                                <th>Evaluation</th>
+                                                <th>Indices</th>
+                                                <th>Appreciation</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {noteseleves.map((item, index) => (
+                                                <tr key={item.id}>
+                                                    <td>{++index}</td>
+                                                    <td>{item.nom}</td>
+                                                    <td>{item.prenom}</td>
+                                                    <td>{item.matiere_note}</td>
+                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                    <td>{item.competence_visee_note}</td>
+                                                    <td>{item.appreciation_note}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>}
+
+
+                            </div> : <div>
+
+                                <table className="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Sno.</th>
+                                            <th>Nom(s)</th>
+                                            <th>Prénom(s)</th>
+                                            <th>Groupes</th>
+                                            <th>Note</th>
+                                            <th>Indices</th>
+                                            <th>Appreciation</th>
+
                                         </tr>
-                                    ))}
-                                      </tbody>      
-                                     </table>
-                        </div> : <div>
-                          <table className="table">
-                                    <thead>              
-                                    <tr>
-                                        <th>Sno.</th>
-                                        <th>Nom(s)</th>
-                                        <th>Prénom(s)</th>     
-                                        <th>Groupes</th>
-                                        <th>Evaluation</th>
-                                        <th>Indices</th>
-                                        <th>Appreciation</th>
-                                          
-                                  </tr>
-                                 </thead>
+                                    </thead>
                                     <tbody>
-                                    {noteseleves.map((item, index) => (
-                                        <tr key={item.id}>
-                                            <td>{++index}</td>
-                                            <td>{item.nom}</td>
-                                            <td>{item.prenom}</td>
-                                            <td>{item.matiere_note}</td> 
-                                            <td>{getEmojiForNote(item.valeur_note)}</td>
-                                            <td>{item.competence_visee_note}</td>
-                                            <td>{item.appreciation_note}</td>
-                                            
-                                        </tr>
-                                    ))}
-                                      </tbody>      
-                                     </table> 
-                      </div>}
-                       
-                                        
-                      </div> : <div>
-                                              
-                            <table className="table">
-                                    <thead>                  
-                                    <tr>
-                                        <th>Sno.</th>
-                                        <th>Nom(s)</th>
-                                        <th>Prénom(s)</th>     
-                                        <th>Groupes</th>
-                                        <th>Note</th>
-                                        <th>Indices</th>
-                                        <th>Appreciation</th>
-                                          
-                                  </tr>
-                                 </thead>
-                                    <tbody>
-                                    {noteseleves.map((item, index) => (
-                                        <tr key={item.id}>
-                                            <td>{++index}</td>
-                                            <td>{item.nom}</td>
-                                            <td>{item.prenom}</td>
-                                            <td>{item.matiere_note}</td> 
-                                            <td>{item.valeur_note}</td>
-                                            <td>{item.competence_visee_note}</td>
-                                            <td>{item.appreciation_note}</td>
-                                            
-                                        </tr>
-                                    ))}
-                                      </tbody>      
-                                     </table>                
-                      </div> }
-                        
+                                        {noteseleves.map((item, index) => (
+                                            <tr key={item.id}>
+                                                <td>{++index}</td>
+                                                <td>{item.nom}</td>
+                                                <td>{item.prenom}</td>
+                                                <td>{item.matiere_note}</td>
+                                                <td>{item.valeur_note}</td>
+                                                <td>{item.competence_visee_note}</td>
+                                                <td>{item.appreciation_note}</td>
+
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>}
+
                         </Card.Body>
                     </Card>
                 </Col>
