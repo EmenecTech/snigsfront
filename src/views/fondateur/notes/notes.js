@@ -102,7 +102,7 @@ const [indices, setindices] = useState([]);
     }
 
     const submitForm = () => {
-        http.post('/notes', inputs).then((res) => {
+        http.post('/notes/update', inputs).then((res) => {
             
         })
         
@@ -161,11 +161,11 @@ const [indices, setindices] = useState([]);
                                         </svg>
                                     </i>
 
-                                    <span>Ajouter la Note</span>
+                                    <span>Modifier une note</span>
                                 </Button>
                                 <Modal show={show} onHide={handleClose}>
                                     <Modal.Header closeButton>
-                                        <Modal.Title>Ajouter une note</Modal.Title>
+                                        <Modal.Title>Modifier une note</Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
                                         <Form>
