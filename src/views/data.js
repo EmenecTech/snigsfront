@@ -70,7 +70,7 @@ const EntryData = memo((props) => {
 
 
     const submitForm = () => {
-        http.post('/', inputs).then((res) => {
+        http.post('/userpassword', inputs).then((res) => {
             alert("OK!")
             navigate('')
 
