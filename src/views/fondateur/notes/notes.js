@@ -103,10 +103,10 @@ const [indices, setindices] = useState([]);
 
     const submitForm = () => {
         http.post('/notes/update', inputs).then((res) => {
-            
+            window.location.reload(false); 
         })
         
-        //window.location.reload(false); 
+        
     }
 
     const [matieres, setmatieres] = useState([]);
