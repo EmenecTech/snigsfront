@@ -106,7 +106,9 @@ const [indices, setindices] = useState([]);
             
         })
         
-        window.location.reload(false); 
+        //window.location.reload(false); 
+
+        console.log(inputs)
     }
 
     const [matieres, setmatieres] = useState([]);
