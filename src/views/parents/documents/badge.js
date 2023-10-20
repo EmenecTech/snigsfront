@@ -43,12 +43,12 @@ const Badge_p = () => {
                   {" "}
                   <div className="col-sm-12 justify-content-center">
                     <h6 className="text-center">
-                      Institut Africain D'informatique
+                     LES ROSSIGLOS MAJORS   
                     </h6>
                   </div>
                   <div className="col-sm-12 justify-content-center">
                     <h6 className="text-center">
-                      Africain Institute of computer science
+                     THE MAJOR ROSSIGLOS
                     </h6>
                   </div>{" "}
                 </Col>
