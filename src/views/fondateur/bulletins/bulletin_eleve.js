@@ -2048,891 +2048,588 @@ const BulletinByEleve = memo((props) => {
                                                                             data-toggle="data-table">
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th style={{ width: '130px' }}>Disciplines</th>
-                                                                                    <th style={{ width: '50px' }}>Notes</th>
-                                                                                    <th style={{ width: '170px' }}>Appréciation</th>
+                                                                                    <th>Disciplines</th>
+                                                                                    <th>Notes</th>
+                                                                                    <th>Appréciation</th>
                                                                                 </tr>
                                                                             </thead>
 
-                                                                            {allnote_1.groupe === "no" ? (<div></div>) : (<div>
+                                                                            {allnote_1.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
                                                                                         <tr key={grp_1}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
+                                                                                </tbody>)}
 
-                                                                                {allnote_1.groupe && allnote_1.sumnote && (
-                                                                                    <tfoot>
-                                                                                        <tr>
-                                                                                            <th>{allnote_1.groupe}</th>
-                                                                                            <th>{allnote_1.sumnote}</th>
-                                                                                            <th></th>
-                                                                                        </tr>
-                                                                                    </tfoot>
-                                                                                )}  </div>
-                                                                            )}
-                                                                        </Table>
+                                                                            {allnote_1.existgrp > 0 && (
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>{allnote_1.groupe}</th>
+                                                                                        <th>{allnote_1.sumnote}</th>
+                                                                                        <th></th>
+                                                                                    </tr>
+                                                                                </thead>)}
 
-
-
-                                                                        {allnote_2.groupe === "no" ? null : (<div>
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
+                                                                            {allnote_2.existgrp > 0 && (
                                                                                 <tbody>
-
                                                                                     {allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
                                                                                         <tr key={grp_2}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_2.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_2.groupe}</th>
                                                                                         <th>{allnote_2.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-
-                                                                        </div>)}
-
-                                                                        {allnote_3.groupe === "no" ? (<div></div>) : (<div>
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
+                                                                            {allnote_3.existgrp > 0 && (
                                                                                 <tbody>
-
                                                                                     {allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
                                                                                         <tr key={grp_3}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_3.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_3.groupe}</th>
                                                                                         <th>{allnote_3.sumnote}</th>
                                                                                         <th></th>
-
                                                                                     </tr>
-                                                                                </tfoot>
-                                                                            </Table>
+                                                                                </thead>)}
 
-                                                                        </div>)}
-
-                                                                        {allnote_4.groupe === "no" ? (<div></div>) : (<div>
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
-                                                                                <tbody>
-                                                                                    {allnote_4.listnotes && allnote_4.listnotes.map((item, grp_4) => (
-                                                                                        <tr key={grp_4}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
-                                                                                        </tr>
-                                                                                    ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                            {allnote_4.existgrp > 0 && (<tbody>
+                                                                                {allnote_4.listnotes && allnote_4.listnotes.map((item, grp_4) => (
+                                                                                    <tr key={grp_4}>
+                                                                                        <td>{item.matiere_note}</td>
+                                                                                        <td>{item.valeur_note}</td>
+                                                                                        <td>{item.appreciation_note}</td>
+                                                                                    </tr>
+                                                                                ))}
+                                                                            </tbody>)}
+                                                                            {allnote_4.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_4.groupe}</th>
                                                                                         <th>{allnote_4.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
-                                                                            </Table>
+                                                                                </thead>)}
 
-                                                                        </div>)}
-
-                                                                        {allnote_5.groupe === "no" ? (<div></div>) : (<div>
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
-                                                                                <tbody>
-                                                                                    {allnote_5.listnotes && allnote_5.listnotes.map((item, grp_5) => (
-                                                                                        <tr key={grp_5}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
-                                                                                        </tr>
-                                                                                    ))}
-                                                                                </tbody>
+                                                                            {allnote_5.existgrp > 0 && (<tbody>
+                                                                                {allnote_5.listnotes && allnote_5.listnotes.map((item, grp_5) => (
+                                                                                    <tr key={grp_5}>
+                                                                                        <td>{item.matiere_note}</td>
+                                                                                        <td>{item.valeur_note}</td>
+                                                                                        <td>{item.appreciation_note}</td>
+                                                                                    </tr>
+                                                                                ))}
+                                                                            </tbody>)}
+                                                                            {allnote_5.existgrp > 0 && (
                                                                                 <tfoot>
                                                                                     <tr>
                                                                                         <th>{allnote_5.groupe}</th>
                                                                                         <th>{allnote_5.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
-                                                                            </Table>
+                                                                                </tfoot>)}
 
-                                                                        </div>)}
-
-                                                                        {allnote_6.groupe === "no" ? (<div></div>) : (<div>
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
+                                                                            {allnote_6.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnote_6.listnotes && allnote_6.listnotes.map((item, grp_6) => (
                                                                                         <tr key={grp_6}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_6.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_6.groupe}</th>
                                                                                         <th>{allnote_6.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
-                                                                            </Table>
+                                                                                </thead>)}
 
-                                                                        </div>)}
-
-                                                                        {allnote_7.groupe === "no" ? (<div></div>) : (<div>
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
+                                                                            {allnote_7.existgrp > 0 && (
                                                                                 <tbody>
-                                                                                    {allnote_7.listnotes && allnote_7.listnotes && allnote_7.listnotes.map((item, grp_7) => (
+                                                                                    {allnote_7.listnotes && allnote_7.listnotes.map((item, grp_7) => (
                                                                                         <tr key={grp_7}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_7.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_7.groupe}</th>
                                                                                         <th>{allnote_7.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
-                                                                            </Table>
+                                                                                </thead>)}
 
-                                                                        </div>)}
-
-                                                                        {allnote_8.groupe === "no" ? (<div></div>) : (<div>
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
-                                                                                <tbody>
-                                                                                    {allnote_8.listnotes && allnote_8.listnotes && allnote_8.listnotes.map((item, grp_8) => (
-                                                                                        <tr key={grp_8}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
-                                                                                        </tr>
-                                                                                    ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                            {allnote_8.existgrp > 0 && (<tbody>
+                                                                                {allnote_8.listnotes && allnote_8.listnotes && allnote_8.listnotes.map((item, grp_8) => (
+                                                                                    <tr key={grp_8}>
+                                                                                        <td>{item.matiere_note}</td>
+                                                                                        <td>{item.valeur_note}</td>
+                                                                                        <td>{item.appreciation_note}</td>
+                                                                                    </tr>
+                                                                                ))}
+                                                                            </tbody>)}
+                                                                            {allnote_8.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_8.groupe}</th>
                                                                                         <th>{allnote_8.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
-                                                                            </Table>
+                                                                                </thead>)}
 
-                                                                        </div>)}
-
-                                                                        {allnote_9.groupe === "no" ? (<div></div>) : (<div>
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
-
+                                                                            {allnote_9.existgrp > 0 && (
                                                                                 <tbody>
-
                                                                                     {allnote_9.listnotes && allnote_9.listnotes && allnote_9.listnotes.map((item, grp_9) => (
                                                                                         <tr key={grp_9}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_10.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_9.groupe}</th>
                                                                                         <th>{allnote_9.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
-                                                                            </Table>
+                                                                                </thead>)}
 
-                                                                        </div>)}
+                                                                            {allnote_10.existgrp > 0 && (<tbody>
 
-                                                                        {allnote_10.groupe === "no" ? (<div></div>) : (<div>
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
-                                                                                <tbody>
-
-                                                                                    {allnote_10.listnotes && allnote_10.listnotes && allnote_10.listnotes.map((item, grp_10) => (
-                                                                                        <tr key={grp_10}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
-                                                                                        </tr>
-                                                                                    ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                {allnote_10.listnotes && allnote_10.listnotes && allnote_10.listnotes.map((item, grp_10) => (
+                                                                                    <tr key={grp_10}>
+                                                                                        <td>{item.matiere_note}</td>
+                                                                                        <td>{item.valeur_note}</td>
+                                                                                        <td>{item.appreciation_note}</td>
+                                                                                    </tr>
+                                                                                ))}
+                                                                            </tbody>)}
+                                                                            {allnote_10.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_10.groupe}</th>
                                                                                         <th>{allnote_10.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
-                                                                            </Table>
+                                                                                </thead>)}
 
-                                                                        </div>)}
-
-                                                                        {allnote_11.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
+                                                                            {allnote_11.existgrp > 0 && (
                                                                                 <tbody>
-
                                                                                     {allnote_11.listnotes && allnote_11.listnotes && allnote_11.listnotes.map((item, grp_11) => (
                                                                                         <tr key={grp_11}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_11.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_11.groupe}</th>
                                                                                         <th>{allnote_11.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
-                                                                            </Table>
-                                                                        </div>)}
+                                                                                </thead>)}
 
-
-                                                                        {allnote_12.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
+                                                                            {allnote_12.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnote_12.listnotes && allnote_12.listnotes && allnote_12.listnotes.map((item, grp_12) => (
                                                                                         <tr key={grp_12}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_12.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_12.groupe}</th>
                                                                                         <th>{allnote_12.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        {allnote_13.groupe === "no" ? (<div></div>) : (<div>
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            ><tbody>
+                                                                            {allnote_13.existgrp > 0 && (
+                                                                                <tbody>
                                                                                     {allnote_13.listnotes && allnote_13.listnotes.map((item, grp_13) => (
                                                                                         <tr key={grp_13}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_13.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_13.groupe}</th>
                                                                                         <th>{allnote_13.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-
-                                                                        </div>)}
-
-                                                                        {allnote_14.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
+                                                                            {allnote_14.existgrp > 0 && (
                                                                                 <tbody>
-
                                                                                     {allnote_14.listnotes && allnote_14.listnotes.map((item, grp_14) => (
                                                                                         <tr key={grp_14}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_1.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_14.groupe}</th>
                                                                                         <th>{allnote_14.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
-                                                                            </Table>
-                                                                        </div>)}
+                                                                                </thead>)}
 
 
-                                                                        {allnote_15.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
+                                                                            {allnote_15.existgrp > 0 && (
                                                                                 <tbody>
-
                                                                                     {allnote_15.listnotes && allnote_15.listnotes.map((item, grp_15) => (
                                                                                         <tr key={grp_15}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_15.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_15.groupe}</th>
                                                                                         <th>{allnote_15.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        {allnote_16.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            ><tbody>
-
+                                                                            {allnote_16.existgrp > 0 && (
+                                                                                <tbody>
                                                                                     {allnote_16.listnotes && allnote_16.listnotes.map((item, grp_16) => (
                                                                                         <tr key={grp_16}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_16.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_16.groupe}</th>
                                                                                         <th>{allnote_16.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        {allnote_17.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            ><tbody>
-
+                                                                            {allnote_17.existgrp > 0 && (
+                                                                                <tbody>
                                                                                     {allnote_17.listnotes && allnote_17.listnotes.map((item, grp_17) => (
                                                                                         <tr key={grp_17}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_17.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_17.groupe}</th>
                                                                                         <th>{allnote_17.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        {allnote_18.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            > <tbody>
-
+                                                                            {allnote_18.existgrp > 0 && (
+                                                                                <tbody>
                                                                                     {allnote_18.listnotes && allnote_18.listnotes.map((item, grp_18) => (
                                                                                         <tr key={grp_18}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_18.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_18.groupe}</th>
                                                                                         <th>{allnote_18.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        {allnote_19.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >     <tbody>
-
+                                                                            {allnote_19.existgrp > 0 && (
+                                                                                <tbody>
                                                                                     {allnote_19.listnotes && allnote_19.listnotes.map((item, grp_19) => (
                                                                                         <tr key={grp_19}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_19.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_19.groupe}</th>
                                                                                         <th>{allnote_19.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        {allnote_20.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
+                                                                            {allnote_20.existgrp > 0 && (
                                                                                 <tbody>
-
                                                                                     {allnote_20.listnotes && allnote_20.listnotes.map((item, grp_20) => (
                                                                                         <tr key={grp_20}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_20.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_20.groupe}</th>
                                                                                         <th>{allnote_20.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        {allnote_21.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
+                                                                            {allnote_21.existgrp > 0 && (
                                                                                 <tbody>
-
                                                                                     {allnote_21.listnotes && allnote_21.listnotes.map((item, grp_21) => (
                                                                                         <tr key={grp_21}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_21.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_21.groupe}</th>
                                                                                         <th>{allnote_21.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        {allnote_22.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            ><tbody>
-
+                                                                            {allnote_22.existgrp > 0 && (
+                                                                                <tbody>
                                                                                     {allnote_22.listnotes && allnote_22.listnotes.map((item, grp_22) => (
                                                                                         <tr key={grp_22}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_22.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_22.groupe}</th>
                                                                                         <th>{allnote_22.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        {allnote_23.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
+                                                                            {allnote_23.existgrp > 0 && (
                                                                                 <tbody>
-
                                                                                     {allnote_23.listnotes && allnote_23.listnotes.map((item, grp_23) => (
                                                                                         <tr key={grp_23}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_23.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_23.groupe}</th>
                                                                                         <th>{allnote_23.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        {allnote_24.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            > <tbody>
-
+                                                                            {allnote_24.existgrp > 0 && (
+                                                                                <tbody>
                                                                                     {allnote_24.listnotes && allnote_24.listnotes.map((item, grp_24) => (
                                                                                         <tr key={grp_24}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_24.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_24.groupe}</th>
                                                                                         <th>{allnote_24.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        {allnote_25.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >  <tbody>
+                                                                            {allnote_25.existgrp > 0 && (
+                                                                                <tbody>
                                                                                     {allnote_25.listnotes && allnote_25.listnotes.map((item, grp_25) => (
                                                                                         <tr key={grp_25}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_25.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_25.groupe}</th>
                                                                                         <th>{allnote_25.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        {allnote_26.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            ><tbody>
-
+                                                                            {allnote_26.existgrp > 0 && (
+                                                                                <tbody>
                                                                                     {allnote_26.listnotes && allnote_26.listnotes.map((item, grp_26) => (
                                                                                         <tr key={grp_26}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_26.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_26.groupe}</th>
                                                                                         <th>{allnote_26.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        {allnote_27.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            ><tbody>
-
+                                                                            {allnote_27.existgrp > 0 && (
+                                                                                <tbody>
                                                                                     {allnote_27.listnotes && allnote_27.listnotes.map((item, grp_27) => (
                                                                                         <tr key={grp_27}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_27.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_27.groupe}</th>
                                                                                         <th>{allnote_27.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        {allnote_11.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            ><tbody>
-
+                                                                            {allnote_28.existgrp > 0 && (
+                                                                                <tbody>
                                                                                     {allnote_28.listnotes && allnote_28.listnotes.map((item, grp_28) => (
                                                                                         <tr key={grp_28}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_28.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_28.groupe}</th>
                                                                                         <th>{allnote_28.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        {allnote_29.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
+                                                                            {allnote_29.existgrp > 0 && (
                                                                                 <tbody>
-
                                                                                     {allnote_29.listnotes && allnote_29.listnotes.map((item, grp_29) => (
                                                                                         <tr key={grp_29}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_29.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_29.groupe}</th>
                                                                                         <th>{allnote_29.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
+                                                                                </thead>)}
 
-                                                                            </Table>
-                                                                        </div>)}
-                                                                        {allnote_30.groupe === "no" ? (<div></div>) : (<div>
-
-                                                                            <Table
-                                                                                responsive
-                                                                                striped
-                                                                                id="datatable"
-                                                                                className=""
-                                                                                data-toggle="data-table"
-                                                                            >
+                                                                            {allnote_30.existgrp > 0 && (
                                                                                 <tbody>
-
                                                                                     {allnote_30.listnotes && allnote_30.listnotes.map((item, grp_30) => (
                                                                                         <tr key={grp_30}>
-                                                                                            <td style={{ width: '130px' }}>{item.matiere_note}</td>
-                                                                                            <td style={{ width: '50px' }}>{item.valeur_note}</td>
-                                                                                            <td style={{ width: '170px' }}>{item.appreciation_note}</td>
+                                                                                            <td>{item.matiere_note}</td>
+                                                                                            <td>{item.valeur_note}</td>
+                                                                                            <td>{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
-                                                                                </tbody>
-                                                                                <tfoot>
+                                                                                </tbody>)}
+                                                                            {allnote_30.existgrp > 0 && (
+                                                                                <thead>
                                                                                     <tr>
                                                                                         <th>{allnote_30.groupe}</th>
                                                                                         <th>{allnote_30.sumnote}</th>
                                                                                         <th></th>
                                                                                     </tr>
-                                                                                </tfoot>
-
-                                                                            </Table>
-                                                                        </div>)}
-
-                                                                        <Table>
+                                                                                </thead>)}
                                                                             <tbody>
                                                                                 <tr>
-                                                                                    <td style={{ width: '130px' }}>RECAPITULATIFS</td>
-                                                                                    <td style={{ width: '50px' }}></td>
-                                                                                    <td style={{ width: '170px' }}>{sumnotes}</td>
+                                                                                    <td>RECAPITULATIFS</td>
+                                                                                    <td></td>
+                                                                                    <td>{sumnotes}</td>
                                                                                     <td></td>
                                                                                 </tr>
                                                                             </tbody>
-
                                                                         </Table>
 
                                                                         <Table
@@ -3018,10 +2715,10 @@ const BulletinByEleve = memo((props) => {
                                                                             <tbody>
 
                                                                                 <tr>
-                                                                                    <td> / </td>
-                                                                                    <td> /  </td>
-                                                                                    <td> / </td>
-                                                                                    <td> / </td>
+                                                                                    <td style={{ height: '100px' }}></td>
+                                                                                    <td style={{ height: '100px' }}></td>
+                                                                                    <td style={{ height: '100px' }}></td>
+                                                                                    <td style={{ height: '100px' }}></td>
                                                                                 </tr>
 
                                                                             </tbody>
@@ -3897,152 +3594,148 @@ const BulletinByEleve = memo((props) => {
                                                                                     striped
                                                                                     id="datatable"
                                                                                     className=""
-                                                                                    data-toggle="data-table"
-                                                                                >
+                                                                                    data-toggle="data-table">
                                                                                     <thead>
                                                                                         <tr>
-
-                                                                                            <th>Disciplines</th>
-                                                                                            <th>Mark</th>
+                                                                                            <th>Domains</th>
+                                                                                            <th>marks</th>
                                                                                             <th>Appreciation</th>
                                                                                         </tr>
                                                                                     </thead>
-                                                                                    <tbody>
 
-                                                                                        {allnote_1.listnotes && allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
-                                                                                            <tr key={grp_1}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_1.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
+                                                                                                <tr key={grp_1}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+
+                                                                                    {allnote_1.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_1.groupe}</th>
+                                                                                                <th>{allnote_1.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_1.groupe}</th>
-                                                                                            <th>{allnote_1.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_2.listnotes && allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
-                                                                                            <tr key={grp_2}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_2.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
+                                                                                                <tr key={grp_2}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_2.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_2.groupe}</th>
+                                                                                                <th>{allnote_2.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_2.groupe}</th>
-                                                                                            <th>{allnote_2.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-
-                                                                                        {allnote_3.listnotes && allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
-                                                                                            <tr key={grp_3}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_3.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
+                                                                                                <tr key={grp_3}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_3.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_3.groupe}</th>
+                                                                                                <th>{allnote_3.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_3.groupe}</th>
-                                                                                            <th>{allnote_3.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-
-                                                                                        {allnote_4.listnotes && allnote_4.listnotes && allnote_4.listnotes.map((item, grp_4) => (
+                                                                                    {allnote_4.existgrp > 0 && (<tbody>
+                                                                                        {allnote_4.listnotes && allnote_4.listnotes.map((item, grp_4) => (
                                                                                             <tr key={grp_4}>
                                                                                                 <td>{item.matiere_note}</td>
                                                                                                 <td>{item.valeur_note}</td>
                                                                                                 <td>{item.appreciation_note}</td>
                                                                                             </tr>
                                                                                         ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                    </tbody>)}
+                                                                                    {allnote_4.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_4.groupe}</th>
+                                                                                                <th>{allnote_4.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_4.groupe}</th>
-                                                                                            <th>{allnote_4.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-
-                                                                                        {allnote_5.listnotes && allnote_5.listnotes && allnote_5.listnotes.map((item, grp_5) => (
+                                                                                    {allnote_5.existgrp > 0 && (<tbody>
+                                                                                        {allnote_5.listnotes && allnote_5.listnotes.map((item, grp_5) => (
                                                                                             <tr key={grp_5}>
                                                                                                 <td>{item.matiere_note}</td>
                                                                                                 <td>{item.valeur_note}</td>
                                                                                                 <td>{item.appreciation_note}</td>
                                                                                             </tr>
                                                                                         ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnote_5.groupe}</th>
-                                                                                            <th>{allnote_5.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-
-                                                                                        {allnote_6.listnotes && allnote_6.listnotes && allnote_6.listnotes.map((item, grp_6) => (
-                                                                                            <tr key={grp_6}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    </tbody>)}
+                                                                                    {allnote_5.existgrp > 0 && (
+                                                                                        <tfoot>
+                                                                                            <tr>
+                                                                                                <th>{allnote_5.groupe}</th>
+                                                                                                <th>{allnote_5.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </tfoot>)}
 
-                                                                                            <th>{allnote_6.groupe}</th>
-                                                                                            <th>{allnote_6.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-
-                                                                                        {allnote_7.listnotes && allnote_7.listnotes && allnote_7.listnotes.map((item, grp_7) => (
-                                                                                            <tr key={grp_7}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_6.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_6.listnotes && allnote_6.listnotes.map((item, grp_6) => (
+                                                                                                <tr key={grp_6}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_6.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_6.groupe}</th>
+                                                                                                <th>{allnote_6.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_7.groupe}</th>
-                                                                                            <th>{allnote_7.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnote_7.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_7.listnotes && allnote_7.listnotes.map((item, grp_7) => (
+                                                                                                <tr key={grp_7}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_7.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_7.groupe}</th>
+                                                                                                <th>{allnote_7.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
 
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-
+                                                                                    {allnote_8.existgrp > 0 && (<tbody>
                                                                                         {allnote_8.listnotes && allnote_8.listnotes && allnote_8.listnotes.map((item, grp_8) => (
                                                                                             <tr key={grp_8}>
                                                                                                 <td>{item.matiere_note}</td>
@@ -4050,36 +3743,36 @@ const BulletinByEleve = memo((props) => {
                                                                                                 <td>{item.appreciation_note}</td>
                                                                                             </tr>
                                                                                         ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnote_8.groupe}</th>
-                                                                                            <th>{allnote_8.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-
-                                                                                        {allnote_9.listnotes && allnote_9.listnotes && allnote_9.listnotes.map((item, grp_9) => (
-                                                                                            <tr key={grp_9}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    </tbody>)}
+                                                                                    {allnote_8.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_8.groupe}</th>
+                                                                                                <th>{allnote_8.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_9.groupe}</th>
-                                                                                            <th>{allnote_9.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnote_9.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_9.listnotes && allnote_9.listnotes && allnote_9.listnotes.map((item, grp_9) => (
+                                                                                                <tr key={grp_9}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_10.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_9.groupe}</th>
+                                                                                                <th>{allnote_9.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
 
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
+                                                                                    {allnote_10.existgrp > 0 && (<tbody>
 
                                                                                         {allnote_10.listnotes && allnote_10.listnotes && allnote_10.listnotes.map((item, grp_10) => (
                                                                                             <tr key={grp_10}>
@@ -4088,111 +3781,396 @@ const BulletinByEleve = memo((props) => {
                                                                                                 <td>{item.appreciation_note}</td>
                                                                                             </tr>
                                                                                         ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnote_10.groupe}</th>
-                                                                                            <th>{allnote_10.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-
-                                                                                        {allnote_11.listnotes && allnote_11.listnotes && allnote_11.listnotes.map((item, grp_11) => (
-                                                                                            <tr key={grp_11}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    </tbody>)}
+                                                                                    {allnote_10.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_10.groupe}</th>
+                                                                                                <th>{allnote_10.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_11.groupe}</th>
-                                                                                            <th>{allnote_11.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-
-                                                                                        {allnote_12.listnotes && allnote_12.listnotes && allnote_12.listnotes.map((item, grp_12) => (
-                                                                                            <tr key={grp_12}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_11.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_11.listnotes && allnote_11.listnotes && allnote_11.listnotes.map((item, grp_11) => (
+                                                                                                <tr key={grp_11}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_11.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_11.groupe}</th>
+                                                                                                <th>{allnote_11.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_12.groupe}</th>
-                                                                                            <th>{allnote_12.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-
-                                                                                        {allnote_13.listnotes && allnote_13.listnotes && allnote_13.listnotes.map((item, grp_13) => (
-                                                                                            <tr key={grp_13}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_12.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_12.listnotes && allnote_12.listnotes && allnote_12.listnotes.map((item, grp_12) => (
+                                                                                                <tr key={grp_12}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_12.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_12.groupe}</th>
+                                                                                                <th>{allnote_12.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_13.groupe}</th>
-                                                                                            <th>{allnote_13.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-
-                                                                                        {allnote_14.listnotes && allnote_14.listnotes && allnote_14.listnotes.map((item, grp_14) => (
-                                                                                            <tr key={grp_14}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_13.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_13.listnotes && allnote_13.listnotes.map((item, grp_13) => (
+                                                                                                <tr key={grp_13}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_13.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_13.groupe}</th>
+                                                                                                <th>{allnote_13.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_14.groupe}</th>
-                                                                                            <th>{allnote_14.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-
-                                                                                        {allnote_15.listnotes && allnote_15.listnotes && allnote_15.listnotes.map((item, grp_15) => (
-                                                                                            <tr key={grp_15}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_14.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_14.listnotes && allnote_14.listnotes.map((item, grp_14) => (
+                                                                                                <tr key={grp_14}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_1.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_14.groupe}</th>
+                                                                                                <th>{allnote_14.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_15.groupe}</th>
-                                                                                            <th>{allnote_15.sumnote}</th>
-                                                                                            <th></th>
 
-                                                                                        </tr>
-                                                                                    </thead>
+                                                                                    {allnote_15.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_15.listnotes && allnote_15.listnotes.map((item, grp_15) => (
+                                                                                                <tr key={grp_15}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_15.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_15.groupe}</th>
+                                                                                                <th>{allnote_15.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
+
+                                                                                    {allnote_16.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_16.listnotes && allnote_16.listnotes.map((item, grp_16) => (
+                                                                                                <tr key={grp_16}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_16.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_16.groupe}</th>
+                                                                                                <th>{allnote_16.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
+
+                                                                                    {allnote_17.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_17.listnotes && allnote_17.listnotes.map((item, grp_17) => (
+                                                                                                <tr key={grp_17}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_17.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_17.groupe}</th>
+                                                                                                <th>{allnote_17.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
+
+                                                                                    {allnote_18.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_18.listnotes && allnote_18.listnotes.map((item, grp_18) => (
+                                                                                                <tr key={grp_18}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_18.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_18.groupe}</th>
+                                                                                                <th>{allnote_18.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
+
+                                                                                    {allnote_19.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_19.listnotes && allnote_19.listnotes.map((item, grp_19) => (
+                                                                                                <tr key={grp_19}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_19.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_19.groupe}</th>
+                                                                                                <th>{allnote_19.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
+
+                                                                                    {allnote_20.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_20.listnotes && allnote_20.listnotes.map((item, grp_20) => (
+                                                                                                <tr key={grp_20}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_20.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_20.groupe}</th>
+                                                                                                <th>{allnote_20.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
+
+                                                                                    {allnote_21.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_21.listnotes && allnote_21.listnotes.map((item, grp_21) => (
+                                                                                                <tr key={grp_21}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_21.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_21.groupe}</th>
+                                                                                                <th>{allnote_21.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
+
+                                                                                    {allnote_22.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_22.listnotes && allnote_22.listnotes.map((item, grp_22) => (
+                                                                                                <tr key={grp_22}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_22.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_22.groupe}</th>
+                                                                                                <th>{allnote_22.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
+
+                                                                                    {allnote_23.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_23.listnotes && allnote_23.listnotes.map((item, grp_23) => (
+                                                                                                <tr key={grp_23}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_23.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_23.groupe}</th>
+                                                                                                <th>{allnote_23.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
+
+                                                                                    {allnote_24.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_24.listnotes && allnote_24.listnotes.map((item, grp_24) => (
+                                                                                                <tr key={grp_24}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_24.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_24.groupe}</th>
+                                                                                                <th>{allnote_24.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
+
+                                                                                    {allnote_25.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_25.listnotes && allnote_25.listnotes.map((item, grp_25) => (
+                                                                                                <tr key={grp_25}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_25.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_25.groupe}</th>
+                                                                                                <th>{allnote_25.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
+
+                                                                                    {allnote_26.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_26.listnotes && allnote_26.listnotes.map((item, grp_26) => (
+                                                                                                <tr key={grp_26}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_26.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_26.groupe}</th>
+                                                                                                <th>{allnote_26.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
+
+                                                                                    {allnote_27.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_27.listnotes && allnote_27.listnotes.map((item, grp_27) => (
+                                                                                                <tr key={grp_27}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_27.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_27.groupe}</th>
+                                                                                                <th>{allnote_27.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
+
+                                                                                    {allnote_28.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_28.listnotes && allnote_28.listnotes.map((item, grp_28) => (
+                                                                                                <tr key={grp_28}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_28.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_28.groupe}</th>
+                                                                                                <th>{allnote_28.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
+
+                                                                                    {allnote_29.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_29.listnotes && allnote_29.listnotes.map((item, grp_29) => (
+                                                                                                <tr key={grp_29}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_29.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_29.groupe}</th>
+                                                                                                <th>{allnote_29.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
+
+                                                                                    {allnote_30.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_30.listnotes && allnote_30.listnotes.map((item, grp_30) => (
+                                                                                                <tr key={grp_30}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_30.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_30.groupe}</th>
+                                                                                                <th>{allnote_30.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
                                                                                     <tbody>
 
                                                                                         <tr>
@@ -4204,11 +4182,10 @@ const BulletinByEleve = memo((props) => {
                                                                                         </tr>
                                                                                     </tbody>
 
-
-                                                                                    <tfoot>
-
-                                                                                    </tfoot>
                                                                                 </Table>
+
+
+
                                                                                 <Table
                                                                                     responsive
                                                                                     striped
@@ -4293,10 +4270,10 @@ const BulletinByEleve = memo((props) => {
                                                                                     </thead>
                                                                                     <tbody>
                                                                                         <tr>
-                                                                                            <td>/</td>
-                                                                                            <td>/</td>
-                                                                                            <td>/</td>
-                                                                                            <td>/</td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
                                                                                         </tr>
 
                                                                                     </tbody>
@@ -4391,156 +4368,148 @@ const BulletinByEleve = memo((props) => {
                                                                                     striped
                                                                                     id="datatable"
                                                                                     className=""
-                                                                                    data-toggle="data-table"
-                                                                                >
+                                                                                    data-toggle="data-table">
                                                                                     <thead>
                                                                                         <tr>
-
-                                                                                            <th>Disciplines</th>
-
-                                                                                            <th>Mark</th>
+                                                                                            <th>Domains</th>
+                                                                                            <th>Marks</th>
                                                                                             <th>Appreciation</th>
                                                                                         </tr>
                                                                                     </thead>
-                                                                                    <tbody>
 
-                                                                                        {allnote_1.listnotes && allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
-                                                                                            <tr key={grp_1}>
+                                                                                    {allnote_1.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
+                                                                                                <tr key={grp_1}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
 
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_1.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_1.groupe}</th>
+                                                                                                <th>{allnote_1.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_1.groupe}</th>
-                                                                                            <th>{allnote_1.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_2.listnotes && allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
-                                                                                            <tr key={grp_2}>
-
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_2.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
+                                                                                                <tr key={grp_2}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_2.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_2.groupe}</th>
+                                                                                                <th>{allnote_2.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_2.groupe}</th>
-                                                                                            <th>{allnote_2.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-
-                                                                                        {allnote_3.listnotes && allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
-                                                                                            <tr key={grp_3}>
-
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_3.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
+                                                                                                <tr key={grp_3}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_3.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_3.groupe}</th>
+                                                                                                <th>{allnote_3.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_3.groupe}</th>
-                                                                                            <th>{allnote_3.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnote_4.listnotes && allnote_4.listnotes && allnote_4.listnotes.map((item, grp_4) => (
+                                                                                    {allnote_4.existgrp > 0 && (<tbody>
+                                                                                        {allnote_4.listnotes && allnote_4.listnotes.map((item, grp_4) => (
                                                                                             <tr key={grp_4}>
                                                                                                 <td>{item.matiere_note}</td>
                                                                                                 <td>{item.valeur_note}</td>
                                                                                                 <td>{item.appreciation_note}</td>
                                                                                             </tr>
                                                                                         ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                    </tbody>)}
+                                                                                    {allnote_4.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_4.groupe}</th>
+                                                                                                <th>{allnote_4.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_4.groupe}</th>
-                                                                                            <th>{allnote_4.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnote_5.listnotes && allnote_5.listnotes && allnote_5.listnotes.map((item, grp_5) => (
+                                                                                    {allnote_5.existgrp > 0 && (<tbody>
+                                                                                        {allnote_5.listnotes && allnote_5.listnotes.map((item, grp_5) => (
                                                                                             <tr key={grp_5}>
                                                                                                 <td>{item.matiere_note}</td>
                                                                                                 <td>{item.valeur_note}</td>
                                                                                                 <td>{item.appreciation_note}</td>
                                                                                             </tr>
                                                                                         ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnote_5.groupe}</th>
-                                                                                            <th>{allnote_5.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnote_6.listnotes && allnote_6.listnotes && allnote_6.listnotes.map((item, grp_6) => (
-                                                                                            <tr key={grp_6}>
-
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    </tbody>)}
+                                                                                    {allnote_5.existgrp > 0 && (
+                                                                                        <tfoot>
+                                                                                            <tr>
+                                                                                                <th>{allnote_5.groupe}</th>
+                                                                                                <th>{allnote_5.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnote_6.groupe}</th>
-                                                                                            <th>{allnote_6.sumnote}</th>
-                                                                                            <th></th>
+                                                                                        </tfoot>)}
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnote_7.listnotes && allnote_7.listnotes && allnote_7.listnotes.map((item, grp_7) => (
-                                                                                            <tr key={grp_7}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_6.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_6.listnotes && allnote_6.listnotes.map((item, grp_6) => (
+                                                                                                <tr key={grp_6}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_6.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_6.groupe}</th>
+                                                                                                <th>{allnote_6.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnote_7.groupe}</th>
-                                                                                            <th>{allnote_7.sumnote}</th>
-                                                                                            <th></th>
+                                                                                        </thead>)}
 
-                                                                                        </tr>
-                                                                                    </thead>
+                                                                                    {allnote_7.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_7.listnotes && allnote_7.listnotes.map((item, grp_7) => (
+                                                                                                <tr key={grp_7}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_7.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_7.groupe}</th>
+                                                                                                <th>{allnote_7.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
 
-                                                                                    <tbody>
-
+                                                                                    {allnote_8.existgrp > 0 && (<tbody>
                                                                                         {allnote_8.listnotes && allnote_8.listnotes && allnote_8.listnotes.map((item, grp_8) => (
                                                                                             <tr key={grp_8}>
                                                                                                 <td>{item.matiere_note}</td>
@@ -4548,37 +4517,36 @@ const BulletinByEleve = memo((props) => {
                                                                                                 <td>{item.appreciation_note}</td>
                                                                                             </tr>
                                                                                         ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnote_8.groupe}</th>
-                                                                                            <th>{allnote_8.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_9.listnotes && allnote_9.listnotes && allnote_9.listnotes.map((item, grp_9) => (
-                                                                                            <tr key={grp_9}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    </tbody>)}
+                                                                                    {allnote_8.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_8.groupe}</th>
+                                                                                                <th>{allnote_8.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnote_9.groupe}</th>
-                                                                                            <th>{allnote_9.sumnote}</th>
-                                                                                            <th></th>
+                                                                                        </thead>)}
 
-                                                                                        </tr>
-                                                                                    </thead>
+                                                                                    {allnote_9.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_9.listnotes && allnote_9.listnotes && allnote_9.listnotes.map((item, grp_9) => (
+                                                                                                <tr key={grp_9}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_10.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_9.groupe}</th>
+                                                                                                <th>{allnote_9.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
 
-                                                                                    <tbody>
+                                                                                    {allnote_10.existgrp > 0 && (<tbody>
 
                                                                                         {allnote_10.listnotes && allnote_10.listnotes && allnote_10.listnotes.map((item, grp_10) => (
                                                                                             <tr key={grp_10}>
@@ -4587,428 +4555,411 @@ const BulletinByEleve = memo((props) => {
                                                                                                 <td>{item.appreciation_note}</td>
                                                                                             </tr>
                                                                                         ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnote_10.groupe}</th>
-                                                                                            <th>{allnote_10.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_11.listnotes && allnote_11.listnotes && allnote_11.listnotes.map((item, grp_11) => (
-                                                                                            <tr key={grp_11}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    </tbody>)}
+                                                                                    {allnote_10.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_10.groupe}</th>
+                                                                                                <th>{allnote_10.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_11.groupe}</th>
-                                                                                            <th>{allnote_11.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnote_12.listnotes && allnote_12.listnotes && allnote_12.listnotes.map((item, grp_12) => (
-                                                                                            <tr key={grp_12}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_11.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_11.listnotes && allnote_11.listnotes && allnote_11.listnotes.map((item, grp_11) => (
+                                                                                                <tr key={grp_11}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_11.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_11.groupe}</th>
+                                                                                                <th>{allnote_11.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_12.groupe}</th>
-                                                                                            <th>{allnote_12.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnote_13.listnotes && allnote_13.listnotes && allnote_13.listnotes.map((item, grp_13) => (
-                                                                                            <tr key={grp_13}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_12.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_12.listnotes && allnote_12.listnotes && allnote_12.listnotes.map((item, grp_12) => (
+                                                                                                <tr key={grp_12}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_12.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_12.groupe}</th>
+                                                                                                <th>{allnote_12.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_13.groupe}</th>
-                                                                                            <th>{allnote_13.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_14.listnotes && allnote_14.listnotes && allnote_14.listnotes.map((item, grp_14) => (
-                                                                                            <tr key={grp_14}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_13.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_13.listnotes && allnote_13.listnotes.map((item, grp_13) => (
+                                                                                                <tr key={grp_13}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_13.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_13.groupe}</th>
+                                                                                                <th>{allnote_13.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_14.groupe}</th>
-                                                                                            <th>{allnote_14.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_15.listnotes && allnote_15.listnotes && allnote_15.listnotes.map((item, grp_15) => (
-                                                                                            <tr key={grp_15}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_14.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_14.listnotes && allnote_14.listnotes.map((item, grp_14) => (
+                                                                                                <tr key={grp_14}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_1.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_14.groupe}</th>
+                                                                                                <th>{allnote_14.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_15.groupe}</th>
-                                                                                            <th>{allnote_15.sumnote}</th>
-                                                                                            <th></th>
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_16.listnotes && allnote_16.listnotes && allnote_16.listnotes.map((item, grp_16) => (
-                                                                                            <tr key={grp_16}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_15.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_15.listnotes && allnote_15.listnotes.map((item, grp_15) => (
+                                                                                                <tr key={grp_15}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_15.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_15.groupe}</th>
+                                                                                                <th>{allnote_15.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_16.groupe}</th>
-                                                                                            <th>{allnote_16.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_17.listnotes && allnote_17.listnotes && allnote_17.listnotes.map((item, grp_17) => (
-                                                                                            <tr key={grp_17}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_16.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_16.listnotes && allnote_16.listnotes.map((item, grp_16) => (
+                                                                                                <tr key={grp_16}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_16.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_16.groupe}</th>
+                                                                                                <th>{allnote_16.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnote_17.groupe}</th>
-                                                                                            <th>{allnote_17.sumnote}</th>
-                                                                                            <th></th>
+                                                                                        </thead>)}
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_18.listnotes && allnote_18.listnotes && allnote_18.listnotes.map((item, grp_18) => (
-                                                                                            <tr key={grp_18}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_17.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_17.listnotes && allnote_17.listnotes.map((item, grp_17) => (
+                                                                                                <tr key={grp_17}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_17.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_17.groupe}</th>
+                                                                                                <th>{allnote_17.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_18.groupe}</th>
-                                                                                            <th>{allnote_18.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_19.listnotes && allnote_19.listnotes && allnote_19.listnotes.map((item, grp_19) => (
-                                                                                            <tr key={grp_19}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_18.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_18.listnotes && allnote_18.listnotes.map((item, grp_18) => (
+                                                                                                <tr key={grp_18}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_18.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_18.groupe}</th>
+                                                                                                <th>{allnote_18.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_19.groupe}</th>
-                                                                                            <th>{allnote_19.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_20.listnotes && allnote_20.listnotes && allnote_20.listnotes.map((item, grp_20) => (
-                                                                                            <tr key={grp_20}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_19.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_19.listnotes && allnote_19.listnotes.map((item, grp_19) => (
+                                                                                                <tr key={grp_19}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_19.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_19.groupe}</th>
+                                                                                                <th>{allnote_19.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_20.groupe}</th>
-                                                                                            <th>{allnote_20.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_21.listnotes && allnote_21.listnotes && allnote_21.listnotes.map((item, grp_21) => (
-                                                                                            <tr key={grp_21}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_20.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_20.listnotes && allnote_20.listnotes.map((item, grp_20) => (
+                                                                                                <tr key={grp_20}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_20.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_20.groupe}</th>
+                                                                                                <th>{allnote_20.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_21.groupe}</th>
-                                                                                            <th>{allnote_21.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_22.listnotes && allnote_22.listnotes && allnote_22.listnotes.map((item, grp_22) => (
-                                                                                            <tr key={grp_22}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_21.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_21.listnotes && allnote_21.listnotes.map((item, grp_21) => (
+                                                                                                <tr key={grp_21}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_21.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_21.groupe}</th>
+                                                                                                <th>{allnote_21.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_22.groupe}</th>
-                                                                                            <th>{allnote_22.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_23.listnotes && allnote_23.listnotes && allnote_23.listnotes.map((item, grp_23) => (
-                                                                                            <tr key={grp_23}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_22.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_22.listnotes && allnote_22.listnotes.map((item, grp_22) => (
+                                                                                                <tr key={grp_22}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_22.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_22.groupe}</th>
+                                                                                                <th>{allnote_22.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_23.groupe}</th>
-                                                                                            <th>{allnote_23.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_24.listnotes && allnote_24.listnotes && allnote_24.listnotes.map((item, grp_24) => (
-                                                                                            <tr key={grp_24}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_23.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_23.listnotes && allnote_23.listnotes.map((item, grp_23) => (
+                                                                                                <tr key={grp_23}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_23.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_23.groupe}</th>
+                                                                                                <th>{allnote_23.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_24.groupe}</th>
-                                                                                            <th></th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnote_25.listnotes && allnote_25.listnotes && allnote_25.listnotes.map((item, grp_25) => (
-                                                                                            <tr key={grp_25}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_24.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_24.listnotes && allnote_24.listnotes.map((item, grp_24) => (
+                                                                                                <tr key={grp_24}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_24.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_24.groupe}</th>
+                                                                                                <th>{allnote_24.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_25.groupe}</th>
-                                                                                            <th>{allnote_25.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_26.listnotes && allnote_26.listnotes && allnote_26.listnotes.map((item, grp_26) => (
-                                                                                            <tr key={grp_26}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_25.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_25.listnotes && allnote_25.listnotes.map((item, grp_25) => (
+                                                                                                <tr key={grp_25}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_25.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_25.groupe}</th>
+                                                                                                <th>{allnote_25.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_26.groupe}</th>
-                                                                                            <th>{allnote_26.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_27.listnotes && allnote_27.listnotes && allnote_27.listnotes.map((item, grp_27) => (
-                                                                                            <tr key={grp_27}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_26.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_26.listnotes && allnote_26.listnotes.map((item, grp_26) => (
+                                                                                                <tr key={grp_26}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_26.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_26.groupe}</th>
+                                                                                                <th>{allnote_26.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_27.groupe}</th>
-                                                                                            <th>{allnote_27.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_28.listnotes && allnote_28.listnotes && allnote_28.listnotes.map((item, grp_28) => (
-                                                                                            <tr key={grp_28}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_27.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_27.listnotes && allnote_27.listnotes.map((item, grp_27) => (
+                                                                                                <tr key={grp_27}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_27.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_27.groupe}</th>
+                                                                                                <th>{allnote_27.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_28.groupe}</th>
-                                                                                            <th>{allnote_28.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_29.listnotes && allnote_29.listnotes && allnote_29.listnotes.map((item, grp_29) => (
-                                                                                            <tr key={grp_29}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_28.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_28.listnotes && allnote_28.listnotes.map((item, grp_28) => (
+                                                                                                <tr key={grp_28}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_28.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_28.groupe}</th>
+                                                                                                <th>{allnote_28.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_29.groupe}</th>
-                                                                                            <th>{allnote_29.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_30.listnotes && allnote_30.listnotes && allnote_30.listnotes.map((item, grp_30) => (
-                                                                                            <tr key={grp_30}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_29.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_29.listnotes && allnote_29.listnotes.map((item, grp_29) => (
+                                                                                                <tr key={grp_29}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_29.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_29.groupe}</th>
+                                                                                                <th>{allnote_29.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_30.groupe}</th>
-                                                                                            <th>{allnote_30.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnote_30.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_30.listnotes && allnote_30.listnotes.map((item, grp_30) => (
+                                                                                                <tr key={grp_30}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_30.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_30.groupe}</th>
+                                                                                                <th>{allnote_30.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
 
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-
-                                                                                        <tr>
-                                                                                            <td>SUMMARY</td>
-                                                                                            <td></td>
-                                                                                            <td>{sumnotes}</td>
-                                                                                            <td></td>
-
-                                                                                        </tr>
-                                                                                    </tbody>
-
-
-                                                                                    <tfoot>
-
-                                                                                    </tfoot>
                                                                                 </Table>
+                                                                                <tbody>
+
+                                                                                    <tr>
+                                                                                        <td>SUMMARY</td>
+                                                                                        <td></td>
+                                                                                        <td>{sumnotes}</td>
+                                                                                        <td></td>
+
+                                                                                    </tr>
+                                                                                </tbody>
+
+
+
                                                                                 <Table
                                                                                     responsive
                                                                                     striped
@@ -5093,10 +5044,10 @@ const BulletinByEleve = memo((props) => {
                                                                                     </thead>
                                                                                     <tbody>
                                                                                         <tr>
-                                                                                            <td>/</td>
-                                                                                            <td>/</td>
-                                                                                            <td>/</td>
-                                                                                            <td>/</td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
                                                                                         </tr>
 
                                                                                     </tbody>
@@ -5204,602 +5155,588 @@ const BulletinByEleve = memo((props) => {
 
                                                                                             <th>Disciplines</th>
                                                                                             <th>Evaluation</th>
-
                                                                                             <th>Appreciation</th>
                                                                                         </tr>
                                                                                     </thead>
-                                                                                    <tbody>
+                                                                                    {allnoteprim_1.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_1.listnotes && allnoteprim_1.listnotes.map((item, grp_1) => (
+                                                                                                <tr key={grp_1}>
 
-                                                                                        {allnoteprim_1.listnotes && allnoteprim_1.listnotes.map((item, grp_1) => (
-                                                                                            <tr key={grp_1}>
-
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_1.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_1.groupe}</th>
+                                                                                                <th>{allnoteprim_1.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_1.groupe}</th>
-                                                                                            <th>{allnoteprim_1.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_2.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_2.listnotes && allnoteprim_2.listnotes.map((item, grp_2) => (
+                                                                                                <tr key={grp_2}>
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_2.listnotes && allnoteprim_2.listnotes.map((item, grp_2) => (
-                                                                                            <tr key={grp_2}>
-
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_2.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_2.groupe}</th>
+                                                                                                <th>{allnoteprim_2.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_2.groupe}</th>
-                                                                                            <th>{allnoteprim_2.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_3.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_3.listnotes && allnoteprim_3.listnotes.map((item, grp_3) => (
+                                                                                                <tr key={grp_3}>
 
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
 
-                                                                                        {allnoteprim_3.listnotes && allnoteprim_3.listnotes.map((item, grp_3) => (
-                                                                                            <tr key={grp_3}>
-
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_3.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_3.groupe}</th>
+                                                                                                <th>{allnoteprim_3.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_3.groupe}</th>
-                                                                                            <th>{allnoteprim_3.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_4.existgrp > 0 && (
 
-                                                                                        </tr>
-                                                                                    </thead>
+                                                                                        <tbody>
+                                                                                            {allnoteprim_4.listnotes && allnoteprim_4.listnotes.map((item, grp_4) => (
+                                                                                                <tr key={grp_4}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_4.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
 
-                                                                                    <tbody>
-                                                                                        {allnoteprim_4.listnotes && allnoteprim_4.listnotes.map((item, grp_4) => (
-                                                                                            <tr key={grp_4}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                                <th>{allnoteprim_4.groupe}</th>
+                                                                                                <th>{allnoteprim_4.sumnote}</th>
+                                                                                                <th></th>
+
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_4.groupe}</th>
-                                                                                            <th>{allnoteprim_4.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_5.existgrp > 0 && (
 
-                                                                                        </tr>
-                                                                                    </thead>
+                                                                                        <tbody>
+                                                                                            {allnoteprim_5.listnotes && allnoteprim_5.listnotes.map((item, grp_5) => (
+                                                                                                <tr key={grp_5}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_5.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
 
-                                                                                    <tbody>
-                                                                                        {allnoteprim_5.listnotes && allnoteprim_5.listnotes.map((item, grp_5) => (
-                                                                                            <tr key={grp_5}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                                <th>{allnoteprim_5.groupe}</th>
+                                                                                                <th>{allnoteprim_5.sumnote}</th>
+                                                                                                <th></th>
+
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnoteprim_5.groupe}</th>
-                                                                                            <th>{allnoteprim_5.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnoteprim_6.listnotes && allnoteprim_6.listnotes.map((item, grp_6) => (
-                                                                                            <tr key={grp_6}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        </thead>
+                                                                                    )}
+                                                                                    {allnoteprim_6.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_6.listnotes && allnoteprim_6.listnotes.map((item, grp_6) => (
+                                                                                                <tr key={grp_6}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_6.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_6.groupe}</th>
+                                                                                                <th>{allnoteprim_6.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnoteprim_6.groupe}</th>
-                                                                                            <th>{allnoteprim_6.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnoteprim_7.listnotes && allnoteprim_7.listnotes.map((item, grp_7) => (
-                                                                                            <tr key={grp_7}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        </thead>)}
+                                                                                    {allnoteprim_7.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_7.listnotes && allnoteprim_7.listnotes.map((item, grp_7) => (
+                                                                                                <tr key={grp_7}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_7.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_7.groupe}</th>
+                                                                                                <th>{allnoteprim_7.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnoteprim_7.groupe}</th>
-                                                                                            <th>{allnoteprim_7.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_8.listnotes && allnoteprim_8.listnotes.map((item, grp_8) => (
-                                                                                            <tr key={grp_8}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        </thead>)}
+                                                                                    {allnoteprim_8.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_8.listnotes && allnoteprim_8.listnotes.map((item, grp_8) => (
+                                                                                                <tr key={grp_8}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_8.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_8.groupe}</th>
+                                                                                                <th>{allnoteprim_8.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_8.groupe}</th>
-                                                                                            <th>{allnoteprim_8.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_9.listnotes && allnoteprim_9.listnotes.map((item, grp_9) => (
-                                                                                            <tr key={grp_9}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_9.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_9.listnotes && allnoteprim_9.listnotes.map((item, grp_9) => (
+                                                                                                <tr key={grp_9}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_9.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_9.groupe}</th>
+                                                                                                <th>{allnoteprim_9.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnoteprim_9.groupe}</th>
-                                                                                            <th>{allnoteprim_9.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_10.listnotes && allnoteprim_10.listnotes.map((item, grp_10) => (
-                                                                                            <tr key={grp_10}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        </thead>)}
+                                                                                    {allnoteprim_10.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_10.listnotes && allnoteprim_10.listnotes.map((item, grp_10) => (
+                                                                                                <tr key={grp_10}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_10.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_10.groupe}</th>
+                                                                                                <th>{allnoteprim_10.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_10.groupe}</th>
-                                                                                            <th>{allnoteprim_10.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_11.listnotes && allnoteprim_11.listnotes.map((item, grp_11) => (
-                                                                                            <tr key={grp_11}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_11.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_11.listnotes && allnoteprim_11.listnotes.map((item, grp_11) => (
+                                                                                                <tr key={grp_11}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_11.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_11.groupe}</th>
+                                                                                                <th>{allnoteprim_11.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_11.groupe}</th>
-                                                                                            <th>{allnoteprim_11.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_12.existgrp > 0 && (
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnoteprim_12.listnotes && allnoteprim_12.listnotes.map((item, grp_12) => (
-                                                                                            <tr key={grp_12}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        <tbody>
+                                                                                            {allnoteprim_12.listnotes && allnoteprim_12.listnotes.map((item, grp_12) => (
+                                                                                                <tr key={grp_12}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_12.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_12.groupe}</th>
+                                                                                                <th>{allnoteprim_12.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_12.groupe}</th>
-                                                                                            <th>{allnoteprim_12.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnoteprim_13.listnotes && allnoteprim_13.listnotes.map((item, grp_13) => (
-                                                                                            <tr key={grp_13}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_13.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_13.listnotes && allnoteprim_13.listnotes.map((item, grp_13) => (
+                                                                                                <tr key={grp_13}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_13.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_13.groupe}</th>
+                                                                                                <th>{allnoteprim_13.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_13.groupe}</th>
-                                                                                            <th>{allnoteprim_13.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_14.existgrp > 0 && (
+                                                                                        <tbody>
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_14.listnotes && allnoteprim_14.listnotes.map((item, grp_14) => (
-                                                                                            <tr key={grp_14}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                            {allnoteprim_14.listnotes && allnoteprim_14.listnotes.map((item, grp_14) => (
+                                                                                                <tr key={grp_14}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_14.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_14.groupe}</th>
+                                                                                                <th>{allnoteprim_14.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_14.groupe}</th>
-                                                                                            <th>{allnoteprim_14.sumnote}</th>
-                                                                                            <th></th>
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_15.listnotes && allnoteprim_15.listnotes.map((item, grp_15) => (
-                                                                                            <tr key={grp_15}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_15.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_15.listnotes && allnoteprim_15.listnotes.map((item, grp_15) => (
+                                                                                                <tr key={grp_15}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_15.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_15.groupe}</th>
+                                                                                                <th>{allnoteprim_15.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnoteprim_15.groupe}</th>
-                                                                                            <th>{allnoteprim_15.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_16.listnotes && allnoteprim_16.listnotes.map((item, grp_16) => (
-                                                                                            <tr key={grp_16}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        </thead>)}
+                                                                                    {allnoteprim_16.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_16.listnotes && allnoteprim_16.listnotes.map((item, grp_16) => (
+                                                                                                <tr key={grp_16}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_16.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_16.groupe}</th>
+                                                                                                <th>{allnoteprim_16.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_16.groupe}</th>
-                                                                                            <th>{allnoteprim_16.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_17.listnotes && allnoteprim_17.listnotes.map((item, grp_17) => (
-                                                                                            <tr key={grp_17}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_17.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_17.listnotes && allnoteprim_17.listnotes.map((item, grp_17) => (
+                                                                                                <tr key={grp_17}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_17.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_17.groupe}</th>
+                                                                                                <th>{allnoteprim_17.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnoteprim_17.groupe}</th>
-                                                                                            <th>{allnoteprim_17.sumnote}</th>
-                                                                                            <th></th>
+                                                                                        </thead>)}
 
-                                                                                        </tr>
-                                                                                    </thead>
 
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_18.listnotes && allnoteprim_18.listnotes.map((item, grp_18) => (
-                                                                                            <tr key={grp_18}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_18.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_18.listnotes && allnoteprim_18.listnotes.map((item, grp_18) => (
+                                                                                                <tr key={grp_18}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_19.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_18.groupe}</th>
+                                                                                                <th>{allnoteprim_18.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_18.groupe}</th>
-                                                                                            <th>{allnoteprim_18.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_19.listnotes && allnoteprim_19.listnotes.map((item, grp_19) => (
-                                                                                            <tr key={grp_19}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_19.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_19.listnotes && allnoteprim_19.listnotes.map((item, grp_19) => (
+                                                                                                <tr key={grp_19}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_19.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_19.groupe}</th>
+                                                                                                <th>{allnoteprim_19.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_19.groupe}</th>
-                                                                                            <th>{allnoteprim_19.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_20.listnotes && allnoteprim_20.listnotes.map((item, grp_20) => (
-                                                                                            <tr key={grp_20}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_20.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_20.listnotes && allnoteprim_20.listnotes.map((item, grp_20) => (
+                                                                                                <tr key={grp_20}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_20.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_20.groupe}</th>
+                                                                                                <th>{allnoteprim_20.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_20.groupe}</th>
-                                                                                            <th>{allnoteprim_20.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_21.listnotes && allnoteprim_21.listnotes.map((item, grp_21) => (
-                                                                                            <tr key={grp_21}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_21.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_21.listnotes && allnoteprim_21.listnotes.map((item, grp_21) => (
+                                                                                                <tr key={grp_21}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_21.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_21.groupe}</th>
+                                                                                                <th>{allnoteprim_21.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_21.groupe}</th>
-                                                                                            <th>{allnoteprim_21.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_22.listnotes && allnoteprim_22.listnotes.map((item, grp_22) => (
-                                                                                            <tr key={grp_22}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_22.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_22.listnotes && allnoteprim_22.listnotes.map((item, grp_22) => (
+                                                                                                <tr key={grp_22}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_22.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_22.groupe}</th>
+                                                                                                <th>{allnoteprim_22.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_22.groupe}</th>
-                                                                                            <th>{allnoteprim_22.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_23.listnotes && allnoteprim_23.listnotes.map((item, grp_23) => (
-                                                                                            <tr key={grp_23}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_23.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_23.listnotes && allnoteprim_23.listnotes.map((item, grp_23) => (
+                                                                                                <tr key={grp_23}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_23.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_23.groupe}</th>
+                                                                                                <th>{allnoteprim_23.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_23.groupe}</th>
-                                                                                            <th>{allnoteprim_23.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_24.listnotes && allnoteprim_24.listnotes.map((item, grp_24) => (
-                                                                                            <tr key={grp_24}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_24.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_24.listnotes && allnoteprim_24.listnotes.map((item, grp_24) => (
+                                                                                                <tr key={grp_24}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_24.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_24.groupe}</th>
+                                                                                                <th></th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_24.groupe}</th>
-                                                                                            <th></th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnoteprim_25.listnotes && allnoteprim_25.listnotes.map((item, grp_25) => (
-                                                                                            <tr key={grp_25}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_25.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_25.listnotes && allnoteprim_25.listnotes.map((item, grp_25) => (
+                                                                                                <tr key={grp_25}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_25.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_25.groupe}</th>
+                                                                                                <th>{allnoteprim_25.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_25.groupe}</th>
-                                                                                            <th>{allnoteprim_25.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_26.listnotes && allnoteprim_26.listnotes.map((item, grp_26) => (
-                                                                                            <tr key={grp_26}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_26.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_26.listnotes && allnoteprim_26.listnotes.map((item, grp_26) => (
+                                                                                                <tr key={grp_26}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_26.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_26.groupe}</th>
+                                                                                                <th>{allnoteprim_26.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_26.groupe}</th>
-                                                                                            <th>{allnoteprim_26.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_27.listnotes && allnoteprim_27.listnotes.map((item, grp_27) => (
-                                                                                            <tr key={grp_27}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_27.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_27.listnotes && allnoteprim_27.listnotes.map((item, grp_27) => (
+                                                                                                <tr key={grp_27}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_27.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_27.groupe}</th>
+                                                                                                <th>{allnoteprim_27.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_27.groupe}</th>
-                                                                                            <th>{allnoteprim_27.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_28.listnotes && allnoteprim_28.listnotes.map((item, grp_28) => (
-                                                                                            <tr key={grp_28}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_28.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_28.listnotes && allnoteprim_28.listnotes.map((item, grp_28) => (
+                                                                                                <tr key={grp_28}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_28.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_28.groupe}</th>
+                                                                                                <th>{allnoteprim_28.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_28.groupe}</th>
-                                                                                            <th>{allnoteprim_28.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_29.listnotes && allnoteprim_29.listnotes.map((item, grp_29) => (
-                                                                                            <tr key={grp_29}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_29.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_29.listnotes && allnoteprim_29.listnotes.map((item, grp_29) => (
+                                                                                                <tr key={grp_29}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_29.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_29.groupe}</th>
+                                                                                                <th>{allnoteprim_29.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_29.groupe}</th>
-                                                                                            <th>{allnoteprim_29.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_30.listnotes && allnoteprim_30.listnotes.map((item, grp_30) => (
-                                                                                            <tr key={grp_30}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_30.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_30.listnotes && allnoteprim_30.listnotes.map((item, grp_30) => (
+                                                                                                <tr key={grp_30}>
+                                                                                                    <td>{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_30.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_30.groupe}</th>
+                                                                                                <th>{allnoteprim_30.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnoteprim_30.groupe}</th>
-                                                                                            <th>{allnoteprim_30.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
+                                                                                        </thead>)}
 
 
                                                                                     <tbody>
@@ -5902,10 +5839,10 @@ const BulletinByEleve = memo((props) => {
                                                                                     </thead>
                                                                                     <tbody>
                                                                                         <tr>
-                                                                                            <td>/</td>
-                                                                                            <td>/</td>
-                                                                                            <td>/</td>
-                                                                                            <td>/</td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
                                                                                         </tr>
 
                                                                                     </tbody>
@@ -6006,603 +5943,589 @@ const BulletinByEleve = memo((props) => {
                                                                                         <tr>
 
                                                                                             <th>Disciplines</th>
-
                                                                                             <th>Mark</th>
                                                                                             <th>Appreciation</th>
                                                                                         </tr>
                                                                                     </thead>
-                                                                                    <tbody>
+                                                                                    {allnoteprim_1.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_1.listnotes && allnoteprim_1.listnotes.map((item, grp_1) => (
+                                                                                                <tr key={grp_1}>
 
-                                                                                        {allnoteprim_1.listnotes && allnoteprim_1.listnotes.map((item, grp_1) => (
-                                                                                            <tr key={grp_1}>
-
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_1.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_1.groupe}</th>
+                                                                                                <th>{allnoteprim_1.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_1.groupe}</th>
-                                                                                            <th>{allnoteprim_1.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_2.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_2.listnotes && allnoteprim_2.listnotes.map((item, grp_2) => (
+                                                                                                <tr key={grp_2}>
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_2.listnotes && allnoteprim_2.listnotes.map((item, grp_2) => (
-                                                                                            <tr key={grp_2}>
-
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_2.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_2.groupe}</th>
+                                                                                                <th>{allnoteprim_2.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_2.groupe}</th>
-                                                                                            <th>{allnoteprim_2.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_3.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_3.listnotes && allnoteprim_3.listnotes.map((item, grp_3) => (
+                                                                                                <tr key={grp_3}>
 
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
 
-                                                                                        {allnoteprim_3.listnotes && allnoteprim_3.listnotes.map((item, grp_3) => (
-                                                                                            <tr key={grp_3}>
-
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_3.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_3.groupe}</th>
+                                                                                                <th>{allnoteprim_3.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_3.groupe}</th>
-                                                                                            <th>{allnoteprim_3.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_4.existgrp > 0 && (
 
-                                                                                        </tr>
-                                                                                    </thead>
+                                                                                        <tbody>
+                                                                                            {allnoteprim_4.listnotes && allnoteprim_4.listnotes.map((item, grp_4) => (
+                                                                                                <tr key={grp_4}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_4.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
 
-                                                                                    <tbody>
-                                                                                        {allnoteprim_4.listnotes && allnoteprim_4.listnotes.map((item, grp_4) => (
-                                                                                            <tr key={grp_4}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                                <th>{allnoteprim_4.groupe}</th>
+                                                                                                <th>{allnoteprim_4.sumnote}</th>
+                                                                                                <th></th>
+
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_4.groupe}</th>
-                                                                                            <th>{allnoteprim_4.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_5.existgrp > 0 && (
 
-                                                                                        </tr>
-                                                                                    </thead>
+                                                                                        <tbody>
+                                                                                            {allnoteprim_5.listnotes && allnoteprim_5.listnotes.map((item, grp_5) => (
+                                                                                                <tr key={grp_5}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_5.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
 
-                                                                                    <tbody>
-                                                                                        {allnoteprim_5.listnotes && allnoteprim_5.listnotes.map((item, grp_5) => (
-                                                                                            <tr key={grp_5}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                                <th>{allnoteprim_5.groupe}</th>
+                                                                                                <th>{allnoteprim_5.sumnote}</th>
+                                                                                                <th></th>
+
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnoteprim_5.groupe}</th>
-                                                                                            <th>{allnoteprim_5.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnoteprim_6.listnotes && allnoteprim_6.listnotes.map((item, grp_6) => (
-                                                                                            <tr key={grp_6}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        </thead>
+                                                                                    )}
+                                                                                    {allnoteprim_6.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_6.listnotes && allnoteprim_6.listnotes.map((item, grp_6) => (
+                                                                                                <tr key={grp_6}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_6.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_6.groupe}</th>
+                                                                                                <th>{allnoteprim_6.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnoteprim_6.groupe}</th>
-                                                                                            <th>{allnoteprim_6.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnoteprim_7.listnotes && allnoteprim_7.listnotes.map((item, grp_7) => (
-                                                                                            <tr key={grp_7}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        </thead>)}
+                                                                                    {allnoteprim_7.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_7.listnotes && allnoteprim_7.listnotes.map((item, grp_7) => (
+                                                                                                <tr key={grp_7}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_7.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_7.groupe}</th>
+                                                                                                <th>{allnoteprim_7.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnoteprim_7.groupe}</th>
-                                                                                            <th>{allnoteprim_7.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_8.listnotes && allnoteprim_8.listnotes.map((item, grp_8) => (
-                                                                                            <tr key={grp_8}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        </thead>)}
+                                                                                    {allnoteprim_8.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_8.listnotes && allnoteprim_8.listnotes.map((item, grp_8) => (
+                                                                                                <tr key={grp_8}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_8.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_8.groupe}</th>
+                                                                                                <th>{allnoteprim_8.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_8.groupe}</th>
-                                                                                            <th>{allnoteprim_8.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_9.listnotes && allnoteprim_9.listnotes.map((item, grp_9) => (
-                                                                                            <tr key={grp_9}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_9.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_9.listnotes && allnoteprim_9.listnotes.map((item, grp_9) => (
+                                                                                                <tr key={grp_9}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_9.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_9.groupe}</th>
+                                                                                                <th>{allnoteprim_9.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnoteprim_9.groupe}</th>
-                                                                                            <th>{allnoteprim_9.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_10.listnotes && allnoteprim_10.listnotes.map((item, grp_10) => (
-                                                                                            <tr key={grp_10}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        </thead>)}
+                                                                                    {allnoteprim_10.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_10.listnotes && allnoteprim_10.listnotes.map((item, grp_10) => (
+                                                                                                <tr key={grp_10}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_10.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_10.groupe}</th>
+                                                                                                <th>{allnoteprim_10.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_10.groupe}</th>
-                                                                                            <th>{allnoteprim_10.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_11.listnotes && allnoteprim_11.listnotes.map((item, grp_11) => (
-                                                                                            <tr key={grp_11}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_11.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_11.listnotes && allnoteprim_11.listnotes.map((item, grp_11) => (
+                                                                                                <tr key={grp_11}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_11.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_11.groupe}</th>
+                                                                                                <th>{allnoteprim_11.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_11.groupe}</th>
-                                                                                            <th>{allnoteprim_11.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_12.existgrp > 0 && (
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnoteprim_12.listnotes && allnoteprim_12.listnotes.map((item, grp_12) => (
-                                                                                            <tr key={grp_12}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        <tbody>
+                                                                                            {allnoteprim_12.listnotes && allnoteprim_12.listnotes.map((item, grp_12) => (
+                                                                                                <tr key={grp_12}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_12.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_12.groupe}</th>
+                                                                                                <th>{allnoteprim_12.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_12.groupe}</th>
-                                                                                            <th>{allnoteprim_12.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnoteprim_13.listnotes && allnoteprim_13.listnotes.map((item, grp_13) => (
-                                                                                            <tr key={grp_13}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_13.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_13.listnotes && allnoteprim_13.listnotes.map((item, grp_13) => (
+                                                                                                <tr key={grp_13}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_13.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_13.groupe}</th>
+                                                                                                <th>{allnoteprim_13.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_13.groupe}</th>
-                                                                                            <th>{allnoteprim_13.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_14.existgrp > 0 && (
+                                                                                        <tbody>
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_14.listnotes && allnoteprim_14.listnotes.map((item, grp_14) => (
-                                                                                            <tr key={grp_14}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                            {allnoteprim_14.listnotes && allnoteprim_14.listnotes.map((item, grp_14) => (
+                                                                                                <tr key={grp_14}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_14.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_14.groupe}</th>
+                                                                                                <th>{allnoteprim_14.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_14.groupe}</th>
-                                                                                            <th>{allnoteprim_14.sumnote}</th>
-                                                                                            <th></th>
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_15.listnotes && allnoteprim_15.listnotes.map((item, grp_15) => (
-                                                                                            <tr key={grp_15}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_15.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_15.listnotes && allnoteprim_15.listnotes.map((item, grp_15) => (
+                                                                                                <tr key={grp_15}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_15.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_15.groupe}</th>
+                                                                                                <th>{allnoteprim_15.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnoteprim_15.groupe}</th>
-                                                                                            <th>{allnoteprim_15.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_16.listnotes && allnoteprim_16.listnotes.map((item, grp_16) => (
-                                                                                            <tr key={grp_16}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        </thead>)}
+                                                                                    {allnoteprim_16.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_16.listnotes && allnoteprim_16.listnotes.map((item, grp_16) => (
+                                                                                                <tr key={grp_16}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_16.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_16.groupe}</th>
+                                                                                                <th>{allnoteprim_16.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_16.groupe}</th>
-                                                                                            <th>{allnoteprim_16.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_17.listnotes && allnoteprim_17.listnotes.map((item, grp_17) => (
-                                                                                            <tr key={grp_17}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_17.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_17.listnotes && allnoteprim_17.listnotes.map((item, grp_17) => (
+                                                                                                <tr key={grp_17}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_17.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_17.groupe}</th>
+                                                                                                <th>{allnoteprim_17.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnoteprim_17.groupe}</th>
-                                                                                            <th>{allnoteprim_17.sumnote}</th>
-                                                                                            <th></th>
+                                                                                        </thead>)}
 
-                                                                                        </tr>
-                                                                                    </thead>
 
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_18.listnotes && allnoteprim_18.listnotes.map((item, grp_18) => (
-                                                                                            <tr key={grp_18}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_18.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_18.listnotes && allnoteprim_18.listnotes.map((item, grp_18) => (
+                                                                                                <tr key={grp_18}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_19.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_18.groupe}</th>
+                                                                                                <th>{allnoteprim_18.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_18.groupe}</th>
-                                                                                            <th>{allnoteprim_18.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_19.listnotes && allnoteprim_19.listnotes.map((item, grp_19) => (
-                                                                                            <tr key={grp_19}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_19.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_19.listnotes && allnoteprim_19.listnotes.map((item, grp_19) => (
+                                                                                                <tr key={grp_19}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_19.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_19.groupe}</th>
+                                                                                                <th>{allnoteprim_19.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_19.groupe}</th>
-                                                                                            <th>{allnoteprim_19.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_20.listnotes && allnoteprim_20.listnotes.map((item, grp_20) => (
-                                                                                            <tr key={grp_20}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_20.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_20.listnotes && allnoteprim_20.listnotes.map((item, grp_20) => (
+                                                                                                <tr key={grp_20}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_20.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_20.groupe}</th>
+                                                                                                <th>{allnoteprim_20.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_20.groupe}</th>
-                                                                                            <th>{allnoteprim_20.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_21.listnotes && allnoteprim_21.listnotes.map((item, grp_21) => (
-                                                                                            <tr key={grp_21}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_21.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_21.listnotes && allnoteprim_21.listnotes.map((item, grp_21) => (
+                                                                                                <tr key={grp_21}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_21.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_21.groupe}</th>
+                                                                                                <th>{allnoteprim_21.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_21.groupe}</th>
-                                                                                            <th>{allnoteprim_21.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_22.listnotes && allnoteprim_22.listnotes.map((item, grp_22) => (
-                                                                                            <tr key={grp_22}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_22.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_22.listnotes && allnoteprim_22.listnotes.map((item, grp_22) => (
+                                                                                                <tr key={grp_22}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_22.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_22.groupe}</th>
+                                                                                                <th>{allnoteprim_22.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_22.groupe}</th>
-                                                                                            <th>{allnoteprim_22.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_23.listnotes && allnoteprim_23.listnotes.map((item, grp_23) => (
-                                                                                            <tr key={grp_23}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_23.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_23.listnotes && allnoteprim_23.listnotes.map((item, grp_23) => (
+                                                                                                <tr key={grp_23}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_23.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_23.groupe}</th>
+                                                                                                <th>{allnoteprim_23.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_23.groupe}</th>
-                                                                                            <th>{allnoteprim_23.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_24.listnotes && allnoteprim_24.listnotes.map((item, grp_24) => (
-                                                                                            <tr key={grp_24}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_24.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_24.listnotes && allnoteprim_24.listnotes.map((item, grp_24) => (
+                                                                                                <tr key={grp_24}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_24.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_24.groupe}</th>
+                                                                                                <th></th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_24.groupe}</th>
-                                                                                            <th></th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnoteprim_25.listnotes && allnoteprim_25.listnotes.map((item, grp_25) => (
-                                                                                            <tr key={grp_25}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_25.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_25.listnotes && allnoteprim_25.listnotes.map((item, grp_25) => (
+                                                                                                <tr key={grp_25}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_25.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_25.groupe}</th>
+                                                                                                <th>{allnoteprim_25.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_25.groupe}</th>
-                                                                                            <th>{allnoteprim_25.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_26.listnotes && allnoteprim_26.listnotes.map((item, grp_26) => (
-                                                                                            <tr key={grp_26}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_26.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_26.listnotes && allnoteprim_26.listnotes.map((item, grp_26) => (
+                                                                                                <tr key={grp_26}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_26.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_26.groupe}</th>
+                                                                                                <th>{allnoteprim_26.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_26.groupe}</th>
-                                                                                            <th>{allnoteprim_26.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_27.listnotes && allnoteprim_27.listnotes.map((item, grp_27) => (
-                                                                                            <tr key={grp_27}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_27.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_27.listnotes && allnoteprim_27.listnotes.map((item, grp_27) => (
+                                                                                                <tr key={grp_27}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_27.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_27.groupe}</th>
+                                                                                                <th>{allnoteprim_27.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_27.groupe}</th>
-                                                                                            <th>{allnoteprim_27.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_28.listnotes && allnoteprim_28.listnotes.map((item, grp_28) => (
-                                                                                            <tr key={grp_28}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_28.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_28.listnotes && allnoteprim_28.listnotes.map((item, grp_28) => (
+                                                                                                <tr key={grp_28}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_28.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_28.groupe}</th>
+                                                                                                <th>{allnoteprim_28.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_28.groupe}</th>
-                                                                                            <th>{allnoteprim_28.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_29.listnotes && allnoteprim_29.listnotes.map((item, grp_29) => (
-                                                                                            <tr key={grp_29}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_29.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_29.listnotes && allnoteprim_29.listnotes.map((item, grp_29) => (
+                                                                                                <tr key={grp_29}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_29.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_29.groupe}</th>
+                                                                                                <th>{allnoteprim_29.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_29.groupe}</th>
-                                                                                            <th>{allnoteprim_29.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_30.listnotes && allnoteprim_30.listnotes.map((item, grp_30) => (
-                                                                                            <tr key={grp_30}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_30.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_30.listnotes && allnoteprim_30.listnotes.map((item, grp_30) => (
+                                                                                                <tr key={grp_30}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td >{item.valeur_note}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_30.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_30.groupe}</th>
+                                                                                                <th>{allnoteprim_30.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnoteprim_30.groupe}</th>
-                                                                                            <th>{allnoteprim_30.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
+                                                                                        </thead>)}
                                                                                     <tbody>
 
                                                                                         <tr>
@@ -6614,10 +6537,6 @@ const BulletinByEleve = memo((props) => {
                                                                                         </tr>
                                                                                     </tbody>
 
-
-                                                                                    <tfoot>
-
-                                                                                    </tfoot>
                                                                                 </Table>
                                                                                 <Table
                                                                                     responsive
@@ -6703,10 +6622,10 @@ const BulletinByEleve = memo((props) => {
                                                                                     </thead>
                                                                                     <tbody>
                                                                                         <tr>
-                                                                                            <td>/</td>
-                                                                                            <td>/</td>
-                                                                                            <td>/</td>
-                                                                                            <td>/</td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
                                                                                         </tr>
 
                                                                                     </tbody>
@@ -6719,8 +6638,6 @@ const BulletinByEleve = memo((props) => {
                                                                 </Card.Body>
                                                             </Card>
                                                         </Col>
-
-
                                                     </Row>
 
 
@@ -6812,158 +6729,148 @@ const BulletinByEleve = memo((props) => {
                                                                                     striped
                                                                                     id="datatable"
                                                                                     className=""
-                                                                                    data-toggle="data-table"
-                                                                                >
+                                                                                    data-toggle="data-table">
                                                                                     <thead>
                                                                                         <tr>
-                                                                                            <th><p>Compétences</p></th>
-
-                                                                                            <th>Note</th>
+                                                                                            <th>Disciplines</th>
+                                                                                            <th>Notes</th>
                                                                                             <th>Appréciation</th>
-                                                                                            <th>/</th>
                                                                                         </tr>
                                                                                     </thead>
-                                                                                    <tbody>
 
-                                                                                        {allnote_1.listnotes && allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
-                                                                                            <tr key={grp_1}>
+                                                                                    {allnote_1.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
+                                                                                                <tr key={grp_1}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
 
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_1.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_1.groupe}</th>
+                                                                                                <th>{allnote_1.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_1.groupe}</th>
-                                                                                            <th>{allnote_1.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_2.listnotes && allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
-                                                                                            <tr key={grp_2}>
-
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_2.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
+                                                                                                <tr key={grp_2}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_2.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_2.groupe}</th>
+                                                                                                <th>{allnote_2.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_2.groupe}</th>
-                                                                                            <th>{allnote_2.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-
-                                                                                        {allnote_3.listnotes && allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
-                                                                                            <tr key={grp_3}>
-
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_3.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
+                                                                                                <tr key={grp_3}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_3.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_3.groupe}</th>
+                                                                                                <th>{allnote_3.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_3.groupe}</th>
-                                                                                            <th>{allnote_3.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnote_4.listnotes && allnote_4.listnotes && allnote_4.listnotes.map((item, grp_4) => (
+                                                                                    {allnote_4.existgrp > 0 && (<tbody>
+                                                                                        {allnote_4.listnotes && allnote_4.listnotes.map((item, grp_4) => (
                                                                                             <tr key={grp_4}>
                                                                                                 <td>{item.matiere_note}</td>
                                                                                                 <td>{item.valeur_note}</td>
                                                                                                 <td>{item.appreciation_note}</td>
                                                                                             </tr>
                                                                                         ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                    </tbody>)}
+                                                                                    {allnote_4.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_4.groupe}</th>
+                                                                                                <th>{allnote_4.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_4.groupe}</th>
-                                                                                            <th>{allnote_4.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnote_5.listnotes && allnote_5.listnotes && allnote_5.listnotes.map((item, grp_5) => (
+                                                                                    {allnote_5.existgrp > 0 && (<tbody>
+                                                                                        {allnote_5.listnotes && allnote_5.listnotes.map((item, grp_5) => (
                                                                                             <tr key={grp_5}>
                                                                                                 <td>{item.matiere_note}</td>
                                                                                                 <td>{item.valeur_note}</td>
                                                                                                 <td>{item.appreciation_note}</td>
                                                                                             </tr>
                                                                                         ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnote_5.groupe}</th>
-                                                                                            <th>{allnote_5.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnote_6.listnotes && allnote_6.listnotes && allnote_6.listnotes.map((item, grp_6) => (
-                                                                                            <tr key={grp_6}>
-
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    </tbody>)}
+                                                                                    {allnote_5.existgrp > 0 && (
+                                                                                        <tfoot>
+                                                                                            <tr>
+                                                                                                <th>{allnote_5.groupe}</th>
+                                                                                                <th>{allnote_5.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnote_6.groupe}</th>
-                                                                                            <th>{allnote_6.sumnote}</th>
-                                                                                            <th></th>
+                                                                                        </tfoot>)}
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnote_7.listnotes && allnote_7.listnotes && allnote_7.listnotes.map((item, grp_7) => (
-                                                                                            <tr key={grp_7}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_6.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_6.listnotes && allnote_6.listnotes.map((item, grp_6) => (
+                                                                                                <tr key={grp_6}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_6.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_6.groupe}</th>
+                                                                                                <th>{allnote_6.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnote_7.groupe}</th>
-                                                                                            <th>{allnote_7.sumnote}</th>
-                                                                                            <th></th>
+                                                                                        </thead>)}
 
-                                                                                        </tr>
-                                                                                    </thead>
+                                                                                    {allnote_7.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_7.listnotes && allnote_7.listnotes.map((item, grp_7) => (
+                                                                                                <tr key={grp_7}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_7.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_7.groupe}</th>
+                                                                                                <th>{allnote_7.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
 
-                                                                                    <tbody>
-
+                                                                                    {allnote_8.existgrp > 0 && (<tbody>
                                                                                         {allnote_8.listnotes && allnote_8.listnotes && allnote_8.listnotes.map((item, grp_8) => (
                                                                                             <tr key={grp_8}>
                                                                                                 <td>{item.matiere_note}</td>
@@ -6971,37 +6878,36 @@ const BulletinByEleve = memo((props) => {
                                                                                                 <td>{item.appreciation_note}</td>
                                                                                             </tr>
                                                                                         ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnote_8.groupe}</th>
-                                                                                            <th>{allnote_8.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_9.listnotes && allnote_9.listnotes && allnote_9.listnotes.map((item, grp_9) => (
-                                                                                            <tr key={grp_9}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    </tbody>)}
+                                                                                    {allnote_8.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_8.groupe}</th>
+                                                                                                <th>{allnote_8.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnote_9.groupe}</th>
-                                                                                            <th>{allnote_9.sumnote}</th>
-                                                                                            <th></th>
+                                                                                        </thead>)}
 
-                                                                                        </tr>
-                                                                                    </thead>
+                                                                                    {allnote_9.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_9.listnotes && allnote_9.listnotes && allnote_9.listnotes.map((item, grp_9) => (
+                                                                                                <tr key={grp_9}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_10.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_9.groupe}</th>
+                                                                                                <th>{allnote_9.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
 
-                                                                                    <tbody>
+                                                                                    {allnote_10.existgrp > 0 && (<tbody>
 
                                                                                         {allnote_10.listnotes && allnote_10.listnotes && allnote_10.listnotes.map((item, grp_10) => (
                                                                                             <tr key={grp_10}>
@@ -7010,412 +6916,396 @@ const BulletinByEleve = memo((props) => {
                                                                                                 <td>{item.appreciation_note}</td>
                                                                                             </tr>
                                                                                         ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnote_10.groupe}</th>
-                                                                                            <th>{allnote_10.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_11.listnotes && allnote_11.listnotes && allnote_11.listnotes.map((item, grp_11) => (
-                                                                                            <tr key={grp_11}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    </tbody>)}
+                                                                                    {allnote_10.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_10.groupe}</th>
+                                                                                                <th>{allnote_10.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_11.groupe}</th>
-                                                                                            <th>{allnote_11.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnote_12.listnotes && allnote_12.listnotes && allnote_12.listnotes.map((item, grp_12) => (
-                                                                                            <tr key={grp_12}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_11.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_11.listnotes && allnote_11.listnotes && allnote_11.listnotes.map((item, grp_11) => (
+                                                                                                <tr key={grp_11}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_11.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_11.groupe}</th>
+                                                                                                <th>{allnote_11.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_12.groupe}</th>
-                                                                                            <th>{allnote_12.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnote_13.listnotes && allnote_13.listnotes && allnote_13.listnotes.map((item, grp_13) => (
-                                                                                            <tr key={grp_13}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_12.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_12.listnotes && allnote_12.listnotes && allnote_12.listnotes.map((item, grp_12) => (
+                                                                                                <tr key={grp_12}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_12.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_12.groupe}</th>
+                                                                                                <th>{allnote_12.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_13.groupe}</th>
-                                                                                            <th>{allnote_13.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_14.listnotes && allnote_14.listnotes && allnote_14.listnotes.map((item, grp_14) => (
-                                                                                            <tr key={grp_14}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_13.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_13.listnotes && allnote_13.listnotes.map((item, grp_13) => (
+                                                                                                <tr key={grp_13}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_13.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_13.groupe}</th>
+                                                                                                <th>{allnote_13.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_14.groupe}</th>
-                                                                                            <th>{allnote_14.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_15.listnotes && allnote_15.listnotes && allnote_15.listnotes.map((item, grp_15) => (
-                                                                                            <tr key={grp_15}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_14.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_14.listnotes && allnote_14.listnotes.map((item, grp_14) => (
+                                                                                                <tr key={grp_14}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_1.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_14.groupe}</th>
+                                                                                                <th>{allnote_14.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_15.groupe}</th>
-                                                                                            <th>{allnote_15.sumnote}</th>
-                                                                                            <th></th>
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_16.listnotes && allnote_16.listnotes && allnote_16.listnotes.map((item, grp_16) => (
-                                                                                            <tr key={grp_16}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_15.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_15.listnotes && allnote_15.listnotes.map((item, grp_15) => (
+                                                                                                <tr key={grp_15}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_15.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_15.groupe}</th>
+                                                                                                <th>{allnote_15.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_16.groupe}</th>
-                                                                                            <th>{allnote_16.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_17.listnotes && allnote_17.listnotes && allnote_17.listnotes.map((item, grp_17) => (
-                                                                                            <tr key={grp_17}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_16.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_16.listnotes && allnote_16.listnotes.map((item, grp_16) => (
+                                                                                                <tr key={grp_16}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_16.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_16.groupe}</th>
+                                                                                                <th>{allnote_16.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnote_17.groupe}</th>
-                                                                                            <th>{allnote_17.sumnote}</th>
-                                                                                            <th></th>
+                                                                                        </thead>)}
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_18.listnotes && allnote_18.listnotes && allnote_18.listnotes.map((item, grp_18) => (
-                                                                                            <tr key={grp_18}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_17.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_17.listnotes && allnote_17.listnotes.map((item, grp_17) => (
+                                                                                                <tr key={grp_17}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_17.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_17.groupe}</th>
+                                                                                                <th>{allnote_17.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_18.groupe}</th>
-                                                                                            <th>{allnote_18.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_19.listnotes && allnote_19.listnotes && allnote_19.listnotes.map((item, grp_19) => (
-                                                                                            <tr key={grp_19}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_18.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_18.listnotes && allnote_18.listnotes.map((item, grp_18) => (
+                                                                                                <tr key={grp_18}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_18.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_18.groupe}</th>
+                                                                                                <th>{allnote_18.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_19.groupe}</th>
-                                                                                            <th>{allnote_19.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_20.listnotes && allnote_20.listnotes && allnote_20.listnotes.map((item, grp_20) => (
-                                                                                            <tr key={grp_20}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_19.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_19.listnotes && allnote_19.listnotes.map((item, grp_19) => (
+                                                                                                <tr key={grp_19}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_19.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_19.groupe}</th>
+                                                                                                <th>{allnote_19.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_20.groupe}</th>
-                                                                                            <th>{allnote_20.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_21.listnotes && allnote_21.listnotes && allnote_21.listnotes.map((item, grp_21) => (
-                                                                                            <tr key={grp_21}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_20.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_20.listnotes && allnote_20.listnotes.map((item, grp_20) => (
+                                                                                                <tr key={grp_20}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_20.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_20.groupe}</th>
+                                                                                                <th>{allnote_20.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_21.groupe}</th>
-                                                                                            <th>{allnote_21.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_22.listnotes && allnote_22.listnotes && allnote_22.listnotes.map((item, grp_22) => (
-                                                                                            <tr key={grp_22}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_21.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_21.listnotes && allnote_21.listnotes.map((item, grp_21) => (
+                                                                                                <tr key={grp_21}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_21.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_21.groupe}</th>
+                                                                                                <th>{allnote_21.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_22.groupe}</th>
-                                                                                            <th>{allnote_22.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_23.listnotes && allnote_23.listnotes && allnote_23.listnotes.map((item, grp_23) => (
-                                                                                            <tr key={grp_23}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_22.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_22.listnotes && allnote_22.listnotes.map((item, grp_22) => (
+                                                                                                <tr key={grp_22}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_22.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_22.groupe}</th>
+                                                                                                <th>{allnote_22.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_23.groupe}</th>
-                                                                                            <th>{allnote_23.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_24.listnotes && allnote_24.listnotes && allnote_24.listnotes.map((item, grp_24) => (
-                                                                                            <tr key={grp_24}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_23.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_23.listnotes && allnote_23.listnotes.map((item, grp_23) => (
+                                                                                                <tr key={grp_23}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_23.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_23.groupe}</th>
+                                                                                                <th>{allnote_23.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_24.groupe}</th>
-                                                                                            <th></th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnote_25.listnotes && allnote_25.listnotes && allnote_25.listnotes.map((item, grp_25) => (
-                                                                                            <tr key={grp_25}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_24.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_24.listnotes && allnote_24.listnotes.map((item, grp_24) => (
+                                                                                                <tr key={grp_24}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_24.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_24.groupe}</th>
+                                                                                                <th>{allnote_24.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_25.groupe}</th>
-                                                                                            <th>{allnote_25.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_26.listnotes && allnote_26.listnotes && allnote_26.listnotes.map((item, grp_26) => (
-                                                                                            <tr key={grp_26}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_25.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_25.listnotes && allnote_25.listnotes.map((item, grp_25) => (
+                                                                                                <tr key={grp_25}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_25.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_25.groupe}</th>
+                                                                                                <th>{allnote_25.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_26.groupe}</th>
-                                                                                            <th>{allnote_26.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_27.listnotes && allnote_27.listnotes && allnote_27.listnotes.map((item, grp_27) => (
-                                                                                            <tr key={grp_27}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_26.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_26.listnotes && allnote_26.listnotes.map((item, grp_26) => (
+                                                                                                <tr key={grp_26}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_26.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_26.groupe}</th>
+                                                                                                <th>{allnote_26.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_27.groupe}</th>
-                                                                                            <th>{allnote_27.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_28.listnotes && allnote_28.listnotes && allnote_28.listnotes.map((item, grp_28) => (
-                                                                                            <tr key={grp_28}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_27.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_27.listnotes && allnote_27.listnotes.map((item, grp_27) => (
+                                                                                                <tr key={grp_27}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_27.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_27.groupe}</th>
+                                                                                                <th>{allnote_27.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_28.groupe}</th>
-                                                                                            <th>{allnote_28.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_29.listnotes && allnote_29.listnotes && allnote_29.listnotes.map((item, grp_29) => (
-                                                                                            <tr key={grp_29}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_28.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_28.listnotes && allnote_28.listnotes.map((item, grp_28) => (
+                                                                                                <tr key={grp_28}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_28.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_28.groupe}</th>
+                                                                                                <th>{allnote_28.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_29.groupe}</th>
-                                                                                            <th>{allnote_29.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnote_30.listnotes && allnote_30.listnotes && allnote_30.listnotes.map((item, grp_30) => (
-                                                                                            <tr key={grp_30}>
-                                                                                                <td>{item.matiere_note}</td>
-                                                                                                <td>{item.valeur_note}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnote_29.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_29.listnotes && allnote_29.listnotes.map((item, grp_29) => (
+                                                                                                <tr key={grp_29}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_29.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_29.groupe}</th>
+                                                                                                <th>{allnote_29.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnote_30.groupe}</th>
-                                                                                            <th>{allnote_30.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
+                                                                                    {allnote_30.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnote_30.listnotes && allnote_30.listnotes.map((item, grp_30) => (
+                                                                                                <tr key={grp_30}>
+                                                                                                    <td>{item.matiere_note}</td>
+                                                                                                    <td>{item.valeur_note}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnote_30.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnote_30.groupe}</th>
+                                                                                                <th>{allnote_30.sumnote}</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>)}
 
                                                                                     <tbody>
 
@@ -7426,12 +7316,10 @@ const BulletinByEleve = memo((props) => {
                                                                                             <td></td>
                                                                                         </tr>
                                                                                     </tbody>
-
-
-                                                                                    <tfoot>
-
-                                                                                    </tfoot>
                                                                                 </Table>
+
+
+
                                                                                 <Table
                                                                                     responsive
                                                                                     striped
@@ -7461,17 +7349,10 @@ const BulletinByEleve = memo((props) => {
 
                                                                                             </td>
 
-                                                                                            <td>
-                                                                                            </td>
-
-                                                                                            <td>
-                                                                                            </td>
-
-                                                                                            <td>
-                                                                                            </td>
-
-                                                                                            <td>
-                                                                                            </td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
 
                                                                                         </tr>
 
@@ -7576,606 +7457,591 @@ const BulletinByEleve = memo((props) => {
                                                                                 >
                                                                                     <thead>
                                                                                         <tr>
-                                                                                            <th><p>Compétences</p></th>
-
-                                                                                            <th>Note</th>
+                                                                                            <th>Compétences</th>
+                                                                                            <th>Evaluation</th>
                                                                                             <th>Appreciation</th>
                                                                                             <th>/</th>
                                                                                         </tr>
                                                                                     </thead>
-                                                                                    <tbody>
+                                                                                    {allnoteprim_1.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_1.listnotes && allnoteprim_1.listnotes.map((item, grp_1) => (
+                                                                                                <tr key={grp_1}>
 
-                                                                                        {allnoteprim_1.listnotes && allnoteprim_1.listnotes.map((item, grp_1) => (
-                                                                                            <tr key={grp_1}>
-
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_1.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_1.groupe}</th>
+                                                                                                <th>{allnoteprim_1.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_1.groupe}</th>
-                                                                                            <th>{allnoteprim_1.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_2.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_2.listnotes && allnoteprim_2.listnotes.map((item, grp_2) => (
+                                                                                                <tr key={grp_2}>
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_2.listnotes && allnoteprim_2.listnotes.map((item, grp_2) => (
-                                                                                            <tr key={grp_2}>
-
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_2.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_2.groupe}</th>
+                                                                                                <th>{allnoteprim_2.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_2.groupe}</th>
-                                                                                            <th>{allnoteprim_2.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_3.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_3.listnotes && allnoteprim_3.listnotes.map((item, grp_3) => (
+                                                                                                <tr key={grp_3}>
 
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
 
-                                                                                        {allnoteprim_3.listnotes && allnoteprim_3.listnotes.map((item, grp_3) => (
-                                                                                            <tr key={grp_3}>
-
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_3.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_3.groupe}</th>
+                                                                                                <th>{allnoteprim_3.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_3.groupe}</th>
-                                                                                            <th>{allnoteprim_3.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_4.existgrp > 0 && (
 
-                                                                                        </tr>
-                                                                                    </thead>
+                                                                                        <tbody>
+                                                                                            {allnoteprim_4.listnotes && allnoteprim_4.listnotes.map((item, grp_4) => (
+                                                                                                <tr key={grp_4}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_4.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
 
-                                                                                    <tbody>
-                                                                                        {allnoteprim_4.listnotes && allnoteprim_4.listnotes.map((item, grp_4) => (
-                                                                                            <tr key={grp_4}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                                <th>{allnoteprim_4.groupe}</th>
+                                                                                                <th>{allnoteprim_4.sumnote}</th>
+                                                                                                <th></th>
+
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_4.groupe}</th>
-                                                                                            <th>{allnoteprim_4.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_5.existgrp > 0 && (
 
-                                                                                        </tr>
-                                                                                    </thead>
+                                                                                        <tbody>
+                                                                                            {allnoteprim_5.listnotes && allnoteprim_5.listnotes.map((item, grp_5) => (
+                                                                                                <tr key={grp_5}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_5.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
 
-                                                                                    <tbody>
-                                                                                        {allnoteprim_5.listnotes && allnoteprim_5.listnotes.map((item, grp_5) => (
-                                                                                            <tr key={grp_5}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                                <th>{allnoteprim_5.groupe}</th>
+                                                                                                <th>{allnoteprim_5.sumnote}</th>
+                                                                                                <th></th>
+
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnoteprim_5.groupe}</th>
-                                                                                            <th>{allnoteprim_5.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnoteprim_6.listnotes && allnoteprim_6.listnotes.map((item, grp_6) => (
-                                                                                            <tr key={grp_6}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        </thead>
+                                                                                    )}
+                                                                                    {allnoteprim_6.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_6.listnotes && allnoteprim_6.listnotes.map((item, grp_6) => (
+                                                                                                <tr key={grp_6}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_6.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_6.groupe}</th>
+                                                                                                <th>{allnoteprim_6.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnoteprim_6.groupe}</th>
-                                                                                            <th>{allnoteprim_6.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnoteprim_7.listnotes && allnoteprim_7.listnotes.map((item, grp_7) => (
-                                                                                            <tr key={grp_7}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        </thead>)}
+                                                                                    {allnoteprim_7.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_7.listnotes && allnoteprim_7.listnotes.map((item, grp_7) => (
+                                                                                                <tr key={grp_7}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_7.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_7.groupe}</th>
+                                                                                                <th>{allnoteprim_7.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnoteprim_7.groupe}</th>
-                                                                                            <th>{allnoteprim_7.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_8.listnotes && allnoteprim_8.listnotes.map((item, grp_8) => (
-                                                                                            <tr key={grp_8}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        </thead>)}
+                                                                                    {allnoteprim_8.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_8.listnotes && allnoteprim_8.listnotes.map((item, grp_8) => (
+                                                                                                <tr key={grp_8}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_8.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_8.groupe}</th>
+                                                                                                <th>{allnoteprim_8.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_8.groupe}</th>
-                                                                                            <th>{allnoteprim_8.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_9.listnotes && allnoteprim_9.listnotes.map((item, grp_9) => (
-                                                                                            <tr key={grp_9}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_9.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_9.listnotes && allnoteprim_9.listnotes.map((item, grp_9) => (
+                                                                                                <tr key={grp_9}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_9.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_9.groupe}</th>
+                                                                                                <th>{allnoteprim_9.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnoteprim_9.groupe}</th>
-                                                                                            <th>{allnoteprim_9.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_10.listnotes && allnoteprim_10.listnotes.map((item, grp_10) => (
-                                                                                            <tr key={grp_10}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        </thead>)}
+                                                                                    {allnoteprim_10.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_10.listnotes && allnoteprim_10.listnotes.map((item, grp_10) => (
+                                                                                                <tr key={grp_10}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_10.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_10.groupe}</th>
+                                                                                                <th>{allnoteprim_10.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_10.groupe}</th>
-                                                                                            <th>{allnoteprim_10.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_11.listnotes && allnoteprim_11.listnotes.map((item, grp_11) => (
-                                                                                            <tr key={grp_11}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_11.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_11.listnotes && allnoteprim_11.listnotes.map((item, grp_11) => (
+                                                                                                <tr key={grp_11}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_11.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_11.groupe}</th>
+                                                                                                <th>{allnoteprim_11.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_11.groupe}</th>
-                                                                                            <th>{allnoteprim_11.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_12.existgrp > 0 && (
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnoteprim_12.listnotes && allnoteprim_12.listnotes.map((item, grp_12) => (
-                                                                                            <tr key={grp_12}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        <tbody>
+                                                                                            {allnoteprim_12.listnotes && allnoteprim_12.listnotes.map((item, grp_12) => (
+                                                                                                <tr key={grp_12}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_12.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_12.groupe}</th>
+                                                                                                <th>{allnoteprim_12.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_12.groupe}</th>
-                                                                                            <th>{allnoteprim_12.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnoteprim_13.listnotes && allnoteprim_13.listnotes.map((item, grp_13) => (
-                                                                                            <tr key={grp_13}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_13.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_13.listnotes && allnoteprim_13.listnotes.map((item, grp_13) => (
+                                                                                                <tr key={grp_13}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_13.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_13.groupe}</th>
+                                                                                                <th>{allnoteprim_13.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_13.groupe}</th>
-                                                                                            <th>{allnoteprim_13.sumnote}</th>
-                                                                                            <th></th>
+                                                                                    {allnoteprim_14.existgrp > 0 && (
+                                                                                        <tbody>
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_14.listnotes && allnoteprim_14.listnotes.map((item, grp_14) => (
-                                                                                            <tr key={grp_14}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                            {allnoteprim_14.listnotes && allnoteprim_14.listnotes.map((item, grp_14) => (
+                                                                                                <tr key={grp_14}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_14.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_14.groupe}</th>
+                                                                                                <th>{allnoteprim_14.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_14.groupe}</th>
-                                                                                            <th>{allnoteprim_14.sumnote}</th>
-                                                                                            <th></th>
 
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_15.listnotes && allnoteprim_15.listnotes.map((item, grp_15) => (
-                                                                                            <tr key={grp_15}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_15.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_15.listnotes && allnoteprim_15.listnotes.map((item, grp_15) => (
+                                                                                                <tr key={grp_15}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_15.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_15.groupe}</th>
+                                                                                                <th>{allnoteprim_15.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnoteprim_15.groupe}</th>
-                                                                                            <th>{allnoteprim_15.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_16.listnotes && allnoteprim_16.listnotes.map((item, grp_16) => (
-                                                                                            <tr key={grp_16}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                        </thead>)}
+                                                                                    {allnoteprim_16.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_16.listnotes && allnoteprim_16.listnotes.map((item, grp_16) => (
+                                                                                                <tr key={grp_16}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_16.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_16.groupe}</th>
+                                                                                                <th>{allnoteprim_16.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_16.groupe}</th>
-                                                                                            <th>{allnoteprim_16.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_17.listnotes && allnoteprim_17.listnotes.map((item, grp_17) => (
-                                                                                            <tr key={grp_17}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_17.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_17.listnotes && allnoteprim_17.listnotes.map((item, grp_17) => (
+                                                                                                <tr key={grp_17}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_17.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_17.groupe}</th>
+                                                                                                <th>{allnoteprim_17.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>{allnoteprim_17.groupe}</th>
-                                                                                            <th>{allnoteprim_17.sumnote}</th>
-                                                                                            <th></th>
+                                                                                        </thead>)}
 
-                                                                                        </tr>
-                                                                                    </thead>
 
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_18.listnotes && allnoteprim_18.listnotes.map((item, grp_18) => (
-                                                                                            <tr key={grp_18}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_18.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_18.listnotes && allnoteprim_18.listnotes.map((item, grp_18) => (
+                                                                                                <tr key={grp_18}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_19.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_18.groupe}</th>
+                                                                                                <th>{allnoteprim_18.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_18.groupe}</th>
-                                                                                            <th>{allnoteprim_18.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_19.listnotes && allnoteprim_19.listnotes.map((item, grp_19) => (
-                                                                                            <tr key={grp_19}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_19.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_19.listnotes && allnoteprim_19.listnotes.map((item, grp_19) => (
+                                                                                                <tr key={grp_19}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_19.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_19.groupe}</th>
+                                                                                                <th>{allnoteprim_19.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_19.groupe}</th>
-                                                                                            <th>{allnoteprim_19.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_20.listnotes && allnoteprim_20.listnotes.map((item, grp_20) => (
-                                                                                            <tr key={grp_20}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_20.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_20.listnotes && allnoteprim_20.listnotes.map((item, grp_20) => (
+                                                                                                <tr key={grp_20}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_20.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_20.groupe}</th>
+                                                                                                <th>{allnoteprim_20.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_20.groupe}</th>
-                                                                                            <th>{allnoteprim_20.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_21.listnotes && allnoteprim_21.listnotes.map((item, grp_21) => (
-                                                                                            <tr key={grp_21}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_21.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_21.listnotes && allnoteprim_21.listnotes.map((item, grp_21) => (
+                                                                                                <tr key={grp_21}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_21.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_21.groupe}</th>
+                                                                                                <th>{allnoteprim_21.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_21.groupe}</th>
-                                                                                            <th>{allnoteprim_21.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_22.listnotes && allnoteprim_22.listnotes.map((item, grp_22) => (
-                                                                                            <tr key={grp_22}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_22.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_22.listnotes && allnoteprim_22.listnotes.map((item, grp_22) => (
+                                                                                                <tr key={grp_22}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_22.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_22.groupe}</th>
+                                                                                                <th>{allnoteprim_22.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_22.groupe}</th>
-                                                                                            <th>{allnoteprim_22.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_23.listnotes && allnoteprim_23.listnotes.map((item, grp_23) => (
-                                                                                            <tr key={grp_23}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_23.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_23.listnotes && allnoteprim_23.listnotes.map((item, grp_23) => (
+                                                                                                <tr key={grp_23}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_23.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_23.groupe}</th>
+                                                                                                <th>{allnoteprim_23.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_23.groupe}</th>
-                                                                                            <th>{allnoteprim_23.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_24.listnotes && allnoteprim_24.listnotes.map((item, grp_24) => (
-                                                                                            <tr key={grp_24}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_24.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_24.listnotes && allnoteprim_24.listnotes.map((item, grp_24) => (
+                                                                                                <tr key={grp_24}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_24.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_24.groupe}</th>
+                                                                                                <th></th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_24.groupe}</th>
-                                                                                            <th></th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-                                                                                        {allnoteprim_25.listnotes && allnoteprim_25.listnotes.map((item, grp_25) => (
-                                                                                            <tr key={grp_25}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_25.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_25.listnotes && allnoteprim_25.listnotes.map((item, grp_25) => (
+                                                                                                <tr key={grp_25}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_25.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_25.groupe}</th>
+                                                                                                <th>{allnoteprim_25.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_25.groupe}</th>
-                                                                                            <th>{allnoteprim_25.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_26.listnotes && allnoteprim_26.listnotes.map((item, grp_26) => (
-                                                                                            <tr key={grp_26}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_26.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_26.listnotes && allnoteprim_26.listnotes.map((item, grp_26) => (
+                                                                                                <tr key={grp_26}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_26.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_26.groupe}</th>
+                                                                                                <th>{allnoteprim_26.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_26.groupe}</th>
-                                                                                            <th>{allnoteprim_26.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_27.listnotes && allnoteprim_27.listnotes.map((item, grp_27) => (
-                                                                                            <tr key={grp_27}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_27.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_27.listnotes && allnoteprim_27.listnotes.map((item, grp_27) => (
+                                                                                                <tr key={grp_27}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_27.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_27.groupe}</th>
+                                                                                                <th>{allnoteprim_27.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_27.groupe}</th>
-                                                                                            <th>{allnoteprim_27.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_28.listnotes && allnoteprim_28.listnotes.map((item, grp_28) => (
-                                                                                            <tr key={grp_28}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_28.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_28.listnotes && allnoteprim_28.listnotes.map((item, grp_28) => (
+                                                                                                <tr key={grp_28}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_28.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_28.groupe}</th>
+                                                                                                <th>{allnoteprim_28.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_28.groupe}</th>
-                                                                                            <th>{allnoteprim_28.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_29.listnotes && allnoteprim_29.listnotes.map((item, grp_29) => (
-                                                                                            <tr key={grp_29}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_29.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_29.listnotes && allnoteprim_29.listnotes.map((item, grp_29) => (
+                                                                                                <tr key={grp_29}>
+                                                                                                    <td >{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td >{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_29.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_29.groupe}</th>
+                                                                                                <th>{allnoteprim_29.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
+                                                                                        </thead>)}
 
-                                                                                            <th>{allnoteprim_29.groupe}</th>
-                                                                                            <th>{allnoteprim_29.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
-                                                                                    <tbody>
-
-                                                                                        {allnoteprim_30.listnotes && allnoteprim_30.listnotes.map((item, grp_30) => (
-                                                                                            <tr key={grp_30}>
-                                                                                                <td>{item.competence_visee_note}</td>
-                                                                                                <td>{getEmojiForNote(item.valeur_note)}</td>
-                                                                                                <td>{item.appreciation_note}</td>
+                                                                                    {allnoteprim_30.existgrp > 0 && (
+                                                                                        <tbody>
+                                                                                            {allnoteprim_30.listnotes && allnoteprim_30.listnotes.map((item, grp_30) => (
+                                                                                                <tr key={grp_30}>
+                                                                                                    <td>{item.competence_visee_note}</td>
+                                                                                                    <td>{getEmojiForNote(item.valeur_note)}</td>
+                                                                                                    <td>{item.appreciation_note}</td>
+                                                                                                </tr>
+                                                                                            ))}
+                                                                                        </tbody>)}
+                                                                                    {allnoteprim_30.existgrp > 0 && (
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>{allnoteprim_30.groupe}</th>
+                                                                                                <th>{allnoteprim_30.sumnote}</th>
+                                                                                                <th></th>
                                                                                             </tr>
-                                                                                        ))}
-                                                                                    </tbody>
-                                                                                    <thead>
-                                                                                        <tr>
-
-                                                                                            <th>{allnoteprim_30.groupe}</th>
-                                                                                            <th>{allnoteprim_30.sumnote}</th>
-                                                                                            <th></th>
-
-                                                                                        </tr>
-                                                                                    </thead>
-
+                                                                                        </thead>)}
 
                                                                                     <tbody>
 
@@ -8220,18 +8086,10 @@ const BulletinByEleve = memo((props) => {
                                                                                                 </Col>
 
                                                                                             </td>
-
-                                                                                            <td>
-                                                                                            </td>
-
-                                                                                            <td>
-                                                                                            </td>
-
-                                                                                            <td>
-                                                                                            </td>
-
-                                                                                            <td>
-                                                                                            </td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '100px' }}></td>
 
                                                                                         </tr>
 
