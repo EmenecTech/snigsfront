@@ -412,7 +412,7 @@ const [indices, setindices] = useState([]);
                                                                           data-original-title="Delete"
                                                                           to="#"
                                                                           onClick={() => {
-                                                                            deleteNotes(item.id);
+                                                                            deleteNotes(item.notes.id);
                                                                           }}
                                                                    >
                                                                     <span className="btn-inner">
