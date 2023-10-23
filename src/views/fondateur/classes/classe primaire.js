@@ -563,16 +563,7 @@ const PrimClasse = () => {
                                                             </Form.Group>
                                                         </Col>
                                                     </Row>
-                                                    <Row>
-                                                        <Col>
-                                                            <Form.Group as={Row} className="form-group">
-                                                                <Form.Group className="form-group">
-                                                                    <Form.Label htmlFor="exampleInputText1">Coefficient </Form.Label>
-                                                                    <Form.Control type="number" defaultValue="" name="coef" onChange={handleChange} required />
-                                                                </Form.Group>
-                                                            </Form.Group>
-                                                        </Col>
-                                                    </Row>
+                                                    
                                                     <Row>
                                                         <Col>
                                                             <Form.Group as={Row} className="form-group">
@@ -621,7 +612,6 @@ const PrimClasse = () => {
                                                 <thead>
                                                     <tr>
                                                         <th>{user.langue === "en" ? (<div>Course</div>):(<div>Matiere </div>)} </th>
-                                                        <th>Coefficient </th>
                                                         <th>{user.langue === "en" ? (<div>Group</div>):(<div>Groupe </div>)} </th>
                                                         <th>Action</th>
 
@@ -631,7 +621,6 @@ const PrimClasse = () => {
                                                     {matieres_classe.map((item) => (
                                                         <tr key={item.id}>
                                                             <td>{item.matiere_cm}</td>
-                                                            <td>{item.coefficient_cm}</td>
                                                             <td>{item.groupe_cm}</td>
                                                             <td>
                                                                 <div className="flex align-items-center list-user-action">
