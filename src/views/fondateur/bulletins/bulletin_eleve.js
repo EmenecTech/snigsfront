@@ -99,6 +99,18 @@ const BulletinByEleve = memo((props) => {
         });
     }
 
+     const [info_eleve, setinfo_eleve] = useState([]);
+
+    useEffect(() => {
+        fetchAllinfo_eleve()
+    }, []);
+
+    const fetchAllinfo_eleve = () => {
+        http.get('/info_eleve/' + userid).then((res) => {
+            setinfo_eleve(res.data);
+        });
+    }
+
     const [image2, setImage2] = useState("");
     const imageRef2 = useRef(null);
 
@@ -1725,17 +1737,17 @@ const BulletinByEleve = memo((props) => {
                                                                     <Row style={{ fontSize: "10px" }}>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Sexe : </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Matricule : </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass} {info_eleve.nom}{info_eleve.prenom} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : {info_eleve.date_naissance} à {info_eleve.lieu_naissance}</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Sexe : {info_eleve.sexe}</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Matricule : {info_eleve.matricule}</p>
                                                                             </div>
                                                                         </Col>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Classe : </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal :</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Classe : {info_eleve.other_in_user} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : {info_eleve.redouble} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal : </p>
                                                                             </div>
                                                                         </Col>
                                                                         <Col sm="4" lg="4">
