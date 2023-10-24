@@ -2634,14 +2634,14 @@ const BulletinByEleve = memo((props) => {
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-                                                                            <tbody>
+                                                                            <tfoot>
                                                                                 <tr>
                                                                                     <td>RECAPITULATIFS</td>
                                                                                     <td></td>
                                                                                     <td>{sumnotes}</td>
                                                                                     <td></td>
                                                                                 </tr>
-                                                                            </tbody>
+                                                                            </tfoot>
                                                                         </Table>
 
                                                                         <Table
