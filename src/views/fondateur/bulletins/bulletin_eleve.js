@@ -2039,7 +2039,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                         </div>
                                                                         <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: {existgrp} </p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant: {allnote_1.existgrp} </p>
                                                                             <p>Repeater</p>
                                                                         </div>
                                                                         <div className="mt-2">
