@@ -109,6 +109,15 @@ const EnseignantListGroupes = () => {
         window.location.reload(false);
     }
 
+
+    const submitFormprim = () => {
+        http.post('/add_notes', inputs).then((res) => {
+
+        })
+
+        window.location.reload(false);
+    }
+
     const [matieres, setmatieres] = useState([]);
     useEffect(() => {
         fetchAllmatieres();
@@ -201,6 +210,11 @@ const EnseignantListGroupes = () => {
                                                             onChange={handleChange}
                                                         />
                                                     </Form.Group>
+
+                                                    <Button variant="primary" onClick={submitForm}>
+                                                    Ajouter
+                                                </Button>
+        
                                                 </div> : <div>
                                                     <Form.Group className='form-group'>
                                                         <Form.Label>Groupes</Form.Label>
@@ -255,8 +269,13 @@ const EnseignantListGroupes = () => {
                                                             <option value="Acquis">Acquis</option>
                                                         </select>
                                                     </Form.Group>
+
+                                                                <Button variant="primary" onClick={submitFormprim}>
+                                                    Ajouter
+                                                </Button>
                                                 </div>}
 
+                                                
 
                                             </div> : <div>
                                                 {etab == 24 ? <div>
@@ -295,6 +314,10 @@ const EnseignantListGroupes = () => {
                                                             onChange={handleChange}
                                                         />
                                                     </Form.Group>
+
+                                                    <Button variant="primary" onClick={submitForm}>
+                                                        Ajouter
+                                                    </Button>
                                                 </div> : <div>
                                                     <Form.Group className='form-group'>
                                                         <Form.Label>Groupes</Form.Label>
@@ -340,14 +363,15 @@ const EnseignantListGroupes = () => {
                                                             <option value="Acquis">Acquis</option>
                                                         </select>
                                                     </Form.Group>
+                                                    <Button variant="primary" onClick={submitFormprim}>
+                                                        Ajouter
+                                                    </Button>
                                                 </div>}
 
                                             </div>}
 
 
-                                            <Button variant="primary" onClick={submitForm}>
-                                                Ajouter
-                                            </Button>
+                                            
                                         </Form>
                                     </Modal.Body>
                                 </Modal>
