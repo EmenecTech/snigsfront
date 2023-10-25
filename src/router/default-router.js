@@ -198,6 +198,7 @@ import ListIndices from '../views/fondateur/indices_evaluations/indices_evaluati
 ////Stats
 import ChoixStat from '../views/fondateur/statistique/choixstat';
 import ListClassesStat from '../views/fondateur/statistique/Listclassestat';
+import ChoixClassesStat from '../views/fondateur/statistique/choixclassestat';
 
 
 import StatsEtablissement from '../views/super_admin/etablissements/stats_etablissement ';
@@ -925,6 +926,11 @@ export const DefaultRouter = [
             {
                 path: 'Admin/stat/classe',
                 element: <ListClassesStat />
+            },
+
+            {
+                path: 'Admin/stat/:classe',
+                element: <ChoixClassesStat />
             }
         ]
     }
