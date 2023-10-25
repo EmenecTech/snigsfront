@@ -139,9 +139,9 @@ const [indices, setindices] = useState([]);
         })
     } */}
     
-    const deleteNotes = (id) => {
+    const deleteNotes = (matiere, indice) => {
        if(window.confirm("Voulez-vous supprimer cet élément?") == true){
-    http.delete('/delete_note/' + etab + "/" + classe + "/" + evaluation + "/" + userid).then((res) => {
+    http.delete('/delete_note/' + etab + "/" + classe + "/" + matiere + "/" + evaluation + "/" + indice + "/" + userid).then((res) => {
       fetchAllNoteseleves();
     });
       alert('Supprimé!');
@@ -412,7 +412,7 @@ const [indices, setindices] = useState([]);
                                                                           data-original-title="Delete"
                                                                           to="#"
                                                                           onClick={() => {
-                                                                            deleteNotes(item.id);
+                                                                            deleteNotes(item.matiere_note , item.competence_visee_note);
                                                                           }}
                                                                    >
                                                                     <span className="btn-inner">
