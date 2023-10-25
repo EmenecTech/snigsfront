@@ -197,7 +197,7 @@ import ListIndices from '../views/fondateur/indices_evaluations/indices_evaluati
 
 ////Stats
 import ChoixStat from '../views/fondateur/statistique/choixstat';
-import ListClassesStat from '../views/fondateur/statistique/listclassestat';
+import ListClassesStat from '../views/fondateur/statistique/Listclassestat';
 
 
 import StatsEtablissement from '../views/super_admin/etablissements/stats_etablissement ';
