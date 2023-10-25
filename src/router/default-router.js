@@ -913,7 +913,7 @@ export const DefaultRouter = [
             {
                 path: 'dashboard/icon/dual-tone',
                 element: <DualTone />
-            }
+            },
 
     ///oct 25
             {
