@@ -2789,25 +2789,75 @@ const BulletinByEleve = memo((props) => {
                                                             <div>
 
                                                                 <Row>
+                                                                    <Col sm="4" lg="4">
+                                                                        <p className="text-center">REPUBLIQUE DU CAMEROUN <br />
+                                                                            Paix - Travail - Patrie <br />
+                                                                            MINISTERE DE L'EDUCATION DE BASE<br />
 
-                                                                    <Col sm="12" lg="12">
-                                                                        <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">Evaluation: {evaluation} </p>
+                                                                        </p>
 
-                                                                        </div>
-                                                                        <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">Nom de l'enseignant: {enseign} </p>
 
-                                                                        </div>
-                                                                        <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant:</p>
-                                                                            <p>Repeater</p>
-                                                                        </div>
-                                                                        <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {elevesinclass} </strong> </p>
-
-                                                                        </div>
                                                                     </Col>
+                                                                    <Col sm="4" >
+                                                                        <Row>
+                                                                            <Col sm="12" lg="12" className="d-flex justify-content-center">
+                                                                                <div className="user-profile">
+                                                                                    <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                </div>
+                                                                            </Col>
+                                                                        </Row>
+                                                                        <br />
+                                                                        <Row>
+                                                                            <Col sm="12">
+                                                                                <div className="container text-center">
+                                                                                    <p> <strong style={{ fontSize: "18px" }}> {info_etab.nom_etablissement} </strong>
+
+                                                                                        <br />
+                                                                                        <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal>
+                                                                                    </p>
+
+                                                                                </div>
+                                                                            </Col>
+                                                                        </Row>
+
+
+
+                                                                    </Col>
+                                                                    <Col sm="4" lg="4">
+                                                                        <p className="text-center">REPUBLIC OF CAMEROON <br />
+                                                                            Peace - Work - Fatherland <br />
+                                                                            MINISTRY OF BASIC EDUCATION<br />
+
+                                                                        </p>
+
+
+                                                                    </Col>
+
+                                                                </Row>
+                                                                <Row className="mt-2">
+                                                                    <Col sm="4" lg="4">
+
+
+                                                                    </Col>
+                                                                    <Col sm="4" lg="4">
+                                                                        <p className="text-center">
+                                                                            <span style={{ fontSize: "15px" }}> Bulletin De Notes {evaluation}</span>
+                                                                            <br />
+                                                                            2022 - 2023
+                                                                        </p>
+
+
+                                                                    </Col>
+                                                                    <Col sm="4" lg="4">
+
+
+                                                                    </Col>
+
                                                                 </Row>
                                                                 <Row>
 
