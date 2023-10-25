@@ -115,7 +115,7 @@ const EnseignantListGroupes = () => {
 
         })
 
-        window.location.reload(false);
+        //window.location.reload(false);
     }
 
     const [matieres, setmatieres] = useState([]);
