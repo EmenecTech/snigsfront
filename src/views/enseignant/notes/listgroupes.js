@@ -103,19 +103,19 @@ const EnseignantListGroupes = () => {
 
     const submitForm = () => {
         http.post('/notes', inputs).then((res) => {
-
+            window.location.reload(false);
         })
 
-        window.location.reload(false);
+        
     }
 
 
     const submitFormprim = () => {
         http.post('/add_notes', inputs).then((res) => {
-
+            window.location.reload(false);
         })
 
-        //window.location.reload(false);
+        
     }
 
     const [matieres, setmatieres] = useState([]);
