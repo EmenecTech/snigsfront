@@ -6121,9 +6121,9 @@ const BulletinByEleve = memo((props) => {
                                                             
                                                                                 <div className="mt-2">
                                                                                     <p tyle={{ fontSize: "10px" }} className="mb-0">Teacher's name: {enseign} </p>
+                                                                                </div>
                                                                                 <div className="mt-2">
                                                                                     <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : {elevesinclass} </strong> </p>
-
                                                                                 </div>
 
 
