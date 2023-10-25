@@ -2868,7 +2868,7 @@ const BulletinByEleve = memo((props) => {
                                                                         </div>
 
                                                                         <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom : {elevesinclass} </strong> </p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom et Prénom : {elevesinclass} </strong> </p>
                                                                         </div>
 
                                                                     </Col>
@@ -5269,7 +5269,7 @@ const BulletinByEleve = memo((props) => {
                                                                                 <div className="mt-2">
                                                                                     <p tyle={{ fontSize: "10px" }} className="mb-0">Teacher's name: {enseign} </p>
 
-                                                                                
+                                                                                </div>
                                                                                 <div className="mt-2">
                                                                                     <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : {elevesinclass} </strong> </p>
 
