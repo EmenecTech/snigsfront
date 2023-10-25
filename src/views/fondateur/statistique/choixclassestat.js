@@ -14,7 +14,7 @@ import shap6 from '../../../assets/images/shapes/06.png'
 
 
 
-const ChoixStat = () => {
+const ChoixClasseStat = () => {
 
   const classe = useParams();
 
@@ -96,4 +96,4 @@ const ChoixStat = () => {
 
 }
 
-export default ChoixStat;
+export default ChoixClasseStat;
