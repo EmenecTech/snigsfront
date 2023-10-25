@@ -195,6 +195,9 @@ import BulletinByEleve from '../views/fondateur/bulletins/bulletin_eleve';
 import ListGroupes from '../views/fondateur/groupes_matieres/groupes_matieres';
 import ListIndices from '../views/fondateur/indices_evaluations/indices_evaluations';
 
+////Stats
+import ChoixStat from '../views/fondateur/statistique/choixstat';
+
 
 import StatsEtablissement from '../views/super_admin/etablissements/stats_etablissement ';
 
@@ -910,6 +913,12 @@ export const DefaultRouter = [
             {
                 path: 'dashboard/icon/dual-tone',
                 element: <DualTone />
+            }
+
+    ///oct 25
+            {
+                path: 'Admin/stat',
+                element: <ChoixStat />
             }
         ]
     }
