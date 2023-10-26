@@ -53,6 +53,13 @@ SwiperCore.use([Navigation]);
 
 const ClassesStat = memo((props) => {
 
+    const componentRef = useRef();
+    const printData = useReactToPrint({
+        content: () => componentRef.current,
+        documentTitle: "employee data",
+        onafterprint: () => alert("print success"),
+    });
+
     const { user, http } = AuthUser();
     const {classe} = useParams();
 
