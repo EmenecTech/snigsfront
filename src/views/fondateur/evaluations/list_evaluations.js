@@ -454,12 +454,7 @@ const submitMoyenPr = (evaluation) => {
                                                 <td>{item.intitule_evaluation}</td>
                                                 <td>{item.type_evaluation_evaluation}</td>
                                                 <td>{item.reference_evaluation}</td>
-                                            <td><Button variant="primary mt-2" onClick={submitMoyenPr(item.intitule_evaluation)}>
-                                                    <span className="btn-inner">
-                                                    </span>
-                                                    générer les moyennes
-                                                </Button>
-                                          </td>
+                                            <td><Button variant="primary mt-2" onClick={() => {submitMoyenPr(item.intitule_evaluation); }}>Générer les moyennes</Button></td>
                                              
                                          
                                             </tr>
