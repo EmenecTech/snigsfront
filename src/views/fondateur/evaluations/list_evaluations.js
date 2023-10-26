@@ -440,6 +440,7 @@ const ListEvaluations = memo((props) => {
                                             <th>{user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)} </th>
                                             <th> {user.langue === "en" ? (<div>Type of assessment</div>):(<div>Type d'évaluation </div>)} </th>
                                             <th> {user.langue === "en" ? (<div>Reference</div>):(<div>Référence</div>)}</th>
+                                            <th>Action</th>
                                         
                                      
                                         </tr>
@@ -448,9 +449,14 @@ const ListEvaluations = memo((props) => {
                                         {evaluations_list.map((item) => (
                                             <tr key={item.id}>
                                                 <td>{item.intitule_evaluation}</td>
-
                                                 <td>{item.type_evaluation_evaluation}</td>
                                                 <td>{item.reference_evaluation}</td>
+                                            <td><Button variant="primary mt-2" onClick={handleShow}>
+                                                    <span className="btn-inner">
+                                                    </span>
+                                                    générer les moyennes
+                                                </Button>
+                                          </td>
                                              
                                          
                                             </tr>
