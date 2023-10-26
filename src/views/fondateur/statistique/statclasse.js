@@ -51,7 +51,7 @@ SwiperCore.use([Navigation]);
 
 
 
-const ListClassesStat = memo((props) => {
+const ClassesStat = memo((props) => {
 
     const { user, http } = AuthUser();
     const classe = useParams();
@@ -405,4 +405,4 @@ const ListClassesStat = memo((props) => {
     );
 })
 
-export default ListClassesStat
+export default ClassesStat
