@@ -388,7 +388,8 @@ const ClassesStat = memo((props) => {
 
                                             <tr >
                                                 <td>Nombre d'élèves</td>
-                                                <td>{total_eleves}</td>
+                                                <td>{total_eleves.Total_eleveclasse}</td>
+                                                <td>{total_eleves.pourcentage_eleveclasse}%</td>
 
                                             </tr>
                                           
