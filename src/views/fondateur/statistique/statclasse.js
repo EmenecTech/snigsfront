@@ -54,7 +54,7 @@ SwiperCore.use([Navigation]);
 const ClassesStat = memo((props) => {
 
     const { user, http } = AuthUser();
-    const classe = useParams();
+    const {classe} = useParams();
 
     const etab = user.etablissement;
 
