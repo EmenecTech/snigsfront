@@ -95,7 +95,7 @@ const ClassesStat = memo((props) => {
       }, []);
     
       const fetchAlltotal_filles = () => {
-        http.get("/nbreleve_fille_classe/" + etab + '/' + classe).then((res) => {
+        http.get("/nbreleve_fille_classe/" + etabs + '/' + classe).then((res) => {
           settotal_filles(res.data);
         });
       };
