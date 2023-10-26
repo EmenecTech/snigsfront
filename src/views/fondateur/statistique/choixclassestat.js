@@ -16,7 +16,7 @@ import shap6 from '../../../assets/images/shapes/06.png'
 
 const ChoixClasseStat = () => {
 
-  const classe = useParams();
+  const {classe} = useParams();
 
 
 
