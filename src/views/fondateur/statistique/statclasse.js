@@ -68,6 +68,15 @@ const ClassesStat = memo((props) => {
           settotal_eleves(res.data);
         });
       };
+    const [total_eleves_redoublant, settotal_eleves_redoublants] = useState([]);
+    useEffect(() => {
+      fetchAlltotal_eleves_redoublants();
+    }, []);
+    const fetchAlltotal_eleves_redoublants = () => {
+        http.get("/nbrredoublant_classe/" + etab + '/' + classe).then((res) => {
+          settotal_eleves_redoublants(res.data);
+        });
+      };
     const [total_garcons, settotal_garcons] = useState([]);
       useEffect(() => {
         fetchAlltotal_garcons();
@@ -390,6 +399,18 @@ const ClassesStat = memo((props) => {
                                             <tr>
                                                 <td>Nombre de filles</td>
                                                 <td>{total_filles}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nombre total de redoublant</td>
+                                                <td>{total_eleves_redoublant}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nombre de garçon(s) redoublant(s)</td>
+                                                <td>{total_redoublant}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nombre de fille(s) redoublante(s)</td>
+                                                <td>{total_redoublante}</td>
                                             </tr>
 
                                     </tbody>
