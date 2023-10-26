@@ -458,16 +458,19 @@ const PayementsListEleve = (props) => {
                                                             <p>Prenom : {eleveinfo.prenom}</p>
                                                             <p>Classe: {eleveinfo.other_in_user}</p>
                                                             <Row>
-                                                                <Col></Col>
                                                                 {listpayements.map((item2) => (
-                                                                    <div className="mt-2" key={item2.id}>
-                                                                        <h6 className="mb-0">{item2.montant_payementsave} XAF</h6>
-                                                                        <p>{item2.intitule_payementsave} <br />
-                                                                            ({item2.date_payementsave})
-                                                                        </p>
-                                                                    </div>
-                                                                ))
-                                                                }
+                                                                    <Col md="2">
+
+
+                                                                        <div className="mt-2" key={item2.id}>
+                                                                            <h6 className="mb-0">{item2.montant_payementsave} XAF</h6>
+                                                                            <p>{item2.intitule_payementsave} <br />
+                                                                                ({item2.date_payementsave})
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </Col>
+                                                                ))}
                                                             </Row>
 
 
@@ -475,8 +478,8 @@ const PayementsListEleve = (props) => {
                                                         <div style={{ paddingRight: "35px" }}>
 
 
-                                                            <br /> <br />
-                                                            <h4>Reste  : {reste} XAF</h4> <h3>Signature</h3>
+                                                            <br />
+                                                            <h5>Reste  : {reste} XAF</h5> <h6>Signature</h6>
 
 
 
@@ -489,6 +492,8 @@ const PayementsListEleve = (props) => {
 
 
                                                 </Col>
+
+                                                <hr />
 
                                                 <Col sm="12" lg="12">
 
@@ -568,16 +573,19 @@ const PayementsListEleve = (props) => {
                                                             <p>Prenom : {eleveinfo.prenom}</p>
                                                             <p>Classe: {eleveinfo.other_in_user}</p>
                                                             <Row>
-                                                                <Col></Col>
                                                                 {listpayements.map((item2) => (
-                                                                    <div className="mt-2" key={item2.id}>
-                                                                        <h6 className="mb-0">{item2.montant_payementsave} XAF</h6>
-                                                                        <p>{item2.intitule_payementsave} <br />
-                                                                            ({item2.date_payementsave})
-                                                                        </p>
-                                                                    </div>
-                                                                ))
-                                                                }
+                                                                    <Col md="2">
+
+
+                                                                        <div className="mt-2" key={item2.id}>
+                                                                            <h6 className="mb-0">{item2.montant_payementsave} XAF</h6>
+                                                                            <p>{item2.intitule_payementsave} <br />
+                                                                                ({item2.date_payementsave})
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </Col>
+                                                                ))}
                                                             </Row>
 
 
@@ -585,8 +593,8 @@ const PayementsListEleve = (props) => {
                                                         <div style={{ paddingRight: "35px" }}>
 
 
-                                                            <br /> <br />
-                                                            <h4>Reste  : {reste} XAF</h4> <h3>Signature</h3>
+                                                            <br />
+                                                            <h5>Reste  : {reste} XAF</h5> <h6>Signature</h6>
 
 
 
@@ -599,7 +607,6 @@ const PayementsListEleve = (props) => {
 
 
                                                 </Col>
-
                                             </div>
 
 
