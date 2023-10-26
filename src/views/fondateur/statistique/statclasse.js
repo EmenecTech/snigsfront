@@ -86,8 +86,9 @@ const ClassesStat = memo((props) => {
     
       const fetchAlltotal_redoublants = () => {
         http.get("/nbreleve_redoublant_classe/" + etab + '/' + classe).then((res) => {
-          settotal_filles(res.data);
+          settotal_redoublant(res.data);
         });
+          
       };
         const [total_filles, settotal_filles] = useState([]);
       useEffect(() => {
@@ -98,6 +99,7 @@ const ClassesStat = memo((props) => {
         http.get("/nbreleve_fille_classe/" + etab + "/" + classe).then((res) => {
           settotal_filles(res.data);
         });
+          console.log(etab);
       };
       
       const [total_redoublante, settotal_redoublante] = useState([]);
@@ -107,7 +109,7 @@ const ClassesStat = memo((props) => {
     
       const fetchAlltotal_redoublantes = () => {
         http.get("/nbreleve_redoublante_classe/" + etab + '/' + classe).then((res) => {
-          settotal_filles(res.data);
+          settotal_redoublante(res.data);
         });
       };
 
