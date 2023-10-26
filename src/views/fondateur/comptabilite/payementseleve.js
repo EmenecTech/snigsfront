@@ -22,7 +22,7 @@ const PayementsListEleve = (props) => {
     const componentRef = useRef();
     const printData = useReactToPrint({
         content: () => componentRef.current,
-        documentTitle: "employee data", 
+        documentTitle: "employee data",
         onafterprint: () => alert("print success"),
     });
     const [imagedata, setImagedata] = useState("");
@@ -78,9 +78,9 @@ const PayementsListEleve = (props) => {
     }
 
 
-        console.log(eleveinfo)
-     console.log(ideleve)
-    
+    console.log(eleveinfo)
+    console.log(ideleve)
+
 
     const handleChange = (event) => {
         const name = event.target.name;
@@ -212,7 +212,7 @@ const PayementsListEleve = (props) => {
     }
 
 
-        const reste = infopayement.montant_pension - payementsum.montant_payementsum ;
+    const reste = infopayement.montant_pension - payementsum.montant_payementsum;
     return (
         <>
             <div>
@@ -238,12 +238,12 @@ const PayementsListEleve = (props) => {
                                                         onClick={handleShow}
                                                         className="btn btn-info mt-2"
                                                     >
-                                                            {user.langue === "en" ? (<div>Add payment</div>):(<div>  Ajouter un payement</div>)}
-                                                       
+                                                        {user.langue === "en" ? (<div>Add payment</div>) : (<div>  Ajouter un payement</div>)}
+
                                                     </button>
-                                                     {" "}
+                                                    {" "}
                                                     <Button variant="primary mt-2" onClick={printData}>
-                                                        
+
                                                         Imprimer
                                                     </Button>
 
@@ -251,7 +251,7 @@ const PayementsListEleve = (props) => {
 
                                                     <Modal show={show} onHide={handleClose}>
                                                         <Modal.Header closeButton>
-                                                            <Modal.Title as="h5"> {user.langue === "en" ? (<div>Add payment</div>):(<div>  Ajouter un payement</div>)}</Modal.Title>
+                                                            <Modal.Title as="h5"> {user.langue === "en" ? (<div>Add payment</div>) : (<div>  Ajouter un payement</div>)}</Modal.Title>
                                                         </Modal.Header>
                                                         <Modal.Body>
                                                             <Form>
@@ -259,7 +259,7 @@ const PayementsListEleve = (props) => {
                                                                     <Col>
                                                                         <Form.Group as={Row} className="form-group">
                                                                             <Form.Group className="form-group">
-                                                                                <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé</div>)}</Form.Label>
+                                                                                <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Entitled</div>) : (<div> Intitulé</div>)}</Form.Label>
                                                                                 <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
                                                                             </Form.Group>
                                                                         </Form.Group>
@@ -269,7 +269,7 @@ const PayementsListEleve = (props) => {
                                                                     <Col>
                                                                         <Form.Group as={Row} className="form-group">
                                                                             <Form.Group className="form-group">
-                                                                                <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Amount</div>):(<div> Montant</div>)} </Form.Label>
+                                                                                <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Amount</div>) : (<div> Montant</div>)} </Form.Label>
                                                                                 <Form.Control type="number" defaultValue="" name="montant" onChange={handleChange} required />
                                                                             </Form.Group>
                                                                         </Form.Group>
@@ -280,7 +280,7 @@ const PayementsListEleve = (props) => {
                                                                     <Col>
                                                                         <Form.Group as={Row} className="form-group">
                                                                             <Form.Group className="form-group">
-                                                                                <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Date de payement</div>):(<div> Date de payement</div>)} </Form.Label>
+                                                                                <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Date de payement</div>) : (<div> Date de payement</div>)} </Form.Label>
                                                                                 <Form.Control type="date" defaultValue="" name="date" onChange={handleChange} required />
                                                                             </Form.Group>
                                                                         </Form.Group>
@@ -295,7 +295,7 @@ const PayementsListEleve = (props) => {
 
 
                                                                 <div className="text-center">
-                                                                    <Button type="button" variant="primary" onClick={submitForm} >{user.langue === "en" ? (<div>Confirm</div>):(<div>Confirmer</div>)} </Button>
+                                                                    <Button type="button" variant="primary" onClick={submitForm} >{user.langue === "en" ? (<div>Confirm</div>) : (<div>Confirmer</div>)} </Button>
                                                                 </div>
                                                             </Form>
                                                         </Modal.Body>
@@ -306,9 +306,9 @@ const PayementsListEleve = (props) => {
 
                                             </Col>
                                             <Col sm="4" lg="4">
-                                                <h3>{user.langue === "en" ? (<div>Tuition fees</div>):(<div>Frais de scolarités</div>)} </h3>
+                                                <h3>{user.langue === "en" ? (<div>Tuition fees</div>) : (<div>Frais de scolarités</div>)} </h3>
                                                 <h5 className="mb-4">{infopayement.montant_pension} XAF</h5>
-                                              
+
                                                 <h4 className="mb-3">Détails </h4>
                                                 {detailpayement.map((item) => (
                                                     <div className="mt-2" key={item.id}>
@@ -339,7 +339,7 @@ const PayementsListEleve = (props) => {
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            {listpayements.map((item) => ( 
+                                                            {listpayements.map((item) => (
                                                                 <tr key={item.id}>
                                                                     <td>{item.intitule_payementsave}</td>
                                                                     <td>{item.montant_payementsave} XAF</td>
@@ -348,13 +348,13 @@ const PayementsListEleve = (props) => {
                                                                         <div className="flex align-items-center list-user-action">
 
                                                                             <Link className="btn btn-sm btn-icon btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" onClick={() => { detelepayementeleve(item.id) }}>
-                                                                            <span className="btn-inner">
-                                                                                <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
-                                                                                    <path d="M19.3248 9.46826C19.3248 9.46826 18.7818 16.2033 18.4668 19.0403C18.3168 20.3953 17.4798 21.1893 16.1088 21.2143C13.4998 21.2613 10.8878 21.2643 8.27979 21.2093C6.96079 21.1823 6.13779 20.3783 5.99079 19.0473C5.67379 16.1853 5.13379 9.46826 5.13379 9.46826" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                                                    <path d="M20.708 6.23975H3.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                                                    <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                                                                                </svg>
-                                                                            </span>
+                                                                                <span className="btn-inner">
+                                                                                    <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                                                                                        <path d="M19.3248 9.46826C19.3248 9.46826 18.7818 16.2033 18.4668 19.0403C18.3168 20.3953 17.4798 21.1893 16.1088 21.2143C13.4998 21.2613 10.8878 21.2643 8.27979 21.2093C6.96079 21.1823 6.13779 20.3783 5.99079 19.0473C5.67379 16.1853 5.13379 9.46826 5.13379 9.46826" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                                        <path d="M20.708 6.23975H3.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                                        <path d="M17.4406 6.23973C16.6556 6.23973 15.9796 5.68473 15.8256 4.91573L15.5826 3.69973C15.4326 3.13873 14.9246 2.75073 14.3456 2.75073H10.1126C9.53358 2.75073 9.02558 3.13873 8.87558 3.69973L8.63258 4.91573C8.47858 5.68473 7.80258 6.23973 7.01758 6.23973" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                                    </svg>
+                                                                                </span>
                                                                             </Link>
 
                                                                         </div>
@@ -372,123 +372,237 @@ const PayementsListEleve = (props) => {
                                             </Col>
 
                                         </Row>
-                                        
+
                                         <Row>
-                                           
-                                                    
-                                                    <br/>
-                                    <div ref={componentRef} style={{ width: "100%", paddingTop:"15px", MarginTop: "10px" , paddingLeft:"60px", height: window.innerHeight }}>
-                                 
-                                                    
-                                        <Col sm="12" lg="12">
-                                                
-           
-                                            <div className="">
-                                                <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
-                                                    <Row>
-                                                        <Col sm="3">
-                                                            <div className="d-flex justify-content-center align-items-center">
-                                                                <Image
-                                                                    src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
-                                                                    style={{
-                                                                        width: "100px",
-                                                                        height: "100px",
-                                                                        borderRadius: "50%",
-                                                                        objectFit: "cover",
-                                                                        border: "2px solid black",
-                                                                        display: "block",
-                                                                        marginLeft: "auto",
-                                                                        marginRight: "auto"
-                                                                    }}
-                                                                />
-                                                            </div>
-                                                        </Col>
-                                                        <Col sm="6" className="mt-4">
-                                                            {" "}
-                                                            {etab === 25 ? <div>
-
-                                                                 <div className="col-sm-12 justify-content-center">
-                                                                
-                                                                <h6 className="text-center"> Complexe Scolaire Bilingue Intégrale Saint Julie <br/> (SIS Nouvelle route Tam Tam Week-end) </h6>
-                                                                <h6 className="text-center">B.P: Yaoundé, MOTTO: DISCIPLINE-PROGRESS-SUCCESS </h6>
-                                                                 <h6 className="text-center">ARRETE NO: 280/JI/7/A/MINEDUB/SG/DSEPB/SDAAP Du 19 Septembre 2016 </h6>
-                                                            </div>
-                                                                
-                                                                </div> : 
-                                                                <div>
-                                                                    <h5 className="text-center"> {info_etab.nom_etablissement}</h5>
-                                                                </div>}
-                                                           
-                                                            <div className="col-sm-12 justify-content-center">
-                                                                <h5 className="text-center">
-                                                                 
-                                                                </h5>
-                                                            </div>
-                                                            {" "}
-                                                        </Col>
-                                                       <Col sm="3">
-                                                            <div className="d-flex justify-content-center align-items-center">
-                                                                <Image
-                                                                    src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
-                                                                    style={{
-                                                                        width: "100px",
-                                                                        height: "100px",
-                                                                        borderRadius: "50%",
-                                                                        objectFit: "cover",
-                                                                        border: "2px solid black",
-                                                                        display: "block",
-                                                                        marginLeft: "auto",
-                                                                        marginRight: "auto"
-                                                                    }}
-                                                                />
-                                                            </div>
-                                                        </Col>
-
-                                                
-                                                    </Row>
-                                                </Col>
-                                                        <div className="mt-4" style={{ paddingLeft:"35px" }}>
 
 
-                                                                
+                                            <br />
+                                            <div ref={componentRef} style={{ width: "100%", paddingTop: "15px", MarginTop: "10px", paddingLeft: "60px", height: window.innerHeight }}>
 
-                                                                <h3>{user.langue === "en" ? (<div>Payements </div>):(<div>Payements </div>)}</h3>
-                                                                    <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
-                                                                      <p>Nom : {eleveinfo.nom}</p>                                                 
-                                                                      <p>Prenom : {eleveinfo.prenom}</p>                                                 
-                                                                      <p>Classe: {eleveinfo.other_in_user}</p> 
-                                                                    {listpayements.map((item2) => (
-                                                                        <div className="mt-2" key={item2.id}>
-                                                                            <h6 className="mb-0">{item2.montant_payementsave} XAF</h6>
-                                                                            <p>{item2.intitule_payementsave} <br />
-                                                                                ({item2.date_payementsave})
-                                                                            </p>
+
+                                                <Col sm="12" lg="12">
+
+
+                                                    <div className="">
+                                                        <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
+                                                            <Row>
+                                                                <Col sm="3">
+                                                                    <div className="d-flex justify-content-center align-items-center">
+                                                                        <Image
+                                                                            src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"}
+                                                                            style={{
+                                                                                width: "100px",
+                                                                                height: "100px",
+                                                                                borderRadius: "50%",
+                                                                                objectFit: "cover",
+                                                                                border: "2px solid black",
+                                                                                display: "block",
+                                                                                marginLeft: "auto",
+                                                                                marginRight: "auto"
+                                                                            }}
+                                                                        />
+                                                                    </div>
+                                                                </Col>
+                                                                <Col sm="6" className="mt-4">
+                                                                    {" "}
+                                                                    {etab === 25 ? <div>
+
+                                                                        <div className="col-sm-12 justify-content-center">
+
+                                                                            <h6 className="text-center"> Complexe Scolaire Bilingue Intégrale Saint Julie <br /> (SIS Nouvelle route Tam Tam Week-end) </h6>
+                                                                            <h6 className="text-center">B.P: Yaoundé, MOTTO: DISCIPLINE-PROGRESS-SUCCESS </h6>
+                                                                            <h6 className="text-center">ARRETE NO: 280/JI/7/A/MINEDUB/SG/DSEPB/SDAAP Du 19 Septembre 2016 </h6>
                                                                         </div>
-                                                                    ))
-                                                                    }
 
-                                                    
+                                                                    </div> :
+                                                                        <div>
+                                                                            <h5 className="text-center"> {info_etab.nom_etablissement}</h5>
+                                                                        </div>}
+
+                                                                    <div className="col-sm-12 justify-content-center">
+                                                                        <h5 className="text-center">
+
+                                                                        </h5>
+                                                                    </div>
+                                                                    {" "}
+                                                                </Col>
+                                                                <Col sm="3">
+                                                                    <div className="d-flex justify-content-center align-items-center">
+                                                                        <Image
+                                                                            src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"}
+                                                                            style={{
+                                                                                width: "100px",
+                                                                                height: "100px",
+                                                                                borderRadius: "50%",
+                                                                                objectFit: "cover",
+                                                                                border: "2px solid black",
+                                                                                display: "block",
+                                                                                marginLeft: "auto",
+                                                                                marginRight: "auto"
+                                                                            }}
+                                                                        />
+                                                                    </div>
+                                                                </Col>
+
+
+                                                            </Row>
+                                                        </Col>
+                                                        <div className="mt-4" style={{ paddingLeft: "35px" }}>
+
+
+
+
+                                                            <h3>{user.langue === "en" ? (<div>Payements </div>) : (<div>Payements </div>)}</h3>
+                                                            <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
+                                                            <p>Nom : {eleveinfo.nom}</p>
+                                                            <p>Prenom : {eleveinfo.prenom}</p>
+                                                            <p>Classe: {eleveinfo.other_in_user}</p>
+                                                            <Row>
+                                                                <Col></Col>
+                                                                {listpayements.map((item2) => (
+                                                                    <div className="mt-2" key={item2.id}>
+                                                                        <h6 className="mb-0">{item2.montant_payementsave} XAF</h6>
+                                                                        <p>{item2.intitule_payementsave} <br />
+                                                                            ({item2.date_payementsave})
+                                                                        </p>
+                                                                    </div>
+                                                                ))
+                                                                }
+                                                            </Row>
+
+
                                                         </div>
-                                                        <div style={{ paddingRight:"35px" }}>
+                                                        <div style={{ paddingRight: "35px" }}>
 
 
-                                                                        <br/> <br/>
-                                                                       <h4>Reste  : {reste} XAF</h4> <h3>Signature</h3>
-                                                                        
-                                                                        
-                                                                        
-                                                       </div>
+                                                            <br /> <br />
+                                                            <h4>Reste  : {reste} XAF</h4> <h3>Signature</h3>
 
 
 
-                                                                        
+                                                        </div>
+
+
+
+
                                                     </div>
-                                                
 
-                                                  </Col>
+
+                                                </Col>
+
+                                                <Col sm="12" lg="12">
+
+
+                                                    <div className="">
+                                                        <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
+                                                            <Row>
+                                                                <Col sm="3">
+                                                                    <div className="d-flex justify-content-center align-items-center">
+                                                                        <Image
+                                                                            src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"}
+                                                                            style={{
+                                                                                width: "100px",
+                                                                                height: "100px",
+                                                                                borderRadius: "50%",
+                                                                                objectFit: "cover",
+                                                                                border: "2px solid black",
+                                                                                display: "block",
+                                                                                marginLeft: "auto",
+                                                                                marginRight: "auto"
+                                                                            }}
+                                                                        />
+                                                                    </div>
+                                                                </Col>
+                                                                <Col sm="6" className="mt-4">
+                                                                    {" "}
+                                                                    {etab === 25 ? <div>
+
+                                                                        <div className="col-sm-12 justify-content-center">
+
+                                                                            <h6 className="text-center"> Complexe Scolaire Bilingue Intégrale Saint Julie <br /> (SIS Nouvelle route Tam Tam Week-end) </h6>
+                                                                            <h6 className="text-center">B.P: Yaoundé, MOTTO: DISCIPLINE-PROGRESS-SUCCESS </h6>
+                                                                            <h6 className="text-center">ARRETE NO: 280/JI/7/A/MINEDUB/SG/DSEPB/SDAAP Du 19 Septembre 2016 </h6>
+                                                                        </div>
+
+                                                                    </div> :
+                                                                        <div>
+                                                                            <h5 className="text-center"> {info_etab.nom_etablissement}</h5>
+                                                                        </div>}
+
+                                                                    <div className="col-sm-12 justify-content-center">
+                                                                        <h5 className="text-center">
+
+                                                                        </h5>
+                                                                    </div>
+                                                                    {" "}
+                                                                </Col>
+                                                                <Col sm="3">
+                                                                    <div className="d-flex justify-content-center align-items-center">
+                                                                        <Image
+                                                                            src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"}
+                                                                            style={{
+                                                                                width: "100px",
+                                                                                height: "100px",
+                                                                                borderRadius: "50%",
+                                                                                objectFit: "cover",
+                                                                                border: "2px solid black",
+                                                                                display: "block",
+                                                                                marginLeft: "auto",
+                                                                                marginRight: "auto"
+                                                                            }}
+                                                                        />
+                                                                    </div>
+                                                                </Col>
+
+
+                                                            </Row>
+                                                        </Col>
+                                                        <div className="mt-4" style={{ paddingLeft: "35px" }}>
+
+
+
+
+                                                            <h3>{user.langue === "en" ? (<div>Payements </div>) : (<div>Payements </div>)}</h3>
+                                                            <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
+                                                            <p>Nom : {eleveinfo.nom}</p>
+                                                            <p>Prenom : {eleveinfo.prenom}</p>
+                                                            <p>Classe: {eleveinfo.other_in_user}</p>
+                                                            <Row>
+                                                                <Col></Col>
+                                                                {listpayements.map((item2) => (
+                                                                    <div className="mt-2" key={item2.id}>
+                                                                        <h6 className="mb-0">{item2.montant_payementsave} XAF</h6>
+                                                                        <p>{item2.intitule_payementsave} <br />
+                                                                            ({item2.date_payementsave})
+                                                                        </p>
+                                                                    </div>
+                                                                ))
+                                                                }
+                                                            </Row>
+
+
+                                                        </div>
+                                                        <div style={{ paddingRight: "35px" }}>
+
+
+                                                            <br /> <br />
+                                                            <h4>Reste  : {reste} XAF</h4> <h3>Signature</h3>
+
+
+
+                                                        </div>
+
+
+
+
+                                                    </div>
+
+
+                                                </Col>
+
                                             </div>
-                                          
-                                         
+
+
 
                                         </Row>
 
