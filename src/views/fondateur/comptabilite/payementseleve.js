@@ -377,7 +377,7 @@ const PayementsListEleve = (props) => {
 
 
                                             <br />
-                                            <div ref={componentRef} style={{ width: "100%", paddingTop: "15px", MarginTop: "10px", paddingLeft: "60px", height: window.innerHeight }}>
+                                            <div ref={componentRef} style={{ width: "100%", paddingTop: "15px", MarginTop: "10px", paddingLeft: "60px" , fontSize: "8px", height: window.innerHeight }}>
 
 
                                                 <Col sm="12" lg="12">
@@ -391,8 +391,8 @@ const PayementsListEleve = (props) => {
                                                                         <Image
                                                                             src={"https://snigs.education/logo_etab/" + etab + ".png"}
                                                                             style={{
-                                                                                width: "100px",
-                                                                                height: "100px",
+                                                                                width: "50px",
+                                                                                height: "50px",
                                                                                 borderRadius: "50%",
                                                                                 objectFit: "cover",
                                                                                 border: "2px solid black",
@@ -431,8 +431,8 @@ const PayementsListEleve = (props) => {
                                                                         <Image
                                                                             src={"https://snigs.education/logo_etab/" + etab + ".png"}
                                                                             style={{
-                                                                                width: "100px",
-                                                                                height: "100px",
+                                                                                width: "50px",
+                                                                                height: "50px",
                                                                                 borderRadius: "50%",
                                                                                 objectFit: "cover",
                                                                                 border: "2px solid black",
@@ -506,8 +506,8 @@ const PayementsListEleve = (props) => {
                                                                         <Image
                                                                             src={"https://snigs.education/logo_etab/" + etab + ".png"}
                                                                             style={{
-                                                                                width: "100px",
-                                                                                height: "100px",
+                                                                                width: "50px",
+                                                                                height: "50px",
                                                                                 borderRadius: "50%",
                                                                                 objectFit: "cover",
                                                                                 border: "2px solid black",
@@ -546,8 +546,8 @@ const PayementsListEleve = (props) => {
                                                                         <Image
                                                                             src={"https://snigs.education/logo_etab/" + etab + ".png"}
                                                                             style={{
-                                                                                width: "100px",
-                                                                                height: "100px",
+                                                                                width: "50px",
+                                                                                height: "50px",
                                                                                 borderRadius: "50%",
                                                                                 objectFit: "cover",
                                                                                 border: "2px solid black",
@@ -568,7 +568,7 @@ const PayementsListEleve = (props) => {
 
 
                                                             <h3>{user.langue === "en" ? (<div>Payements </div>) : (<div>Payements </div>)}</h3>
-                                                            <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
+                                                            <h5 className="mb-2" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
                                                             <p>Nom : {eleveinfo.nom}</p>
                                                             <p>Prenom : {eleveinfo.prenom}</p>
                                                             <p>Classe: {eleveinfo.other_in_user}</p>
