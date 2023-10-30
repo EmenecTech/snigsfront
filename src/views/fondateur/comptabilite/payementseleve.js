@@ -377,14 +377,14 @@ const PayementsListEleve = (props) => {
 
 
                                             <br />
-                                            <div ref={componentRef} style={{ width: "100%", paddingTop: "15px", MarginTop: "10px", paddingLeft: "60px" , fontSize: "8px", height: window.innerHeight }}>
+                                            <div ref={componentRef} style={{ width: "100%", paddingTop: "15px", MarginTop: "10px", paddingLeft: "60px" , fontSize: "14px", height: window.innerHeight }}>
 
 
                                                 <Col sm="12" lg="12">
 
 
                                                     <div className="">
-                                                        <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
+                                                        <Col sm="12" className="d-flex align-items-center justify-content-center mt-1 mb-2">
                                                             <Row>
                                                                 <Col sm="3">
                                                                     <div className="d-flex justify-content-center align-items-center">
@@ -407,16 +407,16 @@ const PayementsListEleve = (props) => {
                                                                     {" "}
                                                                     {etab === 25 ? <div>
 
-                                                                        <div className="col-sm-12 justify-content-center">
+                                                                        <div className="col-sm-12 justify-content-center" style={{ fontSize: "14px" }}>
 
-                                                                            <h6 className="text-center"> Complexe Scolaire Bilingue Intégrale Saint Julie <br /> (SIS Nouvelle route Tam Tam Week-end) </h6>
-                                                                            <h6 className="text-center">B.P: Yaoundé, MOTTO: DISCIPLINE-PROGRESS-SUCCESS </h6>
-                                                                            <h6 className="text-center">ARRETE NO: 280/JI/7/A/MINEDUB/SG/DSEPB/SDAAP Du 19 Septembre 2016 </h6>
+                                                                            <h6 className="text-center" style={{ fontSize: "14px" }}> Complexe Scolaire Bilingue Intégrale Saint Julie <br /> (SIS Nouvelle route Tam Tam Week-end) </h6>
+                                                                            <h6 className="text-center" style={{ fontSize: "14px" }}>B.P: Yaoundé, MOTTO: DISCIPLINE-PROGRESS-SUCCESS </h6>
+                                                                            <h6 className="text-center" style={{ fontSize: "14px" }}>ARRETE NO: 280/JI/7/A/MINEDUB/SG/DSEPB/SDAAP Du 19 Septembre 2016 </h6>
                                                                         </div>
 
                                                                     </div> :
                                                                         <div>
-                                                                            <h5 className="text-center"> {info_etab.nom_etablissement}</h5>
+                                                                            <h5 className="text-center" style={{ fontSize: "14px" }}> {info_etab.nom_etablissement}</h5>
                                                                         </div>}
 
                                                                     <div className="col-sm-12 justify-content-center">
@@ -447,122 +447,7 @@ const PayementsListEleve = (props) => {
 
                                                             </Row>
                                                         </Col>
-                                                        <div className="mt-4" style={{ paddingLeft: "35px" }}>
-
-
-
-
-                                                            <h3>{user.langue === "en" ? (<div>Payements </div>) : (<div>Payements </div>)}</h3>
-                                                            <h5 className="mb-4" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
-                                                            <p>Nom : {eleveinfo.nom}</p>
-                                                            <p>Prenom : {eleveinfo.prenom}</p>
-                                                            <p>Classe: {eleveinfo.other_in_user}</p>
-                                                            <Row>
-                                                                {listpayements.map((item2) => (
-                                                                    <Col md="2">
-
-
-                                                                        <div className="mt-2" key={item2.id}>
-                                                                            <h6 className="mb-0">{item2.montant_payementsave} XAF</h6>
-                                                                            <p>{item2.intitule_payementsave} <br />
-                                                                                ({item2.date_payementsave})
-                                                                            </p>
-                                                                        </div>
-
-                                                                    </Col>
-                                                                ))}
-                                                            </Row>
-
-
-                                                        </div>
-                                                        <div style={{ paddingRight: "35px" }}>
-
-
-                                                            <br />
-                                                            <h5>Reste  : {reste} XAF</h5> <h6>Signature</h6>
-
-
-
-                                                        </div>
-
-
-
-
-                                                    </div>
-
-
-                                                </Col>
-
-                                                <hr />
-
-                                                <Col sm="12" lg="12">
-
-
-                                                    <div className="">
-                                                        <Col sm="12" className="d-flex align-items-center justify-content-center mt-2 mb-3">
-                                                            <Row>
-                                                                <Col sm="3">
-                                                                    <div className="d-flex justify-content-center align-items-center">
-                                                                        <Image
-                                                                            src={"https://snigs.education/logo_etab/" + etab + ".png"}
-                                                                            style={{
-                                                                                width: "50px",
-                                                                                height: "50px",
-                                                                                borderRadius: "50%",
-                                                                                objectFit: "cover",
-                                                                                border: "2px solid black",
-                                                                                display: "block",
-                                                                                marginLeft: "auto",
-                                                                                marginRight: "auto"
-                                                                            }}
-                                                                        />
-                                                                    </div>
-                                                                </Col>
-                                                                <Col sm="6" className="mt-4">
-                                                                    {" "}
-                                                                    {etab === 25 ? <div>
-
-                                                                        <div className="col-sm-12 justify-content-center">
-
-                                                                            <h6 className="text-center"> Complexe Scolaire Bilingue Intégrale Saint Julie <br /> (SIS Nouvelle route Tam Tam Week-end) </h6>
-                                                                            <h6 className="text-center">B.P: Yaoundé, MOTTO: DISCIPLINE-PROGRESS-SUCCESS </h6>
-                                                                            <h6 className="text-center">ARRETE NO: 280/JI/7/A/MINEDUB/SG/DSEPB/SDAAP Du 19 Septembre 2016 </h6>
-                                                                        </div>
-
-                                                                    </div> :
-                                                                        <div>
-                                                                            <h5 className="text-center"> {info_etab.nom_etablissement}</h5>
-                                                                        </div>}
-
-                                                                    <div className="col-sm-12 justify-content-center">
-                                                                        <h5 className="text-center">
-
-                                                                        </h5>
-                                                                    </div>
-                                                                    {" "}
-                                                                </Col>
-                                                                <Col sm="3">
-                                                                    <div className="d-flex justify-content-center align-items-center">
-                                                                        <Image
-                                                                            src={"https://snigs.education/logo_etab/" + etab + ".png"}
-                                                                            style={{
-                                                                                width: "50px",
-                                                                                height: "50px",
-                                                                                borderRadius: "50%",
-                                                                                objectFit: "cover",
-                                                                                border: "2px solid black",
-                                                                                display: "block",
-                                                                                marginLeft: "auto",
-                                                                                marginRight: "auto"
-                                                                            }}
-                                                                        />
-                                                                    </div>
-                                                                </Col>
-
-
-                                                            </Row>
-                                                        </Col>
-                                                        <div className="mt-4" style={{ paddingLeft: "35px" }}>
+                                                        <div className="mt-2" style={{ paddingLeft: "35px" }}>
 
 
 
@@ -594,7 +479,122 @@ const PayementsListEleve = (props) => {
 
 
                                                             <br />
-                                                            <h5>Reste  : {reste} XAF</h5> <h6>Signature</h6>
+                                                            <h5 style={{ fontSize: "14px" }}>Reste  : {reste} XAF</h5> <h6 style={{ fontSize: "14px" }}>Signature</h6>
+
+
+
+                                                        </div>
+
+
+
+
+                                                    </div>
+
+
+                                                </Col>
+
+                                                <hr />
+
+                                                <Col sm="12" lg="12">
+
+
+                                                    <div className="">
+                                                        <Col sm="12" className="d-flex align-items-center justify-content-center mt-1 mb-2">
+                                                            <Row>
+                                                                <Col sm="3">
+                                                                    <div className="d-flex justify-content-center align-items-center">
+                                                                        <Image
+                                                                            src={"https://snigs.education/logo_etab/" + etab + ".png"}
+                                                                            style={{
+                                                                                width: "50px",
+                                                                                height: "50px",
+                                                                                borderRadius: "50%",
+                                                                                objectFit: "cover",
+                                                                                border: "2px solid black",
+                                                                                display: "block",
+                                                                                marginLeft: "auto",
+                                                                                marginRight: "auto"
+                                                                            }}
+                                                                        />
+                                                                    </div>
+                                                                </Col>
+                                                                <Col sm="6" className="mt-4">
+                                                                    {" "}
+                                                                    {etab === 25 ? <div>
+
+                                                                        <div className="col-sm-12 justify-content-center">
+
+                                                                            <h6 className="text-center" style={{ fontSize: "14px" }}> Complexe Scolaire Bilingue Intégrale Saint Julie <br /> (SIS Nouvelle route Tam Tam Week-end) </h6>
+                                                                            <h6 className="text-center" style={{ fontSize: "14px" }}>B.P: Yaoundé, MOTTO: DISCIPLINE-PROGRESS-SUCCESS </h6>
+                                                                            <h6 className="text-center" style={{ fontSize: "14px" }}>ARRETE NO: 280/JI/7/A/MINEDUB/SG/DSEPB/SDAAP Du 19 Septembre 2016 </h6>
+                                                                        </div>
+
+                                                                    </div> :
+                                                                        <div>
+                                                                            <h5 className="text-center" style={{ fontSize: "14px" }}> {info_etab.nom_etablissement}</h5>
+                                                                        </div>}
+
+                                                                    <div className="col-sm-12 justify-content-center">
+                                                                        <h5 className="text-center">
+
+                                                                        </h5>
+                                                                    </div>
+                                                                    {" "}
+                                                                </Col>
+                                                                <Col sm="3">
+                                                                    <div className="d-flex justify-content-center align-items-center">
+                                                                        <Image
+                                                                            src={"https://snigs.education/logo_etab/" + etab + ".png"}
+                                                                            style={{
+                                                                                width: "50px",
+                                                                                height: "50px",
+                                                                                borderRadius: "50%",
+                                                                                objectFit: "cover",
+                                                                                border: "2px solid black",
+                                                                                display: "block",
+                                                                                marginLeft: "auto",
+                                                                                marginRight: "auto"
+                                                                            }}
+                                                                        />
+                                                                    </div>
+                                                                </Col>
+
+
+                                                            </Row>
+                                                        </Col>
+                                                        <div className="mt-2" style={{ paddingLeft: "35px" }}>
+
+
+
+
+                                                            <h3>{user.langue === "en" ? (<div>Payements </div>) : (<div>Payements </div>)}</h3>
+                                                            <h5 className="mb-2" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
+                                                            <p>Nom : {eleveinfo.nom}</p>
+                                                            <p>Prenom : {eleveinfo.prenom}</p>
+                                                            <p>Classe: {eleveinfo.other_in_user}</p>
+                                                            <Row>
+                                                                {listpayements.map((item2) => (
+                                                                    <Col md="2">
+
+
+                                                                        <div className="mt-2" key={item2.id}>
+                                                                            <h6 className="mb-0">{item2.montant_payementsave} XAF</h6>
+                                                                            <p>{item2.intitule_payementsave} <br />
+                                                                                ({item2.date_payementsave})
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </Col>
+                                                                ))}
+                                                            </Row>
+
+
+                                                        </div>
+                                                        <div style={{ paddingRight: "35px" }}>
+
+
+                                                            <br />
+                                                            <h5 style={{ fontSize: "14px" }}>Reste  : {reste} XAF</h5> <h6 style={{ fontSize: "14px" }}>Signature</h6>
 
 
 
