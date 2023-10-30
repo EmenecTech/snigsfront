@@ -73,16 +73,7 @@ const UniClasse = () => {
 
     ////////////////////Stats
 
-const [total_eleves, settotal_eleves] = useState([]);
-  useEffect(() => {
-    fetchAlltotal_eleves();
-  }, []);
 
-  const fetchAlltotal_eleves = () => {
-    http.get("/nbreleves_classe/" + etab + '/' + classe).then((res) => {
-      settotal_eleves(res.data);
-    });
-  };
 const [total_garcons, settotal_garcons] = useState([]);
   useEffect(() => {
     fetchAlltotal_garcons();
@@ -782,106 +773,7 @@ const [total_garcons, settotal_garcons] = useState([]);
                              
                             </Tab.Pane >
                             <Tab.Pane eventKey="five" id="profile-profile">
-                                <Card>
-                                     <Card.Header className="d-flex justify-content-between">
-                                           
-                
-                
-                                            <Button variant="primary mt-2" onClick={printData}>
-                                                <span className="btn-inner">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                                                    </svg>
-                                                </span>
-                                                Imprimer
-                                            </Button>
-                
-                                            {/* <!-- Modal --> */}
-                
-                                        </Card.Header>
-                                   
-                                    <Card.Body>
-                                        <div className="table-responsive border-bottom my-3" ref={componentRef} style={{ width: "100%", height: window.innerHeight }}>
-                                            <div className="header-title">
-                                                <h4 className="card-title mb-4">Statistiques ({classe})</h4>
-                                            </div>
-                                            <Table
-                                                responsive
-                                                striped
-                                                id="datatable"
-                                                className=""
-                                                data-toggle="data-table"
-                                            >
-                                                <thead>
-                                                    <tr>
-                                                        
-                                                        <th>Intitulé</th>
-                                                        <th>Resultat</th>
-
-                                                    </tr>
-
-                                                </thead>
-                                                <tbody>
-                                                    
-                                                        <tr>
-                                                           <td>Nombre total d'élèves</td>
-                                                           <td>{total_eleves}</td>
-                                                        </tr>
-                                                        <tr>
-                                                           <td>Nombre de garçons</td>
-                                                           <td>{total_garcons}</td>
-                                                        </tr>
-                                                        <tr>
-                                                           <td>Nombre de filles</td>
-                                                           <td>{total_filles}</td>
-                                                        </tr>
-                                                        <tr>
-                                                           <td>Nombre d'enseignants</td>
-                                                           <td></td>
-                                                        </tr>
-                                                        <tr>
-                                                           <td>Moyenne du premier</td>
-                                                           <td></td>
-                                                        </tr>
-                                                        <tr>
-                                                           <td>Moyenne du dernier</td>
-                                                           <td></td>
-                                                        </tr>
-
-                                                         <tr> 
-                                                           <td>Nombre d'élèves ayant une moyenne supérieur ou égal à 10</td>
-                                                           <td></td>
-                                                        </tr>
-                                                        <tr>
-                                                           <td>Nombre d'élèves ayant une moyenne inférieur ou égal à 10</td>
-                                                           <td></td>
-                                                        </tr>
-                                                        <tr>
-                                                           <td>Nombre de filles ayant une moyenne supérieur ou égal à 10</td>
-                                                           <td></td>
-                                                        </tr>
-                                                        <tr>
-                                                           <td>Nombre de garçon ayant une moyenne supérieur ou égal à 10</td>
-                                                           <td></td>
-                                                        </tr>
-                                                        <tr>
-                                                           <td>Nombre de filles ayant une moyenne inférieur ou égal à 10</td>
-                                                           <td></td>
-                                                        </tr>
-                                                        <tr>
-                                                           <td>Nombre de garçon ayant une moyenne inférieur ou égal à 10</td>
-                                                           <td></td>
-                                                        </tr>
-  
-                                               
-                                                </tbody>
-                                               
-                                            </Table>
-
-                                        </div>
-                                    </Card.Body>
-                                </Card>
-
+                              
                             </Tab.Pane >
                         </Tab.Content>
                     </Col>
