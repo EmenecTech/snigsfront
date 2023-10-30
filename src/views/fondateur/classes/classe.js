@@ -71,32 +71,6 @@ const UniClasse = () => {
 
 
 
-    ////////////////////Stats
-
-
-const [total_garcons, settotal_garcons] = useState([]);
-  useEffect(() => {
-    fetchAlltotal_garcons();
-  }, []);
-
-  const fetchAlltotal_garcons = () => {
-    http.get("/nbreleve_garcon_classe/" + etab + '/' + classe).then((res) => {
-      settotal_garcons(res.data);
-    });
-  }; 
-    const [total_filles, settotal_filles] = useState([]);
-  useEffect(() => {
-    fetchAlltotal_filles();
-  }, []);
-
-  const fetchAlltotal_filles = () => {
-    http.get("/nbreleve_fille_classe/" + etab + '/' + classe).then((res) => {
-      settotal_filles(res.data);
-    });
-  }; 
-
-    /////////////
-
     const submitForm = () => {
         http.post('/classesmatieres', inputs).then((res) => {
             alert("Matière ajoutée avec succès !")
