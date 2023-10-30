@@ -389,7 +389,7 @@ const PayementsListEleve = (props) => {
                                                                 <Col sm="3">
                                                                     <div className="d-flex justify-content-center align-items-center">
                                                                         <Image
-                                                                            src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"}
+                                                                            src={"https://snigs.education/logo_etab/" + etab + ".png"}
                                                                             style={{
                                                                                 width: "100px",
                                                                                 height: "100px",
@@ -429,7 +429,7 @@ const PayementsListEleve = (props) => {
                                                                 <Col sm="3">
                                                                     <div className="d-flex justify-content-center align-items-center">
                                                                         <Image
-                                                                            src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"}
+                                                                            src={"https://snigs.education/logo_etab/" + etab + ".png"}
                                                                             style={{
                                                                                 width: "100px",
                                                                                 height: "100px",
@@ -504,7 +504,7 @@ const PayementsListEleve = (props) => {
                                                                 <Col sm="3">
                                                                     <div className="d-flex justify-content-center align-items-center">
                                                                         <Image
-                                                                            src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"}
+                                                                            src={"https://snigs.education/logo_etab/" + etab + ".png"}
                                                                             style={{
                                                                                 width: "100px",
                                                                                 height: "100px",
@@ -544,7 +544,7 @@ const PayementsListEleve = (props) => {
                                                                 <Col sm="3">
                                                                     <div className="d-flex justify-content-center align-items-center">
                                                                         <Image
-                                                                            src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"}
+                                                                            src={"https://snigs.education/logo_etab/" + etab + ".png"}
                                                                             style={{
                                                                                 width: "100px",
                                                                                 height: "100px",
