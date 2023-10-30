@@ -239,9 +239,7 @@ const UniClasse = () => {
                                         <Nav.Item as="li">
                                             <Nav.Link eventKey="fourth">Parents</Nav.Link>
                                         </Nav.Item>
-                                        <Nav.Item as="li">
-                                            <Nav.Link eventKey="five">Statistiques</Nav.Link>
-                                        </Nav.Item>
+                                       
                                     </Nav>
                                 </div>
                             </Card.Body>
