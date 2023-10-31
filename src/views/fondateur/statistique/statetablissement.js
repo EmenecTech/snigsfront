@@ -62,7 +62,7 @@ const SchoolStat = memo((props) => {
     });
 
     const { user, http } = AuthUser();
-    const {classe} = useParams();
+
 
     const etab = user.etablissement;
 
