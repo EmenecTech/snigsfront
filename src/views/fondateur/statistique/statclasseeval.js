@@ -398,11 +398,13 @@ const ListClassesEvalStat = memo((props) => {
                                             </tr>
                                             <tr>
                                                 <td>Nombre d'éléve ayant une moyenne supéreure à 10</td>
-                                                <td>{moyensup}</td>
+                                                <td>{moyensup.nbre_student}</td>
+                                                <td>{moyensup.pourcentage}</td>
                                             </tr>
                                             <tr>
                                                 <td>Nombre d'éléve ayant une moyenne inférieure à 10</td>
-                                                <td>{moyeninf}</td>
+                                                <td>{moyeninf.nbre_student}</td>
+                                                <td>{moyeninf.pourcentage}</td>
                                             </tr>
                                             <tr>
                                                 <td>Nombre de garçon ayant une moyenne supéreure à 10</td>
