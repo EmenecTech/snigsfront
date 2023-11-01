@@ -72,7 +72,7 @@ const ChoixNiveauxStat = () => {
                         </Card>
                     </Col>
                 </Row>
-            </div>
+            </div> 
         </>
     )
 
