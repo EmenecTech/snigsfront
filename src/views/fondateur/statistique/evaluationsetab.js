@@ -350,7 +350,7 @@ const StatListEvaluationsEtab = memo((props) => {
                                                 <td>/</td>
                                                 <td>/</td>
                                                 <td>
-                                                    <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" to={"/Admin/Stat/" + classe + "/" + item.intitule_evaluation}>
+                                                    <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" to={"/Admin/Stat/etablissement/" + item.intitule_evaluation}>
 
                                                         Consulter
 
