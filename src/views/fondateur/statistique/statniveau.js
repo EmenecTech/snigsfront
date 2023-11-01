@@ -72,7 +72,7 @@ const NiveauxStat = memo((props) => {
       fetchAlltotal_eleves();
     }, []);
     const fetchAlltotal_eleves = () => {
-        http.get("/nbreleves_classe/" + etab + '/' + classe).then((res) => {
+        http.get("/nbreleves_niveau/" + etab + '/' + niveau).then((res) => {
           settotal_eleves(res.data);
         });
       };
@@ -81,7 +81,7 @@ const NiveauxStat = memo((props) => {
       fetchAlltotal_eleves_redoublants();
     }, []);
     const fetchAlltotal_eleves_redoublants = () => {
-        http.get("/nbrredoublant_classe/" + etab + '/' + classe).then((res) => {
+        http.get("/nbrredoublant_niveau/" + etab + '/' + niveau).then((res) => {
           settotal_eleves_redoublants(res.data);
         });
       };
@@ -91,7 +91,7 @@ const NiveauxStat = memo((props) => {
       }, []);
     
       const fetchAlltotal_garcons = () => {
-        http.get("/nbreleve_garcon_classe/" + etab + '/' + classe).then((res) => {
+        http.get("/nbreleve_garcon_niveau/" + etab + '/' + niveau).then((res) => {
           settotal_garcons(res.data);
         });
       };
@@ -102,7 +102,7 @@ const NiveauxStat = memo((props) => {
       }, []);
     
       const fetchAlltotal_redoublants = () => {
-        http.get("/nbreleve_redoublant_classe/" + etab + '/' + classe).then((res) => {
+        http.get("/nbreleve_redoublant_niveau/" + etab + '/' + niveau).then((res) => {
           settotal_redoublant(res.data);
         });
           
@@ -113,7 +113,7 @@ const NiveauxStat = memo((props) => {
       }, []);
     
       const fetchAlltotal_filles = () => {
-        http.get("/nbreleve_fille_classe/" + etab + "/" + classe).then((res) => {
+        http.get("/nbreleve_fille_niveau/" + etab + "/" + niveau).then((res) => {
           settotal_filles(res.data);
         });
           console.log(etab);
@@ -125,7 +125,7 @@ const NiveauxStat = memo((props) => {
       }, []);
     
       const fetchAlltotal_redoublantes = () => {
-        http.get("/nbreleve_redoublante_classe/" + etab + '/' + classe).then((res) => {
+        http.get("/nbreleve_redoublante_niveau/" + etab + '/' + niveau).then((res) => {
           settotal_redoublante(res.data);
         });
       };
@@ -369,7 +369,7 @@ const NiveauxStat = memo((props) => {
                         <Card.Header className="d-flex justify-content-between">
                                     
                             <div className="header-title">
-                                <h4 className="card-title">Classes</h4>
+                                <h4 className="card-title">niveaux</h4>
                             </div>
                          <Button variant="primary mt-2" onClick={printData}>
                                 <span className="btn-inner">
@@ -407,35 +407,35 @@ const NiveauxStat = memo((props) => {
 
                                             <tr >
                                                 <td>Nombre d'élèves</td>
-                                                <td>{total_eleves.Total_eleveclasse}</td>
-                                                <td>{total_eleves.pourcentage_eleveclasse}% des élèves de l'établissement</td>
+                                                <td>{total_eleves.Total_eleveniveau}</td>
+                                                <td>{total_eleves.pourcentage_eleveniveau}% des élèves de l'établissement</td>
 
                                             </tr>
                                           
                                             <tr>
                                                 <td>Nombre de garçons</td>
-                                                <td>{total_garcons.Total_garconclasse}</td>
-                                                <td>{total_garcons.pourcentage_garconclasse}% des élèves de la classe</td>
+                                                <td>{total_garcons.Total_garconniveau}</td>
+                                                <td>{total_garcons.pourcentage_garconniveau}% des élèves du niveau</td>
                                             </tr>
                                             <tr>
                                                 <td>Nombre de filles</td>
-                                                <td>{total_filles.Total_filleclasse}</td>
-                                                <td>{total_filles.pourcentage_filleclasse}% des élèves de la classe</td>
+                                                <td>{total_filles.Total_filleniveau}</td>
+                                                <td>{total_filles.pourcentage_filleniveau}% des élèves du niveau</td>
                                             </tr>
                                             <tr>
                                                 <td>Nombre total de redoublant</td>
                                                 <td>{total_eleves_redoublant.Total_eleveredoublant}</td>
-                                                <td>{total_eleves_redoublant.pourcentage_eleveredoublant}% des élèves de la classe</td>
+                                                <td>{total_eleves_redoublant.pourcentage_eleveredoublant}% des élèves du niveau</td>
                                             </tr>
                                             <tr>
                                                 <td>Nombre de garçon(s) redoublant(s)</td>
-                                                <td>{total_redoublant.Total_redoublantclasse}</td>
-                                                <td>{total_redoublant.pourcentage_redoublantclasse}% des élèves de la classe</td>
+                                                <td>{total_redoublant.Total_redoublantniveau}</td>
+                                                <td>{total_redoublant.pourcentage_redoublantniveau}% des élèves du niveau</td>
                                             </tr>
                                             <tr>
                                                 <td>Nombre de fille(s) redoublante(s)</td>
-                                                <td>{total_redoublante.Total_redoublanteclasse}</td>
-                                                <td>{total_redoublante.pourcentage_redoublanteclasse}% des élèves de la classe</td>
+                                                <td>{total_redoublante.Total_redoublanteniveau}</td>
+                                                <td>{total_redoublante.pourcentage_redoublanteniveau}% des élèves du niveau</td>
                                             </tr>
 
                                     </tbody>
