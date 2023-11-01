@@ -200,8 +200,10 @@ import ChoixStat from '../views/fondateur/statistique/choixstat';
 import ListClassesStat from '../views/fondateur/statistique/Listclassestat';
 import ChoixClassesStat from '../views/fondateur/statistique/choixclassestat';
 import ClassesStat from '../views/fondateur/statistique/statclasse';
+
 import ListNiveauxStat from '../views/fondateur/statistique/Listniveaustat';
 import ChoixNiveauxStat from '../views/fondateur/statistique/choixniveaustat';
+import NiveauxStat from '../views/fondateur/statistique/statniveau';
 import ChoixStatetab from '../views/fondateur/statistique/choixetabstat';
 import SchoolStat from '../views/fondateur/statistique/statetablissement';
 import StatListEvaluations from '../views/fondateur/statistique/evaluations';
@@ -950,6 +952,10 @@ export const DefaultRouter = [
            {
                 path: 'Admin/stat/:niveau',
                 element: <ChoixNiveauxStat />
+            },
+           {
+                path: 'Admin/stat/:niveau/elève',
+                element: <NiveauxStat />
             },
 
             {
