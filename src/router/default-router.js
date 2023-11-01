@@ -950,11 +950,11 @@ export const DefaultRouter = [
                 element: <ListNiveauxStat />
             },
            {
-                path: 'Admin/stat/:niveau',
+                path: 'Admin/stats/:niveau',
                 element: <ChoixNiveauxStat />
             },
            {
-                path: 'Admin/stat/:niveau/elève',
+                path: 'Admin/stats/:niveau/elève',
                 element: <NiveauxStat />
             },
 
