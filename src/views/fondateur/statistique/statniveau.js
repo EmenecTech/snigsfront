@@ -429,8 +429,8 @@ const NiveauxStat = memo((props) => {
                                             </tr>
                                             <tr>
                                                 <td>Nombre de garçon(s) redoublant(s)</td>
-                                                <td>{total_redoublant.Total_redoublantniveau}</td>
-                                                <td>{total_redoublant.pourcentage_redoublantniveau}% des élèves du niveau</td>
+                                                <td>{total_redoublant.Total_redoublantsniveau}</td>
+                                                <td>{total_redoublant.pourcentage_redoublantsniveau}% des élèves du niveau</td>
                                             </tr>
                                             <tr>
                                                 <td>Nombre de fille(s) redoublante(s)</td>
