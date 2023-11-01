@@ -1,6 +1,6 @@
 import React, { useState, useEffect, memo, Fragment } from "react";
 import { Row, Col, Dropdown, Modal, Button, Table, Form } from "react-bootstrap";
-import { createPath, useNavigate } from 'react-router-dom';
+import { createPath, useNavigate, useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import AuthUser from "../../../components/AuthUser.js";
 
@@ -52,12 +52,9 @@ SwiperCore.use([Navigation]);
 
 
 const StatListEvaluations = memo((props) => {
-    const [show, setShow] = useState(false);
+    
     const { user, http } = AuthUser();
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    const navigate = useNavigate();
-    const [inputs, setInputs] = useState({});
+    const {classe} = useParams();
     const etab = user.etablissement;
 
     const [evaluations_list, setevaluations] = useState([]);
@@ -353,7 +350,7 @@ const StatListEvaluations = memo((props) => {
                                                 <td>/</td>
                                                 <td>/</td>
                                                 <td>
-                                                    <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" to={"/Admin/Stat/evaluation/" + item.intitule_evaluation}>
+                                                    <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" to={"/Admin/Stat/" + classe + "/" + item.intitule_evaluation}>
 
                                                         Consulter
 
