@@ -207,6 +207,7 @@ import NiveauxStat from '../views/fondateur/statistique/statniveau';
 import ChoixStatetab from '../views/fondateur/statistique/choixetabstat';
 import SchoolStat from '../views/fondateur/statistique/statetablissement';
 import StatListEvaluations from '../views/fondateur/statistique/evaluations';
+import ListClassesEvalStat from '../views/fondateur/statistique/statclasseeval';
 
 
 import StatsEtablissement from '../views/super_admin/etablissements/stats_etablissement ';
@@ -971,6 +972,11 @@ export const DefaultRouter = [
             {
                 path: 'Admin/stat/:classe/evaluation',
                 element: <StatListEvaluations />
+            },
+
+            {
+                path: 'Admin/stat/:classe/:evaluation',
+                element: <ListClassesEvalStat />
             }
     
         ]
