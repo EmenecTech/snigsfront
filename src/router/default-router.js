@@ -953,7 +953,7 @@ export const DefaultRouter = [
             },
 
             {
-                path: 'Admin/stat/evaluation',
+                path: 'Admin/stat/:classe/evaluation',
                 element: <StatListEvaluations />
             }
     
