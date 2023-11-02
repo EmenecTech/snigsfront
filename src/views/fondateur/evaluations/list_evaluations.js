@@ -106,6 +106,7 @@ const ListEvaluations = memo((props) => {
 const submitMoyenPr = (evaluation) => {
     http.get("/gen_moyen/" + etab + "/" + evaluation).then((res) => {
         })
+    console.log(evaluation);
 }
 
 
@@ -454,7 +455,7 @@ const submitMoyenPr = (evaluation) => {
                                                 <td>{item.intitule_evaluation}</td>
                                                 <td>{item.type_evaluation_evaluation}</td>
                                                 <td>{item.reference_evaluation}</td>
-                                            <td><Button variant="primary mt-2" onClick={() => {submitMoyenPr(item.intitule_evaluation); }}>Générer les moyennes</Button></td>
+                                            <td><Button variant="primary mt-2" onClick={() => {submitMoyenPr(item.intitule_evaluation) }}>Générer les moyennes</Button></td>
                                              
                                          
                                             </tr>
