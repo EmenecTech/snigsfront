@@ -62,7 +62,7 @@ const ClassesStat = memo((props) => {
     });
 
     const { user, http } = AuthUser();
-    const {classe} = useParams();
+    const { classe } = useParams();
 
     const etab = user.etablissement;
 
@@ -81,66 +81,66 @@ const ClassesStat = memo((props) => {
 
     const [total_eleves, settotal_eleves] = useState([]);
     useEffect(() => {
-      fetchAlltotal_eleves();
+        fetchAlltotal_eleves();
     }, []);
     const fetchAlltotal_eleves = () => {
         http.get("/nbreleves_classe/" + etab + '/' + classe).then((res) => {
-          settotal_eleves(res.data);
+            settotal_eleves(res.data);
         });
-      };
+    };
     const [total_eleves_redoublant, settotal_eleves_redoublants] = useState([]);
     useEffect(() => {
-      fetchAlltotal_eleves_redoublants();
+        fetchAlltotal_eleves_redoublants();
     }, []);
     const fetchAlltotal_eleves_redoublants = () => {
         http.get("/nbrredoublant_classe/" + etab + '/' + classe).then((res) => {
-          settotal_eleves_redoublants(res.data);
+            settotal_eleves_redoublants(res.data);
         });
-      };
+    };
     const [total_garcons, settotal_garcons] = useState([]);
-      useEffect(() => {
+    useEffect(() => {
         fetchAlltotal_garcons();
-      }, []);
-    
-      const fetchAlltotal_garcons = () => {
+    }, []);
+
+    const fetchAlltotal_garcons = () => {
         http.get("/nbreleve_garcon_classe/" + etab + '/' + classe).then((res) => {
-          settotal_garcons(res.data);
+            settotal_garcons(res.data);
         });
-      };
-      
-      const [total_redoublant, settotal_redoublant] = useState([]);
-      useEffect(() => {
+    };
+
+    const [total_redoublant, settotal_redoublant] = useState([]);
+    useEffect(() => {
         fetchAlltotal_redoublants();
-      }, []);
-    
-      const fetchAlltotal_redoublants = () => {
+    }, []);
+
+    const fetchAlltotal_redoublants = () => {
         http.get("/nbreleve_redoublant_classe/" + etab + '/' + classe).then((res) => {
-          settotal_redoublant(res.data);
+            settotal_redoublant(res.data);
         });
-          
-      };
-        const [total_filles, settotal_filles] = useState([]);
-      useEffect(() => {
+
+    };
+    const [total_filles, settotal_filles] = useState([]);
+    useEffect(() => {
         fetchAlltotal_filles();
-      }, []);
-    
-      const fetchAlltotal_filles = () => {
+    }, []);
+
+    const fetchAlltotal_filles = () => {
         http.get("/nbreleve_fille_classe/" + etab + "/" + classe).then((res) => {
-          settotal_filles(res.data);
+            settotal_filles(res.data);
         });
-          console.log(etab);
-      };
-      
-      const [total_redoublante, settotal_redoublante] = useState([]);
-      useEffect(() => {
+        console.log(etab);
+    };
+
+    const [total_redoublante, settotal_redoublante] = useState([]);
+    useEffect(() => {
         fetchAlltotal_redoublantes();
-      }, []);
-    
-      const fetchAlltotal_redoublantes = () => {
+    }, []);
+
+    const fetchAlltotal_redoublantes = () => {
         http.get("/nbreleve_redoublante_classe/" + etab + '/' + classe).then((res) => {
-          settotal_redoublante(res.data);
+            settotal_redoublante(res.data);
         });
-      };
+    };
 
 
     useSelector(SettingSelector.theme_color);
@@ -377,11 +377,11 @@ const ClassesStat = memo((props) => {
             <Row>
                 <Col sm="12">
                     <Card>
-        
+
                         <Card.Header className="d-flex justify-content-between">
-                                    
-                           
-                         <Button variant="primary mt-2" onClick={printData}>
+
+
+                            <Button variant="primary mt-2" onClick={printData}>
                                 <span className="btn-inner">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -393,86 +393,86 @@ const ClassesStat = memo((props) => {
                         </Card.Header>
                         <Card.Body>
 
-                        <div ref={componentRef}
-                            style={{ width: "100%", height: window.innerHeight }}>
+                            <div ref={componentRef}
+                                style={{ width: "100%", height: window.innerHeight }}>
 
-                             <Col sm="12" className="d-flex align-items-center justify-content-center mt-1 mb-2">
-                                                            <Row>
-                                                                <Col sm="3">
-                                                                    <div className="d-flex justify-content-center align-items-center">
-                                                                        <Image
-                                                                            src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
-                                                                            style={{
-                                                                                width: "50px",
-                                                                                height: "50px",
-                                                                                borderRadius: "50%",
-                                                                                objectFit: "cover",
-                                                                                border: "2px solid black",
-                                                                                display: "block",
-                                                                                marginLeft: "auto",
-                                                                                marginRight: "auto"
-                                                                            }}
-                                                                        />
-                                                                    </div>
-                                                                </Col>
-                                                                <Col sm="6" className="mt-4">
-                                                                    {" "}
-                                                                  
-                                                                        <div>
-                                                                            <h5 className="text-center" style={{ fontSize: "14px" }}> {info_etab.nom_etablissement}</h5>
-                                                                        </div>
+                                <Col sm="12" className="d-flex align-items-center justify-content-center mt-1 mb-2">
+                                    <Row>
+                                        <Col sm="3">
+                                            <div className="d-flex justify-content-center align-items-center">
+                                                <Image
+                                                    src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
+                                                    style={{
+                                                        width: "50px",
+                                                        height: "50px",
+                                                        borderRadius: "50%",
+                                                        objectFit: "cover",
+                                                        border: "2px solid black",
+                                                        display: "block",
+                                                        marginLeft: "auto",
+                                                        marginRight: "auto"
+                                                    }}
+                                                />
+                                            </div>
+                                        </Col>
+                                        <Col sm="6" className="mt-4">
+                                            {" "}
 
-                                                                    <div className="col-sm-12 justify-content-center">
-                                                                        <h5 className="text-center">
+                                            <div>
+                                                <h5 className="text-center" style={{ fontSize: "14px" }}> {info_etab.nom_etablissement}</h5>
+                                            </div>
 
-                                                                        </h5>
-                                                                    </div>
-                                                                    {" "}
-                                                                </Col>
-                                                                <Col sm="3">
-                                                                    <div className="d-flex justify-content-center align-items-center">
-                                                                        <Image
-                                                                            src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
-                                                                            style={{
-                                                                                width: "50px",
-                                                                                height: "50px",
-                                                                                borderRadius: "50%",
-                                                                                objectFit: "cover",
-                                                                                border: "2px solid black",
-                                                                                display: "block",
-                                                                                marginLeft: "auto",
-                                                                                marginRight: "auto"
-                                                                            }}
-                                                                        />
-                                                                    </div>
-                                                                </Col>
+                                            <div className="col-sm-12 justify-content-center">
+                                                <h5 className="text-center">
+
+                                                </h5>
+                                            </div>
+                                            {" "}
+                                        </Col>
+                                        <Col sm="3">
+                                            <div className="d-flex justify-content-center align-items-center">
+                                                <Image
+                                                    src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
+                                                    style={{
+                                                        width: "50px",
+                                                        height: "50px",
+                                                        borderRadius: "50%",
+                                                        objectFit: "cover",
+                                                        border: "2px solid black",
+                                                        display: "block",
+                                                        marginLeft: "auto",
+                                                        marginRight: "auto"
+                                                    }}
+                                                />
+                                            </div>
+                                        </Col>
 
 
-                                                            </Row>
-                                                        </Col>
+                                    </Row>
+                                </Col>
 
-                              <div className="header-title mb-2">
-                                <h4 className="card-title mb-2">Classe : {classe}</h4>
-                              </div>
-                         
-                            <div className="table-responsive border-bottom my-3">
-                                <Table
-                                    responsive
-                                    striped
-                                    id="datatable"
-                                    className=""
-                                    data-toggle="data-table"
-                                >
-                                    <thead>
-                                        <tr>
+                                <div className="header-title mb-2">
+                                    <h4 className="card-title">Classe : {classe}</h4>
+                                </div>
 
-                                            <th>Intitulé</th>
-                                            <th>Résultat</th>
-                                            <th>Pourcentage</th>
+                                <div className="table-responsive border-bottom my-3">
+                                    <Table
+                                        responsive
+                                        striped
+                                        id="datatable"
+                                        className=""
+                                        data-toggle="data-table"
+                                    >
+                                        <thead>
+                                            <tr>
 
-                                        </tr>
-                                    </thead>
-                                    <tbody>
+                                                <th>Intitulé</th>
+                                                <th>Résultat</th>
+                                                <th>Pourcentage</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
 
                                             <tr >
                                                 <td>Nombre d'élèves</td>
@@ -480,7 +480,7 @@ const ClassesStat = memo((props) => {
                                                 <td>{total_eleves.pourcentage_eleveclasse}% des élèves de l'établissement</td>
 
                                             </tr>
-                                          
+
                                             <tr>
                                                 <td>Nombre de garçons</td>
                                                 <td>{total_garcons.Total_garconclasse}</td>
@@ -507,14 +507,14 @@ const ClassesStat = memo((props) => {
                                                 <td>{total_redoublante.pourcentage_redoublanteclasse}% des élèves de la classe</td>
                                             </tr>
 
-                                    </tbody>
-                                    <tfoot>
+                                        </tbody>
+                                        <tfoot>
 
-                                    </tfoot>
-                                </Table>
+                                        </tfoot>
+                                    </Table>
 
+                                </div>
                             </div>
-                        </div>              
                         </Card.Body>
                     </Card>
                 </Col>
