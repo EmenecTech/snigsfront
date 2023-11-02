@@ -448,74 +448,72 @@ const ClassesStat = memo((props) => {
                                                                 </Col>
 
 
-                                                          
-
-                                          <div className="header-title mb-2">
-                                            <h4 className="card-title">Classe : {classe}</h4>
-                                          </div>
-                                        <div className="">
-                                                <div className="table-responsive border-bottom my-3">
-                                                    <Table
-                                                        responsive
-                                                        striped
-                                                        id="datatable"
-                                                        className=""
-                                                        data-toggle="data-table"
-                                                    >
-                                                        <thead>
-                                                            <tr>
-                    
-                                                                <th>Intitulé</th>
-                                                                <th>Résultat</th>
-                                                                <th>Pourcentage</th>
-                    
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                    
-                                                                <tr >
-                                                                    <td>Nombre d'élèves</td>
-                                                                    <td>{total_eleves.Total_eleveclasse}</td>
-                                                                    <td>{total_eleves.pourcentage_eleveclasse}% des élèves de l'établissement</td>
-                    
-                                                                </tr>
-                                                              
-                                                                <tr>
-                                                                    <td>Nombre de garçons</td>
-                                                                    <td>{total_garcons.Total_garconclasse}</td>
-                                                                    <td>{total_garcons.pourcentage_garconclasse}% des élèves de la classe</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Nombre de filles</td>
-                                                                    <td>{total_filles.Total_filleclasse}</td>
-                                                                    <td>{total_filles.pourcentage_filleclasse}% des élèves de la classe</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Nombre total de redoublant</td>
-                                                                    <td>{total_eleves_redoublant.Total_eleveredoublant}</td>
-                                                                    <td>{total_eleves_redoublant.pourcentage_eleveredoublant}% des élèves de la classe</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Nombre de garçon(s) redoublant(s)</td>
-                                                                    <td>{total_redoublant.Total_redoublantclasse}</td>
-                                                                    <td>{total_redoublant.pourcentage_redoublantclasse}% des élèves de la classe</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Nombre de fille(s) redoublante(s)</td>
-                                                                    <td>{total_redoublante.Total_redoublanteclasse}</td>
-                                                                    <td>{total_redoublante.pourcentage_redoublanteclasse}% des élèves de la classe</td>
-                                                                </tr>
-                    
-                                                        </tbody>
-                                                        <tfoot>
-                    
-                                                        </tfoot>
-                                                    </Table>
-                    
-                                                </div>
-                            </div>
-                                                              </Row>
+                                                            </Row>
                                                         </Col>
+
+                              <div className="header-title mb-2">
+                                <h4 className="card-title mb-2">Classe : {classe}</h4>
+                              </div>
+                         
+                            <div className="table-responsive border-bottom my-3">
+                                <Table
+                                    responsive
+                                    striped
+                                    id="datatable"
+                                    className=""
+                                    data-toggle="data-table"
+                                >
+                                    <thead>
+                                        <tr>
+
+                                            <th>Intitulé</th>
+                                            <th>Résultat</th>
+                                            <th>Pourcentage</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                            <tr >
+                                                <td>Nombre d'élèves</td>
+                                                <td>{total_eleves.Total_eleveclasse}</td>
+                                                <td>{total_eleves.pourcentage_eleveclasse}% des élèves de l'établissement</td>
+
+                                            </tr>
+                                          
+                                            <tr>
+                                                <td>Nombre de garçons</td>
+                                                <td>{total_garcons.Total_garconclasse}</td>
+                                                <td>{total_garcons.pourcentage_garconclasse}% des élèves de la classe</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nombre de filles</td>
+                                                <td>{total_filles.Total_filleclasse}</td>
+                                                <td>{total_filles.pourcentage_filleclasse}% des élèves de la classe</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nombre total de redoublant</td>
+                                                <td>{total_eleves_redoublant.Total_eleveredoublant}</td>
+                                                <td>{total_eleves_redoublant.pourcentage_eleveredoublant}% des élèves de la classe</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nombre de garçon(s) redoublant(s)</td>
+                                                <td>{total_redoublant.Total_redoublantclasse}</td>
+                                                <td>{total_redoublant.pourcentage_redoublantclasse}% des élèves de la classe</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nombre de fille(s) redoublante(s)</td>
+                                                <td>{total_redoublante.Total_redoublanteclasse}</td>
+                                                <td>{total_redoublante.pourcentage_redoublanteclasse}% des élèves de la classe</td>
+                                            </tr>
+
+                                    </tbody>
+                                    <tfoot>
+
+                                    </tfoot>
+                                </Table>
+
+                            </div>
                         </div>              
                         </Card.Body>
                     </Card>
