@@ -68,6 +68,7 @@ const ListEtabEvalStat = memo((props) => {
             setfirsteleves(res.data);
         });
       };
+    console.log(firsteleves);
 
       const [lastteleves, setlastteleves] = useState([]);
     useEffect(() => {
