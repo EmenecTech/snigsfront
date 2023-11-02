@@ -66,6 +66,18 @@ const ClassesStat = memo((props) => {
 
     const etab = user.etablissement;
 
+    const [info_etab, setinfo_etab] = useState([]);
+
+    useEffect(() => {
+        fetchAllinfo_etab()
+    }, []);
+
+    const fetchAllinfo_etab = () => {
+        http.get('/get_name_logo/' + etab).then((res) => {
+            setinfo_etab(res.data);
+        });
+    }
+
 
     const [total_eleves, settotal_eleves] = useState([]);
     useEffect(() => {
