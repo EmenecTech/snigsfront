@@ -389,7 +389,7 @@ const ListEtabEvalStat = memo((props) => {
 
                                             <tr >
                                                 <td>Plus grande Moyenne de la classe</td>
-                                                <td>{firsteleves.evaluation_rg}</td>
+                                                <td>{firsteleves.nom} {firsteleves.prenom}({firsteleves.moyen})</td>
 
                                             </tr>
                                           
