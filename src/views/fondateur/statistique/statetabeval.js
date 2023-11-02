@@ -360,7 +360,7 @@ const ListEtabEvalStat = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Classes</h4>
+                                <h4 className="card-title">Statistiques-Evaluation</h4>
                             </div>
 
 
@@ -400,35 +400,35 @@ const ListEtabEvalStat = memo((props) => {
                                             <tr>
                                                 <td>Nombre d'éléve ayant une moyenne supéreure à 10</td>
                                                 <td>{moyensup.nbre_student}</td>
-                                                <td>{moyensup.pourcentage}</td>
+                                                <td>{moyensup.pourcentage}% des élèves de l'établissement</td>
                                             </tr>
                                             <tr>
                                                 <td>Nombre d'éléve ayant une moyenne inférieure à 10</td>
                                                 <td>{moyeninf.nbre_student}</td>
-                                                <td>{moyeninf.pourcentage}</td>
+                                                <td>{moyeninf.pourcentage}% des élèves de l'établissement</td>
                                             </tr>
                                             <tr>
                                                 <td>Nombre de garçon ayant une moyenne supéreure à 10</td>
                                                 <td>{moyenstudentsup.Nbreboysup}</td>
-                                                <td>{moyenstudentsup.pourcen_boy}</td>
+                                                <td>{moyenstudentsup.pourcen_boy}% des élèves de l'établissement</td>
 
                                             </tr>
                                             <tr>
                                                 <td>Nombre de fille ayant une moyenne supéreure à 10</td>
                                                 <td>{moyenstudentsup.Nbrefillesup}</td>
-                                                <td>{moyenstudentsup.pourcen_girl}</td>
+                                                <td>{moyenstudentsup.pourcen_girl}% des élèves de l'établissement</td>
 
                                             </tr>
                                             <tr>
                                                 <td>Nombre de garçon ayant une moyenne inférieure à 10</td>
                                                 <td>{moyenstudentinf.Nbreboysup}</td>
-                                                <td>{moyenstudentinf.pourcen_boy}</td>
+                                                <td>{moyenstudentinf.pourcen_boy}% des élèves de l'établissement</td>
 
                                             </tr>
                                             <tr>
                                                 <td>Nombre de fille ayant une moyenne inférieure à 10</td>
                                                 <td>{moyenstudentinf.Nbrefillesup}</td>
-                                                <td>{moyenstudentinf.pourcen_girl}</td>
+                                                <td>{moyenstudentinf.pourcen_girl}% des élèves de l'établissement</td>
 
                                             </tr>
 
