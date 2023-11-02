@@ -448,13 +448,12 @@ const ClassesStat = memo((props) => {
                                                                 </Col>
 
 
-                                                            </Row>
-                                                        </Col>
+                                                          
 
-                              <div className="header-title mb-2">
-                                <h4 className="card-title">Classe : {classe}</h4>
-                              </div>
-                            <div className="container">
+                                          <div className="header-title mb-2">
+                                            <h4 className="card-title">Classe : {classe}</h4>
+                                          </div>
+                                        <div className="">
                                                 <div className="table-responsive border-bottom my-3">
                                                     <Table
                                                         responsive
@@ -515,6 +514,8 @@ const ClassesStat = memo((props) => {
                     
                                                 </div>
                             </div>
+                                                              </Row>
+                                                        </Col>
                         </div>              
                         </Card.Body>
                     </Card>
