@@ -368,9 +368,7 @@ const ClassesStat = memo((props) => {
         
                         <Card.Header className="d-flex justify-content-between">
                                     
-                            <div className="header-title">
-                                <h4 className="card-title">Classes</h4>
-                            </div>
+                           
                          <Button variant="primary mt-2" onClick={printData}>
                                 <span className="btn-inner">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -385,6 +383,10 @@ const ClassesStat = memo((props) => {
 
                         <div ref={componentRef}
                             style={{ width: "100%", height: window.innerHeight }}>
+
+                              <div className="header-title mb-2">
+                                <h4 className="card-title">Classe : {classe}</h4>
+                              </div>
                          
                             <div className="table-responsive border-bottom my-3">
                                 <Table
