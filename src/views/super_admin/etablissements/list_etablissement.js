@@ -336,6 +336,7 @@ const ListEtablissements = memo((props) => {
                                         <tr>
                                             <th>Nom</th>
                                             <th>cygle</th>
+                                            <th>Niveau d'enseignement</th>
                                             <th>Email</th>
                                             <th>Téléphone</th>
                                             <th>Pays</th>
@@ -353,6 +354,7 @@ const ListEtablissements = memo((props) => {
                                             <tr key={item.id}>
                                                 <td> <Link to={"/Stats/Etablissments/" +  item.nom_etablissement + "/" +  item.id}  style={{ textDecoration: 'none' }}> {item.nom_etablissement} </Link></td>
                                                 <td>{item.cygle}</td>
+                                                <td>{item.type_enseignement}</td>
                                                 <td>{item.email_etablissement}</td>
                                                 <td>{item.telephone}</td>
                                                 <td>{item.pays_etablissement}</td>
