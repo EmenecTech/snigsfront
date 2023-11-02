@@ -369,7 +369,7 @@ const SchoolStat = memo((props) => {
                         <Card.Header className="d-flex justify-content-between">
                                     
                             <div className="header-title">
-                                <h4 className="card-title">Classes</h4>
+                                <h4 className="card-title">Statisque-Elève</h4>
                             </div>
                          <Button variant="primary mt-2" onClick={printData}>
                                 <span className="btn-inner">
@@ -415,27 +415,27 @@ const SchoolStat = memo((props) => {
                                             <tr>
                                                 <td>Nombre de garçons</td>
                                                 <td>{total_garcons.Total_garconetab}</td>
-                                                <td>{total_garcons.pourcentage_garconetab}% des élèves de la classe</td>
+                                                <td>{total_garcons.pourcentage_garconetab}% des élèves de l'établissement</td>
                                             </tr>
                                             <tr>
                                                 <td>Nombre de filles</td>
                                                 <td>{total_filles.Total_filleetab}</td>
-                                                <td>{total_filles.pourcentage_filleetab}% des élèves de la classe</td>
+                                                <td>{total_filles.pourcentage_filleetab}% des élèves de l'établissement</td>
                                             </tr>
                                             <tr>
                                                 <td>Nombre total de redoublant</td>
                                                 <td>{total_eleves_redoublant.Total_eleveredoublant}</td>
-                                                <td>{total_eleves_redoublant.pourcentage_eleveredoublant}% des élèves de la classe</td>
+                                                <td>{total_eleves_redoublant.pourcentage_eleveredoublant}% des élèves de l'établissement</td>
                                             </tr>
                                             <tr>
                                                 <td>Nombre de garçon(s) redoublant(s)</td>
                                                 <td>{total_redoublant.Total_redoublantetab}</td>
-                                                <td>{total_redoublant.pourcentage_redoublantetab}% des élèves de la classe</td>
+                                                <td>{total_redoublant.pourcentage_redoublantetab}% des élèves de l'établissement</td>
                                             </tr>
                                             <tr>
                                                 <td>Nombre de fille(s) redoublante(s)</td>
                                                 <td>{total_redoublante.Total_redoublanteetab}</td>
-                                                <td>{total_redoublante.pourcentage_redoublanteetab}% des élèves de la classe</td>
+                                                <td>{total_redoublante.pourcentage_redoublanteetab}% des élèves de l'établissement</td>
                                             </tr>
 
                                     </tbody>
