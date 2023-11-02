@@ -200,6 +200,7 @@ const EnseignantListGroupes = () => {
                                                             <option value="Non acquis">Non acquis</option>
                                                             <option value="En cours d'acquisition">En cours d'acquisition</option>
                                                             <option value="Acquis">Acquis</option>
+                                             <option value="Expert">Expert</option>
                                                         </select>
                                                     </Form.Group>
 
@@ -267,6 +268,7 @@ const EnseignantListGroupes = () => {
                                                             <option value="Non acquis">Non acquis</option>
                                                             <option value="En cours d'acquisition">En cours d'acquisition</option>
                                                             <option value="Acquis">Acquis</option>
+                                                                <option value="Expert">Expert</option>
                                                         </select>
                                                     </Form.Group>
 
@@ -304,6 +306,7 @@ const EnseignantListGroupes = () => {
                                                             <option value="Non acquis">Non acquis</option>
                                                             <option value="En cours d'acquisition">En cours d'acquisition</option>
                                                             <option value="Acquis">Acquis</option>
+                                                                <option value="Expert">Expert</option>
                                                         </select>
                                                     </Form.Group>
 
@@ -361,6 +364,7 @@ const EnseignantListGroupes = () => {
                                                             <option value="Non acquis">Non acquis</option>
                                                             <option value="En cours d'acquisition">En cours d'acquisition</option>
                                                             <option value="Acquis">Acquis</option>
+                                                                <option value="Expert">Expert</option>
                                                         </select>
                                                     </Form.Group>
                                                     <Button variant="primary" onClick={submitFormprim}>
