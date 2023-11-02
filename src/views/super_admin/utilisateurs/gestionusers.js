@@ -184,6 +184,7 @@ const UtilisateursListe = () => {
                         <th>Nom</th>
                         <th>Prénom</th>
                         <th>Rôle</th>
+                        <th>Etablissement</th>
                         <th>Email</th>
                         <th>Téléphone</th>
                         <th min-width="100px">Action</th>
@@ -202,6 +203,7 @@ const UtilisateursListe = () => {
                           <td>{item.nom}</td>
                           <td>{item.prenom}</td>
                           <td>{item.role}</td>
+                          <td>{item.nom_etablissement}</td>
                           <td>{item.email}</td>
                           <td>{item.telephone}</td>
                           <td>
