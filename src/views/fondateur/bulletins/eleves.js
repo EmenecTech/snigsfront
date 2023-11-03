@@ -350,7 +350,7 @@ const AdminEvaluationListClassesEleves = memo((props) => {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    {eleves_classe.map((item) => (
+                                                    {eleves_classe.sort((a, b) => a.nom.localeCompare(b.nom)).map((item) => (
                                                         <tr key={item.id}>
                                                           
                                                             <td>{item.nom}</td>
