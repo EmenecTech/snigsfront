@@ -220,7 +220,7 @@ const PrimClasse = () => {
 
     const deleteGroupe_classe = (id) => {
           if(window.confirm("Voulez-vous supprimer cet élément?") == true){
-        http.put('/delete_groupe_in_classe/' + id).then(res => {
+        http.delete('/delete_groupe_in_classe/' + id).then(res => {
             window.location.reload(false);
         })
              alert('Supprimé!'); 
