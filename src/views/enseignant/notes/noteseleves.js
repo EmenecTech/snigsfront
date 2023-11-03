@@ -194,7 +194,7 @@ const EnseignantAddNote = () => {
                                         </tr>
                                 </thead>
                                 <tbody>
-                                    {notes.map((item, index) => (
+                                    {notes.sort((a, b) => a.nom.localeCompare(b.nom)).map((item, index) =>  (
                                         <tr key={item.id}>
                                             <td>{++index}</td>
                                             <td>{item.nom}</td>
