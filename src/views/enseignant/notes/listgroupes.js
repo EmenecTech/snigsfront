@@ -402,7 +402,7 @@ const EnseignantListGroupes = () => {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {noteseleves.map((item, index) => (
+                                            {noteseleves.sort((a, b) => a.nom.localeCompare(b.nom)).map((item, index) => (
                                                 <tr key={item.id}>
                                                     <td>{++index}</td>
                                                     <td>{item.nom}</td>
@@ -431,7 +431,7 @@ const EnseignantListGroupes = () => {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {noteseleves.map((item, index) => (
+                                            {noteseleves.sort((a, b) => a.nom.localeCompare(b.nom)).map((item, index) => (
                                                 <tr key={item.id}>
                                                     <td>{++index}</td>
                                                     <td>{item.nom}</td>
@@ -463,7 +463,7 @@ const EnseignantListGroupes = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {noteseleves.map((item, index) => (
+                                        {noteseleves.sort((a, b) => a.nom.localeCompare(b.nom)).map((item, index) => (
                                             <tr key={item.id}>
                                                 <td>{++index}</td>
                                                 <td>{item.nom}</td>
