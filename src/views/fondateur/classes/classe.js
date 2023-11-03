@@ -297,7 +297,7 @@ const UniClasse = () => {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    {eleves_classe.map((item) => (
+                                                    {eleves_classe.sort((a, b) => a.nom.localeCompare(b.nom)).map((item) =>  (
                                                         <tr key={item.id}>
                                                             <td>{item.matricule}</td>
                                                             <td>{item.nom}</td>
@@ -709,7 +709,7 @@ const UniClasse = () => {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    {eleves_classe.map((item) => (
+                                                    {eleves_classe.sort((a, b) => a.nom.localeCompare(b.nom)).map((item) =>  (
                                                         <tr key={item.id}>
                                                             <td>{item.nom_parent}</td>
                                                             <td>{item.prenom_parent}</td>
