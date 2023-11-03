@@ -331,7 +331,7 @@ return (
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    {eleves_classe.map((user) => (
+                                    {eleves_classe.sort((a, b) => a.nom.localeCompare(b.nom)).map((user) =>  (
                                             <tr key={user.id}>
                                                 <td>{user.nom} {user.prenom}</td>
                                                 <td>
