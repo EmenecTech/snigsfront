@@ -379,7 +379,7 @@ const NiveauxStat = memo((props) => {
                         <Card.Header className="d-flex justify-content-between">
                                     
                             <div className="header-title">
-                                <h4 className="card-title">niveaux</h4>
+                                <h4 className="card-title">Niveaux</h4>
                             </div>
                          <Button variant="primary mt-2" onClick={printData}>
                                 Imprimer
@@ -510,6 +510,7 @@ const NiveauxStat = memo((props) => {
                                 </Table>
 
                             </div>
+                         </div>
                         </div>              
                         </Card.Body>
                     </Card>
