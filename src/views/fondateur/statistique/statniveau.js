@@ -65,7 +65,17 @@ const NiveauxStat = memo((props) => {
     const {niveau} = useParams();
 
     const etab = user.etablissement;
+    
+    const [info_etab, setinfo_etab] = useState([]);
+    useEffect(() => {
+        fetchAllinfo_etab()
+    }, []);
 
+    const fetchAllinfo_etab = () => {
+        http.get('/get_name_logo/' + etab).then((res) => {
+            setinfo_etab(res.data);
+        });
+    }
 
     const [total_eleves, settotal_eleves] = useState([]);
     useEffect(() => {
@@ -385,7 +395,67 @@ const NiveauxStat = memo((props) => {
 
                         <div ref={componentRef}
                             style={{ width: "100%", height: window.innerHeight }}>
-                         
+                         <div ref={componentRef}
+                                style={{ width: "100%", height: window.innerHeight }}>
+
+                                <Col sm="12" className="d-flex align-items-center justify-content-center mt-1 mb-2">
+                                    <Row>
+                                        <Col sm="3">
+                                            <div className="d-flex justify-content-center align-items-center">
+                                                <Image
+                                                    src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
+                                                    style={{
+                                                        width: "50px",
+                                                        height: "50px",
+                                                        borderRadius: "50%",
+                                                        objectFit: "cover",
+                                                        border: "2px solid black",
+                                                        display: "block",
+                                                        marginLeft: "auto",
+                                                        marginRight: "auto"
+                                                    }}
+                                                />
+                                            </div>
+                                        </Col>
+                                        <Col sm="6" className="mt-4">
+                                            {" "}
+
+                                            <div>
+                                                <h5 className="text-center" style={{ fontSize: "14px" }}> {info_etab.nom_etablissement}</h5>
+                                            </div>
+
+                                            <div className="col-sm-12 justify-content-center">
+                                                <h5 className="text-center">
+
+                                                </h5>
+                                            </div>
+                                            {" "}
+                                        </Col>
+                                        <Col sm="3">
+                                            <div className="d-flex justify-content-center align-items-center">
+                                                <Image
+                                                    src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
+                                                    style={{
+                                                        width: "50px",
+                                                        height: "50px",
+                                                        borderRadius: "50%",
+                                                        objectFit: "cover",
+                                                        border: "2px solid black",
+                                                        display: "block",
+                                                        marginLeft: "auto",
+                                                        marginRight: "auto"
+                                                    }}
+                                                />
+                                            </div>
+                                        </Col>
+
+
+                                    </Row>
+                                </Col>
+
+                                <div className="header-title mb-2">
+                                    <h4 className="card-title">Classe : {classe}</h4>
+                                </div>
                             <div className="table-responsive border-bottom my-3">
                                 <Table
                                     responsive
