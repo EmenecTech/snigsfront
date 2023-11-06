@@ -448,9 +448,6 @@ const SchoolStat = memo((props) => {
                                     </Row>
                                 </Col>
 
-                                <div className="header-title mb-2">
-                                    <h4 className="card-title">Etablissement : {etab}</h4>
-                                </div>
 
                         <div ref={componentRef}
                             style={{ width: "100%", height: window.innerHeight }}>
