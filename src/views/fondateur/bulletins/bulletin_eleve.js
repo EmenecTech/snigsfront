@@ -3298,7 +3298,7 @@ const BulletinByEleve = memo((props) => {
                                                                                     </tr>
                                                                                 ))}
                                                                             </tbody>)}
-                                                                        {allnoteprim_19.existgrp > 0 && (
+                                                                        {allnoteprim_18.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
                                                                                     <th>{allnoteprim_18.groupe}</th>
