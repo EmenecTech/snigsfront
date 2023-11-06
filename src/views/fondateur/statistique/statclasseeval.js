@@ -438,6 +438,11 @@ const ListClassesEvalStat = memo((props) => {
 
                                     </Row>
                                 </Col>
+                                    <div className="header-title mb-2">
+                                    <h3 className="card-title">Classe : {classe}</h3>
+                                    <h3 className="card-title">Evaluation : {evaluation}</h3>
+                                                    
+                                </div>
                             <div className="table-responsive border-bottom my-3">
                                 <Table
                                     responsive
@@ -509,7 +514,8 @@ const ListClassesEvalStat = memo((props) => {
 
                                     </tfoot>
                                 </Table>
-
+                            </div>
+                           </div>
                             </div>
                         </Card.Body>
                     </Card>
