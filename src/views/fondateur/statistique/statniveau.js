@@ -1,5 +1,5 @@
 import React, { useState, useEffect, memo, Fragment, useRef } from "react";
-import { Row, Col, Dropdown, Modal, Button, Table, Form } from "react-bootstrap";
+import { Row, Col, Dropdown, Modal, Button, Table, Form, Image } from "react-bootstrap";
 import { createPath, useNavigate, useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import AuthUser from "../../../components/AuthUser.js";
@@ -449,7 +449,7 @@ const NiveauxStat = memo((props) => {
                                 </Col>
 
                                 <div className="header-title mb-2">
-                                    <h4 className="card-title">Classe : {classe}</h4>
+                                    <h4 className="card-title">Niveau : {niveau}</h4>
                                 </div>
                             <div className="table-responsive border-bottom my-3">
                                 <Table
