@@ -1,5 +1,5 @@
 import React, { useState, useEffect, memo, Fragment } from "react";
-import { Row, Col, Dropdown, Modal, Button, Table, Form } from "react-bootstrap";
+import { Row, Col, Dropdown, Modal, Button, Table, Form, Image } from "react-bootstrap";
 import { createPath, useNavigate, useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import AuthUser from "../../../components/AuthUser.js";
@@ -58,7 +58,17 @@ const ListClassesEvalStat = memo((props) => {
 
     const etab = user.etablissement;
 
+    const [info_etab, setinfo_etab] = useState([]);
 
+    useEffect(() => {
+        fetchAllinfo_etab()
+    }, []);
+
+    const fetchAllinfo_etab = () => {
+        http.get('/get_name_logo/' + etab).then((res) => {
+            setinfo_etab(res.data);
+        });
+    }
     const [firsteleves, setfirsteleves] = useState([]);
     useEffect(() => {
       fetchfirststudent();
@@ -358,15 +368,76 @@ const ListClassesEvalStat = memo((props) => {
                 <Col sm="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
+                                    
                             <div className="header-title">
-                                <h4 className="card-title">Classes</h4>
+                                <h4 className="card-title">Statistiques-Evaluations</h4>
                             </div>
+                         <Button variant="primary mt-2" onClick={printData}>
+                                Imprimer
+                            </Button>
 
-
-                           
                         </Card.Header>
                         <Card.Body>
 
+                        <div ref={componentRef}
+                            style={{ width: "100%", height: window.innerHeight }}>
+                         <div ref={componentRef}
+                                style={{ width: "100%", height: window.innerHeight }}>
+
+                                <Col sm="12" className="d-flex align-items-center justify-content-center mt-1 mb-2">
+                                    <Row>
+                                        <Col sm="3">
+                                            <div className="d-flex justify-content-center align-items-center">
+                                                <Image
+                                                    src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
+                                                    style={{
+                                                        width: "50px",
+                                                        height: "50px",
+                                                        borderRadius: "50%",
+                                                        objectFit: "cover",
+                                                        border: "2px solid black",
+                                                        display: "block",
+                                                        marginLeft: "auto",
+                                                        marginRight: "auto"
+                                                    }}
+                                                />
+                                            </div>
+                                        </Col>
+                                        <Col sm="6" className="mt-4">
+                                            {" "}
+
+                                            <div>
+                                                <h5 className="text-center" style={{ fontSize: "14px" }}> {info_etab.nom_etablissement}</h5>
+                                            </div>
+
+                                            <div className="col-sm-12 justify-content-center">
+                                                <h5 className="text-center">
+
+                                                </h5>
+                                            </div>
+                                            {" "}
+                                        </Col>
+                                        <Col sm="3">
+                                            <div className="d-flex justify-content-center align-items-center">
+                                                <Image
+                                                    src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
+                                                    style={{
+                                                        width: "50px",
+                                                        height: "50px",
+                                                        borderRadius: "50%",
+                                                        objectFit: "cover",
+                                                        border: "2px solid black",
+                                                        display: "block",
+                                                        marginLeft: "auto",
+                                                        marginRight: "auto"
+                                                    }}
+                                                />
+                                            </div>
+                                        </Col>
+
+
+                                    </Row>
+                                </Col>
                             <div className="table-responsive border-bottom my-3">
                                 <Table
                                     responsive
@@ -389,12 +460,14 @@ const ListClassesEvalStat = memo((props) => {
                                             <tr >
                                                 <td>Plus grande Moyenne de la classe</td>
                                                 <td>{firsteleves.nom} {firsteleves.prenom}({firsteleves.moyen})</td>
+                                                <td></td>
 
                                             </tr>
                                           
                                             <tr>
                                                 <td>Plus petite Moyenne de la classe</td>
                                                 <td>{lastteleves.nom} {lastteleves.prenom}({lastteleves.moyen})</td>
+                                                <td></td>
                                             </tr>
                                             <tr>
                                                 <td>Nombre d'éléve ayant une moyenne supéreure à 10</td>
