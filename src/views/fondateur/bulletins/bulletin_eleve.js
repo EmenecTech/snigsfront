@@ -111,6 +111,18 @@ const BulletinByEleve = memo((props) => {
         });
     }
 
+    const [rang_eleve, setrang_eleve] = useState([]);
+
+    useEffect(() => {
+        fetchrang_eleve()
+    }, []);
+
+    const fetchrang_eleve = () => {
+        http.get('/get_moyenrang/' + etab + '/' + classe + '/' + evaluation + '/' + userid).then((res) => {
+            setrang_eleve(res.data);
+        });
+    }
+
     const [image2, setImage2] = useState("");
     const imageRef2 = useRef(null);
 
@@ -4185,13 +4197,13 @@ const BulletinByEleve = memo((props) => {
                                                                                 <th>DISCIPLINE</th>
                                                                                 <th>APPRECIATION DU TRAVAIL</th>
                                                                                 <th><div className="mt-2">
-                                                                                    <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {moyenneleve} </p>
+                                                                                    <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {rang_eleve.moyen} </p>
                                                                                 </div>
                                                                                     <div className="mt-2">
                                                                                         <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE GENERALE DE LA CLASSE:</p>
                                                                                     </div>
                                                                                     <div className="mt-2">
-                                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:</p>
+                                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:{rang_eleve.rang}</p>
                                                                                     </div>
                                                                                 </th>
                                                                             </tr>
