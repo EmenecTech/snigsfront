@@ -1,5 +1,5 @@
 import React, { useState, useEffect, memo, Fragment, useRef } from "react";
-import { Row, Col, Dropdown, Modal, Button, Table, Form } from "react-bootstrap";
+import { Row, Col, Dropdown, Modal, Button, Table, Form, Image } from "react-bootstrap";
 import { createPath, useNavigate, useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import AuthUser from "../../../components/AuthUser.js";
@@ -366,22 +366,81 @@ const SchoolStat = memo((props) => {
                 <Col sm="12">
                     <Card>
         
-                        <Card.Header className="d-flex justify-content-between">
+                       <Card.Header className="d-flex justify-content-between">
                                     
                             <div className="header-title">
-                                <h4 className="card-title">Statisque-Elève</h4>
+                                <h4 className="card-title">Statistiques-Elèves</h4>
                             </div>
                          <Button variant="primary mt-2" onClick={printData}>
-                                <span className="btn-inner">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                                    </svg>
-                                </span>
                                 Imprimer
                             </Button>
 
                         </Card.Header>
                         <Card.Body>
+
+                        <div ref={componentRef}
+                            style={{ width: "100%", height: window.innerHeight }}>
+                         <div ref={componentRef}
+                                style={{ width: "100%", height: window.innerHeight }}>
+
+                                <Col sm="12" className="d-flex align-items-center justify-content-center mt-1 mb-2">
+                                    <Row>
+                                        <Col sm="3">
+                                            <div className="d-flex justify-content-center align-items-center">
+                                                <Image
+                                                    src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
+                                                    style={{
+                                                        width: "50px",
+                                                        height: "50px",
+                                                        borderRadius: "50%",
+                                                        objectFit: "cover",
+                                                        border: "2px solid black",
+                                                        display: "block",
+                                                        marginLeft: "auto",
+                                                        marginRight: "auto"
+                                                    }}
+                                                />
+                                            </div>
+                                        </Col>
+                                        <Col sm="6" className="mt-4">
+                                            {" "}
+
+                                            <div>
+                                                <h5 className="text-center" style={{ fontSize: "14px" }}> {info_etab.nom_etablissement}</h5>
+                                            </div>
+
+                                            <div className="col-sm-12 justify-content-center">
+                                                <h5 className="text-center">
+
+                                                </h5>
+                                            </div>
+                                            {" "}
+                                        </Col>
+                                        <Col sm="3">
+                                            <div className="d-flex justify-content-center align-items-center">
+                                                <Image
+                                                    src={"https://snigsbackend.com/logo_etab/" + etab + ".png"}
+                                                    style={{
+                                                        width: "50px",
+                                                        height: "50px",
+                                                        borderRadius: "50%",
+                                                        objectFit: "cover",
+                                                        border: "2px solid black",
+                                                        display: "block",
+                                                        marginLeft: "auto",
+                                                        marginRight: "auto"
+                                                    }}
+                                                />
+                                            </div>
+                                        </Col>
+
+
+                                    </Row>
+                                </Col>
+
+                                <div className="header-title mb-2">
+                                    <h4 className="card-title">Etablissement : {etab}</h4>
+                                </div>
 
                         <div ref={componentRef}
                             style={{ width: "100%", height: window.innerHeight }}>
@@ -443,7 +502,8 @@ const SchoolStat = memo((props) => {
 
                                     </tfoot>
                                 </Table>
-
+                            </div>
+                            </div>
                             </div>
                         </div>              
                         </Card.Body>
