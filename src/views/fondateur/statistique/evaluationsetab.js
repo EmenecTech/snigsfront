@@ -335,8 +335,7 @@ const StatListEvaluationsEtab = memo((props) => {
                                             <th>Intitulé</th>
                                             <th>Type d'évaluation</th>
                                             <th>Type de période</th>
-                                            <th>Date de début</th>
-                                            <th>Date de fin</th>
+                                           
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -347,8 +346,7 @@ const StatListEvaluationsEtab = memo((props) => {
 
                                                 <td>{item.type_evaluation_evaluation}</td>
                                                 <td>{item.reference_evaluation}</td>
-                                                <td>/</td>
-                                                <td>/</td>
+                                               
                                                 <td>
                                                     <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" to={"/Admin/Stat/etablissement/" + item.intitule_evaluation}>
 
