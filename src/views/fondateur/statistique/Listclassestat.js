@@ -363,6 +363,13 @@ const ListClassesStat = memo((props) => {
             <Row>
                 <Col sm="12">
                     <Card>
+                          <Card.Header className="d-flex justify-content-between">
+                            <div className="header-title">
+                                <h4 className="card-title"> {user.langue === "en" ? (<div>Levels </div>):(<div>Classes</div>)}</h4>
+                            </div>
+
+
+                        </Card.Header>
                         <Card.Body>
 
                             <div className="table-responsive border-bottom my-3">
