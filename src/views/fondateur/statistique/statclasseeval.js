@@ -44,6 +44,7 @@ import { useSelector } from "react-redux";
 // Import selectors & action from setting store
 import * as SettingSelector from "../../../store/setting/selectors";
 import Card from "../../../components/Card.js";
+import { useReactToPrint } from "react-to-print";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -52,6 +53,14 @@ SwiperCore.use([Navigation]);
 
 
 const ListClassesEvalStat = memo((props) => {
+
+    const componentRef = useRef();
+    const printData = useReactToPrint({
+        content: () => componentRef.current,
+        documentTitle: "employee data",
+        onafterprint: () => alert("print success"),
+    });
+
 
     const { user, http } = AuthUser();
     const {classe, evaluation} = useParams();
