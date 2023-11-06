@@ -963,7 +963,84 @@ const BulletinByEleve = memo((props) => {
     };
 
     ////////////////////////////////////////////
+   
+    const [allnoteprim_31, setAllNoteprim_31] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_31();
+    }, []);
 
+    const fetchAllNoteprim_31 = () => {
+        http.get('/all/prim/notes_31/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_31(res.data);
+        })
+    };
+
+    ////////////////////////////////////////////
+ 
+    const [allnoteprim_32, setAllNoteprim_32] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_32();
+    }, []);
+
+    const fetchAllNoteprim_32 = () => {
+        http.get('/all/prim/notes_32/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_32(res.data);
+        })
+    };
+
+    ////////////////////////////////////////////
+
+    const [allnoteprim_33, setAllNoteprim_33] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_33();
+    }, []);
+
+    const fetchAllNoteprim_33 = () => {
+        http.get('/all/prim/notes_33/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_33(res.data);
+        })
+    };
+
+    ////////////////////////////////////////////
+
+    const [allnoteprim_34, setAllNoteprim_34] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_34();
+    }, []);
+
+    const fetchAllNoteprim_34 = () => {
+        http.get('/all/prim/notes_34/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_34(res.data);
+        })
+    };
+
+    ////////////////////////////////////////////
+    
+    const [allnoteprim_35, setAllNoteprim_35] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_35();
+    }, []);
+
+    const fetchAllNoteprim_35 = () => {
+        http.get('/all/prim/notes_35/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_35(res.data);
+        })
+    };
+
+    ////////////////////////////////////////////
+
+    const [allnoteprim_36, setAllNoteprim_36] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_36();
+    }, []);
+
+    const fetchAllNoteprim_36 = () => {
+        http.get('/all/prim/notes_36/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_36(res.data);
+        })
+    };
+
+    ////////////////////////////////////////////
     const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
         fetchAllNotes();
@@ -3531,6 +3608,120 @@ const BulletinByEleve = memo((props) => {
                                                                                 <tr>
                                                                                     <th>{allnoteprim_30.groupe}</th>
                                                                                     <th>{allnoteprim_30.sumnote}</th>
+                                                                                    <th></th>
+                                                                                </tr>
+                                                                            </thead>)}
+
+                                                                            {allnoteprim_31.existgrp > 0 && (
+                                                                            <tbody>
+                                                                                {allnoteprim_31.listnotes && allnoteprim_31.listnotes.map((item, grp_31) => (
+                                                                                    <tr key={grp_31}>
+                                                                                        <td >{item.competence_visee_note}</td>
+                                                                                        <td >{item.valeur_note}</td>
+                                                                                        <td >{item.appreciation_note}</td>
+                                                                                    </tr>
+                                                                                ))}
+                                                                            </tbody>)}
+                                                                        {allnoteprim_31.existgrp > 0 && (
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>{allnoteprim_31.groupe}</th>
+                                                                                    <th>{allnoteprim_31.sumnote}</th>
+                                                                                    <th></th>
+                                                                                </tr>
+                                                                            </thead>)}
+
+                                                                            {allnoteprim_32.existgrp > 0 && (
+                                                                            <tbody>
+                                                                                {allnoteprim_32.listnotes && allnoteprim_32.listnotes.map((item, grp_32) => (
+                                                                                    <tr key={grp_32}>
+                                                                                        <td >{item.competence_visee_note}</td>
+                                                                                        <td >{item.valeur_note}</td>
+                                                                                        <td >{item.appreciation_note}</td>
+                                                                                    </tr>
+                                                                                ))}
+                                                                            </tbody>)}
+                                                                        {allnoteprim_32.existgrp > 0 && (
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>{allnoteprim_32.groupe}</th>
+                                                                                    <th>{allnoteprim_32.sumnote}</th>
+                                                                                    <th></th>
+                                                                                </tr>
+                                                                            </thead>)}
+
+                                                                            {allnoteprim_33.existgrp > 0 && (
+                                                                            <tbody>
+                                                                                {allnoteprim_33.listnotes && allnoteprim_30.listnotes.map((item, grp_33) => (
+                                                                                    <tr key={grp_33}>
+                                                                                        <td >{item.competence_visee_note}</td>
+                                                                                        <td >{item.valeur_note}</td>
+                                                                                        <td >{item.appreciation_note}</td>
+                                                                                    </tr>
+                                                                                ))}
+                                                                            </tbody>)}
+                                                                        {allnoteprim_33.existgrp > 0 && (
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>{allnoteprim_33.groupe}</th>
+                                                                                    <th>{allnoteprim_33.sumnote}</th>
+                                                                                    <th></th>
+                                                                                </tr>
+                                                                            </thead>)}
+
+                                                                            {allnoteprim_34.existgrp > 0 && (
+                                                                            <tbody>
+                                                                                {allnoteprim_34.listnotes && allnoteprim_34.listnotes.map((item, grp_34) => (
+                                                                                    <tr key={grp_34}>
+                                                                                        <td >{item.competence_visee_note}</td>
+                                                                                        <td >{item.valeur_note}</td>
+                                                                                        <td >{item.appreciation_note}</td>
+                                                                                    </tr>
+                                                                                ))}
+                                                                            </tbody>)}
+                                                                        {allnoteprim_34.existgrp > 0 && (
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>{allnoteprim_34.groupe}</th>
+                                                                                    <th>{allnoteprim_34.sumnote}</th>
+                                                                                    <th></th>
+                                                                                </tr>
+                                                                            </thead>)}
+
+                                                                         {allnoteprim_35.existgrp > 0 && (
+                                                                            <tbody>
+                                                                                {allnoteprim_35.listnotes && allnoteprim_35.listnotes.map((item, grp_35) => (
+                                                                                    <tr key={grp_35}>
+                                                                                        <td >{item.competence_visee_note}</td>
+                                                                                        <td >{item.valeur_note}</td>
+                                                                                        <td >{item.appreciation_note}</td>
+                                                                                    </tr>
+                                                                                ))}
+                                                                            </tbody>)}
+                                                                        {allnoteprim_35.existgrp > 0 && (
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>{allnoteprim_35.groupe}</th>
+                                                                                    <th>{allnoteprim_35.sumnote}</th>
+                                                                                    <th></th>
+                                                                                </tr>
+                                                                            </thead>)}
+
+                                                                            {allnoteprim_36.existgrp > 0 && (
+                                                                            <tbody>
+                                                                                {allnoteprim_36.listnotes && allnoteprim_36.listnotes.map((item, grp_36) => (
+                                                                                    <tr key={grp_36}>
+                                                                                        <td >{item.competence_visee_note}</td>
+                                                                                        <td >{item.valeur_note}</td>
+                                                                                        <td >{item.appreciation_note}</td>
+                                                                                    </tr>
+                                                                                ))}
+                                                                            </tbody>)}
+                                                                        {allnoteprim_36.existgrp > 0 && (
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>{allnoteprim_36.groupe}</th>
+                                                                                    <th>{allnoteprim_36.sumnote}</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
