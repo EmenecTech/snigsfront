@@ -141,7 +141,7 @@ const [indices, setindices] = useState([]);
     
     const deleteNotes = (matiere, indice) => {
        if(window.confirm("Voulez-vous supprimer cet élément?") == true){
-    http.delete('/delete_note/' + etab + "/" + classe + "/" + matiere + "/" + evaluation + "/" + userid).then((res) => {
+    http.delete('/delete_note/' + etab + "/" + classe + "/" + matiere + "/" + evaluation + "/" + indice + "/" + userid).then((res) => {
       fetchAllNoteseleves();
     });
       alert('Supprimé!');
