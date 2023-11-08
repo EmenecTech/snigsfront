@@ -228,6 +228,8 @@ const EnseignantListGroupes = () => {
                                                 </Button>
         
                                                 </div> : <div>
+
+       
                                                     <Form.Group className='form-group'>
                                                         <Form.Label>Groupes</Form.Label>
 
@@ -254,7 +256,7 @@ const EnseignantListGroupes = () => {
                                                                 
                                                      <Form.Group className='form-group'>
                                                         <Form.Label>Note</Form.Label>
-                                                        <Form.Control type="number" id="valeur_note" name="valeur_note"
+                                                        <Form.Control type="number" id="valeur_note" name="valeur_note" placeholder="[0-10]-☹️ [11-14]-😐 [15-20]-😃"
                                                             value={inputs.valeur_note || ''}
                                                             onChange={handleChange}
                                                         />
@@ -285,7 +287,7 @@ const EnseignantListGroupes = () => {
                                                 <Form.Group className='form-group'>
                                                         <Form.Label>Appreciation</Form.Label>
 
-                                                        <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
+                                                        <select className="form-select mb-3 shadow-none" name="appreciation" placeholder="[0-10]-NA [11-14]-ECA [15-20]-A" onChange={handleChange}>
                                                             <option> </option>
                                                             <option value="Non acquis">Non acquis</option>
                                                             <option value="En cours d'acquisition">En cours d'acquisition</option>
