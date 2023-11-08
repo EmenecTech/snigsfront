@@ -1,6 +1,6 @@
 import React, { useState, useEffect, memo, Fragment } from "react";
 import { Row, Col, Dropdown, Button, Table } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import AuthUser from "../../../components/AuthUser.js";
 
 //circular
