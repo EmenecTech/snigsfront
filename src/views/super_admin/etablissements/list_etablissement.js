@@ -396,13 +396,13 @@ const ListEtablissements = memo((props) => {
                                                     {item.state === "off" ? (
                                                         <Link className="btn btn-sm btn-icon btn-success" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
                                                             Retablir
-                                                        </Link>{' '}
+                                                        </Link>
                                                         
                                                         ):(
 
                                                         <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
                                                             Suspendre
-                                                        </Link>{' '}
+                                                        </Link>
                                                         
                                                         )}
                                                      
