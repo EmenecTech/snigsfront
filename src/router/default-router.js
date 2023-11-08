@@ -256,7 +256,7 @@ export const DefaultRouter = [
                 element: <ListEtablissements />
             },
             {
-                path: 'etablissement/list/{type}',
+                path: 'etablissement/list/:type',
                 element: <ListEtablissementsType />
             },
             {
