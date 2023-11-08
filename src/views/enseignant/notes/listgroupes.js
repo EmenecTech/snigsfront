@@ -25,22 +25,22 @@ const EnseignantListGroupes = () => {
     console.log(niveau);
 
     const getEmojiForNote = (note) => {
-        if (0 < note < 10) {
+        if (note > 0 && note < 10) {
             return '☹️';
-        } else if (11 < note < 14) {
+        } else if (note >= 11 && note < 14) {
             return '😐';
-        } else if (15 < note < 20) {
+        } else if (note >= 15 && note < 20) {
             return '😃';
         }
         return '';
     };
 
      const getAppreciationForNote = (note) => {
-        if (0 < note < 10) {
+        if (note > 0 && note < 10) {
             return 'Non acquis';
-        } else if (11 < note < 14) {
+        } else if (note >= 11 && note < 14) {
             return "En cours d'acquisition";
-        } else if (15 < note < 20) {
+        } else if (note >= 15 && note < 20) {
             return 'Acquis';
         }
         return '';
