@@ -45,7 +45,7 @@ import Card from "../../../components/Card.js";
 SwiperCore.use([Navigation]);
 
 
-const ListEtablissements = memo((props) => {
+const ListEtablissementsType = memo((props) => {
     const { http, setToken } = AuthUser();
     const [etablissements, setEtablissements] = useState([]);
     useEffect(() => {
@@ -436,4 +436,4 @@ const ListEtablissements = memo((props) => {
     );
 })
 
-export default ListEtablissements
+export default ListEtablissementsType
