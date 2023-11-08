@@ -67,10 +67,10 @@ const ListEtablissements = memo((props) => {
     }
     }
 
-    const suspendreEtablissement = (id) => {
+    const suspendreEtablissement = (nom) => {
         if(window.confirm("Confirmer la suspension") == true){ 
             
-            http.get('/suspendre_etablissement/' + id).then(res => {
+            http.get('/suspendre_etablissement/' + nom).then(res => {
             })
             
              alert('Etablissement suspendu !');
@@ -392,7 +392,7 @@ const ListEtablissements = memo((props) => {
                                                             </svg>
                                                         </span>
                                                     </Link>{' '}
-                                                     <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.id) }} >
+                                                     <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
                                                         Suspendre
                                                     </Link>{' '}
                                                     <Link className="btn btn-sm btn-icon btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete"  onClick={() => { deleteEtablissement(item.id) }} >
