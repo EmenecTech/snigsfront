@@ -366,7 +366,7 @@ const ListEtablissementsType = memo((props) => {
                                     <tbody>
                                         
                                         {etablissements.map((item) => (
-                                            {item.niveau_enseignement === type ? (
+                                            {item.niveau_enseignement == type ? (
                                             <tr key={item.id}>
                                                 <td> <Link to={"/Stats/Etablissments/" +  item.nom_etablissement + "/" +  item.id}  style={{ textDecoration: 'none' }}> {item.nom_etablissement} </Link></td>
                                                 <td>{item.cygle}</td>
