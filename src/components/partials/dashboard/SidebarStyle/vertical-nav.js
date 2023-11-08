@@ -179,6 +179,50 @@ const VerticalNav = memo((props) => {
                                         <i className="sidenav-mini-icon"> D </i>
                                         <span className="item-name">Etablissements</span>
                                     </Link>
+                                    <Link className="nav-link " to="/etablissement/list/super/admin">
+                                        <i className="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                                <g>
+                                                    <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                                </g>
+                                            </svg>
+                                        </i>
+                                        <i className="sidenav-mini-icon"> D </i>
+                                        <span className="item-name">Maternelle</span>
+                                    </Link>
+                                    <Link className="nav-link " to="/etablissement/list/super/admin">
+                                        <i className="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                                <g>
+                                                    <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                                </g>
+                                            </svg>
+                                        </i>
+                                        <i className="sidenav-mini-icon"> D </i>
+                                        <span className="item-name">Primaire</span>
+                                    </Link>
+                                    <Link className="nav-link " to="/etablissement/list/super/admin">
+                                        <i className="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                                <g>
+                                                    <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                                </g>
+                                            </svg>
+                                        </i>
+                                        <i className="sidenav-mini-icon"> D </i>
+                                        <span className="item-name">Secondaire</span>
+                                    </Link>
+                                    <Link className="nav-link " to="/etablissement/list/super/admin">
+                                        <i className="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                                <g>
+                                                    <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                                </g>
+                                            </svg>
+                                        </i>
+                                        <i className="sidenav-mini-icon"> D </i>
+                                        <span className="item-name">Universitaire</span>
+                                    </Link>
                                 </li>
 
                                
