@@ -1,6 +1,6 @@
 import React, { useState, useEffect, memo, Fragment } from "react";
 import { Row, Col, Dropdown, Button, Table } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import AuthUser from "../../../components/AuthUser.js";
 
 //circular
@@ -48,12 +48,13 @@ SwiperCore.use([Navigation]);
 const ListEtablissementsType = memo((props) => {
     const { http, setToken } = AuthUser();
     const [etablissements, setEtablissements] = useState([]);
+    const {type} = useParams();
     useEffect(() => {
         fetchAllEtablissements();
     }, []);
 
     const fetchAllEtablissements = () => {
-        http.get('/etablissements').then(res => {
+        http.get('/type/etablissements/' + type).then(res => {
             setEtablissements(res.data);
         })
     }
