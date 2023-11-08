@@ -188,7 +188,7 @@ const VerticalNav = memo((props) => {
                                             </svg>
                                         </i>
                                         <i className="sidenav-mini-icon"> D </i>
-                                        <span className="item-name">Maternelle</span>
+                                        <span className="item-name">Maternelles</span>
                                     </Link>
                                     <Link className="nav-link " to="/etablissement/list/super/admin">
                                         <i className="icon">
@@ -199,7 +199,7 @@ const VerticalNav = memo((props) => {
                                             </svg>
                                         </i>
                                         <i className="sidenav-mini-icon"> D </i>
-                                        <span className="item-name">Primaire</span>
+                                        <span className="item-name">Primaires</span>
                                     </Link>
                                     <Link className="nav-link " to="/etablissement/list/super/admin">
                                         <i className="icon">
@@ -210,7 +210,7 @@ const VerticalNav = memo((props) => {
                                             </svg>
                                         </i>
                                         <i className="sidenav-mini-icon"> D </i>
-                                        <span className="item-name">Secondaire</span>
+                                        <span className="item-name">Secondaires</span>
                                     </Link>
                                     <Link className="nav-link " to="/etablissement/list/super/admin">
                                         <i className="icon">
@@ -221,7 +221,7 @@ const VerticalNav = memo((props) => {
                                             </svg>
                                         </i>
                                         <i className="sidenav-mini-icon"> D </i>
-                                        <span className="item-name">Universitaire</span>
+                                        <span className="item-name">Universitaires</span>
                                     </Link>
                                 </li>
 
