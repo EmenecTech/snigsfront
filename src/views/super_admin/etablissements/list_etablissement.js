@@ -393,18 +393,18 @@ const ListEtablissements = memo((props) => {
                                                         </span>
                                                     </Link>{' '}
 
-                                                    {item.state === "off" ? (<div>
+                                                    {item.state === "off" ? (
                                                         <Link className="btn btn-sm btn-icon btn-success" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
                                                             Retablir
                                                         </Link>{' '}
                                                         
-                                                        </div>):(<div>
+                                                        ):(
 
                                                         <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
                                                             Suspendre
                                                         </Link>{' '}
                                                         
-                                                        </div>)}
+                                                        )}
                                                      
                                                     <Link className="btn btn-sm btn-icon btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete"  onClick={() => { deleteEtablissement(item.id) }} >
                                                         <span className="btn-inner">
