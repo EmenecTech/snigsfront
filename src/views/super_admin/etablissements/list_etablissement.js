@@ -67,6 +67,12 @@ const ListEtablissements = memo((props) => {
     }
     }
 
+    const suspendreEtablissement = (id) => {
+
+         alert('Etablissement suspendu !');
+        
+    }
+
     useSelector(SettingSelector.theme_color);
 
     const getVariableColor = () => {
@@ -363,7 +369,6 @@ const ListEtablissements = memo((props) => {
                                                 <td>{item.adresse_etablissement}</td>
 
 
-                                                <td></td>
                                                 <td>{item.facturation_etablissement}</td>
 
                                                 <td>{item.payement_prinsciption}</td>
@@ -381,7 +386,7 @@ const ListEtablissements = memo((props) => {
                                                             </svg>
                                                         </span>
                                                     </Link>{' '}
-                                                     <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Stats/Etablissments/" +  item.nom_etablissement + "/"  + item.id}>
+                                                     <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.id) }} >
                                                         Suspendre
                                                     </Link>{' '}
                                                     <Link className="btn btn-sm btn-icon btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete"  onClick={() => { deleteEtablissement(item.id) }} >
