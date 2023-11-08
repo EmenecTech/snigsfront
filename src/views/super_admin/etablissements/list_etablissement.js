@@ -392,9 +392,20 @@ const ListEtablissements = memo((props) => {
                                                             </svg>
                                                         </span>
                                                     </Link>{' '}
-                                                     <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
-                                                        Suspendre
-                                                    </Link>{' '}
+
+                                                    {item.state === "off" ? (<div>
+                                                        <Link className="btn btn-sm btn-icon btn-success" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
+                                                            Retablir
+                                                        </Link>{' '}
+                                                        
+                                                        </div>):(<div>
+
+                                                        <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
+                                                            Suspendre
+                                                        </Link>{' '}
+                                                        
+                                                        </div>)}
+                                                     
                                                     <Link className="btn btn-sm btn-icon btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete"  onClick={() => { deleteEtablissement(item.id) }} >
                                                         <span className="btn-inner">
                                                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
