@@ -70,7 +70,7 @@ const ListEtablissements = memo((props) => {
     const suspendreEtablissement = (id) => {
         if(window.confirm("Confirmer la suspension") == true){ 
             
-            http.post('/suspendre_etablissement/' + id).then(res => {
+            http.get('/suspendre_etablissement/' + id).then(res => {
             })
             
              alert('Etablissement suspendu !');
