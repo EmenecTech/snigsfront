@@ -59,7 +59,7 @@ const ListEtablissements = memo((props) => {
     }
 
      const deleteEtablissement = (id) => {
-         if(window.confirm("Voulez-vous supprimer cet élément?") == true){
+         if(window.confirm("Voulez-vous supprimer cet élément?") == true){ 
         http.delete('/delete_etablissement/' + id).then(res => {
             fetchAllEtablissements();
         })
@@ -68,8 +68,10 @@ const ListEtablissements = memo((props) => {
     }
 
     const suspendreEtablissement = (id) => {
-
-         alert('Etablissement suspendu !');
+        if(window.confirm("Confirmer la suspension") == true){ 
+             alert('Etablissement suspendu !');
+        }
+        
         
     }
 
