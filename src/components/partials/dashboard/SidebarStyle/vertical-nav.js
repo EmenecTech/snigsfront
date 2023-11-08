@@ -179,7 +179,7 @@ const VerticalNav = memo((props) => {
                                         <i className="sidenav-mini-icon"> D </i>
                                         <span className="item-name">Etablissements</span>
                                     </Link>
-                                    <Link className="nav-link " to="/etablissement/list/super/admin">
+                                    <Link className="nav-link " to="/etablissement/list/Maternelle">
                                         <i className="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                 <g>
@@ -190,7 +190,7 @@ const VerticalNav = memo((props) => {
                                         <i className="sidenav-mini-icon"> D </i>
                                         <span className="item-name">Maternelles</span>
                                     </Link>
-                                    <Link className="nav-link " to="/etablissement/list/super/admin">
+                                    <Link className="nav-link " to="/etablissement/list/Primaire">
                                         <i className="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                 <g>
@@ -201,7 +201,7 @@ const VerticalNav = memo((props) => {
                                         <i className="sidenav-mini-icon"> D </i>
                                         <span className="item-name">Primaires</span>
                                     </Link>
-                                    <Link className="nav-link " to="/etablissement/list/super/admin">
+                                    <Link className="nav-link " to="/etablissement/list/Secondaire">
                                         <i className="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                 <g>
@@ -212,7 +212,7 @@ const VerticalNav = memo((props) => {
                                         <i className="sidenav-mini-icon"> D </i>
                                         <span className="item-name">Secondaires</span>
                                     </Link>
-                                    <Link className="nav-link " to="/etablissement/list/super/admin">
+                                    <Link className="nav-link " to="/etablissement/list/Universitaire">
                                         <i className="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                                 <g>
