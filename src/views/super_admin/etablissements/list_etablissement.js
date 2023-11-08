@@ -69,6 +69,9 @@ const ListEtablissements = memo((props) => {
 
     const suspendreEtablissement = (id) => {
         if(window.confirm("Confirmer la suspension") == true){ 
+            http.delete('/suspendre_etablissement/' + id).then(res => {
+            })
+            
              alert('Etablissement suspendu !');
         }
         
