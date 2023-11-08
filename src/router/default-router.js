@@ -48,6 +48,7 @@ import Gestuser_superadmin from '../views/super_admin/utilisateurs/gestionusers'
 import ListConfigurations from '../views/super_admin/etablissements/lis_configurations';
 import AddConfiguration from '../views/super_admin/etablissements/add_configuration';
 import ListEtablissements from '../views/super_admin/etablissements/list_etablissement';
+import ListEtablissementsType from '../views/super_admin/etablissements/etablissements_types';
 import AddEtablissement from '../views/super_admin/etablissements/add_etablissement ';
 import ListUtilisateurs from '../views/super_admin/utilisateurs/gestionusers';
 import UtilisateursListe from '../views/super_admin/utilisateurs/gestionusers';
