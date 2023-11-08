@@ -48,6 +48,8 @@ SwiperCore.use([Navigation]);
 const ListEtablissementsType = memo((props) => {
     const { http, setToken } = AuthUser();
     const [etablissements, setEtablissements] = useState([]);
+    const {type} = useParams();
+    
     useEffect(() => {
         fetchAllEtablissements();
     }, []);
@@ -362,7 +364,9 @@ const ListEtablissementsType = memo((props) => {
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        
                                         {etablissements.map((item) => (
+                                            {item.niveau_enseignement === type ? (
                                             <tr key={item.id}>
                                                 <td> <Link to={"/Stats/Etablissments/" +  item.nom_etablissement + "/" +  item.id}  style={{ textDecoration: 'none' }}> {item.nom_etablissement} </Link></td>
                                                 <td>{item.cygle}</td>
@@ -420,6 +424,7 @@ const ListEtablissementsType = memo((props) => {
 
 
                                             </tr>
+                                                ) : null } 
                                         ))}
                                     </tbody>
                                     <tfoot>
