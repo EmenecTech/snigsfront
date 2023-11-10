@@ -1,10 +1,11 @@
-import React, { Fragment, useState, us, useEffect, memo } from 'react'
+import React, { Fragment, useState, us, useEffect, memo, useRef} from 'react'
 
 import { createPath, useNavigate, useParams } from 'react-router-dom';
 import FsLightbox from 'fslightbox-react';
 
 import { Row, Col, Image, Form, Nav, Dropdown, Tab, Modal, Button, Table } from 'react-bootstrap'
 import Card from '../../../components/Card'
+import { useReactToPrint } from "react-to-print";
 
 import { Link } from 'react-router-dom'
 import AuthUser from '../../../components/AuthUser'; 
