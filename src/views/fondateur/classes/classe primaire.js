@@ -64,7 +64,12 @@ const PrimClasse = () => {
         setInputs(values => ({ ...values, [name]: value, etab, classe }))
     }
 
-
+    const componentRef = useRef();
+    const printData = useReactToPrint({
+        content: () => componentRef.current,
+        documentTitle: "employee data",
+        onafterprint: () => alert("print success"),
+    });
 
 
     const submitForm = () => {
@@ -115,6 +120,17 @@ const PrimClasse = () => {
       setgroupes(res.data);
     });
   };
+     const [info_etab, setinfo_etab] = useState([]);
+
+    useEffect(() => {
+        fetchAllinfo_etab()
+    }, []);
+
+    const fetchAllinfo_etab = () => {
+        http.get('/get_name_logo/' + etab).then((res) => {
+            setinfo_etab(res.data);
+        });
+    }
 
     const [groupesclasse, setgroupesclasse] = useState([]);
   useEffect(() => {
