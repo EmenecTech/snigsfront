@@ -1221,6 +1221,339 @@ const BulletinByEleve = memo((props) => {
     };
 
     ////////////////////////////////////////////
+     const [allnoteprim_51, setAllNoteprim_51] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_51();
+    }, []);
+
+    const fetchAllNoteprim_51 = () => {
+        http.get('/all/prim/notes_51/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_51(res.data);
+        })
+    };
+     //////////////////////////////////////////// ici
+     const [allnoteprim_52, setAllNoteprim_52] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_52();
+    }, []);
+
+    const fetchAllNoteprim_52 = () => {
+        http.get('/all/prim/notes_52/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_52(res.data);
+        })
+    };
+     ////////////////////////////////////////////
+     const [allnoteprim_53, setAllNoteprim_53] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_53();
+    }, []);
+
+    const fetchAllNoteprim_53 = () => {
+        http.get('/all/prim/notes_53/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_53(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_54, setAllNoteprim_54] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_54();
+    }, []);
+
+    const fetchAllNoteprim_54 = () => {
+        http.get('/all/prim/notes_54/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_54(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_55, setAllNoteprim_55] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_55();
+    }, []);
+
+    const fetchAllNoteprim_55 = () => {
+        http.get('/all/prim/notes_55/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_55(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_56, setAllNoteprim_56] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_56();
+    }, []);
+
+    const fetchAllNoteprim_56 = () => {
+        http.get('/all/prim/notes_56/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_56(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_57, setAllNoteprim_57] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_57();
+    }, []);
+
+    const fetchAllNoteprim_57 = () => {
+        http.get('/all/prim/notes_57/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_57(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_58, setAllNoteprim_58] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_58();
+    }, []);
+
+    const fetchAllNoteprim_58 = () => {
+        http.get('/all/prim/notes_58/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_58(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_59, setAllNoteprim_59] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_59();
+    }, []);
+
+    const fetchAllNoteprim_59 = () => {
+        http.get('/all/prim/notes_59/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_59(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_60, setAllNoteprim_60] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_60();
+    }, []);
+
+    const fetchAllNoteprim_60 = () => {
+        http.get('/all/prim/notes_60/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_60(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_61, setAllNoteprim_61] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_61();
+    }, []);
+
+    const fetchAllNoteprim_61 = () => {
+        http.get('/all/prim/notes_61/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_61(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_62, setAllNoteprim_62] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_62();
+    }, []);
+
+    const fetchAllNoteprim_62 = () => {
+        http.get('/all/prim/notes_62/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_62(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_63, setAllNoteprim_63] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_63();
+    }, []);
+
+    const fetchAllNoteprim_63 = () => {
+        http.get('/all/prim/notes_63/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_63(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_64, setAllNoteprim_64] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_64();
+    }, []);
+
+    const fetchAllNoteprim_64 = () => {
+        http.get('/all/prim/notes_64/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_64(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_65, setAllNoteprim_65] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_65();
+    }, []);
+
+    const fetchAllNoteprim_65 = () => {
+        http.get('/all/prim/notes_65/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_65(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_66, setAllNoteprim_66] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_66();
+    }, []);
+
+    const fetchAllNoteprim_66 = () => {
+        http.get('/all/prim/notes_66/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_66(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_67, setAllNoteprim_67] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_67();
+    }, []);
+
+    const fetchAllNoteprim_67 = () => {
+        http.get('/all/prim/notes_67/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_67(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_68, setAllNoteprim_68] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_68();
+    }, []);
+
+    const fetchAllNoteprim_68 = () => {
+        http.get('/all/prim/notes_68/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_68(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_69, setAllNoteprim_69] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_69();
+    }, []);
+
+    const fetchAllNoteprim_69 = () => {
+        http.get('/all/prim/notes_69/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_69(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_70, setAllNoteprim_70] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_70();
+    }, []);
+
+    const fetchAllNoteprim_70 = () => {
+        http.get('/all/prim/notes_70/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_70(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_71, setAllNoteprim_71] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_71();
+    }, []);
+
+    const fetchAllNoteprim_71 = () => {
+        http.get('/all/prim/notes_71/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_71(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_72, setAllNoteprim_72] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_72();
+    }, []);
+
+    const fetchAllNoteprim_72 = () => {
+        http.get('/all/prim/notes_72/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_72(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_73, setAllNoteprim_73] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_73();
+    }, []);
+
+    const fetchAllNoteprim_73 = () => {
+        http.get('/all/prim/notes_73/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_73(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_74, setAllNoteprim_74] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_74();
+    }, []);
+
+    const fetchAllNoteprim_74 = () => {
+        http.get('/all/prim/notes_74/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_74(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_75, setAllNoteprim_75] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_75();
+    }, []);
+
+    const fetchAllNoteprim_75 = () => {
+        http.get('/all/prim/notes_75/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_75(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_76, setAllNoteprim_76] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_76();
+    }, []);
+
+    const fetchAllNoteprim_76 = () => {
+        http.get('/all/prim/notes_76/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_76(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_77, setAllNoteprim_77] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_77();
+    }, []);
+
+    const fetchAllNoteprim_77 = () => {
+        http.get('/all/prim/notes_77/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_77(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_78, setAllNoteprim_78] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_78();
+    }, []);
+
+    const fetchAllNoteprim_78 = () => {
+        http.get('/all/prim/notes_78/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_78(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_79, setAllNoteprim_79] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_79();
+    }, []);
+
+    const fetchAllNoteprim_79 = () => {
+        http.get('/all/prim/notes_79/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_79(res.data);
+        })
+    };
+ ////////////////////////////////////////////
+     const [allnoteprim_80, setAllNoteprim_80] = useState([]);
+    useEffect(() => {
+        fetchAllNoteprim_80();
+    }, []);
+
+    const fetchAllNoteprim_80 = () => {
+        http.get('/all/prim/notes_80/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setAllNoteprim_80(res.data);
+        })
+    };
+
+
+    
+
     const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
         fetchAllNotes();
@@ -1232,14 +1565,24 @@ const BulletinByEleve = memo((props) => {
         })
     };
 
-
     const getEmojiForNote = (note) => {
-        if (note == 10) {
+        if (note > 0 && note < 10) {
             return '☹️';
-        } else if (note == 15) {
+        } else if (note >= 11 && note < 14) {
             return '😐';
-        } else if (note == 20) {
+        } else if (note >= 15 && note < 20) {
             return '😃';
+        }
+        return '';
+    };
+
+     const getAppreciationForNote = (note) => {
+        if (note > 0 && note < 10) {
+            return 'Non acquis';
+        } else if (note >= 11 && note < 14) {
+            return "En cours d'acquisition";
+        } else if (note >= 15 && note < 20) {
+            return 'Acquis';
         }
         return '';
     };
