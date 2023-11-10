@@ -284,7 +284,7 @@ const EnseignantListGroupes = () => {
                                                         </select>
                                                     </Form.Group>
                                                                 
-                                                <Form.Group className='form-group'>
+{ /* <Form.Group className='form-group'>
                                                         <Form.Label>Appreciation</Form.Label>
 
                                                         <select className="form-select mb-3 shadow-none" name="appreciation" placeholder="[0-10]-NA [11-14]-ECA [15-20]-A" onChange={handleChange}>
@@ -294,7 +294,7 @@ const EnseignantListGroupes = () => {
                                                             <option value="Acquis">Acquis</option>
                                                                 <option value="Expert">Expert</option>
                                                         </select>
-                                                    </Form.Group> 
+                                                    </Form.Group> */}
 
                                                  <Button variant="primary" onClick={submitForm}>
                                                     Ajouter
@@ -463,7 +463,7 @@ const EnseignantListGroupes = () => {
                                                     <td>{item.matiere_note}</td>
                                                     <td>{getEmojiForNote(item.valeur_note)}</td>
                                                     <td>{item.competence_visee_note}</td>
-                                                    <td>{item.appreciation_note}</td>
+                                                    <td>{getAppreciationForNote(item.valeur_note)}</td>
                                                 </tr>
                                             ))}
                                         </tbody>
