@@ -269,7 +269,7 @@ const UniClasse = () => {
                             <Tab.Pane eventKey="first" id="profile-feed">
                                 <Card>
                                     <Card.Header className="d-flex align-items-center justify-content-between pb-4">
-                                       <Button class="btn btn-sm btn-icon btn-info" onClick={printData}> Imprimer </Button>
+                                       <Button onClick={printData}> Imprimer </Button>
                                     </Card.Header>
                                     <Card.Body className="p-0">
                                         <div className="table-responsive border-bottom my-3">
