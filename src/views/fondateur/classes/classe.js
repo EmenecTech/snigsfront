@@ -1,6 +1,6 @@
 import React, { Fragment, useState, us, useEffect, memo, useRef  } from 'react'
 
-import { createPath, useNavigate, useParams } from 'react-router-dom';
+import { createPath, useNavigate, useParams, Image } from 'react-router-dom';
 import FsLightbox from 'fslightbox-react';
 
 import { Row, Col, Image, Form, Nav, Dropdown, Tab, Modal, Button, Table } from 'react-bootstrap'
@@ -269,10 +269,11 @@ const UniClasse = () => {
                             <Tab.Pane eventKey="first" id="profile-feed">
                                 <Card>
                                     <Card.Header className="d-flex align-items-center justify-content-between pb-4">
-
+                                       <Button class="btn btn-sm btn-icon btn-info" onClick={printData}> Imprimer </Button>
                                     </Card.Header>
                                     <Card.Body className="p-0">
                                         <div className="table-responsive border-bottom my-3">
+    
                                             <Table
                                                 responsive
                                                 striped
