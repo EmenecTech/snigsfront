@@ -242,8 +242,18 @@ const EnseignantListGroupes = () => {
                                                         </select>
                                                     </Form.Group>
                                                                 
-                                                 <Form.Group className='form-group'>
+                                                 
+                                                                
+                                                     <Form.Group className='form-group'>
                                                         <Form.Label>Note</Form.Label>
+                                                        <Form.Control type="number" id="valeur_note" name="valeur_note"
+                                                            value={inputs.valeur_note || ''}
+                                                            onChange={handleChange}
+                                                        />
+                                                    </Form.Group>
+
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Emoji</Form.Label>
                                             
                                                         <select className="form-select mb-3 shadow-none" id="emoji" name="emoji" onChange={handleChange}>
                                                             <option> </option>
@@ -252,14 +262,6 @@ const EnseignantListGroupes = () => {
                                                             <option value="20">😃</option>
 
                                                         </select>
-                                                    </Form.Group>
-                                                                
-                                                     <Form.Group className='form-group'>
-                                                        <Form.Label>Note</Form.Label>
-                                                        <Form.Control type="number" id="valeur_note" name="valeur_note"
-                                                            value={inputs.valeur_note || ''}
-                                                            onChange={handleChange}
-                                                        />
                                                     </Form.Group>
                                                                 
                                                     <Form.Group className='form-group'>
