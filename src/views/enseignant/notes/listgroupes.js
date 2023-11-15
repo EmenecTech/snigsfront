@@ -242,21 +242,21 @@ const EnseignantListGroupes = () => {
                                                         </select>
                                                     </Form.Group>
                                                                 
-                                                 { /* <Form.Group className='form-group'>
+                                                 <Form.Group className='form-group'>
                                                         <Form.Label>Note</Form.Label>
                                             
-                                                        <select className="form-select mb-3 shadow-none" id="valeur_note" name="valeur_note" onChange={handleChange}>
+                                                        <select className="form-select mb-3 shadow-none" id="emoji" name="emoji" onChange={handleChange}>
                                                             <option> </option>
                                                             <option value="10">☹️</option>
                                                             <option value="15">😐</option>
                                                             <option value="20">😃</option>
 
                                                         </select>
-                                                    </Form.Group> */}
+                                                    </Form.Group>
                                                                 
                                                      <Form.Group className='form-group'>
                                                         <Form.Label>Note</Form.Label>
-                                                        <Form.Control type="number" id="valeur_note" name="valeur_note" placeholder="[0-10]-☹️ [11-14]-😐 [15-20]-😃"
+                                                        <Form.Control type="number" id="valeur_note" name="valeur_note"
                                                             value={inputs.valeur_note || ''}
                                                             onChange={handleChange}
                                                         />
@@ -284,7 +284,7 @@ const EnseignantListGroupes = () => {
                                                         </select>
                                                     </Form.Group>
                                                                 
-{ /* <Form.Group className='form-group'>
+                                                    <Form.Group className='form-group'>
                                                         <Form.Label>Appreciation</Form.Label>
 
                                                         <select className="form-select mb-3 shadow-none" name="appreciation" placeholder="[0-10]-NA [11-14]-ECA [15-20]-A" onChange={handleChange}>
@@ -294,7 +294,7 @@ const EnseignantListGroupes = () => {
                                                             <option value="Acquis">Acquis</option>
                                                                 <option value="Expert">Expert</option>
                                                         </select>
-                                                    </Form.Group> */}
+                                                    </Form.Group>
 
                                                  <Button variant="primary" onClick={submitForm}>
                                                     Ajouter
