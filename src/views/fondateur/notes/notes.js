@@ -25,11 +25,11 @@ const AdminEditNotes = () => {
     
  
      const getEmojiForNote = (note) => {
-        if (note > 0 && note < 10) {
+        if (note == 10) {
             return '☹️';
-        } else if (note >= 11 && note < 14) {
+        } else if (note == 15) {
             return '😐';
-        } else if (note >= 15 && note < 20) {
+        } else if (note == 20) {
             return '😃';
         }
         return '';
@@ -238,25 +238,26 @@ const [indices, setindices] = useState([]);
                                                         </select>
                                                     </Form.Group>
                                                                 
-                                                     <Form.Group className='form-group'>
+                                                 <Form.Group className='form-group'>
                                                         <Form.Label>Note</Form.Label>
-                                                        <Form.Control type="number" id="valeur_note" name="valeur_note" placeholder="[0-10]-☹️ [11-14]-😐 [15-20]-😃"
-                                                            value={inputs.valeur_note || ''}
-                                                            onChange={handleChange}
-                                                        />
-                                                    </Form.Group>
-{/*  <Form.Group className='form-group'>
-                                                        <Form.Label>Note</Form.Label>
-
-                                                        <select className="form-select mb-3 shadow-none" id="valeur_note" name="valeur_note" onChange={handleChange}>
+                                            
+                                                        <select className="form-select mb-3 shadow-none" id="emoji" name="emoji" onChange={handleChange}>
                                                             <option> </option>
                                                             <option value="10">☹️</option>
                                                             <option value="15">😐</option>
                                                             <option value="20">😃</option>
 
                                                         </select>
-                                                    </Form.Group> */}
-                                                    
+                                                    </Form.Group>
+                                                                
+                                                     <Form.Group className='form-group'>
+                                                        <Form.Label>Note</Form.Label>
+                                                        <Form.Control type="number" id="valeur_note" name="valeur_note"
+                                                            value={inputs.valeur_note || ''}
+                                                            onChange={handleChange}
+                                                        />
+                                                    </Form.Group>
+                                                                
                                                     <Form.Group className='form-group'>
                                                         <Form.Label>coefficient</Form.Label>
                                                         <Form.Control type="number" id="coef" name="coef"
@@ -279,17 +280,21 @@ const [indices, setindices] = useState([]);
                                                         </select>
                                                     </Form.Group>
                                                                 
-{/* <Form.Group className='form-group'>
+                                                    <Form.Group className='form-group'>
                                                         <Form.Label>Appreciation</Form.Label>
 
-                                                        <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
+                                                        <select className="form-select mb-3 shadow-none" name="appreciation" placeholder="[0-10]-NA [11-14]-ECA [15-20]-A" onChange={handleChange}>
                                                             <option> </option>
                                                             <option value="Non acquis">Non acquis</option>
                                                             <option value="En cours d'acquisition">En cours d'acquisition</option>
                                                             <option value="Acquis">Acquis</option>
+                                                                <option value="Expert">Expert</option>
                                                         </select>
-                                                    </Form.Group> */}
+                                                    </Form.Group>
 
+                                                 <Button variant="primary" onClick={submitForm}>
+                                                    Ajouter
+                                                </Button>
                                                 </div>}
 
 
@@ -458,7 +463,8 @@ const [indices, setindices] = useState([]);
                                         <th>Nom(s)</th>
                                         <th>Prénom(s)</th>     
                                         <th>Groupes</th>
-                                        <th>Evaluation</th>
+                                        <th>Note</th>
+                                        <th>Emoji</th>
                                         <th>Indices</th>
                                         <th>Appreciation</th>
                                         <th>Action</th>
@@ -472,9 +478,10 @@ const [indices, setindices] = useState([]);
                                             <td>{item.nom}</td>
                                             <td>{item.prenom}</td>
                                             <td>{item.matiere_note}</td> 
-                                            <td>{getEmojiForNote(item.valeur_note)}</td>
+                                            <td>{item.valeur_note}</td>
+                                            <td>{getEmojiForNote(item.emoji)}</td>
                                             <td>{item.competence_visee_note}</td>
-                                            <td>{getAppreciationForNote(item.valeur_note)}</td>
+                                            <td>{item.appreciation_note}</td>
                                             <td>
                                             <div className="flex align-items-center list-user-action">
 
