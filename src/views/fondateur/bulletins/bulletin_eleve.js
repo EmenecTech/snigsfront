@@ -2012,7 +2012,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <div className="table-responsive border-bottom my-3">
                                                                     <Table
                                                                         responsive
-                                                                        striped
+                                                                       
                                                                         id="datatable"
                                                                         className=""
                                                                         data-toggle="data-table"
@@ -2125,7 +2125,7 @@ const BulletinByEleve = memo((props) => {
                                                                     </Table>
                                                                     <Table
                                                                         responsive
-                                                                        striped
+                                                                       
                                                                         id="datatable"
                                                                         className=""
                                                                         data-toggle="data-table"
@@ -2371,7 +2371,7 @@ const BulletinByEleve = memo((props) => {
                                                                 <div className="table-responsive border-bottom my-3">
                                                                     <Table
                                                                         responsive
-                                                                        striped
+                                                                       
                                                                         id="datatable"
                                                                         className=""
                                                                         data-toggle="data-table"
@@ -2485,7 +2485,7 @@ const BulletinByEleve = memo((props) => {
                                                                     </Table>
                                                                     <Table
                                                                         responsive
-                                                                        striped
+                                                                       
                                                                         id="datatable"
                                                                         className=""
                                                                         data-toggle="data-table"
@@ -2721,7 +2721,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                         <Table
                                                                             responsive
-                                                                            striped
+                                                                           
                                                                             id="datatable"
                                                                             className=""
                                                                             data-toggle="data-table">
@@ -3313,7 +3313,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                         <Table
                                                                             responsive
-                                                                            striped
+                                                                           
                                                                             id="datatable"
                                                                             className=""
                                                                             data-toggle="data-table"
@@ -3378,7 +3378,7 @@ const BulletinByEleve = memo((props) => {
                                                                         </Table>
                                                                         <Table
                                                                             responsive
-                                                                            striped
+                                                                           
                                                                             id="datatable"
                                                                             className=""
                                                                             data-toggle="data-table"
@@ -3547,7 +3547,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                     <Table
                                                                         responsive
-                                                                        striped
+                                                                       
                                                                         id="datatable"
                                                                         className=""
                                                                         data-toggle="data-table"
@@ -5103,7 +5103,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                     <Table
                                                                         responsive
-                                                                        striped
+                                                                       
                                                                         id="datatable"
                                                                         className=""
                                                                         data-toggle="data-table"
@@ -5168,7 +5168,7 @@ const BulletinByEleve = memo((props) => {
                                                                     </Table>
                                                                     <Table
                                                                         responsive
-                                                                        striped
+                                                                       
                                                                         id="datatable"
                                                                         className=""
                                                                         data-toggle="data-table"
@@ -5347,7 +5347,7 @@ const BulletinByEleve = memo((props) => {
                                                                             <div className="table-responsive border-bottom my-3">
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table">
@@ -5944,7 +5944,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table"
@@ -6011,7 +6011,7 @@ const BulletinByEleve = memo((props) => {
                                                                                 </Table>
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table"
@@ -6182,7 +6182,7 @@ const BulletinByEleve = memo((props) => {
                                                                             <div className="table-responsive border-bottom my-3">
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table">
@@ -6779,7 +6779,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table"
@@ -6846,7 +6846,7 @@ const BulletinByEleve = memo((props) => {
                                                                                 </Table>
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table"
@@ -7029,7 +7029,7 @@ const BulletinByEleve = memo((props) => {
                                                                             <div className="table-responsive border-bottom my-3">
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table"
@@ -8589,7 +8589,7 @@ const BulletinByEleve = memo((props) => {
                                                                                 </Table>
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table"
@@ -8656,7 +8656,7 @@ const BulletinByEleve = memo((props) => {
                                                                                 </Table>
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table"
@@ -8831,7 +8831,7 @@ const BulletinByEleve = memo((props) => {
                                                                             <div className="table-responsive border-bottom my-3">
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table"
@@ -10386,7 +10386,7 @@ const BulletinByEleve = memo((props) => {
                                                                                 </Table>
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table"
@@ -10453,7 +10453,7 @@ const BulletinByEleve = memo((props) => {
                                                                                 </Table>
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table"
@@ -10633,7 +10633,7 @@ const BulletinByEleve = memo((props) => {
                                                                             <div className="table-responsive border-bottom my-3">
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table">
@@ -11229,7 +11229,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table"
@@ -11421,7 +11421,7 @@ const BulletinByEleve = memo((props) => {
                                                                             <div className="table-responsive border-bottom my-3">
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table"
@@ -12982,7 +12982,7 @@ const BulletinByEleve = memo((props) => {
                                                                                 </Table>
                                                                                 <Table
                                                                                     responsive
-                                                                                    striped
+                                                                                   
                                                                                     id="datatable"
                                                                                     className=""
                                                                                     data-toggle="data-table"
