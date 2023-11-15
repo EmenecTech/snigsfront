@@ -122,10 +122,9 @@ const EnseignantListGroupes = () => {
 
 
     const submitFormprim = () => {
-        http.post('/add_notes', inputs).then((res) => {
-           
+        http.post('/add_notes', inputs).then((res) => {   
         })
-
+console.log(inputs);
         
     }
 
