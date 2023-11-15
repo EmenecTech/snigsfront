@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+    import React, { useEffect, useState } from 'react'
 import { Row, Col, Form, Button, Card, Modal, FormGroup } from 'react-bootstrap'
 import { useNavigate, useParams } from 'react-router-dom';
 import http from '../../../http';
@@ -123,7 +123,7 @@ const EnseignantListGroupes = () => {
 
     const submitFormprim = () => {
         http.post('/add_notes', inputs).then((res) => {
-            window.location.reload(false);
+           
         })
 
         
