@@ -3482,7 +3482,7 @@ const BulletinByEleve = memo((props) => {
                                                                         <Row>
                                                                             <Col sm="12">
                                                                                 <div className="container text-center">
-                                                                                    <p> <strong style={{ fontSize: "18px" }}> {info_etab.nom_etablissement} </strong>
+                                                                                    <p> <strong style={{ fontSize: "12px" }}> {info_etab.nom_etablissement} </strong>
 
                                                                                         <br />
                                                                                         <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal>
@@ -3506,14 +3506,14 @@ const BulletinByEleve = memo((props) => {
                                                                     </Col>
 
                                                                 </Row>
-                                                                <Row className="mt-2">
+                                                                <Row className="mt-1">
                                                                     <Col sm="4" lg="4">
 
 
                                                                     </Col>
                                                                     <Col sm="4" lg="4">
                                                                         <p className="text-center">
-                                                                            <span style={{ fontSize: "15px" }}> Bulletin De Notes {evaluation}</span>
+                                                                            <span style={{ fontSize: "10px" }}> Bulletin De Notes {evaluation}</span>
                                                                             <br />
                                                                             2022 - 2023
                                                                         </p>
@@ -5117,16 +5117,7 @@ const BulletinByEleve = memo((props) => {
                                                                                 <th></th>
                                                                                 <th>DISCIPLINE</th>
                                                                                 <th>APPRECIATION DU TRAVAIL</th>
-                                                                                <th><div className="mt-2">
-                                                                                    <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {rang_eleve.moyen} </p>
-                                                                                </div>
-                                                                                    <div className="mt-2">
-                                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE GENERALE DE LA CLASSE:</p>
-                                                                                    </div>
-                                                                                    <div className="mt-2">
-                                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:{rang_eleve.rang}</p>
-                                                                                    </div>
-                                                                                </th>
+                                                                                <th>MOYENNE: {rang_eleve.moyen}</th>
                                                                             </tr>
                                                                         </thead>
                                                                         <tbody>
@@ -5163,6 +5154,12 @@ const BulletinByEleve = memo((props) => {
                                                                                     </div>
                                                                                 </td>
                                                                                 <td>
+                                                                                <div className="mt-2">
+                                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE GENERALE DE LA CLASSE:</p>
+                                                                                    </div>
+                                                                                    <div className="mt-2">
+                                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:{rang_eleve.rang}</p>
+                                                                                    </div>
 
                                                                                 </td>
 
@@ -5188,10 +5185,10 @@ const BulletinByEleve = memo((props) => {
                                                                         <tbody>
 
                                                                             <tr>
-                                                                                <td style={{ height: '100px' }}></td>
-                                                                                <td style={{ height: '100px' }}></td>
-                                                                                <td style={{ height: '100px' }}></td>
-                                                                                <td style={{ height: '100px' }}></td>
+                                                                                <td style={{ height: '20px' }}></td>
+                                                                                <td style={{ height: '20px' }}></td>
+                                                                                <td style={{ height: '20px' }}></td>
+                                                                                <td style={{ height: '20px' }}></td>
                                                                             </tr>
 
                                                                         </tbody>
