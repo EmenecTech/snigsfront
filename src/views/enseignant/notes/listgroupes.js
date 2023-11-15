@@ -236,8 +236,8 @@ const EnseignantListGroupes = () => {
                                                         <select className="form-select mb-3 shadow-none" name="matiere" onChange={handleChange}>
                                                             <option> </option>
 
-                                                            {groupes.map((item) => (
-                                                                <option key={item.id} value={item.intitule_groupe}>{item.intitule_groupe}</option>
+                                                            {groupesclasse.map((item) => (
+                                                                <option key={item.id} value={item.groupe_cg}>{item.groupe_cg}(/ {item.marks_cg})</option>
                                                             ))}
                                                         </select>
                                                     </Form.Group>
