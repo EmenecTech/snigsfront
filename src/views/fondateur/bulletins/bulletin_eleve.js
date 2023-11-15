@@ -3585,7 +3585,7 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_1.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_1.groupe} (/{allnoteprim_1.note_groupe}) </th>
+                                                                                    <th>{allnoteprim_1.groupe} (/{allnoteprim_1.maxnotegroupe}) </th>
                                                                                     <th>{allnoteprim_1.sumnote}</th>
                                                                                     <th></th>
                                                                                 </tr>
@@ -3605,7 +3605,7 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_2.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_2.groupe} (/{allnoteprim_2.note_groupe}) </th>
+                                                                                    <th>{allnoteprim_2.groupe} (/{allnoteprim_2.maxnotegroupe}) </th>
                                                                                     <th>{allnoteprim_2.sumnote}</th>
                                                                                     <th></th>
                                                                                 </tr>
@@ -3626,7 +3626,7 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_3.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_3.groupe} (/{allnoteprim_3.note_groupe}) </th>
+                                                                                    <th>{allnoteprim_3.groupe} (/{allnoteprim_3.maxnotegroupe}) </th>
                                                                                     <th>{allnoteprim_3.sumnote}</th>
                                                                                     <th></th>
                                                                                 </tr>
@@ -3647,7 +3647,7 @@ const BulletinByEleve = memo((props) => {
                                                                             <thead>
                                                                                 <tr>
 
-                                                                                    <th>{allnoteprim_4.groupe} (/{allnoteprim_4.note_groupe}) </th>
+                                                                                    <th>{allnoteprim_4.groupe} (/{allnoteprim_4.maxnotegroupe}) </th>
                                                                                     <th>{allnoteprim_4.sumnote}</th>
                                                                                     <th></th>
 
@@ -3669,7 +3669,7 @@ const BulletinByEleve = memo((props) => {
                                                                             <thead>
                                                                                 <tr>
 
-                                                                                    <th>{allnoteprim_5.groupe} (/{allnoteprim_5.note_groupe}) </th>
+                                                                                    <th>{allnoteprim_5.groupe} (/{allnoteprim_5.maxnotegroupe}) </th>
                                                                                     <th>{allnoteprim_5.sumnote}</th>
                                                                                     <th></th>
 
