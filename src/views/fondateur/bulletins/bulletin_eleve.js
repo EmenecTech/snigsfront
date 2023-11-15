@@ -225,20 +225,6 @@ const BulletinByEleve = memo((props) => {
             setmatiereslevel(res.data);
         })
     }
-
-     const [groupesclasse, setgroupesclasse] = useState([]);
-  useEffect(() => {
-    fetchAllGroupesClasse();
-  }, []);
-
-  const fetchAllGroupesClasse = () => {
-    http.get("/get_groupes_for_classe/" + etab + "/" + classe).then((res) => {
-      setgroupesclasse(res.data);
-    });
-
-      console.log(groupesclasse.id);
-  };
-
     const [classes, setclasses] = useState([]);
     useEffect(() => {
         fetchAllclasses();
