@@ -472,7 +472,7 @@ const BulletinByEleve = memo((props) => {
 
     const fetchAllNoteprim_9 = () => {
         http.get('/all/prim/notes_9/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNoteprim_1(res.data);
+            setAllNoteprim_9(res.data);
         })
     };
 
@@ -3534,7 +3534,10 @@ const BulletinByEleve = memo((props) => {
                                                                         </div>
 
                                                                         <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom et Prénom : {elevesinclass} </strong> </p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom et Prénom : {elevesinclass.name} </strong> </p>
+                                                                        </div>
+                                                                        <div className="mt-2">
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Classe : {elevesinclass.classe2} </strong> </p>
                                                                         </div>
 
                                                                     </Col>
