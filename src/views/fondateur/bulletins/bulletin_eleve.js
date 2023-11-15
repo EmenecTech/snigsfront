@@ -4024,7 +4024,7 @@ const BulletinByEleve = memo((props) => {
                                                                             <thead>
                                                                                 <tr>
                                                                                     <th>{allnoteprim_24.groupe} (/ {allnoteprim_24.max_groupe}) </th>
-                                                                                    <th></th>
+                                                                                    <th>{allnoteprim_24.sumnote}</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
