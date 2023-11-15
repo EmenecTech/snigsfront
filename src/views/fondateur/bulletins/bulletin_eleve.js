@@ -2042,7 +2042,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                                 <th>Appreciation</th>
                                                                             </tr>
-                                                                        </thead>
+                                                                        </thead> 
 
                                                                         <tbody>
                                                                             {allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
