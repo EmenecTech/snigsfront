@@ -3534,10 +3534,10 @@ const BulletinByEleve = memo((props) => {
                                                                         </div>
 
                                                                         <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom et Prénom : {elevesinclass.name} </strong> </p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom et Prénom : {elevesinclass} </strong> </p>
                                                                         </div>
                                                                         <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Classe : {elevesinclass.classe_eleve} </strong> </p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Classe : {classe} </strong> </p>
                                                                         </div>
 
                                                                     </Col>
