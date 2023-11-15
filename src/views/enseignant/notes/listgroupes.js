@@ -298,7 +298,7 @@ const EnseignantListGroupes = () => {
                                                         </select>
                                                     </Form.Group>
 
-                                                 <Button variant="primary" onClick={submitForm}>
+                                                 <Button variant="primary" onClick={submitFormprim}>
                                                     Ajouter
                                                 </Button>
                                                 </div>}
