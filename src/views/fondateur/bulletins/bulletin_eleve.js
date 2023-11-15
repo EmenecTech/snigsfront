@@ -3526,7 +3526,7 @@ const BulletinByEleve = memo((props) => {
                                                                     </Col>
 
                                                                 </Row>
-                                                                <Row>
+                                                                <Row className="mb-1">
 
                                                                     <Col sm="4" lg="4">
                                                                         <div className="mt-2">
@@ -3535,8 +3535,8 @@ const BulletinByEleve = memo((props) => {
 
                                                                     </Col>
                                                                      <Col sm="4" lg="4">
-                                                                        <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">Nom de l'enseignant: {enseign} </p>
+                                                                         <div className="mt-2">
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom et Prénom : {elevesinclass} </strong> </p>
                                                                         </div>
                                                                     </Col>
 
