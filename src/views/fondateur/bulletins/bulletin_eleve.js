@@ -226,6 +226,19 @@ const BulletinByEleve = memo((props) => {
         })
     }
 
+     const [groupesclasse, setgroupesclasse] = useState([]);
+  useEffect(() => {
+    fetchAllGroupesClasse();
+  }, []);
+
+  const fetchAllGroupesClasse = () => {
+    http.get("/get_groupes_for_classe/" + etab + "/" + classe).then((res) => {
+      setgroupesclasse(res.data);
+    });
+
+      console.log(groupesclasse.id);
+  };
+
     const [classes, setclasses] = useState([]);
     useEffect(() => {
         fetchAllclasses();
@@ -3555,6 +3568,7 @@ const BulletinByEleve = memo((props) => {
                                                                             <tr>
                                                                                 <th >Disciplines</th>
                                                                                 <th >Notes</th>
+                                                                                <th >Sur</th>
                                                                                 <th >Appréciation</th>
                                                                             </tr>
                                                                         </thead>
@@ -3565,6 +3579,8 @@ const BulletinByEleve = memo((props) => {
 
                                                                                         <td >{item.competence_visee_note}</td>
                                                                                         <td >{item.valeur_note}</td>
+                                                                                        <td > / {groupesclasse.marks_cg}</td>
+                                                                            
                                                                                         <td >{item.appreciation_note}</td>
                                                                                     </tr>
                                                                                 ))}
