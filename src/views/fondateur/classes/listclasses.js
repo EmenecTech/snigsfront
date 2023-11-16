@@ -478,7 +478,7 @@ const ListClasses = memo((props) => {
                                                 <td>{item.filiere}</td>
                                                 <td>{item.cycle_niveau}</td>
                                                 <td>
-                                                    <div className="flex align-items-center list-user-action">
+                                                    <div className="list-user-action">
                                                 {item.cycle_niveau === "Primaire" || item.cycle_niveau === "Maternelle" ? (<div>
                                                     <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Details/classePrim/" + item.niveau_classe + "/" + item.intitule_classe}>
                                                             <span className="btn-inner">
