@@ -64,6 +64,7 @@ import AddMembreAdministration from '../views/fondateur/administration/add_membr
 import EntryData from '../views/data';
 import ListNiveaux from '../views/fondateur/niveaux/listniveaux';
 import ListClasses from '../views/fondateur/classes/listclasses';
+import EditClasses from '../views/fondateur/classes/editclasse';
 import ListFilieres from '../views/fondateur/filieres/filieres';
 import UniClasse from '../views/fondateur/classes/classe';
 
@@ -363,6 +364,10 @@ export const DefaultRouter = [
                 path: 'List/classes/',
                 element: <ListClasses />
             },
+            {
+                path: 'Edit/classes/:id',
+                element: <EditClasses />
+            }
             {
                 path: 'List/filieres/',
                 element: <ListFilieres />
