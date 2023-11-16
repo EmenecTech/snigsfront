@@ -35,6 +35,7 @@ const EditClasses = memo((props) => {
     const [inputs, setInputs] = useState({});
     const etab = user.etablissement;
     const { id } = useParams();
+  
 
 
     const handleChange = (event) => {
