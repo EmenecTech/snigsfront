@@ -7049,7 +7049,7 @@ const BulletinByEleve = memo((props) => {
                                                                                 <tbody>
                                                                                     {allnoteprim_1.listnotes && allnoteprim_1.listnotes.map((item, grp_1) => (
                                                                                         <tr key={grp_1}>
-
+                                                                            
                                                                                             <td >{item.competence_visee_note}</td>
                                                                                         <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                                             <td >{item.appreciation_note}</td>
@@ -7059,17 +7059,17 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_1.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_1.groupe} (/ {allnoteprim_1.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_1.groupe}</th>
                                                                                 
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_2.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_2.listnotes && allnoteprim_2.listnotes.map((item, grp_2) => (
                                                                                         <tr key={grp_2}>
-
+                                                                            
                                                                                             <td >{item.competence_visee_note}</td>
                                                                                         <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                                             <td >{item.appreciation_note}</td>
@@ -7079,35 +7079,35 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_2.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_2.groupe} (/ {allnoteprim_2.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_2.groupe}</th>
                                                                                 
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_3.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_3.listnotes && allnoteprim_3.listnotes.map((item, grp_3) => (
                                                                                         <tr key={grp_3}>
-
+                                                                            
                                                                                             <td >{item.competence_visee_note}</td>
                                                                                         <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                                             <td >{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
                                                                                 </tbody>)}
-
+                                                                            
                                                                             {allnoteprim_3.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_3.groupe} (/ {allnoteprim_3.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_3.groupe}</th>
                                                                                 
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_4.existgrp > 0 && (
-
+                                                                            
                                                                                 <tbody>
                                                                                     {allnoteprim_4.listnotes && allnoteprim_4.listnotes.map((item, grp_4) => (
                                                                                         <tr key={grp_4}>
@@ -7120,16 +7120,16 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_4.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-
-                                                                                        <th>{allnoteprim_4.groupe} (/ {allnoteprim_4.max_groupe}) </th>
+                                                                            
+                                                                                        <th>{allnoteprim_4.groupe}</th>
                                                                                 
                                                                                         <th></th>
-
+                                                                            
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_5.existgrp > 0 && (
-
+                                                                            
                                                                                 <tbody>
                                                                                     {allnoteprim_5.listnotes && allnoteprim_5.listnotes.map((item, grp_5) => (
                                                                                         <tr key={grp_5}>
@@ -7142,11 +7142,11 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_5.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-
-                                                                                        <th>{allnoteprim_5.groupe} (/ {allnoteprim_5.max_groupe}) </th>
+                                                                            
+                                                                                        <th>{allnoteprim_5.groupe}</th>
                                                                                 
                                                                                         <th></th>
-
+                                                                            
                                                                                     </tr>
                                                                                 </thead>
                                                                             )}
@@ -7163,7 +7163,7 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_6.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_6.groupe} (/ {allnoteprim_6.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_6.groupe}</th>
                                                                                 
                                                                                         <th></th>
                                                                                     </tr>
@@ -7181,7 +7181,7 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_7.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_7.groupe} (/ {allnoteprim_7.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_7.groupe}</th>
                                                                                 
                                                                                         <th></th>
                                                                                     </tr>
@@ -7199,12 +7199,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_8.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_8.groupe} (/ {allnoteprim_8.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_8.groupe}</th>
                                                                                 
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_9.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_9.listnotes && allnoteprim_9.listnotes.map((item, grp_9) => (
@@ -7218,7 +7218,7 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_9.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_9.groupe} (/ {allnoteprim_9.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_9.groupe}</th>
                                                                                 
                                                                                         <th></th>
                                                                                     </tr>
@@ -7236,12 +7236,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_10.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_10.groupe} (/ {allnoteprim_10.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_10.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_11.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_11.listnotes && allnoteprim_11.listnotes.map((item, grp_11) => (
@@ -7255,14 +7255,14 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_11.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_11.groupe} (/ {allnoteprim_11.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_11.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_12.existgrp > 0 && (
-
+                                                                            
                                                                                 <tbody>
                                                                                     {allnoteprim_12.listnotes && allnoteprim_12.listnotes.map((item, grp_12) => (
                                                                                         <tr key={grp_12}>
@@ -7275,12 +7275,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_12.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_12.groupe} (/ {allnoteprim_12.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_12.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_13.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_13.listnotes && allnoteprim_13.listnotes.map((item, grp_13) => (
@@ -7294,15 +7294,15 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_13.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_13.groupe} (/ {allnoteprim_13.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_13.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_14.existgrp > 0 && (
                                                                                 <tbody>
-
+                                                                            
                                                                                     {allnoteprim_14.listnotes && allnoteprim_14.listnotes.map((item, grp_14) => (
                                                                                         <tr key={grp_14}>
                                                                                             <td >{item.competence_visee_note}</td>
@@ -7314,13 +7314,13 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_14.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_14.groupe} (/ {allnoteprim_14.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_14.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
-
+                                                                            
+                                                                            
                                                                             {allnoteprim_15.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_15.listnotes && allnoteprim_15.listnotes.map((item, grp_15) => (
@@ -7334,7 +7334,7 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_15.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_15.groupe} (/ {allnoteprim_15.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_15.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
@@ -7352,12 +7352,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_16.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_16.groupe} (/ {allnoteprim_16.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_16.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_17.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_17.listnotes && allnoteprim_17.listnotes.map((item, grp_17) => (
@@ -7371,13 +7371,13 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_17.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_17.groupe} (/ {allnoteprim_17.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_17.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
-
+                                                                            
+                                                                            
                                                                             {allnoteprim_18.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_18.listnotes && allnoteprim_18.listnotes.map((item, grp_18) => (
@@ -7391,12 +7391,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_18.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_18.groupe} (/ {allnoteprim_18.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_18.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_19.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_19.listnotes && allnoteprim_19.listnotes.map((item, grp_19) => (
@@ -7410,12 +7410,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_19.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_19.groupe} (/ {allnoteprim_19.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_19.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_20.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_20.listnotes && allnoteprim_20.listnotes.map((item, grp_20) => (
@@ -7429,12 +7429,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_20.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_20.groupe} (/ {allnoteprim_20.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_20.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_21.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_21.listnotes && allnoteprim_21.listnotes.map((item, grp_21) => (
@@ -7448,12 +7448,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_21.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_21.groupe} (/ {allnoteprim_21.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_21.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_22.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_22.listnotes && allnoteprim_22.listnotes.map((item, grp_22) => (
@@ -7467,12 +7467,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_22.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_22.groupe} (/ {allnoteprim_22.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_22.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_23.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_23.listnotes && allnoteprim_23.listnotes.map((item, grp_23) => (
@@ -7486,12 +7486,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_23.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_23.groupe} (/ {allnoteprim_23.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_23.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_24.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_24.listnotes && allnoteprim_24.listnotes.map((item, grp_24) => (
@@ -7505,12 +7505,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_24.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_24.groupe} (/ {allnoteprim_24.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_24.groupe} </th>
                                                                                         <th></th>
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_25.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_25.listnotes && allnoteprim_25.listnotes.map((item, grp_25) => (
@@ -7524,12 +7524,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_25.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_25.groupe} (/ {allnoteprim_25.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_25.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_26.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_26.listnotes && allnoteprim_26.listnotes.map((item, grp_26) => (
@@ -7543,12 +7543,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_26.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_26.groupe} (/ {allnoteprim_26.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_26.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_27.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_27.listnotes && allnoteprim_27.listnotes.map((item, grp_27) => (
@@ -7562,12 +7562,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_27.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_27.groupe} (/ {allnoteprim_27.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_27.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_28.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_28.listnotes && allnoteprim_28.listnotes.map((item, grp_28) => (
@@ -7581,12 +7581,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_28.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_28.groupe} (/ {allnoteprim_28.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_28.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_29.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_29.listnotes && allnoteprim_29.listnotes.map((item, grp_29) => (
@@ -7600,12 +7600,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_29.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_29.groupe} (/ {allnoteprim_29.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_29.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_30.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_30.listnotes && allnoteprim_30.listnotes.map((item, grp_30) => (
@@ -7619,12 +7619,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_30.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_30.groupe} (/ {allnoteprim_30.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_30.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_31.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_31.listnotes && allnoteprim_31.listnotes.map((item, grp_31) => (
@@ -7638,12 +7638,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_31.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_31.groupe} (/ {allnoteprim_31.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_31.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_32.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_32.listnotes && allnoteprim_32.listnotes.map((item, grp_32) => (
@@ -7657,12 +7657,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_32.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_32.groupe} (/ {allnoteprim_32.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_32.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_33.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_33.listnotes && allnoteprim_33.listnotes.map((item, grp_33) => (
@@ -7676,12 +7676,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_33.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_33.groupe} (/ {allnoteprim_33.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_33.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_34.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_34.listnotes && allnoteprim_34.listnotes.map((item, grp_34) => (
@@ -7695,12 +7695,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_34.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_34.groupe} (/ {allnoteprim_34.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_34.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_35.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_35.listnotes && allnoteprim_35.listnotes.map((item, grp_35) => (
@@ -7714,12 +7714,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_35.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_35.groupe} (/ {allnoteprim_35.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_35.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_36.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_36.listnotes && allnoteprim_36.listnotes.map((item, grp_36) => (
@@ -7733,12 +7733,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_36.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_36.groupe} (/ {allnoteprim_36.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_36.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_37.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_37.listnotes && allnoteprim_37.listnotes.map((item, grp_37) => (
@@ -7752,12 +7752,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_37.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_37.groupe} (/ {allnoteprim_37.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_37.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_38.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_38.listnotes && allnoteprim_38.listnotes.map((item, grp_38) => (
@@ -7771,7 +7771,7 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_38.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_38.groupe} (/ {allnoteprim_38.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_38.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
@@ -7789,12 +7789,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_39.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_39.groupe} (/ {allnoteprim_39.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_39.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_40.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_40.listnotes && allnoteprim_40.listnotes.map((item, grp_40) => (
@@ -7808,12 +7808,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_40.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_40.groupe} (/ {allnoteprim_40.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_40.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_41.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_41.listnotes && allnoteprim_41.listnotes.map((item, grp_41) => (
@@ -7827,12 +7827,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_41.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_41.groupe} (/ {allnoteprim_41.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_41.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_42.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_42.listnotes && allnoteprim_42.listnotes.map((item, grp_42) => (
@@ -7846,12 +7846,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_42.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_42.groupe} (/ {allnoteprim_42.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_42.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_43.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_43.listnotes && allnoteprim_43.listnotes.map((item, grp_43) => (
@@ -7865,12 +7865,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_43.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_43.groupe} (/ {allnoteprim_43.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_43.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_44.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_44.listnotes && allnoteprim_44.listnotes.map((item, grp_44) => (
@@ -7884,12 +7884,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_44.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_44.groupe} (/ {allnoteprim_44.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_44.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_45.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_45.listnotes && allnoteprim_45.listnotes.map((item, grp_45) => (
@@ -7903,12 +7903,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_45.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_45.groupe} (/ {allnoteprim_45.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_45.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_46.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_46.listnotes && allnoteprim_46.listnotes.map((item, grp_46) => (
@@ -7922,12 +7922,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_46.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_46.groupe} (/ {allnoteprim_46.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_46.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_47.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_47.listnotes && allnoteprim_47.listnotes.map((item, grp_47) => (
@@ -7941,12 +7941,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_47.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_47.groupe} (/ {allnoteprim_47.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_47.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_48.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_48.listnotes && allnoteprim_48.listnotes.map((item, grp_48) => (
@@ -7960,12 +7960,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_48.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_48.groupe} (/ {allnoteprim_48.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_48.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_49.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_49.listnotes && allnoteprim_49.listnotes.map((item, grp_49) => (
@@ -7979,12 +7979,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_49.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_49.groupe} (/ {allnoteprim_49.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_49.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_50.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_50.listnotes && allnoteprim_50.listnotes.map((item, grp_50) => (
@@ -7998,12 +7998,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_50.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_50.groupe} (/ {allnoteprim_50.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_50.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_51.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_51.listnotes && allnoteprim_51.listnotes.map((item, grp_51) => (
@@ -8017,12 +8017,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_51.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_51.groupe} (/ {allnoteprim_51.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_51.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}   
-
+                                                                            
                                                                                 {allnoteprim_52.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_52.listnotes && allnoteprim_52.listnotes.map((item, grp_52) => (
@@ -8036,12 +8036,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_52.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_52.groupe} (/ {allnoteprim_52.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_52.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_53.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_53.listnotes && allnoteprim_53.listnotes.map((item, grp_53) => (
@@ -8055,12 +8055,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_53.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_53.groupe} (/ {allnoteprim_53.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_53.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_54.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_54.listnotes && allnoteprim_54.listnotes.map((item, grp_54) => (
@@ -8074,12 +8074,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_54.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_54.groupe} (/ {allnoteprim_54.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_54.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_55.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_55.listnotes && allnoteprim_55.listnotes.map((item, grp_55) => (
@@ -8093,12 +8093,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_55.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_55.groupe} (/ {allnoteprim_55.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_55.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_56.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_56.listnotes && allnoteprim_56.listnotes.map((item, grp_56) => (
@@ -8112,12 +8112,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_56.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_56.groupe} (/ {allnoteprim_56.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_56.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_57.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_57.listnotes && allnoteprim_57.listnotes.map((item, grp_57) => (
@@ -8131,12 +8131,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_57.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_57.groupe} (/ {allnoteprim_57.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_57.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_58.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_58.listnotes && allnoteprim_58.listnotes.map((item, grp_58) => (
@@ -8150,12 +8150,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_58.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_58.groupe} (/ {allnoteprim_58.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_58.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_59.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_59.listnotes && allnoteprim_59.listnotes.map((item, grp_59) => (
@@ -8169,12 +8169,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_59.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_59.groupe} (/ {allnoteprim_59.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_59.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_60.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_60.listnotes && allnoteprim_60.listnotes.map((item, grp_60) => (
@@ -8188,12 +8188,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_60.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_60.groupe} (/ {allnoteprim_60.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_60.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_61.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_61.listnotes && allnoteprim_61.listnotes.map((item, grp_61) => (
@@ -8207,12 +8207,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_61.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_61.groupe} (/ {allnoteprim_61.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_61.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_62.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_62.listnotes && allnoteprim_62.listnotes.map((item, grp_62) => (
@@ -8226,12 +8226,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_62.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_62.groupe} (/ {allnoteprim_62.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_62.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_63.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_63.listnotes && allnoteprim_63.listnotes.map((item, grp_63) => (
@@ -8245,12 +8245,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_63.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_63.groupe} (/ {allnoteprim_63.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_63.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_64.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_64.listnotes && allnoteprim_64.listnotes.map((item, grp_64) => (
@@ -8264,12 +8264,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_64.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_64.groupe} (/ {allnoteprim_64.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_64.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_65.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_65.listnotes && allnoteprim_65.listnotes.map((item, grp_65) => (
@@ -8283,12 +8283,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_65.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_65.groupe} (/ {allnoteprim_65.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_65.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_66.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_66.listnotes && allnoteprim_66.listnotes.map((item, grp_66) => (
@@ -8302,12 +8302,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_66.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_66.groupe} (/ {allnoteprim_66.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_66.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_67.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_67.listnotes && allnoteprim_67.listnotes.map((item, grp_67) => (
@@ -8321,12 +8321,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_67.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_67.groupe} (/ {allnoteprim_67.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_67.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_68.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_68.listnotes && allnoteprim_68.listnotes.map((item, grp_68) => (
@@ -8340,12 +8340,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_68.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_68.groupe} (/ {allnoteprim_68.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_68.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_69.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_69.listnotes && allnoteprim_69.listnotes.map((item, grp_69) => (
@@ -8359,12 +8359,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_69.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_69.groupe} (/ {allnoteprim_69.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_69.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_70.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_70.listnotes && allnoteprim_70.listnotes.map((item, grp_70) => (
@@ -8378,12 +8378,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_70.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_70.groupe} (/ {allnoteprim_70.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_70.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_71.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_71.listnotes && allnoteprim_71.listnotes.map((item, grp_71) => (
@@ -8397,12 +8397,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_71.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_71.groupe} (/ {allnoteprim_71.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_71.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_72.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_72.listnotes && allnoteprim_72.listnotes.map((item, grp_72) => (
@@ -8416,12 +8416,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_72.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_72.groupe} (/ {allnoteprim_72.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_72.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_73.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_73.listnotes && allnoteprim_73.listnotes.map((item, grp_73) => (
@@ -8435,12 +8435,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_73.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_73.groupe} (/ {allnoteprim_73.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_73.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_74.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_74.listnotes && allnoteprim_74.listnotes.map((item, grp_74) => (
@@ -8454,12 +8454,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_74.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_74.groupe} (/ {allnoteprim_74.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_74.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_75.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_75.listnotes && allnoteprim_75.listnotes.map((item, grp_75) => (
@@ -8473,12 +8473,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_75.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_75.groupe} (/ {allnoteprim_75.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_75.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_76.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_76.listnotes && allnoteprim_76.listnotes.map((item, grp_76) => (
@@ -8492,12 +8492,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_76.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_76.groupe} (/ {allnoteprim_76.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_76.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_77.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_77.listnotes && allnoteprim_77.listnotes.map((item, grp_77) => (
@@ -8511,12 +8511,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_77.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_77.groupe} (/ {allnoteprim_77.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_77.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_78.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_78.listnotes && allnoteprim_78.listnotes.map((item, grp_78) => (
@@ -8530,12 +8530,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_78.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_78.groupe} (/ {allnoteprim_78.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_78.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_79.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_79.listnotes && allnoteprim_79.listnotes.map((item, grp_79) => (
@@ -8549,12 +8549,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_79.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_79.groupe} (/ {allnoteprim_79.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_79.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_80.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_80.listnotes && allnoteprim_80.listnotes.map((item, grp_80) => (
@@ -8568,12 +8568,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_80.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_80.groupe} (/ {allnoteprim_80.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_80.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-                                                                                
+    
                                                                                  <tbody>
 
                                                                                         <tr>
@@ -11441,7 +11441,7 @@ const BulletinByEleve = memo((props) => {
                                                                                 <tbody>
                                                                                     {allnoteprim_1.listnotes && allnoteprim_1.listnotes.map((item, grp_1) => (
                                                                                         <tr key={grp_1}>
-
+                                                                            
                                                                                             <td >{item.competence_visee_note}</td>
                                                                                         <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                                             <td >{item.appreciation_note}</td>
@@ -11451,17 +11451,17 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_1.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_1.groupe} (/ {allnoteprim_1.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_1.groupe}</th>
                                                                                 
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_2.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_2.listnotes && allnoteprim_2.listnotes.map((item, grp_2) => (
                                                                                         <tr key={grp_2}>
-
+                                                                            
                                                                                             <td >{item.competence_visee_note}</td>
                                                                                         <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                                             <td >{item.appreciation_note}</td>
@@ -11471,35 +11471,35 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_2.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_2.groupe} (/ {allnoteprim_2.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_2.groupe}</th>
                                                                                 
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_3.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_3.listnotes && allnoteprim_3.listnotes.map((item, grp_3) => (
                                                                                         <tr key={grp_3}>
-
+                                                                            
                                                                                             <td >{item.competence_visee_note}</td>
                                                                                         <td>{getEmojiForNote(item.valeur_note)}</td>
                                                                                             <td >{item.appreciation_note}</td>
                                                                                         </tr>
                                                                                     ))}
                                                                                 </tbody>)}
-
+                                                                            
                                                                             {allnoteprim_3.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_3.groupe} (/ {allnoteprim_3.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_3.groupe}</th>
                                                                                 
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_4.existgrp > 0 && (
-
+                                                                            
                                                                                 <tbody>
                                                                                     {allnoteprim_4.listnotes && allnoteprim_4.listnotes.map((item, grp_4) => (
                                                                                         <tr key={grp_4}>
@@ -11512,16 +11512,16 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_4.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-
-                                                                                        <th>{allnoteprim_4.groupe} (/ {allnoteprim_4.max_groupe}) </th>
+                                                                            
+                                                                                        <th>{allnoteprim_4.groupe}</th>
                                                                                 
                                                                                         <th></th>
-
+                                                                            
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_5.existgrp > 0 && (
-
+                                                                            
                                                                                 <tbody>
                                                                                     {allnoteprim_5.listnotes && allnoteprim_5.listnotes.map((item, grp_5) => (
                                                                                         <tr key={grp_5}>
@@ -11534,11 +11534,11 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_5.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-
-                                                                                        <th>{allnoteprim_5.groupe} (/ {allnoteprim_5.max_groupe}) </th>
+                                                                            
+                                                                                        <th>{allnoteprim_5.groupe}</th>
                                                                                 
                                                                                         <th></th>
-
+                                                                            
                                                                                     </tr>
                                                                                 </thead>
                                                                             )}
@@ -11555,7 +11555,7 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_6.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_6.groupe} (/ {allnoteprim_6.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_6.groupe}</th>
                                                                                 
                                                                                         <th></th>
                                                                                     </tr>
@@ -11573,7 +11573,7 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_7.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_7.groupe} (/ {allnoteprim_7.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_7.groupe}</th>
                                                                                 
                                                                                         <th></th>
                                                                                     </tr>
@@ -11591,12 +11591,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_8.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_8.groupe} (/ {allnoteprim_8.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_8.groupe}</th>
                                                                                 
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_9.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_9.listnotes && allnoteprim_9.listnotes.map((item, grp_9) => (
@@ -11610,7 +11610,7 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_9.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_9.groupe} (/ {allnoteprim_9.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_9.groupe}</th>
                                                                                 
                                                                                         <th></th>
                                                                                     </tr>
@@ -11628,12 +11628,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_10.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_10.groupe} (/ {allnoteprim_10.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_10.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_11.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_11.listnotes && allnoteprim_11.listnotes.map((item, grp_11) => (
@@ -11647,14 +11647,14 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_11.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_11.groupe} (/ {allnoteprim_11.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_11.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_12.existgrp > 0 && (
-
+                                                                            
                                                                                 <tbody>
                                                                                     {allnoteprim_12.listnotes && allnoteprim_12.listnotes.map((item, grp_12) => (
                                                                                         <tr key={grp_12}>
@@ -11667,12 +11667,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_12.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_12.groupe} (/ {allnoteprim_12.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_12.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_13.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_13.listnotes && allnoteprim_13.listnotes.map((item, grp_13) => (
@@ -11686,15 +11686,15 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_13.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_13.groupe} (/ {allnoteprim_13.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_13.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_14.existgrp > 0 && (
                                                                                 <tbody>
-
+                                                                            
                                                                                     {allnoteprim_14.listnotes && allnoteprim_14.listnotes.map((item, grp_14) => (
                                                                                         <tr key={grp_14}>
                                                                                             <td >{item.competence_visee_note}</td>
@@ -11706,13 +11706,13 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_14.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_14.groupe} (/ {allnoteprim_14.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_14.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
-
+                                                                            
+                                                                            
                                                                             {allnoteprim_15.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_15.listnotes && allnoteprim_15.listnotes.map((item, grp_15) => (
@@ -11726,7 +11726,7 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_15.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_15.groupe} (/ {allnoteprim_15.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_15.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
@@ -11744,12 +11744,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_16.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_16.groupe} (/ {allnoteprim_16.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_16.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_17.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_17.listnotes && allnoteprim_17.listnotes.map((item, grp_17) => (
@@ -11763,13 +11763,13 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_17.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_17.groupe} (/ {allnoteprim_17.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_17.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
-
+                                                                            
+                                                                            
                                                                             {allnoteprim_18.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_18.listnotes && allnoteprim_18.listnotes.map((item, grp_18) => (
@@ -11783,12 +11783,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_18.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_18.groupe} (/ {allnoteprim_18.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_18.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_19.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_19.listnotes && allnoteprim_19.listnotes.map((item, grp_19) => (
@@ -11802,12 +11802,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_19.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_19.groupe} (/ {allnoteprim_19.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_19.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_20.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_20.listnotes && allnoteprim_20.listnotes.map((item, grp_20) => (
@@ -11821,12 +11821,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_20.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_20.groupe} (/ {allnoteprim_20.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_20.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_21.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_21.listnotes && allnoteprim_21.listnotes.map((item, grp_21) => (
@@ -11840,12 +11840,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_21.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_21.groupe} (/ {allnoteprim_21.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_21.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_22.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_22.listnotes && allnoteprim_22.listnotes.map((item, grp_22) => (
@@ -11859,12 +11859,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_22.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_22.groupe} (/ {allnoteprim_22.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_22.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_23.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_23.listnotes && allnoteprim_23.listnotes.map((item, grp_23) => (
@@ -11878,12 +11878,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_23.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_23.groupe} (/ {allnoteprim_23.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_23.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_24.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_24.listnotes && allnoteprim_24.listnotes.map((item, grp_24) => (
@@ -11897,12 +11897,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_24.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_24.groupe} (/ {allnoteprim_24.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_24.groupe} </th>
                                                                                         <th></th>
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_25.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_25.listnotes && allnoteprim_25.listnotes.map((item, grp_25) => (
@@ -11916,12 +11916,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_25.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_25.groupe} (/ {allnoteprim_25.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_25.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_26.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_26.listnotes && allnoteprim_26.listnotes.map((item, grp_26) => (
@@ -11935,12 +11935,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_26.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_26.groupe} (/ {allnoteprim_26.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_26.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_27.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_27.listnotes && allnoteprim_27.listnotes.map((item, grp_27) => (
@@ -11954,12 +11954,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_27.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_27.groupe} (/ {allnoteprim_27.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_27.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_28.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_28.listnotes && allnoteprim_28.listnotes.map((item, grp_28) => (
@@ -11973,12 +11973,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_28.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_28.groupe} (/ {allnoteprim_28.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_28.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_29.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_29.listnotes && allnoteprim_29.listnotes.map((item, grp_29) => (
@@ -11992,12 +11992,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_29.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_29.groupe} (/ {allnoteprim_29.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_29.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_30.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_30.listnotes && allnoteprim_30.listnotes.map((item, grp_30) => (
@@ -12011,12 +12011,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_30.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_30.groupe} (/ {allnoteprim_30.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_30.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_31.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_31.listnotes && allnoteprim_31.listnotes.map((item, grp_31) => (
@@ -12030,12 +12030,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_31.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_31.groupe} (/ {allnoteprim_31.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_31.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_32.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_32.listnotes && allnoteprim_32.listnotes.map((item, grp_32) => (
@@ -12049,12 +12049,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_32.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_32.groupe} (/ {allnoteprim_32.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_32.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_33.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_33.listnotes && allnoteprim_33.listnotes.map((item, grp_33) => (
@@ -12068,12 +12068,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_33.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_33.groupe} (/ {allnoteprim_33.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_33.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_34.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_34.listnotes && allnoteprim_34.listnotes.map((item, grp_34) => (
@@ -12087,12 +12087,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_34.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_34.groupe} (/ {allnoteprim_34.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_34.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                             {allnoteprim_35.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_35.listnotes && allnoteprim_35.listnotes.map((item, grp_35) => (
@@ -12106,12 +12106,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_35.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_35.groupe} (/ {allnoteprim_35.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_35.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_36.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_36.listnotes && allnoteprim_36.listnotes.map((item, grp_36) => (
@@ -12125,12 +12125,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_36.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_36.groupe} (/ {allnoteprim_36.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_36.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_37.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_37.listnotes && allnoteprim_37.listnotes.map((item, grp_37) => (
@@ -12144,12 +12144,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_37.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_37.groupe} (/ {allnoteprim_37.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_37.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_38.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_38.listnotes && allnoteprim_38.listnotes.map((item, grp_38) => (
@@ -12163,7 +12163,7 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_38.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_38.groupe} (/ {allnoteprim_38.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_38.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
@@ -12181,12 +12181,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_39.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_39.groupe} (/ {allnoteprim_39.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_39.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_40.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_40.listnotes && allnoteprim_40.listnotes.map((item, grp_40) => (
@@ -12200,12 +12200,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_40.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_40.groupe} (/ {allnoteprim_40.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_40.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_41.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_41.listnotes && allnoteprim_41.listnotes.map((item, grp_41) => (
@@ -12219,12 +12219,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_41.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_41.groupe} (/ {allnoteprim_41.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_41.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_42.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_42.listnotes && allnoteprim_42.listnotes.map((item, grp_42) => (
@@ -12238,12 +12238,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_42.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_42.groupe} (/ {allnoteprim_42.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_42.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_43.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_43.listnotes && allnoteprim_43.listnotes.map((item, grp_43) => (
@@ -12257,12 +12257,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_43.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_43.groupe} (/ {allnoteprim_43.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_43.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_44.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_44.listnotes && allnoteprim_44.listnotes.map((item, grp_44) => (
@@ -12276,12 +12276,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_44.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_44.groupe} (/ {allnoteprim_44.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_44.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_45.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_45.listnotes && allnoteprim_45.listnotes.map((item, grp_45) => (
@@ -12295,12 +12295,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_45.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_45.groupe} (/ {allnoteprim_45.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_45.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_46.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_46.listnotes && allnoteprim_46.listnotes.map((item, grp_46) => (
@@ -12314,12 +12314,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_46.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_46.groupe} (/ {allnoteprim_46.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_46.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_47.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_47.listnotes && allnoteprim_47.listnotes.map((item, grp_47) => (
@@ -12333,12 +12333,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_47.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_47.groupe} (/ {allnoteprim_47.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_47.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_48.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_48.listnotes && allnoteprim_48.listnotes.map((item, grp_48) => (
@@ -12352,12 +12352,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_48.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_48.groupe} (/ {allnoteprim_48.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_48.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_49.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_49.listnotes && allnoteprim_49.listnotes.map((item, grp_49) => (
@@ -12371,12 +12371,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_49.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_49.groupe} (/ {allnoteprim_49.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_49.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_50.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_50.listnotes && allnoteprim_50.listnotes.map((item, grp_50) => (
@@ -12390,12 +12390,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_50.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_50.groupe} (/ {allnoteprim_50.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_50.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_51.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_51.listnotes && allnoteprim_51.listnotes.map((item, grp_51) => (
@@ -12409,12 +12409,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_51.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_51.groupe} (/ {allnoteprim_51.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_51.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}   
-
+                                                                            
                                                                                 {allnoteprim_52.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_52.listnotes && allnoteprim_52.listnotes.map((item, grp_52) => (
@@ -12428,12 +12428,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_52.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_52.groupe} (/ {allnoteprim_52.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_52.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_53.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_53.listnotes && allnoteprim_53.listnotes.map((item, grp_53) => (
@@ -12447,12 +12447,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_53.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_53.groupe} (/ {allnoteprim_53.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_53.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_54.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_54.listnotes && allnoteprim_54.listnotes.map((item, grp_54) => (
@@ -12466,12 +12466,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_54.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_54.groupe} (/ {allnoteprim_54.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_54.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_55.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_55.listnotes && allnoteprim_55.listnotes.map((item, grp_55) => (
@@ -12485,12 +12485,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_55.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_55.groupe} (/ {allnoteprim_55.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_55.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_56.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_56.listnotes && allnoteprim_56.listnotes.map((item, grp_56) => (
@@ -12504,12 +12504,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_56.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_56.groupe} (/ {allnoteprim_56.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_56.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_57.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_57.listnotes && allnoteprim_57.listnotes.map((item, grp_57) => (
@@ -12523,12 +12523,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_57.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_57.groupe} (/ {allnoteprim_57.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_57.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_58.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_58.listnotes && allnoteprim_58.listnotes.map((item, grp_58) => (
@@ -12542,12 +12542,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_58.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_58.groupe} (/ {allnoteprim_58.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_58.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_59.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_59.listnotes && allnoteprim_59.listnotes.map((item, grp_59) => (
@@ -12561,12 +12561,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_59.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_59.groupe} (/ {allnoteprim_59.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_59.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_60.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_60.listnotes && allnoteprim_60.listnotes.map((item, grp_60) => (
@@ -12580,12 +12580,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_60.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_60.groupe} (/ {allnoteprim_60.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_60.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_61.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_61.listnotes && allnoteprim_61.listnotes.map((item, grp_61) => (
@@ -12599,12 +12599,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_61.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_61.groupe} (/ {allnoteprim_61.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_61.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_62.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_62.listnotes && allnoteprim_62.listnotes.map((item, grp_62) => (
@@ -12618,12 +12618,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_62.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_62.groupe} (/ {allnoteprim_62.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_62.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_63.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_63.listnotes && allnoteprim_63.listnotes.map((item, grp_63) => (
@@ -12637,12 +12637,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_63.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_63.groupe} (/ {allnoteprim_63.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_63.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_64.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_64.listnotes && allnoteprim_64.listnotes.map((item, grp_64) => (
@@ -12656,12 +12656,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_64.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_64.groupe} (/ {allnoteprim_64.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_64.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_65.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_65.listnotes && allnoteprim_65.listnotes.map((item, grp_65) => (
@@ -12675,12 +12675,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_65.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_65.groupe} (/ {allnoteprim_65.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_65.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_66.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_66.listnotes && allnoteprim_66.listnotes.map((item, grp_66) => (
@@ -12694,12 +12694,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_66.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_66.groupe} (/ {allnoteprim_66.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_66.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_67.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_67.listnotes && allnoteprim_67.listnotes.map((item, grp_67) => (
@@ -12713,12 +12713,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_67.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_67.groupe} (/ {allnoteprim_67.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_67.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_68.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_68.listnotes && allnoteprim_68.listnotes.map((item, grp_68) => (
@@ -12732,12 +12732,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_68.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_68.groupe} (/ {allnoteprim_68.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_68.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_69.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_69.listnotes && allnoteprim_69.listnotes.map((item, grp_69) => (
@@ -12751,12 +12751,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_69.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_69.groupe} (/ {allnoteprim_69.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_69.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_70.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_70.listnotes && allnoteprim_70.listnotes.map((item, grp_70) => (
@@ -12770,12 +12770,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_70.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_70.groupe} (/ {allnoteprim_70.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_70.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_71.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_71.listnotes && allnoteprim_71.listnotes.map((item, grp_71) => (
@@ -12789,12 +12789,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_71.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_71.groupe} (/ {allnoteprim_71.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_71.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_72.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_72.listnotes && allnoteprim_72.listnotes.map((item, grp_72) => (
@@ -12808,12 +12808,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_72.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_72.groupe} (/ {allnoteprim_72.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_72.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_73.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_73.listnotes && allnoteprim_73.listnotes.map((item, grp_73) => (
@@ -12827,12 +12827,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_73.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_73.groupe} (/ {allnoteprim_73.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_73.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_74.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_74.listnotes && allnoteprim_74.listnotes.map((item, grp_74) => (
@@ -12846,12 +12846,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_74.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_74.groupe} (/ {allnoteprim_74.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_74.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_75.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_75.listnotes && allnoteprim_75.listnotes.map((item, grp_75) => (
@@ -12865,12 +12865,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_75.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_75.groupe} (/ {allnoteprim_75.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_75.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_76.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_76.listnotes && allnoteprim_76.listnotes.map((item, grp_76) => (
@@ -12884,12 +12884,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_76.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_76.groupe} (/ {allnoteprim_76.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_76.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_77.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_77.listnotes && allnoteprim_77.listnotes.map((item, grp_77) => (
@@ -12903,12 +12903,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_77.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_77.groupe} (/ {allnoteprim_77.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_77.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_78.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_78.listnotes && allnoteprim_78.listnotes.map((item, grp_78) => (
@@ -12922,12 +12922,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_78.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_78.groupe} (/ {allnoteprim_78.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_78.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_79.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_79.listnotes && allnoteprim_79.listnotes.map((item, grp_79) => (
@@ -12941,12 +12941,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_79.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_79.groupe} (/ {allnoteprim_79.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_79.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                            
                                                                                 {allnoteprim_80.existgrp > 0 && (
                                                                                 <tbody>
                                                                                     {allnoteprim_80.listnotes && allnoteprim_80.listnotes.map((item, grp_80) => (
@@ -12960,12 +12960,12 @@ const BulletinByEleve = memo((props) => {
                                                                             {allnoteprim_80.existgrp > 0 && (
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>{allnoteprim_80.groupe} (/ {allnoteprim_80.max_groupe}) </th>
+                                                                                        <th>{allnoteprim_80.groupe} </th>
                                                                                     
                                                                                         <th></th>
                                                                                     </tr>
                                                                                 </thead>)}
-
+                                                                                
                                                                                 
                                                                         
                                                                                     <tbody>
