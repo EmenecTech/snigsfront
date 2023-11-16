@@ -85,7 +85,7 @@ const AdminEvaluationListClassesEleves = memo((props) => {
     const submitMoyenPr = () => {
     http.get("/gen_moyen/" + etab + "/" + evaluation + "/" + classe).then((res) => {
         })    
-        console.log(evaluation);
+        console.log(classe);
 
         alert("Bulletins Terminés")
         
