@@ -519,12 +519,12 @@ const ListClasses = memo((props) => {
                                                         </Link>{' '}
                                             </div>)}
 
-                                                        
+                                                <div><Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Edit/classes/" + item.intitule_classe}>
+                                                            Modifier
+                                                        </Link>{' '}</div>         
                             
                                                     </div>  
-                                                    <div><Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Edit/classes/" + item.intitule_classe}>
-                                                            Modifier
-                                                        </Link>{' '}</div>
+
                                                 </td>
     
                                               
