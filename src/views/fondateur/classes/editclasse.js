@@ -142,16 +142,25 @@ const EditClasses = memo((props) => {
                         <Card.Body>
 
                    <Form>
-                                <Row>
-                                    <Col>
-                                        <Form.Group as={Row} className="form-group">
-                                            <Form.Group className="form-group">
-                                                <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Edit Course</div>):(<div> Niveau </div>)}</Form.Label>
-                                                <Form.Control type="text" defaultValue="" name="niveau" value={inputs.niveau || ""} onChange={handleChange} required />
-                                            </Form.Group>
-                                        </Form.Group>
-                                    </Col>
-                                </Row>
+                               <Row>
+
+                                            <Col>
+                                                <Form.Group as={Row} className="form-group">
+                                                    <Form.Group className="form-group">
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)} *</Form.Label>
+                                                        <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange} required>
+                                                            <option></option>
+                                                            {niveaux.map((item) => (
+                                                                <option key={item.id} value={item.intitule_niveau}>{item.intitule_niveau}</option>
+
+                                                            ))}
+
+                                                        </select>
+                                                    </Form.Group>
+                                                </Form.Group>
+                                            </Col>
+
+                                        </Row>
 
                                 <div className="text-center">
                                     <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Confirm</div>):(<div> Confirmer</div>)}</Button>
