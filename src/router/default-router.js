@@ -365,7 +365,7 @@ export const DefaultRouter = [
                 element: <ListClasses />
             },
             {
-                path: 'Edit/classes/:id',
+                path: 'Edit/classes/',
                 element: <EditClasses />
             },
             {
