@@ -82,6 +82,15 @@ const AdminEvaluationListClassesEleves = memo((props) => {
         })
     }
 
+    const submitMoyenPr = (evaluation) => {
+    http.get("/gen_moyen/" + etab + "/" + evaluation + "/" + classe).then((res) => {
+        })    
+        console.log(evaluation);
+
+        alert("Bulletins Terminés")
+        
+    }
+
 
 
 
@@ -324,6 +333,10 @@ const AdminEvaluationListClassesEleves = memo((props) => {
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
                                 <h4 className="card-title">Elèves</h4>
+                            </div>
+
+                            <div>
+                                <Button variant="primary mt-2" onClick={() => {submitMoyenPr(item.intitule_evaluation) }}>Générer les moyennes</Button>
                             </div>
 
 
