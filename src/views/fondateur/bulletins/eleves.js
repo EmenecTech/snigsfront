@@ -61,7 +61,7 @@ const AdminEvaluationListClassesEleves = memo((props) => {
     const etab = user.etablissement;
 
 
-    const {classe, niveau, evaluation, userid} = useParams();
+    const {evaluation, niveau, classe} = useParams();
 
     const handleChange = (event) => {
         const name = event.target.name;
@@ -82,7 +82,7 @@ const AdminEvaluationListClassesEleves = memo((props) => {
         })
     }
 
-    const submitMoyenPr = (evaluation) => {
+    const submitMoyenPr = () => {
     http.get("/gen_moyen/" + etab + "/" + evaluation + "/" + classe).then((res) => {
         })    
         console.log(evaluation);
@@ -336,7 +336,7 @@ const AdminEvaluationListClassesEleves = memo((props) => {
                             </div>
 
                             <div>
-                                <Button variant="primary mt-2" onClick={() => {submitMoyenPr(evaluation) }}>Générer les moyennes</Button>
+                                <Button variant="primary mt-2" onClick={() => {submitMoyenPr() }}>Générer les moyennes</Button>
                             </div>
 
 
