@@ -64,7 +64,7 @@ const EditClasses = memo((props) => {
     }, []);
 
     const fetchfilieres = () => {
-        http.get('/classes/' + id + '/edit').then((res) => {
+        http.get('/classes/' + id).then((res) => {
             setInputs({
                 niveau: res.data.niveau_classe,
 
