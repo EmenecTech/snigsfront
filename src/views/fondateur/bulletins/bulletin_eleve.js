@@ -5117,7 +5117,7 @@ const BulletinByEleve = memo((props) => {
                                                                                 <th></th>
                                                                                 <th>DISCIPLINE</th>
                                                                                 <th>APPRECIATION DU TRAVAIL</th>
-                                                                                <th>MOYENNE: {rang_eleve.moyen}</th>
+                                                                                <th>MOYENNE: {rang_eleve.moyen} </th>
                                                                             </tr>
                                                                         </thead>
                                                                         <tbody>
