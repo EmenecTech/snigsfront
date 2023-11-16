@@ -106,7 +106,7 @@ const BulletinByEleve = memo((props) => {
             setinfo_eleve(res.data);
         });
     }
-     const nompdf = info_eleve.nom + " " info_eleve.prenom + " " + evaluation;
+     const nompdf = info_eleve.nom + " " + info_eleve.prenom + " " + evaluation;
      const printData = useReactToPrint({
         content: () => componentRef.current,
         documentTitle: nompdf,
