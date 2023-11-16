@@ -41,14 +41,14 @@ const EditClasses = memo((props) => {
         const name = event.target.name;
         const value = event.target.value;
 
-        setInputs(values => ({ ...values, [name]: value, etab }))
+        setInputs(values => ({ ...values, [name]: value, etab, id }))
     }
 
 
 
 
     const submitForm = () => {
-        http.post('/editclasses/' + id, inputs).then((res) => {
+        http.post('/editclasses', inputs).then((res) => {
             alert("Classe modifiée avec succès !");
 
         })
