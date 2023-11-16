@@ -336,7 +336,7 @@ const AdminEvaluationListClassesEleves = memo((props) => {
                             </div>
 
                             <div>
-                                <Button variant="primary mt-2" onClick={() => {submitMoyenPr(item.intitule_evaluation) }}>Générer les moyennes</Button>
+                                <Button variant="primary mt-2" onClick={() => {submitMoyenPr(evaluation) }}>Générer les moyennes</Button>
                             </div>
 
 
