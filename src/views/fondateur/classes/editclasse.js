@@ -34,7 +34,8 @@ const EditClasses = memo((props) => {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
     const etab = user.etablissement;
-    const { id } = useParams();
+
+    const { classe } = useParams();
   
 
 
@@ -42,7 +43,7 @@ const EditClasses = memo((props) => {
         const name = event.target.name;
         const value = event.target.value;
 
-        setInputs(values => ({ ...values, [name]: value, etab, id }))
+        setInputs(values => ({ ...values, [name]: value, etab, classe }))
     }
 
 
@@ -58,7 +59,7 @@ const EditClasses = memo((props) => {
 
     }
 
-    const [classes, setclasses] = useState([]);
+    {/*  const [classes, setclasses] = useState([]);
 
     useEffect(() => {
         fetchfilieres();
@@ -71,7 +72,7 @@ const EditClasses = memo((props) => {
 
             });
         });
-    };
+    }; */}
 
     const [niveaux, setniveaux] = useState([]);
     useEffect(() => {
