@@ -262,7 +262,7 @@ const BulletinByEleve = memo((props) => {
     };
      const printData = useReactToPrint({
         content: () => componentRef.current,
-        documentTitle: evaluation ,
+        documentTitle: "Bulletin de notes" ,
         onafterprint: () => alert("print success"),
     });
 
