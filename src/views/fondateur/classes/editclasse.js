@@ -57,6 +57,21 @@ const EditClasses = memo((props) => {
 
     }
 
+    const [classes, setclasses] = useState([]);
+
+    useEffect(() => {
+        fetchfilieres();
+    }, []);
+
+    const fetchfilieres = () => {
+        http.get('/classes/' + id + '/edit').then((res) => {
+            setInputs({
+                niveau: res.data.niveau_classe,
+
+            });
+        });
+    };
+
     const [niveaux, setniveaux] = useState([]);
     useEffect(() => {
         fetchAllniveaux(); 
@@ -119,33 +134,24 @@ const EditClasses = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">{user.langue === "en" ? (<div>Edit Course</div>):(<div> Modifier la Matière </div>)}</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Edit Course</div>):(<div> Modifier la Classe </div>)}</h4>
                             </div>
 
 
                         </Card.Header>
                         <Card.Body>
 
-                            <Form>
+                   <Form>
                                 <Row>
-
-                                            <Col>
-                                                <Form.Group as={Row} className="form-group">
-                                                    <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)} *</Form.Label>
-                                                        <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange} required>
-                                                            <option></option>
-                                                            {niveaux.map((item) => (
-                                                                <option key={item.id} value={item.intitule_niveau}>{item.intitule_niveau}</option>
-
-                                                            ))}
-
-                                                        </select>
-                                                    </Form.Group>
-                                                </Form.Group>
-                                            </Col>
-
-                                        </Row>
+                                    <Col>
+                                        <Form.Group as={Row} className="form-group">
+                                            <Form.Group className="form-group">
+                                                <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Edit Course</div>):(<div> Niveau </div>)}</Form.Label>
+                                                <Form.Control type="text" defaultValue="" name="niveau" value={inputs.niveau || ""} onChange={handleChange} required />
+                                            </Form.Group>
+                                        </Form.Group>
+                                    </Col>
+                                </Row>
 
                                 <div className="text-center">
                                     <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Confirm</div>):(<div> Confirmer</div>)}</Button>
