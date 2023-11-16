@@ -1,6 +1,4 @@
-
-+
-    import React, { useState, useEffect, memo, Fragment, useCallback, useRef } from "react";
+import React, { useState, useEffect, memo, Fragment, useCallback, useRef } from "react";
 import { Row, Col, Dropdown, Modal, Button, Table, Form, Image } from "react-bootstrap";
 import { createPath, useNavigate, useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
@@ -71,7 +69,11 @@ SwiperCore.use([Navigation]);
 const BulletinByEleve = memo((props) => {
 
     const componentRef = useRef();
-   
+    const printData = useReactToPrint({
+        content: () => componentRef.current,
+        documentTitle: "Bulletin",
+        onafterprint: () => alert("print success"),
+    });
 
     const [show, setShow] = useState(false);
     const { user, http } = AuthUser();
@@ -84,7 +86,7 @@ const BulletinByEleve = memo((props) => {
 
 
 
-    
+
     const [info_etab, setinfo_etab] = useState([]);
 
     useEffect(() => {
@@ -108,7 +110,6 @@ const BulletinByEleve = memo((props) => {
             setinfo_eleve(res.data);
         });
     }
-     
 
     const [rang_eleve, setrang_eleve] = useState([]);
 
@@ -260,11 +261,7 @@ const BulletinByEleve = memo((props) => {
             setelevesinclass(res.data);
         })
     };
-     const printData = useReactToPrint({
-        content: () => componentRef.current,
-        documentTitle: "Bulletin de notes" ,
-        onafterprint: () => alert("print success"),
-    });
+
 
     ////////////////////////////////
 
@@ -2343,7 +2340,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <Row style={{ fontSize: "10px" }}>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass} {}{info_eleve.prenom} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass} {info_eleve.nom}{info_eleve.prenom} </p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : {info_eleve.date_naissance} à {info_eleve.lieu_naissance}</p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-1">Sexe : {info_eleve.sexe}</p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-1">Matricule : {info_eleve.matricule}</p>
