@@ -258,7 +258,7 @@ const BulletinByEleve = memo((props) => {
             setelevesinclass(res.data);
         })
     };
-const nompdf = info_eleve.nom + " " + info_eleve.prenom + " " + evaluation;
+   const nompdf = elevesinclass.nom + " " + elevesinclass.prenom + " " + evaluation;
      const printData = useReactToPrint({
         content: () => componentRef.current,
         documentTitle: nompdf,
@@ -2342,7 +2342,7 @@ const nompdf = info_eleve.nom + " " + info_eleve.prenom + " " + evaluation;
                                                                     <Row style={{ fontSize: "10px" }}>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass} {info_eleve.nom}{info_eleve.prenom} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass} {}{info_eleve.prenom} </p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : {info_eleve.date_naissance} à {info_eleve.lieu_naissance}</p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-1">Sexe : {info_eleve.sexe}</p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-1">Matricule : {info_eleve.matricule}</p>
