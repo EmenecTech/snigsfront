@@ -106,12 +106,7 @@ const BulletinByEleve = memo((props) => {
             setinfo_eleve(res.data);
         });
     }
-     const nompdf = info_eleve.nom + " " + info_eleve.prenom + " " + evaluation;
-     const printData = useReactToPrint({
-        content: () => componentRef.current,
-        documentTitle: nompdf,
-        onafterprint: () => alert("print success"),
-    });
+     
 
     const [rang_eleve, setrang_eleve] = useState([]);
 
@@ -263,7 +258,12 @@ const BulletinByEleve = memo((props) => {
             setelevesinclass(res.data);
         })
     };
-
+const nompdf = info_eleve.nom + " " + info_eleve.prenom + " " + evaluation;
+     const printData = useReactToPrint({
+        content: () => componentRef.current,
+        documentTitle: nompdf,
+        onafterprint: () => alert("print success"),
+    });
 
     ////////////////////////////////
 
