@@ -1,125 +1,454 @@
-Skip to content
-EmenecTech
-/
-snigsfront
+import React, { useState, useEffect, memo, Fragment } from "react";
+import { Row, Col, Dropdown, Modal, Button, Table, Form } from "react-bootstrap";
+import { createPath, useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import AuthUser from "../../../components/AuthUser.js";
 
-Type / to search
 
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-Editing listclasses.js in snigsfront
-Breadcrumbssnigsfront/src/views/fondateur/classes
-/
-listclasses.js
-in
-main
+import http from "../../../http.js";
 
-Edit
+//circular
+import Circularprogressbar from "../../../components/circularprogressbar.js";
 
-Preview
-Indent mode
+// AOS
+import AOS from "aos";
+import "../../../../node_modules/aos/dist/aos";
+import "../../../../node_modules/aos/dist/aos.css";
+//apexcharts
+import Chart from "react-apexcharts";
 
-Spaces
-Indent size
+//swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation } from "swiper";
 
-4
-Line wrap mode
+// Import Swiper styles
+import "swiper/swiper-bundle.min.css";
+// import 'swiper/components/navigation/navigation.scss';
 
-No wrap
-Editing listclasses.js file contents
-Selection deleted
-452
-453
-454
-455
-456
-457
-458
-459
-460
-461
-462
-463
-464
-465
-466
-467
-468
-469
-470
-471
-472
-473
-474
-475
-476
-477
-478
-479
-480
-481
-482
-483
-484
-485
-486
-487
-488
-489
-490
-491
-492
-493
-494
-495
-496
-497
-498
-499
-500
-501
-502
-503
-504
-505
-506
-507
-508
-509
-510
-511
-512
-513
-514
-515
-516
-517
-518
-519
-520
-521
-522
-523
-524
-525
-526
-527
-528
-529
-530
-531
-532
-533
-534
-535
-536
+//progressbar
+import Progress from "../../../components/progress.js";
+
+//img
+import shapes1 from "../../../assets/images/shapes/01.png";
+import shapes2 from "../../../assets/images/shapes/02.png";
+import shapes3 from "../../../assets/images/shapes/03.png";
+import shapes4 from "../../../assets/images/shapes/04.png";
+import shapes5 from "../../../assets/images/shapes/05.png";
+
+//Count-up
+import CountUp from "react-countup";
+
+// Redux Selector / Action
+import { useSelector } from "react-redux";
+
+// Import selectors & action from setting store
+import * as SettingSelector from "../../../store/setting/selectors";
+import Card from "../../../components/Card.js";
+
+// install Swiper modules
+SwiperCore.use([Navigation]);
+
+
+
+
+const ListClasses = memo((props) => {
+    const [show, setShow] = useState(false);
+    const { user, http } = AuthUser();
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    const navigate = useNavigate();
+    const [inputs, setInputs] = useState({});
+    const etab = user.etablissement;
+
+    const handleChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+
+        setInputs(values => ({ ...values, [name]: value, etab }))
+    }
+
+
+
+
+    const submitForm = () => {
+        http.post('/classes', inputs).then((res) => {
+            alert("La classe a été ajoutée avec succès !")
+            navigate('/List/classes/')
+            window.location.reload(false);
+
+        })
+
+
+
+        console.log(inputs);
+
+    }
+    const [niveaux, setniveaux] = useState([]);
+    useEffect(() => {
+        fetchAllniveaux(); 
+    }, []);
+
+    const fetchAllniveaux = () => {
+        http.get('/niveaux').then(res => {
+            setniveaux(res.data);
+        })
+    }
+
+
+    const [filieres, setfilieres] = useState([]);
+    useEffect(() => {
+        fetchAllfilieres();
+    }, []);
+
+    const fetchAllfilieres = () => {
+        http.get('/get_filieres/' + etab).then(res => {
+            setfilieres(res.data);
+        })
+    }
+
+    const [classes, setclasses] = useState([]);
+    useEffect(() => {
+        fetchAllclasses();
+    }, []);
+
+    const fetchAllclasses = () => {
+        http.get('/get_classes/' + etab).then(res => {
+            setclasses(res.data);
+        })
+    }
+
+    const deleteClasses = (classe) => {
+        if(window.confirm("Voulez-vous supprimer cet élément?") == true){
+        http.put('/delete/classes/' + classe + '/' + etab).then(res => {
+            fetchAllclasses(); 
+        })
+            alert('Supprimé!');
+    }
+
+    }
+
+
+
+
+
+    useSelector(SettingSelector.theme_color);
+
+    const getVariableColor = () => {
+        let prefix =
+            getComputedStyle(document.body).getPropertyValue("--prefix") || "bs-";
+        if (prefix) {
+            prefix = prefix.trim();
+        }
+        const color1 = getComputedStyle(document.body).getPropertyValue(
+            `--${prefix}primary`
+        );
+        const color2 = getComputedStyle(document.body).getPropertyValue(
+            `--${prefix}info`
+        );
+        const color3 = getComputedStyle(document.body).getPropertyValue(
+            `--${prefix}primary-tint-20`
+        );
+        const color4 = getComputedStyle(document.body).getPropertyValue(
+            `--${prefix}warning`
+        );
+        return {
+            primary: color1.trim(),
+            info: color2.trim(),
+            warning: color4.trim(),
+            primary_light: color3.trim(),
+        };
+    };
+    const variableColors = getVariableColor();
+
+    const colors = [variableColors.primary, variableColors.info];
+    useEffect(() => {
+        return () => colors;
+    });
+
+    useEffect(() => {
+        AOS.init({
+            startEvent: "DOMContentLoaded",
+            disable: function () {
+                var maxWidth = 996;
+                return window.innerWidth < maxWidth;
+            },
+            throttleDelay: 10,
+            once: true,
+            duration: 700,
+            offset: 10,
+        });
+    });
+    const chart1 = {
+        options: {
+            chart: {
+                fontFamily:
+                    '"Inter", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                toolbar: {
+                    show: false,
+                },
+                sparkline: {
+                    enabled: false,
+                },
+            },
+            colors: colors,
+            dataLabels: {
+                enabled: false,
+            },
+            stroke: {
+                curve: "smooth",
+                width: 3,
+            },
+            yaxis: {
+                show: true,
+                labels: {
+                    show: true,
+                    minWidth: 19,
+                    maxWidth: 19,
+                    style: {
+                        colors: "#8A92A6",
+                    },
+                    offsetX: -5,
+                },
+            },
+            legend: {
+                show: false,
+            },
+            xaxis: {
+                labels: {
+                    minHeight: 22,
+                    maxHeight: 22,
+                    show: true,
+                    style: {
+                        colors: "#8A92A6",
+                    },
+                },
+                lines: {
+                    show: false, //or just here to disable only x axis grids
+                },
+                categories: ["Jan", "Feb", "Mar", "Apr", "Jun", "Jul", "Aug"],
+            },
+            grid: {
+                show: false,
+            },
+            fill: {
+                type: "gradient",
+                gradient: {
+                    shade: "dark",
+                    type: "vertical",
+                    shadeIntensity: 0,
+                    gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
+                    inverseColors: true,
+                    opacityFrom: 0.4,
+                    opacityTo: 0.1,
+                    stops: [0, 50, 80],
+                    colors: colors,
+                },
+            },
+            tooltip: {
+                enabled: true,
+            },
+        },
+        series: [
+            {
+                name: "total",
+                data: [94, 80, 94, 80, 94, 80, 94],
+            },
+            {
+                name: "pipline",
+                data: [72, 60, 84, 60, 74, 60, 78],
+            },
+        ],
+    };
+
+    //chart2
+    const chart2 = {
+        options: {
+            colors: colors,
+            plotOptions: {
+                radialBar: {
+                    hollow: {
+                        margin: 10,
+                        size: "50%",
+                    },
+                    track: {
+                        margin: 10,
+                        strokeWidth: "50%",
+                    },
+                    dataLabels: {
+                        show: false,
+                    },
+                },
+            },
+            labels: ["Apples", "Oranges"],
+        },
+        series: [55, 75],
+    };
+    const chart3 = {
+        options: {
+            chart: {
+                stacked: true,
+                toolbar: {
+                    show: false,
+                },
+            },
+            colors: colors,
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: "28%",
+                    endingShape: "rounded",
+                    borderRadius: 5,
+                },
+            },
+            legend: {
+                show: false,
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ["transparent"],
+            },
+            xaxis: {
+                categories: ["S", "M", "T", "W", "T", "F", "S", "M", "T", "W"],
+                labels: {
+                    minHeight: 20,
+                    maxHeight: 20,
+                    style: {
+                        colors: "#8A92A6",
+                    },
+                },
+            },
+            yaxis: {
+                title: {
+                    text: "",
+                },
+                labels: {
+                    minWidth: 19,
+                    maxWidth: 19,
+                    style: {
+                        colors: "#8A92A6",
+                    },
+                },
+            },
+            fill: {
+                opacity: 1,
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return "$ " + val + " thousands";
+                    },
+                },
+            },
+        },
+        series: [
+            {
+                name: "Successful deals",
+                data: [30, 50, 35, 60, 40, 60, 60, 30, 50, 35],
+            },
+            {
+                name: "Failed deals",
+                data: [40, 50, 55, 50, 30, 80, 30, 40, 50, 55],
+            },
+        ],
+    };
+
+
+
+
+
+    return (
+        <Fragment>
+            <Row>
+                <Col sm="12">
+                    <Card>
+                        <Card.Header className="d-flex justify-content-between">
+                            <div className="header-title">
+                                <h4 className="card-title">Classes </h4>
+                            </div>
+
+
+                            <Button variant="primary mt-2" onClick={handleShow}>
+                                <span className="btn-inner">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </span>
+                                Ajouter
+                            </Button>
+                            {/* <!-- Modal --> */}
+                            <Modal show={show} onHide={handleClose}>
+                                <Modal.Header closeButton>
+                                    <Modal.Title as="h5"> {user.langue === "en" ? (<div>Add a new class </div>):(<div>Ajouter une nouvelle classe </div>)}</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <Form>
+
+                                        <Row>
+
+                                            <Col>
+                                                <Form.Group as={Row} className="form-group">
+                                                    <Form.Group className="form-group">
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé</div>)} *</Form.Label>
+                                                        <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
+                                                    </Form.Group>
+                                                </Form.Group>
+                                            </Col>
+
+                                        </Row>
+                                        <Row>
+
+                                            <Col>
+                                                <Form.Group as={Row} className="form-group">
+                                                    <Form.Group className="form-group">
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)} *</Form.Label>
+                                                        <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange} required>
+                                                            <option></option>
+                                                            {niveaux.map((item) => (
+                                                                <option key={item.id} value={item.intitule_niveau}>{item.intitule_niveau}</option>
+
+                                                            ))}
+
+                                                        </select>
+                                                    </Form.Group>
+                                                </Form.Group>
+                                            </Col>
+
+                                        </Row>
+                                        <Row>
+
+                                            <Col>
+                                                <Form.Group as={Row} className="form-group">
+                                                    <Form.Group className="form-group">
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Sector</div>):(<div>Filière</div>)} </Form.Label>
+                                                        <select className="form-select mb-3 shadow-none" name="filiere" onChange={handleChange} required>
+                                                            <option></option>
+                                                            {filieres.map((item) => (
+                                                                <option key={item.id} value={item.intitule_filiere}>{item.intitule_filiere}</option>
+
+                                                            ))}
+
+                                                        </select>
+                                                    </Form.Group>
+                                                </Form.Group>
+                                            </Col>
+
+                                        </Row>
+
+
+
+
+
+                                        <div className="text-center">
+                                            <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                        </div>
+                                    </Form>
+                                </Modal.Body>
+
+                            </Modal>
                         </Card.Header>
                         <Card.Body>
 
@@ -149,7 +478,7 @@ Selection deleted
                                                 <td>{item.filiere}</td>
                                                 <td>{item.cycle_niveau}</td>
                                                 <td>
-                                                    <div className="flex align-items-center list-user-action">
+                                                    <div className="list-user-action">
                                                 {item.cycle_niveau === "Primaire" || item.cycle_niveau === "Maternelle" ? (<div>
                                                     <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Details/classePrim/" + item.niveau_classe + "/" + item.intitule_classe}>
                                                             <span className="btn-inner">
@@ -169,9 +498,9 @@ Selection deleted
                                                                 </svg>
                                                             </span>
                                                         </Link>{' '}
-                                                  <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Edit/classes/" + item.intitule_classe}>
-                                                            Modifier
-                                                        </Link>{' '} 
+                                                      <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Edit/classes/" + item.intitule_classe}>
+                                                    Modifier
+                                                    </Link>{' '} 
                                             </div>) : (<div>
                                                     <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Details/classe/" + item.niveau_classe + "/" + item.intitule_classe}>
                                                             <span className="btn-inner">
@@ -191,19 +520,32 @@ Selection deleted
                                                                 </svg>
                                                             </span>
                                                         </Link>{' '}
-                                                 <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Edit/classes/" + item.intitule_classe}>
-                                                            Modifier
-                                                        </Link>{' '} 
-                                            </div>)}
-
-                                               
-
-                                                </td>
-         
+                                                        <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Edit/classes/" + item.intitule_classe}>
+                                                      Modifier
+                                                      </Link>{' '} 
+                                            </div>)}        
                             
                                                     </div>  
 
+                                                </td>
+    
+                                              
+
                                             </tr>
                                         ))}
-Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
-Editing snigsfront/src/views/fondateur/classes/listclasses.js at main · EmenecTech/snigsfront
+                                    </tbody>
+                                    <tfoot>
+
+                                    </tfoot>
+                                </Table>
+
+                            </div>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
+        </Fragment>
+    );
+})
+
+export default ListClasses
