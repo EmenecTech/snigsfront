@@ -56,21 +56,17 @@ const EditClasses = memo((props) => {
         console.log(inputs);
 
     }
-    const [classe, setclasse] = useState([]);
 
+    const [niveaux, setniveaux] = useState([]);
     useEffect(() => {
-        fetchfilieres();
+        fetchAllniveaux(); 
     }, []);
 
-    const fetchfilieres = () => {
-        http.get('/classes/' + id + '/edit').then((res) => {
-            setInputs({
-                int: res.data.intitule_niveau,
-
-            });
-        });
-    };
-
+    const fetchAllniveaux = () => {
+        http.get('/niveaux').then(res => {
+            setniveaux(res.data);
+        })
+    }
 
 
 
