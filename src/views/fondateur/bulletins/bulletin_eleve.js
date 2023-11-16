@@ -122,8 +122,10 @@ const BulletinByEleve = memo((props) => {
             setrang_eleve(res.data);
         });
     }
-    console.log(0000);
-    console.log(rang_eleve);
+
+    const aaa = 000000
+    console.log(aaa)
+    console.log(rang_eleve)
 
     const [image2, setImage2] = useState("");
     const imageRef2 = useRef(null);
