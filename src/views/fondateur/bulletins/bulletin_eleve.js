@@ -69,11 +69,7 @@ SwiperCore.use([Navigation]);
 const BulletinByEleve = memo((props) => {
 
     const componentRef = useRef();
-    const printData = useReactToPrint({
-        content: () => componentRef.current,
-        documentTitle: "employee data",
-        onafterprint: () => alert("print success"),
-    });
+   
 
     const [show, setShow] = useState(false);
     const { user, http } = AuthUser();
@@ -86,7 +82,7 @@ const BulletinByEleve = memo((props) => {
 
 
 
-
+    
     const [info_etab, setinfo_etab] = useState([]);
 
     useEffect(() => {
@@ -110,6 +106,12 @@ const BulletinByEleve = memo((props) => {
             setinfo_eleve(res.data);
         });
     }
+     const nompdf = info_eleve.nom + " " info_eleve.prenom + " " + evaluation;
+     const printData = useReactToPrint({
+        content: () => componentRef.current,
+        documentTitle: nompdf,
+        onafterprint: () => alert("print success"),
+    });
 
     const [rang_eleve, setrang_eleve] = useState([]);
 
