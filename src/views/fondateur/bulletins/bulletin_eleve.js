@@ -1,4 +1,6 @@
-import React, { useState, useEffect, memo, Fragment, useCallback, useRef } from "react";
+
++
+    import React, { useState, useEffect, memo, Fragment, useCallback, useRef } from "react";
 import { Row, Col, Dropdown, Modal, Button, Table, Form, Image } from "react-bootstrap";
 import { createPath, useNavigate, useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
@@ -258,10 +260,9 @@ const BulletinByEleve = memo((props) => {
             setelevesinclass(res.data);
         })
     };
-   const nompdf = elevesinclass.nom + " " + elevesinclass.prenom + " " + evaluation;
      const printData = useReactToPrint({
         content: () => componentRef.current,
-        documentTitle: nompdf,
+        documentTitle: elevesinclass.nom + " " + elevesinclass.prenom + " " + evaluation ,
         onafterprint: () => alert("print success"),
     });
 
