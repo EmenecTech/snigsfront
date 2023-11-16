@@ -147,7 +147,7 @@ const EditClasses = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)} *</Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)}</Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="niveau" onChange={handleChange} required>
                                                             <option></option>
                                                             {niveaux.map((item) => (
@@ -163,7 +163,7 @@ const EditClasses = memo((props) => {
                                         </Row>
 
                                 <div className="text-center">
-                                    <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Confirm</div>):(<div> Confirmer</div>)}</Button>
+                                    <Button type="button" variant="primary" onClick={submitForm} > {user.langue === "en" ? (<div>Confirm</div>):(<div>Confirmer</div>)}</Button>
                                 </div>
                             </Form>
 
