@@ -48,7 +48,7 @@ const EditClasses = memo((props) => {
 
 
     const submitForm = () => {
-        http.put('/editclasses/' + id, inputs).then((res) => {
+        http.put('/editclasses/' + id).then((res) => {
             alert("Classe modifiée avec succès !");
 
         })
