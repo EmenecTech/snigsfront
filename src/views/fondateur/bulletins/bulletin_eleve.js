@@ -1568,12 +1568,23 @@ const BulletinByEleve = memo((props) => {
         })
     };
 
-    const getEmojiForNote = (note) => {
+    {/*  const getEmojiForNote = (note) => {
         if (note > 0 && note < 10) {
             return '☹️';
         } else if (note >= 11 && note < 14) {
             return '😐';
         } else if (note >= 15 && note < 20) {
+            return '😃';
+        }
+        return '';
+    }; */}
+
+    const getEmojiForNote = (note) => {
+        if (note == 10) {
+            return '☹️';
+        } else if (note == 15) {
+            return '😐';
+        } else if (note == 20) {
             return '😃';
         }
         return '';
