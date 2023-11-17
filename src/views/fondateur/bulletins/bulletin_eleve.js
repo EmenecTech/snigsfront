@@ -1919,12 +1919,12 @@ const BulletinByEleve = memo((props) => {
                                                                     <Row>
                                                                         <Col sm="12" lg="12" className="d-flex justify-content-center">
                                                                             <div className="user-profile">
-                                                                                <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
                                                                             </div>
                                                                         </Col>
                                                                     </Row>
@@ -2277,12 +2277,12 @@ const BulletinByEleve = memo((props) => {
                                                                     <Row>
                                                                         <Col sm="12" lg="12" className="d-flex justify-content-center">
                                                                             <div className="user-profile">
-                                                                                <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
                                                                             </div>
                                                                         </Col>
                                                                     </Row>
@@ -2644,12 +2644,12 @@ const BulletinByEleve = memo((props) => {
                                                                         <Row>
                                                                             <Col sm="12" lg="12" className="d-flex justify-content-center">
                                                                                 <div className="user-profile">
-                                                                                    <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
                                                                                 </div>
                                                                             </Col>
                                                                         </Row>
@@ -5273,12 +5273,12 @@ const BulletinByEleve = memo((props) => {
                                                                         <Row>
                                                                             <Col sm="12" lg="12" className="d-flex justify-content-center">
                                                                                 <div className="user-profile">
-                                                                                    <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
                                                                                 </div>
                                                                             </Col>
                                                                         </Row>
@@ -6108,12 +6108,12 @@ const BulletinByEleve = memo((props) => {
                                                                         <Row>
                                                                             <Col sm="12" lg="12" className="d-flex justify-content-center">
                                                                                 <div className="user-profile">
-                                                                                    <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
                                                                                 </div>
                                                                             </Col>
                                                                         </Row>
@@ -6948,12 +6948,12 @@ const BulletinByEleve = memo((props) => {
                                                                         <Row>
                                                                             <Col sm="12" lg="12" className="d-flex justify-content-center">
                                                                                 <div className="user-profile">
-                                                                                    <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
                                                                                 </div>
                                                                             </Col>
                                                                         </Row>
@@ -8753,12 +8753,12 @@ const BulletinByEleve = memo((props) => {
                                                                         <Row>
                                                                             <Col sm="12" lg="12" className="d-flex justify-content-center">
                                                                                 <div className="user-profile">
-                                                                                    <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
                                                                                 </div>
                                                                             </Col>
                                                                         </Row>
@@ -10559,12 +10559,12 @@ const BulletinByEleve = memo((props) => {
                                                                         <Row>
                                                                             <Col sm="12" lg="12" className="d-flex justify-content-center">
                                                                                 <div className="user-profile">
-                                                                                    <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                    <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                    <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
                                                                                 </div>
                                                                             </Col>
                                                                         </Row>
@@ -11344,12 +11344,12 @@ const BulletinByEleve = memo((props) => {
                                                                     <Row>
                                                                         <Col sm="12" lg="12" className="d-flex justify-content-center">
                                                                             <div className="user-profile">
-                                                                                <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"http://127.0.0.1:8000/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
+                                                                                <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
                                                                             </div>
                                                                         </Col>
                                                                     </Row>
