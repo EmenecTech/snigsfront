@@ -479,7 +479,7 @@ const ListClasses = memo((props) => {
                                                 <td>{item.cycle_niveau}</td>
                                                 <td>
                                                     <div className="list-user-action">
-                                                {item.cycle_niveau === "Primaire" || item.cycle_niveau === "Maternelle" ? (<div>
+                                                {item.cycle_niveau === "Primaire" || item.cycle_niveau === "Maternelle" || item.cycle_niveau === "Primary" item.cycle_niveau === "Nursery" ? (<div>
                                                     <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Details/classePrim/" + item.niveau_classe + "/" + item.intitule_classe}>
                                                             <span className="btn-inner">
                                                                 <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
