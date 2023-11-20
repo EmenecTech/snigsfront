@@ -121,7 +121,7 @@ const [indices, setindices] = useState([]);
     }
 
     const submitMarks = (groupe, indice) => {
-        http.get('/notes/updatemark/' etab + '/' + classe + '/' + evaluation + '/' + id_user + '/' + groupe + '/' + indice, inputs).then((res) => {
+        http.get('/notes/updatemark/' etab + '/' + classe + '/' + evaluation + '/' + id_user + '/' + groupe + '/' + indice).then((res) => {
             window.location.reload(false); 
         })
   
