@@ -489,7 +489,7 @@ const [indices, setindices] = useState([]);
                                             <td>{item.appreciation_note}</td>
                                             <td>
                                             <div className="flex align-items-center list-user-action">
-                                                                <Button type="button" variant="primary" onClick={() => { submitMarks(item.matiere_note}} >Confirmer</Button>{' '}
+                                                                <Button type="button" variant="primary" onClick={() => { submitMarks(item.matiere_note)}} >Confirmer</Button>{' '}
 
                                                                   <Link className="btn btn-sm btn-icon btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" onClick={() => { deleteNotes(item.matiere_note , item.competence_visee_note) }} >
                                                                     <span className="btn-inner">
