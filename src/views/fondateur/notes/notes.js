@@ -117,8 +117,14 @@ const [indices, setindices] = useState([]);
         http.post('/notes/update', inputs).then((res) => {
             window.location.reload(false); 
         })
-        
-        
+  
+    }
+
+    const submitMarks = (groupe) => {
+        http.post('/notes/updatemark/' + groupe, inputs).then((res) => {
+            window.location.reload(false); 
+        })
+  
     }
 
     const [matieres, setmatieres] = useState([]);
@@ -215,10 +221,6 @@ const [indices, setindices] = useState([]);
                                                             <option value="Non acquis">Non acquis</option>
                                                             <option value="En cours d'acquisition">En cours d'acquisition</option>
                                                             <option value="Acquis">Acquis</option>
-                                                            <option value="Not Acquired">Not Acquired</option>
-                                                            <option value="Currently Being Acquired">Currently Being Acquired</option>
-                                                            <option value="Acquired">Acquired</option> 
-                                                            <option value="Expert">Expert</option>
                                                         </select>
                                                     </Form.Group>
 
@@ -289,21 +291,15 @@ const [indices, setindices] = useState([]);
                                                     <Form.Group className='form-group'>
                                                         <Form.Label>Appreciation</Form.Label>
 
-                                                        <select className="form-select mb-3 shadow-none" name="appreciation" placeholder="[0-10]-NA [11-14]-ECA [15-20]-A" onChange={handleChange}>
+                                                        <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                                             <option> </option>
                                                             <option value="Non acquis">Non acquis</option>
                                                             <option value="En cours d'acquisition">En cours d'acquisition</option>
                                                             <option value="Acquis">Acquis</option>
-                                                             <option value="Not Acquired">Not Acquired</option>
-                                                            <option value="Currently Being Acquired">Currently Being Acquired</option>
-                                                            <option value="Acquired">Acquired</option> 
-                                                            <option value="Expert">Expert</option>
+                                                                <option value="Expert">Expert</option>
                                                         </select>
                                                     </Form.Group>
-
-                                                 <Button variant="primary" onClick={submitForm}>
-                                                    Ajouter
-                                                </Button>
+         
                                                 </div>}
 
 
@@ -334,10 +330,6 @@ const [indices, setindices] = useState([]);
                                                             <option value="Non acquis">Non acquis</option>
                                                             <option value="En cours d'acquisition">En cours d'acquisition</option>
                                                             <option value="Acquis">Acquis</option>
-                                                            <option value="Not Acquired">Not Acquired</option>
-                                                            <option value="Currently Being Acquired">Currently Being Acquired</option>
-                                                            <option value="Acquired">Acquired</option> 
-                                                            <option value="Expert">Expert</option> 
                                                         </select>
                                                     </Form.Group>
 
@@ -391,10 +383,6 @@ const [indices, setindices] = useState([]);
                                                             <option value="Non acquis">Non acquis</option>
                                                             <option value="En cours d'acquisition">En cours d'acquisition</option>
                                                             <option value="Acquis">Acquis</option>
-                                                            <option value="Not Acquired">Not Acquired</option>
-                                                            <option value="Currently Being Acquired">Currently Being Acquired</option>
-                                                            <option value="Acquired">Acquired</option> 
-                                                            <option value="Expert">Expert</option>
                                                         </select>
                                                     </Form.Group>
                                                 </div>}
@@ -501,6 +489,7 @@ const [indices, setindices] = useState([]);
                                             <td>{item.appreciation_note}</td>
                                             <td>
                                             <div className="flex align-items-center list-user-action">
+                                                                <Button type="button" variant="primary" onClick={() => { submitMarks(item.matiere_note}} >Confirmer</Button>{' '}
 
                                                                   <Link className="btn btn-sm btn-icon btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" onClick={() => { deleteNotes(item.matiere_note , item.competence_visee_note) }} >
                                                                     <span className="btn-inner">
