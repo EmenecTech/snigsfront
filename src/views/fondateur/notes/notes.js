@@ -416,6 +416,7 @@ const [indices, setindices] = useState([]);
                                         <th>Groupes</th>
                                         <th>Note</th>
                                         <th>Indices</th>
+                                        <th>Coef</th>
                                         <th>Appreciation</th>
                            <th>Action</th>
                                           
@@ -430,6 +431,7 @@ const [indices, setindices] = useState([]);
                                             <td>{item.matiere_note}</td> 
                                             <td>{item.valeur_note}</td>
                                             <td>{item.competence_visee_note}</td>
+                                            <td>{item.coefficient_note}</td>
                                             <td>{item.appreciation_note}</td>
                                         <td>
                                             <div className="flex align-items-center list-user-action">
@@ -472,6 +474,7 @@ const [indices, setindices] = useState([]);
                                         <th>Note</th>
                                         <th>Emoji</th>
                                         <th>Indices</th>
+                                        <th>Coef</th>
                                         <th>Appreciation</th>
                                         <th>Action</th>
                                           
@@ -487,6 +490,7 @@ const [indices, setindices] = useState([]);
                                             <td>{item.valeur_note}</td>
                                             <td>{getEmojiForNote(item.emoji)}</td>
                                             <td>{item.competence_visee_note}</td>
+                                            <td>{item.coefficient_note}</td>
                                             <td>{item.appreciation_note}</td>
                                             <td>
                                             <div className="flex align-items-center list-user-action">
@@ -522,6 +526,7 @@ const [indices, setindices] = useState([]);
                                         <th>Groupes</th>
                                         <th>Note</th>
                                         <th>Indices</th>
+                                        <th>Coef</th>
                                         <th>Appreciation</th>
                                         <th>Action</th>
                                           
@@ -536,6 +541,7 @@ const [indices, setindices] = useState([]);
                                             <td>{item.matiere_note}</td> 
                                             <td>{item.valeur_note}</td>
                                             <td>{item.competence_visee_note}</td>
+                                            <td>{item.coefficient_note}</td>
                                             <td>{item.appreciation_note}</td>
                                         <td>
                                             <div className="flex align-items-center list-user-action">
