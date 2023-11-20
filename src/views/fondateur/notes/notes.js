@@ -124,6 +124,8 @@ const [indices, setindices] = useState([]);
         http.post('/notes/updatemark/' + groupe + '/' + indice, inputs).then((res) => {
             window.location.reload(false); 
         })
+
+        console.log(inputs);
   
     }
 
