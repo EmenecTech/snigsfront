@@ -121,7 +121,7 @@ const [indices, setindices] = useState([]);
     }
 
     const submitMarks = (groupe) => {
-        http.post('/notes/updatemark/' + groupe, inputs).then((res) => {
+        http.post('/notes/updatemark/' + groupe + '/' + indice, inputs).then((res) => {
             window.location.reload(false); 
         })
   
