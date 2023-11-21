@@ -68,11 +68,7 @@ const EnseignantsPresence = () => {
                                         </thead>
                                         <tbody>
                                             {
-                                                users.filter((item) => {
-                                                    return search.tolowerCase() === ''
-                                                    ? item: item.nom.tolowerCase().includes(search);
-                                                })
-                                                    .map((item, idx) => (
+                                                users.map((item, idx) => (
                                                     <tr key={idx}>
                                                         <td className="text-center"><Image className="bg-soft-primary rounded img-fluid avatar-40 me-3" src={item.img} alt="profile" /></td>
                                                         <td>{item.nom}</td>
