@@ -120,12 +120,7 @@ const [indices, setindices] = useState([]);
   
     }
 
-    const submitMarks = (groupe, indice) => {
-        http.get('/notes/updatemark/' + etab + '/' + classe + '/' + evaluation + '/' + id_user + '/' + groupe + '/' + indice).then((res) => {
-            window.location.reload(false); 
-        })
-  
-    }
+    
 
     const [matieres, setmatieres] = useState([]);
     useEffect(() => {
@@ -436,7 +431,7 @@ const [indices, setindices] = useState([]);
                                         <td>
                                             <div className="flex align-items-center list-user-action">
 
-                                        <Button type="button" variant="primary" onClick={() => { submitMarks(item.matiere_note, item.competence_visee_note)}} >Confirmer</Button>{' '}                         
+                                                                 
                                         <Link
                                                                           className="btn btn-sm btn-icon btn-danger"
                                                                           data-toggle="tooltip"
@@ -494,7 +489,7 @@ const [indices, setindices] = useState([]);
                                             <td>{item.appreciation_note}</td>
                                             <td>
                                             <div className="flex align-items-center list-user-action">
-                                                                <Button type="button" variant="primary" onClick={() => { submitMarks(item.matiere_note, item.competence_visee_note)}} >Confirmer</Button>{' '}
+                                                                
 
                                                                   <Link className="btn btn-sm btn-icon btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" onClick={() => { deleteNotes(item.matiere_note , item.competence_visee_note) }} >
                                                                     <span className="btn-inner">
@@ -546,7 +541,7 @@ const [indices, setindices] = useState([]);
                                         <td>
                                             <div className="flex align-items-center list-user-action">
 
-                                                          <Button type="button" variant="primary" onClick={() => { submitMarks(item.matiere_note, item.competence_visee_note)}} >Confirmer</Button>{' '}
+                                                          
                                                                   <Link className="btn btn-sm btn-icon btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" onClick={() => { deleteNotes(item.matiere_note , item.competence_visee_note) }} >
                                                                     <span className="btn-inner">
                                                                         <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
