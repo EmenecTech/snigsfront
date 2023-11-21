@@ -2001,15 +2001,15 @@ const BulletinByEleve = memo((props) => {
                                                                     <Row style={{ fontSize: "10px" }}>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Sexe : </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Matricule : </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass.name} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le :  {elevesinclass.datenaiss} à  {elevesinclass.lieunaiss}</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Sexe :  {elevesinclass.sexe} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Matricule :  {elevesinclass.matricule}</p>
                                                                             </div>
                                                                         </Col>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Classe : </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Classe : {classe} </p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : </p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal :</p>
                                                                             </div>
@@ -2360,10 +2360,10 @@ const BulletinByEleve = memo((props) => {
                                                                     <Row style={{ fontSize: "10px" }}>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass} {info_eleve.nom}{info_eleve.prenom} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : {info_eleve.date_naissance} à {info_eleve.lieu_naissance}</p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Sexe : {info_eleve.sexe}</p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Matricule : {info_eleve.matricule}</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass.name} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : {elevesinclass.datenaiss} à {elevesinclass.lieunaiss}</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Sexe : {elevesinclass.sexe}</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Matricule : {elevesinclass.matricule}</p>
                                                                             </div>
                                                                         </Col>
                                                                         <Col sm="4" lg="4">
@@ -3543,9 +3543,9 @@ const BulletinByEleve = memo((props) => {
 
                                                                     <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                              Nom et Prénom : {elevesinclass}<br />
-                                                                              Date et Lieu de naissance : {info_eleve.date_naissance} à {info_eleve.lieu_naissance} <br />
-                                                                              Sexe : {info_eleve.sexe}<br />
+                                                                              Nom et Prénom : {elevesinclass.name}<br />
+                                                                              Date et Lieu de naissance : {elevesinclass.datenaiss} à  {elevesinclass.lieunaiss} <br />
+                                                                              Sexe :  {elevesinclass.sexe}<br />
                                                                              
                                                                         </div>
                                                                     </Col>
@@ -3559,8 +3559,8 @@ const BulletinByEleve = memo((props) => {
 
                                                                      <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                            <p >Matricule : {info_eleve.matricule}<br />
-                                                                            Redoublant : {info_eleve.redouble}<br />
+                                                                            <p >Matricule :  {elevesinclass.matricule}<br />
+                                                                            Redoublant : <br />
                                                                             </p>
                                                                         </div>
 
@@ -7018,9 +7018,9 @@ const BulletinByEleve = memo((props) => {
 
                                                                         <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                            <p >Name : {elevesinclass}<br />
-                                                                                Date and place of birth : <br />
-                                                                                Sex : <br />
+                                                                            <p >Name :  {elevesinclass.name}<br />
+                                                                                Date and place of birth :  {elevesinclass.datenaiss} à  {elevesinclass.lieunaiss}<br />
+                                                                                Sex :  {elevesinclass.sexe} <br />
                                                                               </p>
                                                                         </div>
                                                                     </Col>
@@ -7034,7 +7034,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                      <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                            <p >Registration number:<br />
+                                                                            <p >Registration number:  {elevesinclass.matricule}<br />
                                                                                 Repeating : <br />
                                                                             </p>
                                                                         </div>
@@ -8820,9 +8820,9 @@ const BulletinByEleve = memo((props) => {
 
                                                                         <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                            <p >Name : {elevesinclass}<br />
-                                                                                Date and place of birth : <br />
-                                                                                Sex : <br />
+                                                                            <p >Name : {elevesinclass.name}<br />
+                                                                                Date and place of birth :  {elevesinclass.datenaiss} at  {elevesinclass.lieunaiss} <br />
+                                                                                Sex :  {elevesinclass.sexe} <br />
                                                                               </p>
                                                                         </div>
                                                                     </Col>
@@ -8836,7 +8836,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                      <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                            <p >Registration number:<br />
+                                                                            <p >Registration number:  {elevesinclass.matricule}<br />
                                                                                 Repeating : <br />
                                                                             </p>
                                                                         </div>
@@ -11404,9 +11404,9 @@ const BulletinByEleve = memo((props) => {
 
                                                             <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                            <p >Nom et Prénom : {elevesinclass}<br />
-                                                                              Date et Lieu de naissance : <br />
-                                                                              Sexe : <br />
+                                                                            <p >Nom et Prénom : {elevesinclass.name}<br />
+                                                                              Date et Lieu de naissance :  {elevesinclass.datenaiss. à  {elevesinclass.lieunaiss}}<br />
+                                                                              Sexe :  {elevesinclass.sexe} <br />
                                                                               </p>
                                                                         </div>
                                                                     </Col>
@@ -11420,7 +11420,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                      <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                            <p >Matricule :<br />
+                                                                            <p >Matricule :  {elevesinclass.matricule}<br />
                                                                             Redoublant : <br />
                                                                             </p>
                                                                         </div>
