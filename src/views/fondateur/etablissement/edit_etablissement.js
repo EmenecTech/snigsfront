@@ -33,7 +33,6 @@ const EditEtablissement = () => {
             setInputs({
                 tel: res.data.telephone,
                 nom: res.data.nom_etablissement,
-                name: res.data.name_etablissement,
                 email: res.data.email_etablissement,
                 bp: res.data.bp_etablissement,
                 site: res.data.site_web_etablisssement,
@@ -227,15 +226,6 @@ const EditEtablissement = () => {
                                                 <Form.Group className="form-group">
                                                     <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Name</div>):(<div>Nom</div>)}</Form.Label>
                                                     <Form.Control type="text" defaultValue="" name="nom" value={inputs.nom || ""} onChange={handleChange} required />
-                                                </Form.Group>
-                                            </Form.Group>
-                                        </Col>
-
-                                            <Col>
-                                            <Form.Group as={Row} className="form-group">
-                                                <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Name</div>):(<div>Name</div>)}</Form.Label>
-                                                    <Form.Control type="text" defaultValue="" name="Name" value={inputs.name || ""} onChange={handleChange} required />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
