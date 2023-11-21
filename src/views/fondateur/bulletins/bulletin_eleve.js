@@ -3534,14 +3534,14 @@ const BulletinByEleve = memo((props) => {
 
                                                                     <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom et Prénom : {elevesinclass} </strong> </p><br />
+                                                                            <p >Nom et Prénom : {elevesinclass}</p><br />
                                                                               Date et Lieu de naissance : <br />
                                                                               Sexe : <br />
                                                                         </div>
                                                                     </Col>
                                                                      <Col sm="4" lg="4">
                                                                          <div className="mt-1">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">Nom de l'enseignant: {enseign} </p><br />
+                                                                            <p>Nom de l'enseignant: {enseign} </p><br />
                                                                             Classe : {classe} 
 
                                                                         </div>
@@ -3549,7 +3549,7 @@ const BulletinByEleve = memo((props) => {
 
                                                                      <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">Matricule : </p><br />
+                                                                            <p className="mb-0">Matricule : </p><br />
                                                                             Redoublant : <br />
                                                                         </div>
 
