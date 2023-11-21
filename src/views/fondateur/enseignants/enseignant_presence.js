@@ -47,10 +47,7 @@ const EnseignantsPresence = () => {
                                 
                                 <Form>
                                         <InputGroup className="my-3">
-                                            <Form.Control
-                                            onChange={(e) => setSearch(e.target.value)}
-                                            placeholder='Search contacts'
-                                            />
+                                            
                                         </InputGroup>
                                     </Form>
                                                 
