@@ -1,6 +1,6 @@
 import React, { useState, useEffect, memo, Fragment } from "react";
 import { Row, Col, Image, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Form, Link } from 'react-router-dom'
 import Card from '../../../components/Card'
 import AuthUser from '../../../components/AuthUser'
 
