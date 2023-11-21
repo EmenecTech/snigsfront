@@ -3443,9 +3443,6 @@ const BulletinByEleve = memo((props) => {
 
                                         <Button variant="primary mt-2" onClick={printData}>
                                             <span className="btn-inner">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6pm-6 0p" />
-                                                </svg>
                                             </span>
                                             Imprimer
                                         </Button>
@@ -3473,7 +3470,9 @@ const BulletinByEleve = memo((props) => {
                                                                         <p className="text-center">REPUBLIQUE DU CAMEROUN <br />
                                                                             Paix - Travail - Patrie <br />
                                                                             MINISTERE DE L'EDUCATION DE BASE<br />
-
+                                                                        </p>
+                                                                        <p className="text-center"><strong style={{ fontSize: "10px" }}> {info_etab.nom_etablissement} </strong><br />
+                                                                          <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal> <br />
                                                                         </p>
 
 
@@ -3492,18 +3491,7 @@ const BulletinByEleve = memo((props) => {
                                                                             </Col>
                                                                         </Row>
                                                                         <br />
-                                                                        <Row>
-                                                                            <Col sm="12">
-                                                                                <div className="container text-center">
-                                                                                    <p> <strong style={{ fontSize: "12px" }}> {info_etab.nom_etablissement} </strong>
-
-                                                                                        <br />
-                                                                                        <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal>
-                                                                                    </p>
-
-                                                                                </div>
-                                                                            </Col>
-                                                                        </Row>
+                                            
 
 
 
@@ -3513,6 +3501,9 @@ const BulletinByEleve = memo((props) => {
                                                                             Peace - Work - Fatherland <br />
                                                                             MINISTRY OF BASIC EDUCATION<br />
 
+                                                                        </p>
+                                                                        <p className="text-center"><strong style={{ fontSize: "10px" }}> {info_etab.nom_etablissement} </strong><br />
+                                                                          <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal> <br />
                                                                         </p>
 
 
@@ -3543,19 +3534,23 @@ const BulletinByEleve = memo((props) => {
 
                                                                     <Col sm="4" lg="4">
                                                                         <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">Nom de l'enseignant: {enseign} </p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom et Prénom : {elevesinclass} </strong> </p><br />
+                                                                              Date et Lieu de naissance : <br />
+                                                                              Sexe : <br />
                                                                         </div>
-
                                                                     </Col>
                                                                      <Col sm="4" lg="4">
                                                                          <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Nom et Prénom : {elevesinclass} </strong> </p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">Nom de l'enseignant: {enseign} </p><br />
+                                                                            Classe : {classe} 
+
                                                                         </div>
                                                                     </Col>
 
                                                                      <Col sm="4" lg="4">
                                                                         <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Classe : {classe} </strong> </p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">Matricule : </p><br />
+                                                                            Redoublant : <br />
                                                                         </div>
 
                                                                     </Col>
@@ -3590,8 +3585,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_1.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_1.groupe} (/ {allnoteprim_1.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_1.sumnote}</th>
+                                                                                    <th>{allnoteprim_1.groupe}</th>
+                                                                                    <th>{allnoteprim_1.sumnote} (/ {allnoteprim_1.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3610,8 +3605,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_2.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_2.groupe} (/ {allnoteprim_2.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_2.sumnote}</th>
+                                                                                    <th>{allnoteprim_2.groupe} </th>
+                                                                                    <th>{allnoteprim_2.sumnote}(/ {allnoteprim_2.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3631,8 +3626,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_3.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_3.groupe} (/ {allnoteprim_3.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_3.sumnote}</th>
+                                                                                    <th>{allnoteprim_3.groupe} </th>
+                                                                                    <th>{allnoteprim_3.sumnote} (/ {allnoteprim_3.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3652,8 +3647,8 @@ const BulletinByEleve = memo((props) => {
                                                                             <thead>
                                                                                 <tr>
 
-                                                                                    <th>{allnoteprim_4.groupe} (/ {allnoteprim_4.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_4.sumnote}</th>
+                                                                                    <th>{allnoteprim_4.groupe}  </th>
+                                                                                    <th>{allnoteprim_4.sumnote}(/ {allnoteprim_4.max_groupe})</th>
                                                                                     <th></th>
 
                                                                                 </tr>
@@ -3674,8 +3669,8 @@ const BulletinByEleve = memo((props) => {
                                                                             <thead>
                                                                                 <tr>
 
-                                                                                    <th>{allnoteprim_5.groupe} (/ {allnoteprim_5.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_5.sumnote}</th>
+                                                                                    <th>{allnoteprim_5.groupe}  </th>
+                                                                                    <th>{allnoteprim_5.sumnote}(/ {allnoteprim_5.max_groupe})</th>
                                                                                     <th></th>
 
                                                                                 </tr>
@@ -3694,8 +3689,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_6.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_6.groupe} (/ {allnoteprim_6.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_6.sumnote}</th>
+                                                                                    <th>{allnoteprim_6.groupe} </th>
+                                                                                    <th>{allnoteprim_6.sumnote} (/ {allnoteprim_6.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3712,8 +3707,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_7.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_7.groupe} (/ {allnoteprim_7.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_7.sumnote}</th>
+                                                                                    <th>{allnoteprim_7.groupe} </th>
+                                                                                    <th>{allnoteprim_7.sumnote} (/ {allnoteprim_7.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3730,8 +3725,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_8.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_8.groupe} (/ {allnoteprim_8.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_8.sumnote}</th>
+                                                                                    <th>{allnoteprim_8.groupe} </th>
+                                                                                    <th>{allnoteprim_8.sumnote} (/ {allnoteprim_8.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3749,8 +3744,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_9.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_9.groupe} (/ {allnoteprim_9.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_9.sumnote}</th>
+                                                                                    <th>{allnoteprim_9.groupe} </th>
+                                                                                    <th>{allnoteprim_9.sumnote}(/ {allnoteprim_9.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3767,8 +3762,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_10.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_10.groupe} (/ {allnoteprim_10.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_10.sumnote}</th>
+                                                                                    <th>{allnoteprim_10.groupe}</th>
+                                                                                    <th>{allnoteprim_10.sumnote} (/ {allnoteprim_10.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3786,8 +3781,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_11.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_11.groupe} (/ {allnoteprim_11.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_11.sumnote}</th>
+                                                                                    <th>{allnoteprim_11.groupe} </th>
+                                                                                    <th>{allnoteprim_11.sumnote} (/ {allnoteprim_11.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3806,8 +3801,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_12.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_12.groupe} (/ {allnoteprim_12.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_12.sumnote}</th>
+                                                                                    <th>{allnoteprim_12.groupe}</th>
+                                                                                    <th>{allnoteprim_12.sumnote} (/ {allnoteprim_12.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3825,8 +3820,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_13.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_13.groupe} (/ {allnoteprim_13.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_13.sumnote}</th>
+                                                                                    <th>{allnoteprim_13.groupe}</th>
+                                                                                    <th>{allnoteprim_13.sumnote} (/ {allnoteprim_13.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3845,8 +3840,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_14.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_14.groupe} (/ {allnoteprim_14.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_14.sumnote}</th>
+                                                                                    <th>{allnoteprim_14.groupe}  </th>
+                                                                                    <th>{allnoteprim_14.sumnote}(/ {allnoteprim_14.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3865,8 +3860,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_15.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_15.groupe} (/ {allnoteprim_15.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_15.sumnote}</th>
+                                                                                    <th>{allnoteprim_15.groupe} </th>
+                                                                                    <th>{allnoteprim_15.sumnote} (/ {allnoteprim_15.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3883,8 +3878,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_16.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_16.groupe} (/ {allnoteprim_16.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_16.sumnote}</th>
+                                                                                    <th>{allnoteprim_16.groupe}</th>
+                                                                                    <th>{allnoteprim_16.sumnote} (/ {allnoteprim_16.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3902,8 +3897,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_17.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_17.groupe} (/ {allnoteprim_17.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_17.sumnote}</th>
+                                                                                    <th>{allnoteprim_17.groupe} </th>
+                                                                                    <th>{allnoteprim_17.sumnote}(/ {allnoteprim_17.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3922,8 +3917,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_18.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_18.groupe} (/ {allnoteprim_18.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_18.sumnote}</th>
+                                                                                    <th>{allnoteprim_18.groupe} </th>
+                                                                                    <th>{allnoteprim_18.sumnote}(/ {allnoteprim_18.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3941,8 +3936,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_19.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_19.groupe} (/ {allnoteprim_19.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_19.sumnote}</th>
+                                                                                    <th>{allnoteprim_19.groupe} </th>
+                                                                                    <th>{allnoteprim_19.sumnote}(/ {allnoteprim_19.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3960,8 +3955,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_20.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_20.groupe} (/ {allnoteprim_20.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_20.sumnote}</th>
+                                                                                    <th>{allnoteprim_20.groupe} </th>
+                                                                                    <th>{allnoteprim_20.sumnote}(/ {allnoteprim_20.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3979,8 +3974,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_21.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_21.groupe} (/ {allnoteprim_21.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_21.sumnote}</th>
+                                                                                    <th>{allnoteprim_21.groupe} </th>
+                                                                                    <th>{allnoteprim_21.sumnote} (/ {allnoteprim_21.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -3998,8 +3993,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_22.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_22.groupe} (/ {allnoteprim_22.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_22.sumnote}</th>
+                                                                                    <th>{allnoteprim_22.groupe} </th>
+                                                                                    <th>{allnoteprim_22.sumnote} (/ {allnoteprim_22.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4017,8 +4012,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_23.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_23.groupe} (/ {allnoteprim_23.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_23.sumnote}</th>
+                                                                                    <th>{allnoteprim_23.groupe} </th>
+                                                                                    <th>{allnoteprim_23.sumnote} (/ {allnoteprim_23.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4036,8 +4031,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_24.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_24.groupe} (/ {allnoteprim_24.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_24.sumnote}</th>
+                                                                                    <th>{allnoteprim_24.groupe}  </th>
+                                                                                    <th>{allnoteprim_24.sumnote}(/ {allnoteprim_24.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4055,8 +4050,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_25.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_25.groupe} (/ {allnoteprim_25.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_25.sumnote}</th>
+                                                                                    <th>{allnoteprim_25.groupe}  </th>
+                                                                                    <th>{allnoteprim_25.sumnote}(/ {allnoteprim_25.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4074,8 +4069,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_26.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_26.groupe} (/ {allnoteprim_26.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_26.sumnote}</th>
+                                                                                    <th>{allnoteprim_26.groupe}  </th>
+                                                                                    <th>{allnoteprim_26.sumnote}(/ {allnoteprim_26.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4093,8 +4088,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_27.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_27.groupe} (/ {allnoteprim_27.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_27.sumnote}</th>
+                                                                                    <th>{allnoteprim_27.groupe}  </th>
+                                                                                    <th>{allnoteprim_27.sumnote}(/ {allnoteprim_27.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4112,8 +4107,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_28.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_28.groupe} (/ {allnoteprim_28.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_28.sumnote}</th>
+                                                                                    <th>{allnoteprim_28.groupe} </th>
+                                                                                    <th>{allnoteprim_28.sumnote}(/ {allnoteprim_28.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4131,8 +4126,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_29.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_29.groupe} (/ {allnoteprim_29.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_29.sumnote}</th>
+                                                                                    <th>{allnoteprim_29.groupe} </th>
+                                                                                    <th>{allnoteprim_29.sumnote}(/ {allnoteprim_29.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4150,8 +4145,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_30.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_30.groupe} (/ {allnoteprim_30.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_30.sumnote}</th>
+                                                                                    <th>{allnoteprim_30.groupe}</th>
+                                                                                    <th>{allnoteprim_30.sumnote} (/ {allnoteprim_30.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4169,8 +4164,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_31.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_31.groupe} (/ {allnoteprim_31.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_31.sumnote}</th>
+                                                                                    <th>{allnoteprim_31.groupe} </th>
+                                                                                    <th>{allnoteprim_31.sumnote}(/ {allnoteprim_31.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4188,8 +4183,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_32.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_32.groupe} (/ {allnoteprim_32.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_32.sumnote}</th>
+                                                                                    <th>{allnoteprim_32.groupe} </th>
+                                                                                    <th>{allnoteprim_32.sumnote} (/ {allnoteprim_32.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4207,8 +4202,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_33.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_33.groupe} (/ {allnoteprim_33.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_33.sumnote}</th>
+                                                                                    <th>{allnoteprim_33.groupe} </th>
+                                                                                    <th>{allnoteprim_33.sumnote} (/ {allnoteprim_33.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4226,8 +4221,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_34.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_34.groupe} (/ {allnoteprim_34.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_34.sumnote}</th>
+                                                                                    <th>{allnoteprim_34.groupe} </th>
+                                                                                    <th>{allnoteprim_34.sumnote}(/ {allnoteprim_34.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4245,8 +4240,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_35.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_35.groupe} (/ {allnoteprim_35.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_35.sumnote}</th>
+                                                                                    <th>{allnoteprim_35.groupe}</th>
+                                                                                    <th>{allnoteprim_35.sumnote} (/ {allnoteprim_35.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4264,8 +4259,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_36.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_36.groupe} (/ {allnoteprim_36.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_36.sumnote}</th>
+                                                                                    <th>{allnoteprim_36.groupe}  </th>
+                                                                                    <th>{allnoteprim_36.sumnote}(/ {allnoteprim_36.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4283,8 +4278,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_37.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_37.groupe} (/ {allnoteprim_37.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_37.sumnote}</th>
+                                                                                    <th>{allnoteprim_37.groupe} </th>
+                                                                                    <th>{allnoteprim_37.sumnote}(/ {allnoteprim_37.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4302,8 +4297,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_38.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_38.groupe} (/ {allnoteprim_38.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_38.sumnote}</th>
+                                                                                    <th>{allnoteprim_38.groupe}  </th>
+                                                                                    <th>{allnoteprim_38.sumnote}(/ {allnoteprim_38.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4320,8 +4315,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_39.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_39.groupe} (/ {allnoteprim_39.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_39.sumnote}</th>
+                                                                                    <th>{allnoteprim_39.groupe}</th>
+                                                                                    <th>{allnoteprim_39.sumnote} (/ {allnoteprim_39.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4339,8 +4334,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_40.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_40.groupe} (/ {allnoteprim_40.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_40.sumnote}</th>
+                                                                                    <th>{allnoteprim_40.groupe} </th>
+                                                                                    <th>{allnoteprim_40.sumnote} (/ {allnoteprim_40.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4358,8 +4353,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_41.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_41.groupe} (/ {allnoteprim_41.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_41.sumnote}</th>
+                                                                                    <th>{allnoteprim_41.groupe} </th>
+                                                                                    <th>{allnoteprim_41.sumnote}(/ {allnoteprim_41.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4377,8 +4372,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_42.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_42.groupe} (/ {allnoteprim_42.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_42.sumnote}</th>
+                                                                                    <th>{allnoteprim_42.groupe} </th>
+                                                                                    <th>{allnoteprim_42.sumnote} (/ {allnoteprim_42.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4396,8 +4391,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_43.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_43.groupe} (/ {allnoteprim_43.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_43.sumnote}</th>
+                                                                                    <th>{allnoteprim_43.groupe}  </th>
+                                                                                    <th>{allnoteprim_43.sumnote}(/ {allnoteprim_43.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4415,8 +4410,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_44.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_44.groupe} (/ {allnoteprim_44.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_44.sumnote}</th>
+                                                                                    <th>{allnoteprim_44.groupe}</th>
+                                                                                    <th>{allnoteprim_44.sumnote} (/ {allnoteprim_44.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4434,8 +4429,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_45.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_45.groupe} (/ {allnoteprim_45.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_45.sumnote}</th>
+                                                                                    <th>{allnoteprim_45.groupe} </th>
+                                                                                    <th>{allnoteprim_45.sumnote}(/ {allnoteprim_45.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4453,8 +4448,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_46.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_46.groupe} (/ {allnoteprim_46.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_46.sumnote}</th>
+                                                                                    <th>{allnoteprim_46.groupe}  </th>
+                                                                                    <th>{allnoteprim_46.sumnote}(/ {allnoteprim_46.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4472,8 +4467,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_47.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_47.groupe} (/ {allnoteprim_47.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_47.sumnote}</th>
+                                                                                    <th>{allnoteprim_47.groupe}</th>
+                                                                                    <th>{allnoteprim_47.sumnote} (/ {allnoteprim_47.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4491,8 +4486,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_48.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_48.groupe} (/ {allnoteprim_48.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_48.sumnote}</th>
+                                                                                    <th>{allnoteprim_48.groupe}  </th>
+                                                                                    <th>{allnoteprim_48.sumnote}(/ {allnoteprim_48.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4510,8 +4505,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_49.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_49.groupe} (/ {allnoteprim_49.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_49.sumnote}</th>
+                                                                                    <th>{allnoteprim_49.groupe} </th>
+                                                                                    <th>{allnoteprim_49.sumnote} (/ {allnoteprim_49.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4529,8 +4524,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_50.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_50.groupe} (/ {allnoteprim_50.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_50.sumnote}</th>
+                                                                                    <th>{allnoteprim_50.groupe}  </th>
+                                                                                    <th>{allnoteprim_50.sumnote}(/ {allnoteprim_50.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4548,8 +4543,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_51.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_51.groupe} (/ {allnoteprim_51.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_51.sumnote}</th>
+                                                                                    <th>{allnoteprim_51.groupe} </th>
+                                                                                    <th>{allnoteprim_51.sumnote}(/ {allnoteprim_51.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}   
@@ -4567,8 +4562,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_52.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_52.groupe} (/ {allnoteprim_52.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_52.sumnote}</th>
+                                                                                    <th>{allnoteprim_52.groupe}  </th>
+                                                                                    <th>{allnoteprim_52.sumnote}(/ {allnoteprim_52.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4586,8 +4581,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_53.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_53.groupe} (/ {allnoteprim_53.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_53.sumnote}</th>
+                                                                                    <th>{allnoteprim_53.groupe}  </th>
+                                                                                    <th>{allnoteprim_53.sumnote}(/ {allnoteprim_53.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4605,8 +4600,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_54.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_54.groupe} (/ {allnoteprim_54.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_54.sumnote}</th>
+                                                                                    <th>{allnoteprim_54.groupe} </th>
+                                                                                    <th>{allnoteprim_54.sumnote} (/ {allnoteprim_54.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4624,8 +4619,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_55.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_55.groupe} (/ {allnoteprim_55.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_55.sumnote}</th>
+                                                                                    <th>{allnoteprim_55.groupe}  </th>
+                                                                                    <th>{allnoteprim_55.sumnote}(/ {allnoteprim_55.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4643,8 +4638,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_56.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_56.groupe} (/ {allnoteprim_56.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_56.sumnote}</th>
+                                                                                    <th>{allnoteprim_56.groupe}  </th>
+                                                                                    <th>{allnoteprim_56.sumnote}(/ {allnoteprim_56.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4662,8 +4657,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_57.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_57.groupe} (/ {allnoteprim_57.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_57.sumnote}</th>
+                                                                                    <th>{allnoteprim_57.groupe} </th>
+                                                                                    <th>{allnoteprim_57.sumnote}(/ {allnoteprim_57.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4681,8 +4676,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_58.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_58.groupe} (/ {allnoteprim_58.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_58.sumnote}</th>
+                                                                                    <th>{allnoteprim_58.groupe}  </th>
+                                                                                    <th>{allnoteprim_58.sumnote}(/ {allnoteprim_58.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4700,8 +4695,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_59.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_59.groupe} (/ {allnoteprim_59.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_59.sumnote}</th>
+                                                                                    <th>{allnoteprim_59.groupe} </th>
+                                                                                    <th>{allnoteprim_59.sumnote} (/ {allnoteprim_59.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4719,8 +4714,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_60.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_60.groupe} (/ {allnoteprim_60.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_60.sumnote}</th>
+                                                                                    <th>{allnoteprim_60.groupe}  </th>
+                                                                                    <th>{allnoteprim_60.sumnote}(/ {allnoteprim_60.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4738,8 +4733,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_61.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_61.groupe} (/ {allnoteprim_61.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_61.sumnote}</th>
+                                                                                    <th>{allnoteprim_61.groupe}  </th>
+                                                                                    <th>{allnoteprim_61.sumnote}(/ {allnoteprim_61.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4757,8 +4752,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_62.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_62.groupe} (/ {allnoteprim_62.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_62.sumnote}</th>
+                                                                                    <th>{allnoteprim_62.groupe}  </th>
+                                                                                    <th>{allnoteprim_62.sumnote}(/ {allnoteprim_62.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4776,8 +4771,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_63.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_63.groupe} (/ {allnoteprim_63.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_63.sumnote}</th>
+                                                                                    <th>{allnoteprim_63.groupe}  </th>
+                                                                                    <th>{allnoteprim_63.sumnote}(/ {allnoteprim_63.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4795,8 +4790,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_64.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_64.groupe} (/ {allnoteprim_64.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_64.sumnote}</th>
+                                                                                    <th>{allnoteprim_64.groupe} </th>
+                                                                                    <th>{allnoteprim_64.sumnote} (/ {allnoteprim_64.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4814,8 +4809,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_65.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_65.groupe} (/ {allnoteprim_65.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_65.sumnote}</th>
+                                                                                    <th>{allnoteprim_65.groupe}  </th>
+                                                                                    <th>{allnoteprim_65.sumnote}(/ {allnoteprim_65.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4833,8 +4828,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_66.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_66.groupe} (/ {allnoteprim_66.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_66.sumnote}</th>
+                                                                                    <th>{allnoteprim_66.groupe} </th>
+                                                                                    <th>{allnoteprim_66.sumnote} (/ {allnoteprim_66.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4852,8 +4847,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_67.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_67.groupe} (/ {allnoteprim_67.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_67.sumnote}</th>
+                                                                                    <th>{allnoteprim_67.groupe}  </th>
+                                                                                    <th>{allnoteprim_67.sumnote}(/ {allnoteprim_67.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4871,8 +4866,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_68.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_68.groupe} (/ {allnoteprim_68.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_68.sumnote}</th>
+                                                                                    <th>{allnoteprim_68.groupe} </th>
+                                                                                    <th>{allnoteprim_68.sumnote} (/ {allnoteprim_68.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4890,8 +4885,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_69.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_69.groupe} (/ {allnoteprim_69.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_69.sumnote}</th>
+                                                                                    <th>{allnoteprim_69.groupe}  </th>
+                                                                                    <th>{allnoteprim_69.sumnote}(/ {allnoteprim_69.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4909,8 +4904,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_70.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_70.groupe} (/ {allnoteprim_70.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_70.sumnote}</th>
+                                                                                    <th>{allnoteprim_70.groupe}  </th>
+                                                                                    <th>{allnoteprim_70.sumnote}(/ {allnoteprim_70.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4928,8 +4923,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_71.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_71.groupe} (/ {allnoteprim_71.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_71.sumnote}</th>
+                                                                                    <th>{allnoteprim_71.groupe} </th>
+                                                                                    <th>{allnoteprim_71.sumnote} (/ {allnoteprim_71.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4947,8 +4942,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_72.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_72.groupe} (/ {allnoteprim_72.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_72.sumnote}</th>
+                                                                                    <th>{allnoteprim_72.groupe} </th>
+                                                                                    <th>{allnoteprim_72.sumnote} (/ {allnoteprim_72.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4966,8 +4961,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_73.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_73.groupe} (/ {allnoteprim_73.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_73.sumnote}</th>
+                                                                                    <th>{allnoteprim_73.groupe}  </th>
+                                                                                    <th>{allnoteprim_73.sumnote}(/ {allnoteprim_73.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -4985,8 +4980,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_74.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_74.groupe} (/ {allnoteprim_74.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_74.sumnote}</th>
+                                                                                    <th>{allnoteprim_74.groupe} </th>
+                                                                                    <th>{allnoteprim_74.sumnote} (/ {allnoteprim_74.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -5004,8 +4999,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_75.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_75.groupe} (/ {allnoteprim_75.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_75.sumnote}</th>
+                                                                                    <th>{allnoteprim_75.groupe} </th>
+                                                                                    <th>{allnoteprim_75.sumnote}(/ {allnoteprim_75.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -5023,8 +5018,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_76.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_76.groupe} (/ {allnoteprim_76.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_76.sumnote}</th>
+                                                                                    <th>{allnoteprim_76.groupe}  </th>
+                                                                                    <th>{allnoteprim_76.sumnote}(/ {allnoteprim_76.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -5042,8 +5037,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_77.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_77.groupe} (/ {allnoteprim_77.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_77.sumnote}</th>
+                                                                                    <th>{allnoteprim_77.groupe} </th>
+                                                                                    <th>{allnoteprim_77.sumnote}(/ {allnoteprim_77.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -5061,8 +5056,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_78.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_78.groupe} (/ {allnoteprim_78.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_78.sumnote}</th>
+                                                                                    <th>{allnoteprim_78.groupe}  </th>
+                                                                                    <th>{allnoteprim_78.sumnote}(/ {allnoteprim_78.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -5080,8 +5075,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_79.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_79.groupe} (/ {allnoteprim_79.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_79.sumnote}</th>
+                                                                                    <th>{allnoteprim_79.groupe} </th>
+                                                                                    <th>{allnoteprim_79.sumnote} (/ {allnoteprim_79.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -5099,8 +5094,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_80.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_80.groupe} (/ {allnoteprim_80.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_80.sumnote}</th>
+                                                                                    <th>{allnoteprim_80.groupe} </th>
+                                                                                    <th>{allnoteprim_80.sumnote} (/ {allnoteprim_80.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -8873,8 +8868,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_1.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_1.groupe} (/ {allnoteprim_1.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_1.sumnote}</th>
+                                                                                    <th>{allnoteprim_1.groupe}</th>
+                                                                                    <th>{allnoteprim_1.sumnote} (/ {allnoteprim_1.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -8893,8 +8888,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_2.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_2.groupe} (/ {allnoteprim_2.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_2.sumnote}</th>
+                                                                                    <th>{allnoteprim_2.groupe} </th>
+                                                                                    <th>{allnoteprim_2.sumnote}(/ {allnoteprim_2.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -8914,8 +8909,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_3.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_3.groupe} (/ {allnoteprim_3.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_3.sumnote}</th>
+                                                                                    <th>{allnoteprim_3.groupe} </th>
+                                                                                    <th>{allnoteprim_3.sumnote} (/ {allnoteprim_3.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -8935,8 +8930,8 @@ const BulletinByEleve = memo((props) => {
                                                                             <thead>
                                                                                 <tr>
 
-                                                                                    <th>{allnoteprim_4.groupe} (/ {allnoteprim_4.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_4.sumnote}</th>
+                                                                                    <th>{allnoteprim_4.groupe}  </th>
+                                                                                    <th>{allnoteprim_4.sumnote}(/ {allnoteprim_4.max_groupe})</th>
                                                                                     <th></th>
 
                                                                                 </tr>
@@ -8957,8 +8952,8 @@ const BulletinByEleve = memo((props) => {
                                                                             <thead>
                                                                                 <tr>
 
-                                                                                    <th>{allnoteprim_5.groupe} (/ {allnoteprim_5.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_5.sumnote}</th>
+                                                                                    <th>{allnoteprim_5.groupe}  </th>
+                                                                                    <th>{allnoteprim_5.sumnote}(/ {allnoteprim_5.max_groupe})</th>
                                                                                     <th></th>
 
                                                                                 </tr>
@@ -8977,8 +8972,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_6.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_6.groupe} (/ {allnoteprim_6.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_6.sumnote}</th>
+                                                                                    <th>{allnoteprim_6.groupe} </th>
+                                                                                    <th>{allnoteprim_6.sumnote} (/ {allnoteprim_6.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -8995,8 +8990,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_7.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_7.groupe} (/ {allnoteprim_7.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_7.sumnote}</th>
+                                                                                    <th>{allnoteprim_7.groupe} </th>
+                                                                                    <th>{allnoteprim_7.sumnote} (/ {allnoteprim_7.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9013,8 +9008,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_8.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_8.groupe} (/ {allnoteprim_8.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_8.sumnote}</th>
+                                                                                    <th>{allnoteprim_8.groupe} </th>
+                                                                                    <th>{allnoteprim_8.sumnote} (/ {allnoteprim_8.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9032,8 +9027,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_9.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_9.groupe} (/ {allnoteprim_9.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_9.sumnote}</th>
+                                                                                    <th>{allnoteprim_9.groupe} </th>
+                                                                                    <th>{allnoteprim_9.sumnote}(/ {allnoteprim_9.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9050,8 +9045,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_10.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_10.groupe} (/ {allnoteprim_10.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_10.sumnote}</th>
+                                                                                    <th>{allnoteprim_10.groupe}</th>
+                                                                                    <th>{allnoteprim_10.sumnote} (/ {allnoteprim_10.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9069,8 +9064,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_11.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_11.groupe} (/ {allnoteprim_11.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_11.sumnote}</th>
+                                                                                    <th>{allnoteprim_11.groupe} </th>
+                                                                                    <th>{allnoteprim_11.sumnote} (/ {allnoteprim_11.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9089,8 +9084,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_12.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_12.groupe} (/ {allnoteprim_12.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_12.sumnote}</th>
+                                                                                    <th>{allnoteprim_12.groupe}</th>
+                                                                                    <th>{allnoteprim_12.sumnote} (/ {allnoteprim_12.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9108,8 +9103,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_13.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_13.groupe} (/ {allnoteprim_13.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_13.sumnote}</th>
+                                                                                    <th>{allnoteprim_13.groupe}</th>
+                                                                                    <th>{allnoteprim_13.sumnote} (/ {allnoteprim_13.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9128,8 +9123,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_14.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_14.groupe} (/ {allnoteprim_14.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_14.sumnote}</th>
+                                                                                    <th>{allnoteprim_14.groupe}  </th>
+                                                                                    <th>{allnoteprim_14.sumnote}(/ {allnoteprim_14.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9148,8 +9143,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_15.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_15.groupe} (/ {allnoteprim_15.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_15.sumnote}</th>
+                                                                                    <th>{allnoteprim_15.groupe} </th>
+                                                                                    <th>{allnoteprim_15.sumnote} (/ {allnoteprim_15.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9166,8 +9161,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_16.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_16.groupe} (/ {allnoteprim_16.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_16.sumnote}</th>
+                                                                                    <th>{allnoteprim_16.groupe}</th>
+                                                                                    <th>{allnoteprim_16.sumnote} (/ {allnoteprim_16.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9185,8 +9180,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_17.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_17.groupe} (/ {allnoteprim_17.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_17.sumnote}</th>
+                                                                                    <th>{allnoteprim_17.groupe} </th>
+                                                                                    <th>{allnoteprim_17.sumnote}(/ {allnoteprim_17.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9205,8 +9200,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_18.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_18.groupe} (/ {allnoteprim_18.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_18.sumnote}</th>
+                                                                                    <th>{allnoteprim_18.groupe} </th>
+                                                                                    <th>{allnoteprim_18.sumnote}(/ {allnoteprim_18.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9224,8 +9219,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_19.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_19.groupe} (/ {allnoteprim_19.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_19.sumnote}</th>
+                                                                                    <th>{allnoteprim_19.groupe} </th>
+                                                                                    <th>{allnoteprim_19.sumnote}(/ {allnoteprim_19.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9243,8 +9238,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_20.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_20.groupe} (/ {allnoteprim_20.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_20.sumnote}</th>
+                                                                                    <th>{allnoteprim_20.groupe} </th>
+                                                                                    <th>{allnoteprim_20.sumnote}(/ {allnoteprim_20.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9262,8 +9257,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_21.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_21.groupe} (/ {allnoteprim_21.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_21.sumnote}</th>
+                                                                                    <th>{allnoteprim_21.groupe} </th>
+                                                                                    <th>{allnoteprim_21.sumnote} (/ {allnoteprim_21.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9281,8 +9276,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_22.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_22.groupe} (/ {allnoteprim_22.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_22.sumnote}</th>
+                                                                                    <th>{allnoteprim_22.groupe} </th>
+                                                                                    <th>{allnoteprim_22.sumnote} (/ {allnoteprim_22.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9300,8 +9295,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_23.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_23.groupe} (/ {allnoteprim_23.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_23.sumnote}</th>
+                                                                                    <th>{allnoteprim_23.groupe} </th>
+                                                                                    <th>{allnoteprim_23.sumnote} (/ {allnoteprim_23.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9319,8 +9314,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_24.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_24.groupe} (/ {allnoteprim_24.max_groupe}) </th>
-                                                                                    <th></th>
+                                                                                    <th>{allnoteprim_24.groupe}  </th>
+                                                                                    <th>{allnoteprim_24.sumnote}(/ {allnoteprim_24.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9338,8 +9333,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_25.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_25.groupe} (/ {allnoteprim_25.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_25.sumnote}</th>
+                                                                                    <th>{allnoteprim_25.groupe}  </th>
+                                                                                    <th>{allnoteprim_25.sumnote}(/ {allnoteprim_25.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9357,8 +9352,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_26.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_26.groupe} (/ {allnoteprim_26.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_26.sumnote}</th>
+                                                                                    <th>{allnoteprim_26.groupe}  </th>
+                                                                                    <th>{allnoteprim_26.sumnote}(/ {allnoteprim_26.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9376,8 +9371,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_27.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_27.groupe} (/ {allnoteprim_27.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_27.sumnote}</th>
+                                                                                    <th>{allnoteprim_27.groupe}  </th>
+                                                                                    <th>{allnoteprim_27.sumnote}(/ {allnoteprim_27.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9395,8 +9390,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_28.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_28.groupe} (/ {allnoteprim_28.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_28.sumnote}</th>
+                                                                                    <th>{allnoteprim_28.groupe} </th>
+                                                                                    <th>{allnoteprim_28.sumnote}(/ {allnoteprim_28.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9414,8 +9409,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_29.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_29.groupe} (/ {allnoteprim_29.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_29.sumnote}</th>
+                                                                                    <th>{allnoteprim_29.groupe} </th>
+                                                                                    <th>{allnoteprim_29.sumnote}(/ {allnoteprim_29.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9433,8 +9428,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_30.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_30.groupe} (/ {allnoteprim_30.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_30.sumnote}</th>
+                                                                                    <th>{allnoteprim_30.groupe}</th>
+                                                                                    <th>{allnoteprim_30.sumnote} (/ {allnoteprim_30.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9452,8 +9447,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_31.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_31.groupe} (/ {allnoteprim_31.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_31.sumnote}</th>
+                                                                                    <th>{allnoteprim_31.groupe} </th>
+                                                                                    <th>{allnoteprim_31.sumnote}(/ {allnoteprim_31.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9471,8 +9466,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_32.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_32.groupe} (/ {allnoteprim_32.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_32.sumnote}</th>
+                                                                                    <th>{allnoteprim_32.groupe} </th>
+                                                                                    <th>{allnoteprim_32.sumnote} (/ {allnoteprim_32.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9490,8 +9485,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_33.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_33.groupe} (/ {allnoteprim_33.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_33.sumnote}</th>
+                                                                                    <th>{allnoteprim_33.groupe} </th>
+                                                                                    <th>{allnoteprim_33.sumnote} (/ {allnoteprim_33.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9509,8 +9504,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_34.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_34.groupe} (/ {allnoteprim_34.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_34.sumnote}</th>
+                                                                                    <th>{allnoteprim_34.groupe} </th>
+                                                                                    <th>{allnoteprim_34.sumnote}(/ {allnoteprim_34.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9528,8 +9523,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_35.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_35.groupe} (/ {allnoteprim_35.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_35.sumnote}</th>
+                                                                                    <th>{allnoteprim_35.groupe}</th>
+                                                                                    <th>{allnoteprim_35.sumnote} (/ {allnoteprim_35.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9547,8 +9542,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_36.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_36.groupe} (/ {allnoteprim_36.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_36.sumnote}</th>
+                                                                                    <th>{allnoteprim_36.groupe}  </th>
+                                                                                    <th>{allnoteprim_36.sumnote}(/ {allnoteprim_36.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9566,8 +9561,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_37.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_37.groupe} (/ {allnoteprim_37.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_37.sumnote}</th>
+                                                                                    <th>{allnoteprim_37.groupe} </th>
+                                                                                    <th>{allnoteprim_37.sumnote}(/ {allnoteprim_37.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9585,8 +9580,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_38.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_38.groupe} (/ {allnoteprim_38.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_38.sumnote}</th>
+                                                                                    <th>{allnoteprim_38.groupe}  </th>
+                                                                                    <th>{allnoteprim_38.sumnote}(/ {allnoteprim_38.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9603,8 +9598,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_39.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_39.groupe} (/ {allnoteprim_39.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_39.sumnote}</th>
+                                                                                    <th>{allnoteprim_39.groupe}</th>
+                                                                                    <th>{allnoteprim_39.sumnote} (/ {allnoteprim_39.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9622,8 +9617,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_40.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_40.groupe} (/ {allnoteprim_40.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_40.sumnote}</th>
+                                                                                    <th>{allnoteprim_40.groupe} </th>
+                                                                                    <th>{allnoteprim_40.sumnote} (/ {allnoteprim_40.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9641,8 +9636,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_41.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_41.groupe} (/ {allnoteprim_41.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_41.sumnote}</th>
+                                                                                    <th>{allnoteprim_41.groupe} </th>
+                                                                                    <th>{allnoteprim_41.sumnote}(/ {allnoteprim_41.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9660,8 +9655,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_42.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_42.groupe} (/ {allnoteprim_42.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_42.sumnote}</th>
+                                                                                    <th>{allnoteprim_42.groupe} </th>
+                                                                                    <th>{allnoteprim_42.sumnote} (/ {allnoteprim_42.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9679,8 +9674,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_43.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_43.groupe} (/ {allnoteprim_43.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_43.sumnote}</th>
+                                                                                    <th>{allnoteprim_43.groupe}  </th>
+                                                                                    <th>{allnoteprim_43.sumnote}(/ {allnoteprim_43.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9698,8 +9693,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_44.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_44.groupe} (/ {allnoteprim_44.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_44.sumnote}</th>
+                                                                                    <th>{allnoteprim_44.groupe}</th>
+                                                                                    <th>{allnoteprim_44.sumnote} (/ {allnoteprim_44.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9717,8 +9712,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_45.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_45.groupe} (/ {allnoteprim_45.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_45.sumnote}</th>
+                                                                                    <th>{allnoteprim_45.groupe} </th>
+                                                                                    <th>{allnoteprim_45.sumnote}(/ {allnoteprim_45.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9736,8 +9731,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_46.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_46.groupe} (/ {allnoteprim_46.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_46.sumnote}</th>
+                                                                                    <th>{allnoteprim_46.groupe}  </th>
+                                                                                    <th>{allnoteprim_46.sumnote}(/ {allnoteprim_46.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9755,8 +9750,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_47.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_47.groupe} (/ {allnoteprim_47.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_47.sumnote}</th>
+                                                                                    <th>{allnoteprim_47.groupe}</th>
+                                                                                    <th>{allnoteprim_47.sumnote} (/ {allnoteprim_47.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9774,8 +9769,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_48.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_48.groupe} (/ {allnoteprim_48.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_48.sumnote}</th>
+                                                                                    <th>{allnoteprim_48.groupe}  </th>
+                                                                                    <th>{allnoteprim_48.sumnote}(/ {allnoteprim_48.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9793,8 +9788,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_49.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_49.groupe} (/ {allnoteprim_49.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_49.sumnote}</th>
+                                                                                    <th>{allnoteprim_49.groupe} </th>
+                                                                                    <th>{allnoteprim_49.sumnote} (/ {allnoteprim_49.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9812,8 +9807,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_50.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_50.groupe} (/ {allnoteprim_50.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_50.sumnote}</th>
+                                                                                    <th>{allnoteprim_50.groupe}  </th>
+                                                                                    <th>{allnoteprim_50.sumnote}(/ {allnoteprim_50.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9831,8 +9826,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_51.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_51.groupe} (/ {allnoteprim_51.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_51.sumnote}</th>
+                                                                                    <th>{allnoteprim_51.groupe} </th>
+                                                                                    <th>{allnoteprim_51.sumnote}(/ {allnoteprim_51.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}   
@@ -9850,8 +9845,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_52.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_52.groupe} (/ {allnoteprim_52.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_52.sumnote}</th>
+                                                                                    <th>{allnoteprim_52.groupe}  </th>
+                                                                                    <th>{allnoteprim_52.sumnote}(/ {allnoteprim_52.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9869,8 +9864,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_53.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_53.groupe} (/ {allnoteprim_53.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_53.sumnote}</th>
+                                                                                    <th>{allnoteprim_53.groupe}  </th>
+                                                                                    <th>{allnoteprim_53.sumnote}(/ {allnoteprim_53.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9888,8 +9883,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_54.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_54.groupe} (/ {allnoteprim_54.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_54.sumnote}</th>
+                                                                                    <th>{allnoteprim_54.groupe} </th>
+                                                                                    <th>{allnoteprim_54.sumnote} (/ {allnoteprim_54.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9907,8 +9902,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_55.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_55.groupe} (/ {allnoteprim_55.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_55.sumnote}</th>
+                                                                                    <th>{allnoteprim_55.groupe}  </th>
+                                                                                    <th>{allnoteprim_55.sumnote}(/ {allnoteprim_55.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9926,8 +9921,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_56.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_56.groupe} (/ {allnoteprim_56.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_56.sumnote}</th>
+                                                                                    <th>{allnoteprim_56.groupe}  </th>
+                                                                                    <th>{allnoteprim_56.sumnote}(/ {allnoteprim_56.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9945,8 +9940,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_57.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_57.groupe} (/ {allnoteprim_57.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_57.sumnote}</th>
+                                                                                    <th>{allnoteprim_57.groupe} </th>
+                                                                                    <th>{allnoteprim_57.sumnote}(/ {allnoteprim_57.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9964,8 +9959,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_58.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_58.groupe} (/ {allnoteprim_58.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_58.sumnote}</th>
+                                                                                    <th>{allnoteprim_58.groupe}  </th>
+                                                                                    <th>{allnoteprim_58.sumnote}(/ {allnoteprim_58.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -9983,8 +9978,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_59.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_59.groupe} (/ {allnoteprim_59.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_59.sumnote}</th>
+                                                                                    <th>{allnoteprim_59.groupe} </th>
+                                                                                    <th>{allnoteprim_59.sumnote} (/ {allnoteprim_59.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10002,8 +9997,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_60.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_60.groupe} (/ {allnoteprim_60.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_60.sumnote}</th>
+                                                                                    <th>{allnoteprim_60.groupe}  </th>
+                                                                                    <th>{allnoteprim_60.sumnote}(/ {allnoteprim_60.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10021,8 +10016,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_61.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_61.groupe} (/ {allnoteprim_61.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_61.sumnote}</th>
+                                                                                    <th>{allnoteprim_61.groupe}  </th>
+                                                                                    <th>{allnoteprim_61.sumnote}(/ {allnoteprim_61.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10040,8 +10035,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_62.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_62.groupe} (/ {allnoteprim_62.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_62.sumnote}</th>
+                                                                                    <th>{allnoteprim_62.groupe}  </th>
+                                                                                    <th>{allnoteprim_62.sumnote}(/ {allnoteprim_62.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10059,8 +10054,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_63.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_63.groupe} (/ {allnoteprim_63.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_63.sumnote}</th>
+                                                                                    <th>{allnoteprim_63.groupe}  </th>
+                                                                                    <th>{allnoteprim_63.sumnote}(/ {allnoteprim_63.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10078,8 +10073,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_64.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_64.groupe} (/ {allnoteprim_64.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_64.sumnote}</th>
+                                                                                    <th>{allnoteprim_64.groupe} </th>
+                                                                                    <th>{allnoteprim_64.sumnote} (/ {allnoteprim_64.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10097,8 +10092,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_65.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_65.groupe} (/ {allnoteprim_65.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_65.sumnote}</th>
+                                                                                    <th>{allnoteprim_65.groupe}  </th>
+                                                                                    <th>{allnoteprim_65.sumnote}(/ {allnoteprim_65.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10116,8 +10111,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_66.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_66.groupe} (/ {allnoteprim_66.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_66.sumnote}</th>
+                                                                                    <th>{allnoteprim_66.groupe} </th>
+                                                                                    <th>{allnoteprim_66.sumnote} (/ {allnoteprim_66.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10135,8 +10130,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_67.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_67.groupe} (/ {allnoteprim_67.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_67.sumnote}</th>
+                                                                                    <th>{allnoteprim_67.groupe}  </th>
+                                                                                    <th>{allnoteprim_67.sumnote}(/ {allnoteprim_67.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10154,8 +10149,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_68.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_68.groupe} (/ {allnoteprim_68.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_68.sumnote}</th>
+                                                                                    <th>{allnoteprim_68.groupe} </th>
+                                                                                    <th>{allnoteprim_68.sumnote} (/ {allnoteprim_68.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10173,8 +10168,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_69.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_69.groupe} (/ {allnoteprim_69.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_69.sumnote}</th>
+                                                                                    <th>{allnoteprim_69.groupe}  </th>
+                                                                                    <th>{allnoteprim_69.sumnote}(/ {allnoteprim_69.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10192,8 +10187,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_70.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_70.groupe} (/ {allnoteprim_70.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_70.sumnote}</th>
+                                                                                    <th>{allnoteprim_70.groupe}  </th>
+                                                                                    <th>{allnoteprim_70.sumnote}(/ {allnoteprim_70.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10211,8 +10206,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_71.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_71.groupe} (/ {allnoteprim_71.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_71.sumnote}</th>
+                                                                                    <th>{allnoteprim_71.groupe} </th>
+                                                                                    <th>{allnoteprim_71.sumnote} (/ {allnoteprim_71.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10230,8 +10225,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_72.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_72.groupe} (/ {allnoteprim_72.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_72.sumnote}</th>
+                                                                                    <th>{allnoteprim_72.groupe} </th>
+                                                                                    <th>{allnoteprim_72.sumnote} (/ {allnoteprim_72.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10249,8 +10244,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_73.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_73.groupe} (/ {allnoteprim_73.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_73.sumnote}</th>
+                                                                                    <th>{allnoteprim_73.groupe}  </th>
+                                                                                    <th>{allnoteprim_73.sumnote}(/ {allnoteprim_73.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10268,8 +10263,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_74.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_74.groupe} (/ {allnoteprim_74.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_74.sumnote}</th>
+                                                                                    <th>{allnoteprim_74.groupe} </th>
+                                                                                    <th>{allnoteprim_74.sumnote} (/ {allnoteprim_74.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10287,8 +10282,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_75.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_75.groupe} (/ {allnoteprim_75.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_75.sumnote}</th>
+                                                                                    <th>{allnoteprim_75.groupe} </th>
+                                                                                    <th>{allnoteprim_75.sumnote}(/ {allnoteprim_75.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10306,8 +10301,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_76.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_76.groupe} (/ {allnoteprim_76.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_76.sumnote}</th>
+                                                                                    <th>{allnoteprim_76.groupe}  </th>
+                                                                                    <th>{allnoteprim_76.sumnote}(/ {allnoteprim_76.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10325,8 +10320,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_77.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_77.groupe} (/ {allnoteprim_77.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_77.sumnote}</th>
+                                                                                    <th>{allnoteprim_77.groupe} </th>
+                                                                                    <th>{allnoteprim_77.sumnote}(/ {allnoteprim_77.max_groupe}) </th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10344,8 +10339,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_78.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_78.groupe} (/ {allnoteprim_78.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_78.sumnote}</th>
+                                                                                    <th>{allnoteprim_78.groupe}  </th>
+                                                                                    <th>{allnoteprim_78.sumnote}(/ {allnoteprim_78.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10363,8 +10358,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_79.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_79.groupe} (/ {allnoteprim_79.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_79.sumnote}</th>
+                                                                                    <th>{allnoteprim_79.groupe} </th>
+                                                                                    <th>{allnoteprim_79.sumnote} (/ {allnoteprim_79.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
@@ -10382,8 +10377,8 @@ const BulletinByEleve = memo((props) => {
                                                                         {allnoteprim_80.existgrp > 0 && (
                                                                             <thead>
                                                                                 <tr>
-                                                                                    <th>{allnoteprim_80.groupe} (/ {allnoteprim_80.max_groupe}) </th>
-                                                                                    <th>{allnoteprim_80.sumnote}</th>
+                                                                                    <th>{allnoteprim_80.groupe} </th>
+                                                                                    <th>{allnoteprim_80.sumnote} (/ {allnoteprim_80.max_groupe})</th>
                                                                                     <th></th>
                                                                                 </tr>
                                                                             </thead>)}
