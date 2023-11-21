@@ -234,18 +234,8 @@ const EditEtablissement = () => {
                                             <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Nom</div>):(<div>Name</div>)}</Form.Label>
-                                                    <Form.Control type="text" defaultValue="" name="name" value={inputs.name || ""} onChange={handleChange} required />
-                                                </Form.Group>
-                                            </Form.Group>
-                                        </Col>
-
-
-                                            <Col>
-                                            <Form.Group as={Row} className="form-group">
-                                                <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Name</div>):(<div>Nom</div>)}</Form.Label>
-                                                    <Form.Control type="text" defaultValue="" name="nom" value={inputs.nom || ""} onChange={handleChange} required />
+                                                    <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Name</div>):(<div>Name</div>)}</Form.Label>
+                                                    <Form.Control type="text" defaultValue="" name="Name" value={inputs.name || ""} onChange={handleChange} required />
                                                 </Form.Group>
                                             </Form.Group>
                                         </Col>
