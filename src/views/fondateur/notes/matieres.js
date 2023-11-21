@@ -76,6 +76,14 @@ const AdminMatieresNotesEleves = memo((props) => {
         })
     }
 
+
+  const submitMarks = (id_user) => {
+        http.get('/notes/updatemark/' + etab + '/' + classe + '/' + evaluation + '/' + id_user).then((res) => {
+            window.location.reload(false); 
+        })
+  
+    }
+
     useSelector(SettingSelector.theme_color);
 
     const getVariableColor = () => {
@@ -336,6 +344,7 @@ return (
                                                 <td>{user.nom} {user.prenom}</td>
                                                 <td>
                                                     <div className="flex align-items-center list-user-action">
+                                                    <Button type="button" variant="primary" onClick={() => { submitMarks(user.id)}} >Confirmer</Button>{' '}
 
                                                         <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Admin/Edit/Notes/" + niveau + "/" + classe + "/" + evaluation + "/" + user.id}>
                                                             <span className="btn-inner">
