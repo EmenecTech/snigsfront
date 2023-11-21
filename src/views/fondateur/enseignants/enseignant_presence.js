@@ -26,7 +26,7 @@ const EnseignantsPresence = () => {
         })
     }
 
-    const [search, setSearch] = useState{''};
+    const [search, setSearch] = useState('');
     console.log(search)
 
 
