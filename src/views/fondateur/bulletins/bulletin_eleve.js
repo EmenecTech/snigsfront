@@ -122,6 +122,15 @@ const BulletinByEleve = memo((props) => {
             setrang_eleve(res.data);
         });
     }
+     const [total_eleves, settotal_eleves] = useState([]);
+    useEffect(() => {
+        fetchAlltotal_eleves();
+    }, []);
+    const fetchAlltotal_eleves = () => {
+        http.get("/nbreleves_classe/" + etab + '/' + classe).then((res) => {
+            settotal_eleves(res.data);
+        });
+    };
 
     console.log(rang_eleve)
 
@@ -3534,10 +3543,10 @@ const BulletinByEleve = memo((props) => {
 
                                                                     <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                            <p >Nom et Prénom : {elevesinclass}<br />
+                                                                              Nom et Prénom : {elevesinclass}<br />
                                                                               Date et Lieu de naissance : <br />
                                                                               Sexe : <br />
-                                                                              </p>
+                                                                             
                                                                         </div>
                                                                     </Col>
                                                                      <Col sm="4" lg="4">
@@ -5167,7 +5176,7 @@ const BulletinByEleve = memo((props) => {
                                                                                 <div className="mt-1">
                                                                                           <p> Rang:{rang_eleve.rang}
                                                                                           <br />M.Gle:
-                                                                                          <br />Effectif:
+                                                                                          <br />Effectif: {total_eleves.Total_eleveclasse}
                                                                                           </p>
                                                                                     </div>
                                                                                 </td>
@@ -10445,7 +10454,7 @@ const BulletinByEleve = memo((props) => {
                                                                                             <div className="mt-1">
                                                                                                     <p> Rank:{rang_eleve.rang}</p>
                                                                                                     <br />G.Average:
-                                                                                                    <br />Effective:
+                                                                                                    <br />Effective: {total_eleves.Total_eleveclasse}
                                                                                                 </div>
                                                                                 </td>
                                                                                         </tr>
