@@ -3544,7 +3544,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <Col sm="4" lg="4">
                                                                         <div className="mt-1">
                                                                               Nom et Prénom : {elevesinclass.name}<br />
-                                                                              Date et Lieu de naissance : {elevesinclass.datenaiss} à  {elevesinclass.lieunaiss} <br />
+                                                                              Date et Lieu de naissance : {elevesinclass.datenaiss} à {elevesinclass.lieunaiss} <br />
                                                                               Sexe :  {elevesinclass.sexe}<br />
                                                                              
                                                                         </div>
@@ -5356,7 +5356,7 @@ const BulletinByEleve = memo((props) => {
                                                                         </div>
 
                                                                         <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : {elevesinclass} </strong> </p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : </strong> </p>
 
                                                                         </div>
 
@@ -6191,7 +6191,7 @@ const BulletinByEleve = memo((props) => {
                                                                         </div>
 
                                                                         <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">Name : <strong> {elevesinclass} </strong> </p>
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">Name : <strong> </strong> </p>
 
                                                                         </div>
 
