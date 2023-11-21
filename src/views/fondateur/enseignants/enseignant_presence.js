@@ -49,7 +49,7 @@ const EnseignantsPresence = () => {
                                         <InputGroup className="my-3">
                                             <Form.Control
                                             onChange={(e) => setSearch(e.target.value)}
-                                            placeholder='Search contacts'
+                                            placeholder='Search date'
                                             />
                                         </InputGroup>
                                     </Form>
@@ -71,7 +71,11 @@ const EnseignantsPresence = () => {
                                         </thead>
                                         <tbody>
                                             {
-                                                users.map((item, idx) => (
+                                                users.filter((item) => {
+                                                    return search.tolowerCase() === ''
+                                                    ? item: item.nom.tolowerCase().includes(search);
+                                                })
+                                                    .map((item, idx) => (
                                                     <tr key={idx}>
                                                         <td className="text-center"><Image className="bg-soft-primary rounded img-fluid avatar-40 me-3" src={item.img} alt="profile" /></td>
                                                         <td>{item.nom}</td>
