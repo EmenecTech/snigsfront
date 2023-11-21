@@ -3562,7 +3562,7 @@ const BulletinByEleve = memo((props) => {
                                                                     <Table
                                                                         responsive
                                                                        
-                                                                        id="datatable"
+                                                                         id="datatable"
                                                                         className=""
                                                                         data-toggle="data-table"
                                                                     >
