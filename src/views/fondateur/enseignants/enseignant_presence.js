@@ -26,7 +26,7 @@ const EnseignantsPresence = () => {
         })
     }
 
-    const [search, setSearch] = useState('');
+    const [search, setSearch] = useState{''};
     console.log(search)
 
 
@@ -73,7 +73,8 @@ const EnseignantsPresence = () => {
                                             {
                                                 users.filter((item) => {
                                                     return search.tolowerCase() === ''
-                                                    ? item: item.nom.tolowerCase().includes(search);
+                                                    ? item
+                                                    : item.nom.tolowerCase().includes(search);
                                                 })
                                                     .map((item, idx) => (
                                                     <tr key={idx}>
