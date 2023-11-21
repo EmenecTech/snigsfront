@@ -11405,7 +11405,7 @@ const BulletinByEleve = memo((props) => {
                                                             <Col sm="4" lg="4">
                                                                         <div className="mt-1">
                                                                             <p >Nom et Prénom : {elevesinclass.name}<br />
-                                                                              Date et Lieu de naissance :  {elevesinclass.datenaiss. à  {elevesinclass.lieunaiss}<br />
+                                                                              Date et Lieu de naissance :  {elevesinclass.datenaiss} à  {elevesinclass.lieunaiss}<br />
                                                                               Sexe :  {elevesinclass.sexe} <br />
                                                                               </p>
                                                                         </div>
