@@ -38,7 +38,13 @@ const EnseignantsPresence = () => {
                                 <div className="header-title">
                                     <h4 className="card-title">Enseignants</h4>
                                 </div>
-                                <Form></Form>
+                                <Form>
+                                    
+                                    <Form.Group as={Row} className="form-group">
+                                        
+                                    </Form.Group>
+                                    
+                                </Form>
                                 
                                 
                             </Card.Header>
