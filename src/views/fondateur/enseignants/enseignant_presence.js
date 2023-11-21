@@ -1,6 +1,6 @@
 import React, { useState, useEffect, memo, Fragment } from "react";
-import { Row, Col, Image, Button, InputGroup } from 'react-bootstrap'
-import { Form, Link } from 'react-router-dom'
+import { Row, Col, Image, Button, InputGroup, Form } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import Card from '../../../components/Card'
 import AuthUser from '../../../components/AuthUser'
 
@@ -47,7 +47,10 @@ const EnseignantsPresence = () => {
                                 
                                 <Form>
                                         <InputGroup className="my-3">
-                                            
+                                            <Form.Control
+                                            onChange={(e) => setSearch(e.target.value)}
+                                            placeholder='Search contacts'
+                                            />
                                         </InputGroup>
                                     </Form>
                                                 
