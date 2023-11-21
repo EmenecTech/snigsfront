@@ -45,14 +45,7 @@ const EnseignantsPresence = () => {
                             </Card.Header>
                             <Card.Body className="px-0">
                                 <div className="table-responsive">
-                                    <Form>
-                                        <InputGroup className="my-3">
-                                            <Form.Control
-                                            onChange={(e) => setSearch(e.target.value)}
-                                            placeholder='Search contacts'
-                                            />
-                                        </InputGroup>
-                                    </Form>
+                                    
                                     <table id="user-list-table" className="table table-striped" role="grid" data-toggle="data-table">
                                         <thead>
                                             <tr className="ligth">
