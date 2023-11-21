@@ -38,15 +38,7 @@ const EnseignantsPresence = () => {
                                 <div className="header-title">
                                     <h4 className="card-title">Enseignants</h4>
                                 </div>
-                                <Form>
-                                    <Form.Group as={Row} className="form-group">
-                                        <Form.Group className="form-group">
-                                            <Form.Label htmlFor="exampleInputText1">Date</Form.Label>
-                                            <Form.Control type="date" defaultValue="" name="date_n"/>           
-                                        </Form.Group>
-                                    </Form.Group>
-                                    <Button type="button" variant="primary">Trier</Button>
-                                </Form>
+                                
                                 
                             </Card.Header>
                             <Card.Body className="px-0">
