@@ -12,7 +12,7 @@ import http from "../../../http.js";
 import Circularprogressbar from "../../../components/circularprogressbar.js";
 
 // AOS
-import AOS from "aos";
+import AOS from "aos"; 
 import "../../../../node_modules/aos/dist/aos";
 import "../../../../node_modules/aos/dist/aos.css";
 //apexcharts 
