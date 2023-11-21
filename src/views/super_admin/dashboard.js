@@ -683,7 +683,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                                   </Modal.Header>
                                   <Modal.Body>
 
-                                    <QRCode value={user.nom} />
+                                    <QRCode value={"https://snigsbackend.com/api/check/enseignant/" +user.id} />
 
                                   </Modal.Body>
                                 </Modal>
