@@ -2021,7 +2021,7 @@ const BulletinByEleve = memo((props) => {
                                                                                         className="theme-color-default-img  profile-pic rounded avatar-100"
                                                                                         src={image}
                                                                                         alt="profile-pic"
-                                                                                        style={{ width: "100px" }}
+                                                                                        style={{ width: "100px" }} 
                                                                                     />
                                                                                 </figure>
                                                                             </div>
