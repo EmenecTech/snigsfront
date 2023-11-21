@@ -3534,23 +3534,25 @@ const BulletinByEleve = memo((props) => {
 
                                                                     <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                            <p >Nom et Prénom : {elevesinclass}</p><br />
+                                                                            <p >Nom et Prénom : {elevesinclass}<br />
                                                                               Date et Lieu de naissance : <br />
                                                                               Sexe : <br />
+                                                                              </p>
                                                                         </div>
                                                                     </Col>
                                                                      <Col sm="4" lg="4">
                                                                          <div className="mt-1">
-                                                                            <p>Nom de l'enseignant: {enseign} </p><br />
+                                                                            <p>Nom de l'enseignant: {enseign} <br />
                                                                             Classe : {classe} 
-
+                                                                            </p>
                                                                         </div>
                                                                     </Col>
 
                                                                      <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                            <p className="mb-0">Matricule : </p><br />
+                                                                            <p >Matricule :<br />
                                                                             Redoublant : <br />
+                                                                            </p>
                                                                         </div>
 
                                                                     </Col>
@@ -5163,9 +5165,10 @@ const BulletinByEleve = memo((props) => {
                                                                                 </td>
                                                                                 <td>
                                                                                 <div className="mt-1">
-                                                                                          <p> Rang:{rang_eleve.rang}</p>
+                                                                                          <p> Rang:{rang_eleve.rang}
                                                                                           <br />M.Gle:
                                                                                           <br />Effectif:
+                                                                                          </p>
                                                                                     </div>
                                                                                 </td>
 
@@ -6945,6 +6948,9 @@ const BulletinByEleve = memo((props) => {
                                                                             MINISTERE DE L'EDUCATION DE BASE<br />
 
                                                                         </p>
+                                                                        <p className="text-center"><strong style={{ fontSize: "10px" }}> {info_etab.nom_etablissement} </strong><br />
+                                                                          <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal> <br />
+                                                                        </p>
 
 
                                                                     </Col>
@@ -6962,27 +6968,16 @@ const BulletinByEleve = memo((props) => {
                                                                             </Col>
                                                                         </Row>
                                                                         <br />
-                                                                        <Row>
-                                                                            <Col sm="12">
-                                                                                <div className="container text-center">
-                                                                                    <p> <strong style={{ fontSize: "18px" }}> {info_etab.nom_etablissement} </strong>
-
-                                                                                        <br />
-                                                                                        <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal>
-                                                                                    </p>
-
-                                                                                </div>
-                                                                            </Col>
-                                                                        </Row>
-
-
-
+                                                                 
                                                                     </Col>
                                                                     <Col sm="4" lg="4">
                                                                         <p className="text-center">REPUBLIC OF CAMEROON <br />
                                                                             Peace - Work - Fatherland <br />
                                                                             MINISTRY OF BASIC EDUCATION<br />
 
+                                                                        </p>
+                                                                        <p className="text-center"><strong style={{ fontSize: "10px" }}> {info_etab.nom_etablissement} </strong><br />
+                                                                          <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal> <br />
                                                                         </p>
 
 
@@ -7012,23 +7007,30 @@ const BulletinByEleve = memo((props) => {
 
                                                                         <Row>
 
-                                                                            <Col sm="12" lg="12">
-                                                                                
-                                                                                <div className="mt-2">
-                                                                                    <p tyle={{ fontSize: "10px" }} className="mb-0">Teacher's name: {enseign} </p>
+                                                                        <Col sm="4" lg="4">
+                                                                        <div className="mt-1">
+                                                                            <p >Name : {elevesinclass}<br />
+                                                                                Date and place of birth : <br />
+                                                                                Sex : <br />
+                                                                              </p>
+                                                                        </div>
+                                                                    </Col>
+                                                                     <Col sm="4" lg="4">
+                                                                         <div className="mt-1">
+                                                                            <p>Teacher's name: {enseign} <br />
+                                                                            Class : {classe} 
+                                                                            </p>
+                                                                        </div>
+                                                                    </Col>
 
-                                                                                </div>
-                                                                                <div className="mt-2">
-                                                                                    <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : {elevesinclass} </strong> </p>
+                                                                     <Col sm="4" lg="4">
+                                                                        <div className="mt-1">
+                                                                            <p >Registration number:<br />
+                                                                                Repeating : <br />
+                                                                            </p>
+                                                                        </div>
 
-                                                                                </div>
-                                                                                <div className="mt-2">
-                                                                                   <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Class : {classe} </strong> </p>
-                                                                                </div>
-
-
-
-                                                                            </Col>
+                                                                    </Col>
 
 
                                                                         </Row>
@@ -8719,9 +8721,7 @@ const BulletinByEleve = memo((props) => {
 
                                                 <Button variant="primary mt-2" onClick={printData}>
                                                     <span className="btn-inner">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6pm-6 0p" />
-                                                        </svg>
+                                            
                                                     </span>
                                                     Imprimer
                                                 </Button>
@@ -8751,6 +8751,9 @@ const BulletinByEleve = memo((props) => {
                                                                             MINISTERE DE L'EDUCATION DE BASE<br />
 
                                                                         </p>
+                                                                        <p className="text-center"><strong style={{ fontSize: "10px" }}> {info_etab.nom_etablissement} </strong><br />
+                                                                          <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal> <br />
+                                                                        </p>
 
 
                                                                     </Col>
@@ -8768,20 +8771,6 @@ const BulletinByEleve = memo((props) => {
                                                                             </Col>
                                                                         </Row>
                                                                         <br />
-                                                                        <Row>
-                                                                            <Col sm="12">
-                                                                                <div className="container text-center">
-                                                                                    <p> <strong style={{ fontSize: "18px" }}> {info_etab.nom_etablissement} </strong>
-
-                                                                                        <br />
-                                                                                        <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal>
-                                                                                    </p>
-
-                                                                                </div>
-                                                                            </Col>
-                                                                        </Row>
-
-
 
                                                                     </Col>
                                                                     <Col sm="4" lg="4">
@@ -8789,6 +8778,9 @@ const BulletinByEleve = memo((props) => {
                                                                             Peace - Work - Fatherland <br />
                                                                             MINISTRY OF BASIC EDUCATION<br />
 
+                                                                        </p>
+                                                                        <p className="text-center"><strong style={{ fontSize: "10px" }}> {info_etab.nom_etablissement} </strong><br />
+                                                                          <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal> <br />
                                                                         </p>
 
 
@@ -8817,21 +8809,30 @@ const BulletinByEleve = memo((props) => {
                                                                 </Row>
                                                                         <Row>
 
-                                                                            <Col sm="12" lg="12">
-                                                            
-                                                                                <div className="mt-2">
-                                                                                    <p tyle={{ fontSize: "10px" }} className="mb-0">Teacher's name: {enseign} </p>
-                                                                                </div>
-                                                                                <div className="mt-2">
-                                                                                    <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Name : {elevesinclass} </strong> </p>
-                                                                                </div>
-                                                                                <div className="mt-2">
-                                                                                    <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Class : {classe} </strong> </p>
-                                                                                </div>
+                                                                        <Col sm="4" lg="4">
+                                                                        <div className="mt-1">
+                                                                            <p >Name : {elevesinclass}<br />
+                                                                                Date and place of birth : <br />
+                                                                                Sex : <br />
+                                                                              </p>
+                                                                        </div>
+                                                                    </Col>
+                                                                     <Col sm="4" lg="4">
+                                                                         <div className="mt-1">
+                                                                            <p>Teacher's name: {enseign} <br />
+                                                                            Class : {classe} 
+                                                                            </p>
+                                                                        </div>
+                                                                    </Col>
 
+                                                                     <Col sm="4" lg="4">
+                                                                        <div className="mt-1">
+                                                                            <p >Registration number:<br />
+                                                                                Repeating : <br />
+                                                                            </p>
+                                                                        </div>
 
-
-                                                                            </Col>
+                                                                    </Col>
 
 
                                                                         </Row>
@@ -10404,18 +10405,7 @@ const BulletinByEleve = memo((props) => {
                                                                                             <th></th>
                                                                                             <th>DISCIPLINE</th>
                                                                                             <th>WORK APPRECIATION</th>
-                                                                                            <th><div className="mt-2">
-                                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">AVERAGE: {moyenneleve} </p>
-                                                                                            </div>
-                                                                                                <div className="mt-2">
-                                                                                                    <p tyle={{ fontSize: "10px" }} className="mb-0">CLASS AVERAGE:</p>
-                                                                                                </div>
-                                                                                                <div className="mt-2">
-                                                                                                    <p tyle={{ fontSize: "10px" }} className="mb-0">RANK:</p>
-                                                                                                </div>
-
-
-                                                                                            </th>
+                                                                                            <th>AVERAGE: {moyenneleve}   </th>
                                                                                         </tr>
                                                                                     </thead>
                                                                                     <tbody>
@@ -10452,9 +10442,12 @@ const BulletinByEleve = memo((props) => {
                                                                                                 </div>
                                                                                             </td>
                                                                                             <td>
-
-                                                                                            </td>
-
+                                                                                            <div className="mt-1">
+                                                                                                    <p> Rank:{rang_eleve.rang}</p>
+                                                                                                    <br />G.Average:
+                                                                                                    <br />Effective:
+                                                                                                </div>
+                                                                                </td>
                                                                                         </tr>
 
                                                                                     </tbody>
@@ -10476,10 +10469,10 @@ const BulletinByEleve = memo((props) => {
                                                                                     </thead>
                                                                                     <tbody>
                                                                                         <tr>
-                                                                                            <td style={{ height: '100px' }}></td>
-                                                                                            <td style={{ height: '100px' }}></td>
-                                                                                            <td style={{ height: '100px' }}></td>
-                                                                                            <td style={{ height: '100px' }}></td>
+                                                                                            <td style={{ height: '20px' }}></td>
+                                                                                            <td style={{ height: '20px' }}></td>
+                                                                                            <td style={{ height: '20px' }}></td>
+                                                                                            <td style={{ height: '20px' }}></td>
                                                                                         </tr>
 
                                                                                     </tbody>
@@ -11342,6 +11335,9 @@ const BulletinByEleve = memo((props) => {
                                                                         MINISTERE DE L'EDUCATION DE BASE<br />
 
                                                                     </p>
+                                                                    <p className="text-center"><strong style={{ fontSize: "10px" }}> {info_etab.nom_etablissement} </strong><br />
+                                                                          <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal> <br />
+                                                                        </p>
 
 
                                                                 </Col>
@@ -11359,28 +11355,17 @@ const BulletinByEleve = memo((props) => {
                                                                         </Col>
                                                                     </Row>
                                                                     <br />
-                                                                    <Row>
-                                                                        <Col sm="12">
-                                                                            <div className="container text-center">
-                                                                                <p> <strong style={{ fontSize: "18px" }}> {info_etab.nom_etablissement} </strong>
-
-                                                                                    <br />
-                                                                                    <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal>
-                                                                                </p>
-
-                                                                            </div>
-                                                                        </Col>
-                                                                    </Row>
-
-
-
-                                                                </Col>
+                                                               </Col>
                                                                 <Col sm="4" lg="4">
                                                                     <p className="text-center">REPUBLIC OF CAMEROON <br />
                                                                         Peace - Work - Fatherland <br />
                                                                         MINISTRY OF BASIC EDUCATION<br />
 
                                                                     </p>
+                                                                    <p className="text-center"><strong style={{ fontSize: "10px" }}> {info_etab.nom_etablissement} </strong><br />
+                                                                          <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal> <br />
+                                                                        </p>
+
 
 
                                                                 </Col>
@@ -11408,23 +11393,31 @@ const BulletinByEleve = memo((props) => {
                                                             </Row>
                                                             <Row>
 
-                                                                <Col sm="12" lg="12">
+                                                            <Col sm="4" lg="4">
+                                                                        <div className="mt-1">
+                                                                            <p >Nom et Prénom : {elevesinclass}<br />
+                                                                              Date et Lieu de naissance : <br />
+                                                                              Sexe : <br />
+                                                                              </p>
+                                                                        </div>
+                                                                    </Col>
+                                                                     <Col sm="4" lg="4">
+                                                                         <div className="mt-1">
+                                                                            <p>Nom de l'enseignant: {enseign} <br />
+                                                                            Classe : {classe} 
+                                                                            </p>
+                                                                        </div>
+                                                                    </Col>
 
-                                                                    <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">Nom de l'enseignant : {enseign} </p>
+                                                                     <Col sm="4" lg="4">
+                                                                        <div className="mt-1">
+                                                                            <p >Matricule :<br />
+                                                                            Redoublant : <br />
+                                                                            </p>
+                                                                        </div>
 
-                                                                    </div>
-
-                                                                    <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : <strong>{elevesinclass} </strong> </p>
-
-                                                                    </div>
-                                                                    <div className="mt-2">
-                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0"><strong>Classe : {classe} </strong> </p>
-                                                                    </div>
-
-                                                                </Col>
-                                                            </Row>
+                                                                    </Col>
+                                                                 </Row>
                                                                         <Row>
                                                                             <div className="table-responsive border-bottom my-3">
                                                                                 <Table
