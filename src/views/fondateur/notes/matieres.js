@@ -82,7 +82,7 @@ const AdminMatieresNotesEleves = memo((props) => {
   //           window.location.reload(false); 
   //       })
   
-  //   }
+  //   } 
 
     useSelector(SettingSelector.theme_color);
 
