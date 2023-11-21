@@ -75,6 +75,7 @@ import PrimClasse from '../views/fondateur/classes/classe primaire';
 import ListMatieres from '../views/fondateur/matieres/matieres';
 import NiveauxMatieres from '../views/fondateur/niveaux/niveaux_matieres';
 import EnseignantsListe from '../views/fondateur/enseignants/listenseignants';
+import EnseignantsPresence from '../views/fondateur/enseignants/enseignant_presence';
 import AddEnseignant from '../views/fondateur/enseignants/addenseignant';
 import ListPreinscriptions from '../views/fondateur/eleves/preinscriptions';
 import InscriptionEleve from '../views/fondateur/eleves/inscrire_eleve';
@@ -404,6 +405,11 @@ export const DefaultRouter = [
             {
                 path: 'List/enseignants/',
                 element: <EnseignantsListe />
+            },
+            
+            {
+                path: 'Admin/list/presence/enseignant/',
+                element: <EnseignantsPresence />
             },
             {
                 path: 'Add/enseignants/',
