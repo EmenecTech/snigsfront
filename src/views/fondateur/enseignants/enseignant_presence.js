@@ -11,6 +11,7 @@ const EnseignantsPresence = () => {
 
     const { http, setToken } = AuthUser();
     const [users, setUser] = useState([]);
+    const [inputs, setInputs] = useState({});
     const { user } = AuthUser();
 
     const etab = user.etablissement;
@@ -21,13 +22,19 @@ const EnseignantsPresence = () => {
     }, []);
 
     const fetchAllUser = () => {
-        http.get('/get_enseignants/' + etab).then(res => {
+        http.get('/enseignants/presence/' + etab).then(res => {
             setUser(res.data);
         })
     }
 
-    const [search, setSearch] = useState('');
-    console.log(search)
+    const submitcheck = () => {
+        http.get('/enseignants/presence/' + etab + '/' + inputs).then(res => {
+            setUser(res.data);
+        })
+
+        console.log(inputs);
+    }
+
 
 
 
@@ -46,12 +53,15 @@ const EnseignantsPresence = () => {
                             <Card.Body className="px-0">
                                 
                                 <Form>
-                                        <InputGroup className="my-3">
-                                            <Form.Control
-                                            onChange={(e) => setSearch(e.target.value)}
-                                            placeholder='Search date'
-                                            />
-                                        </InputGroup>
+                                    <Form.Group className='form-group'>
+        
+                                        <Form.Control type="date"
+                                            placeholder='Search contacts'
+                                                />
+                                        </Form.Group>
+                                    <Button variant="primary" onClick={submitcheck}>
+                                             Trier
+                                        </Button>
                                     </Form>
                                                 
                             <div className="table-responsive">
@@ -71,12 +81,7 @@ const EnseignantsPresence = () => {
                                         </thead>
                                         <tbody>
                                             {
-                                                users.filter((item) => {
-                                                    return search.tolowerCase() === ''
-                                                    ? item
-                                                    : item.nom.tolowerCase().includes(search);
-                                                })
-                                                    .map((item, idx) => (
+                                                users.map((item, idx) => (
                                                     <tr key={idx}>
                                                         <td className="text-center"><Image className="bg-soft-primary rounded img-fluid avatar-40 me-3" src={item.img} alt="profile" /></td>
                                                         <td>{item.nom}</td>
