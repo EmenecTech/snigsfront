@@ -98,11 +98,7 @@ const EnseignantsPresence = () => {
                                             <tr className="ligth">
                                                 <th>Profile</th>
                                                 <th>Nom</th>
-                                                <th>Prénom</th>
-                                                <th>Matière principale</th>
-                                                <th>Type</th>
-                                                <th>Email</th>
-                                                <th>Téléphone</th>
+                                                <th>Date</th>
                                                 <th min-width="100px">Action</th>
                                             </tr>
                                         </thead>
@@ -111,12 +107,8 @@ const EnseignantsPresence = () => {
                                                 users.map((item, idx) => (
                                                     <tr key={idx}>
                                                         <td className="text-center"><Image className="bg-soft-primary rounded img-fluid avatar-40 me-3" src={item.img} alt="profile" /></td>
-                                                        <td>{item.nom}</td>
-                                                        <td>{item.prenom}</td>
-                                                        <td>{item.fonction_user}</td>
-                                                        <td>{item.other_in_user}</td>
-                                                        <td>{item.email}</td>
-                                                        <td>{item.telephone}</td>
+                                                        <td>{item.name_ens}</td>
+                                                        <td>{item.date_validation}</td>
 
                                                         <td>
                                                             <div className="flex align-items-center list-user-action">
