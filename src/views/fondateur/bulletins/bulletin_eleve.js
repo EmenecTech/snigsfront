@@ -2386,7 +2386,7 @@ const BulletinByEleve = memo((props) => {
                                                                                 <figure className="figure">
                                                                                     <Image
                                                                                         className="theme-color-default-img  profile-pic rounded avatar-100"
-                                                                                        src={image}
+                                                                                        src={"https://snigsbackend.com/avatar/" + elevesinclass.profile_photo_path} 
                                                                                         alt="profile-pic"
                                                                                         style={{ width: "100px" }}
                                                                                     />
