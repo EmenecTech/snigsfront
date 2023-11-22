@@ -76,9 +76,11 @@ const EnseignantsPresence = () => {
                                                 />
                                         </Form.Group>
                                         </Form.Group>
-                                    <Button as={Row} variant="primary" onClick={submitcheck}>
+                                    <Form.Group as={Row} className="form-group">  
+                                        <Button variant="primary" onClick={submitcheck}>
                                              Trier
                                         </Button>
+                                    </Form.Group>
                                     </Form>
                                     </Col>
                                 </Row>
