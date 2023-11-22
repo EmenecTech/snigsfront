@@ -27,7 +27,6 @@ const EnseignantsPresence = () => {
         })
     }
 
-    const date = "a";
 
     const handleChange = (event) => {
         const name = event.target.name;
@@ -35,13 +34,12 @@ const EnseignantsPresence = () => {
 
         setInputs(values => ({ ...values, [name]: value }))
 
-        date = value;
     }
 
 
 
     const submitcheck = () => {
-        http.get('/enseignants/presence/' + etab + '/' + date).then(res => {
+        http.get('/enseignant/presence/' + etab + '/' + date).then(res => {
             setUser(res.data);
         })
 
@@ -65,7 +63,10 @@ const EnseignantsPresence = () => {
                             </Card.Header>
                             <Card.Body className="px-0">
                                 
-                                <Form>
+                                <Row>
+                                    <Col>
+                                        <Form>
+                                    <Form.Group as={Row} className="form-group">
                                     <Form.Group className='form-group'>
         
                                         <Form.Control type="date" name="date_validation"
@@ -74,10 +75,14 @@ const EnseignantsPresence = () => {
                                             placeholder='Search contacts'
                                                 />
                                         </Form.Group>
+                                        </Form.Group>
                                     <Button variant="primary" onClick={submitcheck}>
                                              Trier
                                         </Button>
                                     </Form>
+                                    </Col>
+                                </Row>
+                                
                                                 
                             <div className="table-responsive">
                                     
