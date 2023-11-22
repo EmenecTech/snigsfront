@@ -39,7 +39,7 @@ const EnseignantsPresence = () => {
 
 
     const submitcheck = () => {
-        http.get('/enseignant/presence/' + etab + '/' + date).then(res => {
+        http.get('/enseignant/presence/' + etab ).then(res => {
             setUser(res.data);
         })
 
@@ -64,7 +64,7 @@ const EnseignantsPresence = () => {
                             <Card.Body className="px-0">
                                 
                                 <Row>
-                                    <Col>
+                                    <Col lg="2">
                                         <Form>
                                     <Form.Group as={Row} className="form-group">
                                     <Form.Group className='form-group'>
