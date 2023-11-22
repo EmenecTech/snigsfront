@@ -66,7 +66,9 @@ const EnseignantsPresence = () => {
                                 <Row>
                                     <Col lg="2">
                                         <Form>
-                                    <Form.Group as={Row} className="form-group">
+                                <Row>
+                                    <Col>
+                                        <Form.Group as={Row} className="form-group">
                                     <Form.Group className='form-group'>
                                         <Form.Label htmlFor="exampleInputText1">Search: </Form.Label>
                                         <Form.Control type="date" name="date_validation"
@@ -75,12 +77,15 @@ const EnseignantsPresence = () => {
                                             placeholder='Search contacts'
                                                 />
                                         </Form.Group>
-                                        </Form.Group>
-                                    <Form.Group as={Row} className="form-group">  
+                                        </Form.Group>        
+                                    </Col>
+                                    <Col>
                                         <Button variant="primary" onClick={submitcheck}>
                                              Trier
                                         </Button>
-                                    </Form.Group>
+                                    </Col>
+                                </Row>
+                                 
                                     </Form>
                                     </Col>
                                 </Row>
