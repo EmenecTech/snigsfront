@@ -68,7 +68,7 @@ const EnseignantsPresence = () => {
                                         <Form>
                                     <Form.Group as={Row} className="form-group">
                                     <Form.Group className='form-group'>
-        
+                                        <Form.Label htmlFor="exampleInputText1">Search: </Form.Label>
                                         <Form.Control type="date" name="date_validation"
                                             value={inputs.date_validation || ''}
                                             onChange={handleChange}
@@ -76,7 +76,7 @@ const EnseignantsPresence = () => {
                                                 />
                                         </Form.Group>
                                         </Form.Group>
-                                    <Button variant="primary" onClick={submitcheck}>
+                                    <Button as={Row} variant="primary" onClick={submitcheck}>
                                              Trier
                                         </Button>
                                     </Form>
