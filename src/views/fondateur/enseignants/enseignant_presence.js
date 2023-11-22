@@ -27,15 +27,21 @@ const EnseignantsPresence = () => {
         })
     }
 
+    const date = "a";
+
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
 
-        setInputs(values => ({ ...values, value }))
+        setInputs(values => ({ ...values, [name]: value }))
+
+        date = value;
     }
 
+
+
     const submitcheck = () => {
-        http.get('/enseignants/presence/' + etab + '/' + inputs).then(res => {
+        http.get('/enseignants/presence/' + etab + '/' + date).then(res => {
             setUser(res.data);
         })
 
