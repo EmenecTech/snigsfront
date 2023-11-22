@@ -27,6 +27,13 @@ const EnseignantsPresence = () => {
         })
     }
 
+    const handleChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+
+        setInputs(values => ({ ...values, [name]: value }))
+    }
+
     const submitcheck = () => {
         http.get('/enseignants/presence/' + etab + '/' + inputs).then(res => {
             setUser(res.data);
@@ -55,7 +62,9 @@ const EnseignantsPresence = () => {
                                 <Form>
                                     <Form.Group className='form-group'>
         
-                                        <Form.Control type="date"
+                                        <Form.Control type="date" name="date_validation"
+                                            value={inputs.date_validation || ''}
+                                            onChange={handleChange}
                                             placeholder='Search contacts'
                                                 />
                                         </Form.Group>
