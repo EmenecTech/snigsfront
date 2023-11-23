@@ -84,6 +84,11 @@ import ListProgramme from '../views/fondateur/programme/programme_list';
 import ClassesProgrammes from '../views/fondateur/programme/classes_programme';
 import EditClasseProgramme from '../views/fondateur/programme/edit_programme_classe';
 import BulletinEleve from '../views/fondateur/bulletins/bulletin_eleve';
+
+import BulletinSecondaire from '../views/fondateur/bulletins/bulletin_secondaire';
+import BulletinPrimaire from '../views/fondateur/bulletins/bulletin_primaire';
+import BulletinMaternelle from '../views/fondateur/bulletins/bulletin_maternelle';
+
 import EleveEditProfil from '../views/eleves/profil/edit';
 import EleveListRequest from '../views/eleves/requetes/listrequest';
 import EleveAddRequest from '../views/eleves/requetes/addrequest';
@@ -312,6 +317,23 @@ export const DefaultRouter = [
             {
                 path: '/Admin/BulletinDeNotes/:evaluation/:niveau/:classe/:userid',
                 element: <BulletinByEleve />
+
+            },
+
+            {
+                path: '/Admin/Bulletin/Secondaire/:evaluation/:niveau/:classe/:userid',
+                element: <BulletinSecondaire />
+
+            },
+            {
+                path: '/Admin/Bulletin/Primaire/:evaluation/:niveau/:classe/:userid',
+                element: <BulletinPrimaire />
+
+            },
+            {
+                path: '/Admin/Bulletin/Maternelle/:evaluation/:niveau/:classe/:userid',
+                element: <BulletinMaternelle />
+
             },
     
             //////
