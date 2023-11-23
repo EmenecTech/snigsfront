@@ -82,7 +82,7 @@ const EleveBulletinMaternelle = memo((props) => {
     const handleShow = () => setShow(true);
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
-     const [inputs, setInputs] = useState({});
+ 
     const { evaluation } = useParams();
     const etab = user.etablissement;
     const userid = user.id;
