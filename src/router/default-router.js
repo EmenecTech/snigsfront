@@ -96,6 +96,11 @@ import ElevePlanningDetail from '../views/eleves/pedagogie/planning';
 import EleveListPlanning from '../views/eleves/pedagogie/listplanning';
 import EleveListEvaluations from '../views/eleves/bulletin_notes/evaluations';
 import EleveBulletinNotes from '../views/eleves/bulletin_notes/marknotes';
+
+import EleveBulletinSecondaire from '../views/eleves/bulletin_notes/bulletin_secondaire';
+import EleveBulletinPrimaire from '../views/eleves/bulletin_notes/bulletin_primaire';
+import EleveBulletinMaternelle from '../views/eleves/bulletin_notes/bulletin_maternelle';
+
 import AdminListRequest from '../views/fondateur/requetes/list';
 import Enseignant_matieres_chapitres from '../views/enseignant/chapitres/matieres';
 import Enseignant_list_Chapitre from '../views/enseignant/chapitres/listchapitres';
@@ -155,6 +160,11 @@ import EleveForumDiscussion from '../views/eleves/forum/forumdiscussion';
 
 
 import ParentsBulletinNotes from "../views/parents/bulletin_notes/marknotes";
+import ParentsBulletinSecondaire from "../views/parents/bulletin_notes/bulletin_secondaire";
+import ParentsBulletinPrimaire from "../views/parents/bulletin_notes/bulletin_primaire";
+import ParentsBulletinMaternelle from "../views/parents/bulletin_notes/bulletin_maternelle";
+
+
 import Parents_list_Chapitre from "../views/parents/cours/chapitres";
 import ParentsLeconChapitre from "../views/parents/cours/lecons";
 import ParentsMatieresClasse from "../views/parents/cours/matieres";
@@ -654,6 +664,18 @@ export const DefaultRouter = [
                 path: 'Eleve/Bulletin/Notes/:evaluation',
                 element: <EleveBulletinNotes />
             },
+            {
+                path: 'Eleve/Bulletin/Secondaire/:evaluation',
+                element: <EleveBulletinSecondaire />
+            },
+            {
+                path: 'Eleve/Bulletin/Primaire/:evaluation',
+                element: <EleveBulletinPrimaire />
+            },
+            {
+                path: 'Eleve/Bulletin/Maternelle/:evaluation',
+                element: <EleveBulletinMaternelle />
+            },
             ////
             {
                 path: 'Eleve/List/Matieres/Cours',
@@ -744,6 +766,21 @@ export const DefaultRouter = [
       {
         path: "Parents/Bulletin/Notes/:evaluation",
         element: <ParentsBulletinNotes />,
+      },
+      
+      {
+        path: "Parents/Bulletin/Secondaire/:evaluation",
+        element: <ParentsBulletinSecondaire />,
+      },
+      
+      {
+        path: "Parents/Bulletin/Primaire/:evaluation",
+        element: <ParentsBulletinPrimaire />,
+      },
+      
+      {
+        path: "Parents/Bulletin/Maternelle/:evaluation",
+        element: <ParentsBulletinMaternelle />,
       },
       ////
       {
