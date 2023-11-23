@@ -5004,18 +5004,7 @@ const BulletinMaternelle = memo((props) => {
                                                                                             <th></th>
                                                                                             <th>DISCIPLINE</th>
                                                                                             <th>WORK APPRECIATION</th>
-                                                                                            <th><div className="mt-2">
-                                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">AVERAGE: {moyenneleve} </p>
-                                                                                            </div>
-                                                                                                <div className="mt-2">
-                                                                                                    <p tyle={{ fontSize: "10px" }} className="mb-0">CLASS AVERAGE:</p>
-                                                                                                </div>
-                                                                                                <div className="mt-2">
-                                                                                                    <p tyle={{ fontSize: "10px" }} className="mb-0">RANK:</p>
-                                                                                                </div>
-
-
-                                                                                            </th>
+                                                                            
                                                                                         </tr>
                                                                                     </thead>
                                                                                     <tbody>
