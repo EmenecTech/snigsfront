@@ -374,7 +374,7 @@ const AdminEvaluationListClassesEleves = memo((props) => {
                                                             <td>
                                                     <div className="flex align-items-center list-user-action">
 
-                                                        {eleves_classe.cycle.niveau === 'Secondaire' || eleves_classe.cycle.niveau === 'Secondary' ? <div>
+                                                        {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? <div>
 
                                                         <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Admin/Bulletin/Secondaire" + evaluation + "/"  + niveau  + "/" + item.other_in_user + "/" + item.id }>
                                                             <span className="btn-inner">
@@ -388,7 +388,7 @@ const AdminEvaluationListClassesEleves = memo((props) => {
 
                                                         </div>:<div></div>}
 
-                                                        {eleves_classe.cycle.niveau === 'Primaire' || eleves_classe.cycle.niveau === 'Primary' ? <div>
+                                                        {eleves_classe.cycle_niveau === 'Primaire' || eleves_classe.cycle_niveau === 'Primary' ? <div>
 
                                                         <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Admin/Bulletin/Primaire" + evaluation + "/"  + niveau  + "/" + item.other_in_user + "/" + item.id }>
                                                             <span className="btn-inner">
@@ -402,7 +402,7 @@ const AdminEvaluationListClassesEleves = memo((props) => {
 
                                                         </div>:<div></div>}
 
-                                                        {eleves_classe.cycle.niveau === 'Maternelle' || eleves_classe.cycle.niveau === 'Nursery' ? <div>
+                                                        {eleves_classe.cycle_niveau === 'Maternelle' || eleves_classe.cycle_niveau === 'Nursery' ? <div>
 
                                                         <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Admin/Bulletin/Maternelle" + evaluation + "/"  + niveau  + "/" + item.other_in_user + "/" + item.id }>
                                                             <span className="btn-inner">
