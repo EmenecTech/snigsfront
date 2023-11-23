@@ -66,7 +66,7 @@ SwiperCore.use([Navigation]);
 
 
 
-const BulletinSecondaire = memo((props) => {
+const EleveBulletinSecondaire = memo((props) => {
 
     const componentRef = useRef();
     const printData = useReactToPrint({
@@ -1653,4 +1653,4 @@ const BulletinSecondaire = memo((props) => {
         );
     })
     
-    export default BulletinSecondaire
+    export default EleveBulletinSecondaire
