@@ -52,26 +52,20 @@ SwiperCore.use([Navigation]);
 
 
 const ListNiveaux = memo((props) => {
-
+const { user, http } = AuthUser();
     
-    const { user, http } = AuthUser();
-
-
-    const [niveaux, setniveaux] = useState([]);
+const [niveaux, setniveaux] = useState([]);
     useEffect(() => {
         fetchAllniveaux();
     }, []);
 
-    const fetchAllniveaux = () => {
+   
+const fetchAllniveaux = () => {
         http.get('/niveaux').then(res => {
             setniveaux(res.data);
         })
     }
-
-
-
-
-
+ console.log(niveaux);
 
     useSelector(SettingSelector.theme_color);
 
@@ -301,17 +295,13 @@ const ListNiveaux = memo((props) => {
 
 
 
-    const deleteNiveaux = (id) => {
+const deleteNiveaux = (id) => {
         http.delete('/niveaux/' + id).then(res => {
             fetchAllniveaux();
         })
     }
 
-
-
-
-
-    return (
+ return (
         <Fragment>
             <Row>
                 <Col sm="12">
