@@ -59,6 +59,10 @@ const EleveListEvaluations = memo((props) => {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
     const etab = user.etablissement;
+ 
+  
+    const niveau = user.fonction_user;
+    const classe = user.other_in_user;
 
     const [evaluations_list, setevaluations] = useState([]);
     useEffect(() => {
