@@ -366,19 +366,19 @@ const EleveListEvaluations = memo((props) => {
                                                 <td>/</td>
                                                 <td>/</td>
                                                 <td>
-                                                    {eleves_classe.cycle.niveau === 'Secondaire' || eleves_classe.cycle.niveau === 'Secondary'? <div>
+                                                    {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary'? <div>
                                                          <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Eleve/Bulletin/Secondaire/" + item.intitule_evaluation}>
                                                          Consulter 
                                                          </Link>
                                                     </div>:<div></div>}
 
-                                                    {eleves_classe.cycle.niveau === 'Primaire' || eleves_classe.cycle.niveau === 'Primary'? <div>
+                                                    {eleves_classe.cycle_niveau === 'Primaire' || eleves_classe.cycle_niveau === 'Primary'? <div>
                                                          <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Eleve/Bulletin/Primaire/" + item.intitule_evaluation}>
                                                          Consulter 
                                                          </Link>
                                                     </div>:<div></div>}
 
-                                                    {eleves_classe.cycle.niveau === 'Maternelle' || eleves_classe.cycle.niveau === 'Nursery'? <div>
+                                                    {eleves_classe.cycle_niveau === 'Maternelle' || eleves_classe.cycle_niveau === 'Nursery'? <div>
                                                          <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Eleve/Bulletin/Maternelle/" + item.intitule_evaluation}>
                                                          Consulter 
                                                          </Link>
