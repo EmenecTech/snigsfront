@@ -1317,8 +1317,51 @@ const BulletinPrimaire = memo((props) => {
     };
 
 
-    
+ /////Somme des notes et moyenne
+    const [sumnotes, setsumnotes] = useState([]);
+    useEffect(() => {
+        fetchAllsumnotes();
+    }, []);
 
+    const fetchAllsumnotes = () => {
+        http.get('/sum/of/notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setsumnotes(res.data);
+        })
+    }
+
+    const [sumcoef, setsumcoef] = useState([]);
+    useEffect(() => {
+        fetchAllsumcoef();
+    }, []);
+
+    const fetchAllsumcoef = () => {
+        http.get('/sum/of/coef/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setsumcoef(res.data);
+
+        })
+    }
+    const [sumnotesfinale, setsumnotesfinale] = useState([]);
+    useEffect(() => {
+        fetchAllsumnotesfinale();
+    }, []);
+
+    const fetchAllsumnotesfinale = () => {
+        http.get('/sum/of/final/notes/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setsumnotesfinale(res.data);
+
+        })
+    }
+    const [moyenneleve, setmoyenneleve] = useState([]);
+    useEffect(() => {
+        fetchAllmoyenneleve();
+    }, []);
+
+    const fetchAllmoyenneleve = () => {
+        http.get('/moyenne/eleve/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+            setmoyenneleve(res.data);
+
+        })
+    }
     const [allnotes, setAllNotes] = useState([]);
     useEffect(() => {
         fetchAllNotes();
@@ -1330,39 +1373,7 @@ const BulletinPrimaire = memo((props) => {
         })
     };
 
-    {/*  const getEmojiForNote = (note) => {
-        if (note > 0 && note < 10) {
-            return '☹️';
-        } else if (note >= 11 && note < 14) {
-            return '😐';
-        } else if (note >= 15 && note < 20) {
-            return '😃';
-        }
-        return '';
-    }; */}
-
-    const getEmojiForNote = (note) => {
-        if (note == 10) {
-            return '☹️';
-        } else if (note == 15) {
-            return '😐';
-        } else if (note == 20) {
-            return '😃';
-        }
-        return '';
-    };
-
-     const getAppreciationForNote = (note) => {
-        if (note > 0 && note < 10) {
-            return 'Non acquis';
-        } else if (note >= 11 && note < 14) {
-            return "En cours d'acquisition";
-        } else if (note >= 15 && note < 20) {
-            return 'Acquis';
-        }
-        return '';
-    };
-
+ 
 
 
 
