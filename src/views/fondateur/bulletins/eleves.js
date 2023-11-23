@@ -70,7 +70,16 @@ const AdminEvaluationListClassesEleves = memo((props) => {
         setInputs(values => ({ ...values, [name]: value, etab }))
     }
 
+    const [classes, setclasses] = useState([]);
+    useEffect(() => {
+        fetchAllclasses();
+    }, []);
 
+    const fetchAllclasses = () => {
+        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
+            setclasses(res.data);
+        })
+    }
     const [eleves_classe, seteleves_classe] = useState([]);
     useEffect(() => {
         fetchAlleleves_classe();
@@ -374,7 +383,7 @@ const AdminEvaluationListClassesEleves = memo((props) => {
                                                             <td>
                                                     <div className="flex align-items-center list-user-action">
 
-                                                        {eleves_classe.cycle_niveau === 'Secondaire' || eleves_classe.cycle_niveau === 'Secondary' ? <div>
+                                                        {classes.cycle_niveau === 'Secondaire' || classes.cycle_niveau === 'Secondary' ? <div>
 
                                                         <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Admin/Bulletin/Secondaire" + evaluation + "/"  + niveau  + "/" + item.other_in_user + "/" + item.id }>
                                                             <span className="btn-inner">
@@ -388,7 +397,7 @@ const AdminEvaluationListClassesEleves = memo((props) => {
 
                                                         </div>:<div></div>}
 
-                                                        {eleves_classe.cycle_niveau === 'Primaire' || eleves_classe.cycle_niveau === 'Primary' ? <div>
+                                                        {classes.cycle_niveau === 'Primaire' || classes.cycle_niveau === 'Primary' ? <div>
 
                                                         <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Admin/Bulletin/Primaire" + evaluation + "/"  + niveau  + "/" + item.other_in_user + "/" + item.id }>
                                                             <span className="btn-inner">
@@ -402,7 +411,7 @@ const AdminEvaluationListClassesEleves = memo((props) => {
 
                                                         </div>:<div></div>}
 
-                                                        {eleves_classe.cycle_niveau === 'Maternelle' || eleves_classe.cycle_niveau === 'Nursery' ? <div>
+                                                        {classes.cycle_niveau === 'Maternelle' || classes.cycle_niveau === 'Nursery' ? <div>
 
                                                         <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Admin/Bulletin/Maternelle" + evaluation + "/"  + niveau  + "/" + item.other_in_user + "/" + item.id }>
                                                             <span className="btn-inner">
