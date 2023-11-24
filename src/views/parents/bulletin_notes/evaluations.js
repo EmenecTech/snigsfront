@@ -42,6 +42,7 @@ const ParentsListEvaluations = memo((props) => {
   const navigate = useNavigate();
   const [inputs, setInputs] = useState({});
   const etab = user.etablissement;
+  const classe = user.other_in_user;
 
   const [evaluations_list, setevaluations] = useState([]);
   useEffect(() => {
@@ -53,7 +54,17 @@ const ParentsListEvaluations = memo((props) => {
       setevaluations(res.data);
     });
   };
+const [classes, setclasses] = useState([]);
+    useEffect(() => {
+        fetchAllclasses();
+    }, []);
 
+    const fetchAllclasses = () => {
+        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
+            setclasses(res.data);
+        })
+    }
+  
   useSelector(SettingSelector.theme_color);
 
   const getVariableColor = () => {
@@ -318,19 +329,24 @@ const ParentsListEvaluations = memo((props) => {
                         <td>/</td>
                         <td>/</td>
                         <td>
-                          <Link
-                            className="btn btn-sm btn-icon btn-info"
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            title="Delete"
-                            data-original-title="Delete"
-                            to={
-                              "/Eleve/Bulletin/Notes/" +
-                              item.intitule_evaluation
-                            }
-                          >
-                            {user.langue === "en" ? (<div> consult </div>):(<div> consulter </div>)}
-                          </Link>
+                           {classes.cycle_niveau === 'Secondaire' || classes.cycle_niveau === 'Secondary'? <div>
+                                                         <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Parents/Bulletin/Secondaire/" + item.intitule_evaluation}>
+                                                         Consulter 
+                                                         </Link>
+                                                    </div>:<div></div>}
+
+                                                    {classes.cycle_niveau === 'Primaire' || classes.cycle_niveau === 'Primary'? <div>
+                                                         <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Parents/Bulletin/Primaire/" + item.intitule_evaluation}>
+                                                         Consulter 
+                                                         </Link>
+                                                    </div>:<div></div>}
+
+                                                    {classes.cycle_niveau === 'Maternelle' || classes.cycle_niveau === 'Nursery'? <div>
+                                                         <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Parents/Bulletin/Maternelle/" + item.intitule_evaluation}>
+                                                         Consulter 
+                                                         </Link>
+                                                    </div>:<div></div>}
+
                         </td>
                       </tr>
                     ))}
