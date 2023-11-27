@@ -913,7 +913,7 @@ export const DefaultRouter = [
             {
                 path: 'Etudiant/List/Evaluations/',
                 element: <EtudiantsListEvaluations />
-            }
+            },
             {
                 path: 'dashboard/special-pages/billing',
                 element: <Billing />
