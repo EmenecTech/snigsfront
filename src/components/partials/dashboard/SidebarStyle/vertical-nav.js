@@ -2322,7 +2322,7 @@ const VerticalNav = memo((props) => {
 
             </Accordion >
 
-           // Université
+       
 
                                     
                 {user.role === "Professeurs" ? (
