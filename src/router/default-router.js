@@ -95,6 +95,7 @@ import EleveAddRequest from '../views/eleves/requetes/addrequest';
 import ElevePlanningDetail from '../views/eleves/pedagogie/planning';
 import EleveListPlanning from '../views/eleves/pedagogie/listplanning';
 import EleveListEvaluations from '../views/eleves/bulletin_notes/evaluations';
+import EtudiantsListEvaluations from '../views/etudiants/bulletin_notes/evaluations';
 import EleveBulletinNotes from '../views/eleves/bulletin_notes/marknotes';
 
 import EleveBulletinSecondaire from '../views/eleves/bulletin_notes/bulletin_secondaire';
@@ -905,6 +906,14 @@ export const DefaultRouter = [
                 },
 
             ////////////////
+
+       ////////////////////////////////// Université
+
+                ////////////////////////// etudiants
+            {
+                path: 'Etudiant/List/Evaluations/',
+                element: <EtudiantsListEvaluations />
+            }
             {
                 path: 'dashboard/special-pages/billing',
                 element: <Billing />
