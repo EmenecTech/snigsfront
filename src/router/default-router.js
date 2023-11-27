@@ -911,7 +911,7 @@ export const DefaultRouter = [
 
                 ////////////////////////// etudiants
             {
-                path: 'Etudiant/List/Evaluations/',
+                path: 'Etudiants/List/Evaluations/',
                 element: <EtudiantsListEvaluations />
             },
             {
