@@ -51,7 +51,7 @@ SwiperCore.use([Navigation]);
 
 
 
-const EtudiantsListEvaluations = memo((props) => {
+const EtudiantListEvaluations = memo((props) => {
     const [show, setShow] = useState(false);
     const { user, http } = AuthUser();
     const handleClose = () => setShow(false);
@@ -377,5 +377,5 @@ const EtudiantsListEvaluations = memo((props) => {
     );
 })
 
-export default EtudiantsListEvaluations
+export default EtudiantListEvaluations
 
