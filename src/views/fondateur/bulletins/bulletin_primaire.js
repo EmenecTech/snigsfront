@@ -1667,8 +1667,8 @@ const BulletinPrimaire = memo((props) => {
                                                                     <Col sm="4" lg="4">
                                                                         <div className="mt-1">
                                                                               Nom et Prénom :  <br />
-                                                                              Date et Lieu de naissance : {elevesinclass.date_naissance} à {elevesinclass.lieu_naissance} <br />
-                                                                              Sexe :  {elevesinclass.sexe}<br />
+                                                                              Date et Lieu de naissance : <br />
+                                                                              Sexe : <br />
                                                                              
                                                                         </div>
                                                                     </Col>
@@ -1682,7 +1682,7 @@ const BulletinPrimaire = memo((props) => {
 
                                                                      <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                            <p >Matricule :  {elevesinclass.matricule} <br />
+                                                                            <p >Matricule :   <br />
                                                                             Redoublant : <br />
                                                                             </p>
                                                                         </div>
@@ -3458,8 +3458,8 @@ const BulletinPrimaire = memo((props) => {
                                                                         <Col sm="4" lg="4">
                                                                         <div className="mt-1">
                                                                             <p >Name :  <br />
-                                                                                Date and place of birth :  {elevesinclass.date_naissance} at  {elevesinclass.lieu_naissance} <br />
-                                                                                Gender :  {elevesinclass.sexe} <br />
+                                                                                Date and place of birth :  <br />
+                                                                                Gender :   <br />
                                                                               </p>
                                                                         </div>
                                                                     </Col>
@@ -3473,7 +3473,7 @@ const BulletinPrimaire = memo((props) => {
 
                                                                      <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                            <p >Registration number:  {elevesinclass.matricule} <br />
+                                                                            <p >Registration number:   <br />
                                                                                 Repeating : <br />
                                                                             </p>
                                                                         </div>
