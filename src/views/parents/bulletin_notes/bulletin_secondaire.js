@@ -1030,16 +1030,16 @@ const ParentsBulletinSecondaire = memo((props) => {
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
                                                                                 <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass.name} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le :  {elevesinclass.datenaiss} à  {elevesinclass.lieunaiss}</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le :  {elevesinclass.datenaiss} à {elevesinclass.lieunaiss} </p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-1">Sexe :  {elevesinclass.sexe} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Matricule :  {elevesinclass.matricule}</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Matricule :  {elevesinclass.matricule} </p>
                                                                             </div>
                                                                         </Col>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
                                                                                 <p style={{ fontSize: "10px" }} className="mb-0">Classe : {classe} </p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal :</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal : </p>
                                                                             </div>
                                                                         </Col>
                                                                         <Col sm="4" lg="4">
@@ -1390,17 +1390,17 @@ const ParentsBulletinSecondaire = memo((props) => {
                                                                     <Row style={{ fontSize: "10px" }}>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass.name} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : {elevesinclass.datenaiss} à {elevesinclass.lieunaiss}</p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Sexe : {elevesinclass.sexe}</p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Matricule : {elevesinclass.matricule}</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Name : {elevesinclass.name} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Date and place of birth : {elevesinclass.datenaiss} à {elevesinclass.lieunaiss} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Sex : {elevesinclass.sexe} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Registration number: {elevesinclass.matricule} </p>
                                                                             </div>
                                                                         </Col>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Classe : {info_eleve.other_in_user} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : {info_eleve.redouble} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal : </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Class : {info_eleve.other_in_user} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Repeat : {info_eleve.redouble} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Principal Teacher : </p>
                                                                             </div>
                                                                         </Col>
                                                                         <Col sm="4" lg="4">
