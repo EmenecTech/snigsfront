@@ -1754,7 +1754,9 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                             </svg>
                             <div className="ms-3">
                               <span className="text-gray">{user.langue === "en" ? (<div> Teachers </div>):(<div> Enseignants </div>)}</span>
-                              <h6>0</h6>
+                             <h5 className="counter">
+                              <CountUp start={0} end={nbrens} duration={5} />
+                             </h5>
                             </div>
                           </div>
                           <div className="d-flex align-items-start">
@@ -1776,7 +1778,9 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                             </svg>
                             <div className="ms-3">
                               <span className="text-gray">{user.langue === "en" ? (<div> Students </div>):(<div> Elèves </div>)}</span>
-                              <h6>0</h6>
+                            <h6 className="counter">
+                              <CountUp start={0} end={nbreleve} duration={3} />
+                            </h6>
                             </div>
                           </div>
                         </div>
