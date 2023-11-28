@@ -266,7 +266,7 @@ const BulletinPrimaire = memo((props) => {
     }, []);
 
     const fetchAllelevesinclass = () => {
-        http.get('/get_eleve_in_class/' + etab + '/' + classe + '/' + userid).then(res => {
+        http.get('get_eleve_in_class/' + etab + '/' + classe + '/' + userid).then(res => {
             setelevesinclass(res.data);
         })
     };
