@@ -692,7 +692,7 @@ const BulletinSecondaire = memo((props) => {
                                                                                 <figure className="figure">
                                                                                     <Image
                                                                                         className="theme-color-default-img  profile-pic rounded avatar-100"
-                                                                                        src={image}
+                                                                                        src=""
                                                                                         alt="profile-pic"
                                                                                         style={{ width: "100px" }}
                                                                                     />
@@ -1053,7 +1053,7 @@ const BulletinSecondaire = memo((props) => {
                                                                                 <figure className="figure">
                                                                                     <Image
                                                                                         className="theme-color-default-img  profile-pic rounded avatar-100"
-                                                                                        src={image}
+                                                                                        src=""
                                                                                         alt="profile-pic"
                                                                                         style={{ width: "100px" }}
                                                                                     />
