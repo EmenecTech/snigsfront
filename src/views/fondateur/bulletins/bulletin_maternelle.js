@@ -1173,7 +1173,7 @@ const BulletinMaternelle = memo((props) => {
                                 </Row>
                 </div> : <div> </div>}
 
-                {classes.cycle_niveau === 'Maternelle'  ? <div>
+                {classes.cycle_niveau === 'Nursery'  ? <div>
 
                     {/* Bulletin standard de la maternelle anglophone */}
 
