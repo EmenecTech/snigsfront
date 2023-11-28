@@ -48,7 +48,7 @@ import Card from "../../../components/Card.js";
 // install Swiper modules
 SwiperCore.use([Navigation]);
 
-const Professeur_matieres_notes = memo((props) => {
+const Enseignant_matieres_notes = memo((props) => {
     const [show, setShow] = useState(false);
     const { user, http } = AuthUser();
     const handleClose = () => setShow(false);
@@ -365,7 +365,7 @@ const Professeur_matieres_notes = memo((props) => {
                         </Card.Header>
                       
         
-     {confnotes.niveau_enseignement === "Secondaire" ? 
+     {confnotes.niveau_enseignement === "Université" ? 
          
             <div>
                 <Card.Body>
@@ -477,4 +477,4 @@ const Professeur_matieres_notes = memo((props) => {
     );
 })
 
-export default Professeur_matieres_notes
+export default Enseignant_matieres_notes
