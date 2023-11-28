@@ -314,6 +314,9 @@ return (
 
 
                         </Card.Header>
+
+              {confetudiants.niveau_enseignement === "Université" ? 
+  
                          <Card.Body>
                             <div className="table-responsive border-bottom my-3">
                                 <Table
@@ -360,6 +363,8 @@ return (
 
                             </div>
                         </Card.Body>
+                    </div> 
+                                    
                 </Card>
                 </Col>
             </Row>
