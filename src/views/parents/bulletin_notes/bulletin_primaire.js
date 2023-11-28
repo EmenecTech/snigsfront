@@ -1669,8 +1669,8 @@ const ParentsBulletinPrimaire = memo((props) => {
 
                                                                     <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                              Nom et Prénom : {elevesinclass.name} <br />
-                                                                              Date et Lieu de naissance : {elevesinclass.datenaiss} à {elevesinclass.lieunaiss} <br />
+                                                                              Nom et Prénom : {elevesinclass.nom} {elevesinclass.prenom} <br />
+                                                                              Date et Lieu de naissance : {elevesinclass.date_naissance} à {elevesinclass.lieu_naissance} <br />
                                                                               Sexe :  {elevesinclass.sexe} <br />
                                                                              
                                                                         </div>
@@ -3460,8 +3460,8 @@ const ParentsBulletinPrimaire = memo((props) => {
 
                                                                         <Col sm="4" lg="4">
                                                                         <div className="mt-1">
-                                                                            <p >Name : {elevesinclass.name} <br />
-                                                                                Date and place of birth :  {elevesinclass.datenaiss} at {elevesinclass.lieunaiss} <br />
+                                                                            <p >Name : {elevesinclass.nom} {elevesinclass.prenom} <br />
+                                                                                Date and place of birth :  {elevesinclass.date_naissance} at {elevesinclass.lieu_naissance} <br />
                                                                                 Sex :  {elevesinclass.sexe} <br />
                                                                               </p>
                                                                         </div>
