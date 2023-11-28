@@ -99,17 +99,6 @@ const BulletinSecondaire = memo((props) => {
         });
     }
 
-     const [info_eleve, setinfo_eleve] = useState([]);
-
-    useEffect(() => {
-        fetchAllinfo_eleve()
-    }, []);
-
-    const fetchAllinfo_eleve = () => {
-        http.get('/info_eleve/' + userid).then((res) => {
-            setinfo_eleve(res.data);
-        });
-    }
 
     const [rang_eleve, setrang_eleve] = useState([]);
 
@@ -266,7 +255,7 @@ const BulletinSecondaire = memo((props) => {
     }, []);
 
     const fetchAllelevesinclass = () => {
-        http.get('/get_eleve_in_class/' + etab + '/' + classe + '/' + userid).then(res => {
+        http.get('get_eleve_in_class/' + etab + '/' + classe + '/' + userid).then(res => {
             setelevesinclass(res.data);
         })
     };
@@ -1026,10 +1015,10 @@ const BulletinSecondaire = memo((props) => {
                                                                     <Row style={{ fontSize: "10px" }}>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass.name} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le :  {elevesinclass.datenaiss} à  {elevesinclass.lieunaiss}</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass.nom} {elevesinclass.prenom}</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le :  {elevesinclass.date_naissance} à  {elevesinclass.lieu_naiss} </p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-1">Sexe :  {elevesinclass.sexe} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Matricule :  {elevesinclass.matricule}</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Matricule :  {elevesinclass.matricule} </p>
                                                                             </div>
                                                                         </Col>
                                                                         <Col sm="4" lg="4">
@@ -1387,16 +1376,16 @@ const BulletinSecondaire = memo((props) => {
                                                                     <Row style={{ fontSize: "10px" }}>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass.name} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le : {elevesinclass.datenaiss} à {elevesinclass.lieunaiss}</p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Sexe : {elevesinclass.sexe}</p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Matricule : {elevesinclass.matricule}</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Name : {elevesinclass.nom} {elevesinclass.prenom}</p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Date and place of birth : {elevesinclass.date_naissance} à {elevesinclass.lieu_naissance} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Sexe : {elevesinclass.sexe} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Matricule : {elevesinclass.matricule} </p>
                                                                             </div>
                                                                         </Col>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Classe : {info_eleve.other_in_user} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : {info_eleve.redouble} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Classe : {classe} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : {elevesinclass.redouble} </p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal : </p>
                                                                             </div>
                                                                         </Col>
