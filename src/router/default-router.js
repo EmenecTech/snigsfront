@@ -106,6 +106,7 @@ import Enseignant_matieres_chapitres from '../views/enseignant/chapitres/matiere
 import Enseignant_list_Chapitre from '../views/enseignant/chapitres/listchapitres';
 import EnseignantLeconChapitre from '../views/enseignant/chapitres/lecons_chapitres';
 import Enseignant_matieres_notes from '../views/enseignant/notes/listmatiere';
+import Enseignant_matieres_notes from '../views/professeurs/notes/listmatiere';
 import EnseignantAddNote from '../views/enseignant/notes/noteseleves';
 import EnseignantListEvaluations from '../views/enseignant/notes/notesevalutions';
 import EnseignantListGroupes from '../views/enseignant/notes/listgroupes';
@@ -907,6 +908,11 @@ export const DefaultRouter = [
             ////////////////
 
        ////////////////////////////////// Université
+
+            {
+                path: 'Professeur/Matieres/Notes',
+                element: <Enseignant_matieres_notes />
+            },
 
             
            
