@@ -48,7 +48,7 @@ import Card from "../../../components/Card.js";
 // install Swiper modules
 SwiperCore.use([Navigation]);
 
-const Enseignant_matieres_notes = memo((props) => {
+const Professeur_matieres_notes = memo((props) => {
     const [show, setShow] = useState(false);
     const { user, http } = AuthUser();
     const handleClose = () => setShow(false);
@@ -477,4 +477,4 @@ const Enseignant_matieres_notes = memo((props) => {
     );
 })
 
-export default Enseignant_matieres_notes
+export default Professeur_matieres_notes
