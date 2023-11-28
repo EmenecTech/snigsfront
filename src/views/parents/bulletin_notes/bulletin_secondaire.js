@@ -83,7 +83,7 @@ const ParentsBulletinSecondaire = memo((props) => {
     const [inputs, setInputs] = useState({});
     const { evaluation } = useParams();
     const etab = user.etablissement;
-    const userid = user.id;
+    const userid = user.second_id;
     const niveau = user.fonction_user;
     const classe = user.other_in_user;
 
@@ -99,18 +99,6 @@ const ParentsBulletinSecondaire = memo((props) => {
     const fetchAllinfo_etab = () => {
         http.get('/get_name_logo/' + etab).then((res) => {
             setinfo_etab(res.data);
-        });
-    }
-
-     const [info_eleve, setinfo_eleve] = useState([]);
-
-    useEffect(() => {
-        fetchAllinfo_eleve()
-    }, []);
-
-    const fetchAllinfo_eleve = () => {
-        http.get('/info_eleve/' + userid).then((res) => {
-            setinfo_eleve(res.data);
         });
     }
 
@@ -135,100 +123,7 @@ const ParentsBulletinSecondaire = memo((props) => {
         });
     };
 
-    console.log(rang_eleve)
-
-    const [image2, setImage2] = useState("");
-    const imageRef2 = useRef(null);
-
-    const fetchProductImage2 = useCallback(() => {
-        // annuler la requête précédente si elle existe
-        if (imageRef2.current) {
-            imageRef2.current.cancel();
-        }
-        // créer un token d'annulation
-        imageRef2.current = Axios.CancelToken.source();
-        // envoyer une requête GET avec le token et le responseType
-        http.get(
-            "/avatar/images/" + etab + ".png",
-
-            {
-                cancelToken: imageRef2.current.token,
-                responseType: "arraybuffer",
-            }
-        )
-            .then((response) => {
-                // convertir l'image en base64
-                const base64 = btoa(
-                    new Uint8Array(response.data).reduce(
-                        (data, byte) => data + String.fromCharCode(byte),
-                        ""
-                    )
-                );
-                // mettre à jour l'état de l'image
-                setImage2(`data:image/png;base64,${base64}`);
-            })
-            .catch((error) => {
-                // ignorer l'erreur si la requête a été annulée
-                if (!Axios.isCancel(error)) {
-                    console.error(error);
-                }
-            });
-    }, []);
-
-    useEffect(() => {
-        fetchProductImage2();
-        // nettoyer la référence à l'image quand le composant est démonté
-        return () => {
-            imageRef2.current = null;
-        };
-    }, [fetchProductImage2]);
-
-
-
-    const [image, setImage] = useState("");
-    const imageRef = useRef(null);
-
-    const fetchProductImage = useCallback(() => {
-        // annuler la requête précédente si elle existe
-        if (imageRef.current) {
-            imageRef.current.cancel();
-        }
-        // créer un token d'annulation
-        imageRef.current = Axios.CancelToken.source();
-        // envoyer une requête GET avec le token et le responseType
-        http.get(
-            "/avatar/images/" + user.profile_photo_path,
-            {
-                cancelToken: imageRef.current.token,
-                responseType: "arraybuffer",
-            }
-        )
-            .then((response) => {
-                // convertir l'image en base64
-                const base64 = btoa(
-                    new Uint8Array(response.data).reduce(
-                        (data, byte) => data + String.fromCharCode(byte),
-                        ""
-                    )
-                );
-                // mettre à jour l'état de l'image
-                setImage(`data:image/png;base64,${base64}`);
-            })
-            .catch((error) => {
-                // ignorer l'erreur si la requête a été annulée
-                if (!Axios.isCancel(error)) {
-                    console.error(error);
-                }
-            });
-    }, []);
-
-    useEffect(() => {
-        fetchProductImage();
-        // nettoyer la référence à l'image quand le composant est démonté
-        return () => {
-            imageRef.current = null;
-        };
-    }, [fetchProductImage]);
+   
     const [matiereslevel, setmatiereslevel] = useState([]);
     useEffect(() => {
         fetchAllmatiereslevel();
@@ -400,241 +295,7 @@ const ParentsBulletinSecondaire = memo((props) => {
     };
     //////////////////////////////////
     
-    const [allnote_11, setAllNote_11] = useState([]);
-    useEffect(() => {
-        fetchAllNote_11();
-    }, []);
-
-    const fetchAllNote_11 = () => {
-        http.get('/all/notes_11/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_1(res.data);
-        })
-    };
-    /////////////////////////////////
-
-    const [allnote_12, setAllNote_12] = useState([]);
-    useEffect(() => {
-        fetchAllNote_12();
-    }, []);
-
-    const fetchAllNote_12 = () => {
-        http.get('/all/notes_12/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_12(res.data);
-        })
-    };
-
-    ///////////////////////////
     
-    const [allnote_13, setAllNote_13] = useState([]);
-    useEffect(() => {
-        fetchAllNote_13();
-    }, []);
-
-    const fetchAllNote_13 = () => {
-        http.get('/all/notes_13/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_13(res.data);
-        })
-    };
-    ///////////////////////////////
-    const [allnote_14, setAllNote_14] = useState([]);
-    useEffect(() => {
-        fetchAllNote_14();
-    }, []);
-
-    const fetchAllNote_14 = () => {
-        http.get('/all/notes_14/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_14(res.data);
-        })
-    };
-    ////////////////////////////
-    
-
-    const [allnote_15, setAllNote_15] = useState([]);
-    useEffect(() => {
-        fetchAllNote_15();
-    }, []);
-
-    const fetchAllNote_15 = () => {
-        http.get('/all/notes_15/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_15(res.data);
-        })
-    };
-    ///////////////////////////////////
-    const [allnote_16, setAllNote_16] = useState([]);
-    useEffect(() => {
-        fetchAllNote_16();
-    }, []);
-
-    const fetchAllNote_16 = () => {
-        http.get('/all/notes_16/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_16(res.data);
-        })
-    };
-    /////////////////////////////////
-    const [allnote_17, setAllNote_17] = useState([]);
-    useEffect(() => {
-        fetchAllNote_17();
-    }, []);
-
-    const fetchAllNote_17 = () => {
-        http.get('/all/notes_17/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_17(res.data);
-        })
-    };
-    ////////////////////////////////
-    
-    const [allnote_18, setAllNote_18] = useState([]);
-    useEffect(() => {
-        fetchAllNote_18();
-    }, []);
-
-    const fetchAllNote_18 = () => {
-        http.get('/all/notes_18/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_18(res.data);
-        })
-    };
-    /////////////////////////////////
-    const [allnote_19, setAllNote_19] = useState([]);
-    useEffect(() => {
-        fetchAllNote_19();
-    }, []);
-
-    const fetchAllNote_19 = () => {
-        http.get('/all/notes_19/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_19(res.data);
-        })
-    };
-    ///////////////////////////
-    const [allnote_20, setAllNote_20] = useState([]);
-    useEffect(() => {
-        fetchAllNote_20();
-    }, []);
-
-    const fetchAllNote_20 = () => {
-        http.get('/all/notes_20/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_20(res.data);
-        })
-    };
-    ///////////////////////////////
-    
-    const [allnote_21, setAllNote_21] = useState([]);
-    useEffect(() => {
-        fetchAllNote_21();
-    }, []);
-
-    const fetchAllNote_21 = () => {
-        http.get('/all/notes_21/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_21(res.data);
-        })
-    };
-
-    ///////////////////////////
-    
-    const [allnote_22, setAllNote_22] = useState([]);
-    useEffect(() => {
-        fetchAllNote_22();
-    }, []);
-
-    const fetchAllNote_22 = () => {
-        http.get('/all/notes_22/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_22(res.data);
-        })
-    };
-    ///////////////////////////////
-
-    
-    const [allnote_23, setAllNote_23] = useState([]);
-    useEffect(() => {
-        fetchAllNote_23();
-    }, []);
-
-    const fetchAllNote_23 = () => {
-        http.get('/all/notes_23/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_23(res.data);
-        })
-    };
-    /////////////////////////////////
-    const [allnote_24, setAllNote_24] = useState([]);
-    useEffect(() => {
-        fetchAllNote_24();
-    }, []);
-
-    const fetchAllNote_24 = () => {
-        http.get('/all/notes_24/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_24(res.data);
-        })
-    };
-    ////////////////////////////////////
-    
-    const [allnote_25, setAllNote_25] = useState([]);
-    useEffect(() => {
-        fetchAllNote_25();
-    }, []);
-
-    const fetchAllNote_25 = () => {
-        http.get('/all/notes_25/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_25(res.data);
-        })
-    };
-    ////////////////////////////////////
-    
-    const [allnote_26, setAllNote_26] = useState([]);
-    useEffect(() => {
-        fetchAllNote_26();
-    }, []);
-
-    const fetchAllNote_26 = () => {
-        http.get('/all/notes_26/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_26(res.data);
-        })
-    };
-    //////////////////////////////
-    const [allnote_27, setAllNote_27] = useState([]);
-    useEffect(() => {
-        fetchAllNote_27();
-    }, []);
-
-    const fetchAllNote_27 = () => {
-        http.get('/all/notes_27/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_27(res.data);
-        })
-    };
-    ///////////////////////////////////
-    
-    const [allnote_28, setAllNote_28] = useState([]);
-    useEffect(() => {
-        fetchAllNote_28();
-    }, []);
-
-    const fetchAllNote_28 = () => {
-        http.get('/all/notes_28/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_28(res.data);
-        })
-    };
-    /////////////////////////////
-    
-    const [allnote_29, setAllNote_29] = useState([]);
-    useEffect(() => {
-        fetchAllNote_29();
-    }, []);
-
-    const fetchAllNote_29 = () => {
-        http.get('/all/notes_29/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_29(res.data);
-        })
-    };
-    ////////////////////////////////
-    
-    const [allnote_30, setAllNote_30] = useState([]);
-    useEffect(() => {
-        fetchAllNote_30();
-    }, []);
-
-    const fetchAllNote_30 = () => {
-        http.get('/all/notes_30/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
-            setAllNote_30(res.data);
-        })
-    };
     //////////////////////////////
 
         /////Somme des notes et moyenne
@@ -1029,8 +690,8 @@ const ParentsBulletinSecondaire = memo((props) => {
                                                                     <Row style={{ fontSize: "10px" }}>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass.name} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le :  {elevesinclass.datenaiss} à {elevesinclass.lieunaiss} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass.nom} {elevesinclass.prenom}  </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le :  {elevesinclass.date_naissance} à {elevesinclass.lieu_naissance} </p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-1">Sexe :  {elevesinclass.sexe} </p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-1">Matricule :  {elevesinclass.matricule} </p>
                                                                             </div>
@@ -1047,7 +708,7 @@ const ParentsBulletinSecondaire = memo((props) => {
                                                                                 <figure className="figure">
                                                                                     <Image
                                                                                         className="theme-color-default-img  profile-pic rounded avatar-100"
-                                                                                        src={image}
+                                                                                        src=""
                                                                                         alt="profile-pic"
                                                                                         style={{ width: "100px" }}
                                                                                     />
@@ -1289,9 +950,7 @@ const ParentsBulletinSecondaire = memo((props) => {
 
                                     <Button variant="primary mt-2" onClick={printData}>
                                         <span className="btn-inner">
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6pm-6 0p" />
-                                            </svg>
+                                        
                                         </span>
                                         Print
                                     </Button>
@@ -1390,16 +1049,16 @@ const ParentsBulletinSecondaire = memo((props) => {
                                                                     <Row style={{ fontSize: "10px" }}>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Name : {elevesinclass.name} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Date and place of birth : {elevesinclass.datenaiss} à {elevesinclass.lieunaiss} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Name : {elevesinclass.nom} {elevesinclass.prenom} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Date and place of birth : {elevesinclass.date_naissance} à {elevesinclass.lieu_naissance} </p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-1">Sex : {elevesinclass.sexe} </p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-1">Registration number: {elevesinclass.matricule} </p>
                                                                             </div>
                                                                         </Col>
                                                                         <Col sm="4" lg="4">
                                                                             <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Class : {info_eleve.other_in_user} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Repeat : {info_eleve.redouble} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Class : {classe} </p>
+                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Repeat : {elevesinclass.redouble} </p>
                                                                                 <p style={{ fontSize: "10px" }} className="mb-0">Principal Teacher : </p>
                                                                             </div>
                                                                         </Col>
@@ -1408,7 +1067,7 @@ const ParentsBulletinSecondaire = memo((props) => {
                                                                                 <figure className="figure">
                                                                                     <Image
                                                                                         className="theme-color-default-img  profile-pic rounded avatar-100"
-                                                                                        src={image}
+                                                                                        src=""
                                                                                         alt="profile-pic"
                                                                                         style={{ width: "100px" }}
                                                                                     />
