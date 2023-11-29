@@ -77,11 +77,16 @@ const ListClasses = memo((props) => {
             window.location.reload(false);
 
         })
+    }
+    const [confnotes, setconfnotes] = useState([]);
+    useEffect(() => {
+        fetchAllconfnotes();
+    }, []);
 
-
-
-        console.log(inputs);
-
+    const fetchAllconfnotes = () => {
+        http.get('/conf_notes/' + etab).then(res => {
+            setconfnotes(res.data);
+        })
     }
     const [niveaux, setniveaux] = useState([]);
     useEffect(() => {
