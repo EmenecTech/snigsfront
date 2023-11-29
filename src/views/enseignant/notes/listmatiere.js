@@ -390,6 +390,7 @@ const Enseignant_matieres_notes = memo((props) => {
                                         {matieres.map((item) => (
                                             <tr key={item.id}>
                                                 <td>{item.classe_cp}</td>
+                                            
                                                 <td>{item.matiere_cp}</td>
                                                 <td>
                                                     <div className="flex align-items-center list-user-action">
@@ -437,8 +438,10 @@ const Enseignant_matieres_notes = memo((props) => {
                                  <thead>
                                      <tr>
 
-                                         <th>Classes</th>
-                                         <th>Unité d'Enseigenement(UE)</th>
+                                         <th>Classe</th>
+                                         <th>Unité d'Enseignement(UE)</th>
+                                         <th>Matière</th>
+                                        
                                          <th>Action</th>
                                      </tr>
                                  </thead>
@@ -446,6 +449,7 @@ const Enseignant_matieres_notes = memo((props) => {
                                      {matieres.map((item) => (
                                          <tr key={item.id}>
                                              <td>{item.classe_cp}</td>
+                                             <td></td>
                                              <td>{item.matiere_cp}</td>
                                              <td>
                                                  <div className="flex align-items-center list-user-action">
