@@ -140,8 +140,8 @@ const ProfesseurAddNote = () => {
 
                                           <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
                                                     <option> </option>
-                                                    <option value="cc">Controle Continu(CC)</option>
-                                                    <option value="sn">Session Normale(SN)</option>
+                                                    <option value="CC">Controle Continu(CC)</option>
+                                                    <option value="SN">Session Normale(SN)</option>
                                                     
                                                 </select>
                                            </Form.Group>
