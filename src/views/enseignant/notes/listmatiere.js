@@ -365,7 +365,7 @@ const Enseignant_matieres_notes = memo((props) => {
                         </Card.Header>
                       
         
-     {confnotes.niveau_enseignement === "Secondaire" || confnotes.niveau_enseignement === "Secondary"? 
+     {confnotes.niveau_enseignement === "Secondaire"? 
          
             <div>
                 <Card.Body>
@@ -421,7 +421,7 @@ const Enseignant_matieres_notes = memo((props) => {
 
                       
         
-{confnotes.niveau_enseignement === "Licence" || confnotes.niveau_enseignement === "Master" ? 
+{confnotes.niveau_enseignement === "Universitaire" ? 
          
          <div>
              <Card.Body>
@@ -477,7 +477,7 @@ const Enseignant_matieres_notes = memo((props) => {
 
 
 
-{confnotes.niveau_enseignement === "Primaire" || confnotes.niveau_enseignement === "Primary" || confnotes.niveau_enseignement === "Maternelle" || confnotes.niveau_enseignement === "Nursery" ? <div>
+{confnotes.niveau_enseignement === "Primaire" ? <div>
 
                 <Card.Body>
                                             <div className="table-responsive border-bottom my-3">
