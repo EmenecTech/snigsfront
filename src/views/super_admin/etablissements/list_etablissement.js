@@ -88,7 +88,7 @@ const ListEtablissements = memo((props) => {
 
     const fetchAllEtablissementsprim = () => {
         http.get('/type/etablissements/Primaire').then(res => {
-            setEtablissementsec(res.data);
+            setEtablissementsprim(res.data);
         })
     }
 
@@ -99,7 +99,7 @@ const ListEtablissements = memo((props) => {
 
     const fetchAllEtablissementsmat = () => {
         http.get('/type/etablissements/Maternelle').then(res => {
-            setEtablissementmat(res.data);
+            setEtablissementsmat(res.data);
         })
     }
 
