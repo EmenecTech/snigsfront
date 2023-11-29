@@ -107,7 +107,9 @@ import Enseignant_list_Chapitre from '../views/enseignant/chapitres/listchapitre
 import EnseignantLeconChapitre from '../views/enseignant/chapitres/lecons_chapitres';
 import Enseignant_matieres_notes from '../views/enseignant/notes/listmatiere';
 import EnseignantAddNote from '../views/enseignant/notes/noteseleves';
+import ProfesseurAddNote from '../views/universite/professeurs/notes/notesetudiants';
 import EnseignantListEvaluations from '../views/enseignant/notes/notesevalutions';
+import ProfesseurListEvaluations from '../views/universite/professeurs/notes/notesevalutions';
 import EnseignantListGroupes from '../views/enseignant/notes/listgroupes';
 import EnseignantListGroupesEvaluations from '../views/enseignant/notes/listgroupesevaluation';
 import EnseignantListEleves from '../views/enseignant/notes/listeleves';
@@ -833,8 +835,16 @@ export const DefaultRouter = [
                 element: <EnseignantAddNote />
             },
             {
+                path: 'Professeur/List/Notes/:evaluation/:niveau/:classe/:matiere',
+                element: <ProfesseurAddNote />
+            },
+            {
                 path: 'Enseignant/List/Evaluations/:classe/:matiere',
                 element: <EnseignantListEvaluations />
+            },
+            {
+                path: 'Professeur/List/Evaluations/:classe/:matiere',
+                element: <ProfesseurListEvaluations />
             },
             
             {
