@@ -402,8 +402,7 @@ const ListEtablissements = memo((props) => {
                                             <th>Pays</th>
                                             <th>Département</th>
                                             <th>Ville</th>
-                                            <th>Adresse</th>
-                                            <th>Fondateur</th>
+                                            <th>Adresse</th> 
                                             <th>Type de facturation</th>
                                             <th>Préinscription</th>
                                             <th>Actions</th>
@@ -517,8 +516,7 @@ const ListEtablissements = memo((props) => {
                                             <th>Pays</th>
                                             <th>Département</th>
                                             <th>Ville</th>
-                                            <th>Adresse</th>
-                                            <th>Fondateur</th>
+                                            <th>Adresse</th> 
                                             <th>Type de facturation</th>
                                             <th>Préinscription</th>
                                             <th>Actions</th>
@@ -633,8 +631,7 @@ const ListEtablissements = memo((props) => {
                                             <th>Pays</th>
                                             <th>Département</th>
                                             <th>Ville</th>
-                                            <th>Adresse</th>
-                                            <th>Fondateur</th>
+                                            <th>Adresse</th> 
                                             <th>Type de facturation</th>
                                             <th>Préinscription</th>
                                             <th>Actions</th>
@@ -749,8 +746,7 @@ const ListEtablissements = memo((props) => {
                                             <th>Pays</th>
                                             <th>Département</th>
                                             <th>Ville</th>
-                                            <th>Adresse</th>
-                                            <th>Fondateur</th>
+                                            <th>Adresse</th> 
                                             <th>Type de facturation</th>
                                             <th>Préinscription</th>
                                             <th>Actions</th>
