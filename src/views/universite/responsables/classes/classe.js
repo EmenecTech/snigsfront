@@ -830,9 +830,8 @@ const UniversiteClasse = () => {
                                             >
                                                 <thead>
                                                     <tr>
-                                                        <th>{user.langue === "en" ? (<div>Group</div>):(<div>Groupe </div>)} </th>
-                                                        <th> </th>
-                                                        
+                                                        <th>{user.langue === "en" ? (<div>Teaching Unit</div>):(<div>Unité d'Enseignement</div>)} </th>
+                                                        <th> Credits </th>
                                                         <th>Action</th>
 
                                                     </tr>
@@ -841,7 +840,7 @@ const UniversiteClasse = () => {
                                                     {groupesclasse.map((item) => (
                                                         <tr key={item.id}>
                                                             <td>{item.groupe_cg}</td>
-                                                            <td>{user.langue === "en" ? (<div>{item.marks_cg} Marks</div>):(<div>{item.marks_cg} Points </div>)} </td>
+                                                            <td>{user.langue === "en" ? (<div>{item.marks_cg} </div>):(<div>{item.marks_cg} </div>)} </td>
                                                             
                                                             <td>
                                                                 <div className="flex align-items-center list-user-action">
