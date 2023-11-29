@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Row, Col, Form, Button, Card, Modal, FormGroup } from 'react-bootstrap'
 import { useNavigate, useParams } from 'react-router-dom';
-import http from '../../../http';
-import AuthUser from '../../../components/AuthUser';
+import http from '../../../../http';
+import AuthUser from '../../../../components/AuthUser';
 
 
 
