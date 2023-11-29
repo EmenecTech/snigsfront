@@ -8,12 +8,12 @@ import AuthUser from "../../../../components/AuthUser.js";
 import http from "../../../../http.js";
 
 //circular
-import Circularprogressbar from "../../../components/circularprogressbar.js";
+import Circularprogressbar from "../../../../components/circularprogressbar.js";
 
 // AOS
 import AOS from "aos";
-import "../../../../node_modules/aos/dist/aos";
-import "../../../../node_modules/aos/dist/aos.css";
+import "../../../../../node_modules/aos/dist/aos";
+import "../../../../../node_modules/aos/dist/aos.css";
 //apexcharts
 import Chart from "react-apexcharts";
 
@@ -26,14 +26,14 @@ import "swiper/swiper-bundle.min.css";
 // import 'swiper/components/navigation/navigation.scss';
 
 //progressbar
-import Progress from "../../../components/progress.js";
+import Progress from "../../../../components/progress.js";
 
 //img
-import shapes1 from "../../../assets/images/shapes/01.png";
-import shapes2 from "../../../assets/images/shapes/02.png";
-import shapes3 from "../../../assets/images/shapes/03.png";
-import shapes4 from "../../../assets/images/shapes/04.png";
-import shapes5 from "../../../assets/images/shapes/05.png";
+import shapes1 from "../../../../assets/images/shapes/01.png";
+import shapes2 from "../../../../assets/images/shapes/02.png";
+import shapes3 from "../../../../assets/images/shapes/03.png";
+import shapes4 from "../../../../assets/images/shapes/04.png";
+import shapes5 from "../../../../assets/images/shapes/05.png";
 
 //Count-up
 import CountUp from "react-countup";
@@ -42,8 +42,8 @@ import CountUp from "react-countup";
 import { useSelector } from "react-redux";
 
 // Import selectors & action from setting store
-import * as SettingSelector from "../../../store/setting/selectors";
-import Card from "../../../components/Card.js";
+import * as SettingSelector from "../../../../store/setting/selectors";
+import Card from "../../../../components/Card.js";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
