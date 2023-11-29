@@ -108,8 +108,8 @@ import EnseignantLeconChapitre from '../views/enseignant/chapitres/lecons_chapit
 import Enseignant_matieres_notes from '../views/enseignant/notes/listmatiere';
 import EnseignantAddNote from '../views/enseignant/notes/noteseleves';
 import ProfesseurAddNote from '../views/universite/professeurs/notes/notesetudiants';
-import EnseignantListEvaluations from '../views/enseignant/notes/notesevaluations';
-import ProfesseurListEvaluations from '../views/universite/professeurs/notes/notesevalutions';
+import EnseignantListEvaluations from '../views/enseignant/notes/notesevalutions';
+import ProfesseurListEvaluations from '../views/universite/professeurs/notes/notesevaluations';
 import EnseignantListGroupes from '../views/enseignant/notes/listgroupes';
 import EnseignantListGroupesEvaluations from '../views/enseignant/notes/listgroupesevaluation';
 import EnseignantListEleves from '../views/enseignant/notes/listeleves';
