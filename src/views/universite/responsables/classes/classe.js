@@ -286,7 +286,7 @@ const UniversiteClasse = () => {
                                             <Nav.Link eventKey="third">{user.langue === "en" ? (<div>Courses</div>):(<div> Matières </div>)}</Nav.Link>
                                         </Nav.Item>
                                         <Nav.Item as="li">
-                                            <Nav.Link eventKey="fourth">{user.langue === "en" ? (<div>Group</div>):(<div> Groupe </div>)}</Nav.Link>
+                                            <Nav.Link eventKey="fourth">{user.langue === "en" ? (<div>Teaching Unit</div>):(<div> Unité d'Enseignement </div>)}</Nav.Link>
                                         </Nav.Item>
                                         <Nav.Item as="li">
                                             <Nav.Link eventKey="fifth">Parents</Nav.Link>
@@ -658,7 +658,7 @@ const UniversiteClasse = () => {
                                                         <Col>
                                                             <Form.Group as={Row} className="form-group">
                                                                 <Form.Group className="form-group">
-                                                                    <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div> Group </div>):(<div>Groupe</div>)} </Form.Label>
+                                                                    <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div> Teaching Unit </div>):(<div>Unité d'Enseignement</div>)} </Form.Label>
                                                                     
 
                                                                         <select className="form-select mb-3 shadow-none" name="groupe" onChange={handleChange} required>
@@ -757,7 +757,7 @@ const UniversiteClasse = () => {
                                         {/* <!-- Modal --> */}
                                         <Modal show={show} onHide={handleClose}>
                                             <Modal.Header closeButton>
-                                                <Modal.Title as="h5"> {user.langue === "en" ? (<div> Add course to class </div>):(<div> Ajouter une matière à la classe </div>)}</Modal.Title>
+                                                <Modal.Title as="h5"> {user.langue === "en" ? (<div> Add course to class </div>):(<div> Nouvelle unité d'enseignement</div>)}</Modal.Title>
                                             </Modal.Header>
                                             <Modal.Body>
                                                 <Form>
@@ -792,11 +792,13 @@ const UniversiteClasse = () => {
                                                         </Col>
                                                     </Row>
 
+                                                    
+
                                                     <Row>
                                                         <Col>
                                                             <Form.Group as={Row} className="form-group">
                                                                 <Form.Group className="form-group">
-                                                                    <Form.Label htmlFor="exampleInputText1">Valeur Note </Form.Label>
+                                                                    <Form.Label htmlFor="exampleInputText1">Credits </Form.Label>
                                                                     <Form.Control type="number" defaultValue="20" name="coef" onChange={handleChange} required />
                                                                 </Form.Group>
                                                             </Form.Group>
