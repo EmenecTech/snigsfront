@@ -31,7 +31,7 @@ const AddUtilisateurs = () => {
     }, []);
 
     const fetchAllEtablissements = () => {
-        http.get('/etablissements').then(res => {
+        http.get('/fetech/list/etab').then(res => {
             setEtablissements(res.data);
         })
     }
