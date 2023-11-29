@@ -134,6 +134,17 @@ const ProfesseurAddNote = () => {
                                                     {eleves_classe.map((user) => ( <option value={user.id}>{user.nom} {user.prenom}</option> ))}
                                                 </select>
                                             </Form.Group>
+
+                                            <Form.Group className='form-group'>
+                                            <Form.Label>Type d'evaluation</Form.Label>
+
+                                          <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
+                                                    <option> </option>
+                                                    <option value="cc">Controle Continu(CC)</option>
+                                                    <option value="sn">Session Normale(SN)</option>
+                                                    
+                                                </select>
+                                           </Form.Group>
                                             <Form.Group className='form-group'>
                                                 <Form.Label>Note /20</Form.Label>
                                                 <Form.Control type="number" id="valeur_note" name="valeur_note"
@@ -162,13 +173,7 @@ const ProfesseurAddNote = () => {
                                                 </select>
                                            </Form.Group>
                                     
-                                               <Form.Group className='form-group'>
-                                                <Form.Label>Compétence visée</Form.Label>
-                                                <Form.Control type="text" id="competence_visee" name="competence_visee"
-                                                    value={inputs.competence_visee || ''}
-                                                    onChange={handleChange}
-                                                />
-                                            </Form.Group>
+                            
                                         <Button variant="primary" onClick={submitForm}>Ajouter </Button>
                                     </Form>
                                     </Modal.Body>
@@ -185,11 +190,12 @@ const ProfesseurAddNote = () => {
                                             <th>Sno.</th>
                                             <th>Nom(s)</th>
                                             <th>Prénom(s)</th>
+                                            <th>Type d'évaluation</th>
                                             <th>Note</th>
                                             <th>Crédit</th>
                                             <th>NxC</th>
                                             <th>Appreciation</th>
-                                            <th>Compétence visée</th>
+                                            
                                             <th> </th>
                                         </tr>
                                 </thead>
@@ -199,11 +205,12 @@ const ProfesseurAddNote = () => {
                                             <td>{++index}</td>
                                             <td>{item.nom}</td>
                                             <td>{item.prenom} </td>
+                                            <td>{item.competence_visee_note} </td>
                                             <td>{item.valeur_note}</td>
                                             <td>{matiere_classe_info.coefficient_cm}  </td>
                                             <td>{item.note_finale}</td>
                                             <td>{item.appreciation_note}</td>
-                                            <td>{item.competence_visee_note} </td>
+                                           
                                 
                                         </tr>
                                     ))}
