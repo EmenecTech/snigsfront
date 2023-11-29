@@ -110,6 +110,7 @@ import EnseignantAddNote from '../views/enseignant/notes/noteseleves';
 import ProfesseurAddNote from '../views/universite/professeurs/notes/notesetudiants';
 import EnseignantListEvaluations from '../views/enseignant/notes/notesevalutions';
 import ProfesseurListEvaluations from '../views/universite/professeurs/notes/notesevaluations';
+import UniversiteClasse from '../views/universite/responsables/classes/classe';
 import EnseignantListGroupes from '../views/enseignant/notes/listgroupes';
 import EnseignantListGroupesEvaluations from '../views/enseignant/notes/listgroupesevaluation';
 import EnseignantListEleves from '../views/enseignant/notes/listeleves';
@@ -417,6 +418,13 @@ export const DefaultRouter = [
                 path: 'Details/classePrim/:niveau/:classe',
                 element: <PrimClasse />
             },
+    
+            {
+                path: 'Details/Universite/classe/:niveau/:classe',
+                element: <UniversiteClasse />
+            },
+
+    
 
             //////
             {
