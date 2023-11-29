@@ -437,7 +437,7 @@ const Enseignant_matieres_notes = memo((props) => {
                                  <thead>
                                      <tr>
 
-                                         <th>Classe</th>
+                                         <th>Classes</th>
                                          <th>Unité d'Enseigenement(UE)</th>
                                          <th>Action</th>
                                      </tr>
