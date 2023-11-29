@@ -483,8 +483,9 @@ const ListClasses = memo((props) => {
                                                 <td>{item.filiere}</td>
                                                 <td>{item.cycle_niveau}</td>
                                                 <td>
+                                                    {confnotes.niveau_enseignement === "Universitaire" ? (<div></div>):(
                                                     <div className="list-user-action">
-                                                {item.cycle_niveau === "Primaire" || item.cycle_niveau === "Maternelle" || item.cycle_niveau === "Primary" || item.cycle_niveau === "Nursery" ? (<div>
+                                                    {item.cycle_niveau === "Primaire" || item.cycle_niveau === "Maternelle" || item.cycle_niveau === "Primary" || item.cycle_niveau === "Nursery" ? (<div>
                                                     <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Details/classePrim/" + item.niveau_classe + "/" + item.intitule_classe}>
                                                             <span className="btn-inner">
                                                                 <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -506,7 +507,7 @@ const ListClasses = memo((props) => {
                                                       <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Edit/classes/" + item.intitule_classe}>
                                                     Modifier
                                                     </Link>{' '} 
-                                            </div>) : (<div>
+                                                    </div>) : (<div>
                                                     <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Details/classe/" + item.niveau_classe + "/" + item.intitule_classe}>
                                                             <span className="btn-inner">
                                                                 <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -528,10 +529,12 @@ const ListClasses = memo((props) => {
                                                         <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Edit/classes/" + item.intitule_classe}>
                                                       Modifier
                                                       </Link>{' '} 
-                                            </div>)}        
+                                                    </div>)}        
                             
-                                                    </div>  
+                                                    </div>  )}
 
+
+                                            
                                                 </td>
     
                                               
