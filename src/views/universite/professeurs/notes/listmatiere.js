@@ -65,7 +65,7 @@ const Professeur_matieres_notes = memo((props) => {
         setInputs(values => ({ ...values, [name]: value, etab }))
     }
 
-     const [confnotes, setconfnotes] = useState([]);
+    const [confnotes, setconfnotes] = useState([]);
     useEffect(() => {
         fetchAllconfnotes();
     }, []);
@@ -75,7 +75,8 @@ const Professeur_matieres_notes = memo((props) => {
             setconfnotes(res.data);
         })
     }
-  console.log(confnotes);
+    console.log(etab);
+    console.log(confnotes);
 
     const [matieres, setmatieres] = useState([]);
     useEffect(() => {
@@ -107,7 +108,7 @@ const Professeur_matieres_notes = memo((props) => {
 
         })
 
-        console.log(inputs);
+   
 
     }
     
