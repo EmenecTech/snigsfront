@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Row, Col, Form, Button, Card, Modal, FormGroup } from 'react-bootstrap'
+import { Row, Col, Form, Button, Card, Tab, Table, Modal, FormGroup } from 'react-bootstrap'
 import { useNavigate, useParams } from 'react-router-dom';
 import http from '../../../../http';
 import AuthUser from '../../../../components/AuthUser';
@@ -129,13 +129,65 @@ const ProfesseurAddNote = () => {
 
    
 
-    return (
 
-        <div>
-            <Row>
-                <Col sm="12" lg="12">
-                    <Card>
-                        <Card.Header className="d-flex justify-content-between">
+
+    return (
+        <Fragment>
+            <FsLightbox
+        toggler={toggler}
+        sources={[
+          icon4,
+          shap2,
+          icon8,
+          shap4,
+          icon2,
+          shap6,
+          icon5,
+          shap4,
+          icon1,
+        ]}
+      />
+            <Tab.Container defaultActiveKey="first">
+                <Row>
+                    <Col lg="12">
+                        <Card>
+                            <Card.Body>
+                                <div className="d-flex flex-wrap align-items-center justify-content-between">
+                                    <div className="d-flex flex-wrap align-items-center">
+
+                                        <div className="d-flex flex-wrap align-items-center mb-3 mb-sm-0">
+                                            <h4 className="me-2 h4"></h4>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <Nav as="ul" className="d-flex nav-pills mb-0 text-center profile-tab" data-toggle="slider-tab" id="profile-pills-tab" role="tablist">
+                                        <Nav.Item as="li">
+                                            <Nav.Link eventKey="first">{user.langue === "en" ? (<div>Students</div>):(<div> Controle Continu </div>)}</Nav.Link>
+                                        </Nav.Item>
+                                        <Nav.Item as="li">
+                                            <Nav.Link eventKey="second">{user.langue === "en" ? (<div>Teachers</div>):(<div> Session Normale</div>)}</Nav.Link>
+                                        </Nav.Item>
+                                       
+                                    </Nav>
+                                    <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3" onClick={handleShow}>
+                                    <i className="btn-inner">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                        </svg>
+                                    </i>
+
+                                    <span>Ajouter la Note</span>
+                                </Button>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col lg="9">
+                        <Tab.Content className="profile-content">
+                         
+                            <Tab.Pane eventKey="second" id="profile-activity">
+                                <Card>
+                                <Card.Header className="d-flex justify-content-between">
                             <h4 className="card-title">CC - {matiere}</h4>
 
                             <div>
@@ -212,8 +264,7 @@ const ProfesseurAddNote = () => {
 
                             </div>
                         </Card.Header>
-
-                        <Card.Body>
+                                    <Card.Body>
                             <table className="table">
                   
                                     <thead>
@@ -251,11 +302,11 @@ const ProfesseurAddNote = () => {
                             </table>
                         </Card.Body>
 
-                                    
-                    </Card>
-
-                    <Card>
-                        <Card.Header className="d-flex justify-content-between">
+                                </Card>
+                            </Tab.Pane >
+                            <Tab.Pane eventKey="third" id="profile-friends">
+                                <Card>
+                                <Card.Header className="d-flex justify-content-between">
                             <h4 className="card-title">SN - {matiere}</h4>
                         </Card.Header>
 
@@ -297,15 +348,20 @@ const ProfesseurAddNote = () => {
                             </table>
                         </Card.Body>
 
-                                    
-                    </Card>
-                </Col>
-            </Row>
+                                </Card>
+                            </Tab.Pane >
+                            
+                            <Tab.Pane eventKey="five" id="profile-profile">
+                              
+                            </Tab.Pane >
+                        </Tab.Content>
+                    </Col>
 
-
-        </div>
+                </Row>
+            </Tab.Container>
+        </Fragment>
     )
 
 }
 
-export default ProfesseurAddNote
+export default ProfesseurAddNote;
