@@ -5,6 +5,18 @@ import http from '../../../../http';
 import AuthUser from '../../../../components/AuthUser';
 import FsLightbox from 'fslightbox-react';
 
+import icon1 from '../../../assets/images/icons/01.png'
+import icon2 from '../../../assets/images/icons/02.png'
+import icon3 from '../../../assets/images/icons/03.png'
+import icon4 from '../../../assets/images/icons/04.png'
+import icon8 from '../../../assets/images/icons/08.png'
+import icon6 from '../../../assets/images/icons/06.png'
+import icon7 from '../../../assets/images/icons/07.png'
+
+import icon5 from '../../../assets/images/icons/05.png'
+import shap2 from '../../../assets/images/shapes/02.png'
+import shap4 from '../../../assets/images/shapes/04.png'
+import shap6 from '../../../assets/images/shapes/06.png'
 
 
 const ProfesseurAddNote = () => {
@@ -26,18 +38,6 @@ const ProfesseurAddNote = () => {
     const handleShow = () => setShow(true);
 
 
-import icon1 from '../../../assets/images/icons/01.png'
-import icon2 from '../../../assets/images/icons/02.png'
-import icon3 from '../../../assets/images/icons/03.png'
-import icon4 from '../../../assets/images/icons/04.png'
-import icon8 from '../../../assets/images/icons/08.png'
-import icon6 from '../../../assets/images/icons/06.png'
-import icon7 from '../../../assets/images/icons/07.png'
-
-import icon5 from '../../../assets/images/icons/05.png'
-import shap2 from '../../../assets/images/shapes/02.png'
-import shap4 from '../../../assets/images/shapes/04.png'
-import shap6 from '../../../assets/images/shapes/06.png'
 
     
     console.log(niveau);
@@ -380,4 +380,4 @@ import shap6 from '../../../assets/images/shapes/06.png'
 
 }
 
-export default ProfesseurAddNote;
+export default ProfesseurAddNote
