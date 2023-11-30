@@ -198,10 +198,10 @@ const ProfesseurAddNote = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col lg="9">
+                    <Col lg="12">
                         <Tab.Content className="profile-content">
                          
-                            <Tab.Pane eventKey="second" id="profile-activity">
+                            <Tab.Pane eventKey="first" id="profile-activity">
                                 <Card>
                                 <Card.Header className="d-flex justify-content-between">
                             <h4 className="card-title">CC - {matiere}</h4>
@@ -312,7 +312,7 @@ const ProfesseurAddNote = () => {
 
                                 </Card>
                             </Tab.Pane >
-                            <Tab.Pane eventKey="third" id="profile-friends">
+                            <Tab.Pane eventKey="second" id="profile-friends">
                                 <Card>
                                 <Card.Header className="d-flex justify-content-between">
                             <h4 className="card-title">SN - {matiere}</h4>
