@@ -170,6 +170,7 @@ const ProfesseurAddNote = () => {
                                           <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
                                                     <option> </option>
                                                     <option value="CC">Controle Continu(CC)</option>
+                                                    <option value="CC">Controle Continu(CC)</option>
                                                    
                                                     
                                                 </select>
