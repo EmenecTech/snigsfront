@@ -10,6 +10,8 @@ const ProfesseurAddNote = () => {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
     const [notes, setNotes] = useState([]);
+
+    const [notescc, setNotescc] = useState([]);
     const [notessn, setNotessn] = useState([]);
     const { evaluation, niveau ,classe, matiere } = useParams();
 
@@ -74,6 +76,19 @@ const ProfesseurAddNote = () => {
     const fetchAllNotes = () => {
         http.get('/notes_eleves/' + etab + '/' + classe + '/' + matiere + '/' + evaluation).then(res => {
             setNotes(res.data);
+
+        })
+
+
+    }
+
+     useEffect(() => {
+        fetchAllNotescc();
+    }, []);
+
+    const fetchAllNotescc = () => {
+        http.get('/notes_cc_eleves/' + etab + '/' + classe + '/' + matiere + '/' + evaluation).then(res => {
+            setNotescc(res.data);
 
         })
 
@@ -155,7 +170,7 @@ const ProfesseurAddNote = () => {
                                           <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
                                                     <option> </option>
                                                     <option value="CC">Controle Continu(CC)</option>
-                                                    <option value="SN">Session Normale(SN)</option>
+                                                   
                                                     
                                                 </select>
                                            </Form.Group>
@@ -214,7 +229,7 @@ const ProfesseurAddNote = () => {
                                         </tr>
                                 </thead>
                                 <tbody>
-                                    {notes.sort((a, b) => a.nom.localeCompare(b.nom)).map((item, index) =>  (
+                                    {notescc.sort((a, b) => a.nom.localeCompare(b.nom)).map((item, index) =>  (
                                         <tr key={item.id}>
                                             <td>{++index}</td>
                                             <td>{item.nom}</td>
@@ -272,7 +287,7 @@ const ProfesseurAddNote = () => {
 
                                           <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
                                                     <option> </option>
-                                                    <option value="CC">Controle Continu(CC)</option>
+                                                   
                                                     <option value="SN">Session Normale(SN)</option>
                                                     
                                                 </select>
