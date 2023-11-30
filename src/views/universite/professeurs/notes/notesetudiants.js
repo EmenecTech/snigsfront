@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import { Row, Col, Form, Button, Card, Tab, Table, Modal, FormGroup } from 'react-bootstrap'
+import React, { Fragment, useEffect, useState } from 'react'
+import { Row, Col, Form, Button, Card, Tab, Table, Modal, Nav, FormGroup } from 'react-bootstrap'
 import { useNavigate, useParams } from 'react-router-dom';
 import http from '../../../../http';
 import AuthUser from '../../../../components/AuthUser';
+import FsLightbox from 'fslightbox-react';
 
 
 
 const ProfesseurAddNote = () => {
     const navigate = useNavigate();
+    const [toggler, setToggler] = useState();
     const [inputs, setInputs] = useState({});
     const [notes, setNotes] = useState([]);
 
@@ -22,6 +24,20 @@ const ProfesseurAddNote = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+
+import icon1 from '../../../assets/images/icons/01.png'
+import icon2 from '../../../assets/images/icons/02.png'
+import icon3 from '../../../assets/images/icons/03.png'
+import icon4 from '../../../assets/images/icons/04.png'
+import icon8 from '../../../assets/images/icons/08.png'
+import icon6 from '../../../assets/images/icons/06.png'
+import icon7 from '../../../assets/images/icons/07.png'
+
+import icon5 from '../../../assets/images/icons/05.png'
+import shap2 from '../../../assets/images/shapes/02.png'
+import shap4 from '../../../assets/images/shapes/04.png'
+import shap6 from '../../../assets/images/shapes/06.png'
 
     
     console.log(niveau);
@@ -162,10 +178,10 @@ const ProfesseurAddNote = () => {
                                     </div>
                                     <Nav as="ul" className="d-flex nav-pills mb-0 text-center profile-tab" data-toggle="slider-tab" id="profile-pills-tab" role="tablist">
                                         <Nav.Item as="li">
-                                            <Nav.Link eventKey="first">{user.langue === "en" ? (<div>Students</div>):(<div> Controle Continu </div>)}</Nav.Link>
+                                            <Nav.Link eventKey="first">{user.langue === "en" ? (<div>Continuous Control</div>):(<div> Controle Continu </div>)}</Nav.Link>
                                         </Nav.Item>
                                         <Nav.Item as="li">
-                                            <Nav.Link eventKey="second">{user.langue === "en" ? (<div>Teachers</div>):(<div> Session Normale</div>)}</Nav.Link>
+                                            <Nav.Link eventKey="second">{user.langue === "en" ? (<div>Normal Session</div>):(<div> Session Normale</div>)}</Nav.Link>
                                         </Nav.Item>
                                        
                                     </Nav>
@@ -176,7 +192,7 @@ const ProfesseurAddNote = () => {
                                         </svg>
                                     </i>
 
-                                    <span>Ajouter la Note</span>
+                                    <span>Ajouter une Note</span>
                                 </Button>
                                 </div>
                             </Card.Body>
