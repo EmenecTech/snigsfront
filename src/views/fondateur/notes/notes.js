@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Fragment } from 'react'
 import { Row, Col, Form, Button, Card, Modal, Tab, Nav, FormGroup } from 'react-bootstrap'
 import { useNavigate, useParams, Link } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ const AdminEditNotes = () => {
 
     const [notescc, setNotescc] = useState([]);
     const [notessn, setNotessn] = useState([]);
-    const {niveau, classe, evaluation, userid} = useParams();
+    const {niveau, classe, evaluation, matiere, userid} = useParams();
 
     const { user, http } = AuthUser();
     const etab = user.etablissement;
@@ -61,6 +61,16 @@ const AdminEditNotes = () => {
         })
     }
 
+    const [confnotes, setconfnotes] = useState([]);
+    useEffect(() => {
+        fetchAllconfnotes();
+    }, []);
+
+    const fetchAllconfnotes = () => {
+        http.get('/conf_notes/' + etab).then(res => {
+            setconfnotes(res.data);
+        })
+    }
   
 const [indices, setindices] = useState([]);
   useEffect(() => {
@@ -160,6 +170,17 @@ const [indices, setindices] = useState([]);
         })
     }
 
+      const [matiere_classe_info, setmatiere_classe_info] = useState([]);
+    useEffect(() => {
+        fetchAllmatiere_classe_info();
+    }, []);
+
+    const fetchAllmatiere_classe_info = () => {
+        http.get('/get_info_matiere_classe/' + etab + '/' + niveau + '/' +  classe + '/' + matiere ).then(res => {
+            setmatiere_classe_info(res.data);
+        })
+    }
+    
     const [groupesclasse, setgroupesclasse] = useState([]);
   useEffect(() => {
     fetchAllGroupesClasse();
