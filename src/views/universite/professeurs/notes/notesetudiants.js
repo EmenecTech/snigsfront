@@ -169,8 +169,9 @@ const ProfesseurAddNote = () => {
 
                                           <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
                                                     <option> </option>
-                                                    <option value="CC">Controle Continu(CC)</option>
-                                                    <option value="CC">Controle Continu(CC)</option>
+                                                    <option value="Controle Continu">Controle Continu</option>
+                                                    <option value="Session Normale">Session Normale</option>
+                                                    
                                                    
                                                     
                                                 </select>
@@ -256,78 +257,6 @@ const ProfesseurAddNote = () => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <h4 className="card-title">SN - {matiere}</h4>
-
-                            <div>
-                                <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3" onClick={handleShow}>
-                                    <i className="btn-inner">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                                        </svg>
-                                    </i>
-
-                                    <span>Ajouter la Note</span>
-                                </Button>
-                                <Modal show={show} onHide={handleClose}>
-                                    <Modal.Header closeButton>
-                                        <Modal.Title>{matiere}</Modal.Title>
-                                    </Modal.Header>
-                                    <Modal.Body>
-                                        <Form>
-                            
-                                            <Form.Group className="form-group">
-     
-                                                <Form.Label htmlFor="exampleFormControlSelect1">Selectionner l'étudiant(e)</Form.Label>
-                                                <select className="form-select" id="id_user" name="id_user" onChange={handleChange}>
-                                                    <option> </option>
-                                                    {eleves_classe.map((user) => ( <option value={user.id}>{user.nom} {user.prenom}</option> ))}
-                                                </select>
-                                            </Form.Group>
-
-                                            <Form.Group className='form-group'>
-                                            <Form.Label>Type d'evaluation</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
-                                                    <option> </option>
-                                                   
-                                                    <option value="SN">Session Normale(SN)</option>
-                                                    
-                                                </select>
-                                           </Form.Group>
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Note /20</Form.Label>
-                                                <Form.Control type="number" id="valeur_note" name="valeur_note"
-                                                    value={inputs.valeur_note || ''}
-                                                    onChange={handleChange}
-                                                />
-                                            </Form.Group>
- 
-                                         <Form.Group className='form-group'>
-                                                <Form.Label>crédits</Form.Label>
-                                                <Form.Control type="number" id="coef" name="coef"
-                                                    value={coefficient}
-                                                    
-                                                    disabled
-                                                />
-                                            </Form.Group>
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Appreciation</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Non acquis">Non acquis</option>
-                                                    <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                    <option value="Acquis">Acquis</option>
-                                                        <option value="Expert">Expert</option>
-                                                </select>
-                                           </Form.Group>
-                                    
-                            
-                                        <Button variant="primary" onClick={submitForm}>Ajouter </Button>
-                                    </Form>
-                                    </Modal.Body>
-                                </Modal>
-
-                            </div>
                         </Card.Header>
 
                         <Card.Body>
