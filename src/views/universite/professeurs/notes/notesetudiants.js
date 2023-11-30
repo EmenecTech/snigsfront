@@ -10,6 +10,7 @@ const ProfesseurAddNote = () => {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
     const [notes, setNotes] = useState([]);
+    const [notessn, setNotessn] = useState([]);
     const { evaluation, niveau ,classe, matiere } = useParams();
 
     const { user, http } = AuthUser();
@@ -73,6 +74,19 @@ const ProfesseurAddNote = () => {
     const fetchAllNotes = () => {
         http.get('/notes_eleves/' + etab + '/' + classe + '/' + matiere + '/' + evaluation).then(res => {
             setNotes(res.data);
+
+        })
+
+
+    }
+
+     useEffect(() => {
+        fetchAllNotessn();
+    }, []);
+
+    const fetchAllNotessn = () => {
+        http.get('/notes_sn_eleves/' + etab + '/' + classe + '/' + matiere + '/' + evaluation).then(res => {
+            setNotessn(res.data);
 
         })
 
@@ -318,7 +332,7 @@ const ProfesseurAddNote = () => {
                                         </tr>
                                 </thead>
                                 <tbody>
-                                    {notes.sort((a, b) => a.nom.localeCompare(b.nom)).map((item, index) =>  (
+                                    {notessn.sort((a, b) => a.nom.localeCompare(b.nom)).map((item, index) =>  (
                                         <tr key={item.id}>
                                             <td>{++index}</td>
                                             <td>{item.nom}</td>
