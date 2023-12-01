@@ -37,7 +37,7 @@ import CountUp from "react-countup";
 import { useSelector } from "react-redux";
 
 // Import selectors & action from setting store
-import * as SettingSelector from "../../../store/setting/selectors";
+import * as SettingSelector from "../../../../store/setting/selectors";
 
 import AuthUser from "../../../../components/AuthUser.js";
 
