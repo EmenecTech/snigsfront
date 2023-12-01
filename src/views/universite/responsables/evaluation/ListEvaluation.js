@@ -21,8 +21,7 @@ import SwiperCore, { Navigation } from "swiper";
 import "swiper/swiper-bundle.min.css";
 // import 'swiper/components/navigation/navigation.scss';
 
-//progressbar
-import Progress from "../../../components/progress.js";
+
 
 //img
 import shapes1 from "../../../assets/images/shapes/01.png";
