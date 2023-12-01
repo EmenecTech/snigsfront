@@ -6,9 +6,6 @@ import { Link } from "react-router-dom";
 
 
 
-//circular
-import Circularprogressbar from "../../../components/circularprogressbar.js";
-
 // AOS
 import AOS from "aos";
 import "../../../../node_modules/aos/dist/aos";
