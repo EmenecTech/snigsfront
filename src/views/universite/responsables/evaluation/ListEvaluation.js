@@ -22,14 +22,6 @@ import "swiper/swiper-bundle.min.css";
 // import 'swiper/components/navigation/navigation.scss';
 
 
-
-//img
-import shapes1 from "../../../assets/images/shapes/01.png";
-import shapes2 from "../../../assets/images/shapes/02.png";
-import shapes3 from "../../../assets/images/shapes/03.png";
-import shapes4 from "../../../assets/images/shapes/04.png";
-import shapes5 from "../../../assets/images/shapes/05.png";
-
 //Count-up
 import CountUp from "react-countup";
 
