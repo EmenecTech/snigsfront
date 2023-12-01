@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 
 // AOS
 import AOS from "aos";
-import "../../../../node_modules/aos/dist/aos";
-import "../../../../node_modules/aos/dist/aos.css";
+import "../../../../../node_modules/aos/dist/aos";
+import "../../../../../node_modules/aos/dist/aos.css";
 //apexcharts
 import Chart from "react-apexcharts";
 
