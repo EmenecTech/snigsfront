@@ -280,11 +280,10 @@ const ProfesseurAddNote = () => {
                                             <th>Sno.</th>
                                             <th>Nom(s)</th>
                                             <th>Prénom(s)</th>
-                                            <th>Type d'évaluation</th>
+                                            <th>Evaluation</th>
                                             <th>Note</th>
-                                            <th>Crédit</th>
-                                            <th>NxC</th>
-                                            <th>Appreciation</th>
+                                            <th>Note Finale</th>
+
                                             
                                             <th> </th>
                                         </tr>
@@ -297,9 +296,8 @@ const ProfesseurAddNote = () => {
                                             <td>{item.prenom} </td>
                                             <td>{item.competence_visee_note} </td>
                                             <td>{item.valeur_note}</td>
-                                            <td>{matiere_classe_info.coefficient_cm}  </td>
                                             <td>{item.note_finale}</td>
-                                            <td>{item.appreciation_note}</td>
+
                                            
                                 
                                         </tr>
@@ -326,11 +324,9 @@ const ProfesseurAddNote = () => {
                                             <th>Sno.</th>
                                             <th>Nom(s)</th>
                                             <th>Prénom(s)</th>
-                                            <th>Type d'évaluation</th>
+                                            <th>Evaluation</th>
                                             <th>Note</th>
-                                            <th>Crédit</th>
-                                            <th>NxC</th>
-                                            <th>Appreciation</th>
+                                            <th>Note finale</th>
                                             
                                             <th> </th>
                                         </tr>
@@ -343,10 +339,7 @@ const ProfesseurAddNote = () => {
                                             <td>{item.prenom} </td>
                                             <td>{item.competence_visee_note} </td>
                                             <td>{item.valeur_note}</td>
-                                            <td>{matiere_classe_info.coefficient_cm}  </td>
-                                            <td>{item.note_finale}</td>
-                                            <td>{item.appreciation_note}</td>
-                                           
+                                            <td>{item.note_finale}</td>                                           
                                 
                                         </tr>
                                     ))}
