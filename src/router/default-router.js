@@ -80,6 +80,7 @@ import AddEnseignant from '../views/fondateur/enseignants/addenseignant';
 import ListPreinscriptions from '../views/fondateur/eleves/preinscriptions';
 import InscriptionEleve from '../views/fondateur/eleves/inscrire_eleve';
 import ListEvaluations from '../views/fondateur/evaluations/list_evaluations';
+import ListEvaluation from '../views/universite/responsables/evaluation/ListEvaluation';
 import ListProgramme from '../views/fondateur/programme/programme_list';
 import ClassesProgrammes from '../views/fondateur/programme/classes_programme';
 import EditClasseProgramme from '../views/fondateur/programme/edit_programme_classe';
@@ -470,6 +471,11 @@ export const DefaultRouter = [
             {
                 path: 'List/evaluations/',
                 element: <ListEvaluations />
+            },
+
+            {
+                path: 'List/Uievaluations/',
+                element: <ListEvaluation />
             },
             //////
             {
