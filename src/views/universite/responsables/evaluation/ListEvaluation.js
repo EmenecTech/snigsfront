@@ -379,7 +379,7 @@ const ListEvaluation = memo((props) => {
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
                                                         <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>SN value (in percent)</div>):(<div>Valeur de la SN(En pourcentage)</div>)} </Form.Label>
-                                                        <Form.Control type="text" defaultValue="" name="sn" onChange={handleChange} required />
+                                                        <Form.Control type="number" defaultValue="60" name="sn" onChange={handleChange} required />
                                                         
                                                     </Form.Group>
                                                 </Form.Group>
