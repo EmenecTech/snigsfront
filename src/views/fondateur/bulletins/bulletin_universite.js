@@ -612,12 +612,12 @@ const BulletinUniversitaire = memo((props) => {
                                                             <Row>
                                                                 <Col sm="12" lg="12" className="d-flex justify-content-center">
                                                                     <div className="user-profile">
-                                                                        <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
-                                                                        <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
-                                                                        <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
-                                                                        <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
-                                                                        <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
-                                                                        <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
+                                                                        <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src="" alt="profile-pic" />
+                                                                        <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src="" alt="profile-pic" />
+                                                                        <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src="" alt="profile-pic" />
+                                                                        <Image className="theme-color-green-img rounded avatar-130 img-fluid" src="" alt="profile-pic" />
+                                                                        <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src="" alt="profile-pic" />
+                                                                        <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src="" alt="profile-pic" />
                                                                     </div>
                                                                 </Col>
                                                             </Row>
