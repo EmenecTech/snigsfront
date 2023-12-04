@@ -649,7 +649,7 @@ const BulletinUniversitaire = memo((props) => {
                                                         </Col>
                                                         <Col sm="4" lg="4">
                                                             <p className="text-center">
-                                                                <h5> Intitulé du bulletin </h5>
+                                                                <h5>  {evaluation} </h5>
 
                                                                 2022 - 2023
                                                             </p>
@@ -667,7 +667,7 @@ const BulletinUniversitaire = memo((props) => {
                                                             <Row style={{ fontSize: "10px" }}>
                                                                 <Col sm="6" lg="6">
                                                                     <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0" >Classe: {user.other_in_user}</p>
+                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0" >Classe: {classe}</p>
                                                                         <p>Class</p>
                                                                     </div>
 
