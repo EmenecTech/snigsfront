@@ -135,7 +135,7 @@ const ProfesseurAddNote = () => {
 
     const submitForm = () => {
         http.post('/notes_ui', inputs).then((res) => {
-             window.location.reload(false); 
+            window.location.reload(false); 
         })
       
         console.log(inputs)
