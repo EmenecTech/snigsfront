@@ -252,17 +252,7 @@ const ProfesseurAddNote = () => {
                                                     disabled
                                                 />
                                             </Form.Group>
-                                            <Form.Group className='form-group'>
-                                                <Form.Label>Appreciation</Form.Label>
-
-                                          <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
-                                                    <option> </option>
-                                                    <option value="Non acquis">Non acquis</option>
-                                                    <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                    <option value="Acquis">Acquis</option>
-                                                        <option value="Expert">Expert</option>
-                                                </select>
-                                           </Form.Group>
+                                           
                                     
                             
                                         <Button variant="primary" onClick={submitForm}>Ajouter </Button>
