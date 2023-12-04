@@ -367,7 +367,7 @@ const AdminEvaluationListClassesEleves = memo((props) => {
 
                             {confnotes.niveau_enseignement === "Universitaire" ? (<div>
                                 <Button variant="primary mt-2" onClick={() => {submitMoyenUi() }}>Génére les moyennes</Button>
-                            </div> : <div>
+                            </div>) : (<div>
                                 <Button variant="primary mt-2" onClick={() => {submitMoyenPr() }}>Générer les moyennes</Button>
                             </div>)}
 
