@@ -556,748 +556,405 @@ const BulletinUniversitaire = memo((props) => {
         ],
     };
 
-    return(
+
+    return (
         <Fragment>
-             {classes.cycle_niveau === 'Secondaire' || classes.cycle_niveau === 'Secondary' ? <div>
-
-               {classes.section_niveau === 'Francophone' ? <div>
-
-              
-            {/* Bulletin du secondaire francophone */}
-              
             <Row>
-                        <Col sm="12">
-                            <Card>
-                                <Card.Header className="d-flex justify-content-between">
-                                    <div className="header-title">
-                                        <h4 className="card-title"></h4>
-                                    </div>
+                <Col sm="12">
+                    <Card>
+                        <Card.Header className="d-flex justify-content-between">
+                            <div className="header-title">
+                                <h4 className="card-title"></h4>
+                            </div>
 
 
-                                    <Button variant="primary mt-2" onClick={printData}>
-                                        <span className="btn-inner">
-                                        
-                                        </span>
-                                        Imprimer
-                                    </Button>
+                            <Button variant="primary mt-2" onClick={printData}>
+                                <span className="btn-inner">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6pm-6 0p" />
+                                    </svg>
+                                </span>
+                                Imprimer
+                            </Button>
 
-                                    {/* <!-- Modal --> */}
+                            {/* <!-- Modal --> */}
 
-                                </Card.Header>
-                                <Card.Body>
+                        </Card.Header>
+                        <Card.Body>
 
-                                    <div ref={componentRef}
-                                        style={{ width: "100%", fontSize: "10px", height: window.innerHeight }}>
-                                        <Row>
-                                            <Col sm="12" lg="12">
-                                                <Card>
-                                                    <Card.Header className="d-flex justify-content-between">
-                                                        <div className="header-title">
+                            <div ref={componentRef}
+                                style={{ width: "100%", fontSize: "10px", height: window.innerHeight }}>
+                                <Row>
+                                    <Col sm="12" lg="12">
+                                        <Card>
+                                            <Card.Header className="d-flex justify-content-between">
+                                                <div className="header-title">
 
-                                                        </div>
-                                                    </Card.Header>
-                                                    <Card.Body>
-                                                        <div>
+                                                </div>
+                                            </Card.Header>
+                                            <Card.Body>
+                                                <div>
+                                                    <Row>
+                                                        <Col sm="4" lg="4">
+                                                            <p className="text-center">REPUBLIQUE DU CAMEROUN <br />
+                                                                Paix - Travails - Patrie <br />
+                                                                MINISTERE DES ENSEIGNEMENTS SECONDAIRES <br />
+
+                                                            </p>
+                                                            <p className="text-center">
+                                                                Nom de l'établissement <br />
+                                                                <smal>BP: Tel:</smal>
+                                                            </p>
+
+
+                                                        </Col>
+                                                        <Col sm="4" >
                                                             <Row>
-                                                                <Col sm="4" lg="4">
-                                                                    <p className="text-center">REPUBLIQUE DU CAMEROUN <br />
-                                                                        Paix - Travail - Patrie <br />
-                                                                        MINISTERE DES ENSEIGNEMENTS SECONDAIRES <br />
+                                                                <Col sm="12" lg="12" className="d-flex justify-content-center">
+                                                                    <div className="user-profile">
+                                                                        <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
+                                                                        <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
+                                                                        <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
+                                                                        <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
+                                                                        <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
+                                                                        <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={image2} alt="profile-pic" />
+                                                                    </div>
+                                                                </Col>
+                                                            </Row>
 
-                                                                    </p>
 
+
+
+                                                        </Col>
+                                                        <Col sm="4" lg="4">
+                                                            <p className="text-center">REPUBLIC OF CAMEROON <br />
+                                                                Peace - Work - Fatherland <br />
+                                                                MINISTRY OF SECONDARY EDUCATION <br />
+
+
+                                                            </p>
+                                                            <p className="text-center">
+                                                                Nom de l'établissement <br />
+                                                                <smal>BP: Tel:</smal>
+                                                            </p>
+
+
+                                                        </Col>
+
+                                                    </Row>
+                                                    <Row className="mt-2">
+                                                        <Col sm="4" lg="4">
+
+
+                                                        </Col>
+                                                        <Col sm="4" lg="4">
+                                                            <p className="text-center">
+                                                                <h5> Intitulé du bulletin </h5>
+
+                                                                2022 - 2023
+                                                            </p>
+
+
+                                                        </Col>
+                                                        <Col sm="4" lg="4">
+
+
+                                                        </Col>
+
+                                                    </Row>
+                                                    <Row>
+                                                        <Col sm="5" lg="5">
+                                                            <Row style={{ fontSize: "10px" }}>
+                                                                <Col sm="6" lg="6">
+                                                                    <div className="mt-2">
+                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0" >Classe: {user.other_in_user}</p>
+                                                                        <p>Class</p>
+                                                                    </div>
 
                                                                 </Col>
-                                                                <Col sm="4" >
-                                                                    <Row>
-                                                                        <Col sm="12" lg="12" className="d-flex justify-content-center">
-                                                                            <div className="user-profile">
-                                                                                <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                            </div>
-                                                                        </Col>
-                                                                    </Row>
-                                                                    <br />
-                                                                    <Row>
-                                                                        <Col sm="12">
-                                                                            <div className="container text-center">
-                                                                                <p> <strong style={{ fontSize: "18px" }}> {info_etab.nom_etablissement} </strong>
+                                                                <Col sm="6" lg="6">
+                                                                    <div className="mt-2">
+                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">Effectif:</p>
+                                                                        <p>Number</p>
+                                                                    </div>
+                                                                </Col>
 
+                                                            </Row>
+
+                                                            <div className="mt-2">
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom et Prénom: {user.nom} {user.prenom}</p>
+                                                                <p>Name and Surname</p>
+                                                            </div>
+
+                                                            <div className="mt-1">
+                                                                <Row>
+                                                                    <Col sm="6" lg="6">
+                                                                        <div className="mt-1">
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-1">Né(e) le: {user.date_naissance}</p>
+                                                                            <p>Born on</p>
+                                                                        </div>
+
+                                                                    </Col>
+                                                                    <Col sm="6" lg="6">
+                                                                        <div className="mt-2">
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">A: {user.lieu_naissance}</p>
+                                                                            <p>AT</p>
+                                                                        </div>
+                                                                    </Col>
+
+                                                                </Row>
+                                                            </div>
+
+
+                                                        </Col>
+                                                        <Col sm="5" lg="5">
+
+                                                            <div className="mt-2">
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">N° Matricule:</p>
+                                                                <p>Registration N°</p>
+                                                            </div>
+                                                            <div className="mt-2">
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Redoublant:</p>
+                                                                <p>Repeater</p>
+                                                            </div>
+                                                            <div className="mt-2">
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Sexe: {user.sexe}</p>
+                                                                <p>Sex</p>
+                                                            </div>
+
+
+
+                                                        </Col>
+                                                        <Col sm="2" lg="2">
+                                                            <div className="bd-example">
+                                                                <figure className="figure">
+                                                                    <Image
+                                                                        className="theme-color-default-img  profile-pic rounded avatar-100"
+                                                                        src={image}
+                                                                        alt="profile-pic"
+                                                                        style={{ width: "100px" }}
+                                                                    />
+                                                                </figure>
+                                                            </div>
+
+                                                        </Col>
+
+                                                    </Row>
+                                                    <Row>
+                                                        <div className="table-responsive border-bottom my-3">
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th><p>
+                                                                            Matière
+                                                                        </p></th>
+                                                                        <th>Controle Continu</th>
+                                                                        <th>Session Normale</th>
+                                                                        <th>Note finale</th>
+                                                                        <th>Compétence visée</th>
+                                                                        <th>Crédits</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    {notesfg.map((item, idf) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>U.E</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notessg.map((item, ids) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Matières du deuxième groupe</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    {notestg.map((item, idt) => (
+
+                                                                        <tr>
+                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
+                                                                            <td>{item.valeur_note}</td>
+                                                                            <td>{item.coefficient_note}</td>
+                                                                            <td>{item.note_finale}</td>
+                                                                            <td>{item.competence_visee_note}</td>
+                                                                            <td>{item.appreciation_note}</td>
+
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Matières du troisième groupe</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    <tr>
+                                                                        <td>RECAPITULATIFS</td>
+                                                                        <td>{sumnotes}</td>
+                                                                        <td>{sumcoef}</td>
+                                                                        <td>{sumnotesfinale}</td>
+                                                                        <td>A</td>
+                                                                    </tr>
+                                                                </tbody>
+
+
+                                                                <tfoot>
+
+                                                                </tfoot>
+                                                            </Table>
+                                                            <Table
+                                                                responsive
+                                                                striped
+                                                                id="datatable"
+                                                                className=""
+                                                                data-toggle="data-table"
+                                                            >
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th></th>
+                                                                        <th><div className="mt-2">
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {moyenneleve}</p>
+                                                                        </div></th>
+                                                                        <th><div className="mt-2">
+                                                                            <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:</p>
+                                                                        </div></th>
+                                                                        <th>
+
+                                                                            <div className="mt-2">
+                                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">MENTION:</p>
+                                                                            </div>
+                                                                        </th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th></th>
+                                                                        <th>DISCIPLINE</th>
+                                                                        <th>APPRECIATION DU TRAVAIL</th>
+                                                                        <th>RECAPITULATIFS DE CLASSE </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    <tr>
+                                                                        <td>
+                                                                            <Col sm="2">
+                                                                                <div>
+                                                                                    <QRCode value={user.nom} size={50} />
+                                                                                </div>
+                                                                            </Col>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            <div className="mt-1">
+                                                                                <p>
+
+                                                                                    Abscences non justifiées :
                                                                                     <br />
-                                                                                    <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal>
+                                                                                    Abscences justifiées:
+                                                                                    <br />
+                                                                                    Avertissement conduite:
+
                                                                                 </p>
 
                                                                             </div>
-                                                                        </Col>
-                                                                    </Row>
-
-
-
-                                                                </Col>
-                                                                <Col sm="4" lg="4">
-                                                                    <p className="text-center">REPUBLIC OF CAMEROON <br />
-                                                                        Peace - Work - Fatherland <br />
-                                                                        MINISTRY OF SECONDARY EDUCATION <br />
-
-                                                                    </p>
-
-
-                                                                </Col>
-
-                                                            </Row>
-                                                            <Row className="mt-2">
-                                                                <Col sm="4" lg="4">
-
-
-                                                                </Col>
-                                                                <Col sm="4" lg="4">
-                                                                    <p className="text-center">
-                                                                        <span style={{ fontSize: "15px" }}> Bulletin De Notes {evaluation}</span>
-                                                                        <br />
-                                                                        2022 - 2023
-                                                                    </p>
-
-
-                                                                </Col>
-                                                                <Col sm="4" lg="4">
-
-
-                                                                </Col>
-
-                                                            </Row>
-                                                            <Row>
-                                                                <Col sm="12" lg="12">
-                                                                    <Row style={{ fontSize: "10px" }}>
-                                                                        <Col sm="4" lg="4">
-                                                                            <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Nom et Prénom : {elevesinclass.nom} {elevesinclass.prenom}</p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Né(e) Le :  {elevesinclass.date_naissance} à  {elevesinclass.lieu_naiss} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Sexe :  {elevesinclass.sexe} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Matricule :  {elevesinclass.matricule} </p>
-                                                                            </div>
-                                                                        </Col>
-                                                                        <Col sm="4" lg="4">
-                                                                            <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Classe : {classe} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal :</p>
-                                                                            </div>
-                                                                        </Col>
-                                                                        <Col sm="4" lg="4">
-                                                                            <div className="bd-example">
-                                                                                <figure className="figure">
-                                                                                    <Image
-                                                                                        className="theme-color-default-img  profile-pic rounded avatar-100"
-                                                                                        src=""
-                                                                                        alt="profile-pic"
-                                                                                        style={{ width: "100px" }}
-                                                                                    />
-                                                                                </figure>
-                                                                            </div>
-
-                                                                        </Col>
-                                                                    </Row>
-                                                                </Col>
-                                                            </Row>
-                                                            <Row>
-                                                                <div className="table-responsive border-bottom my-3">
-                                                                    <Table
-                                                                        responsive
-                                                                        id="datatable"
-                                                                        className=""
-                                                                        data-toggle="data-table"
-                                                                    >
-                                                                        <thead>
-                                                                            <tr>
-                                                                                <th><p>
-                                                                                    Disciplines
-                                                                                </p></th>
-                                                                                <th>Note</th>
-                                                                                <th>Coef</th>
-                                                                                <th>NxC</th>
-                                                                                <th>Appreciation</th>
-                                                                            </tr>
-                                                                        </thead>
-                                                                       
-                                                                        {allnote_1.existgrp > 0 && (
-                                                                        <tbody>
-                                                                            {allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
-                                                                                <tr key={grp_1}>
-                                                                                    <td>{item.matiere_note}</td>
-                                                                                    <td>{item.valeur_note}</td>
-                                                                                    <td>{item.coefficient_note}</td>
-                                                                                    <td>{item.note_finale}</td>
-                                                                                    <td>{item.appreciation_note}</td>
-                                                                                </tr>
-                                                                            ))}
-                                                                        </tbody> )}
-
-                                                                    {allnote_1.existgrp > 0 && (
-                                                                        <thead>
-                                                                            <tr>
-                                                                                <th>{allnote_1.groupe}</th>
-                                                                                <th>{allnote_1.sumnote}</th>
-                                                                                <th>{allnote_1.sumcoef}</th>
-                                                                                <th>{allnote_1.sumfinalnotes}</th>
-                                                                                <th></th>
-                                                                            </tr>
-                                                                        </thead>)}
-
-                                                                        {allnote_2.existgrp > 0 && (
-                                                                        <tbody>
-                                                                            {allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
-                                                                                <tr key={grp_2}>
-                                                                                    <td>{item.matiere_note}</td>
-                                                                                    <td>{item.valeur_note}</td>
-                                                                                    <td>{item.coefficient_note}</td>
-                                                                                    <td>{item.note_finale}</td>
-                                                                                    <td>{item.appreciation_note}</td>
-                                                                                </tr>
-                                                                            ))}
-
-                                                                        </tbody>)}
-
-                                                                        {allnote_2.existgrp > 0 && (
-                                                                        <thead>
-                                                                            <tr>
-
-                                                                                <th>{allnote_2.groupe}</th>
-                                                                                <th>{allnote_2.sumnote}</th>
-                                                                                <th>{allnote_2.sumcoef}</th>
-                                                                                <th>{allnote_2.sumfinalnotes}</th>
-                                                                                <th></th>
-
-                                                                            </tr>
-                                                                        </thead>)}
-
-                                                                        {allnote_3.existgrp > 0 && (
-                                                                        <tbody>
-
-                                                                            {allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
-                                                                                <tr key={grp_3}>
-                                                                                    <td>{item.matiere_note}</td>
-
-                                                                                    <td>{item.valeur_note}</td>
-                                                                                    <td>{item.coefficient_note}</td>
-                                                                                    <td>{item.note_finale}</td>
-                                                                                    <td>{item.appreciation_note}</td>
-                                                                                </tr>
-                                                                            ))}
-
-                                                                        </tbody>)}
-
-                                                                        {allnote_3.existgrp > 0 && (
-                                                                        <thead>
-                                                                            <tr>
-
-                                                                                <th>{allnote_3.groupe}</th>
-                                                                                <th>{allnote_3.sumnote}</th>
-                                                                                <th>{allnote_3.sumcoef}</th>
-                                                                                <th>{allnote_3.sumfinalnotes}</th>
-                                                                                <th></th>
-
-                                                                            </tr>
-                                                                        </thead>)}
-
-
-                                                                        <tbody>
-
-                                                                            <tr>
-                                                                                <td>RECAPITULATIFS</td>
-
-                                                                                <td>{sumnotes}</td>
-                                                                                <td>{sumcoef}</td>
-                                                                                <td>{sumnotesfinale}</td>
-                                                                                <td></td>
-                                                                            </tr>
-                                                                        </tbody>
-
-
-                                                                        <tfoot>
-
-                                                                        </tfoot>
-                                                                    </Table>
-                                                                    <Table
-                                                                        responsive
-                                                                       
-                                                                        id="datatable"
-                                                                        className=""
-                                                                        data-toggle="data-table"
-                                                                    >
-                                                                        <thead>
-                                                                            <tr>
-                                                                                <th></th>
-                                                                                <th>DISCIPLINE</th>
-                                                                                <th>APPRECIATION DU TRAVAIL</th>
-                                                                                <th><div className="mt-2">
-                                                                                    <p tyle={{ fontSize: "10px" }} className="mb-0">MOYENNE: {moyenneleve}</p>
-                                                                                </div>
-                                                                                    <div className="mt-2">
-                                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">RANG:</p>
-                                                                                    </div>
-                                                                                    <div className="mt-2">
-                                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">MENTION:</p>
-                                                                                    </div>
-                                                                                </th>
-                                                                            </tr>
-                                                                        </thead>
-                                                                        <tbody>
-
-                                                                            <tr>
-                                                                                <td>
-                                                                                    <Col sm="2">
-                                                                                        <div>
-                                                                                            <QRCode value={user.nom} size={50} />
-                                                                                        </div>
-                                                                                    </Col>
-
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div className="mt-1">
-                                                                                        <p>
-
-                                                                                            Abscences non justifiées :
-                                                                                            <br />
-                                                                                            Abscences justifiées:
-                                                                                            <br />
-                                                                                            Avertissement conduite:
-                                                                                            <br />
-                                                                                            Blame conduite:
-                                                                                        </p>
-
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div className="mt-1">
-                                                                                        <p>Tableau d'honneur:
-                                                                                            <br />
-                                                                                            Encouragement:
-                                                                                            <br />
-                                                                                            Félicitations:
-                                                                                            <br />
-                                                                                            Prime:
-                                                                                        </p>
-
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div className="mt-1">
-                                                                                        <p>Moyenne de la classe:
-                                                                                            <br />
-                                                                                            Moyenne du premier:
-                                                                                            <br />
-                                                                                            Moyenne du dernier:
-
-                                                                                        </p>
-
-                                                                                    </div>
-                                                                                </td>
-
-                                                                            </tr>
-
-                                                                        </tbody>
-                                                                    </Table>
-
-
-                                                                </div>
-
-
-                                                            </Row>
-                                                        </div>
-                                                    </Card.Body>
-                                                </Card>
-                                            </Col>
-
-                                        </Row>
-
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    </Row>
-           </div> : <div>
-
-            {/* Bulletin du secondaire anglophone  */}
-
-            <Row>
-                        <Col sm="12">
-                            <Card>
-                                <Card.Header className="d-flex justify-content-between">
-                                    <div className="header-title">
-                                        <h4 className="card-title"></h4>
-                                    </div>
-
-
-                                    <Button variant="primary mt-2" onClick={printData}>
-                                        <span className="btn-inner">
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6pm-6 0p" />
-                                            </svg>
-                                        </span>
-                                        Print
-                                    </Button>
-
-                                    {/* <!-- Modal --> */}
-
-                                </Card.Header>
-                                <Card.Body>
-
-                                    <div ref={componentRef}
-                                        style={{ width: "100%", fontSize: "10px", height: window.innerHeight }}>
-                                        <Row>
-                                            <Col sm="12" lg="12">
-                                                <Card>
-                                                    <Card.Header className="d-flex justify-content-between">
-                                                        <div className="header-title">
-
-                                                        </div>
-                                                    </Card.Header>
-                                                    <Card.Body>
-                                                        <div>
-                                                            <Row>
-                                                                <Col sm="4" lg="4">
-                                                                    <p className="text-center">REPUBLIQUE DU CAMEROUN<br />
-                                                                        Paix - Travail - Patrie <br />
-                                                                        MINISTERE DES ENSEIGNEMENTS SECONDAIRES <br />
-
-                                                                    </p>
-
-
-                                                                </Col>
-                                                                <Col sm="4" >
-                                                                    <Row>
-                                                                        <Col sm="12" lg="12" className="d-flex justify-content-center">
-                                                                            <div className="user-profile">
-                                                                                <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-green-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                                <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src={"https://snigsbackend.com/logo_etab/" + etab + ".png"} alt="profile-pic" />
-                                                                            </div>
-                                                                        </Col>
-                                                                    </Row>
-                                                                    <br />
-                                                                    <Row>
-                                                                        <Col sm="12">
-                                                                            <div className="container text-center">
-                                                                                <p> <strong style={{ fontSize: "18px" }}> {info_etab.nom_etablissement} </strong>
-
+                                                                        </td>
+                                                                        <td>
+                                                                            <div className="mt-1">
+                                                                                <p>
+                                                                                    Encouragement:
                                                                                     <br />
-                                                                                    <smal>BP:{info_etab.bp_etablissement} Tel:{info_etab.telephone}</smal>
+                                                                                    Félicitations:
+
                                                                                 </p>
 
                                                                             </div>
-                                                                        </Col>
-                                                                    </Row>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div className="mt-1">
+                                                                                <p>Moyenne de la classe:
+                                                                                    <br />
+                                                                                    Moyenne maximale de la classe:
+                                                                                    <br />
+                                                                                    Moyenne minimale de la classe:
 
+                                                                                </p>
 
-
-                                                                </Col>
-                                                                <Col sm="4" lg="4">
-                                                                    <p className="text-center">REPUBLIC OF CAMEROON <br />
-                                                                        Peace - Work - Fatherland <br />
-                                                                        MINISTRY OF SECONDARY EDUCATION <br />
-
-                                                                    </p>
-
-
-                                                                </Col>
-
-                                                            </Row>
-                                                            <Row className="mt-2">
-                                                                <Col sm="4" lg="4">
-
-
-                                                                </Col>
-                                                                <Col sm="4" lg="4">
-                                                                    <p className="text-center">
-                                                                        <span style={{ fontSize: "15px" }}> Gradebook - {evaluation}</span>
-                                                                        <br />
-                                                                        2022 - 2023
-                                                                    </p>
-
-
-
-                                                                </Col>
-                                                                <Col sm="4" lg="4">
-
-
-                                                                </Col>
-
-                                                            </Row>
-                                                            <Row>
-                                                                <Col sm="12" lg="12">
-                                                                    <Row style={{ fontSize: "10px" }}>
-                                                                        <Col sm="4" lg="4">
-                                                                            <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Name : {elevesinclass.nom} {elevesinclass.prenom}</p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Date and place of birth : {elevesinclass.date_naissance} à {elevesinclass.lieu_naissance} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Sexe : {elevesinclass.sexe} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-1">Matricule : {elevesinclass.matricule} </p>
                                                                             </div>
-                                                                        </Col>
-                                                                        <Col sm="4" lg="4">
-                                                                            <div className="mt-2">
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Classe : {classe} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Redoublant(e) : {elevesinclass.redouble} </p>
-                                                                                <p style={{ fontSize: "10px" }} className="mb-0">Professeur principal : </p>
-                                                                            </div>
-                                                                        </Col>
-                                                                        <Col sm="4" lg="4">
-                                                                            <div className="bd-example">
-                                                                                <figure className="figure">
-                                                                                    <Image
-                                                                                        className="theme-color-default-img  profile-pic rounded avatar-100"
-                                                                                        src=""
-                                                                                        alt="profile-pic"
-                                                                                        style={{ width: "100px" }}
-                                                                                    />
-                                                                                </figure>
-                                                                            </div>
+                                                                        </td>
 
-                                                                        </Col>
-                                                                    </Row>
-                                                                </Col>
-                                                            </Row>
-                                                            <Row>
-                                                                <div className="table-responsive border-bottom my-3">
-                                                                    <Table
-                                                                        responsive
-                                                                       
-                                                                        id="datatable"
-                                                                        className=""
-                                                                        data-toggle="data-table"
-                                                                    >
-                                                                        <thead>
-                                                                            <tr>
+                                                                    </tr>
 
-                                                                                <th><p>
-                                                                                    Disciplines
-                                                                                </p></th>
-                                                                                <th>Note</th>
-                                                                                <th>Cote</th>
-                                                                                <th>NxC</th>
-                                                                                <th>Appreciation</th>
-                                                                            </tr>
-                                                                        </thead>
-                                                                         
-                                                                        {allnote_1.existgrp > 0 && (
-                                                                        <tbody>
-
-                                                                            {allnote_1.listnotes && allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
-                                                                                <tr key={grp_1}>
-                                                                                    <td>{item.matiere_note}</td>
-
-                                                                                    <td>{item.valeur_note}</td>
-                                                                                    <td>{item.coefficient_note}</td>
-                                                                                    <td>{item.note_finale}</td>
-                                                                                    <td>{item.appreciation_note}</td>
-                                                                                </tr>
-                                                                            ))}
-                                                                        </tbody>)}
-
-                                                                        {allnote_2.existgrp > 0 && (
-                                                                        <thead>
-                                                                            <tr>
-
-                                                                                <th>{allnote_1.groupe}</th>
-                                                                                <th>{allnote_1.sumnote}</th>
-                                                                                <th>{allnote_1.sumcoef}</th>
-                                                                                <th>{allnote_1.sumfinalnotes}</th>
-                                                                                <th></th>
-
-                                                                            </tr>
-                                                                        </thead>)}
-
-                                                                        {allnote_2.existgrp > 0 && (
-
-                                                                        <tbody>
-
-                                                                            {allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
-                                                                                <tr key={grp_2}>
-                                                                                    <td>{item.matiere_note}</td>
-
-                                                                                    <td>{item.valeur_note}</td>
-                                                                                    <td>{item.coefficient_note}</td>
-                                                                                    <td>{item.note_finale}</td>
-                                                                                    <td>{item.appreciation_note}</td>
-                                                                                </tr>
-                                                                            ))}
-                                                                        </tbody>)}
-
-                                                                        {allnote_2.existgrp > 0 && (
-                                                                        <thead>
-                                                                            <tr>
-
-                                                                                <th>{allnote_2.groupe}</th>
-                                                                                <th>{allnote_2.sumnote}</th>
-                                                                                <th>{allnote_2.sumcoef}</th>
-                                                                                <th>{allnote_2.sumfinalnotes}</th>
-                                                                                <th></th>
-
-                                                                            </tr>
-                                                                        </thead>)}
-
-                                                                        {allnote_3.existgrp > 0 && (
-
-                                                                        <tbody>
-
-                                                                            {allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
-                                                                                <tr key={grp_3}>
-                                                                                    <td>{item.matiere_note}</td>
-
-                                                                                    <td>{item.valeur_note}</td>
-                                                                                    <td>{item.coefficient_note}</td>
-                                                                                    <td>{item.note_finale}</td>
-                                                                                    <td>{item.appreciation_note}</td>
-                                                                                </tr>
-                                                                            ))}
-                                                                        </tbody>)}
-
-                                                                        {allnote_3.existgrp > 0 && (
-                                                                        <thead>
-                                                                            <tr>
-
-                                                                                <th>{allnote_3.groupe}</th>
-                                                                                <th>{allnote_3.sumnote}</th>
-                                                                                <th>{allnote_3.sumnote}</th>
-                                                                                <th>{allnote_3.sumcoef}</th>
-                                                                                <th>{allnote_3.sumfinalnotes}</th>
-
-                                                                            </tr>
-                                                                        </thead>)}
-
-                                                                        <tbody>
-
-                                                                            <tr>
-                                                                                <td>SUMMARY</td>
-
-                                                                                <td>{sumnotes}</td>
-                                                                                <td>{sumcoef}</td>
-                                                                                <td>{sumnotesfinale}</td>
-                                                                                <td></td>
-                                                                            </tr>
-                                                                        </tbody>
+                                                                </tbody>
+                                                            </Table>
 
 
-                                                                        <tfoot>
-
-                                                                        </tfoot>
-                                                                    </Table>
-                                                                    <Table
-                                                                        responsive
-                                                                       
-                                                                        id="datatable"
-                                                                        className=""
-                                                                        data-toggle="data-table"
-                                                                    >
-                                                                        <thead>
-                                                                            <tr>
-                                                                                <th></th>
-                                                                                <th>DISCIPLINE</th>
-                                                                                <th>WORK APPRECIATION</th>
-                                                                                <th><div className="mt-2">
-                                                                                    <p tyle={{ fontSize: "10px" }} className="mb-0">AVERAGE: {moyenneleve}</p>
-                                                                                </div>
-                                                                                    <div className="mt-2">
-                                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">RANK:</p>
-                                                                                    </div>
-                                                                                    <div className="mt-2">
-                                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">MENTION:</p>
-                                                                                    </div>
-                                                                                </th>
-                                                                            </tr>
-                                                                        </thead>
-                                                                        <tbody>
-
-                                                                            <tr>
-                                                                                <td>
-                                                                                    <Col sm="2">
-                                                                                        <div>
-                                                                                            <QRCode value={user.nom} size={50} />
-                                                                                        </div>
-                                                                                    </Col>
-
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div className="mt-1">
-                                                                                        <p>
-
-                                                                                            Unjustified absences :
-                                                                                            <br />
-                                                                                            Justified absences:
-                                                                                            <br />
-                                                                                            Worn:
-                                                                                            <br />
-                                                                                            Blame:
-                                                                                        </p>
-
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div className="mt-1">
-                                                                                        <p>Roll of honor:
-                                                                                            <br />
-                                                                                            Encouragment:
-                                                                                            <br />
-                                                                                            Congratulations:
-                                                                                            <br />
-                                                                                            Prime:
-                                                                                        </p>
-
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div className="mt-1">
-                                                                                        <p>Class average:
-                                                                                            <br />
-                                                                                            Average of the first:
-                                                                                            <br />
-                                                                                            Average of the last:
-
-                                                                                        </p>
-
-                                                                                    </div>
-                                                                                </td>
-
-                                                                            </tr>
-
-                                                                        </tbody>
-                                                                    </Table>
-
-
-                                                                </div>
-
-
-                                                            </Row>
                                                         </div>
-                                                    </Card.Body>
-                                                </Card>
-                                            </Col>
 
-                                        </Row>
 
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    </Row>
-                
-            </div>}
-             </div> : <div></div>}
-             
-             
-             </Fragment>
-       
+                                                    </Row>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
 
-        );
-    })
+
+                                </Row>
+
+                            </div>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
+
+
+
+
+        </Fragment >
+    );
+})
+
+
+export default BulletinUniversitaire
     
-    export default BulletinUniversitaire
 
 
