@@ -447,7 +447,7 @@ const AdminEvaluationListClassesEleves = memo((props) => {
                                                         </Link>{' '}
 
                                                         </div>:<div></div>}
-                                                        {classes.cycle_niveau === 'Universitaire' ? <div>
+                                                        {classes.cycle_niveau === 'Licence' ? <div>
 
                                                         <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Admin/Releve/University/" + evaluation + "/"  + niveau  + "/" + item.other_in_user + "/" + item.id }>
                                                             <span className="btn-inner">
