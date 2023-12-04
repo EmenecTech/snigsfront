@@ -785,7 +785,7 @@ const BulletinUniversitaire = memo((props) => {
                                                                 </thead>
                                                                 <tbody>
 
-                                                                    {notessg.map((item, ids) => (
+                                                                    {allnote_5.map((item, ids) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
@@ -807,7 +807,7 @@ const BulletinUniversitaire = memo((props) => {
                                                                 </thead>
                                                                 <tbody>
 
-                                                                    {notestg.map((item, idt) => (
+                                                                    {allnote_5.map((item, idt) => (
 
                                                                         <tr>
                                                                             <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
@@ -831,9 +831,9 @@ const BulletinUniversitaire = memo((props) => {
 
                                                                     <tr>
                                                                         <td>RECAPITULATIFS</td>
-                                                                        <td>{sumnotes}</td>
-                                                                        <td>{sumcoef}</td>
-                                                                        <td>{sumnotesfinale}</td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
                                                                         <td>A</td>
                                                                     </tr>
                                                                 </tbody>
