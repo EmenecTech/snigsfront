@@ -91,8 +91,29 @@ const AdminEvaluationListClassesEleves = memo((props) => {
         })
     }
 
+
+    const [confnotes, setconfnotes] = useState([]);
+    useEffect(() => {
+        fetchAllconfnotes();
+    }, []);
+
+    const fetchAllconfnotes = () => {
+        http.get('/conf_notes/' + etab).then(res => {
+            setconfnotes(res.data);
+        })
+    }
+
     const submitMoyenPr = () => {
     http.get("/gen_moyen/" + etab + "/" + evaluation + "/" + classe).then((res) => {
+        })    
+        console.log(classe);
+
+        alert("Bulletins Terminés")
+        
+    }
+
+    const submitMoyenUi = () => {
+    http.get("/gen_moyenui/" + etab + "/" + evaluation + "/" + classe).then((res) => {
         })    
         console.log(classe);
 
@@ -344,9 +365,11 @@ const AdminEvaluationListClassesEleves = memo((props) => {
                                 <h4 className="card-title">Elèves</h4>
                             </div>
 
-                            <div>
+                            {confnotes.niveau_enseignement === "Universitaire" ? (<div>
+                                <Button variant="primary mt-2" onClick={() => {submitMoyenUi() }}>Génére les moyennes</Button>
+                            </div> : <div>
                                 <Button variant="primary mt-2" onClick={() => {submitMoyenPr() }}>Générer les moyennes</Button>
-                            </div>
+                            </div>)}
 
 
                             
