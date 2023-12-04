@@ -122,7 +122,7 @@ const BulletinUniversitaire = memo((props) => {
     };
 
   
-    const [matiereslevel, setmatiereslevel] = useState([]);
+    const [notesfg., setmatiereslevel] = useState([]);
     useEffect(() => {
         fetchAllmatiereslevel();
     }, []);
@@ -730,7 +730,7 @@ const BulletinUniversitaire = memo((props) => {
                                                                 <figure className="figure">
                                                                     <Image
                                                                         className="theme-color-default-img  profile-pic rounded avatar-100"
-                                                                        src={image}
+                                                                        src=""
                                                                         alt="profile-pic"
                                                                         style={{ width: "100px" }}
                                                                     />
