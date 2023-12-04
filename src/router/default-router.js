@@ -236,7 +236,7 @@ import ListEtabEvalStat from '../views/fondateur/statistique/statetabeval';
 
 import StatsEtablissement from '../views/super_admin/etablissements/stats_etablissement ';
 
-
+import BulletinUniversitaire from '../views/fondateur/bulletins/bulletin_universite';
 
 export const DefaultRouter = [
     {
@@ -333,7 +333,11 @@ export const DefaultRouter = [
                 element: <BulletinByEleve />
 
             },
+            {
+                path: '/Admin/Releve/University/:evaluation/:niveau/:classe/:userid',
+                element: <BulletinUniversitaire />
 
+            },
             {
                 path: '/Admin/Bulletin/Secondaire/:evaluation/:niveau/:classe/:userid',
                 element: <BulletinSecondaire />
