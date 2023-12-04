@@ -122,7 +122,7 @@ const BulletinUniversitaire = memo((props) => {
     };
 
   
-    const [notesfg., setmatiereslevel] = useState([]);
+    const [notesfg, setmatiereslevel] = useState([]);
     useEffect(() => {
         fetchAllmatiereslevel();
     }, []);
