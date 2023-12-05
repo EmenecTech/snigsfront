@@ -246,7 +246,6 @@ const ProfesseurAddNote = () => {
                                             <th>Prénom(s)</th>
                                             <th>Evaluation</th>
                                             <th>Note</th>
-                                            <th>Note Finale</th>
 
                                             
                                             <th> </th>
@@ -259,7 +258,7 @@ const ProfesseurAddNote = () => {
                                             <td>{item.nom}</td>
                                             <td>{item.prenom} </td>
                                             <td>{item.competence_visee_note} </td>
-                                            <td>{item.valeur_note}</td>
+                                            <td>{item.note_cc}</td>
                                             <td>{item.note_finale}</td>
 
                                            
@@ -290,7 +289,6 @@ const ProfesseurAddNote = () => {
                                             <th>Prénom(s)</th>
                                             <th>Evaluation</th>
                                             <th>Note</th>
-                                            <th>Note finale</th>
                                             
                                             <th> </th>
                                         </tr>
@@ -302,8 +300,7 @@ const ProfesseurAddNote = () => {
                                             <td>{item.nom}</td>
                                             <td>{item.prenom} </td>
                                             <td>{item.competence_visee_note} </td>
-                                            <td>{item.valeur_note}</td>
-                                            <td>{item.note_finale}</td>                                           
+                                            <td>{item.note_sn}</td>                                          
                                 
                                         </tr>
                                     ))}
