@@ -25,8 +25,6 @@ const ProfesseurAddNote = () => {
     const [inputs, setInputs] = useState({});
     const [notes, setNotes] = useState([]);
 
-    const [notescc, setNotescc] = useState([]);
-    const [notessn, setNotessn] = useState([]);
     const { evaluation, niveau ,classe, matiere } = useParams();
 
     const { user, http } = AuthUser();
@@ -98,32 +96,8 @@ const ProfesseurAddNote = () => {
 
     }
 
-     useEffect(() => {
-        fetchAllNotescc();
-    }, []);
-
-    const fetchAllNotescc = () => {
-        http.get('/notes_cc_eleves/' + etab + '/' + classe + '/' + matiere + '/' + evaluation).then(res => {
-            setNotescc(res.data);
-
-        })
-
-
-    }
-
-     useEffect(() => {
-        fetchAllNotessn();
-    }, []);
-
-    const fetchAllNotessn = () => {
-        http.get('/notes_sn_eleves/' + etab + '/' + classe + '/' + matiere + '/' + evaluation).then(res => {
-            setNotessn(res.data);
-
-        })
-
-
-    }
-
+   
+  
 
 
     const handleChange = (event) => {
@@ -279,7 +253,7 @@ const ProfesseurAddNote = () => {
                                         </tr>
                                 </thead>
                                 <tbody>
-                                    {notescc.sort((a, b) => a.nom.localeCompare(b.nom)).map((item, index) =>  (
+                                    {notes.sort((a, b) => a.nom.localeCompare(b.nom)).map((item, index) =>  (
                                         <tr key={item.id}>
                                             <td>{++index}</td>
                                             <td>{item.nom}</td>
@@ -322,7 +296,7 @@ const ProfesseurAddNote = () => {
                                         </tr>
                                 </thead>
                                 <tbody>
-                                    {notessn.sort((a, b) => a.nom.localeCompare(b.nom)).map((item, index) =>  (
+                                    {notes.sort((a, b) => a.nom.localeCompare(b.nom)).map((item, index) =>  (
                                         <tr key={item.id}>
                                             <td>{++index}</td>
                                             <td>{item.nom}</td>
