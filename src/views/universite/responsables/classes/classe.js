@@ -652,6 +652,17 @@ const UniversiteClasse = () => {
                                                                 </Form.Group>
                                                             </Form.Group>
                                                         </Col>
+
+                                                    </Row>
+                                                   <Row>
+                                                    <Col>
+                                                            <Form.Group as={Row} className="form-group">
+                                                                <Form.Group className="form-group">
+                                                                    <Form.Label htmlFor="exampleInputText1">Coefficient </Form.Label>
+                                                                    <Form.Control type="number" defaultValue="" name="coef" onChange={handleChange} required />
+                                                                </Form.Group>
+                                                            </Form.Group>
+                                                        </Col>
                                                     </Row>
                                                     
                                                     <Row>
