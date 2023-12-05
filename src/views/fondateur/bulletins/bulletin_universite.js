@@ -766,7 +766,7 @@ const BulletinUniversitaire = memo((props) => {
                                                                         <tbody>
                                                                             {allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
                                                                                 <tr key={grp_1}>
-                                                                                    <td>{item.note_finale}</td>
+                                                                                    <td>{item.matiere_note}</td>
                                                                                     <td>{item.note_cc}</td>
                                                                                     <td>{item.note_sn}</td>
                                                                                     <td>{item.valeur_note}</td>
@@ -792,7 +792,7 @@ const BulletinUniversitaire = memo((props) => {
                                                                         <tbody>
                                                                             {allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
                                                                                 <tr key={grp_2}>
-                                                                                    <td>{item.note_finale}</td>
+                                                                                    <td>{item.matiere_note}</td>
                                                                                     <td>{item.note_cc}</td>
                                                                                     <td>{item.note_sn}</td>
                                                                                     <td>{item.valeur_note}</td>
@@ -822,7 +822,7 @@ const BulletinUniversitaire = memo((props) => {
 
                                                                             {allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
                                                                                 <tr key={grp_3}>
-                                                                                    <td>{item.note_finale}</td>
+                                                                                    <td>{item.matiere_note}</td>
                                                                                     <td>{item.note_cc}</td>
                                                                                     <td>{item.note_sn}</td>
                                                                                     <td>{item.valeur_note}</td>
@@ -852,7 +852,7 @@ const BulletinUniversitaire = memo((props) => {
 
                                                                             {allnote_4.listnotes && allnote_4.listnotes.map((item, grp_4) => (
                                                                                 <tr key={grp_4}>
-                                                                                    <td>{item.note_finale}</td>
+                                                                                    <td>{item.matiere_note}</td>
                                                                                     <td>{item.note_cc}</td>
                                                                                     <td>{item.note_sn}</td>
                                                                                     <td>{item.valeur_note}</td>
@@ -882,7 +882,7 @@ const BulletinUniversitaire = memo((props) => {
 
                                                                             {allnote_5.listnotes && allnote_5.listnotes.map((item, grp_5) => (
                                                                                 <tr key={grp_5}>
-                                                                                    <td>{item.note_finale}</td>
+                                                                                    <td>{item.matiere_note}</td>
                                                                                     <td>{item.note_cc}</td>
                                                                                     <td>{item.note_sn}</td>
                                                                                     <td>{item.valeur_note}</td>
