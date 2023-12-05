@@ -761,71 +761,174 @@ const BulletinUniversitaire = memo((props) => {
                                                                         <th>Crédits</th>
                                                                     </tr>
                                                                 </thead>
-                                                                <tbody>
-                                                                    {notesfg.map((item, idf) => (
+                                                                {allnote_1.existgrp > 0 && (
+                                                                        <tbody>
+                                                                            {allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
+                                                                                <tr key={grp_1}>
+                                                                                    <td>{item.matiere_note}</td>
+                                                                                    <td>{item.valeur_note}</td>
+                                                                                    <td>{item.coefficient_note}</td>
+                                                                                    <td>{item.note_finale}</td>
+                                                                                    <td>{item.appreciation_note}</td>
+                                                                                </tr>
+                                                                            ))}
+                                                                        </tbody> )}
 
-                                                                        <tr>
-                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.coefficient_note}</td>
-                                                                            <td>{item.note_finale}</td>
-                                                                            <td>{item.competence_visee_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                    {allnote_1.existgrp > 0 && (
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>{allnote_1.groupe}</th>
+                                                                                <th>{allnote_1.sumnote}</th>
+                                                                                <th>{allnote_1.sumcoef}</th>
+                                                                                <th>{allnote_1.sumfinalnotes}</th>
+                                                                                <th></th>
+                                                                            </tr>
+                                                                        </thead>)}
 
-                                                                        </tr>
-                                                                    ))}
-                                                                </tbody>
-                                                                <thead>
-                                                                    <tr>
+                                                                        {allnote_2.existgrp > 0 && (
+                                                                        <tbody>
+                                                                            {allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
+                                                                                <tr key={grp_2}>
+                                                                                    <td>{item.matiere_note}</td>
+                                                                                    <td>{item.valeur_note}</td>
+                                                                                    <td>{item.coefficient_note}</td>
+                                                                                    <td>{item.note_finale}</td>
+                                                                                    <td>{item.appreciation_note}</td>
+                                                                                </tr>
+                                                                            ))}
 
-                                                                        <th>U.E</th>
+                                                                        </tbody>)}
 
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
+                                                                        {allnote_2.existgrp > 0 && (
+                                                                        <thead>
+                                                                            <tr>
 
-                                                                    {allnote_5.map((item, ids) => (
+                                                                                <th>{allnote_2.groupe}</th>
+                                                                                <th>{allnote_2.sumnote}</th>
+                                                                                <th>{allnote_2.sumcoef}</th>
+                                                                                <th>{allnote_2.sumfinalnotes}</th>
+                                                                                <th></th>
 
-                                                                        <tr>
-                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.coefficient_note}</td>
-                                                                            <td>{item.note_finale}</td>
-                                                                            <td>{item.competence_visee_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                            </tr>
+                                                                        </thead>)}
 
-                                                                        </tr>
-                                                                    ))}
-                                                                </tbody>
-                                                                <thead>
-                                                                    <tr>
+                                                                        {allnote_3.existgrp > 0 && (
+                                                                        <tbody>
 
-                                                                        <th>Matières du deuxième groupe</th>
+                                                                            {allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
+                                                                                <tr key={grp_3}>
+                                                                                    <td>{item.matiere_note}</td>
 
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
+                                                                                    <td>{item.valeur_note}</td>
+                                                                                    <td>{item.coefficient_note}</td>
+                                                                                    <td>{item.note_finale}</td>
+                                                                                    <td>{item.appreciation_note}</td>
+                                                                                </tr>
+                                                                            ))}
 
-                                                                    {allnote_5.map((item, idt) => (
+                                                                        </tbody>)}
 
-                                                                        <tr>
-                                                                            <td>{item.matiere_cp} ( {item.nom} {item.prenom} )</td>
-                                                                            <td>{item.valeur_note}</td>
-                                                                            <td>{item.coefficient_note}</td>
-                                                                            <td>{item.note_finale}</td>
-                                                                            <td>{item.competence_visee_note}</td>
-                                                                            <td>{item.appreciation_note}</td>
+                                                                        {allnote_3.existgrp > 0 && (
+                                                                        <thead>
+                                                                            <tr>
 
-                                                                        </tr>
-                                                                    ))}
-                                                                </tbody>
-                                                                <thead>
-                                                                    <tr>
+                                                                                <th>{allnote_3.groupe}</th>
+                                                                                <th>{allnote_3.sumnote}</th>
+                                                                                <th>{allnote_3.sumcoef}</th>
+                                                                                <th>{allnote_3.sumfinalnotes}</th>
+                                                                                <th></th>
 
-                                                                        <th>Matières du troisième groupe</th>
+                                                                            </tr>
+                                                                        </thead>)}
 
-                                                                    </tr>
-                                                                </thead>
+                                                                    {allnote_4.existgrp > 0 && (
+                                                                        <tbody>
+
+                                                                            {allnote_4.listnotes && allnote_4.listnotes.map((item, grp_4) => (
+                                                                                <tr key={grp_4}>
+                                                                                    <td>{item.matiere_note}</td>
+
+                                                                                    <td>{item.valeur_note}</td>
+                                                                                    <td>{item.coefficient_note}</td>
+                                                                                    <td>{item.note_finale}</td>
+                                                                                    <td>{item.appreciation_note}</td>
+                                                                                </tr>
+                                                                            ))}
+
+                                                                        </tbody>)}
+
+                                                                        {allnote_4.existgrp > 0 && (
+                                                                        <thead>
+                                                                            <tr>
+
+                                                                                <th>{allnote_4.groupe}</th>
+                                                                                <th>{allnote_4.sumnote}</th>
+                                                                                <th>{allnote_4.sumcoef}</th>
+                                                                                <th>{allnote_4.sumfinalnotes}</th>
+                                                                                <th></th>
+
+                                                                            </tr>
+                                                                        </thead>)}   
+
+                                                                     {allnote_5.existgrp > 0 && (
+                                                                        <tbody>
+
+                                                                            {allnote_5.listnotes && allnote_5.listnotes.map((item, grp_5) => (
+                                                                                <tr key={grp_5}>
+                                                                                    <td>{item.matiere_note}</td>
+
+                                                                                    <td>{item.valeur_note}</td>
+                                                                                    <td>{item.coefficient_note}</td>
+                                                                                    <td>{item.note_finale}</td>
+                                                                                    <td>{item.appreciation_note}</td>
+                                                                                </tr>
+                                                                            ))}
+
+                                                                        </tbody>)}
+
+                                                                        {allnote_5.existgrp > 0 && (
+                                                                        <thead>
+                                                                            <tr>
+
+                                                                                <th>{allnote_5.groupe}</th>
+                                                                                <th>{allnote_5.sumnote}</th>
+                                                                                <th>{allnote_5.sumcoef}</th>
+                                                                                <th>{allnote_5.sumfinalnotes}</th>
+                                                                                <th></th>
+
+                                                                            </tr>
+                                                                        </thead>)}  
+
+
+                                                                    {allnote_6.existgrp > 0 && (
+                                                                        <tbody>
+
+                                                                            {allnote_6.listnotes && allnote_6.listnotes.map((item, grp_6) => (
+                                                                                <tr key={grp_6}>
+                                                                                    <td>{item.matiere_note}</td>
+
+                                                                                    <td>{item.valeur_note}</td>
+                                                                                    <td>{item.coefficient_note}</td>
+                                                                                    <td>{item.note_finale}</td>
+                                                                                    <td>{item.appreciation_note}</td>
+                                                                                </tr>
+                                                                            ))}
+
+                                                                        </tbody>)}
+
+                                                                        {allnote_6.existgrp > 0 && (
+                                                                        <thead>
+                                                                            <tr>
+
+                                                                                <th>{allnote_6.groupe}</th>
+                                                                                <th>{allnote_6.sumnote}</th>
+                                                                                <th>{allnote_6.sumcoef}</th>
+                                                                                <th>{allnote_6.sumfinalnotes}</th>
+                                                                                <th></th>
+
+                                                                            </tr>
+                                                                        </thead>)}  
+                                                                         
                                                                 <tbody>
 
                                                                     <tr>
