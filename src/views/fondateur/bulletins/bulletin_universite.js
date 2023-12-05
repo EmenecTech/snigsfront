@@ -611,12 +611,12 @@ const BulletinUniversitaire = memo((props) => {
                                                             <Row>
                                                                 <Col sm="12" lg="12" className="d-flex justify-content-center">
                                                                     <div className="user-profile">
-                                                                        <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src="" alt="profile-pic" />
-                                                                        <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src="" alt="profile-pic" />
-                                                                        <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src="" alt="profile-pic" />
-                                                                        <Image className="theme-color-green-img rounded avatar-130 img-fluid" src="" alt="profile-pic" />
-                                                                        <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src="" alt="profile-pic" />
-                                                                        <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src="" alt="profile-pic" />
+                                                                        <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src="https://static.vecteezy.com/ti/vecteur-libre/p1/5170976-logo-de-l-universite-ou-de-l-etablissement-d-enseignement-secondaire-gratuit-vectoriel.jpg" alt="profile-pic" />
+                                                                        <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src="https://static.vecteezy.com/ti/vecteur-libre/p1/5170976-logo-de-l-universite-ou-de-l-etablissement-d-enseignement-secondaire-gratuit-vectoriel.jpg" alt="profile-pic" />
+                                                                        <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src="https://static.vecteezy.com/ti/vecteur-libre/p1/5170976-logo-de-l-universite-ou-de-l-etablissement-d-enseignement-secondaire-gratuit-vectoriel.jpg" alt="profile-pic" />
+                                                                        <Image className="theme-color-green-img rounded avatar-130 img-fluid" src="https://static.vecteezy.com/ti/vecteur-libre/p1/5170976-logo-de-l-universite-ou-de-l-etablissement-d-enseignement-secondaire-gratuit-vectoriel.jpg" alt="profile-pic" />
+                                                                        <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src="https://static.vecteezy.com/ti/vecteur-libre/p1/5170976-logo-de-l-universite-ou-de-l-etablissement-d-enseignement-secondaire-gratuit-vectoriel.jpg" alt="profile-pic" />
+                                                                        <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src="https://static.vecteezy.com/ti/vecteur-libre/p1/5170976-logo-de-l-universite-ou-de-l-etablissement-d-enseignement-secondaire-gratuit-vectoriel.jpg" alt="profile-pic" />
                                                                     </div>
                                                                 </Col>
                                                             </Row>
@@ -729,7 +729,7 @@ const BulletinUniversitaire = memo((props) => {
                                                                 <figure className="figure">
                                                                     <Image
                                                                         className="theme-color-default-img  profile-pic rounded avatar-100"
-                                                                        src=""
+                                                                        src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ffr.freepik.com%2Fphotos-vecteurs-libre%2Favatar-profil&psig=AOvVaw2iyEPeziUY6OZqM3HcnZOW&ust=1701873777462000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCIi30oHE-IIDFQAAAAAdAAAAABAE"
                                                                         alt="profile-pic"
                                                                         style={{ width: "100px" }}
                                                                     />
