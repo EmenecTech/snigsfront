@@ -283,7 +283,6 @@ const BulletinUniversitaire = memo((props) => {
     //////////////////////////////////
     
    
-
         /////Somme des notes et moyenne
         const [sumnotes, setsumnotes] = useState([]);
         useEffect(() => {
