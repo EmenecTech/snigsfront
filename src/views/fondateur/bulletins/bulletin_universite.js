@@ -941,11 +941,13 @@ const BulletinUniversitaire = memo((props) => {
                                                                 <tbody>
 
                                                                     <tr>
-                                                                        <td>RECAPITULATIFS</td>
-                                                                        <td></td>
-                                                                        <td></td>
-                                                                        <td></td>
-                                                                        <td>A</td>
+                                                                                <td>RECAPITULATIFS</td>
+
+                                                                                <td>{sumnotes}</td>
+                                                                                
+                                                                                <td>{sumnotesfinale}</td>
+                                                                                <td>{sumcoef}</td>
+                                                                                <td></td>
                                                                     </tr>
                                                                 </tbody>
 
