@@ -727,12 +727,12 @@ const BulletinUniversitaire = memo((props) => {
                                                         <Col sm="2" lg="2">
                                                             <div className="bd-example">
                                                                 <div className="user-profile">
-                                                                    <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src="https://static.vecteezy.com/ti/vecteur-libre/p1/5170976-logo-de-l-universite-ou-de-l-etablissement-d-enseignement-secondaire-gratuit-vectoriel.jpg" alt="profile-pic" />
-                                                                    <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src="https://static.vecteezy.com/ti/vecteur-libre/p1/5170976-logo-de-l-universite-ou-de-l-etablissement-d-enseignement-secondaire-gratuit-vectoriel.jpg" alt="profile-pic" />
-                                                                    <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src="https://static.vecteezy.com/ti/vecteur-libre/p1/5170976-logo-de-l-universite-ou-de-l-etablissement-d-enseignement-secondaire-gratuit-vectoriel.jpg" alt="profile-pic" />
-                                                                    <Image className="theme-color-green-img rounded avatar-130 img-fluid" src="https://static.vecteezy.com/ti/vecteur-libre/p1/5170976-logo-de-l-universite-ou-de-l-etablissement-d-enseignement-secondaire-gratuit-vectoriel.jpg" alt="profile-pic" />
-                                                                    <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src="https://static.vecteezy.com/ti/vecteur-libre/p1/5170976-logo-de-l-universite-ou-de-l-etablissement-d-enseignement-secondaire-gratuit-vectoriel.jpg" alt="profile-pic" />
-                                                                    <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src="https://static.vecteezy.com/ti/vecteur-libre/p1/5170976-logo-de-l-universite-ou-de-l-etablissement-d-enseignement-secondaire-gratuit-vectoriel.jpg" alt="profile-pic" />
+                                                                    <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src="https://img.freepik.com/vecteurs-premium/avatar-icon002_750950-52.jpg" alt="profile-pic" />
+                                                                    <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src="https://img.freepik.com/vecteurs-premium/avatar-icon002_750950-52.jpg" alt="profile-pic" />
+                                                                    <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src="https://img.freepik.com/vecteurs-premium/avatar-icon002_750950-52.jpg" alt="profile-pic" />
+                                                                    <Image className="theme-color-green-img rounded avatar-130 img-fluid" src="https://img.freepik.com/vecteurs-premium/avatar-icon002_750950-52.jpg" alt="profile-pic" />
+                                                                    <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src="https://img.freepik.com/vecteurs-premium/avatar-icon002_750950-52.jpg" alt="profile-pic" />
+                                                                    <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src="https://img.freepik.com/vecteurs-premium/avatar-icon002_750950-52.jpg" alt="profile-pic" />
                                                                 </div>
                                                             </div>
 
