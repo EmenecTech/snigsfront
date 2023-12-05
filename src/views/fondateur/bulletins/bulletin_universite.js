@@ -757,6 +757,7 @@ const BulletinUniversitaire = memo((props) => {
                                                                         <th>Controle Continu</th>
                                                                         <th>Session Normale</th>
                                                                         <th>Note finale</th>
+                                                                        <th>NxC</th>
                                                                         <th>Mention</th>
                                                                         <th>Crédits</th>
                                                                     </tr>
@@ -765,12 +766,12 @@ const BulletinUniversitaire = memo((props) => {
                                                                         <tbody>
                                                                             {allnote_1.listnotes && allnote_1.listnotes.map((item, grp_1) => (
                                                                                 <tr key={grp_1}>
+                                                                                    <td>{item.note_finale}</td>
                                                                                     <td>{item.note_cc}</td>
                                                                                     <td>{item.note_sn}</td>
                                                                                     <td>{item.valeur_note}</td>
                                                                                     <td>{item.note_finale}</td>
                                                                                     <td>{item.competence_visee_note}</td>
-                                                                      
                                                                                     <td>{item.coefficient_note}</td>
                                                                                 </tr>
                                                                             ))}
@@ -791,12 +792,12 @@ const BulletinUniversitaire = memo((props) => {
                                                                         <tbody>
                                                                             {allnote_2.listnotes && allnote_2.listnotes.map((item, grp_2) => (
                                                                                 <tr key={grp_2}>
+                                                                                    <td>{item.note_finale}</td>
                                                                                     <td>{item.note_cc}</td>
                                                                                     <td>{item.note_sn}</td>
                                                                                     <td>{item.valeur_note}</td>
                                                                                     <td>{item.note_finale}</td>
                                                                                     <td>{item.competence_visee_note}</td>
-                                                                      
                                                                                     <td>{item.coefficient_note}</td>
                                                                                 </tr>
                                                                             ))}
@@ -821,12 +822,12 @@ const BulletinUniversitaire = memo((props) => {
 
                                                                             {allnote_3.listnotes && allnote_3.listnotes.map((item, grp_3) => (
                                                                                 <tr key={grp_3}>
+                                                                                    <td>{item.note_finale}</td>
                                                                                     <td>{item.note_cc}</td>
                                                                                     <td>{item.note_sn}</td>
                                                                                     <td>{item.valeur_note}</td>
                                                                                     <td>{item.note_finale}</td>
                                                                                     <td>{item.competence_visee_note}</td>
-                                                                      
                                                                                     <td>{item.coefficient_note}</td>
                                                                                 </tr>
                                                                             ))}
@@ -851,12 +852,12 @@ const BulletinUniversitaire = memo((props) => {
 
                                                                             {allnote_4.listnotes && allnote_4.listnotes.map((item, grp_4) => (
                                                                                 <tr key={grp_4}>
+                                                                                    <td>{item.note_finale}</td>
                                                                                     <td>{item.note_cc}</td>
                                                                                     <td>{item.note_sn}</td>
                                                                                     <td>{item.valeur_note}</td>
                                                                                     <td>{item.note_finale}</td>
                                                                                     <td>{item.competence_visee_note}</td>
-                                                                      
                                                                                     <td>{item.coefficient_note}</td>
                                                                                 </tr>
                                                                             ))}
@@ -881,12 +882,12 @@ const BulletinUniversitaire = memo((props) => {
 
                                                                             {allnote_5.listnotes && allnote_5.listnotes.map((item, grp_5) => (
                                                                                 <tr key={grp_5}>
+                                                                                    <td>{item.note_finale}</td>
                                                                                     <td>{item.note_cc}</td>
                                                                                     <td>{item.note_sn}</td>
                                                                                     <td>{item.valeur_note}</td>
                                                                                     <td>{item.note_finale}</td>
                                                                                     <td>{item.competence_visee_note}</td>
-                                                                      
                                                                                     <td>{item.coefficient_note}</td>
                                                                                 </tr>
                                                                             ))}
@@ -912,12 +913,12 @@ const BulletinUniversitaire = memo((props) => {
 
                                                                             {allnote_6.listnotes && allnote_6.listnotes.map((item, grp_6) => (
                                                                                 <tr key={grp_6}>
+                                                                                    <td>{item.note_finale}</td>
                                                                                     <td>{item.note_cc}</td>
                                                                                     <td>{item.note_sn}</td>
                                                                                     <td>{item.valeur_note}</td>
                                                                                     <td>{item.note_finale}</td>
                                                                                     <td>{item.competence_visee_note}</td>
-                                                                      
                                                                                     <td>{item.coefficient_note}</td>
                                                                                 </tr>
                                                                             ))}
