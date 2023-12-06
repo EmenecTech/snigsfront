@@ -284,6 +284,27 @@ const BulletinUniversitaire = memo((props) => {
     
    
         /////Somme des notes et moyenne
+
+        const [sumnotescc, setsumnotescc] = useState([]);
+        useEffect(() => {
+            fetchAllsumnotescc();
+        }, []);
+    
+        const fetchAllsumnotescc = () => {
+            http.get('/sum/of/notes/cc/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+                setsumnotescc(res.data);
+            })
+        }
+        const [sumnotessn, setsumnotessn] = useState([]);
+        useEffect(() => {
+            fetchAllsumnotessn();
+        }, []);
+    
+        const fetchAllsumnotessn = () => {
+            http.get('/sum/of/notes/sn/' + etab + '/' + classe + "/" + evaluation + '/' + userid).then(res => {
+                setsumnotessn(res.data);
+            })
+        }
         const [sumnotes, setsumnotes] = useState([]);
         useEffect(() => {
             fetchAllsumnotes();
@@ -942,12 +963,14 @@ const BulletinUniversitaire = memo((props) => {
 
                                                                     <tr>
                                                                                 <td>RECAPITULATIFS</td>
-
+                                                                                <td>{sumnotescc}</td>
+                                                                                 <td>{sumnotessn}</td>
                                                                                 <td>{sumnotes}</td>
                                                                                 
                                                                                 <td>{sumnotesfinale}</td>
-                                                                                <td>{sumcoef}</td>
                                                                                 <td></td>
+                                                                                <td>{sumcoef}</td>
+                                                                                
                                                                     </tr>
                                                                 </tbody>
 
