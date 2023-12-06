@@ -702,7 +702,7 @@ const BulletinUniversitaire = memo((props) => {
                                                             </Row>
 
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom et Prénom: {elevesinclass.nom} {elevesinclass.prenom}</p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">Nom et Prénom:  </p>
                                                                 <p>Name and Surname</p>
                                                             </div>
 
