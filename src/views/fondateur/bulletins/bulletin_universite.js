@@ -145,7 +145,7 @@ const BulletinUniversitaire = memo((props) => {
         })
     }
 
-    const [elevesinclass, setelevesinclass] = useState();
+    const [elevesinclass, setelevesinclass] = useState([]);
     useEffect(() => {
         fetchAllelevesinclass();
     }, []);
