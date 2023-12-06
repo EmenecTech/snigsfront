@@ -622,8 +622,8 @@ const BulletinUniversitaire = memo((props) => {
 
                                                             </p>
                                                             <p className="text-center">
-                                                                Nom de l'établissement <br />
-                                                                <smal>BP: Tel:</smal>
+                                                                EMENEC SUP<br />
+                                                                <smal>BP: Yde 001 Tel: (237) 622 321 123</smal>
                                                             </p>
 
 
@@ -654,8 +654,8 @@ const BulletinUniversitaire = memo((props) => {
 
                                                             </p>
                                                             <p className="text-center">
-                                                                Nom de l'établissement <br />
-                                                                <smal>BP: Tel:</smal>
+                                                                EMENEC SUP<br />
+                                                                <smal>BP: Yde 001 Tel: (237) 622 321 123</smal>
                                                             </p>
 
 
