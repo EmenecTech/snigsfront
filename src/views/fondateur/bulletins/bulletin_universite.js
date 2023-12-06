@@ -802,8 +802,8 @@ const BulletinUniversitaire = memo((props) => {
                                                                         <thead>
                                                                             <tr>
                                                                                 <th>{allnote_1.groupe}</th>
-                                                                                <th>{allnote_1.sumnotecc}</th>
-                                                                                <th>{allnote_1.sumnotesn}</th>
+                                                                                <th>{allnote_1.sumcc}</th>
+                                                                                <th>{allnote_1.sumsn}</th>
                                                                             
                                                                                 <th>{allnote_1.sumnote}</th>
                                                                                 <th>{allnote_1.sumfinalnotes}</th>
@@ -833,8 +833,8 @@ const BulletinUniversitaire = memo((props) => {
                                                                             <tr>
 
                                                                                 <th>{allnote_2.groupe}</th>
-                                                                                <th>{allnote_2.sumnotecc}</th>
-                                                                                <th>{allnote_2.sumnotesn}</th>
+                                                                                <th>{allnote_2.sumcc}</th>
+                                                                                <th>{allnote_2.sumsn}</th>
                                                                             
                                                                                 <th>{allnote_2.sumnote}</th>
                                                                                 <th>{allnote_2.sumfinalnotes}</th>
@@ -866,8 +866,8 @@ const BulletinUniversitaire = memo((props) => {
                                                                             <tr>
 
                                                                                 <th>{allnote_3.groupe}</th>
-                                                                                <th>{allnote_3.sumnotecc}</th>
-                                                                                <th>{allnote_3.sumnotesn}</th>
+                                                                                <th>{allnote_3.sumcc}</th>
+                                                                                <th>{allnote_3.sumsn}</th>
                                                                             
                                                                                 <th>{allnote_3.sumnote}</th>
                                                                                 <th>{allnote_3.sumfinalnotes}</th>
@@ -899,8 +899,8 @@ const BulletinUniversitaire = memo((props) => {
                                                                             <tr>
 
                                                                                 <th>{allnote_4.groupe}</th>
-                                                                                <th>{allnote_4.sumnotecc}</th>
-                                                                                <th>{allnote_4.sumnotesn}</th>
+                                                                                <th>{allnote_4.sumcc}</th>
+                                                                                <th>{allnote_4.sumsn}</th>
                                                                             
                                                                                 <th>{allnote_4.sumnote}</th>
                                                                                 <th>{allnote_4.sumfinalnotes}</th>
@@ -932,8 +932,8 @@ const BulletinUniversitaire = memo((props) => {
                                                                             <tr>
 
                                                                                 <th>{allnote_5.groupe}</th>
-                                                                                <th>{allnote_5.sumnotecc}</th>
-                                                                                <th>{allnote_5.sumnotesn}</th>
+                                                                                <th>{allnote_5.sumcc}</th>
+                                                                                <th>{allnote_5.sumsn}</th>
                                                                             
                                                                                 <th>{allnote_5.sumnote}</th>
                                                                                 <th>{allnote_5.sumfinalnotes}</th>
@@ -966,8 +966,8 @@ const BulletinUniversitaire = memo((props) => {
                                                                             <tr>
 
                                                                                 <th>{allnote_6.groupe}</th>
-                                                                                <th>{allnote_6.sumnotecc}</th>
-                                                                                <th>{allnote_6.sumnotesn}</th>
+                                                                                <th>{allnote_6.sumcc}</th>
+                                                                                <th>{allnote_6.sumsn}</th>
                                                                             
                                                                                 <th>{allnote_6.sumnote}</th>
                                                                                 <th>{allnote_6.sumfinalnotes}</th>
