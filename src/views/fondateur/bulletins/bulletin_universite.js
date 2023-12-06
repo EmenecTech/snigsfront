@@ -694,7 +694,7 @@ const BulletinUniversitaire = memo((props) => {
                                                                 </Col>
                                                                 <Col sm="6" lg="6">
                                                                     <div className="mt-2">
-                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">Effectif:</p>
+                                                                        <p tyle={{ fontSize: "10px" }} className="mb-0">Effectif: 60</p>
                                                                         <p>Number</p>
                                                                     </div>
                                                                 </Col>
@@ -730,7 +730,7 @@ const BulletinUniversitaire = memo((props) => {
                                                         <Col sm="5" lg="5">
 
                                                             <div className="mt-2">
-                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">N° Matricule:{elevesinclass.matricule}</p>
+                                                                <p tyle={{ fontSize: "10px" }} className="mb-0">N° Matricule: {elevesinclass.matricule}</p>
                                                                 <p>Registration N°</p>
                                                             </div>
                                                             <div className="mt-2">
