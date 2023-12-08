@@ -100,6 +100,7 @@ const AddConfiguration = () => {
                                                     <select className="form-select mb-3 shadow-none" name="niveau_enseignement" onChange={handleChange}>
                                                         <option></option>
                                                         <option value="Primaire">Primaire</option>
+                                                        <option value="Primaire">Maternelle</option>
                                                         <option value="Secondaire">Secondaire</option>
                                                         <option value="Universitaire">Universitaire</option>
                                                     </select>
