@@ -66,7 +66,7 @@ const ListEtablissements = memo((props) => {
     }, []);
 
     const fetchAllEtablissementsuni = () => {
-        http.get('/type/etablissements/' + type).then(res => {
+        http.get('type/etablissements/Universitaire').then(res => {
             setEtablissementsuni(res.data);
         })
     }
