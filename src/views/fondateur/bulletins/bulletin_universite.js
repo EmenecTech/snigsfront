@@ -747,7 +747,7 @@ const BulletinUniversitaire = memo((props) => {
                                                         </Col>
                                                         <Col sm="2" lg="2">
                                                             <div className="bd-example">
-                                                                <div className="user-profile">
+                                                                <div className="user-profile" style={{ marginRight: "10px" }}>
                                                                     <Image className="theme-color-default-img  rounded avatar-130 img-fluid" src="https://img.freepik.com/vecteurs-premium/avatar-icon002_750950-52.jpg" alt="profile-pic" />
                                                                     <Image className="theme-color-purple-img rounded avatar-130 img-fluid" src="https://img.freepik.com/vecteurs-premium/avatar-icon002_750950-52.jpg" alt="profile-pic" />
                                                                     <Image className="theme-color-blue-img rounded avatar-130 img-fluid" src="https://img.freepik.com/vecteurs-premium/avatar-icon002_750950-52.jpg" alt="profile-pic" />
