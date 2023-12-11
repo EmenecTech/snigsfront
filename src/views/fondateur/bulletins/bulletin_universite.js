@@ -618,7 +618,7 @@ const BulletinUniversitaire = memo((props) => {
                                                         <Col sm="4" lg="4">
                                                             <p className="text-center">REPUBLIQUE DU CAMEROUN <br />
                                                                 Paix - Travails - Patrie <br />
-                                                                MINISTERE DES ENSEIGNEMENTS SECONDAIRES <br />
+                                                                MINISTERE DE L'ENSEIGNEMENT SUPERIEUR <br />
 
                                                             </p>
                                                             <p className="text-center">
@@ -649,7 +649,7 @@ const BulletinUniversitaire = memo((props) => {
                                                         <Col sm="4" lg="4">
                                                             <p className="text-center">REPUBLIC OF CAMEROON <br />
                                                                 Peace - Work - Fatherland <br />
-                                                                MINISTRY OF SECONDARY EDUCATION <br />
+                                                                MINISTRY OF HIGHER EDUCATION <br />
 
 
                                                             </p>
@@ -754,8 +754,8 @@ const BulletinUniversitaire = memo((props) => {
                                                                     <Image className="theme-color-green-img rounded avatar-130 img-fluid" src="https://img.freepik.com/vecteurs-premium/avatar-icon002_750950-52.jpg" alt="profile-pic" />
                                                                     <Image className="theme-color-yellow-img rounded avatar-130 img-fluid" src="https://img.freepik.com/vecteurs-premium/avatar-icon002_750950-52.jpg" alt="profile-pic" />
                                                                     <Image className="theme-color-pink-img rounded avatar-130 img-fluid" src="https://img.freepik.com/vecteurs-premium/avatar-icon002_750950-52.jpg" alt="profile-pic" />
-                                                                </div>
-                                                            </div>
+                                                                </div>{"   "}
+                                                            </div> {"   "}
 
                                                         </Col>
 
