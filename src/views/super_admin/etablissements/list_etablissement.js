@@ -57,6 +57,7 @@ const ListEtablissements = memo((props) => {
             setEtablissements(res.data);
         })
     }
+    const type = "Universitaire";
 
 
     const [etablissementsuni, setEtablissementsuni] = useState([]);
@@ -65,7 +66,7 @@ const ListEtablissements = memo((props) => {
     }, []);
 
     const fetchAllEtablissementsuni = () => {
-        http.get('/type/etablissements/Universite').then(res => {
+        http.get(/type/etablissements/' + type).then(res => {
             setEtablissementsuni(res.data);
         })
     }
