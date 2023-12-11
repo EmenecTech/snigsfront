@@ -351,7 +351,6 @@ const ListEtablissementsType = memo((props) => {
                                             <th>Département</th>
                                             <th>Ville</th>
                                             <th>Adresse</th>
-                                            <th>Fondateur</th>
                                             <th>Type de facturation</th>
                                             <th>Préinscription</th>
                                  
