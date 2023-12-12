@@ -28,7 +28,7 @@ const ChoixStatetab = () => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Statistiques</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>statistics </div>):(<div>Statistiques</div>)}</h4>
                                 </div>
                                 
                             </Card.Header>
@@ -45,7 +45,7 @@ const ChoixStatetab = () => {
                                         <tbody>
                                             
                                                     <tr>
-                                                        <td>Statistique Elèves</td>
+                                                        <td>{user.langue === "en" ? (<div>student statistic </div>):(<div>Statistique Elèves</div>)}</td>
 
                                                         <td>
                                                             <div className="flex align-items-center list-user-action">
@@ -65,7 +65,7 @@ const ChoixStatetab = () => {
                                                     </tr>
 
                                                     <tr>
-                                                        <td>Statistique Evaluation</td>
+                                                        <td>{user.langue === "en" ? (<div>statistic evaluation </div>):(<div>Statistique evaluation</div>)}</td>
 
                                                         <td>
                                                             <div className="flex align-items-center list-user-action">
