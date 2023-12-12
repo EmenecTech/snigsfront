@@ -37,8 +37,6 @@ const ChoixClasseStat = () => {
                                     <table id="user-list-table" className="table table-striped" role="grid" data-toggle="data-table">
                                         <thead>
                                             <tr className="ligth">
-                                                <th> </th>
-                                                <th> </th>
 
                                             </tr>
                                         </thead>
