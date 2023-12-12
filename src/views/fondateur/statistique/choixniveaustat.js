@@ -17,6 +17,7 @@ import shap6 from '../../../assets/images/shapes/06.png'
 const ChoixNiveauxStat = () => {
 
   const {niveau} = useParams();
+  const {user} = AuthUser();
 
 
 
@@ -28,7 +29,7 @@ const ChoixNiveauxStat = () => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Statistiques</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>statistics </div>):(<div>Statistiques</div>)}</h4>
                                 </div>
                                 
                             </Card.Header>
@@ -45,7 +46,7 @@ const ChoixNiveauxStat = () => {
                                         <tbody>
                                             
                                                     <tr>
-                                                        <td>Statistique Elève</td>
+                                                        <td>{user.langue === "en" ? (<div>student statistics </div>):(<div>Statistique Elève</div>)}</td>
 
                                                         <td>
                                                             <div className="flex align-items-center list-user-action">
