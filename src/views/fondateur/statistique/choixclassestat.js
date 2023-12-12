@@ -17,6 +17,7 @@ import shap6 from '../../../assets/images/shapes/06.png'
 const ChoixClasseStat = () => {
 
   const {classe} = useParams();
+  const {user} = AuthUser();
 
 
 
@@ -28,7 +29,7 @@ const ChoixClasseStat = () => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Statistiques</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>statistics </div>):(<div>Statistiques</div>)}</h4>
                                 </div>
                                 
                             </Card.Header>
@@ -43,7 +44,7 @@ const ChoixClasseStat = () => {
                                         <tbody>
                                             
                                                     <tr>
-                                                        <td>Statistique Elèves</td>
+                                                        <td>{user.langue === "en" ? (<div>student statistics </div>):(<div>Statistique Elèves</div>)}</td>
 
                                                         <td>
                                                             <div className="flex align-items-center list-user-action">
@@ -63,7 +64,7 @@ const ChoixClasseStat = () => {
                                                     </tr>
 
                                                     <tr>
-                                                        <td>Statistique Evaluation</td>
+                                                        <td>{user.langue === "en" ? (<div>Statistics evaluation </div>):(<div>Statistique Evaluation</div>)}</td>
 
                                                         <td>
                                                             <div className="flex align-items-center list-user-action">
