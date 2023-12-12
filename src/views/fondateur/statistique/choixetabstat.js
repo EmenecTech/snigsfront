@@ -17,6 +17,7 @@ import shap6 from '../../../assets/images/shapes/06.png'
 const ChoixStatetab = () => {
 
   const classe = useParams();
+  const user = AuthUser();
 
 
 
