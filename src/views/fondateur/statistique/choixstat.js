@@ -116,6 +116,8 @@ const userlist = [
 
 const ChoixStat = () => {
 
+    const {user} = AuthUser();
+
 
 
     return (
@@ -126,7 +128,7 @@ const ChoixStat = () => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Statistiques</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>statistics </div>):(<div>Statistiques</div>)}</h4>
                                 </div>
                                 
                             </Card.Header>
@@ -143,7 +145,7 @@ const ChoixStat = () => {
                                         <tbody>
                                             
                                                     <tr>
-                                                        <td>Par Classe</td>
+                                                        <td>{user.langue === "en" ? (<div>By Class </div>):(<div>Par classe</div>)}</td>
 
                                                         <td>
                                                             <div className="flex align-items-center list-user-action">
@@ -163,7 +165,7 @@ const ChoixStat = () => {
                                                     </tr>
         
                                                          <tr>
-                                                        <td>Par Niveau</td>
+                                                        <td>{user.langue === "en" ? (<div>By level </div>):(<div>Par niveau</div>)}</td>
 
                                                         <td>
                                                             <div className="flex align-items-center list-user-action">
@@ -183,7 +185,7 @@ const ChoixStat = () => {
                                                     </tr>
 
                                                     <tr>
-                                                        <td>De l'établissement</td>
+                                                        <td>{user.langue === "en" ? (<div>From the school </div>):(<div>De l'établissement</div>)}</td>
 
                                                         <td>
                                                             <div className="flex align-items-center list-user-action">
