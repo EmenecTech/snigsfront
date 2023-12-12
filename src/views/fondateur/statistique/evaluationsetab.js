@@ -314,7 +314,7 @@ const StatListEvaluationsEtab = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Evaluations</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Evaluation </div>):(<div>Evaluation</div>)}</h4>
                             </div>
 
 
@@ -332,11 +332,11 @@ const StatListEvaluationsEtab = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Intitulé</th>
-                                            <th>Type d'évaluation</th>
-                                            <th>Type de période</th>
+                                            <th>{user.langue === "en" ? (<div>Title </div>):(<div>Intitulé</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Type of assessment </div>):(<div>Type d'évaluation</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Type of period </div>):(<div>Type de période</div>)}</th>
                                            
-                                            <th>Action</th>
+                                            <th>{user.langue === "en" ? (<div>Action </div>):(<div>Action</div>)}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -350,7 +350,7 @@ const StatListEvaluationsEtab = memo((props) => {
                                                 <td>
                                                     <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" to={"/Admin/Stat/etablissement/" + item.intitule_evaluation}>
 
-                                                        Consulter
+                                                        {user.langue === "en" ? (<div>Consult </div>):(<div>Consulter</div>)}
 
                                                     </Link>
                                                 </td>
