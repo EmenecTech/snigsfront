@@ -335,10 +335,10 @@ const ListNiveauxStat = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th> {user.langue === "en" ? (<div>Entitled </div>):(<div> Intitulé</div>)}</th>
-                                            <th>Cycle </th>
-                                            <th>Section</th>
-                                            <th>Actions</th>
+                                            <th> {user.langue === "en" ? (<div>title </div>):(<div> Intitulé</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>cycle </div>):(<div> Cycle</div>)} </th>
+                                            <th>{user.langue === "en" ? (<div>section </div>):(<div> Section</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>actions </div>):(<div> Actions</div>)}</th>
 
                                         </tr>
                                     </thead>
