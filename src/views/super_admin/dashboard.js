@@ -1929,7 +1929,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         
                            
                           <div className="progress-detail">
-                            <p className="mb-2">Utilisateurs</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Users</div>):(<div> Utilisateurs </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={alluser} duration={3} />
                             </h4>
@@ -1944,7 +1944,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                        
                           <div className="progress-detail">
-                            <p className="mb-2">Fondateurs</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Founder</div>):(<div> Fondateur </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbrfond} duration={3} />
                             </h4>
@@ -1957,7 +1957,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                          
                           <div className="progress-detail">
-                            <p className="mb-2">Membres de l'administration</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Member of the administration</div>):(<div> Membre de l'administration </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbrad_sup} duration={3} />
                             </h4>
@@ -1970,7 +1970,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                         
                           <div className="progress-detail">
-                            <p className="mb-2">Enseignants</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Teachers</div>):(<div> Enseignants </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbrens_sup} duration={3} />
                             </h4>
@@ -2013,7 +2013,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                         
                           <div className="progress-detail">
-                            <p className="mb-2">Elèves</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Students</div>):(<div> Elèves </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbreleve_sup} duration={5} />
                             </h4>
@@ -2029,7 +2029,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                         
                           <div className="progress-detail">
-                            <p className="mb-2">Elèves Inscrits</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Students registered</div>):(<div> Elèves inscrits </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbreleveins_sup} duration={3} />
                             </h4>
@@ -2043,7 +2043,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
               
                           <div className="progress-detail">
-                            <p className="mb-2">Elèves Préinscrits</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Students pre-registered</div>):(<div> Elèves preinscrits </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbrpreins_sup} duration={3} />
                             </h4>
@@ -2058,7 +2058,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                        
                           <div className="progress-detail">
-                            <p className="mb-2">Parents</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Parent</div>):(<div> Parents </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbrparsup} duration={3} />
                             </h4>
@@ -2107,7 +2107,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                          
                           <div className="progress-detail">
-                            <p className="mb-2">Universités</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>University</div>):(<div> Universités </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbretab_sup} duration={5} />
                             </h4>
@@ -2123,7 +2123,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                         
                           <div className="progress-detail">
-                            <p className="mb-2">Etudiants</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Students</div>):(<div> Etudiants </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={0} duration={3} />
                             </h4>
@@ -2137,7 +2137,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                        
                           <div className="progress-detail">
-                            <p className="mb-2">Etudiants Inscrits</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Students registered</div>):(<div> Etudiants inscrits </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={0} duration={3} />
                             </h4>
@@ -2152,7 +2152,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                        
                           <div className="progress-detail">
-                            <p className="mb-2">Etudiants Préinscrits</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Students pre-registered</div>):(<div> Etudiants preinscrits </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={0} duration={3} />
                             </h4>
@@ -2204,7 +2204,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                           
                           <div className="progress-detail">
-                            <p className="mb-2">Etablissements</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Schools</div>):(<div> Etablissements </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={nbretap} duration={5} />
                             </h4>
@@ -2220,7 +2220,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                         
                           <div className="progress-detail">
-                            <p className="mb-2">Etablissements Maternelles</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Nursery schools</div>):(<div> Etablissements maternelles </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={0} duration={3} />
                             </h4>
@@ -2234,7 +2234,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                          
                           <div className="progress-detail">
-                            <p className="mb-2">Etablissements Primaires</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Primary schools</div>):(<div> Etablissements primaires </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={sumprim} duration={3} />
                             </h4>
@@ -2249,7 +2249,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                      
                           <div className="progress-detail">
-                            <p className="mb-2">Etablissements Secondaires</p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Secondary schools</div>):(<div> Etablissements secondaires </div>)}</p>
                             <h4 className="counter">
                               <CountUp start={0} end={sumsec} duration={3} />
                             </h4>
@@ -2306,7 +2306,7 @@ const [nbretab_sup, setnbretab_sup] = useState([]);
                         <div className="progress-widget">
                        
                           <div className="progress-detail">
-                            <p className="mb-2">Montant payés sur la plateforme </p>
+                            <p className="mb-2">{user.langue === "en" ? (<div>Amounts paid on the platform</div>):(<div> Montants payés sur la plateforme </div>)} </p>
                             <h4 className="counter"> XAF {formatNumberWithCommas(sumpay)}
                             </h4>
                           </div>
