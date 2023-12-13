@@ -53,6 +53,8 @@ SwiperCore.use([Navigation]);
 
 const ListPrivileges = memo((props) => {
     const [show, setShow] = useState(false);
+    const { user } = AuthUser();
+
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
