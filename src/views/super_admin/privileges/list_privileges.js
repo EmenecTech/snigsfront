@@ -348,7 +348,7 @@ const ListPrivileges = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Privilèges</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Privileges</div>):(<div> Privilèges </div>)}</h4>
                             </div>
 
 
@@ -363,7 +363,7 @@ const ListPrivileges = memo((props) => {
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title as="h5">Privilège</Modal.Title>
+                                    <Modal.Title as="h5">{user.langue === "en" ? (<div>Privilege</div>):(<div> Privilège</div>)}</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
                                     <Form>
@@ -371,7 +371,7 @@ const ListPrivileges = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Code </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Code</div>):(<div> Code</div>)} </Form.Label>
                                                         <Form.Control type="text" defaultValue="" name="code" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -382,7 +382,7 @@ const ListPrivileges = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Intitulé</Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Title</div>):(<div> Intitulé</div>)}</Form.Label>
                                                         <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -394,7 +394,7 @@ const ListPrivileges = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Type</Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Type</div>):(<div>Type</div>)}</Form.Label>
                                                         <Form.Control type="text" defaultValue="" name="type" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -407,7 +407,7 @@ const ListPrivileges = memo((props) => {
 
 
                                         <div className="text-center">
-                                            <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                            <Button type="button" variant="primary" onClick={submitForm} >{user.langue === "en" ? (<div>Confirm</div>):(<div>Confirmer</div>)}</Button>
                                         </div>
                                     </Form>
                                 </Modal.Body>
@@ -426,9 +426,9 @@ const ListPrivileges = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Code</th>
-                                            <th>Intitulé</th>
-                                            <th>Type </th>
+                                            <th>{user.langue === "en" ? (<div>Code</div>):(<div>Code</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Title</div>):(<div>Intitulé</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Type</div>):(<div>Type</div>)}</th>
                                          
                                         </tr>
                                     </thead>
