@@ -70,7 +70,7 @@ const EditPrivilege = (props) => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Modifier un privilège</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>Modify a privilege</div>):(<div> Modifier un privilège </div>)}</h4>
                                 </div>
                             </Card.Header>
                             <Card.Body>
@@ -82,7 +82,7 @@ const EditPrivilege = (props) => {
                                                 <Form>
                                                     <Row>
                                                         <Col>
-                                                            <label>Code:</label>
+                                                            <label>{user.langue === "en" ? (<div>Code:</div>):(<div> Code: </div>)}</label>
                                                             <input
                                                                 type="text"
                                                                 name="code"
@@ -94,7 +94,7 @@ const EditPrivilege = (props) => {
                                                         </Col>
 
                                                         <Col>
-                                                            <label>Intitulé:</label>
+                                                            <label>{user.langue === "en" ? (<div>Title:</div>):(<div> Intitulé: </div>)}</label>
                                                             <input
                                                                 type="text"
                                                                 name="int"
@@ -114,7 +114,7 @@ const EditPrivilege = (props) => {
                                                         
 
                                                         <Col>
-                                                            <label>Type:</label>
+                                                            <label>{user.langue === "en" ? (<div>Type:</div>):(<div> Type: </div>)}</label>
                                                             <input
                                                                 type="text"
                                                                 name="type"
@@ -132,7 +132,7 @@ const EditPrivilege = (props) => {
                                                 onClick={submitForm}
                                                 className="btn btn-info mt-2"
                                             >
-                                                Modifier
+                                                {user.langue === "en" ? (<div>Modify</div>):(<div> Modifier </div>)}
                                             </button>
                                         </div>
                                     </div>
