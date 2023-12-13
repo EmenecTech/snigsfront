@@ -152,6 +152,7 @@ const AddUtilisateurs = () => {
                                                         <option></option>
                                                         <option value="Super adminstrateur">Super administrateur</option>
                                                         <option value="Fondateur">Fondateur</option>
+                                                        <option value="Directeur">Directeur</option>
                                                     </select>
                                                 </Form.Group>
                                             </Form.Group>
