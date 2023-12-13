@@ -486,7 +486,7 @@ const VerticalNav = memo((props) => {
                     ))}
                 </div>) : (<div></div>)}
                 {
-                    user.role === "Fondateur" ? (
+                    user.role === "Fondateur" || user.role === "Directeur" ? (
                         <div>
 
 
