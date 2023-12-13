@@ -2,17 +2,18 @@ import React, { useEffect, useState } from 'react'
 import { Row, Col, Form, Button } from 'react-bootstrap'
 import { createPath, useNavigate } from 'react-router-dom';
 import Card from '../../../components/Card'
-import AuthUser from '../../../components/AuthUser';
+import AuthUser from "../../../components/AuthUser";
 import http from '../../../http';
 
 
 const AddConfiguration = () => {
     const navigate = useNavigate();
+    const {user} = AuthUser();
     const [inputs, setInputs] = useState({});
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-        const {user} = AuthUser();
+        
 
         setInputs(values => ({ ...values, [name]: value }))
     }
