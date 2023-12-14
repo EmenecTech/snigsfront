@@ -57,7 +57,7 @@ const AddUtilisateurs = () => {
             <Card>
               <Card.Header className="d-flex justify-content-between">
                 <div className="header-title">
-                  <h4 className="card-title">Modifier un utilisateur</h4>
+                  <h4 className="card-title">{user.langue === "en" ? (<div>Modify a user</div>):(<div>Modifier un utilisateur</div>)}</h4>
                 </div>
               </Card.Header>
               <Card.Body>
@@ -68,7 +68,7 @@ const AddUtilisateurs = () => {
                       <Form.Group as={Row} className="form-group">
                         <Form.Group className="form-group">
                           <Form.Label htmlFor="exampleInputText1">
-                            Nom
+                            {user.langue === "en" ? (<div>Name</div>):(<div>Nom</div>)}
                           </Form.Label>
                           <Form.Control
                             type="text"
@@ -85,7 +85,7 @@ const AddUtilisateurs = () => {
                       <Form.Group as={Row} className="form-group">
                         <Form.Group className="form-group">
                           <Form.Label htmlFor="exampleInputText1">
-                            Prénom
+                            {user.langue === "en" ? (<div>First name</div>):(<div>Prénom</div>)}
                           </Form.Label>
                           <Form.Control
                             type="text"
@@ -103,7 +103,7 @@ const AddUtilisateurs = () => {
                       <Form.Group as={Row} className="form-group">
                         <Form.Group className="form-group">
                           <Form.Label htmlFor="exampleInputText1">
-                            Genre
+                            {user.langue === "en" ? (<div>Gender</div>):(<div>Genre</div>)}
                           </Form.Label>
                           <select
                             className="form-select mb-3 shadow-none"
@@ -112,8 +112,8 @@ const AddUtilisateurs = () => {
                             onChange={handleChange}
                           >
                             <option value={inputs.genre || ""}>{inputs.genre}</option>
-                            <option value="Masculin">Masculin</option>
-                            <option value="Feminin">Feminin</option>
+                            <option value="Masculin">{user.langue === "en" ? (<div>Male</div>):(<div>Masculin</div>)}</option>
+                            <option value="Feminin">{user.langue === "en" ? (<div>Female</div>):(<div>Féminin</div>)}</option>
                           </select>
                         </Form.Group>
                       </Form.Group>
@@ -124,7 +124,7 @@ const AddUtilisateurs = () => {
                       <Form.Group as={Row} className="form-group">
                         <Form.Group className="form-group">
                           <Form.Label htmlFor="exampleInputText1">
-                            Date de naissance
+                            {user.langue === "en" ? (<div>Date of birth</div>):(<div>Date de naissance</div>)}
                           </Form.Label>
                           <Form.Control
                             type="date_n"
@@ -140,7 +140,7 @@ const AddUtilisateurs = () => {
                       <Form.Group as={Row} className="form-group">
                         <Form.Group className="form-group">
                           <Form.Label htmlFor="exampleInputText1">
-                            Lieu de naissance
+                            {user.langue === "en" ? (<div>Place of birth</div>):(<div>Lieu de naissance</div>)}
                           </Form.Label>
                           <Form.Control
                             type="text"
@@ -158,7 +158,7 @@ const AddUtilisateurs = () => {
                       <Form.Group as={Row} className="form-group">
                         <Form.Group className="form-group">
                           <Form.Label htmlFor="exampleInputText1">
-                            Nationalité
+                            {user.langue === "en" ? (<div>Nationality</div>):(<div>Nationalité</div>)}
                           </Form.Label>
                           <Form.Control
                             type="text"
@@ -177,7 +177,7 @@ const AddUtilisateurs = () => {
                       <Form.Group as={Row} className="form-group">
                         <Form.Group className="form-group">
                           <Form.Label htmlFor="exampleInputText1">
-                            Email
+                            {user.langue === "en" ? (<div>Email</div>):(<div>Email</div>)}
                           </Form.Label>
                           <Form.Control
                             type="email"
@@ -195,7 +195,7 @@ const AddUtilisateurs = () => {
                       <Form.Group as={Row} className="form-group">
                         <Form.Group className="form-group">
                           <Form.Label htmlFor="exampleInputText1">
-                            Téléphone
+                           {user.langue === "en" ? (<div>Phone</div>):(<div>Téléphone</div>)}
                           </Form.Label>
                           <Form.Control
                             type="text"
@@ -214,7 +214,7 @@ const AddUtilisateurs = () => {
                       <Form.Group as={Row} className="form-group">
                         <Form.Group className="form-group">
                           <Form.Label htmlFor="exampleInputText1">
-                            Numéro CNI / Passeport
+                            {user.langue === "en" ? (<div>Identy card / passport number</div>):(<div>Numéro CNI / Passeport</div>)}
                           </Form.Label>
                           <Form.Control
                             type="text"
@@ -232,7 +232,7 @@ const AddUtilisateurs = () => {
                       <Form.Group as={Row} className="form-group">
                         <Form.Group className="form-group">
                           <Form.Label htmlFor="exampleInputText1">
-                            Rôle
+                            {user.langue === "en" ? (<div>Role</div>):(<div>Role</div>)}
                           </Form.Label>
                           <select
                             className="form-select mb-3 shadow-none"
@@ -244,7 +244,7 @@ const AddUtilisateurs = () => {
                             <option value="Super adminstrateur">
                               Super administrateur
                             </option>
-                            <option value="Fondateur">Fondateur</option>
+                            <option value="Fondateur">{user.langue === "en" ? (<div>Founder</div>):(<div>Fondateur</div>)}</option>
                           </select>
                         </Form.Group>
                       </Form.Group>
@@ -257,7 +257,7 @@ const AddUtilisateurs = () => {
                       variant="primary"
                       onClick={submitForm}
                     >
-                      Modifier
+                      {user.langue === "en" ? (<div>Modify</div>):(<div>Modifier</div>)}
                     </Button>
                   </div>
                 </Form>
