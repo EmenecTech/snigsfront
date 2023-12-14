@@ -393,7 +393,11 @@ const EleveListEvaluations = memo((props) => {
                                                          Consulter 
                                                          </Link>
                                                     </div>:<div></div>}
-
+                                                   {classes.cycle_niveau === 'Licence'? <div>
+                                                         <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Eleve/Bulletin/Universitaire/" + item.intitule_evaluation}>
+                                                         Consulter 
+                                                         </Link>
+                                                    </div>:<div></div>}
                                                    
                                                 </td>
 
