@@ -45,7 +45,7 @@ const ParentsListNotesEval = () => {
         })
     }
 
-    const [matiere_classe_info, setmatiere_classe_info] = useState([]);
+    {/* const [matiere_classe_info, setmatiere_classe_info] = useState([]);
     useEffect(() => {
         fetchAllmatiere_classe_info();
     }, []);
@@ -56,7 +56,7 @@ const ParentsListNotesEval = () => {
         })
     }
 
-    const coefficient = matiere_classe_info.coefficient_cm;
+    const coefficient = matiere_classe_info.coefficient_cm; */}
 
     // useEffect(()=>{
     //     fetchAllClasses();
@@ -215,7 +215,7 @@ const ParentsListNotesEval = () => {
                                         <th>Matiere</th>
                                         <th>Note</th>
                                         <th>NxC</th>
-                                        <th>Coefficient</th>
+                                       
                                         <th>Appreciation</th>
                                         <th>Compétence visée</th>
                                         <th> </th>
@@ -240,9 +240,7 @@ const ParentsListNotesEval = () => {
                                             <td>
                                                 {item.note_finale}
                                             </td>
-                                            <td>
-                                                {item.coefficient_cm}
-                                            </td>
+                                           
                                             <td>
                                                 {item.appreciation_note}
                                             </td>
@@ -334,7 +332,7 @@ const ParentsListNotesEval = () => {
                                             <th>Nom(s)</th>
                                             <th>Prénom(s)</th>
                                             <th>Matière</th>
-                                            <th>Crédit</th>
+                                           
                                     
                                             <th>CC</th>
                                             <th>SN</th>
@@ -351,7 +349,7 @@ const ParentsListNotesEval = () => {
                                             <td>{item.nom}</td>
                                             <td>{item.prenom} </td>
                                             <td>{item.matiere_note} </td>
-                                           <td>{item.coefficient_cm} </td>
+                                          
                                             <td>{item.note_cc}</td>
                                             <td>{item.note_sn}</td>
                                             <td>{item.note_finale}</td>
