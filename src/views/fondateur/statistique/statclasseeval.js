@@ -382,7 +382,7 @@ const ListClassesEvalStat = memo((props) => {
                                 <h4 className="card-title">Statistiques-Evaluations</h4>
                             </div>
                          <Button variant="primary mt-2" onClick={printData}>
-                                Imprimer
+                                {user.langue === "en" ? (<div>Print</div>):(<div>Imprimer</div>)}
                             </Button>
 
                         </Card.Header>
@@ -448,8 +448,8 @@ const ListClassesEvalStat = memo((props) => {
                                     </Row>
                                 </Col>
                                     <div className="header-title mb-2">
-                                    <h3 className="card-title">Classe : {classe}</h3>
-                                    <h3 className="card-title">Evaluation : {evaluation}</h3>
+                                    <h3 className="card-title">{user.langue === "en" ? (<div>Class</div>):(<div>Classe</div>)}: {classe}</h3>
+                                    <h3 className="card-title">{user.langue === "en" ? (<div>Evaluation</div>):(<div>Evaluation</div>)}: {evaluation}</h3>
                                                     
                                 </div>
                             <div className="table-responsive border-bottom my-3">
@@ -463,56 +463,56 @@ const ListClassesEvalStat = memo((props) => {
                                     <thead>
                                         <tr>
 
-                                            <th>Intitulé</th>
-                                            <th>Résultat</th>
-                                            <th>Pourcentage</th>
+                                            <th>{user.langue === "en" ? (<div>Title</div>):(<div>Intitulé</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Results</div>):(<div>Résultat</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Percent</div>):(<div>Pourcentage</div>)}</th>
 
                                         </tr>
                                     </thead>
                                     <tbody>
 
                                             <tr >
-                                                <td>Plus grande Moyenne de la classe</td>
+                                                <td>{user.langue === "en" ? (<div>Highest class average</div>):(<div>Plus grande moyenne de la classe</div>)}</td>
                                                 <td>{firsteleves.nom} {firsteleves.prenom}({firsteleves.moyen})</td>
                                                 <td></td>
 
                                             </tr>
                                           
                                             <tr>
-                                                <td>Plus petite Moyenne de la classe</td>
+                                                <td>{user.langue === "en" ? (<div>Lowest class average</div>):(<div>Plus petite moyenne de la classe</div>)}</td>
                                                 <td>{lastteleves.nom} {lastteleves.prenom}({lastteleves.moyen})</td>
                                                 <td></td>
                                             </tr>
                                             <tr>
-                                                <td>Nombre d'éléve ayant une moyenne supéreure à 10</td>
+                                                <td>{user.langue === "en" ? (<div>Number of students with an average above 10</div>):(<div>Nombre d'élève ayant une moyenne supérieure a 10</div>)}</td>
                                                 <td>{moyensup.nbre_student}</td>
                                                 <td>{moyensup.pourcentage}</td>
                                             </tr>
                                             <tr>
-                                                <td>Nombre d'éléve ayant une moyenne inférieure à 10</td>
+                                                <td>{user.langue === "en" ? (<div>Number of students with an average below 10</div>):(<div>Nombre d'élève ayant une moyenne inférieure a 10</div>)}</td>
                                                 <td>{moyeninf.nbre_student}</td>
                                                 <td>{moyeninf.pourcentage}</td>
                                             </tr>
                                             <tr>
-                                                <td>Nombre de garçon ayant une moyenne supéreure à 10</td>
+                                                <td>{user.langue === "en" ? (<div>Number of boys with an average above 10</div>):(<div>Nombre de garçon ayant une moyenne supérieure a 10</div>)}</td>
                                                 <td>{moyenstudentsup.Nbreboysup}</td>
                                                 <td>{moyenstudentsup.pourcen_boy}</td>
 
                                             </tr>
                                             <tr>
-                                                <td>Nombre de fille ayant une moyenne supéreure à 10</td>
+                                                <td>{user.langue === "en" ? (<div>Number of girls with an average above 10</div>):(<div>Nombre de filles ayant une moyenne supérieure a 10</div>)}</td>
                                                 <td>{moyenstudentsup.Nbrefillesup}</td>
                                                 <td>{moyenstudentsup.pourcen_girl}</td>
 
                                             </tr>
                                             <tr>
-                                                <td>Nombre de garçon ayant une moyenne inférieure à 10</td>
+                                                <td>{user.langue === "en" ? (<div>Number of boys with an average below 10</div>):(<div>Nombre de garçons ayant une moyenne inférieure a 10</div>)}</td>
                                                 <td>{moyenstudentinf.Nbreboysup}</td>
                                                 <td>{moyenstudentinf.pourcen_boy}</td>
 
                                             </tr>
                                             <tr>
-                                                <td>Nombre de fille ayant une moyenne inférieure à 10</td>
+                                                <td>{user.langue === "en" ? (<div>Number of girls with an average below 10</div>):(<div>Nombre de filles ayant une moyenne inférieure a 10</div>)}</td>
                                                 <td>{moyenstudentinf.Nbrefillesup}</td>
                                                 <td>{moyenstudentinf.pourcen_girl}</td>
 
