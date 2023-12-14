@@ -45,18 +45,7 @@ const ParentsListNotesEval = () => {
         })
     }
 
-    {/* const [matiere_classe_info, setmatiere_classe_info] = useState([]);
-    useEffect(() => {
-        fetchAllmatiere_classe_info();
-    }, []);
-
-    const fetchAllmatiere_classe_info = () => {
-        http.get('/get_info_matiere_classe/' + etab + '/' + niveau + '/' + classe + '/' + matiere).then(res => {
-            setmatiere_classe_info(res.data);
-        })
-    }
-
-    const coefficient = matiere_classe_info.coefficient_cm; */}
+   
 
     // useEffect(()=>{
     //     fetchAllClasses();
@@ -126,7 +115,7 @@ const ParentsListNotesEval = () => {
                 <Col sm="12" lg="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
-                            <h4 className="card-title">Notes</h4>
+                            <h4 className="card-title">Notess</h4>
 
     {/* <div>
                                 <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3" onClick={handleShow}>
