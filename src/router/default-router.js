@@ -101,6 +101,7 @@ import EleveBulletinNotes from '../views/eleves/bulletin_notes/marknotes';
 import EleveBulletinSecondaire from '../views/eleves/bulletin_notes/bulletin_secondaire';
 import EleveBulletinPrimaire from '../views/eleves/bulletin_notes/bulletin_primaire';
 import EleveBulletinMaternelle from '../views/eleves/bulletin_notes/bulletin_maternelle';
+import EleveBulletinUniversitaire from '../views/eleves/bulletin_notes/bulletin_universitaire';
 
 import AdminListRequest from '../views/fondateur/requetes/list';
 import Enseignant_matieres_chapitres from '../views/enseignant/chapitres/matieres';
@@ -167,6 +168,7 @@ import ParentsBulletinNotes from "../views/parents/bulletin_notes/marknotes";
 import ParentsBulletinSecondaire from "../views/parents/bulletin_notes/bulletin_secondaire";
 import ParentsBulletinPrimaire from "../views/parents/bulletin_notes/bulletin_primaire";
 import ParentsBulletinMaternelle from "../views/parents/bulletin_notes/bulletin_maternelle";
+import ParentsBulletinUniversitaire from "../views/parents/bulletin_notes/bulletin_universitaire";
 
 
 import Parents_list_Chapitre from "../views/parents/cours/chapitres";
@@ -696,6 +698,10 @@ export const DefaultRouter = [
                 path: 'Eleve/Bulletin/Maternelle/:evaluation',
                 element: <EleveBulletinMaternelle />
             },
+            {
+                path: 'Eleve/Bulletin/Universitaire/:evaluation',
+                element: <EleveBulletinUniversitaire />
+            },
             ////
             {
                 path: 'Eleve/List/Matieres/Cours',
@@ -801,6 +807,10 @@ export const DefaultRouter = [
       {
         path: "Parents/Bulletin/Maternelle/:evaluation",
         element: <ParentsBulletinMaternelle />,
+      },
+      {
+        path: "Parents/Bulletin/Universitaire/:evaluation",
+        element: <ParentsBulletinUniversitaire />,
       },
       ////
       {
