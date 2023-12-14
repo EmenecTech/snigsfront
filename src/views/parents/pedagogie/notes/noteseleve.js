@@ -16,7 +16,7 @@ const ParentsListNotesEval = () => {
     const etab = user.etablissement;
     const userid = user.second_id;
     const classe = user.other_in_user;
-    const niveau = user.fonction_in_user
+    const niveau = user.fonction_in_user;
 
     const [show, setShow] = useState(false);
 
