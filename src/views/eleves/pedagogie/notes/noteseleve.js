@@ -194,7 +194,7 @@ const EleveListNotesEval = () => {
 
                         <Card.Body>
 
-    {eleves_classe.cycle_niveau === "Secondaire" || eleves_classes.cycle_niveau === "Secondary" ? <div>
+    {eleves_classe.cycle_niveau === "Secondaire" || eleves_classe.cycle_niveau === "Secondary" ? <div>
                          <table className="table">
                                 <thead>
                                     <tr>
@@ -247,7 +247,7 @@ const EleveListNotesEval = () => {
                             </table>
                         </div> : <div></div>}
 
-                     {eleves_classe.cycle_niveau === "Primaire" || eleves_classes.cycle_niveau === "Primary" ? <div>
+                     {eleves_classe.cycle_niveau === "Primaire" || eleves_classe.cycle_niveau === "Primary" ? <div>
                          <table className="table">
                                 <thead>
                                     <tr>
@@ -279,7 +279,7 @@ const EleveListNotesEval = () => {
                             </table>
                         </div> : <div></div>}
 
-                 {eleves_classe.cycle_niveau === "Maternelle" || eleves_classes.cycle_niveau === "Nursery" ? <div>
+                 {eleves_classe.cycle_niveau === "Maternelle" || eleves_classe.cycle_niveau === "Nursery" ? <div>
                          <table className="table">
                                 <thead>
                                     <tr>
