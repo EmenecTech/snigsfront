@@ -46,7 +46,7 @@ SwiperCore.use([Navigation]);
 
 
 const ListEtablissementsType = memo((props) => {
-    const { http, setToken } = AuthUser();
+    const { http, setToken, user } = AuthUser();
     const [etablissements, setEtablissements] = useState([]);
     const {type} = useParams();
     useEffect(() => {
@@ -321,12 +321,12 @@ const ListEtablissementsType = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Liste d'établissements</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>List of schools</div>):(<div> Liste des établissements </div>)}</h4>
                             </div>
 
                             <Link to="#">
                                 <Button type="button" variant="primary">                       
-                                    Imprimer
+                                    {user.langue === "en" ? (<div>Print</div>):(<div> Imprimer </div>)}
                                 </Button>
                             </Link>
                         </Card.Header>
@@ -342,17 +342,17 @@ const ListEtablissementsType = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Nom</th>
-                                            <th>cygle</th>
-                                            <th>Niveau d'enseignement</th>
-                                            <th>Email</th>
-                                            <th>Téléphone</th>
-                                            <th>Pays</th>
-                                            <th>Département</th>
-                                            <th>Ville</th>
-                                            <th>Adresse</th>
-                                            <th>Type de facturation</th>
-                                            <th>Préinscription</th>
+                                            <th>{user.langue === "en" ? (<div>Name</div>):(<div> Nom </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Cygle</div>):(<div> Cygle </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Teaching level</div>):(<div> Niveau d'enseignement </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Email</div>):(<div> Email </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Phone</div>):(<div> Téléphone </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Country</div>):(<div> Pays </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Department</div>):(<div> Département </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>City</div>):(<div> Ville </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Address</div>):(<div> Adresse </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Billing type</div>):(<div> Type de facturation </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Pre-registration</div>):(<div> Préinscription </div>)}</th>
                                  
                                         </tr>
                                     </thead>
