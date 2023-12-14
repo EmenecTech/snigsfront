@@ -106,7 +106,7 @@ const ParentsListNotesEval = () => {
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-        setInputs(values => ({ ...values, [name]: value, etab, classe, matiere, evaluation, coefficient }))
+        setInputs(values => ({ ...values, [name]: value, etab, classe, matiere, evaluation}))
 
     }
 
