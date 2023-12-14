@@ -379,7 +379,7 @@ const ClassesStat = memo((props) => {
                     <Card>
 
                         <Card.Header className="d-flex justify-content-between">
-                        <Button variant="primary mt-2" onClick={printData}> Imprimer </Button>
+                        <Button variant="primary mt-2" onClick={printData}> {user.langue === "en" ? (<div>Print</div>):(<div>Imprimer</div>)} </Button>
 
                         </Card.Header>
                         <Card.Body>
@@ -443,7 +443,7 @@ const ClassesStat = memo((props) => {
                                 </Col>
 
                                 <div className="header-title mb-2">
-                                    <h4 className="card-title">Classe : {classe}</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>Class</div>):(<div>Classe</div>)} : {classe}</h4>
                                 </div>
 
                                 <div className="table-responsive border-bottom my-3">
@@ -457,45 +457,45 @@ const ClassesStat = memo((props) => {
                                         <thead>
                                             <tr>
 
-                                                <th>Intitulé</th>
-                                                <th>Résultat</th>
-                                                <th>Pourcentage</th>
+                                                <th>{user.langue === "en" ? (<div>Title</div>):(<div>Intitulé</div>)}</th>
+                                                <th>{user.langue === "en" ? (<div>Results</div>):(<div>Résultat</div>)}</th>
+                                                <th>{user.langue === "en" ? (<div>Percent</div>):(<div>Pourcentage</div>)}</th>
 
                                             </tr>
                                         </thead>
                                         <tbody>
 
                                             <tr >
-                                                <td>Nombre d'élèves</td>
+                                                <td>{user.langue === "en" ? (<div>Number of students</div>):(<div> Nombre d'élèves</div>)}</td>
                                                 <td>{total_eleves.Total_eleveclasse}</td>
-                                                <td>{total_eleves.pourcentage_eleveclasse}% des élèves de l'établissement</td>
+                                                <td>{total_eleves.pourcentage_eleveclasse}% des {user.langue === "en" ? (<div>Students from the school</div>):(<div>des élèves de l'établissement</div>)}</td>
 
                                             </tr>
 
                                             <tr>
-                                                <td>Nombre de garçons</td>
+                                                <td>{user.langue === "en" ? (<div>Number of boys</div>):(<div> Nombre de garçons </div>)}</td>
                                                 <td>{total_garcons.Total_garconclasse}</td>
-                                                <td>{total_garcons.pourcentage_garconclasse}% des élèves de la classe</td>
+                                                <td>{total_garcons.pourcentage_garconclasse}% {user.langue === "en" ? (<div>Student from the class</div>):(<div>Des élèves de la classe</div>)}</td>
                                             </tr>
                                             <tr>
-                                                <td>Nombre de filles</td>
+                                                <td>{user.langue === "en" ? (<div>Number of girls</div>):(<div> Nombre de filles </div>)}</td>
                                                 <td>{total_filles.Total_filleclasse}</td>
                                                 <td>{total_filles.pourcentage_filleclasse}% des élèves de la classe</td>
                                             </tr>
                                             <tr>
-                                                <td>Nombre total de redoublant</td>
+                                                <td>{user.langue === "en" ? (<div>Total number of repeaters</div>):(<div>Nombre total de redoublant</div>)}</td>
                                                 <td>{total_eleves_redoublant.Total_eleveredoublant}</td>
-                                                <td>{total_eleves_redoublant.pourcentage_eleveredoublant}% des élèves de la classe</td>
+                                                <td>{total_eleves_redoublant.pourcentage_eleveredoublant}% {user.langue === "en" ? (<div>Student from the class</div>):(<div>Des élèves de la classe</div>)}</td>
                                             </tr>
                                             <tr>
-                                                <td>Nombre de garçon(s) redoublant(s)</td>
+                                                <td>{user.langue === "en" ? (<div>Number of boys repeating</div>):(<div>Nombre de garçons redoublant</div>)}</td>
                                                 <td>{total_redoublant.Total_redoublantclasse}</td>
-                                                <td>{total_redoublant.pourcentage_redoublantclasse}% des élèves de la classe</td>
+                                                <td>{total_redoublant.pourcentage_redoublantclasse}% {user.langue === "en" ? (<div>Student from the class</div>):(<div>Des élèves de la classe</div>)}</td>
                                             </tr>
                                             <tr>
-                                                <td>Nombre de fille(s) redoublante(s)</td>
+                                                <td>{user.langue === "en" ? (<div>Number of girls repeating</div>):(<div>Nombre de fille redoublante</div>)}</td>
                                                 <td>{total_redoublante.Total_redoublanteclasse}</td>
-                                                <td>{total_redoublante.pourcentage_redoublanteclasse}% des élèves de la classe</td>
+                                                <td>{total_redoublante.pourcentage_redoublanteclasse}% {user.langue === "en" ? (<div>Student from the class</div>):(<div>Des élèves de la classe</div>)}</td>
                                             </tr>
 
                                         </tbody>
