@@ -46,7 +46,7 @@ SwiperCore.use([Navigation]);
 
 
 const ListEtablissements = memo((props) => {
-    const { http, setToken } = AuthUser();
+    const { http, setToken, user } = AuthUser();
     const [etablissements, setEtablissements] = useState([]);
     useEffect(() => {
         fetchAllEtablissements();
@@ -369,7 +369,7 @@ const ListEtablissements = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Liste d'établissements universitaires</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>List of universities Schools</div>):(<div> Liste des établissements universitaire </div>)}</h4>
                             </div>
 
                             <Link to="/etablissement/add/super/admin">
@@ -379,7 +379,7 @@ const ListEtablissements = memo((props) => {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                         </svg>
                                     </span>
-                                    Ajouter
+                                    {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter </div>)}
                                 </Button>
                             </Link>
                         </Card.Header>
@@ -395,18 +395,18 @@ const ListEtablissements = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Nom</th>
-                                            <th>cygle</th>
-                                            <th>Niveau d'enseignement</th>
-                                            <th>Email</th>
-                                            <th>Téléphone</th>
-                                            <th>Pays</th>
-                                            <th>Département</th>
-                                            <th>Ville</th>
-                                            <th>Adresse</th> 
-                                            <th>Type de facturation</th>
-                                            <th>Préinscription</th>
-                                            <th>Actions</th>
+                                            <th>{user.langue === "en" ? (<div>Name</div>):(<div> Nom </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Cygle</div>):(<div> Cygle </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Level of teaching</div>):(<div> Niveau d'enseignement </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Email</div>):(<div> Email </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Phone</div>):(<div> Téléphone </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Country</div>):(<div> Pays </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Department</div>):(<div> Département </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>City</div>):(<div> Ville </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Address</div>):(<div> Adresse </div>)}</th> 
+                                            <th>{user.langue === "en" ? (<div>Billing type</div>):(<div> Type de facturation </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Pre-registration</div>):(<div> Préinscription </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Actions</div>):(<div> Actions </div>)}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -444,13 +444,13 @@ const ListEtablissements = memo((props) => {
 
                                                     {item.state === "off" ? (
                                                         <Link className="btn btn-sm btn-icon btn-success" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
-                                                            Retablir
+                                                            {user.langue === "en" ? (<div>Restore</div>):(<div> Rétablir </div>)}
                                                         </Link>
                                                         
                                                         ):(
 
                                                         <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
-                                                            Suspendre
+                                                            {user.langue === "en" ? (<div>Suspend</div>):(<div> Suspendre </div>)}
                                                         </Link>
                                                         
                                                         )}
@@ -484,7 +484,7 @@ const ListEtablissements = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Liste d'établissements secondaires</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>List of secondary schools</div>):(<div> Liste des établissements secondaires </div>)}</h4>
                             </div>
 
                             <Link to="/etablissement/add/super/admin">
@@ -494,7 +494,7 @@ const ListEtablissements = memo((props) => {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                         </svg>
                                     </span>
-                                    Ajouter
+                                    {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter </div>)}
                                 </Button>
                             </Link>
                         </Card.Header>
@@ -510,18 +510,18 @@ const ListEtablissements = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Nom</th>
-                                            <th>cygle</th>
-                                            <th>Niveau d'enseignement</th>
-                                            <th>Email</th>
-                                            <th>Téléphone</th>
-                                            <th>Pays</th>
-                                            <th>Département</th>
-                                            <th>Ville</th>
-                                            <th>Adresse</th> 
-                                            <th>Type de facturation</th>
-                                            <th>Préinscription</th>
-                                            <th>Actions</th>
+                                            <th>{user.langue === "en" ? (<div>Name</div>):(<div> Nom </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Cygle</div>):(<div> Cygle </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Level of teaching</div>):(<div> Niveau d'enseignement </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Email</div>):(<div> Email </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Phone</div>):(<div> Téléphone </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Country</div>):(<div> Pays </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Department</div>):(<div> Département </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>City</div>):(<div> Ville </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Address</div>):(<div> Adresse </div>)}</th> 
+                                            <th>{user.langue === "en" ? (<div>Billing type</div>):(<div> Type de facturation </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Pre-registration</div>):(<div> Préinscription </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Actions</div>):(<div> Actions </div>)}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -558,13 +558,13 @@ const ListEtablissements = memo((props) => {
 
                                                     {item.state === "off" ? (
                                                         <Link className="btn btn-sm btn-icon btn-success" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
-                                                            Retablir
+                                                            {user.langue === "en" ? (<div>Restore</div>):(<div> Rétablir </div>)}
                                                         </Link>
                                                         
                                                         ):(
 
                                                         <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
-                                                            Suspendre
+                                                            {user.langue === "en" ? (<div>Suspend</div>):(<div> Suspendre </div>)}
                                                         </Link>
                                                         
                                                         )}
@@ -599,7 +599,7 @@ const ListEtablissements = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Liste d'établissements primaires</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>List of primary schools</div>):(<div> Liste des établissements primaires </div>)}</h4>
                             </div>
 
                             <Link to="/etablissement/add/super/admin">
@@ -609,7 +609,7 @@ const ListEtablissements = memo((props) => {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                         </svg>
                                     </span>
-                                    Ajouter
+                                   {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter </div>)}
                                 </Button>
                             </Link>
                         </Card.Header>
@@ -625,18 +625,18 @@ const ListEtablissements = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Nom</th>
-                                            <th>cygle</th>
-                                            <th>Niveau d'enseignement</th>
-                                            <th>Email</th>
-                                            <th>Téléphone</th>
-                                            <th>Pays</th>
-                                            <th>Département</th>
-                                            <th>Ville</th>
-                                            <th>Adresse</th> 
-                                            <th>Type de facturation</th>
-                                            <th>Préinscription</th>
-                                            <th>Actions</th>
+                                            <th>{user.langue === "en" ? (<div>Name</div>):(<div> Nom </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Cygle</div>):(<div> Cygle </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Level of teaching</div>):(<div> Niveau d'enseignement </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Email</div>):(<div> Email </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Phone</div>):(<div> Téléphone </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Country</div>):(<div> Pays </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Department</div>):(<div> Département </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>City</div>):(<div> Ville </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Address</div>):(<div> Adresse </div>)}</th> 
+                                            <th>{user.langue === "en" ? (<div>Billing type</div>):(<div> Type de facturation </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Pre-registration</div>):(<div> Préinscription </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Actions</div>):(<div> Actions </div>)}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -673,13 +673,13 @@ const ListEtablissements = memo((props) => {
 
                                                     {item.state === "off" ? (
                                                         <Link className="btn btn-sm btn-icon btn-success" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
-                                                            Retablir
+                                                            {user.langue === "en" ? (<div>Restore</div>):(<div> Rétablir </div>)}
                                                         </Link>
                                                         
                                                         ):(
 
                                                         <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
-                                                            Suspendre
+                                                            {user.langue === "en" ? (<div>Suspend</div>):(<div> Suspendre </div>)}
                                                         </Link>
                                                         
                                                         )}
@@ -714,7 +714,7 @@ const ListEtablissements = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Liste d'établissements maternelles</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>List of nursery schools</div>):(<div> Liste des établissements maternelles </div>)}</h4>
                             </div>
 
                             <Link to="/etablissement/add/super/admin">
@@ -724,7 +724,7 @@ const ListEtablissements = memo((props) => {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                         </svg>
                                     </span>
-                                    Ajouter
+                                    {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter </div>)}
                                 </Button>
                             </Link>
                         </Card.Header>
@@ -740,18 +740,18 @@ const ListEtablissements = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Nom</th>
-                                            <th>cygle</th>
-                                            <th>Niveau d'enseignement</th>
-                                            <th>Email</th>
-                                            <th>Téléphone</th>
-                                            <th>Pays</th>
-                                            <th>Département</th>
-                                            <th>Ville</th>
-                                            <th>Adresse</th> 
-                                            <th>Type de facturation</th>
-                                            <th>Préinscription</th>
-                                            <th>Actions</th>
+                                            <th>{user.langue === "en" ? (<div>Name</div>):(<div> Nom </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Cygle</div>):(<div> Cygle </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Level of teaching</div>):(<div> Niveau d'enseignement </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Email</div>):(<div> Email </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Phone</div>):(<div> Téléphone </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Country</div>):(<div> Pays </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Department</div>):(<div> Département </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>City</div>):(<div> Ville </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Address</div>):(<div> Adresse </div>)}</th> 
+                                            <th>{user.langue === "en" ? (<div>Billing type</div>):(<div> Type de facturation </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Pre-registration</div>):(<div> Préinscription </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Actions</div>):(<div> Actions </div>)}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -788,13 +788,13 @@ const ListEtablissements = memo((props) => {
 
                                                     {item.state === "off" ? (
                                                         <Link className="btn btn-sm btn-icon btn-success" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
-                                                            Retablir
+                                                            {user.langue === "en" ? (<div>Restore</div>):(<div> Rétablir </div>)}
                                                         </Link>
                                                         
                                                         ):(
 
                                                         <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit"  onClick={() => { suspendreEtablissement(item.nom_etablissement) }} >
-                                                            Suspendre
+                                                            {user.langue === "en" ? (<div>Suspend</div>):(<div> Suspendre </div>)}
                                                         </Link>
                                                         
                                                         )}
