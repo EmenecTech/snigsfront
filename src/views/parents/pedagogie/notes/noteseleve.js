@@ -115,7 +115,7 @@ const ParentsListNotesEval = () => {
                 <Col sm="12" lg="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
-                            <h4 className="card-title">Notess</h4>
+                            <h4 className="card-title">Notes {classes.cycle_niveau}</h4>
 
     {/* <div>
                                 <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3" onClick={handleShow}>
