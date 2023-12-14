@@ -340,10 +340,10 @@ const ParentsListEvaluationsNotes = memo((props) => {
                               className="btn btn-sm btn-icon btn-info"
                               data-toggle="tooltip"
                               data-placement="top"
-                              title="Delete"
+                              title="Edit"
                               data-original-title="Delete"
                               to={
-                                "/Eleve/List/Notes/Evaluation/" +
+                                "/Parents/List/Notes/Evaluation/" +
                                 item.intitule_evaluation
                               }
                             >
