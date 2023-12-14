@@ -332,7 +332,9 @@ const EleveListNotesEval = () => {
                                             <th>Sno.</th>
                                             <th>Nom(s)</th>
                                             <th>Prénom(s)</th>
-                                            <th>Matiere</th>
+                                            <th>Matière</th>
+                                            <th>Crédit</th>
+                                    
                                             <th>CC</th>
                                             <th>SN</th>
                                             <th>Note finale</th>
@@ -348,6 +350,7 @@ const EleveListNotesEval = () => {
                                             <td>{item.nom}</td>
                                             <td>{item.prenom} </td>
                                             <td>{item.matiere_note} </td>
+                                           <td>{item.coefficient_cm} </td>
                                             <td>{item.note_cc}</td>
                                             <td>{item.note_sn}</td>
                                             <td>{item.note_finale}</td>
