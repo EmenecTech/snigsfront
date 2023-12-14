@@ -14,7 +14,7 @@ const ParentsListNotesEval = () => {
 
     const { user, http } = AuthUser();
     const etab = user.etablissement;
-    const userid = user.second_id;
+    const userid = user.second_id; 
     const classe = user.other_in_user;
     const niveau = user.fonction_in_user;
 
