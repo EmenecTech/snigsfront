@@ -69,7 +69,27 @@ const EleveListNotesEval = () => {
         })
 
     }
+   const [noteseleves, setnoteseleves] = useState([]);
+    useEffect(() => {
+        fetchAllNoteseleves();
+    }, []);
 
+    const fetchAllNoteseleves = () => {
+        http.get("/get_notes_elevesprim/" + etab + '/' + classe + '/' + evaluation + '/' + userid).then((res) => {
+            setnoteseleves(res.data);
+        });
+    };
+
+       const getEmojiForNote = (note) => {
+        if (note == 10) {
+            return '☹️';
+        } else if (note == 15) {
+            return '😐';
+        } else if (note == 20) {
+            return '😃';
+        }
+        return '';
+    };
 
 
     const handleChange = (event) => {
@@ -95,7 +115,7 @@ const EleveListNotesEval = () => {
                 <Col sm="12" lg="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
-                            <h4 className="card-title">Note - {matiere}</h4>
+                            <h4 className="card-title">Notes</h4>
 
     {/* <div>
                                 <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3" onClick={handleShow}>
@@ -173,10 +193,12 @@ const EleveListNotesEval = () => {
                         </Card.Header>
 
                         <Card.Body>
-                            <table className="table">
+
+    {eleves_classe.cycle_niveau === "Secondaire" || eleves_classes.cycle_niveau === "Secondary" ? <div>
+                         <table className="table">
                                 <thead>
                                     <tr>
-                                        <th>Sno.</th>
+                                        
                                         <th>Nom</th>
                                         <th>Prénom</th>
                                         <th>Matiere</th>
@@ -191,7 +213,7 @@ const EleveListNotesEval = () => {
                                 <tbody>
                                     {notes.map((item, index) => (
                                         <tr key={item.id}>
-                                            <td>{++index}</td>
+                                           
                                             <td>
                                                 {item.nom}
                                             </td>
@@ -223,6 +245,75 @@ const EleveListNotesEval = () => {
 
                                 </tbody>
                             </table>
+                        </div> : <div></div>}
+
+                     {eleves_classe.cycle_niveau === "Primaire" || eleves_classes.cycle_niveau === "Primary" ? <div>
+                         <table className="table">
+                                <thead>
+                                    <tr>
+                                        
+                                        <th>Nom</th>
+                                        <th>Prénom</th>
+                                        <th>Groupe</th>
+                                        <th>Note</th>
+                                        <th>Indices d'evaluation</th>
+                                        <th>Appreciation</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {noteseleves.map((item, index) => (
+                                        <tr key={item.id}>
+                                          
+                                           <td>{item.nom}</td>
+                                                <td>{item.prenom}</td>
+                                                <td>{item.matiere_note}</td>
+                                                <td>{item.valeur_note}</td>
+                                                <td>{item.competence_visee_note}</td>
+                                                <td>{item.appreciation_note}</td>
+                                           
+                                        </tr>
+                                    ))}
+
+                                </tbody>
+                            </table>
+                        </div> : <div></div>}
+
+                 {eleves_classe.cycle_niveau === "Maternelle" || eleves_classes.cycle_niveau === "Nursery" ? <div>
+                         <table className="table">
+                                <thead>
+                                    <tr>
+                                        
+                                                <th>Nom(s)</th>
+                                                <th>Prénom(s)</th>
+                                                <th>Groupes</th>
+                                                <th>Note</th>
+                                                <th>Emoji</th>
+                                                <th>Indices</th>
+                                                <th>Appreciation</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {noteseleves.map((item, index) => (
+                                        <tr key={item.id}>
+                                          
+                                             
+                                                    <td>{item.nom}</td>
+                                                    <td>{item.prenom}</td>
+                                                    <td>{item.matiere_note}</td>
+                                                    <td>{item.valeur_note}</td>
+                                                    <td>{getEmojiForNote(item.emoji)}</td>
+                                                    <td>{item.competence_visee_note}</td>
+                                                    <td>{item.appreciation_note}</td>
+                                           
+                                        </tr>
+                                    ))}
+
+                                </tbody>
+                            </table>
+                        </div> : <div></div>}
+                            
                         </Card.Body>
                     </Card>
                 </Col>
