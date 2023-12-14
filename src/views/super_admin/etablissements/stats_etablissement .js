@@ -457,7 +457,7 @@ function formatNumberWithCommas(number) {
                             
                                   <div>
                                     {activeTab === 'Onglet1' && <div><div className="table-responsive border-bottom my-3">
-                                                    <div>
+                                                  
                                                         
                                      
                                                     <Table
@@ -484,51 +484,7 @@ function formatNumberWithCommas(number) {
                                                                  <td>{fond.email}</td>
                                                             <tr>
                     
-                                                            <tr>
-                                                                <td>{user.langue === "en" ? (<div>Members of the administration</div>):(<div> Membres de l'administration </div>)}</td>
-                                                                <td>{nbrad}</td>
-                    
-                                                            </tr>
-                                                            <tr>
-                                                                <td>{user.langue === "en" ? (<div>Teachers</div>):(<div> Enseignants </div>)}</td>
-                                                                <td>{nbrens}</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>{user.langue === "en" ? (<div>Students</div>):(<div> Elèves </div>)}</td>
-                                                                <td>{nbreleve}</td>
-                    
-                                                            </tr>
-                                                            <tr>
-                                                                <td>{user.langue === "en" ? (<div>Registration</div>):(<div> Inscription </div>)}</td>
-                                                                <td>{nbreins}</td>
-                    
-                                                            </tr>
-                                                            <tr>
-                                                                <td>{user.langue === "en" ? (<div>Pre-registration</div>):(<div> Preinscription </div>)}</td>
-                                                                <td>{nbrpreins}</td>
-                    
-                                                            </tr>
-                                                            <tr>
-                                                                <td>{user.langue === "en" ? (<div>Archived students</div>):(<div> Elèves archivés </div>)}</td>
-                                                                <td>{nbrarchv}</td>
-                    
-                                                            </tr>
-                    
-                    
-                                                            <tr>
-                                                                <td>{user.langue === "en" ? (<div>Parents</div>):(<div>Parents</div>)}</td>
-                                                                <td>{nbrpar}</td>
-                    
-                                                            </tr>
-                    
-                                                           
-                    
-                                                            <tr>
-                                                                <td>{user.langue === "en" ? (<div>Registered pension amounts</div>):(<div>Montant des pensions enregistrés</div>)}</td>
-                                                                <td>XAF {formatNumberWithCommas(sumpay)} </td>
-                    
-                                                            </tr>
-                    
+                                                          
                                                             
                                                             
                     
@@ -537,7 +493,7 @@ function formatNumberWithCommas(number) {
                     
                                                         </tfoot>
                                                     </Table>
-                                                    </div>
+                                                 
                                      
                                                     <Table
                                                         responsive
