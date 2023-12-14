@@ -142,6 +142,17 @@ function formatNumberWithCommas(number) {
         })
     }
 
+    const [fond, setfond] = useState([]);
+    useEffect(() => {
+        fetchAllfond();
+    }, []);
+
+    const fetchAllfond = () => {
+        http.get('/user_for_super_admin/fondateur/' + etab).then(res => {
+            setfond(res.data);
+        })
+    }
+
 
     const [sumpay, setsumpay] = useState([]);
       useEffect(() => {
@@ -446,6 +457,88 @@ function formatNumberWithCommas(number) {
                             
                                   <div>
                                     {activeTab === 'Onglet1' && <div><div className="table-responsive border-bottom my-3">
+                                                    <div>
+                                                        
+                                     
+                                                    <Table
+                                                        responsive
+                                                        striped
+                                                        id="datatable"
+                                                        className=""
+                                                        data-toggle="data-table"
+                                                    >
+                                                        <thead>
+                                                            <tr>
+                                                                <th> Nom</th>
+                                                                <th> Rôle</th>
+                                                                <th> Téléphone</th>
+                                                                <th> Email</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+
+                                                            <tr>
+                                                                 <td>{fond.name} {fond.prenom}</td>
+                                                                 <td>{user.langue === "en" ? (<div>Founder </div>):(<div> Fondateur(trice) </div>)}</td>    
+                                                                 <td>{fond.telephone}/td> 
+                                                                 <td>{fond.email}</td>
+                                                            <tr>
+                    
+                                                            <tr>
+                                                                <td>{user.langue === "en" ? (<div>Members of the administration</div>):(<div> Membres de l'administration </div>)}</td>
+                                                                <td>{nbrad}</td>
+                    
+                                                            </tr>
+                                                            <tr>
+                                                                <td>{user.langue === "en" ? (<div>Teachers</div>):(<div> Enseignants </div>)}</td>
+                                                                <td>{nbrens}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>{user.langue === "en" ? (<div>Students</div>):(<div> Elèves </div>)}</td>
+                                                                <td>{nbreleve}</td>
+                    
+                                                            </tr>
+                                                            <tr>
+                                                                <td>{user.langue === "en" ? (<div>Registration</div>):(<div> Inscription </div>)}</td>
+                                                                <td>{nbreins}</td>
+                    
+                                                            </tr>
+                                                            <tr>
+                                                                <td>{user.langue === "en" ? (<div>Pre-registration</div>):(<div> Preinscription </div>)}</td>
+                                                                <td>{nbrpreins}</td>
+                    
+                                                            </tr>
+                                                            <tr>
+                                                                <td>{user.langue === "en" ? (<div>Archived students</div>):(<div> Elèves archivés </div>)}</td>
+                                                                <td>{nbrarchv}</td>
+                    
+                                                            </tr>
+                    
+                    
+                                                            <tr>
+                                                                <td>{user.langue === "en" ? (<div>Parents</div>):(<div>Parents</div>)}</td>
+                                                                <td>{nbrpar}</td>
+                    
+                                                            </tr>
+                    
+                                                           
+                    
+                                                            <tr>
+                                                                <td>{user.langue === "en" ? (<div>Registered pension amounts</div>):(<div>Montant des pensions enregistrés</div>)}</td>
+                                                                <td>XAF {formatNumberWithCommas(sumpay)} </td>
+                    
+                                                            </tr>
+                    
+                                                            
+                                                            
+                    
+                                                        </tbody>
+                                                        <tfoot>
+                    
+                                                        </tfoot>
+                                                    </Table>
+                                                    </div>
+                                     
                                                     <Table
                                                         responsive
                                                         striped
