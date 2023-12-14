@@ -8,7 +8,7 @@ import AuthUser from '../../../../components/AuthUser';
 
 const ParentsListNotesEval = () => {
     const navigate = useNavigate();
-    const [inputs, setInputs] = useState({});
+    const [inputs, setInputs] = useState({}); 
 
     const {evaluation} = useParams();
 
