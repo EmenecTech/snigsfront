@@ -175,8 +175,8 @@ const AddEtablissement = () => {
                                                     <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Billing</div>):(<div> Facturation </div>)} </Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="fact" onChange={handleChange}>
                                                         <option></option>
-                                                        <option value="Par élève">{user.langue === "en" ? (<div>Cameroon</div>):(<div> Par élève </div>)}</option>
-                                                        <option value="Par taux">{user.langue === "en" ? (<div>Cameroon</div>):(<div> Par taux </div>)}</option>
+                                                        <option value="Par élève">{user.langue === "en" ? (<div>By student</div>):(<div> Par élève </div>)}</option>
+                                                        <option value="Par taux">{user.langue === "en" ? (<div>By rate</div>):(<div> Par taux </div>)}</option>
                                                     </select>
                                                 </Form.Group>
                                             </Form.Group>
