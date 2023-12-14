@@ -166,7 +166,7 @@ const UtilisateursListe = () => {
                         />
                       </svg>
                     </span>
-                    Ajouter
+                    {user.langue === "en" ? (<div>Add</div>):(<div>Ajouter</div>)}
                   </Button>
                 </Link>
               </Card.Header>
