@@ -16,6 +16,7 @@ const ParentsListNotesEval = () => {
     const etab = user.etablissement;
     const userid = user.second_id;
     const classe = user.other_in_user;
+    const niveau = user.fonction_in_user
 
     const [show, setShow] = useState(false);
 
@@ -50,7 +51,7 @@ const ParentsListNotesEval = () => {
     }, []);
 
     const fetchAllmatiere_classe_info = () => {
-        http.get('/get_info_matiere_classe/' + etab + '/' + classe + '/' + userid).then(res => {
+        http.get('/get_info_matiere_classe/' + etab + '/' + niveau + '/' + classe + '/' + userid).then(res => {
             setmatiere_classe_info(res.data);
         })
     }
