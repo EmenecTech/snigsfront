@@ -440,8 +440,8 @@ function formatNumberWithCommas(number) {
                         <Card.Body>
                                <div>
                                   <div>
-                                    <button className="btn btn-info" onClick={() => setActiveTab('Onglet1')}>Statistiques</button>{" "}
-                                    <button className="btn btn-info" onClick={() => setActiveTab('Onglet2')}>Bulletins de notes</button>
+                                    <button className="btn btn-info" onClick={() => setActiveTab('Onglet1')}>{user.langue === "en" ? (<div>Statistics</div>):(<div> Statistiques </div>)}</button>{" "}
+                                    <button className="btn btn-info" onClick={() => setActiveTab('Onglet2')}>{user.langue === "en" ? (<div>Report Cards</div>):(<div> Bulletin de notes </div>)}</button>
                                   </div>
                             
                                   <div>
@@ -455,45 +455,45 @@ function formatNumberWithCommas(number) {
                                                     >
                                                         <thead>
                                                             <tr>
-                                                                <th>Intitulé</th>
-                                                                <th>Valeur</th>
+                                                                <th>{user.langue === "en" ? (<div>Title</div>):(<div> Intitulé </div>)}</th>
+                                                                <th>{user.langue === "en" ? (<div>Value</div>):(<div>Valeur</div>)}</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                     
                                                             <tr>
-                                                                <td>Membres d'Administration</td>
+                                                                <td>{user.langue === "en" ? (<div>Members of the administration</div>):(<div> Membres de l'administration </div>)}</td>
                                                                 <td>{nbrad}</td>
                     
                                                             </tr>
                                                             <tr>
-                                                                <td>Enseignants</td>
+                                                                <td>{user.langue === "en" ? (<div>Teachers</div>):(<div> Enseignants </div>)}</td>
                                                                 <td>{nbrens}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Eleves</td>
+                                                                <td>{user.langue === "en" ? (<div>Students</div>):(<div> Elèves </div>)}</td>
                                                                 <td>{nbreleve}</td>
                     
                                                             </tr>
                                                             <tr>
-                                                                <td>Inscripts</td>
+                                                                <td>{user.langue === "en" ? (<div>Registration</div>):(<div> Inscription </div>)}</td>
                                                                 <td>{nbreins}</td>
                     
                                                             </tr>
                                                             <tr>
-                                                                <td>Préinscription</td>
+                                                                <td>{user.langue === "en" ? (<div>Pre-registration</div>):(<div> Preinscription </div>)}</td>
                                                                 <td>{nbrpreins}</td>
                     
                                                             </tr>
                                                             <tr>
-                                                                <td>Eleves archivés</td>
+                                                                <td>{user.langue === "en" ? (<div>Archived students</div>):(<div> Elèves archivés </div>)}</td>
                                                                 <td>{nbrarchv}</td>
                     
                                                             </tr>
                     
                     
                                                             <tr>
-                                                                <td>Parents</td>
+                                                                <td>{user.langue === "en" ? (<div>Parents</div>):(<div>Parents</div>)}</td>
                                                                 <td>{nbrpar}</td>
                     
                                                             </tr>
@@ -501,7 +501,7 @@ function formatNumberWithCommas(number) {
                                                            
                     
                                                             <tr>
-                                                                <td>Montant de pension enregistré</td>
+                                                                <td>{user.langue === "en" ? (<div>Registered pension amounts</div>):(<div>Montant des pensions enregistrés</div>)}</td>
                                                                 <td>XAF {formatNumberWithCommas(sumpay)} </td>
                     
                                                             </tr>
@@ -529,11 +529,11 @@ function formatNumberWithCommas(number) {
                                             <Col md="12">
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1"> Maternelle </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Nursery</div>):(<div> Maternelle </div>)} </Form.Label>
                                                         <select className="form-select mb-1 shadow-none" name="filiere" onChange={handleChange} required>
                                                             <option></option>
-                                                            <option> Nouvelle Version</option>
-                                                            <option> Ancienne Version</option>
+                                                            <option> {user.langue === "en" ? (<div>New version</div>):(<div> Nouvelle version </div>)}</option>
+                                                            <option> {user.langue === "en" ? (<div>Old version</div>):(<div> Ancienne version </div>)}</option>
                                                         </select>
                                                     </Form.Group>
                                                 </Form.Group>
@@ -553,11 +553,11 @@ function formatNumberWithCommas(number) {
                                             <Col md="12" className="mt-4">
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1"> Primaire </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Primary</div>):(<div> Primaire </div>)} </Form.Label>
                                                         <select className="form-select mb-1 shadow-none" name="filiere" onChange={handleChange} required>
                                                              <option></option>
-                                                            <option> Nouvelle Version</option>
-                                                            <option> Ancienne Version</option>
+                                                            <option> {user.langue === "en" ? (<div>New version</div>):(<div>Nouvelle version</div>)}</option>
+                                                            <option>{user.langue === "en" ? (<div>Old version</div>):(<div> Ancienne version </div>)}</option>
                                                         </select>
                                                     </Form.Group>
                                                 </Form.Group>
@@ -579,11 +579,11 @@ function formatNumberWithCommas(number) {
                                             <Col md="12" className="mt-4">
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1"> Secondaire </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Secondary</div>):(<div> Secondaire </div>)} </Form.Label>
                                                         <select className="form-select mb-1 shadow-none" name="filiere" onChange={handleChange} required>
                                                             <option></option>
-                                                            <option> Nouvelle Version</option>
-                                                            <option> Ancienne Version</option>
+                                                            <option> {user.langue === "en" ? (<div>New version</div>):(<div> Nouvelle version </div>)}</option>
+                                                            <option> {user.langue === "en" ? (<div>Old version</div>):(<div> Ancienne version </div>)}</option>
                                                         </select>
                                                     </Form.Group>
                                                 </Form.Group>
@@ -605,7 +605,7 @@ function formatNumberWithCommas(number) {
 
 
                                         <div className="text-center">
-                                            <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                            <Button type="button" variant="primary" onClick={submitForm} >{user.langue === "en" ? (<div>Confirm</div>):(<div> Confirmer </div>)}</Button>
                                         </div>
                                     </Form>
                                         
