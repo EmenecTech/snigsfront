@@ -33,6 +33,16 @@ const EleveListNotesEval = () => {
             seteleves_classe(res.data);
         })
     }
+       const [classes, setclasses] = useState([]);
+    useEffect(() => {
+        fetchAllclasses();
+    }, []);
+
+    const fetchAllclasses = () => {
+        http.get('/classe_bull/' + classe + '/' + etab).then(res => {
+            setclasses(res.data);
+        })
+    }
 
     const [matiere_classe_info, setmatiere_classe_info] = useState([]);
     useEffect(() => {
@@ -194,7 +204,7 @@ const EleveListNotesEval = () => {
 
                         <Card.Body>
 
-    {eleves_classe.cycle_niveau === "Secondaire" || eleves_classe.cycle_niveau === "Secondary" ? <div>
+    {classes.cycle_niveau === "Secondaire" || classes.cycle_niveau === "Secondary" ? <div>
                          <table className="table">
                                 <thead>
                                     <tr>
@@ -247,7 +257,7 @@ const EleveListNotesEval = () => {
                             </table>
                         </div> : <div></div>}
 
-                     {eleves_classe.cycle_niveau === "Primaire" || eleves_classe.cycle_niveau === "Primary" ? <div>
+                     {classes.cycle_niveau === "Primaire" || classes.cycle_niveau === "Primary" ? <div>
                          <table className="table">
                                 <thead>
                                     <tr>
@@ -279,7 +289,7 @@ const EleveListNotesEval = () => {
                             </table>
                         </div> : <div></div>}
 
-                 {eleves_classe.cycle_niveau === "Maternelle" || eleves_classe.cycle_niveau === "Nursery" ? <div>
+                 {classes.cycle_niveau === "Maternelle" || classes.cycle_niveau === "Nursery" ? <div>
                          <table className="table">
                                 <thead>
                                     <tr>
