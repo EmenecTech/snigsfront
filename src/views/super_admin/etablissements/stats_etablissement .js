@@ -153,6 +153,17 @@ function formatNumberWithCommas(number) {
         })
     }
 
+    const [drt, setdrt] = useState([]);
+    useEffect(() => {
+        fetchAlldrt();
+    }, []);
+
+    const fetchAlldrt = () => {
+        http.get('/user_for_super_admin/directors/' + etab).then(res => {
+            setdrt(res.data);
+        })
+    }
+
 
     const [sumpay, setsumpay] = useState([]);
       useEffect(() => {
