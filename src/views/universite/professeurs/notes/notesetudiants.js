@@ -248,7 +248,7 @@ const ProfesseurAddNote = () => {
                                             <th>Note</th>
 
                                             
-                                            <th> </th>
+                                          
                                         </tr>
                                 </thead>
                                 <tbody>
@@ -259,7 +259,7 @@ const ProfesseurAddNote = () => {
                                             <td>{item.prenom} </td>
                                             <td>{item.competence_visee_note} </td>
                                             <td>{item.note_cc}</td>
-                                            <td>{item.note_finale}</td>
+                                           
 
                                            
                                 
