@@ -323,6 +323,41 @@ const EleveListNotesEval = () => {
                                 </tbody>
                             </table>
                         </div> : <div></div>}
+
+                     {classes.cycle_niveau === "Licence" ? <div>
+                         <table className="table">
+                                <thead>
+                                    <tr>
+                                        
+                                            <th>Sno.</th>
+                                            <th>Nom(s)</th>
+                                            <th>Prénom(s)</th>
+                                            <th>Matiere</th>
+                                            <th>CC</th>
+                                            <th>SN</th>
+                                            <th>Note finale</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {notes.map((item, index) => (
+                                        <tr key={item.id}>
+                                          
+                                             
+                                             <td>{++index}</td>
+                                            <td>{item.nom}</td>
+                                            <td>{item.prenom} </td>
+                                            <td>{item.matiere_note} </td>
+                                            <td>{item.note_cc}</td>
+                                            <td>{item.note_sn}</td>
+                                            <td>{item.note_finale}</td>
+                                           
+                                        </tr>
+                                    ))}
+
+                                </tbody>
+                            </table>
+                        </div> : <div></div>}
                             
                         </Card.Body>
                     </Card>
