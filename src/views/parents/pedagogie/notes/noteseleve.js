@@ -10,7 +10,7 @@ const ParentsListNotesEval = () => {
     const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
 
-    const { evaluation, matiere } = useParams();
+    const {evaluation} = useParams();
 
     const { user, http } = AuthUser();
     const etab = user.etablissement;
