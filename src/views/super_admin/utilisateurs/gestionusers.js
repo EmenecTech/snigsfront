@@ -115,7 +115,7 @@ const userlist = [
 ];
 
 const UtilisateursListe = () => {
-  const { http, setToken } = AuthUser();
+  const { http, setToken, user } = AuthUser();
   const getToken = AuthUser();
   const [users, setUser] = useState([]);
 
@@ -146,7 +146,7 @@ const UtilisateursListe = () => {
             <Card>
               <Card.Header className="d-flex justify-content-between">
                 <div className="header-title">
-                  <h4 className="card-title">Liste des utilisateurs</h4>
+                  <h4 className="card-title">{user.langue === "en" ? (<div>List of users</div>):(<div>Liste des utilisateurs</div>)}</h4>
                 </div>
                 <Link to="/utilisateurs/add/super/admin">
                   <Button type="button" variant="primary">
@@ -180,14 +180,14 @@ const UtilisateursListe = () => {
                   >
                     <thead>
                       <tr className="ligth">
-                        <th>Profil</th>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Rôle</th>
-                        <th>Etablissement</th>
-                        <th>Email</th>
-                        <th>Téléphone</th>
-                        <th min-width="100px">Action</th>
+                        <th>{user.langue === "en" ? (<div>Profile</div>):(<div>Profil</div>)}</th>
+                        <th>{user.langue === "en" ? (<div>Name</div>):(<div>Nom</div>)}</th>
+                        <th>{user.langue === "en" ? (<div>First name</div>):(<div>Prénom</div>)}</th>
+                        <th>{user.langue === "en" ? (<div>Role</div>):(<div>Rôle</div>)}</th>
+                        <th>{user.langue === "en" ? (<div>School</div>):(<div>Etablissement</div>)}</th>
+                        <th>{user.langue === "en" ? (<div>Email</div>):(<div>Email</div>)}</th>
+                        <th>{user.langue === "en" ? (<div>Phone</div>):(<div>Téléphone</div>)}</th>
+                        <th min-width="100px">{user.langue === "en" ? (<div>Action</div>):(<div>Action</div>)}</th>
                       </tr>
                     </thead>
                     <tbody>
