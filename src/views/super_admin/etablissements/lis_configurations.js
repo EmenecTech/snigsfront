@@ -48,7 +48,7 @@ SwiperCore.use([Navigation]);
 
 
 const ListConfigurations = memo((props) => {
-    const { http, setToken } = AuthUser();
+    const { http, setToken, user } = AuthUser();
     const [configurations, setConfiguration] = useState([]);
     useEffect(() => {
         fetchAllConfiguration();
@@ -301,7 +301,7 @@ const ListConfigurations = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Configurations des établissements</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Configuration of establishments</div>):(<div> Configuration des établissements </div>)}</h4>
                             </div>
 
                             <Link to="/etablissement/configurations/add/super/admin">
@@ -311,7 +311,7 @@ const ListConfigurations = memo((props) => {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                         </svg>
                                     </span>
-                                    Ajouter
+                                    {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter </div>)}
                                 </Button>
                             </Link>
                         </Card.Header>
@@ -327,12 +327,12 @@ const ListConfigurations = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Intitulé</th>
-                                            <th>Section</th>
-                                            <th>Type d'enseignement</th>
-                                            <th>Statut administratif</th>
-                                            <th>Niveau d'enseignement</th>
-                                            <th>Statut religieux</th>
+                                            <th>{user.langue === "en" ? (<div>Title</div>):(<div> Intitulé </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Section</div>):(<div> Section </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Type of teaching</div>):(<div> Type d'enseignement </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Administrative status</div>):(<div> Statut administratif</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Level of teaching</div>):(<div> Niveau d'enseignement </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Religious status</div>):(<div> Statut réligieux </div>)}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
