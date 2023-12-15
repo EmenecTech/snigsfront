@@ -468,8 +468,8 @@ function formatNumberWithCommas(number) {
                             
                                   <div>
                                     {activeTab === 'Onglet1' && <div><div className="table-responsive border-bottom my-3">
-                                                  <h3>Responsables</h3>
-                                                    
+                                                  <h3>Responsables </h3>
+                                                     
                                                   
                                                     <Table
                                                         responsive
