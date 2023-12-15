@@ -357,7 +357,7 @@ const Editnote = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">{user.langue === "en" ? (<div>Edit Note</div>):(<div> Modifier la Note </div>)}</h4>
+                                                    <h4 className="card-title">{user.langue === "en" ? (<div>Modify Note</div>):(<div> Modifier la Note </div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -368,7 +368,7 @@ const Editnote = memo((props) => {
                                  {etab == 24 ? <div>
                                   <Form.Group className="form-group">
       
-                                                 <Form.Label htmlFor="exampleFormControlSelect1">Selectionner la matière</Form.Label>
+                                                 <Form.Label htmlFor="exampleFormControlSelect1">{user.langue === "en" ? (<div>Select material</div>):(<div> Sélectionner la matière </div>)}</Form.Label>
                                                  <Form.Control type="number" id="matiere" name="matiere"
                                                      defaultValue={onenote.matiere_note}
                                                      onChange={handleChange}
@@ -377,7 +377,7 @@ const Editnote = memo((props) => {
                                                  />
                                              </Form.Group>
                                              <Form.Group className='form-group'>
-                                                 <Form.Label>Note</Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Note</div>):(<div> Note  </div>)}</Form.Label>
                                                  <Form.Control type="number" id="valeur_note" name="valeur_note"
                                                      value={inputs.valeur_note || ''}
                                                      onChange={handleChange}
@@ -386,18 +386,18 @@ const Editnote = memo((props) => {
   
                                       
                                              <Form.Group className='form-group'>
-                                                 <Form.Label>Appreciation</Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Appreciation</div>):(<div>Appréciation</div>)}</Form.Label>
  
                                            <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                            <option value={onenote.appreciation_note}>{onenote.appreciation_note} </option>
-                                                     <option value="Non acquis">Non acquis</option>
-                                                     <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                     <option value="Acquis">Acquis</option>
+                                                     <option value="Non acquis">{user.langue === "en" ? (<div>Not acquired</div>):(<div> Non acquis  </div>)}</option>
+                                                     <option value="En cours d'acquisition">{user.langue === "en" ? (<div>In course of acquisiton</div>):(<div> En cour d'acquisition </div>)}</option>
+                                                     <option value="Acquis">{user.langue === "en" ? (<div>Acquired</div>):(<div> Acquis </div>)}</option>
                                                  </select>
                                             </Form.Group>
                                      
                                                 <Form.Group className='form-group'>
-                                                 <Form.Label>Compétence visée</Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Target skill</div>):(<div>Compétence visée</div>)}</Form.Label>
                                                  <Form.Control type="text" id="competence_visee" name="competence_visee"
                                                      value={inputs.competence_visee || ''}
                                                      onChange={handleChange}
@@ -405,7 +405,7 @@ const Editnote = memo((props) => {
                                              </Form.Group>
                          </div> : <div>
                                  <Form.Group className='form-group'>
-                                                 <Form.Label>Groupes</Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Group</div>):(<div>Groupes</div>)}</Form.Label>
  
                                                  <Form.Control type="number" id="matiere" name="matiere"
                                                      defaultValue={onenote.matiere_note}
@@ -414,7 +414,7 @@ const Editnote = memo((props) => {
                                                  />
                                             </Form.Group>
                                           <Form.Group className='form-group'>
-                                                 <Form.Label>Note</Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Note</div>):(<div> Note  </div>)}</Form.Label>
  
                                            <select className="form-select mb-3 shadow-none" id="valeur_note" name="valeur_note" onChange={handleChange}>
                                                      <option> </option>
@@ -425,7 +425,7 @@ const Editnote = memo((props) => {
                                                  </select>
                                               </Form.Group>
                                              <Form.Group className='form-group'>
-                                                 <Form.Label>coefficient</Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Coefficient</div>):(<div> Coefficient  </div>)}</Form.Label>
                                                  <Form.Control type="number" id="coef" name="coef"
                                                      value={coefficient}
                                                      
@@ -433,7 +433,7 @@ const Editnote = memo((props) => {
                                                  />
                                              </Form.Group>
                                              <Form.Group className='form-group'>
-                                                 <Form.Label>Indices d'évalutation</Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Rating index</div>):(<div> Indices d'évaluation  </div>)}</Form.Label>
  
                                                  <Form.Control type="number" id="competence_visee" name="competence_visee"
                                                      defaultValue={onenote.competence_visee_note}
@@ -443,13 +443,13 @@ const Editnote = memo((props) => {
                                                  />
                                             </Form.Group>
                                                   <Form.Group className='form-group'>
-                                                 <Form.Label>Appreciation</Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Appreciation</div>):(<div> Appreciation </div>)}</Form.Label>
  
                                            <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                            <option value={onenote.appreciation_note}>{onenote.appreciation_note} </option>
-                                                     <option value="Non acquis">Non acquis</option>
-                                                     <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                     <option value="Acquis">Acquis</option>
+                                                    <option value="Non acquis">{user.langue === "en" ? (<div>Not acquired</div>):(<div> Non acquis  </div>)}</option>
+                                                     <option value="En cours d'acquisition">{user.langue === "en" ? (<div>In course of acquisiton</div>):(<div> En cour d'acquisition </div>)}</option>
+                                                     <option value="Acquis">{user.langue === "en" ? (<div>Acquired</div>):(<div> Acquis </div>)}</option>
                                                  </select>
                                             </Form.Group>                                
                                  </div>}
@@ -459,7 +459,7 @@ const Editnote = memo((props) => {
                                      {etab == 24 ? <div>
                                              <Form.Group className="form-group">
       
-                                                 <Form.Label htmlFor="exampleFormControlSelect1">Selectionner la matière</Form.Label>
+                                                 <Form.Label htmlFor="exampleFormControlSelect1">{user.langue === "en" ? (<div>Select material</div>):(<div> Sélectionner la matière  </div>)}</Form.Label>
                                                  <Form.Control type="number" id="matiere" name="matiere"
                                                      defaultValue={onenote.matiere_note}
                                                      onChange={handleChange}
@@ -467,7 +467,7 @@ const Editnote = memo((props) => {
                                                  />
                                              </Form.Group>
                                              <Form.Group className='form-group'>
-                                                 <Form.Label>Note </Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Note</div>):(<div> Note  </div>)}</Form.Label>
                                                  <Form.Control type="number" id="valeur_note" name="valeur_note"
                                                      value={inputs.valeur_note || ''}
                                                      onChange={handleChange}
@@ -476,18 +476,18 @@ const Editnote = memo((props) => {
   
                                           
                                              <Form.Group className='form-group'>
-                                                 <Form.Label>Appreciation</Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Appreciation</div>):(<div> Appreciation  </div>)}</Form.Label>
  
                                            <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                            <option value={onenote.appreciation_note}>{onenote.appreciation_note} </option>
-                                                     <option value="Non acquis">Non acquis</option>
-                                                     <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                     <option value="Acquis">Acquis</option>
+                                                      <option value="Non acquis">{user.langue === "en" ? (<div>Not acquired</div>):(<div> Non acquis  </div>)}</option>
+                                                     <option value="En cours d'acquisition">{user.langue === "en" ? (<div>In course of acquisiton</div>):(<div> En cour d'acquisition </div>)}</option>
+                                                     <option value="Acquis">{user.langue === "en" ? (<div>Acquired</div>):(<div> Acquis </div>)}</option>
                                                  </select>
                                             </Form.Group>
                                      
                                                 <Form.Group className='form-group'>
-                                                 <Form.Label>Compétence visée</Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Target skill</div>):(<div> Compétence visée </div>)}</Form.Label>
                                                  <Form.Control type="text" id="competence_visee" name="competence_visee"
                                                      value={inputs.competence_visee || ''}
                                                      onChange={handleChange}
@@ -495,7 +495,7 @@ const Editnote = memo((props) => {
                                              </Form.Group>
                                          </div> : <div>
                                              <Form.Group className='form-group'>
-                                                 <Form.Label>Groupes</Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Group</div>):(<div> Groupes </div>)}</Form.Label>
  
                                                  <Form.Control type="number" id="matiere" name="matiere"
                                                      defaultValue={onenote.matiere_note}
@@ -505,7 +505,7 @@ const Editnote = memo((props) => {
                                             </Form.Group>
  
                                              <Form.Group className='form-group'>
-                                                 <Form.Label>Indices d'évalutation</Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Rating index</div>):(<div> Indice d'évaluation </div>)}</Form.Label>
                                                  <Form.Control type="number" id="competence_visee" name="competence_visee"
                                                      defaultValue={onenote.competence_visee_note}
                                                      onChange={handleChange}
@@ -516,7 +516,7 @@ const Editnote = memo((props) => {
                                             </Form.Group>
  
                                              <Form.Group className='form-group'>
-                                                 <Form.Label>Note</Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Note</div>):(<div> Note </div>)}</Form.Label>
                                                  <Form.Control type="number" id="valeur_note" name="valeur_note"
                                                      value={inputs.valeur_note || ''}
                                                      onChange={handleChange}
@@ -524,13 +524,13 @@ const Editnote = memo((props) => {
                                              </Form.Group>
                                                  
                                              <Form.Group className='form-group'>
-                                                 <Form.Label>Appreciation</Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Appreciation</div>):(<div> Appréciation </div>)}</Form.Label>
  
                                            <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                                      <option value={onenote.appreciation_note}>{onenote.appreciation_note} </option>
-                                                     <option value="Non acquis">Non acquis</option>
-                                                     <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                     <option value="Acquis">Acquis</option>
+                                                     <option value="Non acquis">{user.langue === "en" ? (<div>Not acquired</div>):(<div> Non acquis  </div>)}</option>
+                                                     <option value="En cours d'acquisition">{user.langue === "en" ? (<div>In course of acquisiton</div>):(<div> En cour d'acquisition </div>)}</option>
+                                                     <option value="Acquis">{user.langue === "en" ? (<div>Acquired</div>):(<div> Acquis </div>)}</option>
                                                  </select>
                                             </Form.Group>
                                          </div>}
@@ -539,7 +539,7 @@ const Editnote = memo((props) => {
                  
                                      
                                          <Button variant="primary" onClick={submitForm}>
-                                             Ajouter
+                                             {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter </div>)}
                                          </Button>
                                      </Form>
                                             </Card.Body>
