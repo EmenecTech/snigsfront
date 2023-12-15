@@ -3,10 +3,7 @@ import { Row, Col, Image, Form, Button, ListGroup, } from 'react-bootstrap'
 import { Link, Routes, Route, useNavigate } from 'react-router-dom'
 import Card from '../../components/Card'
 
-import facebook from '../../assets/images/brands/fb.svg'
-import google from '../../assets/images/brands/gm.svg'
-import instagram from '../../assets/images/brands/im.svg'
-import linkedin from '../../assets/images/brands/li.svg'
+
 import auth1 from '../../assets/images/auth/01.png'
 import logo from '../../assets/logos/logo.png'
 
@@ -91,23 +88,7 @@ export default function LoginSnigs() {
                                     <Button onClick={submitForm} type="button" variant="btn btn-primary">Sign In</Button>
                                  </div>
                                  <br/>
-                                 <div className="d-flex justify-content-center">
-                                    <ListGroup as="ul" className="list-group-horizontal list-group-flush">
-                                       <ListGroup.Item as="li" className="border-0 pb-0">
-                                          <Link to="#"><Image src={facebook} alt="fb" /></Link>
-                                       </ListGroup.Item>
-                                       <ListGroup.Item as="li" className="border-0 pb-0">
-                                          <Link to="#"><Image src={google} alt="gm" /></Link>
-                                       </ListGroup.Item>
-                                       <ListGroup.Item as="li" className="border-0 pb-0">
-                                          <Link to="#"><Image src={instagram} alt="im" /></Link>
-                                       </ListGroup.Item>
-                                       <ListGroup.Item as="li" className="border-0 pb-0">
-                                          <Link to="#"><Image src={linkedin} alt="li" /></Link>
-                                       </ListGroup.Item>
-                                    </ListGroup>
-                                 </div>
-
+         
                               </Form>
                            </Card.Body>
                         </Card>
