@@ -379,7 +379,7 @@ const ListClassesEvalStat = memo((props) => {
                         <Card.Header className="d-flex justify-content-between">
                                     
                             <div className="header-title">
-                                <h4 className="card-title">Statistiques-Evaluations</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Statistics-assessments</div>):(<div>Statistiques-evaluations</div>)}: {classe}</h4>
                             </div>
                          <Button variant="primary mt-2" onClick={printData}>
                                 {user.langue === "en" ? (<div>Print</div>):(<div>Imprimer</div>)}
@@ -449,7 +449,7 @@ const ListClassesEvalStat = memo((props) => {
                                 </Col>
                                     <div className="header-title mb-2">
                                     <h3 className="card-title">{user.langue === "en" ? (<div>Class</div>):(<div>Classe</div>)}: {classe}</h3>
-                                    <h3 className="card-title">{user.langue === "en" ? (<div>Evaluation</div>):(<div>Evaluation</div>)}: {evaluation}</h3>
+                                    <h3 className="card-title">{user.langue === "en" ? (<div>Assessment</div>):(<div>Evaluation</div>)}: {evaluation}</h3>
                                                     
                                 </div>
                             <div className="table-responsive border-bottom my-3">
