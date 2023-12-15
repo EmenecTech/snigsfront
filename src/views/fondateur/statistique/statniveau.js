@@ -379,7 +379,7 @@ const NiveauxStat = memo((props) => {
                         <Card.Header className="d-flex justify-content-between">
                                     
                             <div className="header-title">
-                                <h4 className="card-title">{user.langue === "en" ? (<div>Levels</div>):(<div>Niveaux</div>)}:{classe}</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Levels</div>):(<div>Niveaux</div>)}</h4>
                             </div>
                          <Button variant="primary mt-2" onClick={printData}>
                                 {user.langue === "en" ? (<div>Print</div>):(<div>Imprimer</div>)}
