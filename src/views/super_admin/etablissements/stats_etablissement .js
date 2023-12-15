@@ -468,7 +468,7 @@ function formatNumberWithCommas(number) {
                             
                                   <div>
                                     {activeTab === 'Onglet1' && <div><div className="table-responsive border-bottom my-3">
-                                                  
+                                                  <h3>Responsables</h3>
                                                       <Table
                                                         responsive
                                                         striped
@@ -492,6 +492,15 @@ function formatNumberWithCommas(number) {
                                                                  <td>{fond.telephone}</td> 
                                                                  <td>{fond.email}</td>
                                                             </tr>
+                                                            {drt.map((item, idx) => (
+                                                            <tr key={idx}>
+                                                                 
+                                                                  <td>{item.nom} {item.prenom}</td
+                                                                  <td>{item.fonction_user}</td>
+                                                                  
+                                                                  <td>{item.telephone}</td>
+                                                                  <td>{item.email}</td>
+                                                                                                                              </tr>)}
                     
                                                           
                                                             
@@ -503,7 +512,7 @@ function formatNumberWithCommas(number) {
                                                         </tfoot>
                                                     </Table>
                                                    
-                                     
+                                                     <h3>Informations</h3>
                                                     <Table
                                                         responsive
                                                         striped
