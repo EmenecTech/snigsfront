@@ -378,9 +378,9 @@ const ListProgramme = memo((props) => {
                                                         <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Program type</div>):(<div> Type de programme </div>)}</Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="type" onChange={handleChange}>
                                                             <option></option>
-                                                              <option value="Normal">Normal</option> 
-                                                              <option value="Evaluations">Evaluations</option> 
-                                                             <option value="Autre">Autre</option>
+                                                              <option value="Normal">{user.langue === "en" ? (<div>Normal</div>):(<div>Normal</div>)}</option> 
+                                                              <option value="Evaluations">{user.langue === "en" ? (<div>Assessments</div>):(<div>Evaluations</div>)}</option> 
+                                                             <option value="Autre">{user.langue === "en" ? (<div>Other</div>):(<div>Autre</div>)}</option>
                                                    
 
                                                         </select>
@@ -409,9 +409,9 @@ const ListProgramme = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Intitulé</th>
-                                            <th>Type </th>
-                                            <th>Actions</th>
+                                            <th>{user.langue === "en" ? (<div>Title</div>):(<div> Intitulé </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Type</div>):(<div>Type</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Actions</div>):(<div>Actions</div>)}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
