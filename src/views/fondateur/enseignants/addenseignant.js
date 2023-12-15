@@ -166,10 +166,10 @@ const AddEnseignant = () => {
                                                     <Form.Label htmlFor="exampleInputText1">Type * </Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="type_user" onChange={handleChange}>
                                                         <option></option>
-                                                        <option value="Permanent">Permanent </option>
-                                                        <option value="Vacataire">Vacataire </option>
-                                                        <option value="Saisonnier">Saisonnier </option>
-                                                        <option value="Stagiaire">Stagiaire </option>
+                                                        <option value="Permanent">{user.langue === "en" ? (<div>Permanent</div>):(<div> Permanent </div>)}</option>
+                                                        <option value="Vacataire">{user.langue === "en" ? (<div>Temporary</div>):(<div> Vacataire </div>)}</option>
+                                                        <option value="Saisonnier">{user.langue === "en" ? (<div>Seasonal</div>):(<div>Saisonnier</div>)}</option>
+                                                        <option value="Stagiaire">{user.langue === "en" ? (<div>Trainee</div>):(<div>Stagiaire</div>)}</option>
                                                        
                                                      
                                                     </select>
