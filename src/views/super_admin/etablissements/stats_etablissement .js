@@ -497,7 +497,7 @@ function formatNumberWithCommas(number) {
                                                             {drt.map((item, idx) => (
                                                             <tr key={idx}>
                                                                  
-                                                                  <td>{item.nom} {item.prenom}</td
+                                                                  <td>{item.nom} {item.prenom}</td>
                                                                   <td>{item.fonction_user}</td>
                                                                   
                                                                   <td>{item.telephone}</td>
