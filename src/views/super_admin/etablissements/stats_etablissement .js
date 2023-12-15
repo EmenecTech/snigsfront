@@ -469,50 +469,8 @@ function formatNumberWithCommas(number) {
                                   <div>
                                     {activeTab === 'Onglet1' && <div><div className="table-responsive border-bottom my-3">
                                                   <h3>Responsables</h3>
-                                                      <Table
-                                                        responsive
-                                                        striped
-                                                        id="datatable"
-                                                        className=""
-                                                        data-toggle="data-table"
-                                                    >
-                                                        <thead>
-                                                            <tr>
-                                                                <th> Nom</th>
-                                                                <th> Rôle</th>
-                                                                <th> Téléphone</th>
-                                                                <th> Email</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-
-                                                            <tr>
-                                                                 <td>{fond.name} {fond.prenom}</td>
-                                                                 <td>{user.langue === "en" ? (<div>Founder </div>):(<div> Fondateur(trice) </div>)}</td>    
-                                                                 <td>{fond.telephone}</td> 
-                                                                 <td>{fond.email}</td>
-                                                            </tr>
-                                                            {drt.map((item, idx) => (
-                                                            <tr key={idx}>
-                                                                 
-                                                                  <td>{item.nom} {item.prenom}</td
-                                                                  <td>{item.fonction_user}</td>
-                                                                  
-                                                                  <td>{item.telephone}</td>
-                                                                  <td>{item.email}</td>
-                                                                                                                              </tr>)}
-                    
-                                                          
-                                                            
-                                                            
-                    
-                                                        </tbody>
-                                                        <tfoot>
-                    
-                                                        </tfoot>
-                                                    </Table>
-                                                   
-                                                     <h3>Informations</h3>
+                                                    
+                                                  
                                                     <Table
                                                         responsive
                                                         striped
@@ -536,13 +494,20 @@ function formatNumberWithCommas(number) {
                                                                  <td>{fond.telephone}</td> 
                                                                  <td>{fond.email}</td>
                                                            </tr>
+                                                            {drt.map((item, idx) => (
+                                                            <tr key={idx}>
+                                                                 
+                                                                  <td>{item.nom} {item.prenom}</td
+                                                                  <td>{item.fonction_user}</td>
+                                                                  
+                                                                  <td>{item.telephone}</td>
+                                                                  <td>{item.email}</td>
+                                                            </tr>)}
+                    
                     
                                                         </tbody>
-                                                        <tfoot>
-                    
-                                                        </tfoot>
                                                     </Table>
-                                                 
+                                                        <h3>Informations</h3>
                                      
                                                     <Table
                                                         responsive
