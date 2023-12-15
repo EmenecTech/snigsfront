@@ -491,7 +491,7 @@ function formatNumberWithCommas(number) {
                                                             <tr>
                                                                  <td>{fond.name} {fond.prenom}</td>
                                                                  <td>{user.langue === "en" ? (<div>Founder </div>):(<div> Fondateur(trice) </div>)}</td>    
-                                                                 <td>{fond.telephone}/td> 
+                                                                 <td>{fond.telephone}</td> 
                                                                  <td>{fond.email}</td>
                                                           </tr>
                     
