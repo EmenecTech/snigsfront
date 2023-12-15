@@ -449,7 +449,7 @@ const ListEtabEvalStat = memo((props) => {
                                 </Col>
 
                                 <div className="header-title mb-2">
-                                    <h4 className="card-title">Evaluation : {evaluation}</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>Assessment</div>):(<div>Evaluation</div>)} : {evaluation}</h4>
                                 </div>
 
                             <div className="table-responsive border-bottom my-3">
