@@ -57,7 +57,7 @@ const EnseignantsPresence = () => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Enseignants</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>Teachers</div>):(<div>Enseignants</div>)}</h4>
                                 </div>
                               
                             </Card.Header>
@@ -81,7 +81,7 @@ const EnseignantsPresence = () => {
                                     </Col>
                                     <Col>
                                         <Button variant="primary" onClick={submitcheck}>
-                                             Trier
+                                             {user.langue === "en" ? (<div>Sort</div>):(<div>Trier</div>)}
                                         </Button>
                                     </Col>
                                 </Row>
@@ -96,10 +96,10 @@ const EnseignantsPresence = () => {
                                     <table id="user-list-table" className="table table-striped" role="grid" data-toggle="data-table">
                                         <thead>
                                             <tr className="ligth">
-                                                <th>Profile</th>
-                                                <th>Nom</th>
-                                                <th>Date</th>
-                                                <th min-width="100px">Action</th>
+                                                <th>{user.langue === "en" ? (<div>Profile</div>):(<div>Profil</div>)}</th>
+                                                <th>{user.langue === "en" ? (<div>Name</div>):(<div>Nom</div>)}</th>
+                                                <th>{user.langue === "en" ? (<div>Date</div>):(<div>Date</div>)}</th>
+                                                <th min-width="100px">{user.langue === "en" ? (<div>Action</div>):(<div>Action</div>)}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
