@@ -154,7 +154,7 @@ const AddUtilisateurs = () => {
                                                         <option></option>
                                                         <option value="Super adminstrateur">{user.langue === "en" ? (<div>Super administrator</div>):(<div>Super administrateur</div>)}</option>
                                                         <option value="Fondateur">{user.langue === "en" ? (<div>Founder</div>):(<div>Fondateur</div>)}</option>
-                                                        <option value="Directeur">{user.langue === "en" ? (<div>Director</div>):(<div>Directeur</div>)}</option>
+                                            
                                                     </select>
                                                 </Form.Group>
                                             </Form.Group>
