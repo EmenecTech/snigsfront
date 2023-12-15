@@ -46,7 +46,7 @@ const ChoixStatetab = () => {
                                         <tbody>
                                             
                                                     <tr>
-                                                        <td>{user.langue === "en" ? (<div>student statistic </div>):(<div>Statistique Elèves</div>)}</td>
+                                                        <td>{user.langue === "en" ? (<div>students statistic </div>):(<div>Statistique Elèves</div>)}</td>
 
                                                         <td>
                                                             <div className="flex align-items-center list-user-action">
