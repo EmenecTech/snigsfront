@@ -501,7 +501,7 @@ function formatNumberWithCommas(number) {
                                                                   <td>{item.fonction_user}</td> 
                                                                   <td>{item.telephone}</td>
                                                                   <td>{item.email}</td>
-                                                            </tr>)}
+                                                            </tr>))}
                     
                     
                                                         </tbody>
