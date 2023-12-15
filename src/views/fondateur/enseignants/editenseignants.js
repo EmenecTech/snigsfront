@@ -75,7 +75,7 @@ const EditEnseignants = () => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Modifier un enseignant</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>Modify a teacher</div>):(<div> Modifier un enseignant</div>)}</h4>
                                 </div>
                             </Card.Header>
                             <Card.Body>
@@ -85,7 +85,7 @@ const EditEnseignants = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Nom </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Name</div>):(<div>Nom</div>)}</Form.Label>
                                                     <Form.Control type="text" name="nom" value={inputs.nom}  onChange={handleChange} />
                                                 </Form.Group>
                                             </Form.Group>
@@ -93,7 +93,7 @@ const EditEnseignants = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Prenom </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>First name</div>):(<div>Prénom</div>)}</Form.Label>
                                                     <Form.Control type="text" name="prenom" value={inputs.prenom}  onChange={handleChange} />
                                                 </Form.Group>
                                             </Form.Group>
@@ -101,11 +101,11 @@ const EditEnseignants = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Genre </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Gender</div>):(<div>Genre</div>)}</Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="genre" value={inputs.genre} onChange={handleChange} >
                                                         <option></option>
-                                                        <option value="Masculin">Masculin</option>
-                                                        <option value="Feminin">Feminin</option>
+                                                        <option value="Masculin">{user.langue === "en" ? (<div>Male</div>):(<div> Masculin</div>)}</option>
+                                                        <option value="Feminin">{user.langue === "en" ? (<div>Female</div>):(<div>Féminin</div>)}</option>
                                                     </select>
                                                 </Form.Group>
                                             </Form.Group>
@@ -116,7 +116,7 @@ const EditEnseignants = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Date de naissance </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Date of birth</div>):(<div>Date de naissance</div>)}</Form.Label>
                                                     <Form.Control type="date" name="date_n" value={inputs.date_n}  onChange={handleChange} />
                                                 </Form.Group>
                                             </Form.Group>
@@ -124,7 +124,7 @@ const EditEnseignants = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Lieu de naissance </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Place of birth</div>):(<div>Lieu de naissance</div>)}</Form.Label>
                                                     <Form.Control type="text" name="lieu_n" value={inputs.lieu_n}  onChange={handleChange} />
                                                 </Form.Group>
                                             </Form.Group>
@@ -132,7 +132,7 @@ const EditEnseignants = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Nationalité </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Nationality</div>):(<div>Nationalité</div>)}</Form.Label>
                                                     <Form.Control type="text" name="nation" value={inputs.nation}  onChange={handleChange}  />
                                                 </Form.Group>
                                             </Form.Group>
@@ -143,7 +143,7 @@ const EditEnseignants = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Email </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Email</div>):(<div>Email</div>)}</Form.Label>
                                                     <Form.Control type="email" name="email" value={inputs.email}  onChange={handleChange} />
                                                 </Form.Group>
                                             </Form.Group>
@@ -152,7 +152,7 @@ const EditEnseignants = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Téléphone </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Phone</div>):(<div>Téléphone</div>)}</Form.Label>
                                                     <Form.Control type="text" value={inputs.tel} name="tel"  onChange={handleChange}  />
                                                 </Form.Group>
                                             </Form.Group>
@@ -160,7 +160,7 @@ const EditEnseignants = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Numéro CNI / Passeport </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>National identity card / Passport number</div>):(<div>Numéro CNI / Passeport</div>)}</Form.Label>
                                                     <Form.Control type="text" name="cni" value={inputs.cni}  onChange={handleChange} />
                                                 </Form.Group>
                                             </Form.Group>
@@ -173,7 +173,7 @@ const EditEnseignants = () => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Matière principale * </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Main material</div>):(<div> Matière principal </div>)}</Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="matiere" value={ inputs.matiere} onChange={handleChange}>
                                                         <option></option>
                                                         {matieres.map((item)=> (
@@ -192,11 +192,11 @@ const EditEnseignants = () => {
                                                     <Form.Label htmlFor="exampleInputText1">Type * </Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="type_user" value={inputs.type_user} onChange={handleChange}>
                                                         <option></option>
-                                                        <option value="Permanent">Permanent</option>
-                                                        <option value="Vacataire">Vacataire</option>
-                                                        <option value="Temporaire">Temporaire</option>
-                                                        <option value="Saisonnier">Saisonnier</option>
-                                                        <option value="Stagiaire">Stagiaire</option>
+                                                        <option value="Permanent">{user.langue === "en" ? (<div>Permanent</div>):(<div>Permanent</div>)}</option>
+                                                        <option value="Vacataire">{user.langue === "en" ? (<div>Temporary</div>):(<div>Vacataire</div>)}</option>
+                                                        <option value="Temporaire">{user.langue === "en" ? (<div>Seasonal</div>):(<div>Saisonnier</div>)}</option>
+                                                        <option value="Saisonnier">{user.langue === "en" ? (<div>Trainee</div>):(<div>Stagiaire</div>)}</option>
+                                    
                                                     </select>
                                                 </Form.Group>
                                             </Form.Group>
@@ -204,7 +204,7 @@ const EditEnseignants = () => {
                                     </Row>
 
                                     <div className="text-center">
-                                        <Button type="button" variant="primary" onClick={submitForm}>Modifier</Button>
+                                        <Button type="button" variant="primary" onClick={submitForm}>{user.langue === "en" ? (<div>Modify</div>):(<div>Modifier</div>)}</Button>
                                     </div>
                                 </Form>
                             </Card.Body>
