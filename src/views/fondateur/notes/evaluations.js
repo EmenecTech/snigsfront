@@ -382,7 +382,7 @@ const AdminListEvaluationsNotes = memo((props) => {
 
                                                         <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" to={"/Admin/List/Eleves/Notes/" + niveau + "/" + classe + "/" + item.intitule_evaluation}>
 
-                                                            Consulter
+                                                            {user.langue === "en" ? (<div>Consult</div>):(<div> Consulter </div>)}
 
                                                         </Link>
 
