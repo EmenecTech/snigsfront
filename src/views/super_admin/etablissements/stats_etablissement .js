@@ -469,7 +469,40 @@ function formatNumberWithCommas(number) {
                                   <div>
                                     {activeTab === 'Onglet1' && <div><div className="table-responsive border-bottom my-3">
                                                   
-                                                        
+                                                      <Table
+                                                        responsive
+                                                        striped
+                                                        id="datatable"
+                                                        className=""
+                                                        data-toggle="data-table"
+                                                    >
+                                                        <thead>
+                                                            <tr>
+                                                                <th> Nom</th>
+                                                                <th> Rôle</th>
+                                                                <th> Téléphone</th>
+                                                                <th> Email</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+
+                                                            <tr>
+                                                                 <td>{fond.name} {fond.prenom}</td>
+                                                                 <td>{user.langue === "en" ? (<div>Founder </div>):(<div> Fondateur(trice) </div>)}</td>    
+                                                                 <td>{fond.telephone}/td> 
+                                                                 <td>{fond.email}</td>
+                                                            <tr>
+                    
+                                                          
+                                                            
+                                                            
+                    
+                                                        </tbody>
+                                                        <tfoot>
+                    
+                                                        </tfoot>
+                                                    </Table>
+                                                   
                                      
                                                     <Table
                                                         responsive
