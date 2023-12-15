@@ -462,7 +462,7 @@ function formatNumberWithCommas(number) {
                         <Card.Body>
                                <div>
                                   <div>
-                                    <button className="btn btn-info" onClick={() => setActiveTab('Onglet1')}>{user.langue === "en" ? (<div>Statistics</div>):(<div> Statistiques </div>)}</button>{" "}
+                                    <button className="btn btn-info" onClick={() => setActiveTab('Onglet1')}>{user.langue === "en" ? (<div>Statistics</div>):(<div> Statistiques </div>)}</button>
                                     <button className="btn btn-info" onClick={() => setActiveTab('Onglet2')}>{user.langue === "en" ? (<div>Report Cards</div>):(<div> Bulletin de notes </div>)}</button>
                                   </div>
                             
@@ -480,10 +480,10 @@ function formatNumberWithCommas(number) {
                                                     >
                                                         <thead>
                                                             <tr>
-                                                                <th> Nom</th>
-                                                                <th> Rôle</th>
-                                                                <th> Téléphone</th>
-                                                                <th> Email</th>
+                                                                <th>{user.langue === "en" ? (<div>Statistics</div>):(<div>Nom</div>)}</th>
+                                                                <th>{user.langue === "en" ? (<div>Statistics</div>):(<div>Rôle</div>)}</th>
+                                                                <th>{user.langue === "en" ? (<div>Statistics</div>):(<div>Téléphone</div>)}</th>
+                                                                <th>{user.langue === "en" ? (<div>Statistics</div>):(<div>Email</div>)}</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
