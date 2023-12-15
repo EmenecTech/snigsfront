@@ -480,10 +480,10 @@ function formatNumberWithCommas(number) {
                                                     >
                                                         <thead>
                                                             <tr>
-                                                                <th>{user.langue === "en" ? (<div>Statistics</div>):(<div>Nom</div>)}</th>
-                                                                <th>{user.langue === "en" ? (<div>Statistics</div>):(<div>Rôle</div>)}</th>
-                                                                <th>{user.langue === "en" ? (<div>Statistics</div>):(<div>Téléphone</div>)}</th>
-                                                                <th>{user.langue === "en" ? (<div>Statistics</div>):(<div>Email</div>)}</th>
+                                                                <th>{user.langue === "en" ? (<div>Name</div>):(<div>Nom</div>)}</th>
+                                                                <th>{user.langue === "en" ? (<div>Role</div>):(<div>Rôle</div>)}</th>
+                                                                <th>{user.langue === "en" ? (<div>Phone</div>):(<div>Téléphone</div>)}</th>
+                                                                <th>{user.langue === "en" ? (<div>Email</div>):(<div>Email</div>)}</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -493,11 +493,7 @@ function formatNumberWithCommas(number) {
                                                                  <td>{user.langue === "en" ? (<div>Founder </div>):(<div> Fondateur(trice) </div>)}</td>    
                                                                  <td>{fond.telephone}/td> 
                                                                  <td>{fond.email}</td>
-                                                            <tr>
-                    
-                                                          
-                                                            
-                                                            
+                                                          </tr>
                     
                                                         </tbody>
                                                         <tfoot>
