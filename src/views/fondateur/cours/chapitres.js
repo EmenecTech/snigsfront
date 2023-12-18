@@ -62,19 +62,19 @@ const Admin_list_Chapitre = (props) => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Chapitres</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>Chapters</div>):(<div> chapitres </div>)}</h4>
                                 </div>
                             </Card.Header>
                             <div className="table-responsive">
                                 <table id="user-list-table" className="table table-striped" role="grid" data-toggle="data-table">
                                     <thead>
                                         <tr className="ligth">
-                                            <th>{user.langue === "en" ? (<div>Entitled </div>):(<div> Intitulé </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Title </div>):(<div> Intitulé </div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Number of hours </div>):(<div> Nombre d'heures  </div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Start date </div>):(<div> Date de début  </div>)}</th>
                                             <th>{user.langue === "en" ? (<div>End date</div>):(<div> Date de fin  </div>)}</th>
-                                            <th>Description</th>
-                                            <th min-width="100px">Action</th>
+                                            <th>{user.langue === "en" ? (<div>Description</div>):(<div> Description </div>)}</th>
+                                            <th min-width="100px">{user.langue === "en" ? (<div>Action</div>):(<div> Action </div>)}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -89,7 +89,7 @@ const Admin_list_Chapitre = (props) => {
                                                 <td>
                                                     <div className="flex align-items-center list-user-action">
                                                         <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Admin/List/Lecons/Cours/" + niveau + "/" + classe + "/" + matiere + "/" + item.intitule_chapitre}>
-                                                            Consulter
+                                                            {user.langue === "en" ? (<div>Consult</div>):(<div> Consulter </div>)}
                                                         </Link>
                                                     </div>
                                                 </td>
