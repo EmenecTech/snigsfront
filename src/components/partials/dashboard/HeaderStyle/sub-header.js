@@ -23,7 +23,7 @@ const SubHeader = memo((props) => {
                         <Col md="12">
                             <div className="d-flex justify-content-between flex-wrap">
                                 <div>
-                                    <h1>{user.langue === "en" ? (<div>Welcome</div>):(<div> Bienvenu </div>)}!</h1>
+                                    <h1>{user.langue === "en" ? (<div>Welcome!</div>):(<div> Bienvenu </div>)}</h1>
                                  
                                 </div>
                                 <div className="d-flex align-items-center">
