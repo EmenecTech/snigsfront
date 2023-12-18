@@ -65,13 +65,13 @@ const AdminLeconsChapitre = (props) => {
                                 <table id="user-list-table" className="table table-striped" role="grid" data-toggle="data-table">
                                     <thead>
                                         <tr className="ligth">
-                                            <th> {user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé</div>)}</th>
+                                            <th> {user.langue === "en" ? (<div>Title</div>):(<div> Intitulé</div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Chapter</div>):(<div> Chapitre</div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Number of hours</div>):(<div> Nombre d'heures </div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Start date</div>):(<div> Date de début</div>)}</th>
                                             <th>user.langue === "en" ? (<div>Date de fin</div>):(<div> Date de début</div>)</th>
 
-                                            <th>Description</th>
+                                            <th>{user.langue === "en" ? (<div>Description</div>):(<div> Description  </div>)}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
