@@ -347,9 +347,9 @@ const AdminListMatieresCours = memo((props) => {
                                                         <thead>
                                                             <tr>
                                                                 <th> {user.langue === "en" ? (<div>Course</div>):(<div> Matiere </div>)}</th>
-                                                                <th>Coefficient  </th>
+                                                                <th>{user.langue === "en" ? (<div>Factor</div>):(<div> Coefficient </div>)} </th>
                                                                 <th>{user.langue === "en" ? (<div>Group</div>):(<div> Groupe  </div>)}</th>
-                                                                <th>Action</th>
+                                                                <th>{user.langue === "en" ? (<div>Action</div>):(<div> Action </div>)}</th>
 
                                                             </tr>
                                                         </thead>
