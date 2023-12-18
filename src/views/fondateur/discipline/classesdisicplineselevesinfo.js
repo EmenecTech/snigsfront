@@ -300,7 +300,7 @@ const DisciplineEleveInfo = (props) => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Details</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>Details</div>):(<div> Détails </div>)}</h4>
                                 </div>
                             </Card.Header>
                             <Card.Body>
@@ -315,8 +315,8 @@ const DisciplineEleveInfo = (props) => {
                                         <thead>
                                             <tr>
                                                 <th>{user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé  </div>)}</th>
-                                                <th>Details</th>
-                                                <th>Action</th>
+                                                <th>{user.langue === "en" ? (<div>Details</div>):(<div> Détails </div>)}</th>
+                                                <th>{user.langue === "en" ? (<div>Action</div>):(<div> Action </div>)}</th>
 
                                             </tr>
                                         </thead>
