@@ -310,7 +310,7 @@ console.log(classe);
                                                         <th>{user.langue === "en" ? (<div>Place of birth </div>):(<div> Lieu de naissance   </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Parent name</div>):(<div> Nom du parent  </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Parent contact</div>):(<div> Contact du parent  </div>)}</th>
-                                                        <th>Email</th>
+                                                        <th>{user.langue === "en" ? (<div>Email</div>):(<div> Email </div>)}</th>
                                                         <th> {user.langue === "en" ? (<div>Phone </div>):(<div> Téléphone   </div>)}</th>
                                                         <th>Action</th>
 
