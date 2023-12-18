@@ -244,7 +244,7 @@ const PayementsListEleve = (props) => {
                                                     {" "}
                                                     <Button variant="primary mt-2" onClick={printData}>
 
-                                                        Imprimer
+                                                        {user.langue === "en" ? (<div>Print</div>):(<div> Imprimer </div>)}
                                                     </Button>
 
 
@@ -309,7 +309,7 @@ const PayementsListEleve = (props) => {
                                                 <h3>{user.langue === "en" ? (<div>Tuition fees</div>) : (<div>Frais de scolarités</div>)} </h3>
                                                 <h5 className="mb-4">{infopayement.montant_pension} XAF</h5>
 
-                                                <h4 className="mb-3">Détails </h4>
+                                                <h4 className="mb-3">{user.langue === "en" ? (<div>Details</div>):(<div> Détails </div>)} </h4>
                                                 {detailpayement.map((item) => (
                                                     <div className="mt-2" key={item.id}>
                                                         <h6 className="mb-0">{item.montant_detailpayement} XAF</h6>
@@ -331,10 +331,10 @@ const PayementsListEleve = (props) => {
                                                     >
                                                         <thead>
                                                             <tr>
-                                                                <th>Intitulé</th>
-                                                                <th>Montant</th>
-                                                                <th>Date</th>
-                                                                <th>Action</th>
+                                                                <th>{user.langue === "en" ? (<div>Title</div>):(<div> Intitulé </div>)}</th>
+                                                                <th>{user.langue === "en" ? (<div>Name</div>):(<div> Amount </div>)}</th>
+                                                                <th>{user.langue === "en" ? (<div>Date</div>):(<div> Date </div>)}</th>
+                                                                <th>{user.langue === "en" ? (<div>Name</div>):(<div> Action </div>)}</th>
 
                                                             </tr>
                                                         </thead>
@@ -479,7 +479,7 @@ const PayementsListEleve = (props) => {
 
 
                                                             <br />
-                                                            <h5 style={{ fontSize: "14px" }}>Reste  : {reste} XAF</h5> <h6 style={{ fontSize: "14px" }}>Signature</h6>
+                                                            <h5 style={{ fontSize: "14px" }}>{user.langue === "en" ? (<div>Rest</div>):(<div> Reste </div>)}  : {reste} XAF</h5> <h6 style={{ fontSize: "14px" }}>{user.langue === "en" ? (<div>Signature</div>):(<div> Signature </div>)}</h6>
 
 
 
@@ -569,9 +569,9 @@ const PayementsListEleve = (props) => {
 
                                                             <h3>{user.langue === "en" ? (<div>Payements </div>) : (<div>Payements </div>)}</h3>
                                                             <h5 className="mb-2" style={{ color: "blue" }}>{payementsum.montant_payementsum} XAF</h5>
-                                                            <p>Nom : {eleveinfo.nom}</p>
-                                                            <p>Prenom : {eleveinfo.prenom}</p>
-                                                            <p>Classe: {eleveinfo.other_in_user}</p>
+                                                            <p>{user.langue === "en" ? (<div>Name</div>):(<div> Nom  </div>)} : {eleveinfo.nom}</p>
+                                                            <p>{user.langue === "en" ? (<div>First Name</div>):(<div> Prénom  </div>)} : {eleveinfo.prenom}</p>
+                                                            <p>{user.langue === "en" ? (<div>Class</div>):(<div> Classe </div>)}: {eleveinfo.other_in_user}</p>
                                                             <Row>
                                                                 {listpayements.map((item2) => (
                                                                     <Col md="2">
@@ -594,7 +594,7 @@ const PayementsListEleve = (props) => {
 
 
                                                             <br />
-                                                            <h5 style={{ fontSize: "14px" }}>Reste  : {reste} XAF</h5> <h6 style={{ fontSize: "14px" }}>Signature</h6>
+                                                            <h5 style={{ fontSize: "14px" }}>{user.langue === "en" ? (<div>Rest</div>):(<div> Reste </div>)}  : {reste} XAF</h5> <h6 style={{ fontSize: "14px" }}>Signature</h6>
 
 
 
