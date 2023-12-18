@@ -362,7 +362,7 @@ const AdminlistdocumentsEleves = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Documents</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Documents</div>):(<div> Documents  </div>)}</h4>
                             </div>
                             <Button variant="primary mt-2" onClick={handleShow}>
                                 <span className="btn-inner">
@@ -370,7 +370,7 @@ const AdminlistdocumentsEleves = memo((props) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                     </svg>
                                 </span>
-                                Ajouter
+                                {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter </div>)}
                             </Button>
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
@@ -396,10 +396,10 @@ const AdminlistdocumentsEleves = memo((props) => {
                                                         <Form.Label htmlFor="exampleInputText1">Type de fichiers </Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="fichier" onChange={handleChange}>
                                                             <option value=""></option>
-                                                            <option value="Image">Image</option>
-                                                            <option value="Pdf">Pdf</option>
-                                                            <option value="Word">Word</option>
-                                                            <option value="Excel">Excel</option>
+                                                            <option value="Image">{user.langue === "en" ? (<div>Picture</div>):(<div> Image </div>)}</option>
+                                                            <option value="Pdf">{user.langue === "en" ? (<div>File Pdf</div>):(<div> PDF </div>)}</option>
+                                                            <option value="Word">{user.langue === "en" ? (<div>File Word</div>):(<div> Word </div>)}</option>
+                                                            <option value="Excel">{user.langue === "en" ? (<div>File excel</div>):(<div> Excel </div>)}</option>
                                                             <option value="Tous">{user.langue === "en" ? (<div>All</div>):(<div> Tous  </div>)}</option>
 
 
@@ -458,7 +458,7 @@ const AdminlistdocumentsEleves = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>{user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé   </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Title</div>):(<div>Intitulé   </div>)}</th>
                                             <th>{user.langue === "en" ? (<div>File type</div>):(<div>Type de fichier   </div>)}</th>
                                             <th> {user.langue === "en" ? (<div>RECIPIENT</div>):(<div>Destinataire  </div>)} </th>
                                             <th>Actions </th>
