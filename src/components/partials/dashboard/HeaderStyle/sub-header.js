@@ -1,7 +1,7 @@
 import React, { memo, Fragment } from 'react'
 import { Row, Col, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import AuthUser from "../../../components/AuthUser";
+import AuthUser from "../../../../components/AuthUser";
 //img
 import topHeader from '../../../../assets/images/dashboard/top-header.png'
 import topHeader1 from '../../../../assets/images/dashboard/top-header1.png'
