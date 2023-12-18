@@ -346,7 +346,7 @@ const ListPensions = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Pensions</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Pension</div>):(<div> Pensions </div>)}</h4>
                             </div>
 
 
@@ -356,7 +356,7 @@ const ListPensions = memo((props) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                     </svg>
                                 </span>
-                                Ajouter
+                                {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter </div>)}
                             </Button>
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
@@ -369,7 +369,7 @@ const ListPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé </div>)} </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Title</div>):(<div> Intitulé </div>)} </Form.Label>
                                                         <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -421,7 +421,7 @@ const ListPensions = memo((props) => {
 
 
                                         <div className="text-center">
-                                            <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                            <Button type="button" variant="primary" onClick={submitForm} >{user.langue === "en" ? (<div>Confirm</div>):(<div> Confirmer  </div>)}</Button>
                                         </div>
                                     </Form>
                                 </Modal.Body>
@@ -445,7 +445,7 @@ const ListPensions = memo((props) => {
                                             <th>{user.langue === "en" ? (<div>Slice(s)</div>):(<div>Tranche(s) </div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Start of payments</div>):(<div>Début des payements</div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Closing of payments</div>):(<div>Clôture des payements</div>)}</th>
-                                            <th>Actions</th>
+                                            <th>{user.langue === "en" ? (<div>Action</div>):(<div> Actions  </div>)}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
