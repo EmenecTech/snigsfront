@@ -379,10 +379,10 @@ const PayementsListNiveauClasseEleves = memo((props) => {
                                             <th>{user.langue === "en" ? (<div>Name </div>):(<div> Nom </div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Surname</div>):(<div>Prénom </div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Gender</div>):(<div>Genre</div>)}</th>
-                                            <th>Email</th>
+                                            <th>{user.langue === "en" ? (<div>Email</div>):(<div> Email  </div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Phone</div>):(<div>Téléphone</div>)}</th>
                                             <th>{user.langue === "en" ? (<div>State</div>):(<div>Etat</div>)}</th>
-                                            <th>Actions</th>
+                                            <th>{user.langue === "en" ? (<div>Action</div>):(<div> Actions </div>)}</th>
 
                                         </tr>
                                     </thead>
@@ -394,7 +394,7 @@ const PayementsListNiveauClasseEleves = memo((props) => {
                                                 <td>{item.sexe}</td>
                                                 <td>{item.email}</td>
                                                 <td>{item.telephone}</td>
-                                                <td>{item.montant_payementsum === item.montant_pension ? (<div style={{ color: "green" }}>En règle </div>) : (<div style={{ color: "red" }}>Pas en règle (<i>{item.montant_payementsum} xaf)</i> </div>)}</td>
+                                                <td>{item.montant_payementsum === item.montant_pension ? (<div style={{ color: "green" }}>{user.langue === "en" ? (<div>In order</div>):(<div> En règle  </div>)} </div>) : (<div style={{ color: "red" }}>{user.langue === "en" ? (<div>Not in order</div>):(<div> Pas en règle </div>)} (<i>{item.montant_payementsum} xaf)</i> </div>)}</td>
                                                 <td>
                                                     <div className="flex align-items-center list-user-action">
 
