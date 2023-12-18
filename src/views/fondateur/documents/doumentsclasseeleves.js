@@ -382,7 +382,7 @@ const DocumentsListNiveauClasseEleves = memo((props) => {
                                             <th>{user.langue === "en" ? (<div>Surname</div>):(<div> Prénom  </div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Gender</div>):(<div> Genre  </div>)}</th>
 
-                                            <th>Documents</th>
+                                            <th>{user.langue === "en" ? (<div>Documents</div>):(<div> Documents </div>)}</th>
 
                                         </tr>
                                     </thead>
