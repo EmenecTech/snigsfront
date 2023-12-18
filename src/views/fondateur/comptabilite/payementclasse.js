@@ -329,7 +329,7 @@ const PayementsListNiveauClasses = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Classes </h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Class</div>):(<div> Classes </div>)} </h4>
                             </div>
 
 
@@ -347,9 +347,9 @@ const PayementsListNiveauClasses = memo((props) => {
                                     <thead>
                                         <tr>
                                             <th>{user.langue === "en" ? (<div>Entitled </div>):(<div> Intitulé </div>)}</th>
-                                            <th>Cycle </th>
-                                            <th>Section </th>
-                                            <th>Actions</th>
+                                            <th>{user.langue === "en" ? (<div>Cygle</div>):(<div> Cygle </div>)} </th>
+                                            <th>{user.langue === "en" ? (<div>Sector</div>):(<div> Section </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Action</div>):(<div> Actions </div>)}</th>
 
                                         </tr>
                                     </thead>
