@@ -1,6 +1,7 @@
 import React, { memo, Fragment } from 'react'
 import { Row, Col, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import AuthUser from "../../../components/AuthUser";
 //img
 import topHeader from '../../../../assets/images/dashboard/top-header.png'
 import topHeader1 from '../../../../assets/images/dashboard/top-header1.png'
@@ -11,6 +12,7 @@ import topHeader5 from '../../../../assets/images/dashboard/top-header5.png'
 
 
 const SubHeader = memo((props) => {
+    const {user} = AuthUser();
 
 
     return (
@@ -21,7 +23,7 @@ const SubHeader = memo((props) => {
                         <Col md="12">
                             <div className="d-flex justify-content-between flex-wrap">
                                 <div>
-                                    <h1>Bienvenue!</h1>
+                                    <h1>{user.langue === "en" ? (<div>Welcome</div>):(<div> Bienvenu </div>)}!</h1>
                                  
                                 </div>
                                 <div className="d-flex align-items-center">
