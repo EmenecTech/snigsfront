@@ -80,7 +80,7 @@ const VerticalNav = memo((props) => {
             <Accordion as="ul" className="navbar-nav iq-main-menu">
                 <li className="nav-item static-item">
                     <Link className="nav-link static-item disabled" to="#" tabIndex="-1">
-                        <span className="default-icon">Menu</span>
+                        <span className="default-icon">{user.langue === "en" ? (<div>Menu</div>):(<div>Menu</div>)}</span>
                         <span className="mini-icon">-</span>
                     </Link>
                 </li>
