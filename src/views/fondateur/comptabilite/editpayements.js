@@ -453,7 +453,7 @@ const EditPensions = memo((props) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                     </svg>
                                 </span>
-                                Modifier
+                                {user.langue === "en" ? (<div>Edit</div>):(<div> Modifier  </div>)}
                             </Button>
 
                             <Button variant="primary mt-2" onClick={handleShow}>
@@ -462,7 +462,7 @@ const EditPensions = memo((props) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                     </svg>
                                 </span>
-                                Ajouter
+                                {user.langue === "en" ? (<div>Name</div>):(<div> Ajouter </div>)}
                             </Button>
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
@@ -518,7 +518,7 @@ const EditPensions = memo((props) => {
 
 
                                         <div className="text-center">
-                                            <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                            <Button type="button" variant="primary" onClick={submitForm} >{user.langue === "en" ? (<div>Confirm</div>):(<div> Confirmer </div>)}</Button>
                                         </div>
                                     </Form>
                                 </Modal.Body>
@@ -531,7 +531,7 @@ const EditPensions = memo((props) => {
                             {/* <!-- Modal --> */}
                             <Modal show={show2} onHide={handleClose2}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title as="h5">Modification de la Pension</Modal.Title>
+                                    <Modal.Title as="h5">{user.langue === "en" ? (<div>Change of pension</div>):(<div> Modification de la pension </div>)}</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
                                     <Form>
@@ -539,7 +539,7 @@ const EditPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Intitulé </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Title</div>):(<div> Intitulé </div>)} </Form.Label>
                                                         <Form.Control type="text" defaultValue="" name="int" value={inputs.int || ""} onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -549,7 +549,7 @@ const EditPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Montant </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Amount</div>):(<div> Montant </div>)}</Form.Label>
                                                         <Form.Control type="number" defaultValue="" name="montant" value={inputs.montant || ""} onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -559,7 +559,7 @@ const EditPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Nombre de tranches </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Number of brackets</div>):(<div> Nombre de tranches </div>)} </Form.Label>
                                                         <Form.Control type="number" defaultValue="" name="tranches" value={inputs.tranches || ""} onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -570,7 +570,7 @@ const EditPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Debut des payements </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Start of payments</div>):(<div> Début des payements </div>)}</Form.Label>
                                                         <Form.Control type="date" defaultValue="" name="pdebut" value={inputs.pdebut || ""} onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -578,7 +578,7 @@ const EditPensions = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Clôture des payements </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Closing of payments</div>):(<div> Cloture des payements  </div>)}</Form.Label>
                                                         <Form.Control type="date" defaultValue="" name="pfin" value={inputs.pfin || ""} onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -586,7 +586,7 @@ const EditPensions = memo((props) => {
                                         </Row>
 
                                         <div className="text-center">
-                                            <Button type="button" variant="primary" onClick={submitForm2} >Confirmer</Button>
+                                            <Button type="button" variant="primary" onClick={submitForm2} >{user.langue === "en" ? (<div>Confirm</div>):(<div> Confirmer </div>)}</Button>
                                         </div>
                                     </Form>
                                 </Modal.Body>
@@ -667,7 +667,7 @@ const EditPensions = memo((props) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                     </svg>
                                 </span>
-                                Ajouter
+                             {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter </div>)}
                             </Button>
                             {/* <!-- Modal --> */}
                             <Modal show={show1} onHide={handleClose1}>
@@ -696,7 +696,7 @@ const EditPensions = memo((props) => {
 
 
                                         <div className="text-center">
-                                            <Button type="button" variant="primary" onClick={submitForm1} >Ajouter</Button>
+                                            <Button type="button" variant="primary" onClick={submitForm1} >{user.langue === "en" ? (<div>Add</div>):(<div> Ajouter </div>)}</Button>
                                         </div>
                                     </Form>
                                 </Modal.Body>
@@ -715,9 +715,9 @@ const EditPensions = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Classe </th>
+                                            <th>{user.langue === "en" ? (<div>Class</div>):(<div> Classe </div>)} </th>
                                             <th>{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)}</th>
-                                            <th>Actions</th>
+                                            <th>{user.langue === "en" ? (<div>Action</div>):(<div> Actions </div>)}</th>
 
                                         </tr>
                                     </thead>
