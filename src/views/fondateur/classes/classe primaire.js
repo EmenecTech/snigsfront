@@ -321,7 +321,7 @@ const PrimClasse = () => {
                             <Tab.Pane eventKey="first" id="profile-feed">
                                 <Card>
                                     <Card.Header className="d-flex justify-content-between">
-                        <Button variant="primary mt-2" onClick={printData}> Imprimer </Button>
+                        <Button variant="primary mt-2" onClick={printData}> {user.langue === "en" ? (<div>Print</div>):(<div> Imprimer  </div>)} </Button>
 
                         </Card.Header>
                         <Card.Body>
@@ -385,7 +385,7 @@ const PrimClasse = () => {
                                 </Col>
 
                                 <div className="header-title mb-2">
-                                    <h4 className="card-title">Classe : {classe}</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>Class</div>):(<div> Classe  </div>)} : {classe}</h4>
                                 </div>
 
                                         <div className="table-responsive border-bottom my-3">
@@ -473,7 +473,7 @@ const PrimClasse = () => {
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                                 </svg>
                                             </span>
-                                            Ajouter
+                                            {user.langue === "en" ? (<div>Add</div>):(<div> AJOUTER  </div>)}
                                         </Button>
                                         {/* <!-- Modal --> */}
                                         <Modal show={show1} onHide={handleClose1} backdrop="static"
@@ -546,7 +546,7 @@ const PrimClasse = () => {
 
 
                                                     <div className="text-center">
-                                                        <Button type="button" variant="primary" onClick={submitForm2} >Confirmer</Button>
+                                                        <Button type="button" variant="primary" onClick={submitForm2} >{user.langue === "en" ? (<div>Confirm</div>):(<div> Confirmer  </div>)}</Button>
                                                     </div>
                                                 </Form>
                                             </Modal.Body>
@@ -627,7 +627,7 @@ const PrimClasse = () => {
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                                 </svg>
                                             </span>
-                                            Ajouter
+                                            {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter  </div>)}
                                         </Button>
                                         {/* <!-- Modal --> */}
                                         <Modal show={show2} onHide={handleClose2}>
@@ -683,7 +683,7 @@ const PrimClasse = () => {
 
 
                                                     <div className="text-center">
-                                                        <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                                        <Button type="button" variant="primary" onClick={submitForm} >{user.langue === "en" ? (<div>Confirm</div>):(<div> confirmer  </div>)}</Button>
                                                     </div>
                                                 </Form>
                                             </Modal.Body>
@@ -752,7 +752,7 @@ const PrimClasse = () => {
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                                 </svg>
                                             </span>
-                                            Ajouter
+                                            {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter  </div>)}
                                         </Button>
                                         {/* <!-- Modal --> */}
                                         <Modal show={show} onHide={handleClose}>
@@ -810,7 +810,7 @@ const PrimClasse = () => {
 
 
                                                     <div className="text-center">
-                                                        <Button type="button" variant="primary" onClick={submitFormG} >Confirmer</Button>
+                                                        <Button type="button" variant="primary" onClick={submitFormG} >{user.langue === "en" ? (<div>Confirm</div>):(<div> confirmer  </div>)}</Button>
                                                     </div>
                                                 </Form>
                                             </Modal.Body>
@@ -873,7 +873,7 @@ const PrimClasse = () => {
                                 <Card>
                                     <Card.Header>
                                         <div className="header-title">
-                                            <h4 className="card-title">Profile</h4>
+                                            <h4 className="card-title">{user.langue === "en" ? (<div>Profile</div>):(<div> Profil  </div>)}</h4>
                                         </div>
                                     </Card.Header>
                                     <Card.Body>
@@ -892,7 +892,7 @@ const PrimClasse = () => {
                                                         <th>{user.langue === "en" ? (<div>Student</div>):(<div> Elève </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Parent contact</div>):(<div> Contact du parent  </div>)}</th>
                                                      
-                                                        <th>Action</th>
+                                                        <th>{user.langue === "en" ? (<div>Action</div>):(<div> Action  </div>)}</th>
 
                                                     </tr>
                                                 </thead>
