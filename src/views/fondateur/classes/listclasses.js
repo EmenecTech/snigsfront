@@ -372,7 +372,7 @@ const ListClasses = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Classes </h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Class</div>):(<div> classes </div>)} </h4>
                             </div>
 
 
@@ -382,7 +382,7 @@ const ListClasses = memo((props) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                     </svg>
                                 </span>
-                                Ajouter
+                                {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter </div>)}
                             </Button>
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
@@ -468,7 +468,7 @@ const ListClasses = memo((props) => {
                                     <thead>
                                         <tr>
 
-                                            <th>{user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Title</div>):(<div>Intitulé </div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Sector</div>):(<div>Filière</div>)} </th>
                                             <th>{user.langue === "en" ? (<div>Cycle</div>):(<div>Cycle </div>)} </th>
@@ -526,7 +526,7 @@ const ListClasses = memo((props) => {
                                                             </span>
                                                         </Link>{' '}
                                                       <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Edit/classes/" + item.intitule_classe}>
-                                                    Modifier
+                                                    {user.langue === "en" ? (<div>Edit</div>):(<div> Modifier </div>)}
                                                     </Link>{' '} 
                                                     </div>) : (<div>
                                                     <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Details/classe/" + item.niveau_classe + "/" + item.intitule_classe}>
@@ -548,7 +548,7 @@ const ListClasses = memo((props) => {
                                                             </span>
                                                         </Link>{' '}
                                                         <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Edit/classes/" + item.intitule_classe}>
-                                                      Modifier
+                                                      {user.langue === "en" ? (<div>Edit</div>):(<div> Modifier  </div>)}
                                                       </Link>{' '} 
                                                     </div>)}        
                             
