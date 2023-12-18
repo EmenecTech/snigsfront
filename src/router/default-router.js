@@ -180,6 +180,7 @@ import ParentslistdocumentsEleves from "../views/parents/documents/listdocuments
 import Print_parent from "../views/parents/documents/print";
 import ParentsListPlanning from "../views/parents/pedagogie/listplanning";
 import ParentsListEvaluationsNotes from "../views/parents/pedagogie/notes/lisevaluations";
+import ParentsListEvaluations from "../views/parents/bulletin_notes/evaluations";
 import ParentsListNotesEval from "../views/parents/pedagogie/notes/noteseleve";
 import ParentsPlanningDetail from "../views/parents/pedagogie/planning";
 import ParentsEditProfil from "../views/parents/profil/edit";
@@ -789,6 +790,10 @@ export const DefaultRouter = [
       },
       ////
 
+      {
+        path: "Parents/List/Evaluations",
+        element: <ParentsListEvaluations />,
+      },
       {
         path: "Parents/Bulletin/Notes/:evaluation",
         element: <ParentsBulletinNotes />,
