@@ -484,8 +484,8 @@ useEffect(() => {
                                 <select className="form-select mb-3 shadow-none" name="redouble" value={inputs.redouble} onChange={handleChange} >
                                     <option></option>
                                     
-                                        <option value='oui'>Oui</option>
-                                        <option value='non'>Non</option>
+                                        <option value='oui'>{user.langue === "en" ? (<div>Yes</div>):(<div> Oui </div>)}</option>
+                                        <option value='non'>{user.langue === "en" ? (<div>No</div>):(<div> Non </div>)}</option>
     
                                     
 
