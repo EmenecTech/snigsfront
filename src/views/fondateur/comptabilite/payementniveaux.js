@@ -330,10 +330,10 @@ const PayementsListNiveaux = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>{user.langue === "en" ? (<div>Entitled </div>):(<div> Intitulé</div>)}</th>
-                                            <th>Cycle  </th>
-                                            <th>Section</th>
-                                            <th>Actions</th>
+                                            <th>{user.langue === "en" ? (<div>Title </div>):(<div> Intitulé</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Cycle</div>):(<div> Cycle </div>)} </th>
+                                            <th>{user.langue === "en" ? (<div>Sector</div>):(<div> Section </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Action</div>):(<div> Actions </div>)}</th>
 
                                         </tr>
                                     </thead>
