@@ -279,7 +279,7 @@ const UniClasse = () => {
                             <Tab.Pane eventKey="first" id="profile-feed">
                                 <Card>
                                    <Card.Header className="d-flex justify-content-between">
-                        <Button variant="primary mt-2" onClick={printData}> Imprimer </Button>
+                        <Button variant="primary mt-2" onClick={printData}> {user.langue === "en" ? (<div>Print</div>):(<div> Imprimer  </div>)} </Button>
 
                         </Card.Header>
                         <Card.Body>
@@ -343,7 +343,7 @@ const UniClasse = () => {
                                 </Col>
 
                                 <div className="header-title mb-2">
-                                    <h4 className="card-title">Classe : {classe}</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div>Class</div>):(<div> Classe  </div>)} : {classe}</h4>
                                 </div>
 
                                         <div className="table-responsive border-bottom my-3">
@@ -367,7 +367,7 @@ const UniClasse = () => {
                                                         <th>{user.langue === "en" ? (<div>Parent contact</div>):(<div> Contact du parent  </div>)}</th>
                                                         <th>Email</th>
                                                         <th> {user.langue === "en" ? (<div>Phone </div>):(<div> Téléphone   </div>)}</th>
-                                                        <th>Action</th>
+                                                        <th>{user.langue === "en" ? (<div>Action</div>):(<div> Action </div>)}</th>
 
                                                     </tr>
                                                 </thead>
@@ -432,7 +432,7 @@ const UniClasse = () => {
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                                 </svg>
                                             </span>
-                                            Ajouter
+                                            {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter  </div>)}
                                         </Button>
                                         {/* <!-- Modal --> */}
                                         <Modal show={show1} onHide={handleClose1} backdrop="static"
@@ -449,7 +449,7 @@ const UniClasse = () => {
                                                                     <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Course</div>):(<div> Matière  </div>)}</Form.Label>
                                                                     <select className="form-select mb-3 shadow-none" name="int" onChange={handleChange} required>
                                                                         <option></option>
-                                                                        <option value="Toutes les matières">Toutes les matières</option>
+                                                                        <option value="Toutes les matières">{user.langue === "en" ? (<div>All courses</div>):(<div> Toutes les matières  </div>)}</option>
                                                                         {matieres.map((item) => (
                                                                             <option key={item.id} value={item.intitule_matiere}>{item.intitule_matiere}</option>
 
@@ -501,7 +501,7 @@ const UniClasse = () => {
 
 
                                                     <div className="text-center">
-                                                        <Button type="button" variant="primary" onClick={submitForm2} >Confirmer</Button>
+                                                        <Button type="button" variant="primary" onClick={submitForm2} >{user.langue === "en" ? (<div>Confirm</div>):(<div> Confirmer  </div>)}</Button>
                                                     </div>
                                                 </Form>
                                             </Modal.Body>
@@ -525,7 +525,7 @@ const UniClasse = () => {
                                                         <th> {user.langue === "en" ? (<div> Subject Taught</div>):(<div> Matière Enseigné </div>)}</th>
                                                         <th>Email</th>
                                                         <th>{user.langue === "en" ? (<div> Phone</div>):(<div> Téléphone  </div>)}</th>
-                                                        <th>Action</th>
+                                                        <th>{user.langue === "en" ? (<div>Action</div>):(<div> Action </div>)}</th>
 
                                                     </tr>
                                                 </thead>
@@ -582,7 +582,7 @@ const UniClasse = () => {
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                                 </svg>
                                             </span>
-                                            Ajouter
+                                            {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter </div>)}
                                         </Button>
                                         {/* <!-- Modal --> */}
                                         <Modal show={show} onHide={handleClose}>
@@ -612,7 +612,7 @@ const UniClasse = () => {
                                                         <Col>
                                                             <Form.Group as={Row} className="form-group">
                                                                 <Form.Group className="form-group">
-                                                                    <Form.Label htmlFor="exampleInputText1">Coefficient </Form.Label>
+                                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Factor</div>):(<div> Coefficient </div>)}</Form.Label>
                                                                     <Form.Control type="number" defaultValue="" name="coef" onChange={handleChange} required />
                                                                 </Form.Group>
                                                             </Form.Group>
@@ -697,7 +697,7 @@ const UniClasse = () => {
 
 
                                                     <div className="text-center">
-                                                        <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                                        <Button type="button" variant="primary" onClick={submitForm} >{user.langue === "en" ? (<div>Confirm</div>):(<div> Confirmer  </div>)}</Button>
                                                     </div>
                                                 </Form>
                                             </Modal.Body>
@@ -716,9 +716,9 @@ const UniClasse = () => {
                                                 <thead>
                                                     <tr>
                                                         <th>{user.langue === "en" ? (<div>Course</div>):(<div>Matiere </div>)} </th>
-                                                        <th>Coefficient </th>
+                                                        <th>{user.langue === "en" ? (<div>Factor</div>):(<div> Coefficient </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Group </div>):(<div>Groupe </div>)} </th>
-                                                        <th>Action</th>
+                                                        <th>{user.langue === "en" ? (<div>Action</div>):(<div> Action  </div>)}</th>
 
                                                     </tr>
                                                 </thead>
@@ -760,7 +760,7 @@ const UniClasse = () => {
                                 <Card>
                                     <Card.Header>
                                         <div className="header-title">
-                                            <h4 className="card-title">Profile</h4>
+                                            <h4 className="card-title">{user.langue === "en" ? (<div>Profile</div>):(<div> Profil </div>)}</h4>
                                         </div>
                                     </Card.Header>
                                     <Card.Body>
@@ -779,7 +779,7 @@ const UniClasse = () => {
                                                         <th>{user.langue === "en" ? (<div>Student</div>):(<div> Elève </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Parent contact</div>):(<div> Contact du parent  </div>)}</th>
                                                      
-                                                        <th>Action</th>
+                                                        <th>{user.langue === "en" ? (<div>Action</div>):(<div> action  </div>)}</th>
 
                                                     </tr>
                                                 </thead>
