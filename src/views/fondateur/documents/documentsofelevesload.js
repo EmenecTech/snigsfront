@@ -323,7 +323,7 @@ const AdminlistdocumentsOfEleves = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Documents</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Documents</div>):(<div> Documents </div>)}</h4>
                             </div>
 
                         </Card.Header>
@@ -340,9 +340,9 @@ const AdminlistdocumentsOfEleves = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>{user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Title</div>):(<div> Intitulé</div>)}</th>
                                             <th>{user.langue === "en" ? (<div>File type</div>):(<div> Type de fichier </div>)}</th>
-                                            <th>Actions </th>
+                                            <th>{user.langue === "en" ? (<div>Actions</div>):(<div> Actions </div>)} </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -355,7 +355,7 @@ const AdminlistdocumentsOfEleves = memo((props) => {
                                                     <div className="flex align-items-center list-user-action">
 
                                                         <Link className="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"https://snigsbackend.com/documents/" + item.link_documentset} >
-                                                            Télécharger
+                                                            {user.langue === "en" ? (<div>Download</div>):(<div> Télécharger </div>)}
                                                         </Link>{' '}
 
                                                     </div>
