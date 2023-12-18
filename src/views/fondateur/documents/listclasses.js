@@ -330,7 +330,7 @@ const ListClassesFiche = memo((props) => {
           <Card>
             <Card.Header className="d-flex justify-content-between">
               <div className="header-title">
-                <h4 className="card-title">Classes</h4>
+                <h4 className="card-title">{user.langue === "en" ? (<div>Class</div>):(<div> Classes </div>)}</h4>
               </div>
 
               <Button variant="primary mt-2" onClick={handleShow}>
@@ -350,12 +350,12 @@ const ListClassesFiche = memo((props) => {
                     />
                   </svg>
                 </span>
-                Ajouter
+                {user.langue === "en" ? (<div>Add</div>):(<div> Ajouter  </div>)}
               </Button>
               {/* <!-- Modal --> */}
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                  <Modal.Title as="h5">Ajouter une nouvelle classe</Modal.Title>
+                  <Modal.Title as="h5">{user.langue === "en" ? (<div>Add a new class</div>):(<div> Ajouter une nouvelle classe  </div>)}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                   <Form>
@@ -364,7 +364,7 @@ const ListClassesFiche = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Intitulé *
+                              {user.langue === "en" ? (<div>Title</div>):(<div> Intitulé </div>)} *
                             </Form.Label>
                             <Form.Control
                               type="text"
@@ -382,7 +382,7 @@ const ListClassesFiche = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Niveau *
+                              {user.langue === "en" ? (<div>Levels</div>):(<div> Niveaux </div>)}*
                             </Form.Label>
                             <select
                               className="form-select mb-3 shadow-none"
@@ -409,7 +409,7 @@ const ListClassesFiche = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Filière
+                              {user.langue === "en" ? (<div>Branch</div>):(<div> Filière </div>)}
                             </Form.Label>
                             <select
                               className="form-select mb-3 shadow-none"
@@ -437,7 +437,7 @@ const ListClassesFiche = memo((props) => {
                         variant="primary"
                         onClick={submitForm}
                       >
-                        Confirmer
+                        {user.langue === "en" ? (<div>Confirm</div>):(<div> Confirmer </div>)}
                       </Button>
                     </div>
                   </Form>
@@ -455,11 +455,11 @@ const ListClassesFiche = memo((props) => {
                 >
                   <thead>
                     <tr>
-                      <th>Intitulé</th>
-                      <th>Niveau</th>
-                      <th>Filière </th>
-                      <th>Cycle </th>
-                      <th>Action</th>
+                      <th>{user.langue === "en" ? (<div>Title</div>):(<div> Intitulé </div>)}</th>
+                      <th>{user.langue === "en" ? (<div>Level</div>):(<div> Niveau </div>)}</th>
+                      <th>{user.langue === "en" ? (<div>Branch</div>):(<div> Filière </div>)} </th>
+                      <th>{user.langue === "en" ? (<div>Cycle</div>):(<div> Cycle </div>)} </th>
+                      <th>{user.langue === "en" ? (<div>Action</div>):(<div> Actions </div>)}</th>
                     </tr>
                   </thead>
                   <tbody>
