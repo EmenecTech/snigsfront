@@ -2,7 +2,7 @@ import React, { useEffect, memo, Fragment } from "react";
 import { Row, Col, Dropdown, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import http from '../../http';
-import AuthUser from "../../../../components/AuthUser";
+import AuthUser from "../../components/AuthUser";
 
 //circular
 import Circularprogressbar from "../../components/circularprogressbar.js";
