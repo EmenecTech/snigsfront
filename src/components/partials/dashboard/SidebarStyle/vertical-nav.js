@@ -729,7 +729,7 @@ const VerticalNav = memo((props) => {
                                                     </svg>
                                                 </i>
                                                 <i className="sidenav-mini-icon"> U </i>
-                                                <span className="item-name"> {user.langue === "en" ? (<div>Sectors</div>):(<div> Filières</div>)}</span>
+                                                <span className="item-name"> {user.langue === "en" ? (<div>Branch</div>):(<div> Filières</div>)}</span>
                                             </Link>
                                         </li>
                                         <li className="nav-item">
@@ -1165,7 +1165,7 @@ const VerticalNav = memo((props) => {
                                                 </svg>
                                             </i>
                                             <i className="sidenav-mini-icon"> U </i>
-                                            <span className="item-name">Bulletins de notes</span>
+                                            <span className="item-name">user.langue === "en" ? (<div>Report cards</div>):(<div> Bulletin de notes </div>)}</span>
                                         </Link>
                                 </li>*/}
                                 </ul>
