@@ -314,7 +314,7 @@ const ParentsListPlanning = memo((props) => {
                           >
                             <thead>
                               <tr>
-                                <th>Intitulé</th>
+                                <th>{user.langue === "en" ? (<div> Title </div>):(<div>Intitulé</div>)}</th>
                                 <th>Type</th>
                                 <th>Actions</th>
                               </tr>
@@ -340,7 +340,7 @@ const ParentsListPlanning = memo((props) => {
                                           item.intitule_programme
                                         }
                                       >
-                                        Consulter
+                                        {user.langue === "en" ? (<div> Consult </div>):(<div> Consulter </div>)}
                                       </Link>
                                     </div>
                                   </td>
