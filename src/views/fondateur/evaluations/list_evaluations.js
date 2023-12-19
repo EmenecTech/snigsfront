@@ -361,7 +361,7 @@ const submitMoyenPr = (evaluation) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                     </svg>
                                 </span>
-                                Ajouter
+                                 {user.langue === "en" ? (<div>Add</div>):(<div>Ajouter</div>)}
                             </Button>
 
                              
@@ -392,7 +392,7 @@ const submitMoyenPr = (evaluation) => {
                                                             <option value="Annuel"> {user.langue === "en" ? (<div>Annual</div>):(<div>Annuel</div>)}</option>
                                                             <option value="Semestriel">{user.langue === "en" ? (<div>Semester</div>):(<div>Semestriel </div>)}</option>
                                                             <option value="Trimestriel">{user.langue === "en" ? (<div>Quarterly</div>):(<div>Trimestriel  </div>)}</option>
-                                                            <option value="Sequentiel"> {user.langue === "en" ? (<div>Quarterly</div>):(<div>Sequential </div>)}</option>
+                                                            <option value="Sequentiel"> {user.langue === "en" ? (<div>Sequential</div>):(<div>Sequential </div>)}</option>
                                                             <option value="Mensuel"> {user.langue === "en" ? (<div>Monthly</div>):(<div>Mensuel </div>)}</option>
                                                             <option value="Hebdomadaire">{user.langue === "en" ? (<div>Weekly</div>):(<div>Hebdomadaire </div>)}</option>
                                                             <option value="Libre"> {user.langue === "en" ? (<div>Free</div>):(<div>Libre </div>)}</option>
@@ -441,7 +441,7 @@ const submitMoyenPr = (evaluation) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>{user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)} </th>
+                                            <th>{user.langue === "en" ? (<div>Title</div>):(<div>Intitulé </div>)} </th>
                                             <th> {user.langue === "en" ? (<div>Type of assessment</div>):(<div>Type d'évaluation </div>)} </th>
                                             <th> {user.langue === "en" ? (<div>Reference</div>):(<div>Référence</div>)}</th>
                                     
