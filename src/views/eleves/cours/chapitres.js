@@ -63,17 +63,17 @@ const Eleve_list_Chapitre = (props) => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Chapitres</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div> Chapters </div>):(<div> Chapitres </div>)}</h4>
                                 </div>
                             </Card.Header>
                             <div className="table-responsive">
                                 <table id="user-list-table" className="table table-striped" role="grid" data-toggle="data-table">
                                     <thead>
                                         <tr className="ligth">
-                                            <th>Intitulé</th>
-                                            <th>Nombre d'heures</th>
-                                            <th>Date de début</th>
-                                            <th>Date de fin</th>
+                                            <th>{user.langue === "en" ? (<div> Title </div>):(<div> Intitulé </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Number of hours </div>):(<div> Nombre d'heures </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Start date </div>):(<div> Date de début </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> End date </div>):(<div> Date de fin </div>)}</th>
                                             <th>Description</th>
                                             <th min-width="100px">Action</th>
                                         </tr>
@@ -90,7 +90,7 @@ const Eleve_list_Chapitre = (props) => {
                                                 <td>
                                                     <div className="flex align-items-center list-user-action">
                                                         <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Eleve/List/Lecons/Chapitres/Cours/" + item.intitule_chapitre + "/" + matiere}>
-                                                            Consulter
+                                                           {user.langue === "en" ? (<div> Consult </div>):(<div> Consulter </div>)}
                                                         </Link>
                                                     </div>
                                                 </td>
