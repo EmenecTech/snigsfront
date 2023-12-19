@@ -473,7 +473,7 @@ const EditClasseProgramme = memo((props) => {
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title as="h5">Edition du programme</Modal.Title>
+                                    <Modal.Title as="h5">{user.langue === "en" ? (<div>Editing program</div>):(<div>Edition du programme</div>)}</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
                                     <Form>
