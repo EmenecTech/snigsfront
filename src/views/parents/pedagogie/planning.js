@@ -425,7 +425,7 @@ const ParentsPlanningDetail = memo((props) => {
                     <Card>
                       <Card.Header className="d-flex justify-content-between">
                         <div className="header-title">
-                          <h4 className="card-title">Lundi</h4>
+                          <h4 className="card-title">{user.langue === "en" ? (<div> Monday </div>):(<div> Lundi </div>)}</h4>
                         </div>
                       </Card.Header>
                       <Card.Body>
@@ -439,8 +439,8 @@ const ParentsPlanningDetail = memo((props) => {
                           >
                             <thead>
                               <tr>
-                                <th>Tranche Horraire</th>
-                                <th>Matière ou activité</th>
+                                <th>{user.langue === "en" ? (<div> Time band </div>):(<div> Tranche horaire </div>)}</th>
+                                <th>{user.langue === "en" ? (<div> Subject or activity </div>):(<div> Matière ou activité </div>)}</th>
                                 <th>Actions</th>
                               </tr>
                             </thead>
@@ -510,7 +510,7 @@ const ParentsPlanningDetail = memo((props) => {
                     <Card>
                       <Card.Header className="d-flex justify-content-between">
                         <div className="header-title">
-                          <h4 className="card-title">Mardi</h4>
+                          <h4 className="card-title">{user.langue === "en" ? (<div> Tuesday </div>):(<div> Mardi </div>)}</h4>
                         </div>
                       </Card.Header>
                       <Card.Body>
@@ -524,8 +524,8 @@ const ParentsPlanningDetail = memo((props) => {
                           >
                             <thead>
                               <tr>
-                                <th>Tranche Horraire</th>
-                                <th>Matière ou activité</th>
+                                <th>{user.langue === "en" ? (<div> Time band </div>):(<div> Tranche horaire </div>)}</th>
+                                <th>{user.langue === "en" ? (<div> Subject or activity </div>):(<div> Matière ou activité </div>)}</th>
                                 <th>Actions</th>
                               </tr>
                             </thead>
@@ -595,7 +595,7 @@ const ParentsPlanningDetail = memo((props) => {
                     <Card>
                       <Card.Header className="d-flex justify-content-between">
                         <div className="header-title">
-                          <h4 className="card-title">Mercredi</h4>
+                          <h4 className="card-title">{user.langue === "en" ? (<div> Wednesday </div>):(<div> Mercredi </div>)}</h4>
                         </div>
                       </Card.Header>
                       <Card.Body>
@@ -609,8 +609,8 @@ const ParentsPlanningDetail = memo((props) => {
                           >
                             <thead>
                               <tr>
-                                <th>Tranche Horraire</th>
-                                <th>Matière ou activité</th>
+                                <th>{user.langue === "en" ? (<div> Time band </div>):(<div> Tranche horaire </div>)}</th>
+                                <th>{user.langue === "en" ? (<div> Subject or activity </div>):(<div> Matière ou activité </div>)}</th>
                                 <th>Actions</th>
                               </tr>
                             </thead>
@@ -682,7 +682,7 @@ const ParentsPlanningDetail = memo((props) => {
                     <Card>
                       <Card.Header className="d-flex justify-content-between">
                         <div className="header-title">
-                          <h4 className="card-title">Jeudi</h4>
+                          <h4 className="card-title">{user.langue === "en" ? (<div> Thursday </div>):(<div> jeudi </div>)}</h4>
                         </div>
                       </Card.Header>
                       <Card.Body>
@@ -696,8 +696,8 @@ const ParentsPlanningDetail = memo((props) => {
                           >
                             <thead>
                               <tr>
-                                <th>Tranche Horraire</th>
-                                <th>Matière ou activité</th>
+                                <th>{user.langue === "en" ? (<div> Time band </div>):(<div> Tranche horaire </div>)}</th>
+                                <th>{user.langue === "en" ? (<div> Subject or activity </div>):(<div> Matière ou activité </div>)}</th>
                                 <th>Actions</th>
                               </tr>
                             </thead>
@@ -767,7 +767,7 @@ const ParentsPlanningDetail = memo((props) => {
                     <Card>
                       <Card.Header className="d-flex justify-content-between">
                         <div className="header-title">
-                          <h4 className="card-title">Vendredi</h4>
+                          <h4 className="card-title">{user.langue === "en" ? (<div> Friday </div>):(<div> Vendredi </div>)}</h4>
                         </div>
                       </Card.Header>
                       <Card.Body>
@@ -781,8 +781,8 @@ const ParentsPlanningDetail = memo((props) => {
                           >
                             <thead>
                               <tr>
-                                <th>Tranche Horraire</th>
-                                <th>Matière ou activité</th>
+                                <th>{user.langue === "en" ? (<div> Time band </div>):(<div> Tranche horaire </div>)}</th>
+                                <th>{user.langue === "en" ? (<div> Subject or activity </div>):(<div> Matière ou activité </div>)}</th>
                                 <th>Actions</th>
                               </tr>
                             </thead>
@@ -852,7 +852,7 @@ const ParentsPlanningDetail = memo((props) => {
                     <Card>
                       <Card.Header className="d-flex justify-content-between">
                         <div className="header-title">
-                          <h4 className="card-title">Samedi</h4>
+                          <h4 className="card-title">{user.langue === "en" ? (<div> Saturday </div>):(<div> Samedi </div>)}</h4>
                         </div>
                       </Card.Header>
                       <Card.Body>
@@ -866,8 +866,8 @@ const ParentsPlanningDetail = memo((props) => {
                           >
                             <thead>
                               <tr>
-                                <th>Tranche Horraire</th>
-                                <th>Matière ou activité</th>
+                                <th>{user.langue === "en" ? (<div> Time band </div>):(<div> Tranche horaire </div>)}</th>
+                                <th>{user.langue === "en" ? (<div> Subject or activity </div>):(<div> Matière ou activité </div>)}</th>
                                 <th>Actions</th>
                               </tr>
                             </thead>
@@ -939,7 +939,7 @@ const ParentsPlanningDetail = memo((props) => {
                     <Card>
                       <Card.Header className="d-flex justify-content-between">
                         <div className="header-title">
-                          <h4 className="card-title">Dimanche</h4>
+                          <h4 className="card-title">{user.langue === "en" ? (<div> Sunday </div>):(<div> Dimanche </div>)}</h4>
                         </div>
                       </Card.Header>
                       <Card.Body>
@@ -953,8 +953,8 @@ const ParentsPlanningDetail = memo((props) => {
                           >
                             <thead>
                               <tr>
-                                <th>Tranche Horraire</th>
-                                <th>Matière ou activité</th>
+                                <th>{user.langue === "en" ? (<div> Time band </div>):(<div> Tranche horaire </div>)}</th>
+                                <th>{user.langue === "en" ? (<div> Subject or activity </div>):(<div> Matière ou activité </div>)}</th>
                                 <th>Actions</th>
                               </tr>
                             </thead>
