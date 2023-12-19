@@ -69,7 +69,7 @@ const Parents_list_Chapitre = (props) => {
             <Card>
               <Card.Header className="d-flex justify-content-between">
                 <div className="header-title">
-                  <h4 className="card-title">{user.langue === "en" ? (<div> chapters </div>):(<div> Chapitres </div>)}</h4>
+                  <h4 className="card-title">{user.langue === "en" ? (<div> Chapters </div>):(<div> Chapitres </div>)}</h4>
                 </div>
               </Card.Header>
               <div className="table-responsive">
@@ -81,12 +81,12 @@ const Parents_list_Chapitre = (props) => {
                 >
                   <thead>
                     <tr className="ligth">
-                      <th>{user.langue === "en" ? (<div> title </div>):(<div> intitulé </div>)}</th>
-                      <th>{user.langue === "en" ? (<div> number of hours  </div>):(<div> nombre d'heures </div>)}</th>
-                      <th>{user.langue === "en" ? (<div> start date </div>):(<div> date de début </div>)}</th>
-                      <th>{user.langue === "en" ? (<div> end date </div>):(<div> date de fin </div>)}</th>
-                      <th>{user.langue === "en" ? (<div> description </div>):(<div> description </div>)}</th>
-                      <th min-width="100px">{user.langue === "en" ? (<div> action </div>):(<div> action </div>)}</th>
+                      <th>{user.langue === "en" ? (<div> Title </div>):(<div> intitulé </div>)}</th>
+                      <th>{user.langue === "en" ? (<div> Number of hours  </div>):(<div> nombre d'heures </div>)}</th>
+                      <th>{user.langue === "en" ? (<div> Start date </div>):(<div> date de début </div>)}</th>
+                      <th>{user.langue === "en" ? (<div> End date </div>):(<div> date de fin </div>)}</th>
+                      <th>{user.langue === "en" ? (<div> Description </div>):(<div> description </div>)}</th>
+                      <th min-width="100px">{user.langue === "en" ? (<div> Action </div>):(<div> action </div>)}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -113,7 +113,7 @@ const Parents_list_Chapitre = (props) => {
                                 matiere
                               }
                             >
-                              {user.langue === "en" ? (<div> consult </div>):(<div> consulter </div>)}
+                              {user.langue === "en" ? (<div> Consult </div>):(<div> consulter </div>)}
                             </Link>
                           </div>
                         </td>
