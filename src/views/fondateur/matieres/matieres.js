@@ -310,7 +310,7 @@ const ListMatieres = memo((props) => {
           <Card>
             <Card.Header className="d-flex justify-content-between">
               <div className="header-title">
-                <h4 className="card-title">{user.langue === "en" ? (<div> subjects </div>):(<div> Matières </div>)}</h4>
+                <h4 className="card-title">{user.langue === "en" ? (<div> Courses </div>):(<div> Matières </div>)}</h4>
               </div>
 
               <Button variant="primary mt-2" onClick={handleShow}>
@@ -346,7 +346,7 @@ const ListMatieres = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              {user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé  </div>)}{" "}
+                              {user.langue === "en" ? (<div>Title</div>):(<div> Intitulé  </div>)}{" "}
                             </Form.Label>
                             <Form.Control
                               type="text"
@@ -384,7 +384,7 @@ const ListMatieres = memo((props) => {
                 >
                   <thead>
                     <tr>
-                      <th> {user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)}</th>
+                      <th> {user.langue === "en" ? (<div>Title</div>):(<div>Intitulé </div>)}</th>
                       <th>Action</th>
                     </tr>
                   </thead>
