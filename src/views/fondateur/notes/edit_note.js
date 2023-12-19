@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, memo, Fragment } from "react";
 import { Row, Col, Dropdown, Modal, Button, Table, Form } from "react-bootstrap";
 import { createPath, useNavigate, useParams } from 'react-router-dom';
@@ -433,7 +434,7 @@ const Editnote = memo((props) => {
                                                  />
                                              </Form.Group>
                                              <Form.Group className='form-group'>
-                                                 <Form.Label>{user.langue === "en" ? (<div>Rating index</div>):(<div> Indices d'évaluation  </div>)}</Form.Label>
+                                                 <Form.Label>{user.langue === "en" ? (<div>Evaluation index</div>):(<div> Indices d'évaluation  </div>)}</Form.Label>
  
                                                  <Form.Control type="number" id="competence_visee" name="competence_visee"
                                                      defaultValue={onenote.competence_visee_note}
