@@ -2,6 +2,7 @@ import React, { useEffect, memo, Fragment } from "react";
 import { Row, Col, Dropdown, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import http from '../../http';
+import AuthUser from "../../../../components/AuthUser";
 
 //circular
 import Circularprogressbar from "../../components/circularprogressbar.js";
@@ -44,6 +45,8 @@ SwiperCore.use([Navigation]);
 
 const Index = memo((props) => {
   useSelector(SettingSelector.theme_color);
+
+  const {user} = AuthUser();
 
   const getVariableColor = () => {
     let prefix =
@@ -420,7 +423,7 @@ const Index = memo((props) => {
                         </svg>
                       </Circularprogressbar>
                       <div className="progress-detail">
-                        <p className="mb-2">Revenue</p>
+                        <p className="mb-2">{user.langue === "en" ? (<div>Revenue</div>):(<div>Revenue</div>)}</p>
                         <h4 className="counter">
                           $<CountUp start={212} end={742} duration={3} />K
                         </h4>
@@ -707,7 +710,7 @@ const Index = memo((props) => {
               <div className="card" data-aos="fade-up" data-aos-delay="1000">
                 <div className="flex-wrap card-header d-flex justify-content-between">
                   <div className="header-title">
-                    <h4 className="card-title">Conversions</h4>
+                    <h4 className="card-title">{user.langue === "en" ? (<div>Conversions</div>):(<div>Conversions</div>)}</h4>
                   </div>
                   <Dropdown>
                     <Dropdown.Toggle
@@ -744,7 +747,7 @@ const Index = memo((props) => {
               >
                 <div className="flex-wrap card-header d-flex justify-content-between">
                   <div className="header-title">
-                    <h4 className="mb-2 card-title">Enterprise Clients</h4>
+                    <h4 className="mb-2 card-title">{user.langue === "en" ? (<div>Customer companies</div>):(<div>Entreprise clients</div>)}</h4>
                     <p className="mb-0">
                       <svg
                         className="me-2"
