@@ -336,7 +336,7 @@ const ListGroupes = memo((props) => {
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                   <Modal.Title as="h5">
-                     {user.langue === "en" ? (<div>Add a new material</div>):(<div> Ajouter une nouveau groupe </div>)}
+                     {user.langue === "en" ? (<div>Add a new group</div>):(<div> Ajouter un nouveau groupe </div>)}
                   </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -346,7 +346,7 @@ const ListGroupes = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              {user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé  </div>)}{" "}
+                              {user.langue === "en" ? (<div>Title</div>):(<div> Intitulé  </div>)}{" "}
                             </Form.Label>
                             <Form.Control
                               type="text"
@@ -384,7 +384,7 @@ const ListGroupes = memo((props) => {
                 >
                   <thead>
                     <tr>
-                      <th> {user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)}</th>
+                      <th> {user.langue === "en" ? (<div>Title</div>):(<div>Intitulé </div>)}</th>
                       <th>Action</th>
                     </tr>
                   </thead>
