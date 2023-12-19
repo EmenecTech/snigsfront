@@ -201,7 +201,7 @@ const EditEtablissement = () => {
                                         onChange={e => handleChange2(e.target.files)} />
 
                                     <button className="btn btn-info mt-2" type="submit" onClick={submitData} >
-                                        {user.langue === "en" ? (<div>Edit </div>):(<div> Modifier</div>)}
+                                        {user.langue === "en" ? (<div>Modify</div>):(<div> Modifier</div>)}
                                     </button>
 
 
@@ -292,7 +292,7 @@ const EditEtablissement = () => {
                                                     <Form.Label htmlFor="exampleInputText1"> {user.langue === "en" ? (<div>Country</div>):(<div> Pays</div>)}</Form.Label>
                                                     <select className="form-select mb-3 shadow-none" name="pays" value={inputs.pays || ""} onChange={handleChange}>
                                                         <option></option>
-                                                        <option value="Cameroun">Cameroun</option>
+                                                        <option value="Cameroun"> {user.langue === "en" ? (<div>Cameroon</div>):(<div>Cameroun</div>)}</option>
                                                         <option value="RCA">RCA</option>
                                                     </select>
                                                 </Form.Group>
