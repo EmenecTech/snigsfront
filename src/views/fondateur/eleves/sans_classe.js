@@ -312,7 +312,7 @@ const ListSansclasse = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Elèves sans classe</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Students without a class</div>):(<div>Elèves sans classe</div>)}</h4>
                             </div>
 
                         </Card.Header>
@@ -330,10 +330,10 @@ const ListSansclasse = memo((props) => {
                                         <tr className="ligth">
 
 
-                                            <th>Nom</th>
-                                            <th>Prénom</th>
-                                            <th>Niveau</th>
-                                            <th>Email</th>
+                                            <th>{user.langue === "en" ? (<div>Name</div>):(<div>Nom</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>First name</div>):(<div>Prénom</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Level</div>):(<div>Niveau</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Email</div>):(<div>Email</div>)}</th>
 
                                             <th min-width="100px">Actions</th>
                                         </tr>
