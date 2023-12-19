@@ -169,7 +169,7 @@ const [indices, setindices] = useState([]);
                 <Col sm="12" lg="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
-                            <h4 className="card-title">Notes</h4>
+                            <h4 className="card-title"> {user.langue === "en" ? (<div>Note</div>):(<div>Notes</div>)}</h4>
 
                             <div>
                                 <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3" onClick={handleShow}>
@@ -179,7 +179,7 @@ const [indices, setindices] = useState([]);
                                         </svg>
                                     </i>
 
-                                    <span>Modifier une note</span>
+                                    <span> {user.langue === "en" ? (<div>Edit a note</div>):(<div>Modifier une note</div>)}</span>
                                 </Button>
                                 <Modal show={show} onHide={handleClose}>
                                     <Modal.Header closeButton>
@@ -213,14 +213,15 @@ const [indices, setindices] = useState([]);
 
                                                         <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                                             <option> </option>
-                                                            <option value="Non acquis">Non acquis</option>
-                                                            <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                            <option value="Acquis">Acquis</option>
+                                                            <option value="Non acquis"> {user.langue === "en" ? (<div>Not acquired</div>):(<div>Non acquis</div>)}</option>
+                                                            <option value="En cours d'acquisition"> {user.langue === "en" ? (<div>In progress</div>):(<div>En cours d'acquisition</div>)}</option>
+                                                            <option value="Acquis"> {user.langue === "en" ? (<div>Acquired</div>):(<div>Acquis</div>)}</option>
+                                                            <option value="Expert">Expert</option>
                                                         </select>
                                                     </Form.Group>
 
                                                     <Form.Group className='form-group'>
-                                                        <Form.Label>Compétence visée</Form.Label>
+                                                        <Form.Label> {user.langue === "en" ? (<div>Target skill</div>):(<div>Compétence visée</div>)}</Form.Label>
                                                         <Form.Control type="text" id="competence_visee" name="competence_visee"
                                                             value={inputs.competence_visee || ''}
                                                             onChange={handleChange}
@@ -242,7 +243,7 @@ const [indices, setindices] = useState([]);
                                                  
                                                                 
                                                      <Form.Group className='form-group'>
-                                                        <Form.Label>Note</Form.Label>
+                                                        <Form.Label> {user.langue === "en" ? (<div>Note</div>):(<div>Note</div>)}</Form.Label>
                                                         <Form.Control type="number" id="valeur_note" name="valeur_note"
                                                             value={inputs.valeur_note || ''}
                                                             onChange={handleChange}
@@ -250,7 +251,7 @@ const [indices, setindices] = useState([]);
                                                     </Form.Group>
 
                                                     <Form.Group className='form-group'>
-                                                        <Form.Label>Emoji</Form.Label>
+                                                        <Form.Label> {user.langue === "en" ? (<div>Emoji</div>):(<div>Emoji</div>)}</Form.Label>
                                             
                                                         <select className="form-select mb-3 shadow-none" id="emoji" name="emoji" onChange={handleChange}>
                                                             <option> </option>
@@ -270,13 +271,13 @@ const [indices, setindices] = useState([]);
                                                         />
                                                     </Form.Group>
                                                     <Form.Group className='form-group'>
-                                                        <Form.Label>Indices d'évalutation</Form.Label>
+                                                        <Form.Label> {user.langue === "en" ? (<div>Evaluation index</div>):(<div>Indices d'évaluation</div>)}</Form.Label>
 
                                                         <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
                                                             <option> </option>
-                                                            <option value="Ecrit">Ecrit</option>
-                                                            <option value="Oral">Oral</option>
-                                                            <option value="Pratique">Pratique</option>
+                                                            <option value="Ecrit">{user.langue === "en" ? (<div>Written</div>):(<div>Ecrit</div>)}</option>
+                                                            <option value="Oral">{user.langue === "en" ? (<div>Oral</div>):(<div>Oral</div>)}</option>
+                                                            <option value="Pratique">{user.langue === "en" ? (<div>Practical</div>):(<div>Pratique</div>)}</option>
                                                             {indices.map((item) => (
                                                                 <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
                                                             ))}
@@ -288,10 +289,10 @@ const [indices, setindices] = useState([]);
 
                                                         <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                                             <option> </option>
-                                                            <option value="Non acquis">Non acquis</option>
-                                                            <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                            <option value="Acquis">Acquis</option>
-                                                                <option value="Expert">Expert</option>
+                                                             <option value="Non acquis"> {user.langue === "en" ? (<div>Not acquired</div>):(<div>Non acquis</div>)}</option>
+                                                            <option value="En cours d'acquisition"> {user.langue === "en" ? (<div>In progress</div>):(<div>En cours d'acquisition</div>)}</option>
+                                                            <option value="Acquis"> {user.langue === "en" ? (<div>Acquired</div>):(<div>Acquis</div>)}</option>
+                                                            <option value="Expert">Expert</option>
                                                         </select>
                                                     </Form.Group>
          
@@ -302,7 +303,7 @@ const [indices, setindices] = useState([]);
                                                 {etab == 24 ? <div>
                                                     <Form.Group className="form-group">
 
-                                                        <Form.Label htmlFor="exampleFormControlSelect1">Selectionner la matière</Form.Label>
+                                                        <Form.Label htmlFor="exampleFormControlSelect1">{user.langue === "en" ? (<div>Select material</div>):(<div>Sélectionner la matière</div>)}</Form.Label>
                                                         <select className="form-select" id="matiere" name="matiere" onChange={handleChange}>
                                                             <option> </option>
                                                             {matieres.map((item) => (<option value={item.matiere_cp}>{item.matiere_cp}</option>))}
@@ -322,14 +323,15 @@ const [indices, setindices] = useState([]);
 
                                                         <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                                             <option> </option>
-                                                            <option value="Non acquis">Non acquis</option>
-                                                            <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                            <option value="Acquis">Acquis</option>
+                                                            <option value="Non acquis"> {user.langue === "en" ? (<div>Not acquired</div>):(<div>Non acquis</div>)}</option>
+                                                            <option value="En cours d'acquisition"> {user.langue === "en" ? (<div>In progress</div>):(<div>En cours d'acquisition</div>)}</option>
+                                                            <option value="Acquis"> {user.langue === "en" ? (<div>Acquired</div>):(<div>Acquis</div>)}</option>
+                                                            <option value="Expert">Expert</option>
                                                         </select>
                                                     </Form.Group>
 
                                                     <Form.Group className='form-group'>
-                                                        <Form.Label>Compétence visée</Form.Label>
+                                                        <Form.Label>{user.langue === "en" ? (<div>Target skill</div>):(<div>Compétence visée</div>)}</Form.Label>
                                                         <Form.Control type="text" id="competence_visee" name="competence_visee"
                                                             value={inputs.competence_visee || ''}
                                                             onChange={handleChange}
@@ -337,7 +339,7 @@ const [indices, setindices] = useState([]);
                                                     </Form.Group>
                                                 </div> : <div>
                                                     <Form.Group className='form-group'>
-                                                        <Form.Label>Groupes</Form.Label>
+                                                        <Form.Label>{user.langue === "en" ? (<div>Groups</div>):(<div>Groupes</div>)}</Form.Label>
 
                                                         <select className="form-select mb-3 shadow-none" name="matiere" onChange={handleChange}>
                                                             <option> </option>
@@ -349,13 +351,13 @@ const [indices, setindices] = useState([]);
                                                     </Form.Group>
 
                                                     <Form.Group className='form-group'>
-                                                        <Form.Label>Indices d'évalutation</Form.Label>
+                                                        <Form.Label>{user.langue === "en" ? (<div>Evaluation index</div>):(<div>Indice d'évaluation</div>)}</Form.Label>
 
                                                         <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
                                                             <option> </option>
-                                                            <option value="Ecrit">Ecrit</option>
-                                                            <option value="Oral">Oral</option>
-                                                            <option value="Pratique">Pratique</option>
+                                                            <option value="Ecrit">{user.langue === "en" ? (<div>Written</div>):(<div>Ecrit</div>)}</option>
+                                                            <option value="Oral">{user.langue === "en" ? (<div>Oral</div>):(<div>Oral</div>)}</option>
+                                                            <option value="Pratique">{user.langue === "en" ? (<div>Practice</div>):(<div>Pratique</div>)}</option>
                                                             {indices.map((item) => (
                                                                 <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
                                                             ))}
@@ -375,9 +377,10 @@ const [indices, setindices] = useState([]);
 
                                                         <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                                             <option> </option>
-                                                            <option value="Non acquis">Non acquis</option>
-                                                            <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                            <option value="Acquis">Acquis</option>
+                                                            <option value="Non acquis"> {user.langue === "en" ? (<div>Not acquired</div>):(<div>Non acquis</div>)}</option>
+                                                            <option value="En cours d'acquisition"> {user.langue === "en" ? (<div>In progress</div>):(<div>En cours d'acquisition</div>)}</option>
+                                                            <option value="Acquis"> {user.langue === "en" ? (<div>Acquired</div>):(<div>Acquis</div>)}</option>
+                                                            <option value="Expert">Expert</option>
                                                         </select>
                                                     </Form.Group>
                                                 </div>}
@@ -386,7 +389,7 @@ const [indices, setindices] = useState([]);
 
 
                                             <Button variant="primary" onClick={submitForm}>
-                                                Modifier
+                                                {user.langue === "en" ? (<div>Modify</div>):(<div>Modifier</div>)}
                                             </Button>
                                         </Form>
                                     </Modal.Body>
@@ -406,12 +409,12 @@ const [indices, setindices] = useState([]);
                                     <thead>                  
                                     <tr>
                                         <th>Sno.</th>
-                                        <th>Nom(s)</th>
-                                        <th>Prénom(s)</th>     
-                                        <th>Groupes</th>
-                                        <th>Note</th>
-                                        <th>Indices</th>
-                                        <th>Coef</th>
+                                        <th>{user.langue === "en" ? (<div>Name(s)</div>):(<div>Noms(s)</div>)}</th>
+                                        <th>{user.langue === "en" ? (<div>First name</div>):(<div>Prénom(s)</div>)}</th>     
+                                        <th>{user.langue === "en" ? (<div>Groups</div>):(<div>Groupes</div>)}</th>
+                                        <th>{user.langue === "en" ? (<div>Note</div>):(<div>Note</div>)}</th>
+                                        <th>{user.langue === "en" ? (<div>Index</div>):(<div>Indices</div>)}</th>
+                                        <th>{user.langue === "en" ? (<div>Coef</div>):(<div>Coef</div>)}</th>
                                         <th>Appreciation</th>
                            <th>Action</th>
                                           
@@ -463,12 +466,12 @@ const [indices, setindices] = useState([]);
                                     <thead>              
                                     <tr>
                                         <th>Sno.</th>
-                                        <th>Nom(s)</th>
-                                        <th>Prénom(s)</th>     
-                                        <th>Groupes</th>
+                                        <th>{user.langue === "en" ? (<div>Name(s)</div>):(<div>Noms(s)</div>)}</th>
+                                        <th>{user.langue === "en" ? (<div>First name</div>):(<div>Prénom(s)</div>)}</th>     
+                                        <th>{user.langue === "en" ? (<div>Groups</div>):(<div>Groupes</div>)}</th>
                                         <th>Note</th>
                                         <th>Emoji</th>
-                                        <th>Indices</th>
+                                        <th>{user.langue === "en" ? (<div>Index</div>):(<div>Indices</div>)}</th>
                                         <th>Coef</th>
                                         <th>Appreciation</th>
                                         <th>Action</th>
@@ -516,12 +519,12 @@ const [indices, setindices] = useState([]);
                                     <thead>                  
                                     <tr>
                                         <th>Sno.</th>
-                                        <th>Nom(s)</th>
-                                        <th>Prénom(s)</th>     
-                                        <th>Groupes</th>
-                                        <th>Note</th>
-                                        <th>Indices</th>
-                                        <th>Coef</th>
+                                        <th>{user.langue === "en" ? (<div>Name(s)</div>):(<div>Noms(s)</div>)}</th>
+                                        <th>{user.langue === "en" ? (<div>First name</div>):(<div>Prénom(s)</div>)}</th>     
+                                        <th>{user.langue === "en" ? (<div>Groups</div>):(<div>Groupes</div>)}</th>
+                                        <th>{user.langue === "en" ? (<div>Note</div>):(<div>Note</div>)}</th>
+                                        <th>{user.langue === "en" ? (<div>Index</div>):(<div>Indices</div>)}</th>
+                                        <th>{user.langue === "en" ? (<div>Coef</div>):(<div>Coef</div>)}</th>
                                         <th>Appreciation</th>
                                         <th>Action</th>
                                           
