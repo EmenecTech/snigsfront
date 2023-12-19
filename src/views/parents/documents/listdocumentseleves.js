@@ -351,7 +351,7 @@ const ParentslistdocumentsEleves = memo((props) => {
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                   <Modal.Title as="h5">
-                    Ajouter une nouvelle matière
+                   {user.langue === "en" ? (<div> Add a new material </div>):(<div>Ajouter une nouvelle matière</div>)}
                   </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -361,7 +361,7 @@ const ParentslistdocumentsEleves = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Intitulé{" "}
+                              {user.langue === "en" ? (<div> Title </div>):(<div> Intitulé </div>)}{" "}
                             </Form.Label>
                             <Form.Control
                               type="text"
@@ -379,7 +379,7 @@ const ParentslistdocumentsEleves = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Type de fichiers{" "}
+                              {user.langue === "en" ? (<div> Type of files </div>):(<div> Type de fichiers </div>)}{" "}
                             </Form.Label>
                             <select
                               className="form-select mb-3 shadow-none"
@@ -387,11 +387,11 @@ const ParentslistdocumentsEleves = memo((props) => {
                               onChange={(e) => handleChange2(e.target.name)}
                             >
                               <option value=""></option>
-                              <option value="Image">Image</option>
-                              <option value="Pdf">Pdf</option>
-                              <option value="Word">Word</option>
-                              <option value="Excel">Excel</option>
-                              <option value="Tous">Tous</option>
+                              <option value="Image">{user.langue === "en" ? (<div> Picture </div>):(<div> Image </div>)}</option>
+                              <option value="Pdf">{user.langue === "en" ? (<div> File pdf </div>):(<div> pdf </div>)}</option>
+                              <option value="Word">{user.langue === "en" ? (<div> File word </div>):(<div> word </div>)}</option>
+                              <option value="Excel">{user.langue === "en" ? (<div> File excel </div>):(<div> Excel </div>)}</option>
+                              <option value="Tous">{user.langue === "en" ? (<div> All </div>):(<div> Tous </div>)}</option>
                             </select>
                           </Form.Group>
                         </Form.Group>
@@ -410,7 +410,7 @@ const ParentslistdocumentsEleves = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Niveau *
+                             {user.langue === "en" ? (<div> Level </div>):(<div> Niveau </div>)} *
                             </Form.Label>
                             <select
                               className="form-select mb-3 shadow-none"
@@ -427,7 +427,7 @@ const ParentslistdocumentsEleves = memo((props) => {
                                   {item.intitule_niveau}
                                 </option>
                               ))}
-                              <option value="Tous">Tous</option>
+                              <option value="Tous">{user.langue === "en" ? (<div> All </div>):(<div> Tous </div>)}</option>
                             </select>
                           </Form.Group>
                         </Form.Group>
@@ -440,7 +440,7 @@ const ParentslistdocumentsEleves = memo((props) => {
                         variant="primary"
                         onClick={submitData}
                       >
-                        Confirmer
+                        {user.langue === "en" ? (<div> Confirm </div>):(<div> Confirmer </div>)}
                       </Button>
                     </div>
                   </Form>
@@ -459,9 +459,9 @@ const ParentslistdocumentsEleves = memo((props) => {
                 >
                   <thead>
                     <tr>
-                      <th>Intitulé</th>
-                      <th>Type de fichier</th>
-                      <th>Destinataire </th>
+                      <th>{user.langue === "en" ? (<div> Title </div>):(<div> Intitulé </div>)}</th>
+                      <th>{user.langue === "en" ? (<div> Type of file </div>):(<div>Type de fichier</div>)}</th>
+                      <th>{user.langue === "en" ? (<div> Recipient </div>):(<div> Destinataire </div>)}</th>
                       <th>Actions </th>
                     </tr>
                   </thead>
