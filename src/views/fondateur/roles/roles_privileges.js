@@ -349,7 +349,7 @@ const RolesPrivilegesAdmin = memo((props) => {
                     />
                   </svg>
                 </span>
-                Ajouter
+                {user.langue === "en" ? (<div>Add</div>):(<div>  Ajouter</div>)}
               </Button>
               {/* <!-- Modal --> */}
               <Modal show={show} onHide={handleClose}>
@@ -410,7 +410,7 @@ const RolesPrivilegesAdmin = memo((props) => {
                   <thead>
                     <tr>
                       <th>Code</th>
-                      <th>Intitulé</th>
+                      <th>{user.langue === "en" ? (<div>Title</div>):(<div>Intitulé</div>)}</th>
                       <th>Type </th>
                       <th>Action</th>
                     </tr>
