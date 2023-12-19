@@ -331,7 +331,7 @@ const EleveMatieresClasse = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">Matières</h4>
+                                                    <h4 className="card-title">{user.langue === "en" ? (<div> Materials </div>):(<div> Matières </div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -345,9 +345,9 @@ const EleveMatieresClasse = memo((props) => {
                                                     >
                                                         <thead>
                                                             <tr>
-                                                                <th>Matière</th>
+                                                                <th>{user.langue === "en" ? (<div> Material </div>):(<div> Matière </div>)}</th>
                                                                 <th>Coefficient </th>
-                                                                <th>Groupe</th>
+                                                                <th>{user.langue === "en" ? (<div> Group </div>):(<div> Groupe </div>)}</th>
                                                                 <th>Action</th>
 
                                                             </tr>
@@ -363,7 +363,7 @@ const EleveMatieresClasse = memo((props) => {
 
                                                                             <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="See" data-original-title="See" to={"/Eleve/List/Chapitres/Cours/" + item.matiere_cm}>
 
-                                                                                Consulter
+                                                                               {user.langue === "en" ? (<div> Consult </div>):(<div> Consulter </div>)}
                                                                             </Link>{' '}
                                                                         </div>
                                                                     </td>
