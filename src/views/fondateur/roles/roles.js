@@ -344,7 +344,7 @@ const RolesAdmin = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>  {user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)}</th>
+                                            <th> {user.langue === "en" ? (<div>Title</div>):(<div>Intitulé </div>)}</th>
                                             <th>Description </th>
                                             <th>Actions </th>
                                         </tr>
