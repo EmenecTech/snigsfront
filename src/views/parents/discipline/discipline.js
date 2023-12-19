@@ -279,7 +279,7 @@ const DisciplineInfoForParent = (props) => {
 
 
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="furl">Nom et prénom:</Form.Label>
+                                        <Form.Label htmlFor="furl">{user.langue === "en" ? (<div> Full name </div>):(<div> Nom et prénom </div>)}:</Form.Label>
                                         <Form.Control
                                             type="text"
                                             id="furl"
@@ -288,7 +288,7 @@ const DisciplineInfoForParent = (props) => {
                                         />
                                     </Form.Group>
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="furl">Classe:</Form.Label>
+                                        <Form.Label htmlFor="furl">{user.langue === "en" ? (<div> Class </div>):(<div>Classe</div>)}:</Form.Label>
                                         <Form.Control
                                             type="text"
                                             id="furl"
@@ -297,7 +297,7 @@ const DisciplineInfoForParent = (props) => {
                                         />
                                     </Form.Group>
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="furl">Retards:</Form.Label>
+                                        <Form.Label htmlFor="furl">{user.langue === "en" ? (<div> Delays </div>):(<div> Retards </div>)}:</Form.Label>
                                         <Form.Control
                                             type="text"
                                             id="furl"
@@ -306,7 +306,7 @@ const DisciplineInfoForParent = (props) => {
                                         />
                                     </Form.Group>
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="furl">Heures:</Form.Label>
+                                        <Form.Label htmlFor="furl">{user.langue === "en" ? (<div> Hours </div>):(<div> Heures </div>)}:</Form.Label>
                                         <Form.Control
                                             type="text"
                                             id="furl"
@@ -315,7 +315,7 @@ const DisciplineInfoForParent = (props) => {
                                         />
                                     </Form.Group>
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="furl">Blames:</Form.Label>
+                                        <Form.Label htmlFor="furl">{user.langue === "en" ? (<div> Blames </div>):(<div> Blames </div>)}:</Form.Label>
                                         <Form.Control
                                             type="text"
                                             id="furl"
@@ -334,7 +334,7 @@ const DisciplineInfoForParent = (props) => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Details</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div> Details </div>):(<div> Détails </div>)}</h4>
                                 </div>
                             </Card.Header>
                             <Card.Body>
@@ -348,7 +348,7 @@ const DisciplineInfoForParent = (props) => {
                                     >
                                         <thead>
                                             <tr>
-                                                <th>Intitulé</th>
+                                                <th>{user.langue === "en" ? (<div> Title </div>):(<div> Intitulé </div>)}</th>
                                                 <th>Details</th>
                                                 <th>Action</th>
 
