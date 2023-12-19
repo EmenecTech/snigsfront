@@ -332,7 +332,7 @@ const ListPrivilegesFondateur = memo((props) => {
                                     <thead>
                                         <tr>
                                             <th>Code </th>
-                                            <th>{user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Title</div>):(<div> Intitulé </div>)}</th>
                                             <th>Type </th>
                                         </tr>
                                     </thead>
