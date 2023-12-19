@@ -71,7 +71,7 @@ const AdminListRequest = () => {
                                                 deleteUser(requete.id);
                                             }}
                                         >
-                                            Supprimer
+                                            {user.langue === "en" ? (<div>Delete</div>):(<div>Supprimer</div>)}
                                         </button>
                                     </td>
                                 </tr>
