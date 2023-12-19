@@ -409,8 +409,8 @@ const ListPreinscriptions = memo((props) => {
                               onChange={handleChange}
                             >
                               <option></option>
-                              <option value="M">M</option>
-                              <option value="F">F</option>
+                              <option value="M">Male</option>
+                              <option value="F">Female</option>
                             </select>
                           </Form.Group>
                         </Form.Group>
@@ -421,7 +421,7 @@ const ListPreinscriptions = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Email{" "}
+                              {user.langue === "en" ? (<div>Email</div>):(<div>Email</div>)}{" "}
                             </Form.Label>
                             <Form.Control
                               type="mail"
@@ -438,7 +438,7 @@ const ListPreinscriptions = memo((props) => {
                                 <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Date de naissance </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Date of birth</div>):(<div>Date de naissance</div>)} </Form.Label>
                                                     <Form.Control type="date" defaultValue="" name="date_n" onChange={handleChange} />
                                                 </Form.Group>
                                             </Form.Group>
@@ -448,7 +448,7 @@ const ListPreinscriptions = memo((props) => {
                                         <Col>
                                             <Form.Group as={Row} className="form-group">
                                                 <Form.Group className="form-group">
-                                                    <Form.Label htmlFor="exampleInputText1">Lieu de naissance </Form.Label>
+                                                    <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Place of birth</div>):(<div>Lieu de naissance</div>)}</Form.Label>
                                                     <Form.Control type="text" defaultValue="" name="lieu_n" onChange={handleChange} required />
                                                 </Form.Group>
                                             </Form.Group>
@@ -509,7 +509,7 @@ const ListPreinscriptions = memo((props) => {
                       <th>{user.langue === "en" ? (<div>Name</div>):(<div>Nom  </div>)}</th>
                       <th>{user.langue === "en" ? (<div>Surname</div>):(<div>Prénom  </div>)}</th>
                       <th>{user.langue === "en" ? (<div>Level</div>):(<div>Niveau  </div>)}</th>
-                      <th>Email</th>
+                      <th>{user.langue === "en" ? (<div>Email</div>):(<div>Email</div>)}</th>
 
                       <th min-width="100px">Actions</th>
                     </tr>
