@@ -239,7 +239,7 @@ const ParentsEditProfil = (props) => {
                     type="sublit"
                     onClick={submitData}
                   >
-                    Upload Image
+                    {user.langue === "en" ? (<div> Upload image </div>):(<div> Modifier </div>)}
                   </button>
                 </Form>
               </Card.Body>
@@ -291,7 +291,7 @@ const ParentsEditProfil = (props) => {
                         <Form>
                           <Row>
                             <Col>
-                              <label>Date de naissance:</label>
+                              <label>{user.langue === "en" ? (<div>Date of birth</div>):(<div> Date de naissance </div>)}:</label>
                               <input
                                 type="date"
                                 name="date_naissance"
@@ -302,7 +302,7 @@ const ParentsEditProfil = (props) => {
                             </Col>
 
                             <Col>
-                              <label>Lieu de naissance:</label>
+                              <label>{user.langue === "en" ? (<div> Place of birth </div>):(<div> Lieu de naissance </div>)}:</label>
                               <input
                                 type="text"
                                 name="lieu_naissance"
@@ -330,7 +330,7 @@ const ParentsEditProfil = (props) => {
                             </Col>
 
                             <Col>
-                              <label>telephone:</label>
+                              <label>{user.langue === "en" ? (<div> Phone </div>):(<div> Téléphone </div>)}:</label>
                               <input
                                 type="text"
                                 name="telephone"
@@ -348,7 +348,7 @@ const ParentsEditProfil = (props) => {
                         onClick={submitForm}
                         className="btn btn-info mt-2"
                       >
-                        Modifier
+                        {user.langue === "en" ? (<div> Modify </div>):(<div> Modifier </div>)}
                       </button>
                     </div>
                   </div>
@@ -357,7 +357,7 @@ const ParentsEditProfil = (props) => {
                 <h5 className="mb-3">Security</h5>
                 <div className="row">
                   <Form.Group className="col-md-6 form-group">
-                    <Form.Label htmlFor="pass">Mot de passe:</Form.Label>
+                    <Form.Label htmlFor="pass">{user.langue === "en" ? (<div> Password </div>):(<div> Mot de passe </div>)}:</Form.Label>
                     <Form.Control
                       type="password"
                       className="form-control"
@@ -370,7 +370,7 @@ const ParentsEditProfil = (props) => {
                   </Form.Group>
                   <Form.Group className="col-md-6 form-group">
                     <Form.Label htmlFor="rpass">
-                      Confirmer le Password:
+                      {user.langue === "en" ? (<div> Confirm password </div>):(<div> Confirmer le mot de passe </div>)}:
                     </Form.Label>
                     <Form.Control
                       type="password"
@@ -383,7 +383,7 @@ const ParentsEditProfil = (props) => {
                     onClick={submitFormPassword}
                     className="btn btn-info mt-2"
                   >
-                    Modifier le mot de passe
+                    {user.langue === "en" ? (<div> Change password </div>):(<div> Modifier le mot de passe </div>)}
                   </button>
                 </div>
               </Card.Body>
