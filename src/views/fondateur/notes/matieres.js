@@ -316,7 +316,7 @@ return (
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Eleves</h4>
+                                <h4 className="card-title"> {user.langue === "en" ? (<div>Students</div>):(<div>Elèves</div>)}</h4>
                             </div>
 
 
@@ -334,8 +334,8 @@ return (
                                     <thead>
                                         <tr>
 
-                                            <th>Eleves </th>
-                                            <th>Action</th>
+                                            <th> {user.langue === "en" ? (<div>Students</div>):(<div>Elèves</div>)}</th>
+                                            <th> {user.langue === "en" ? (<div>Action</div>):(<div>Action</div>)}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
