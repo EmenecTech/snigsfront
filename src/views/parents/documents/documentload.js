@@ -344,14 +344,14 @@ const ParentslistdocumentsElevesLoad = memo((props) => {
           <Card>
             <Card.Header className="d-flex justify-content-between">
               <div className="header-title">
-                <h4 className="card-title">Selectionner le document</h4>
+                <h4 className="card-title">{user.langue === "en" ? (<div> Select the document </div>):(<div> Sélectionner le document </div>)}</h4>
               </div>
 
               {/* <!-- Modal --> */}
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                   <Modal.Title as="h5">
-                    Ajouter une nouvelle matière
+                   {user.langue === "en" ? (<div> Select a new material </div>):(<div> Ajouter une nouvelle matière </div>)}
                   </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -361,7 +361,7 @@ const ParentslistdocumentsElevesLoad = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              Type de fichiers{" "}
+                              {user.langue === "en" ? (<div> type of files </div>):(<div> Type de fichiers </div>)}{" "}
                             </Form.Label>
                             <input
                               className="form-control"
@@ -380,7 +380,7 @@ const ParentslistdocumentsElevesLoad = memo((props) => {
                         variant="primary"
                         onClick={submitData}
                       >
-                        Confirmer
+                       {user.langue === "en" ? (<div> Confirm </div>):(<div> Confirmer </div>)}
                       </Button>
                     </div>
                   </Form>
@@ -395,7 +395,7 @@ const ParentslistdocumentsElevesLoad = memo((props) => {
                     <Form.Group as={Row} className="form-group">
                       <Form.Group className="form-group">
                         <Form.Label htmlFor="exampleInputText1">
-                          Fichiers (.docx, .pdf, .png, .jpg){" "}
+                          {user.langue === "en" ? (<div> Files </div>):(<div>Fichiers </div>)} (.docx, .pdf, .png, .jpg){" "}
                         </Form.Label>
                         <input
                           className="form-control"
@@ -410,7 +410,7 @@ const ParentslistdocumentsElevesLoad = memo((props) => {
 
                 <div className="text-center">
                   <Button type="button" variant="primary" onClick={submitData}>
-                    Confirmer
+                   {user.langue === "en" ? (<div> Confirm </div>):(<div> Confirmer </div>)}
                   </Button>
                 </div>
               </Form>
