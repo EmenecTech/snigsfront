@@ -98,7 +98,7 @@ const Badge_p = () => {
                               className="control-label align-self-center mb-0"
                               htmlFor="name"
                             >
-                              Nom:
+                              {user.langue === "en" ? (<div>Name</div>):(<div>Nom</div>)}:
                             </Form>
                             <Col sm="9">
                               <Form type="name" placeholder="" />
@@ -113,7 +113,7 @@ const Badge_p = () => {
                               className="control-label align-self-center mb-0"
                               htmlFor="name"
                             >
-                              Prenom:
+                              {user.langue === "en" ? (<div> First name </div>):(<div>Prénom</div>)}:
                             </Form>
                             <Col sm="9">
                               <Form type="name" placeholder="" />
@@ -128,7 +128,7 @@ const Badge_p = () => {
                               className="control-label align-self-center mb-0"
                               htmlFor="date"
                             >
-                              Date de naissance:
+                              {user.langue === "en" ? (<div> Date of birth </div>):(<div> Date de naissance </div>)}:
                             </Form>
                             <Col sm="9">
                               <Form type="date" placeholder="" />
@@ -143,7 +143,7 @@ const Badge_p = () => {
                               className="control-label align-self-center mb-0"
                               htmlFor="string"
                             >
-                              Lieu de naissance:
+                              {user.langue === "en" ? (<div> Place of birth </div>):(<div> Lieu de naissance </div>)}:
                             </Form>
                             <Col sm="9">
                               <Form type="string" placeholder="" />
@@ -158,7 +158,7 @@ const Badge_p = () => {
                               className="control-label align-self-center mb-0"
                               htmlFor="string"
                             >
-                              Matricule:
+                             {user.langue === "en" ? (<div> Matricule </div>):(<div> Matricule </div>)} :
                             </Form>
                             <Col sm="9">
                               <Form type="string" placeholder="" />
@@ -176,7 +176,7 @@ const Badge_p = () => {
                         <div className="col-sm-10 justify-content-center">
                           <div className="header-title">
                             <p className="text-center">
-                              <i> Année Scolaire 2022-2023</i>
+                              <i> {user.langue === "en" ? (<div> School year </div>):(<div> Année scolaire </div>)} 2022-2023</i>
                             </p>
                           </div>
                         </div>
