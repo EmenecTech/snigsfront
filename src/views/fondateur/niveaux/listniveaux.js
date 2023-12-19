@@ -326,7 +326,7 @@ const deleteNiveaux = (id) => {
                                     <thead>
                                         <tr>
                                             <th> {user.langue === "en" ? (<div>Entitled </div>):(<div> Intitulé</div>)}</th>
-                                            <th>Cycle </th>
+                                            <th> {user.langue === "en" ? (<div>Cycle</div>):(<div>Cycle</div>)}</th>
                                             <th>Section</th>
                                             <th>Actions</th>
 
