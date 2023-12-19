@@ -115,7 +115,7 @@ const ParentsListNotesEval = () => {
                 <Col sm="12" lg="12">
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
-                            <h4 className="card-title">Notes {classes.cycle_niveau}</h4>
+                            <h4 className="card-title">{user.langue === "en" ? (<div> Notes </div>):(<div> Notes </div>)} {classes.cycle_niveau}</h4>
 
     {/* <div>
                                 <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3" onClick={handleShow}>
@@ -199,14 +199,14 @@ const ParentsListNotesEval = () => {
                                 <thead>
                                     <tr>
                                         
-                                        <th>Nom</th>
-                                        <th>Prénom</th>
-                                        <th>Matiere</th>
-                                        <th>Note</th>
+                                        <th>{user.langue === "en" ? (<div> Name </div>):(<div> Nom </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> First name </div>):(<div> Prénom </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> Material </div>):(<div> Matière </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> Note </div>):(<div>Note</div>)}</th>
                                         <th>NxC</th>
                                        
                                         <th>Appreciation</th>
-                                        <th>Compétence visée</th>
+                                        <th>{user.langue === "en" ? (<div> Target skill </div>):(<div> Compétence visée </div>)}</th>
                                         <th> </th>
                                     </tr>
                                 </thead>
@@ -250,11 +250,11 @@ const ParentsListNotesEval = () => {
                                 <thead>
                                     <tr>
                                         
-                                        <th>Nom</th>
-                                        <th>Prénom</th>
-                                        <th>Groupe</th>
+                                         <th>{user.langue === "en" ? (<div> Name </div>):(<div> Nom </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> First name </div>):(<div> Prénom </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> Group </div>):(<div> Groupe </div>)}</th>
                                         <th>Note</th>
-                                        <th>Indices d'evaluation</th>
+                                        <th>{user.langue === "en" ? (<div> Evaluation index </div>):(<div> Indice d'évaluation </div>)}</th>
                                         <th>Appreciation</th>
                                         
                                     </tr>
@@ -282,12 +282,12 @@ const ParentsListNotesEval = () => {
                                 <thead>
                                     <tr>
                                         
-                                                <th>Nom(s)</th>
-                                                <th>Prénom(s)</th>
-                                                <th>Groupes</th>
+                                               <th>{user.langue === "en" ? (<div> Name </div>):(<div> Nom </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> First name </div>):(<div> Prénom </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> Group </div>):(<div> Groupe </div>)}</th>
                                                 <th>Note</th>
                                                 <th>Emoji</th>
-                                                <th>Indices</th>
+                                                <th>{user.langue === "en" ? (<div> Index </div>):(<div> Indices </div>)}</th>
                                                 <th>Appreciation</th>
                                         
                                     </tr>
@@ -318,14 +318,14 @@ const ParentsListNotesEval = () => {
                                     <tr>
                                         
                                             <th>Sno.</th>
-                                            <th>Nom(s)</th>
-                                            <th>Prénom(s)</th>
-                                            <th>Matière</th>
+                                             <th>{user.langue === "en" ? (<div> Name </div>):(<div> Nom </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> First name </div>):(<div> Prénom </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Material </div>):(<div> Matière </div>)}</th>
                                            
                                     
                                             <th>CC</th>
                                             <th>SN</th>
-                                            <th>Note finale</th>
+                                            <th>{user.langue === "en" ? (<div> Final score </div>):(<div> Note finale </div>)}</th>
                                         
                                     </tr>
                                 </thead>
