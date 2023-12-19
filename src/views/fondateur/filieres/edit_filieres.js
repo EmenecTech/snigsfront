@@ -97,7 +97,7 @@ const EditFilieres = memo((props) => {
           <Card>
             <Card.Header className="d-flex justify-content-between">
               <div className="header-title">
-                <h4 className="card-title">{user.langue === "en" ? (<div>Modify the Sector </div>):(<div> Modifier la Filière </div>)}</h4>
+                <h4 className="card-title">{user.langue === "en" ? (<div>Edit the Sector </div>):(<div> Modifier la Filière </div>)}</h4>
               </div>
             </Card.Header>
             <Card.Body>
@@ -107,7 +107,7 @@ const EditFilieres = memo((props) => {
                     <Form.Group as={Row} className="form-group">
                       <Form.Group className="form-group">
                         <Form.Label htmlFor="exampleInputText1">
-                          {user.langue === "en" ? (<div>Entitled </div>):(<div>  Intitulé</div>)}{" "}
+                          {user.langue === "en" ? (<div>Title</div>):(<div>  Intitulé</div>)}{" "}
                         </Form.Label>
                         <Form.Control
                           type="text"
@@ -124,7 +124,7 @@ const EditFilieres = memo((props) => {
 
                 <div className="text-center">
                   <Button type="button" variant="primary" onClick={submitForm}>
-                  {user.langue === "en" ? (<div>Edit </div>):(<div> Modifier</div>)}
+                  {user.langue === "en" ? (<div>Modify</div>):(<div> Modifier</div>)}
                   </Button>
                 </div>
               </Form>
