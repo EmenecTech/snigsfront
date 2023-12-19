@@ -368,13 +368,13 @@ const deleteFiliere = (id) => {
                     />
                   </svg>
                 </span>
-                Ajouter
+                 {user.langue === "en" ? (<div>Add</div>):(<div>Ajouter</div>)}
               </Button>
               {/* <!-- Modal --> */}
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                   <Modal.Title as="h5">
-                    Ajouter une nouvelle filière
+                    {user.langue === "en" ? (<div>Add a new sector</div>):(<div>Ajouter une nouvelle filière</div>)}
                   </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -384,7 +384,7 @@ const deleteFiliere = (id) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              {user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)}{" "}
+                              {user.langue === "en" ? (<div>Title</div>):(<div>Intitulé </div>)}{" "}
                             </Form.Label>
                             <Form.Control
                               type="text"
@@ -423,7 +423,7 @@ const deleteFiliere = (id) => {
                 >
                   <thead>
                     <tr>
-                      <th> {user.langue === "en" ? (<div> Entitled</div>):(<div> Intitulé </div>)}</th>
+                      <th> {user.langue === "en" ? (<div>Title</div>):(<div> Intitulé </div>)}</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
