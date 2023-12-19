@@ -60,18 +60,18 @@ const EleveLeconChapitre = (props) => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Leçons</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div> Lessons </div>):(<div> Leçons </div>)}</h4>
                                 </div>
                             </Card.Header>
                             <div className="table-responsive">
                                 <table id="user-list-table" className="table table-striped" role="grid" data-toggle="data-table">
                                     <thead>
                                         <tr className="ligth">
-                                            <th>Intitulé</th>
-                                            <th>Chapitre</th>
-                                            <th>Nombre d'heures</th>
-                                            <th>Date de début</th>
-                                            <th>Date de fin</th>
+                                            <th>{user.langue === "en" ? (<div> Title </div>):(<div> Intitulé </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Chapter </div>):(<div> Chapitre </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Number of hours </div>):(<div> Nombre d'heures </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Start date </div>):(<div> Date de début </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> End date </div>):(<div> Date de fin </div>)}</th>
 
                                             <th>Description</th>
                                         </tr>
