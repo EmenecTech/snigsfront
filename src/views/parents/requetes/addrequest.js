@@ -28,13 +28,13 @@ const ParentsAddRequest = (props) => {
     <Card>
       <Card.Header className="d-flex justify-content-between">
         <div className="header-title">
-          <h4 className="card-title">Messagerie</h4>
+          <h4 className="card-title">{user.langue === "en" ? (<div> Messaging </div>):(<div> Messagerie </div>)}</h4>
         </div>
       </Card.Header>
       <Card.Body>
         <Form>
           <Form.Group className="form-group">
-            <Form.Label htmlFor="objet">Objet:</Form.Label>
+            <Form.Label htmlFor="objet">{user.langue === "en" ? (<div> Object </div>):(<div> Objet </div>)}:</Form.Label>
             <Form.Control
               type="text"
               name="objet"
@@ -44,7 +44,7 @@ const ParentsAddRequest = (props) => {
             />
           </Form.Group>
           <Form.Group className="form-group">
-            <Form.Label htmlFor="fichier">Fichier:</Form.Label>
+            <Form.Label htmlFor="fichier">{user.langue === "en" ? (<div> File </div>):(<div> Fichier </div>)}:</Form.Label>
             <Form.Control
               type="text"
               name="fichier"
@@ -54,7 +54,7 @@ const ParentsAddRequest = (props) => {
             />
           </Form.Group>
           <Form.Group className="mb-3 form-group">
-            <Form.Label htmlFor="contenu">Contenu:</Form.Label>
+            <Form.Label htmlFor="contenu">{user.langue === "en" ? (<div> Content </div>):(<div> Contenu </div>)}:</Form.Label>
             <Form.Control
               as="textarea"
               id="exampleFormControlTextarea1"
@@ -65,7 +65,7 @@ const ParentsAddRequest = (props) => {
             />
           </Form.Group>
           <Button type="button" onClick={submitForm} variant="btn btn-primary">
-            Envoyer
+            {user.langue === "en" ? (<div> Send to </div>):(<div> Envoyer </div>)}
           </Button>
         </Form>
       </Card.Body>
