@@ -309,7 +309,7 @@ const ListIndices = memo((props) => {
           <Card>
             <Card.Header className="d-flex justify-content-between">
               <div className="header-title">
-                <h4 className="card-title">{user.langue === "en" ? (<div> Indices </div>):(<div> Indices d'évaluation </div>)}</h4>
+                <h4 className="card-title">{user.langue === "en" ? (<div> Evaluation index </div>):(<div> Indices d'évaluation </div>)}</h4>
               </div>
 
               <Button variant="primary mt-2" onClick={handleShow}>
@@ -335,7 +335,7 @@ const ListIndices = memo((props) => {
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                   <Modal.Title as="h5">
-                     {user.langue === "en" ? (<div>Add a new material</div>):(<div> Ajouter un nouvel indice </div>)}
+                     {user.langue === "en" ? (<div>Add a new index</div>):(<div> Ajouter un nouvel indice </div>)}
                   </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -345,7 +345,7 @@ const ListIndices = memo((props) => {
                         <Form.Group as={Row} className="form-group">
                           <Form.Group className="form-group">
                             <Form.Label htmlFor="exampleInputText1">
-                              {user.langue === "en" ? (<div>Entitled</div>):(<div> Intitulé  </div>)}{" "}
+                              {user.langue === "en" ? (<div>Title</div>):(<div> Intitulé  </div>)}{" "}
                             </Form.Label>
                             <Form.Control
                               type="text"
@@ -383,7 +383,7 @@ const ListIndices = memo((props) => {
                 >
                   <thead>
                     <tr>
-                      <th> {user.langue === "en" ? (<div>Entitled</div>):(<div>Intitulé </div>)}</th>
+                      <th> {user.langue === "en" ? (<div>Title</div>):(<div>Intitulé </div>)}</th>
                       <th>Action</th>
                     </tr>
                   </thead>
