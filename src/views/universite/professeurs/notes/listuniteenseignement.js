@@ -178,7 +178,7 @@ const ProfesseurListGroupes = () => {
                                 </Button>
                                 <Modal show={show} onHide={handleClose}>
                                     <Modal.Header closeButton>
-                                        <Modal.Title>Ajouter une note</Modal.Title>
+                                        <Modal.Title>{user.langue === "en" ? (<div> Add a note </div>):(<div>Ajouter une note</div>)}</Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
                                         <Form>
