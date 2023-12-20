@@ -72,7 +72,7 @@ const EleveListRequest = () => {
 
 
                         <div className="header-title">
-                            <h4 className="card-title">Requêtes</h4>
+                            <h4 className="card-title">{user.langue === "en" ? (<div> Request </div>):(<div> Requetes </div>)}</h4>
                         </div>
                         <Link to="/Eleve/Request/Add/">
                             <Button className="text-center btn-primary btn-icon me-2 mt-lg-0 mt-md-0 mt-3">
@@ -93,7 +93,7 @@ const EleveListRequest = () => {
                                         />
                                     </svg>
                                 </i>
-                                <span>Nouvelle Requete</span>
+                                <span>{user.langue === "en" ? (<div> New request </div>):(<div> Nouvelle requete </div>)}</span>
                             </Button>
                             </Link>
                     </div>)}
@@ -105,9 +105,9 @@ const EleveListRequest = () => {
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Objet</th>
-                                <th>Etat</th>
-                                <th>Date d'envoi</th>
+                                <th>{user.langue === "en" ? (<div> Object </div>):(<div> Objet </div>)}</th>
+                                <th>{user.langue === "en" ? (<div> Status </div>):(<div> Etat </div>)}</th>
+                                <th>{user.langue === "en" ? (<div> Date sent </div>):(<div> Date d'envoi </div>)}</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
