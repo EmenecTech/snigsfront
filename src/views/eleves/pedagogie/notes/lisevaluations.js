@@ -326,7 +326,7 @@ const ElevesListEvaluationsNotes = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Evaluations</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Assessments</div>):(<div>Evaluations</div>)}</h4>
                             </div>
 
 
@@ -344,9 +344,9 @@ const ElevesListEvaluationsNotes = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Intitulé</th>
-                                            <th>Type d'évaluation</th>
-                                            <th>Type de période</th>
+                                            <th>{user.langue === "en" ? (<div> Title </div>):(<div> Intitulé </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Type of assessment </div>):(<div> Type d'évaluation </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Period type </div>):(<div>Type de période</div>)}</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
@@ -362,7 +362,7 @@ const ElevesListEvaluationsNotes = memo((props) => {
 
                                                         <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" to={"/Eleve/List/Notes/Evaluation/" + item.intitule_evaluation}>
 
-                                                            Consulter
+                                                          {user.langue === "en" ? (<div> Consult </div>):(<div> Consulter </div>)}
 
                                                         </Link>
 
