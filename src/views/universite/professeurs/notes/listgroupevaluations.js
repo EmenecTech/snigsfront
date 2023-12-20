@@ -352,7 +352,7 @@ const ProfesseurListGroupesEvaluations = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Evaluations</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div> Assessments </div>):(<div>Evaluations</div>)}</h4>
                             </div>
                             <div>
                                 <Link className="btn btn-primary" to={"/Enseignant/Bordereau/" +  niveau + "/" + classe + "/"}>All Notes</Link>
@@ -373,9 +373,9 @@ const ProfesseurListGroupesEvaluations = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Intitulé</th>
-                                            <th>Type d'évaluation</th>
-                                            <th>Type de période</th>
+                                            <th>{user.langue === "en" ? (<div> Title </div>):(<div>Intitulé</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Type of assessment </div>):(<div>Type d'évaluation</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div>Period type</div>):(<div>Type de période</div>)}</th>
                                             
                                             <th>Action</th>
                                         </tr>
