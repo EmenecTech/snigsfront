@@ -232,11 +232,11 @@ const EleveRegularite = (props) => {
 
                                             </Col>
                                             <Col sm="5" lg="5">
-                                                <h3>Frais de scolarités</h3>
+                                                <h3>{user.langue === "en" ? (<div> School fees </div>):(<div> Frais de scolarités </div>)}</h3>
                                                 <h5 className="mb-4">{infopayement.montant_pension} XAF</h5>
 
 
-                                                <h4 className="mb-3">Détails</h4>
+                                                <h4 className="mb-3">{user.langue === "en" ? (<div> Details </div>):(<div> Détails </div>)}</h4>
                                                 {detailpayement.map((item) => (
                                                     <div className="mt-2">
                                                         <h6 className="mb-0">{item.montant_detailpayement} XAF</h6>
