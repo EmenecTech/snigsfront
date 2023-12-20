@@ -361,10 +361,10 @@ const Enseignant_planning_periodesmatieres = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Jour </th>
-                                            <th>Classe </th>
-                                            <th>Matière</th>
-                                            <th>Periode</th>
+                                            <th>{user.langue === "en" ? (<div> Day </div>):(<div> jour </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Class </div>):(<div> classe </div>)} </th>
+                                            <th>{user.langue === "en" ? (<div> Subject </div>):(<div> matière </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Period </div>):(<div> période </div>)}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
