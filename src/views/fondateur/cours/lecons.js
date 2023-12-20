@@ -69,7 +69,7 @@ const AdminLeconsChapitre = (props) => {
                                             <th>{user.langue === "en" ? (<div>Chapter</div>):(<div> Chapitre</div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Number of hours</div>):(<div> Nombre d'heures </div>)}</th>
                                             <th>{user.langue === "en" ? (<div>Start date</div>):(<div> Date de début</div>)}</th>
-                                            <th>user.langue === "en" ? (<div>Date de fin</div>):(<div> Date de début</div>)</th>
+                                            <th>{user.langue === "en" ? (<div>End date</div>):(<div> Date de fin</div>)}</th>
 
                                             <th>{user.langue === "en" ? (<div>Description</div>):(<div> Description  </div>)}</th>
                                         </tr>
