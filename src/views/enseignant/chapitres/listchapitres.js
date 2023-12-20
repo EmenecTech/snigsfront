@@ -62,17 +62,17 @@ const Enseignant_list_Chapitre = (props) => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title mb-3">
-                                    <h4 className="card-title">Fiche de suivi pédagogique - Chapitres</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div> list </div>):(<div> Fiche de suivi pédagogique - chapitre </div>)}</h4>
                                 </div>
                             </Card.Header>
                             <div className="table-responsive">
                                 <table id="user-list-table" className="table table-striped" role="grid" data-toggle="data-table">
                                     <thead>
                                         <tr className="ligth">
-                                            <th>Intitulé</th>
-                                            <th>Nombre d'heures</th>
-                                            <th>Date de début</th>
-                                            <th>Date de fin</th>
+                                            <th>{user.langue === "en" ? (<div> Title </div>):(<div> Intitulé </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Number of hours </div>):(<div> Nombre d'heures </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Start date </div>):(<div> Date de début </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> End date </div>):(<div> Date de fin </div>)}</th>
                                             <th>Description</th>
                                             <th min-width="100px">Action</th>
                                         </tr>
@@ -118,49 +118,49 @@ const Enseignant_list_Chapitre = (props) => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Ajouter une chapitre</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div> Add a chapter </div>):(<div> Ajouter un chapitre </div>)}</h4>
                                 </div>
                             </Card.Header>
                             <Card.Body>
                                 <Form>
 
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="intitule_chapitre">Intitulé du chapitre *</Form.Label>
+                                        <Form.Label htmlFor="intitule_chapitre">{user.langue === "en" ? (<div> Title of chapter </div>):(<div> Intitulé du chapitre </div>)} *</Form.Label>
                                         <Form.Control type="text" id="intitule_chapitre" name="intitule_chapitre"
                                             value={inputs.intitule_chapitre || ''}
                                             onChange={handlechange}
                                         />
                                     </Form.Group>
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="nombre_heure">Nombre d'heures</Form.Label>
+                                        <Form.Label htmlFor="nombre_heure">{user.langue === "en" ? (<div> Number of hour </div>):(<div> Nombre d'heure </div>)}</Form.Label>
                                         <Form.Control type="number" id="nombre_heure_chapitre" name="nombre_heure_chapitre"
                                             value={inputs.nombre_heure_chapitre || ''}
                                             onChange={handlechange}
                                         />
                                     </Form.Group>
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="date_debut_chapitre"> Date de début</Form.Label>
+                                        <Form.Label htmlFor="date_debut_chapitre">{user.langue === "en" ? (<div> Start date </div>):(<div> Date de début </div>)}</Form.Label>
                                         <Form.Control type="date" id="date_debut_chapitre" name="date_debut_chapitre"
                                             value={inputs.date_debut_chapitre || ''}
                                             onChange={handlechange}
                                         />
                                     </Form.Group>
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="date_fin_chapitre">Date prévu de fin</Form.Label>
+                                        <Form.Label htmlFor="date_fin_chapitre">{user.langue === "en" ? (<div> End date </div>):(<div> Date prévu de fin </div>)}</Form.Label>
                                         <Form.Control type="date" id="date_fin_chapitre" name="date_fin_chapitre"
                                             value={inputs.date_fin_chapitre || ''}
                                             onChange={handlechange}
                                         />
                                     </Form.Group>
                                     <Form.Group className="form-group">
-                                        <Form.Label >Description du chapitre</Form.Label>
+                                        <Form.Label >{user.langue === "en" ? (<div> Description of chapter </div>):(<div> Description du chapitre </div>)}</Form.Label>
                                         <Form.Control as="textarea" id="description_chapitre" name="description_chapitre" rows="5"
                                             value={inputs.description_chapitre || ''}
                                             onChange={handlechange}
                                         />
                                     </Form.Group>
 
-                                    <Button type="button" variant="btn btn-primary" onClick={submitForm}>Ajouter</Button>
+                                    <Button type="button" variant="btn btn-primary" onClick={submitForm}>{user.langue === "en" ? (<div> Add </div>):(<div> Ajouter </div>)}</Button>
                                 </Form>
                             </Card.Body>
                         </Card>
