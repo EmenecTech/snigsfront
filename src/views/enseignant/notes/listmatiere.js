@@ -358,7 +358,7 @@ const Enseignant_matieres_notes = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Classes</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div> Class </div>):(<div> Classe </div>)}</h4>
                             </div>
 
 
@@ -381,8 +381,8 @@ const Enseignant_matieres_notes = memo((props) => {
                                     <thead>
                                         <tr>
 
-                                            <th>Classe</th>
-                                            <th>Matière</th>
+                                            <th>{user.langue === "en" ? (<div> Index </div>):(<div> Classe </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Index </div>):(<div> matière </div>)}</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -438,9 +438,9 @@ const Enseignant_matieres_notes = memo((props) => {
                                  <thead>
                                      <tr>
 
-                                         <th>Classe</th>
-                                         <th>Unité d'Enseignement(UE)</th>
-                                         <th>Matière</th>
+                                         <th>{user.langue === "en" ? (<div> Class </div>):(<div> classe </div>)}</th>
+                                         <th>{user.langue === "en" ? (<div> Teaching unit </div>):(<div> unité d'enseignement(UE) </div>)}</th>
+                                         <th>{user.langue === "en" ? (<div> Subject </div>):(<div> matière </div>)}</th>
                                         
                                          <th>Action</th>
                                      </tr>
@@ -495,7 +495,7 @@ const Enseignant_matieres_notes = memo((props) => {
                                                 >
                                                     <thead>
                                                         <tr>
-                                                            <th>Classe</th>
+                                                            <th>{user.langue === "en" ? (<div> Class </div>):(<div> Classe </div>)}</th>
                                                             <th>Action</th>
                                                         </tr>
                                                     </thead>
