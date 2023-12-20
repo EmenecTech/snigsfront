@@ -203,7 +203,7 @@ const EleveEditProfil = (props) => {
                                             
                                         </div>
                                     </Form.Group>
-                                    <Form.Label htmlFor="furl">Photo de profil:</Form.Label>
+                                    <Form.Label htmlFor="furl">{user.langue === "en" ? (<div> Profile picture </div>):(<div> Photo de profil </div>)}:</Form.Label>
                                     <input
                                         className="form-control"
                                         name="profile_photo_path"
@@ -236,7 +236,7 @@ const EleveEditProfil = (props) => {
                                                 <Form>
                                                     <Row>
                                                         <Col>
-                                                            <label>name:</label>
+                                                            <label>{user.langue === "en" ? (<div> Name </div>):(<div> Nom </div>)}:</label>
                                                             <input
                                                                 type="text"
                                                                 name="nom"
@@ -248,7 +248,7 @@ const EleveEditProfil = (props) => {
                                                         </Col>
 
                                                         <Col>
-                                                            <label>prenom:</label>
+                                                            <label>{user.langue === "en" ? (<div> First name </div>):(<div> Prénom </div>)}:</label>
                                                             <input
                                                                 type="text"
                                                                 name="prenom"
@@ -266,7 +266,7 @@ const EleveEditProfil = (props) => {
                                                 <Form>
                                                     <Row>
                                                         <Col>
-                                                            <label>Date de naissance:</label>
+                                                            <label>{user.langue === "en" ? (<div> Date of birth </div>):(<div> Date de naissance </div>)}:</label>
                                                             <input
                                                                 type="date"
                                                                 name="date_n"
@@ -277,7 +277,7 @@ const EleveEditProfil = (props) => {
                                                         </Col>
 
                                                         <Col>
-                                                            <label>Lieu de naissance:</label>
+                                                            <label>{user.langue === "en" ? (<div> Place of birth </div>):(<div> Lieu de naissance </div>)}:</label>
                                                             <input
                                                                 type="text"
                                                                 name="lieu_n"
@@ -305,7 +305,7 @@ const EleveEditProfil = (props) => {
                                                         </Col>
 
                                                         <Col>
-                                                            <label>telephone:</label>
+                                                            <label>{user.langue === "en" ? (<div> Phone </div>):(<div> Téléphone </div>)}:</label>
                                                             <input
                                                                 type="text"
                                                                 name="tel"
@@ -323,7 +323,7 @@ const EleveEditProfil = (props) => {
                                                 onClick={submitForm}
                                                 className="btn btn-info mt-2"
                                             >
-                                                Modifier
+                                               {user.langue === "en" ? (<div> Modify </div>):(<div> Modifier </div>)}
                                             </button>
                                         </div>
                                     </div>
@@ -332,7 +332,7 @@ const EleveEditProfil = (props) => {
                                 <h5 className="mb-3">Security</h5>
                                 <div className="row">
                                     <Form.Group className="col-md-6 form-group">
-                                        <Form.Label htmlFor="pass">Mot de passe:</Form.Label>
+                                        <Form.Label htmlFor="pass">{user.langue === "en" ? (<div> Password </div>):(<div> Mot de passe </div>)}:</Form.Label>
                                         <Form.Control
                                             type="password" className="form-control"
                                             value={inputs.password || ''}
@@ -342,7 +342,7 @@ const EleveEditProfil = (props) => {
                                         <p className="text-danger">{message} </p>
                                     </Form.Group>
                                     <Form.Group className="col-md-6 form-group">
-                                        <Form.Label htmlFor="rpass">Confirmer le Password:</Form.Label>
+                                        <Form.Label htmlFor="rpass">{user.langue === "en" ? (<div> Confirm password </div>):(<div> Confirmer le mot de passe </div>)}:</Form.Label>
                                         <Form.Control
                                             type="password"
                                             id="rpass"
@@ -354,7 +354,7 @@ const EleveEditProfil = (props) => {
                                         onClick={submitFormPassword}
                                         className="btn btn-info mt-2"
                                     >
-                                        Modifier le mot de passe
+                                        {user.langue === "en" ? (<div> Edit password </div>):(<div> Modifier le mot de passe </div>)}
                                     </button>
                                 </div>
                             </Card.Body>
