@@ -353,7 +353,7 @@ const EleveListPlanning = memo((props) => {
                                                         <thead>
                                                             <tr>
 
-                                                                <th>Intitulé</th>
+                                                                <th>{user.langue === "en" ? (<div> Title </div>):(<div> Intitulé </div>)}</th>
                                                                 <th>Type</th>
                                                                 <th>Actions</th>
                                                             </tr>
@@ -370,7 +370,7 @@ const EleveListPlanning = memo((props) => {
 
                                                                             <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Delete" data-original-title="Delete" to={"/Eleve/Planning/Detail/" + item.programme_programmeclasse + '/' + item.intitule_programme}>
 
-                                                                                Consulter
+                                                                                {user.langue === "en" ? (<div> Consult </div>):(<div> Consulter </div>)}
 
                                                                             </Link>
                                                                         </div>
