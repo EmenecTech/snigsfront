@@ -321,7 +321,7 @@ const UniversiteClasse = () => {
                             <Tab.Pane eventKey="first" id="profile-feed">
                                 <Card>
                                     <Card.Header className="d-flex justify-content-between">
-                        <Button variant="primary mt-2" onClick={printData}> Imprimer </Button>
+                        <Button variant="primary mt-2" onClick={printData}> {user.langue === "en" ? (<div> Print </div>):(<div>Imprimer</div>)} </Button>
 
                         </Card.Header>
                         <Card.Body>
@@ -385,7 +385,7 @@ const UniversiteClasse = () => {
                                 </Col>
 
                                 <div className="header-title mb-2">
-                                    <h4 className="card-title">Classe : {classe}</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div> Class </div>):(<div>Classe</div>)} : {classe}</h4>
                                 </div>
 
                                         <div className="table-responsive border-bottom my-3">
@@ -473,7 +473,7 @@ const UniversiteClasse = () => {
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                                 </svg>
                                             </span>
-                                            Ajouter
+                                           {user.langue === "en" ? (<div> Add </div>):(<div>Ajouter</div>)}
                                         </Button>
                                         {/* <!-- Modal --> */}
                                         <Modal show={show1} onHide={handleClose1} backdrop="static"
@@ -490,7 +490,7 @@ const UniversiteClasse = () => {
                                                                     <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div>Course</div>):(<div> Matière  </div>)}</Form.Label>
                                                                     <select className="form-select mb-3 shadow-none" name="int" onChange={handleChange} required>
                                                                         <option></option>
-                                                                        <option value="Toutes les matières">Toutes les matières</option>
+                                                                        <option value="Toutes les matières">{user.langue === "en" ? (<div> All subjects </div>):(<div>Toutes les matières</div>)}</option>
                                                                         {matieres.map((item) => (
                                                                             <option key={item.id} value={item.intitule_matiere}>{item.intitule_matiere}</option>
 
@@ -546,7 +546,7 @@ const UniversiteClasse = () => {
 
 
                                                     <div className="text-center">
-                                                        <Button type="button" variant="primary" onClick={submitForm2} >Confirmer</Button>
+                                                        <Button type="button" variant="primary" onClick={submitForm2} >{user.langue === "en" ? (<div> Confirm </div>):(<div>Confirmer</div>)}</Button>
                                                     </div>
                                                 </Form>
                                             </Modal.Body>
@@ -627,7 +627,7 @@ const UniversiteClasse = () => {
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                                 </svg>
                                             </span>
-                                            Ajouter
+                                           {user.langue === "en" ? (<div> Add </div>):(<div>Ajouter</div>)}
                                         </Button>
                                         {/* <!-- Modal --> */}
                                         <Modal show={show2} onHide={handleClose2}>
@@ -694,7 +694,7 @@ const UniversiteClasse = () => {
 
 
                                                     <div className="text-center">
-                                                        <Button type="button" variant="primary" onClick={submitForm} >Confirmer</Button>
+                                                        <Button type="button" variant="primary" onClick={submitForm} >{user.langue === "en" ? (<div> Confirm </div>):(<div>Confirmer</div>)}</Button>
                                                     </div>
                                                 </Form>
                                             </Modal.Body>
@@ -763,7 +763,7 @@ const UniversiteClasse = () => {
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                                 </svg>
                                             </span>
-                                            Ajouter
+                                            {user.langue === "en" ? (<div> Add </div>):(<div>Ajouter</div>)}
                                         </Button>
                                         {/* <!-- Modal --> */}
                                         <Modal show={show} onHide={handleClose}>
@@ -823,7 +823,7 @@ const UniversiteClasse = () => {
 
 
                                                     <div className="text-center">
-                                                        <Button type="button" variant="primary" onClick={submitFormG} >Confirmer</Button>
+                                                        <Button type="button" variant="primary" onClick={submitFormG} >{user.langue === "en" ? (<div> Confirm </div>):(<div>Confirmer</div>)}</Button>
                                                     </div>
                                                 </Form>
                                             </Modal.Body>
@@ -885,7 +885,7 @@ const UniversiteClasse = () => {
                                 <Card>
                                     <Card.Header>
                                         <div className="header-title">
-                                            <h4 className="card-title">Profile</h4>
+                                            <h4 className="card-title">{user.langue === "en" ? (<div> Profile </div>):(<div>Profil</div>)}</h4>
                                         </div>
                                     </Card.Header>
                                     <Card.Body>
@@ -900,7 +900,7 @@ const UniversiteClasse = () => {
                                                 <thead>
                                                     <tr>
                                                         <th>{user.langue === "en" ? (<div>Name</div>):(<div> Nom  </div>)}</th>
-                                                        <th>{user.langue === "en" ? (<div>Prename</div>):(<div> Prénom  </div>)}</th>
+                                                        <th>{user.langue === "en" ? (<div>First name</div>):(<div> Prénom  </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Student</div>):(<div> Elève </div>)}</th>
                                                         <th>{user.langue === "en" ? (<div>Parent contact</div>):(<div> Contact du parent  </div>)}</th>
                                                      
