@@ -209,14 +209,14 @@ const EleveListNotesEval = () => {
                                 <thead>
                                     <tr>
                                         
-                                        <th>Nom</th>
-                                        <th>Prénom</th>
-                                        <th>Matiere</th>
+                                        <th>{user.langue === "en" ? (<div> Name </div>):(<div> Nom </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> First name </div>):(<div> Prénom </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> Subject </div>):(<div> Matière </div>)}</th>
                                         <th>Note</th>
                                         <th>NxC</th>
                                         <th>Coefficient</th>
                                         <th>Appreciation</th>
-                                        <th>Compétence visée</th>
+                                        <th>{user.langue === "en" ? (<div> Target skill </div>):(<div> Compétence visée </div>)}</th>
                                         <th> </th>
                                     </tr>
                                 </thead>
@@ -262,11 +262,11 @@ const EleveListNotesEval = () => {
                                 <thead>
                                     <tr>
                                         
-                                        <th>Nom</th>
-                                        <th>Prénom</th>
-                                        <th>Groupe</th>
+                                        <th>{user.langue === "en" ? (<div> Name </div>):(<div> Nom </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> First name </div>):(<div> Prénom </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> Group </div>):(<div> Groupe </div>)}</th>
                                         <th>Note</th>
-                                        <th>Indices d'evaluation</th>
+                                        <th>{user.langue === "en" ? (<div> Evaluation index </div>):(<div> Indice d'évaluation </div>)}</th>
                                         <th>Appreciation</th>
                                         
                                     </tr>
@@ -294,12 +294,12 @@ const EleveListNotesEval = () => {
                                 <thead>
                                     <tr>
                                         
-                                                <th>Nom(s)</th>
-                                                <th>Prénom(s)</th>
-                                                <th>Groupes</th>
+                                                <th>{user.langue === "en" ? (<div> Name </div>):(<div> Nom </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> First name </div>):(<div> Prénom </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> Group </div>):(<div> Groupe </div>)}</th>
                                                 <th>Note</th>
                                                 <th>Emoji</th>
-                                                <th>Indices</th>
+                                                <th>{user.langue === "en" ? (<div> Index </div>):(<div> Indices </div>)}</th>
                                                 <th>Appreciation</th>
                                         
                                     </tr>
@@ -330,14 +330,14 @@ const EleveListNotesEval = () => {
                                     <tr>
                                         
                                             <th>Sno.</th>
-                                            <th>Nom(s)</th>
-                                            <th>Prénom(s)</th>
-                                            <th>Matière</th>
-                                            <th>Crédit</th>
+                                            <th>{user.langue === "en" ? (<div> Name </div>):(<div> Nom </div>)}</th>
+                                        <th>{user.langue === "en" ? (<div> First name </div>):(<div> Prénom </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Subject </div>):(<div> Matière </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Credit </div>):(<div>Crédit</div>)}</th>
                                     
                                             <th>CC</th>
                                             <th>SN</th>
-                                            <th>Note finale</th>
+                                            <th>{user.langue === "en" ? (<div> Final score </div>):(<div> Note finale </div>)}</th>
                                         
                                     </tr>
                                 </thead>
