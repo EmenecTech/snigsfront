@@ -391,13 +391,13 @@ const ElevelistdocumentsEleves = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Documents</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div>Document</div>):(<div> Documents </div>)}</h4>
                             </div>
 
                             {/* <!-- Modal --> */}
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title as="h5">Ajouter une nouvelle matière</Modal.Title>
+                                    <Modal.Title as="h5">{user.langue === "en" ? (<div> Add a new material </div>):(<div>Ajouter une nouvelle matière</div>)}</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
                                     <Form>
@@ -405,7 +405,7 @@ const ElevelistdocumentsEleves = memo((props) => {
                                             <Col>
                                                 <Form.Group as={Row} className="form-group">
                                                     <Form.Group className="form-group">
-                                                        <Form.Label htmlFor="exampleInputText1">Intitulé </Form.Label>
+                                                        <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div> Title </div>):(<div> Intitulé </div>)}</Form.Label>
                                                         <Form.Control type="text" defaultValue="" name="int" onChange={handleChange} required />
                                                     </Form.Group>
                                                 </Form.Group>
@@ -418,11 +418,11 @@ const ElevelistdocumentsEleves = memo((props) => {
                                                         <Form.Label htmlFor="exampleInputText1">Type de fichiers </Form.Label>
                                                         <select className="form-select mb-3 shadow-none" name="fichier" onChange={e => handleChange2(e.target.name)}>
                                                             <option value=""></option>
-                                                            <option value="Image">Image</option>
-                                                            <option value="Pdf">Pdf</option>
-                                                            <option value="Word">Word</option>
-                                                            <option value="Excel">Excel</option>
-                                                            <option value="Tous">Tous</option>
+                                                            <option value="Image">{user.langue === "en" ? (<div> Picture </div>):(<div> Image </div>)}</option>
+                                                            <option value="Pdf">{user.langue === "en" ? (<div> File pdf </div>):(<div> pdf </div>)}</option>
+                                                            <option value="Word">{user.langue === "en" ? (<div> File word </div>):(<div> word </div>)}</option>
+                                                            <option value="Excel">{user.langue === "en" ? (<div> File excel </div>):(<div> excel </div>)}</option>
+                                                            <option value="Tous">{user.langue === "en" ? (<div> All </div>):(<div> Tous </div>)}</option>
 
 
                                                         </select>
@@ -450,7 +450,7 @@ const ElevelistdocumentsEleves = memo((props) => {
                                                                 <option key={item.id} value={item.intitule_niveau}>{item.intitule_niveau}</option>
 
                                                             ))}
-                                                            <option value="Tous">Tous</option>
+                                                            <option value="Tous">{user.langue === "en" ? (<div> All </div>):(<div> Tous </div>)}</option>
 
 
                                                         </select>
@@ -467,7 +467,7 @@ const ElevelistdocumentsEleves = memo((props) => {
 
 
                                         <div className="text-center">
-                                            <Button type="button" variant="primary" onClick={submitData} >Confirmer</Button>
+                                            <Button type="button" variant="primary" onClick={submitData} >{user.langue === "en" ? (<div> Confirm </div>):(<div> Confirmer </div>)}</Button>
                                         </div>
                                     </Form>
                                 </Modal.Body>
@@ -487,9 +487,9 @@ const ElevelistdocumentsEleves = memo((props) => {
                                 >
                                     <thead>
                                         <tr>
-                                            <th>Intitulé</th>
-                                            <th>Type de fichier</th>
-                                            <th>Destinataire </th>
+                                            <th>{user.langue === "en" ? (<div> Title </div>):(<div> Intitulé </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Type of files </div>):(<div> Type de fichiers </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Recipient </div>):(<div> Destinataire </div>)} </th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
