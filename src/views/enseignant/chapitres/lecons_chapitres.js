@@ -58,18 +58,18 @@ const EnseignantLeconChapitre = (props) => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title mb-3">Fiche de suivi pédagogique - Leçons</h4>
+                                    <h4 className="card-title mb-3">{user.langue === "en" ? (<div> Pedagogical follow up sheet - lessons </div>):(<div> Fiche de suivi pédagogique - leçons </div>)}</h4>
                                 </div>
                             </Card.Header>
                             <div className="table-responsive">
                                 <table id="user-list-table" className="table table-striped" role="grid" data-toggle="data-table">
                                     <thead>
                                         <tr className="ligth">
-                                            <th>Intitulé</th>
-                                            <th>Chapitre</th>
-                                            <th>Nombre d'heures</th>
-                                            <th>Date de début</th>
-                                            <th>Date de fin</th>
+                                            <th>{user.langue === "en" ? (<div> Title </div>):(<div> Intitulé </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Chapter </div>):(<div> Chapitre </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Number of hours </div>):(<div> Nombre d'heures </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Start date </div>):(<div> Date de début </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> End date </div>):(<div> Date de fin </div>)}</th>
 
                                             <th>Description</th>
                                             <th min-width="100px">Action</th>
@@ -109,49 +109,49 @@ const EnseignantLeconChapitre = (props) => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between">
                                 <div className="header-title">
-                                    <h4 className="card-title">Ajouter une lecon</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div> Add lesson </div>):(<div> Ajouter une leçon </div>)}</h4>
                                 </div>
                             </Card.Header>
                             <Card.Body>
                                 <Form>
 
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="intitule_lecon">Intitulé de la leçon:</Form.Label>
+                                        <Form.Label htmlFor="intitule_lecon">{user.langue === "en" ? (<div> Title of lesson </div>):(<div> Intitulé de la leçon </div>)}:</Form.Label>
                                         <Form.Control type="text" id="intitule_lecon" name="intitule_lecon"
                                             value={inputs.intitule_lecon || ''}
                                             onChange={handlechange}
                                         />
                                     </Form.Group>
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="nombre_heure">Nombre d'heure:</Form.Label>
+                                        <Form.Label htmlFor="nombre_heure">{user.langue === "en" ? (<div> Number of hour </div>):(<div> Nombre d'heure </div>)}:</Form.Label>
                                         <Form.Control type="number" id="nombre_heure" name="nombre_heure"
                                             value={inputs.nombre_heure || ''}
                                             onChange={handlechange}
                                         />
                                     </Form.Group>
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="date_debut_lecon"> Date de début:</Form.Label>
+                                        <Form.Label htmlFor="date_debut_lecon"> {user.langue === "en" ? (<div> Start date </div>):(<div> Date de début </div>)}:</Form.Label>
                                         <Form.Control type="date" id="date_debut_lecon" name="date_debut_lecon"
                                             value={inputs.date_debut_lecon || ''}
                                             onChange={handlechange}
                                         />
                                     </Form.Group>
                                     <Form.Group className="form-group">
-                                        <Form.Label htmlFor="date_fin_lecon">Date prévu de fin:</Form.Label>
+                                        <Form.Label htmlFor="date_fin_lecon">{user.langue === "en" ? (<div> End date </div>):(<div> Date prévu de fin </div>)}:</Form.Label>
                                         <Form.Control type="date" id="date_fin_lecon" name="date_fin_lecon"
                                             value={inputs.date_fin_lecon || ''}
                                             onChange={handlechange}
                                         />
                                     </Form.Group>
                                     <Form.Group className="form-group">
-                                        <Form.Label >Description de la leçon:</Form.Label>
+                                        <Form.Label >{user.langue === "en" ? (<div> Description of lesson </div>):(<div> Description de la leçon </div>)}:</Form.Label>
                                         <Form.Control as="textarea" id="description_lecon" name="description_lecon" rows="5"
                                             value={inputs.description_lecon || ''}
                                             onChange={handlechange}
                                         />
                                     </Form.Group>
 
-                                    <Button type="button" variant="btn btn-primary" onClick={submitForm}>Ajouter</Button>
+                                    <Button type="button" variant="btn btn-primary" onClick={submitForm}>{user.langue === "en" ? (<div> Add </div>):(<div> Ajouter </div>)}</Button>
                                 </Form>
                             </Card.Body>
                         </Card>
