@@ -60,7 +60,7 @@ const EleveForumsMatieres = (props) => {
                         <Card>
                             <Card.Header className="d-flex justify-content-between mb-4">
                                 <div className="header-title">
-                                    <h4 className="card-title">Choisissez une matière</h4>
+                                    <h4 className="card-title">{user.langue === "en" ? (<div> Choice a material </div>):(<div> Choisissez une matière </div>)}</h4>
                                 </div>
                             </Card.Header>
 
