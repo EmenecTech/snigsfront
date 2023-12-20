@@ -71,7 +71,7 @@ const EleveAddRequest = (props) => {
                     </Form.Group>
                     <Form.Group className="mb-3 form-group">
                       
-                        {user.langue === "en" ? (<div>  <Form.Label htmlFor="contenu">Message:</Form.Label></div>):(<div>  <Form.Label htmlFor="contenu">Contenu:</Form.Label></div>)}
+                        {user.langue === "en" ? (<div>  <Form.Label htmlFor="contenu">{user.langue === "en" ? (<div> Message </div>):(<div> Messages </div>)}:</Form.Label></div>):(<div>  <Form.Label htmlFor="contenu">{user.langue === "en" ? (<div> Content </div>):(<div> Contenue </div>)}:</Form.Label></div>)}
                         
                         <Form.Control
                             as="textarea"
