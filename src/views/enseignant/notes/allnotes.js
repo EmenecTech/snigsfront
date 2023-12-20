@@ -126,7 +126,7 @@ const AllNotes = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Evaluations</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div> Assessments </div>):(<div> Evaluations </div>)}</h4>
                             </div>
 
 
@@ -138,7 +138,7 @@ const AllNotes = memo((props) => {
                             <table className="table">
                                 <thead>
                                     <tr>
-                                        <th>Elèves</th>
+                                        <th>{user.langue === "en" ? (<div> Students </div>):(<div> Elèves </div>)}</th>
                                         <th>Sequence 1</th>
                                         <th>Sequence 2</th>
                                         <th>Sequence 3</th>
