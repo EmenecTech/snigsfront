@@ -441,7 +441,7 @@ const ElevePlanningDetail = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">Lundi</h4>
+                                                    <h4 className="card-title">{user.langue === "en" ? (<div> Monday </div>):(<div> Lundi </div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -463,8 +463,8 @@ const ElevePlanningDetail = memo((props) => {
                                                             
                                                                     </div>):(<div>
                                                             
-                                                                    <th>Tranche Horraire</th>
-                                                                    <th>Matière ou activité</th>
+                                                                    <th>{user.langue === "en" ? (<div> Time band </div>):(<div> Tranche horaire </div>)}</th>
+                                                                    <th>{user.langue === "en" ? (<div> Subject or activity </div>):(<div> Matière ou activité </div>)}</th>
                                                            
                                                                 </div>)}
                                                                 
@@ -494,7 +494,7 @@ const ElevePlanningDetail = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">Mardi</h4>
+                                                    <h4 className="card-title">{user.langue === "en" ? (<div> Tuesday </div>):(<div>Mardi</div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -517,8 +517,8 @@ const ElevePlanningDetail = memo((props) => {
                                                             
                                                                     </div>):(<div>
                                                             
-                                                                    <th>Tranche Horraire</th>
-                                                                    <th>Matière ou activité</th>
+                                                                    <th>{user.langue === "en" ? (<div> Time band </div>):(<div> Tranche horaire </div>)}</th>
+                                                                    <th>{user.langue === "en" ? (<div> Subject or activity </div>):(<div> Matière ou activité </div>)}</th>
                                                            
                                                                 </div>)}
                                                             </tr>
@@ -547,7 +547,7 @@ const ElevePlanningDetail = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">Mercredi</h4>
+                                                    <h4 className="card-title">{user.langue === "en" ? (<div> Mercredi </div>):(<div> Wednesday </div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -570,8 +570,8 @@ const ElevePlanningDetail = memo((props) => {
                                                             
                                                                     </div>):(<div>
                                                             
-                                                                    <th>Tranche Horraire</th>
-                                                                    <th>Matière ou activité</th>
+                                                                     <th>{user.langue === "en" ? (<div> Time band </div>):(<div> Tranche horaire </div>)}</th>
+                                                                    <th>{user.langue === "en" ? (<div> Subject or activity </div>):(<div> Matière ou activité </div>)}</th>
                                                            
                                                                 </div>)}
                                                             </tr>
@@ -605,7 +605,7 @@ const ElevePlanningDetail = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">Jeudi</h4>
+                                                    <h4 className="card-title">{user.langue === "en" ? (<div> Thursday </div>):(<div> Jeudi </div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -628,8 +628,8 @@ const ElevePlanningDetail = memo((props) => {
                                                             
                                                                     </div>):(<div>
                                                             
-                                                                    <th>Tranche Horraire</th>
-                                                                    <th>Matière ou activité</th>
+                                                                    <th>{user.langue === "en" ? (<div> Time band </div>):(<div> Tranche horaire </div>)}</th>
+                                                                    <th>{user.langue === "en" ? (<div> Subject or activity </div>):(<div> Matière ou activité </div>)}</th>
                                                            
                                                                 </div>)}
                                                             </tr>
@@ -656,7 +656,7 @@ const ElevePlanningDetail = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">Vendredi</h4>
+                                                    <h4 className="card-title">{user.langue === "en" ? (<div> Time band </div>):(<div> Friday </div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -679,8 +679,8 @@ const ElevePlanningDetail = memo((props) => {
                                                             
                                                                     </div>):(<div>
                                                             
-                                                                    <th>Tranche Horraire</th>
-                                                                    <th>Matière ou activité</th>
+                                                                    <th>{user.langue === "en" ? (<div> Time band </div>):(<div> Tranche horaire </div>)}</th>
+                                                                    <th>{user.langue === "en" ? (<div> Subject or activity </div>):(<div> Matière ou activité </div>)}</th>
                                                            
                                                                 </div>)}
                                                             </tr>
@@ -710,7 +710,7 @@ const ElevePlanningDetail = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">Samedi</h4>
+                                                    <h4 className="card-title">{user.langue === "en" ? (<div> Saturday </div>):(<div> Samedi </div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -733,8 +733,8 @@ const ElevePlanningDetail = memo((props) => {
                                                             
                                                                     </div>):(<div>
                                                             
-                                                                    <th>Tranche Horraire</th>
-                                                                    <th>Matière ou activité</th>
+                                                                     <th>{user.langue === "en" ? (<div> Time band </div>):(<div> Tranche horaire </div>)}</th>
+                                                                    <th>{user.langue === "en" ? (<div> Subject or activity </div>):(<div> Matière ou activité </div>)}</th>
                                                            
                                                                 </div>)}
                                                             </tr>
@@ -767,7 +767,7 @@ const ElevePlanningDetail = memo((props) => {
                                         <Card>
                                             <Card.Header className="d-flex justify-content-between">
                                                 <div className="header-title">
-                                                    <h4 className="card-title">Dimanche</h4>
+                                                    <h4 className="card-title">{user.langue === "en" ? (<div> Sunday </div>):(<div> Dimanche </div>)}</h4>
                                                 </div>
                                             </Card.Header>
                                             <Card.Body>
@@ -790,8 +790,8 @@ const ElevePlanningDetail = memo((props) => {
                                                             
                                                                     </div>):(<div>
                                                             
-                                                                    <th>Tranche Horraire</th>
-                                                                    <th>Matière ou activité</th>
+                                                                   <th>{user.langue === "en" ? (<div> Time band </div>):(<div> Tranche horaire </div>)}</th>
+                                                                    <th>{user.langue === "en" ? (<div> Subject or activity </div>):(<div> Matière ou activité </div>)}</th>
                                                            
                                                                 </div>)}
                                                             </tr>
