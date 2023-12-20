@@ -174,11 +174,11 @@ const EnseignantListGroupes = () => {
                                         </svg>
                                     </i>
 
-                                    <span>Ajouter la Note</span>
+                                    <span>{user.langue === "en" ? (<div> Add note </div>):(<div> Ajouter la note </div>)}</span>
                                 </Button>
                                 <Modal show={show} onHide={handleClose}>
                                     <Modal.Header closeButton>
-                                        <Modal.Title>Ajouter une note</Modal.Title>
+                                        <Modal.Title>{user.langue === "en" ? (<div> Add a note </div>):(<div> Ajouter une note </div>)}</Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
                                         <Form>
@@ -188,7 +188,7 @@ const EnseignantListGroupes = () => {
                                                 {etab == 24 ? <div>
                                                     <Form.Group className="form-group">
 
-                                                        <Form.Label htmlFor="exampleFormControlSelect1">Selectionner la matière</Form.Label>
+                                                        <Form.Label htmlFor="exampleFormControlSelect1">{user.langue === "en" ? (<div> Select subject </div>):(<div> Sélectionner la matière </div>)}</Form.Label>
                                                         <select className="form-select" id="matiere" name="matiere" onChange={handleChange}>
                                                             <option> </option>
                                                             {matieres.map((item) => (<option value={item.matiere_cp}>{item.matiere_cp}</option>))}
@@ -208,15 +208,15 @@ const EnseignantListGroupes = () => {
 
                                                         <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                                             <option> </option>
-                                                            <option value="Non acquis">Non acquis</option>
-                                                            <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                            <option value="Acquis">Acquis</option>
+                                                            <option value="Non acquis">{user.langue === "en" ? (<div> Not acquired </div>):(<div> Non acquis </div>)}</option>
+                                                            <option value="En cours d'acquisition">{user.langue === "en" ? (<div> In progress </div>):(<div> En cours d'acquisition </div>)}</option>
+                                                            <option value="Acquis">{user.langue === "en" ? (<div> Acquired </div>):(<div> Acquis </div>)}</option>
                                              <option value="Expert">Expert</option>
                                                         </select>
                                                     </Form.Group>
 
                                                     <Form.Group className='form-group'>
-                                                        <Form.Label>Compétence visée</Form.Label>
+                                                        <Form.Label>{user.langue === "en" ? (<div> Target skill </div>):(<div> Compétence visée </div>)}</Form.Label>
                                                         <Form.Control type="text" id="competence_visee" name="competence_visee"
                                                             value={inputs.competence_visee || ''}
                                                             onChange={handleChange}
@@ -231,7 +231,7 @@ const EnseignantListGroupes = () => {
 
        
                                                     <Form.Group className='form-group'>
-                                                        <Form.Label>Groupes</Form.Label>
+                                                        <Form.Label>{user.langue === "en" ? (<div> Group </div>):(<div> Groupes </div>)}</Form.Label>
 
                                                         <select className="form-select mb-3 shadow-none" name="matiere" onChange={handleChange}>
                                                             <option> </option>
@@ -273,13 +273,13 @@ const EnseignantListGroupes = () => {
                                                         />
                                                     </Form.Group>
                                                     <Form.Group className='form-group'>
-                                                        <Form.Label>Indices d'évalutation</Form.Label>
+                                                        <Form.Label>{user.langue === "en" ? (<div> Evaluation index </div>):(<div> Indice d'évaluation </div>)}</Form.Label>
 
                                                         <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
                                                             <option> </option>
-                                                            <option value="Ecrit">Ecrit</option>
-                                                            <option value="Oral">Oral</option>
-                                                            <option value="Pratique">Pratique</option>
+                                                            <option value="Ecrit">{user.langue === "en" ? (<div> Written </div>):(<div> Ecrit </div>)}</option>
+                                                            <option value="Oral">{user.langue === "en" ? (<div> Oral </div>):(<div> Oral </div>)}</option>
+                                                            <option value="Pratique">{user.langue === "en" ? (<div> Practice </div>):(<div>Pratique</div>)}</option>
                                                             {indices.map((item) => (
                                                                 <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
                                                             ))}
@@ -303,7 +303,7 @@ const EnseignantListGroupes = () => {
                                                     </Form.Group>
 
                                                  <Button variant="primary" onClick={submitFormprim}>
-                                                    Ajouter
+                                                    {user.langue === "en" ? (<div> Add </div>):(<div> Ajouter </div>)}
                                                 </Button>
                                                 </div>}
 
@@ -313,7 +313,7 @@ const EnseignantListGroupes = () => {
                                                 {etab == 24 ? <div>
                                                     <Form.Group className="form-group">
 
-                                                        <Form.Label htmlFor="exampleFormControlSelect1">Selectionner la matière</Form.Label>
+                                                        <Form.Label htmlFor="exampleFormControlSelect1">{user.langue === "en" ? (<div> Select subject </div>):(<div> Sélectionner la matière</div>)}</Form.Label>
                                                         <select className="form-select" id="matiere" name="matiere" onChange={handleChange}>
                                                             <option> </option>
                                                             {matieres.map((item) => (<option value={item.matiere_cp}>{item.matiere_cp}</option>))}
@@ -344,7 +344,7 @@ const EnseignantListGroupes = () => {
                                                     </Form.Group>
 
                                                     <Form.Group className='form-group'>
-                                                        <Form.Label>Compétence visée</Form.Label>
+                                                        <Form.Label>{user.langue === "en" ? (<div> Target skill </div>):(<div> Compétence visée </div>)}</Form.Label>
                                                         <Form.Control type="text" id="competence_visee" name="competence_visee"
                                                             value={inputs.competence_visee || ''}
                                                             onChange={handleChange}
@@ -352,7 +352,7 @@ const EnseignantListGroupes = () => {
                                                     </Form.Group>
 
                                                     <Button variant="primary" onClick={submitForm}>
-                                                        Ajouter
+                                                        {user.langue === "en" ? (<div> Add </div>):(<div> Ajouter </div>)}
                                                     </Button>
                                                 </div> : <div>
                                                     <Form.Group className='form-group'>
@@ -368,13 +368,13 @@ const EnseignantListGroupes = () => {
                                                     </Form.Group>
 
                                                     <Form.Group className='form-group'>
-                                                        <Form.Label>Indices d'évalutation</Form.Label>
+                                                        <Form.Label>{user.langue === "en" ? (<div> Evaluation index </div>):(<div> Indice d'évaluation </div>)}</Form.Label>
 
                                                         <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
                                                             <option> </option>
-                                                            <option value="Ecrit">Ecrit</option>
-                                                            <option value="Oral">Oral</option>
-                                                            <option value="Pratique">Pratique</option>
+                                                             <option value="Ecrit">{user.langue === "en" ? (<div> Written </div>):(<div> Ecrit </div>)}</option>
+                                                            <option value="Oral">{user.langue === "en" ? (<div> Oral </div>):(<div> Oral </div>)}</option>
+                                                            <option value="Pratique">{user.langue === "en" ? (<div> Practice </div>):(<div>Pratique</div>)}</option>
                                                             {indices.map((item) => (
                                                                 <option key={item.id} value={item.intitule_indice}>{item.intitule_indice}</option>
                                                             ))}
@@ -404,7 +404,7 @@ const EnseignantListGroupes = () => {
                                                         </select>
                                                     </Form.Group>
                                                     <Button variant="primary" onClick={submitFormprim}>
-                                                        Ajouter
+                                                        {user.langue === "en" ? (<div> Add </div>):(<div>Ajouter</div>)}
                                                     </Button>
                                                 </div>}
 
@@ -428,11 +428,11 @@ const EnseignantListGroupes = () => {
                                         <thead>
                                             <tr>
                                                 <th>Sno.</th>
-                                                <th>Nom(s)</th>
-                                                <th>Prénom(s)</th>
-                                                <th>Groupes</th>
+                                                <th>{user.langue === "en" ? (<div> Name </div>):(<div> Nom </div>)}</th>
+                                                <th>{user.langue === "en" ? (<div> First name </div>):(<div> Prénom </div>)}</th>
+                                                <th>{user.langue === "en" ? (<div> Group </div>):(<div> Groupes </div>)}</th>
                                                 <th>Note</th>
-                                                <th>Indices</th>
+                                                <th>{user.langue === "en" ? (<div> Index </div>):(<div> Indice </div>)}</th>
                                                 <th>Appreciation</th>
 
                                             </tr>
@@ -457,12 +457,12 @@ const EnseignantListGroupes = () => {
                                         <thead>
                                             <tr>
                                                 <th>Sno. </th>
-                                                <th>Nom(s)</th>
-                                                <th>Prénom(s)</th>
-                                                <th>Groupes</th>
+                                                <th>{user.langue === "en" ? (<div> Name </div>):(<div> Nom </div>)}</th>
+                                                <th>{user.langue === "en" ? (<div> First name </div>):(<div> Prénom </div>)}</th>
+                                                <th>{user.langue === "en" ? (<div> Group </div>):(<div> Groupes </div>)}</th>
                                                 <th>Note</th>
                                                 <th>Emoji</th>
-                                                <th>Indices</th>
+                                                 <th>{user.langue === "en" ? (<div> Index </div>):(<div> Indice </div>)}</th>
                                                 <th>Appreciation</th>
 
                                             </tr>
@@ -491,11 +491,11 @@ const EnseignantListGroupes = () => {
                                     <thead>
                                         <tr>
                                             <th>Sno.</th>
-                                            <th>Nom(s)</th>
-                                            <th>Prénom(s)</th>
-                                            <th>Groupes</th>
-                                            <th>Note</th>
-                                            <th>Indices</th>
+                                                <th>{user.langue === "en" ? (<div> Name </div>):(<div> Nom </div>)}</th>
+                                                <th>{user.langue === "en" ? (<div> First name </div>):(<div> Prénom </div>)}</th>
+                                                <th>{user.langue === "en" ? (<div> Group </div>):(<div> Groupes </div>)}</th>
+                                                <th>Note</th>
+                                                <th>{user.langue === "en" ? (<div> Index </div>):(<div> Indice </div>)}</th>
                                             <th>Appreciation</th>
 
                                         </tr>
