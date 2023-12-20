@@ -341,7 +341,7 @@ const Enseignant_planning = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Matière</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div> Subject </div>):(<div> Matière </div>)}</h4>
                             </div>
 
 
@@ -360,8 +360,8 @@ const Enseignant_planning = memo((props) => {
                                     <thead>
                                         <tr>
 
-                                            <th>Classe </th>
-                                            <th>Matière</th>
+                                            <th>{user.langue === "en" ? (<div> Class </div>):(<div> Classe </div>)} </th>
+                                            <th>{user.langue === "en" ? (<div> Subject </div>):(<div> Matière </div>)}</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -375,7 +375,7 @@ const Enseignant_planning = memo((props) => {
 
                                                         <Link className="btn btn-sm btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Edit" data-original-title="Edit" to={"/Enseignant/Planning/Periodes/Matieres/" + item.classe_cp + "/" + item.matiere_cp}>
 
-                                                            Consulter
+                                                            {user.langue === "en" ? (<div> Consult </div>):(<div> Consulter </div>)}
                                                         </Link>
 
                                                     </div>
