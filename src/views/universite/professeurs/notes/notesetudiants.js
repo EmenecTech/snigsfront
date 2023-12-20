@@ -166,7 +166,7 @@ const ProfesseurAddNote = () => {
                                         </svg>
                                     </i>
 
-                                    <span>Ajouter une Note</span>
+                                    <span><th>{user.langue === "en" ? (<div> Add note </div>):(<div>Ajouter la note</div>)}</th></span>
                                 </Button>
                                 </div>
                             </Card.Body>
@@ -191,7 +191,7 @@ const ProfesseurAddNote = () => {
                             
                                             <Form.Group className="form-group">
      
-                                                <Form.Label htmlFor="exampleFormControlSelect1">Selectionner l'étudiant(e)</Form.Label>
+                                                <Form.Label htmlFor="exampleFormControlSelect1">{user.langue === "en" ? (<div> Select student </div>):(<div>Sélectionner l'étudiant</div>)}</Form.Label>
                                                 <select className="form-select" id="id_user" name="id_user" onChange={handleChange}>
                                                     <option> </option>
                                                     {eleves_classe.map((user) => ( <option value={user.id}>{user.nom} {user.prenom}</option> ))}
@@ -199,12 +199,12 @@ const ProfesseurAddNote = () => {
                                             </Form.Group>
 
                                             <Form.Group className='form-group'>
-                                            <Form.Label>Type d'evaluation</Form.Label>
+                                            <Form.Label>{user.langue === "en" ? (<div> Type of assessment </div>):(<div>Type d'évaluation</div>)}</Form.Label>
 
                                           <select className="form-select mb-3 shadow-none" name="competence_visee" onChange={handleChange}>
                                                     <option> </option>
-                                                    <option value="Controle Continu">Controle Continu</option>
-                                                    <option value="Session Normale">Session Normale</option>
+                                                    <option value="Controle Continu">{user.langue === "en" ? (<div> Continuous control </div>):(<div>Controle continu</div>)}</option>
+                                                    <option value="Session Normale">{user.langue === "en" ? (<div> Normal session </div>):(<div>Session normale</div>)}</option>
                                                     
                                                    
                                                     
@@ -219,7 +219,7 @@ const ProfesseurAddNote = () => {
                                             </Form.Group>
  
                                          <Form.Group className='form-group'>
-                                                <Form.Label>crédits</Form.Label>
+                                                <Form.Label>{user.langue === "en" ? (<div> Credits </div>):(<div>Crédits</div>)}</Form.Label>
                                                 <Form.Control type="number" id="coef" name="coef"
                                                     value={coefficient}
                                                     
@@ -229,7 +229,7 @@ const ProfesseurAddNote = () => {
                                            
                                     
                             
-                                        <Button variant="primary" onClick={submitForm}>Ajouter </Button>
+                                        <Button variant="primary" onClick={submitForm}>{user.langue === "en" ? (<div> Add </div>):(<div>Ajouter</div>)} </Button>
                                     </Form>
                                     </Modal.Body>
                                 </Modal>
@@ -242,9 +242,9 @@ const ProfesseurAddNote = () => {
                                     <thead>
                                         <tr>
                                             <th>Sno.</th>
-                                            <th>Nom(s)</th>
-                                            <th>Prénom(s)</th>
-                                            <th>Evaluation</th>
+                                            <th>{user.langue === "en" ? (<div> Name </div>):(<div>Nom</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> First name </div>):(<div>Prénom</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Assessment </div>):(<div>Evaluation</div>)}</th>
                                             <th>Note</th>
 
                                             
@@ -285,9 +285,9 @@ const ProfesseurAddNote = () => {
                                     <thead>
                                         <tr>
                                             <th>Sno.</th>
-                                            <th>Nom(s)</th>
-                                            <th>Prénom(s)</th>
-                                            <th>Evaluation</th>
+                                            <th>{user.langue === "en" ? (<div> Name </div>):(<div>Nom</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> First name </div>):(<div>Prénom</div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> Assessment </div>):(<div>Evaluation</div>)}</th>
                                             <th>Note</th>
                                             
                                             <th> </th>
