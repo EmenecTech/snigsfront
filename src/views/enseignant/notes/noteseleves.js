@@ -117,7 +117,7 @@ const EnseignantAddNote = () => {
                                         </svg>
                                     </i>
 
-                                    <span>Ajouter la Note</span>
+                                    <span>{user.langue === "en" ? (<div> Add note </div>):(<div> Ajouter la note </div>)}</span>
                                 </Button>
                                 <Modal show={show} onHide={handleClose}>
                                     <Modal.Header closeButton>
@@ -128,7 +128,7 @@ const EnseignantAddNote = () => {
                             
                                             <Form.Group className="form-group">
      
-                                                <Form.Label htmlFor="exampleFormControlSelect1">Selectionner l'élève</Form.Label>
+                                                <Form.Label htmlFor="exampleFormControlSelect1">{user.langue === "en" ? (<div> Select the student </div>):(<div> Sélectionner l'élève </div>)}</Form.Label>
                                                 <select className="form-select" id="id_user" name="id_user" onChange={handleChange}>
                                                     <option> </option>
                                                     {eleves_classe.map((user) => ( <option value={user.id}>{user.nom} {user.prenom}</option> ))}
@@ -155,21 +155,21 @@ const EnseignantAddNote = () => {
 
                                           <select className="form-select mb-3 shadow-none" name="appreciation" onChange={handleChange}>
                                                     <option> </option>
-                                                    <option value="Non acquis">Non acquis</option>
-                                                    <option value="En cours d'acquisition">En cours d'acquisition</option>
-                                                    <option value="Acquis">Acquis</option>
+                                                    <option value="Non acquis">{user.langue === "en" ? (<div> Not acquired </div>):(<div> Non acquis </div>)}</option>
+                                                    <option value="En cours d'acquisition">{user.langue === "en" ? (<div> In progress </div>):(<div> en cours d'acquisition </div>)}</option>
+                                                    <option value="Acquis">{user.langue === "en" ? (<div> Acquired </div>):(<div> acquis </div>)}</option>
                                                         <option value="Expert">Expert</option>
                                                 </select>
                                            </Form.Group>
                                     
                                                <Form.Group className='form-group'>
-                                                <Form.Label>Compétence visée</Form.Label>
+                                                <Form.Label>{user.langue === "en" ? (<div> Target skill </div>):(<div> Compétence visée </div>)}</Form.Label>
                                                 <Form.Control type="text" id="competence_visee" name="competence_visee"
                                                     value={inputs.competence_visee || ''}
                                                     onChange={handleChange}
                                                 />
                                             </Form.Group>
-                                        <Button variant="primary" onClick={submitForm}>Ajouter </Button>
+                                        <Button variant="primary" onClick={submitForm}>{user.langue === "en" ? (<div> Add </div>):(<div> Ajouter </div>)} </Button>
                                     </Form>
                                     </Modal.Body>
                                 </Modal>
@@ -183,13 +183,13 @@ const EnseignantAddNote = () => {
                                     <thead>
                                         <tr>
                                             <th>Sno.</th>
-                                            <th>Nom(s)</th>
-                                            <th>Prénom(s)</th>
+                                            <th>{user.langue === "en" ? (<div> name </div>):(<div> nom </div>)}</th>
+                                            <th>{user.langue === "en" ? (<div> First name </div>):(<div> prénom </div>)}</th>
                                             <th>Note</th>
                                             <th>Coefficient</th>
                                             <th>NxC</th>
                                             <th>Appreciation</th>
-                                            <th>Compétence visée</th>
+                                            <th>{user.langue === "en" ? (<div>Target skill</div>):(<div>Compétence visée</div>)}</th>
                                             <th> </th>
                                         </tr>
                                 </thead>
