@@ -343,7 +343,7 @@ const ElevelistdocumentsElevesLoad = memo((props) => {
                     <Card>
                         <Card.Header className="d-flex justify-content-between">
                             <div className="header-title">
-                                <h4 className="card-title">Selectionner le document</h4>
+                                <h4 className="card-title">{user.langue === "en" ? (<div> Select document </div>):(<div> Sélectionner le document </div>)}</h4>
                             </div>
 
                             {/* <!-- Modal --> */}
@@ -358,7 +358,7 @@ const ElevelistdocumentsElevesLoad = memo((props) => {
                                     <Col>
                                         <Form.Group as={Row} className="form-group">
                                             <Form.Group className="form-group">
-                                                <Form.Label htmlFor="exampleInputText1">Fichiers (.docx, .pdf, .png, .jpg) </Form.Label>
+                                                <Form.Label htmlFor="exampleInputText1">{user.langue === "en" ? (<div> Files </div>):(<div> Fichiers </div>)} (.docx, .pdf, .png, .jpg) </Form.Label>
                                                 <input
                                                     className="form-control"
                                                     name="profile_photo_path"
@@ -373,7 +373,7 @@ const ElevelistdocumentsElevesLoad = memo((props) => {
 
 
                                 <button className="btn btn-info mt-2" type="submit" onClick={submitData} >
-                                    Envoyer le fichier
+                                    {user.langue === "en" ? (<div>Send file</div>):(<div> Envoyer le fichier </div>)}
                                 </button>
                             </Form>
                         </Card.Body>
