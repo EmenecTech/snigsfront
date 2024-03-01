@@ -29,7 +29,11 @@ export default function LoginSnigs() {
      }).catch(error => {
          console.error(error);
          
-   if (error.response.status === 404) {
+   if (error.response.status === 401) {
+ 
+     alert('Vous n\'êtes pas autorisé à accéder à cette page.');
+
+   } else if (error.response.status === 404) {
 
      alert('La page que vous recherchez est introuvable.');
 
