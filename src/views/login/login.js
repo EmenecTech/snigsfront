@@ -18,6 +18,10 @@ export default function LoginSnigs() {
    const [password, setPassword] = useState();
    const [status, setStatus] = useState(null);
    const submitForm = () => {
+      http.post('login', { email: email, password: password }).then((res) => {
+         /* console.log(res.data); */
+         setToken(res.data.user, res.data.access_token);
+      })
        http.post('login', { email: email, password: password }).then(response => {
          console.log(response.status);
          setStatus(response.status); 
@@ -47,7 +51,7 @@ export default function LoginSnigs() {
      
    }     
          });
-   }
+}
    let history = useNavigate()
    return (
       <>
@@ -109,7 +113,4 @@ export default function LoginSnigs() {
 
       </>
    )
-
-
 }
-
